@@ -1,11 +1,7 @@
 # Site settings
 title: Yee's Blog
 description: "personal blog"
-#url: "https://yeekal.github.io/"
-author:
-  name: "The Review Index"
-  email: "dyutibarma@gmail.com"
-  url: "https://thereviewindex.com"
+url: "https://yeekal.github.io/"
 
 # Build settings
 baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
@@ -13,10 +9,11 @@ markdown: kramdown
 source: .
 destination: ./_site
 permalink: /:title
-paginate: 8
+paginate: 5    #how many items should be displayed in one page
 paginate_path: /page:num/
 
 # Default values
+#add front matter values to static files sometime
 defaults:
   -
     scope:

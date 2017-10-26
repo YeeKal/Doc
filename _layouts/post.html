@@ -2,7 +2,7 @@
 layout: default
 ---
 <article id="post-page">
-	<h2>{{ page.title }}</h2>		
+	<h2>{{ page.title }}</h2>
 	<time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}</time>
 	<div class="content">
 
@@ -10,3 +10,5 @@ layout: default
 
 	</div>
 </article>
+<!-- jeklly 采用的是导向制，当调用文章时，若文章头部指定layout:post,
+则文章将按照该模板进行渲染 -->
