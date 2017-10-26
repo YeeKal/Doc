@@ -7,7 +7,7 @@ title: Yee's Blog
 <ul>
   {% for post in site.posts %}
   <li>
-    <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+    <h2>{%if post.header %}{{ post.header }}{% else %}{{ post.title }}{% endif %}</h2>
     <time datetime="{post.date | date_to_xmlschema}"><i>{{post.date | date_to_string}}</i></time>
   </li>
   {% endfor %}
