@@ -5,31 +5,27 @@
 
 <body>
 	<div id="wrap">
-	  	
+
 	  	<!-- Navigation -->
 	  	{% include menu.html %}
-    
+
     <!-- Icon menu -->
 	  <a {% if site.reverse == true %}id="nav-menu-left"{% else %}id="nav-menu"{% endif %}>
 	  	<div id="menu"></div>
 	  </a>
 
       <!-- Header -->
-      {% if site.custom_header == true %}
-        {% include header-custom.html %}
-      {% else %}
         {% include header.html %}
-      {% endif %}
 
     <!-- Main content -->
 	  <div id="container">
-		  
+
 		<main>
 
 			{{ content }}
 
 	  </main>
-		
+
 		  <!-- Pagination links -->
       {% if paginator.total_pages > 1 %}
         <div class="pagination">
@@ -40,7 +36,7 @@
           {% else %}
             <span class="page-item">&laquo;</span>
           {% endif %}
-        
+
           {% for page in (1..paginator.total_pages) %}
             {% if page == paginator.page %}
               <span class="page-item">{{ page }}</span>
@@ -50,7 +46,7 @@
               <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="page-item">{{ page }}</a>
             {% endif %}
           {% endfor %}
-        
+
           {% if paginator.next_page %}
             <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-item">&raquo;</a>
           {% else %}
@@ -60,7 +56,7 @@
         {% endif %}
 
 	  </div>
-	    
+
 	    <!-- Footer -->
 	    {% include footer.html %}
 
