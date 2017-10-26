@@ -1,6 +1,6 @@
 # Site settings
-title: Yee | A minimal, responsive Jekyll blog theme
-description: "A minimal, responsive, ready to use blog template, built with Jekyll."
+title: Yee's Blog
+description: "personal blog"
 url: "https://yeekal.github.io/"
 author:
   name: "The Review Index"
@@ -34,6 +34,4 @@ gems:
 version: "1.0.0"
 
 # Options
-custom_header: false
-custom_nav_footer: false
 reverse: false

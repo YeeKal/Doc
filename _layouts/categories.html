@@ -1,0 +1,11 @@
+---
+layout: page
+---
+{% for post in site.categories[page.category] %}
+<li class="post">
+  <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+  <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line"> <i>{{ post.date | date_to_string }}</i> </time>
+  <p>{{ post.content | strip_html | truncatewords:10 }}</p>
+  <!-- truncate a string down to x words -->
+</li>
+{% endfor %}
