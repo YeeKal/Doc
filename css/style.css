@@ -1,0 +1,31 @@
+.header{
+  background: #000033;
+  width:1000px;
+  height:30px;
+  margin:0 auto;
+}
+.header_user{
+  width:200px;
+  float:left;
+}
+.header_user span{
+  font-size: 20px;
+  color:#eeeeee;
+}
+.header_menu{
+  width:500px;
+  float:right;
+  color:#eeeeee;
+}
+.header_menu li{
+  list-style-type: none;
+  float:roght;
+  width:100px;
+  height:30px;
+}
+.header_menu a:link,.header_menu a:visited{
+  text-decoration:none;
+}
+.header_menu a:hover,.header_menu a:active{
+  color:pink;
+}

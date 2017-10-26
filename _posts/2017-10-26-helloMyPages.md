@@ -13,3 +13,5 @@ tags:['web','jeklly','github']
 若不设置'title'，则默认文件名为'title'.
 
 'page' 是个很有意思的变量
+
+`include tag` {% include head.html %} this will embed `_includes/head.html` into the calling file.
