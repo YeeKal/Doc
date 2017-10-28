@@ -21,7 +21,11 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-
+#categories
+my_categories:
+  web
+  note
+  cs
 # Plugins
 gems:
   - jekyll-paginate
