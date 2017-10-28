@@ -6,14 +6,27 @@ categories: web
 
 Setting permalink styles in your configuration file applies the setting globally in your project. You configure permalinks in your \_config.yml file like this:
 
-```css
 `permalink: /:categories/:year/:month/:day/:title.html`
 
-//defaule value
-```
-Setting the permalink in posts pages or collection's font matter overrides any global settingd.
+## menu
 
----
-title: My page title
-permalink: /mypageurl/
----
+```python
+menu:
+  home: /
+  #categories: /categories/
+  #about: /about/
+  archives: /archives/
+  tags: /tags/
+  #sitemap: /sitemap.xml
+  #commonweal: /404.html
+```
+
+## url
+
+## categories
+
+{% for cat in site.categories %}
+
+cat[0]: name of categories;
+
+cat[1]: posts with category of the name
