@@ -24,9 +24,3 @@ menu:
 ## url
 
 ## categories
-
-{% for cat in site.categories %}
-
-cat[0]: name of categories;
-
-cat[1]: posts with category of the name
