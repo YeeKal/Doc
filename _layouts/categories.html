@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% for post in site.categories.[page.category] %}
+{% for post in site.categories.web %}
 {% if post.categories == page.title %}
 <li class="post">
   <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
@@ -10,4 +10,5 @@ layout: default
   <p>{{ post.content | strip_html | truncatewords:10 }}</p>
   <!-- truncate a string down to x words -->
 </li>
+{% endif %}
 {% endfor %}
