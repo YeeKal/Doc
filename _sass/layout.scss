@@ -225,7 +225,7 @@ img[title="Monochrome"] {
 
 code {
   color: lighten($text-color, 35%);
-  background-color: lighten($background-color, 35%);
+  background-color: #282C34;
 }
 
 /* Set the vertical rhythm (and padding-left) for lists inside post content */
@@ -254,7 +254,7 @@ code {
     color: $text-color;
   }
   a:hover {
-    background-color: pink;
+    color:pink;
   }
 }
 .page-item {
