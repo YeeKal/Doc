@@ -131,7 +131,11 @@
     position: static;
   }
 }
-
+#wrap{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 #container {
 	margin:0 auto;
 }
