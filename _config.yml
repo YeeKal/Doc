@@ -32,7 +32,7 @@ gems:
   - jekyll-sitemap
 
 # Custom variables
-version: "1.0.0"
+version: "1.0.2"
 
 # Options
 reverse: false
