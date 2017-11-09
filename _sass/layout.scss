@@ -139,12 +139,15 @@
 #container {
 	margin:0 auto;
 }
-
+#header-back{
+  width:100%;
+  background: #2B2B2B;
+  height: 6.25em;
+}
 #header {
   text-align: center;
-  width:100%;
-  height: 6.25em;
-  background: #2B2B2B;
+  width:1000px;
+  margin:0 auto;
   position: relative;
   a {
   	text-decoration: none;
