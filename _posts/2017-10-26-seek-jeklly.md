@@ -6,7 +6,9 @@ categories: web
 
 Setting permalink styles in your configuration file applies the setting globally in your project. You configure permalinks in your \_config.yml file like this:
 
-`permalink: /:categories/:year/:month/:day/:title.html`
+```python
+permalink: /:categories/:year/:month/:day/:title.html
+```
 
 ## menu
 
@@ -21,6 +23,6 @@ menu:
   #commonweal: /404.html
 ```
 
-## url
+**url**
 
-## categories
+**categories**
