@@ -44,10 +44,10 @@
     display:none;
   }
   a:link,a:visited {
-    padding: 0 0 0 2.5em;
+    padding: 0 0 0 2em;
     color: #6495ED;
     font-family:arial;
-    font-size:1.2em;
+    font-size:1em;
   }
   a:hover,a:active {
     color: pink;
@@ -138,7 +138,6 @@
 
 #header {
   text-align: center;
-  margin-bottom: 0.8em;
   height: 6.25em;
   background: #2B2B2B;
   position: relative;
@@ -154,7 +153,8 @@
   }
   span {
     color:#ffffff;
-    font-size: 1.5em;
+    font-size: 1.2em;
+
   }
 }
 
