@@ -1,5 +1,5 @@
 ---
-title: Hello World
+title: linear regression
 categories: cs
 ---
 
