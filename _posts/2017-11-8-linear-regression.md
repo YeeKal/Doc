@@ -2,6 +2,7 @@
 title: linear regression
 categories: cs
 ---
+note 1 for cs229:Machine Learning in Coursera
 
 ## data model
 
