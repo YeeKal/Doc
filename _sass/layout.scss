@@ -43,9 +43,16 @@
   @media (max-width: 940px) {
     display:none;
   }
-  a {
+  a:link,a:visited {
     padding-left: 10px;
-    color: $text-color;
+    color: #6495ED;
+    font-family:arial;
+    font-weight: 300
+  }
+  a:hover,a:active {
+    padding-left: 10px;
+    color: pink;
+    font-family:arial;
     font-weight: 300
   }
 }
