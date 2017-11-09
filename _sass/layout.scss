@@ -44,16 +44,13 @@
     display:none;
   }
   a:link,a:visited {
-    padding-left: 10px;
+    padding: 0 20px 30px 20px;
     color: #6495ED;
     font-family:arial;
-    font-weight: 300
+    font-size:25px;
   }
   a:hover,a:active {
-    padding-left: 10px;
     color: pink;
-    font-family:arial;
-    font-weight: 300
   }
 }
 
@@ -149,12 +146,15 @@
   	text-decoration: none;
   	display: inline-block;
   }
+  a:hover,a:active{
+    color:pink;
+  }
   div {
     margin: 0 auto;
   }
   span {
     color:#ffffff;
-    font-size: 2em;
+    font-size: 1.2em;
   }
 }
 
