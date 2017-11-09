@@ -57,11 +57,11 @@ $$\begin{aligned} \frac{\partial}{\partial \theta_j} J(\theta)&=(h_{\theta}(x)-y
 
 The rule is called the **LMS**(least mean squares) update rule. And is also known as the **Widrow-Hoff** learning rule. When there are more than one training example, two ways can be applied to modofy this method:
 
-&emsp;&emsp;Repeat until convergence$\{ \\\quad \quad \theta_j:={\theta}_j+\alpha\sum_{i=0}^m(y^{i}-h_\theta(x^{(i)}))x_j^{(i)} \\ \}$
+&emsp;&emsp;Repeat until convergence$$\{ \\\quad \quad \theta_j:={\theta}_j+\alpha\sum_{i=0}^m(y^{i}-h_\theta(x^{(i)}))x_j^{(i)} \\ \}$$
 
 This method  looks at every example in the entire training set on every step, and is called **batch gradient descent(遍历)**.
 
-&emsp;&emsp;Loop$\{ \\\quad \quad for i=1\quad to\quad m,\{\\\theta_j:={\theta}_j+\alpha(y^{i}-h_\theta(x^{(i)}))x_j^{(i)} \\ \quad\quad\}\\\}$
+&emsp;&emsp;Loop$$\{ \\\quad \quad for i=1\quad to\quad m,\{\\\theta_j:={\theta}_j+\alpha(y^{i}-h_\theta(x^{(i)}))x_j^{(i)} \\ \quad\quad\}\\\}$$
 
 Each time we encounter a training example, we update the parameters according to the gradient of the error with respect to that single training example only. This algorithm is called **stochastic gradient descent(随机梯度算法)**. This method is often preferred over batch gradient descent.
 
