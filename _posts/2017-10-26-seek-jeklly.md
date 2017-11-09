@@ -2,7 +2,7 @@
 title: seek jeklly
 categories: web
 ---
-初来乍到。
+> 初来乍到
 
 ## permalink
 
