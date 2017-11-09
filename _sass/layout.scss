@@ -2,7 +2,7 @@
 
 /* Navigation */
 
-#nav, #nav-left { 
+#nav, #nav-left {
   a {
     display: block;
     color: $text-color;
@@ -42,7 +42,7 @@
 #nav-links {
   @media (max-width: 940px) {
     display:none;
-  }   
+  }
   a {
     padding-left: 10px;
     color: $text-color;
@@ -133,10 +133,10 @@
 }
 
 #header {
-  border-bottom:  1px solid rgba(0,0,0,0.14);
   text-align: center;
-  margin-bottom: 3em;
-  height: 5em;
+  margin-bottom: 1.5em;
+  height: 6.25em;
+  background: #2B2B2B;
   position: relative;
   a {
   	text-decoration: none;
@@ -149,8 +149,8 @@
     font-size: 2em;
     padding-bottom: 0;
     span {
-      color: $text-light-color;
-      font-weight: 300;
+      color:#ffffff;
+      font-weight: 400;
     }
   }
 }
