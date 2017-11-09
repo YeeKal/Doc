@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Blog - technology and science at TheReviewIndex</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <id>http://localhost:4000</id>
+ <updated>2017-02-23T23:37:01+05:30</updated>
+ <author>
+   <name>The Review Index</name>
+   <uri>https://thereviewindex.com</uri>
+   <email>root@thereviewindex.com</email>
+ </author>
+
+ 
+
+ <entry>
+   <title>Frequently Asked Questions - TheReviewIndex</title>
+   <link href="http://localhost:4000/frequently-asked-questions"/>
+   <id>http://localhost:4000/frequently-asked-questions</id>
+   <updated>2017-02-22T00:00:00+05:30</updated>
+   <content type="html">&lt;p&gt;What is TheReviewIndex all about?&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;TheReviewIndex is an independent site that aspires to simplify online shopping, by organizing and summarizing user reviews from various online sources. All user reviews, from across sources, are summarized and presented as an unbiased, feature-wise summary to make reading reviews more efficient. Not just...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>Hello World - TheReviewIndex</title>
+   <link href="http://localhost:4000/hello-world"/>
+   <id>http://localhost:4000/hello-world</id>
+   <updated>2017-02-21T00:00:00+05:30</updated>
+   <content type="html">&lt;p&gt;We are TheReviewIndex.com - here to help you discover the right gadgets for your very individual needs.&lt;/p&gt; &lt;p&gt;The internet is a source of a humongous amounts of unstructured content for all sorts of products, in the form of blogs, videos, user and expert reviews, etc. It is almost impossible for...</content>
+ </entry>
+
+ 
+
+</feed>
