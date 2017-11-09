@@ -2,6 +2,8 @@
 title: seek jeklly
 categories: web
 ---
+初来乍到。
+
 ## permalink
 
 Setting permalink styles in your configuration file applies the setting globally in your project. You configure permalinks in your \_config.yml file like this:
