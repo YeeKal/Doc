@@ -146,7 +146,9 @@
   	display: inline-block;
   }
   a:hover,a:active{
+    span{
     color:pink;
+  }
   }
   div {
     margin: 2em auto;
@@ -243,7 +245,7 @@ code {
     color: $text-color;
   }
   a:hover {
-    background-color: lighten($text-color, 5%);
+    background-color: pink;
   }
 }
 .page-item {
