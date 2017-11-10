@@ -5,11 +5,11 @@ title: Archive
 {% for post in site.posts %}
 {% assign year = post.date | date: '%Y' %}
 
-{% if !post.previous %}
+{% if post.next==nil %}
   <h2>{{ year}}</h2>
   {% else %}
-{% assign pyear = post.previous.date | date: '%Y' %}
-  {% if pyear !=year %}
+{% assign nyear = post.next.date | date: '%Y' %}
+  {% if nyear !=year %}
   <h2>{{ year}}</h2>
   {% endif %}
   {% endif %}
