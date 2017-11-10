@@ -1,7 +1,3 @@
----
-layout: page
-title: About Me
----
 ## personal blog
 
 ## About
