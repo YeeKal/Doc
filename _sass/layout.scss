@@ -183,7 +183,7 @@
       margin-bottom: 1.3334em;
     }
 }
-
+/*
 .post+.post:before {
     display: block;
     content: '';
@@ -192,6 +192,7 @@
     margin: 23px auto;
     background-color: lighten($text-color, 70%);
   }
+  */
 
   .in-line {
     color: lighten($text-color, 25%);
@@ -212,12 +213,12 @@
   display: block;
   color: lighten($text-color, 25%);
   line-height: 1.5em; /* 24px/16px */
-  margin-bottom: 1.5em; /* 24px/16px */
+  margin-bottom: 0.3em; /* 24px/16px */
   font-weight: 200;
   @media (min-width: 940px) {
     display: block;
     color: lighten($text-color, 25%);
-    line-height: 1.3334em; /* 24px/18px */
+    line-height: 0.26em; /* 24px/18px */
     margin-bottom: 1.3334em; /* 24px/18px */
     font-weight: 200;
   }
