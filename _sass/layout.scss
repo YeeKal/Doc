@@ -197,9 +197,11 @@
   .in-line {
     color: lighten($text-color, 25%);
     line-height: 1.5em; /* 24px/16px */
-    width: 6em; /* 24px/16px */
+    : 6em; /* 24px/16px */
     font-weight: 200;
     @media (min-width: 940px) {
+      display:block;
+      float:left;
       color: lighten($text-color, 25%);
       line-height: 1.3334em; /* 24px/18px */
       width: 5.3334em; /* 24px/18px */
@@ -213,13 +215,13 @@
   display: block;
   color: lighten($text-color, 25%);
   line-height: 1.5em; /* 24px/16px */
-  margin-bottom: 0.3em; /* 24px/16px */
+  margin-bottom: 0.375em; /* 24px/16px */
   font-weight: 200;
   @media (min-width: 940px) {
     display: block;
     color: lighten($text-color, 25%);
-    line-height: 0.26em; /* 24px/18px */
-    margin-bottom: 1.3334em; /* 24px/18px */
+    line-height: 1.3334em; /* 24px/18px */
+    margin-bottom: 0.3334em; /* 24px/18px */
     font-weight: 200;
   }
 }
