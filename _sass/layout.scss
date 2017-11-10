@@ -197,18 +197,13 @@
   .in-line {
     color: lighten($text-color, 25%);
     line-height: 1.5em; /* 24px/16px */
-    : 6em; /* 24px/16px */
+    margin-right: 1.5em; /* 24px/16px */
     font-weight: 200;
     @media (min-width: 940px) {
-      display:block;
-      float:left;
       color: lighten($text-color, 25%);
       line-height: 1.3334em; /* 24px/18px */
-      width: 5.3334em; /* 24px/18px */
+      margin-right: 1.3334em; /* 24px/18px */
       font-weight: 200;
-    }
-    li{
-
     }
   }
 .by-line {
