@@ -8,7 +8,7 @@ title: Category
     {% for post in category.last %}
         <li>
           <a href="{{ post.url }}">
-            <time datetime="{{ post.date | date_to_xmlschema }}" class="by-line"> <i>{{ post.date | date_to_string }}</i> </time>
+            <time datetime="{{ post.date | date_to_xmlschema }}" class="in-line"> <i>{{ post.date | date_to_string }}</i> </time>
             {{ post.title }}
           </a>
         </li>
