@@ -1,7 +1,7 @@
 ## personal blog
 
 ## About
-forked from https://github.com/thereviewindex/blog
+forked from [thereviewindex/blog](https://github.com/thereviewindex/blog)
 
 ## Features
 
