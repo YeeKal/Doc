@@ -195,11 +195,13 @@
   */
 
   .in-line {
+    font-size: 0.9em;
     color: lighten($text-color, 25%);
     line-height: 1.5em; /* 24px/16px */
     margin-right: 1.5em; /* 24px/16px */
     font-weight: 200;
     @media (min-width: 940px) {
+      font-size: 0.8em;
       color: lighten($text-color, 25%);
       line-height: 1.3334em; /* 24px/18px */
       margin-right: 1.3334em; /* 24px/18px */
@@ -208,12 +210,14 @@
   }
 .by-line {
   display: block;
+  font-size: 0.9em;
   color: lighten($text-color, 25%);
   line-height: 1.5em; /* 24px/16px */
   margin-bottom: 0.375em; /* 24px/16px */
   font-weight: 200;
   @media (min-width: 940px) {
     display: block;
+    font-size: 0.8em;
     color: lighten($text-color, 25%);
     line-height: 1.3334em; /* 24px/18px */
     margin-bottom: 0.3334em; /* 24px/18px */
