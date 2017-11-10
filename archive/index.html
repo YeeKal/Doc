@@ -1,0 +1,22 @@
+---
+layout: page
+title: Archive
+---
+{% for post in site.posts %}
+{% assign year = post.date | date: '%Y' %}
+
+{% if post.previous==nil %}
+  <h2>{{ year}}</h2>
+  {% else %}
+{% assign pyear = post.previous.date | date: '%Y' %}
+  {% if pyear!=year %}
+  <h2>{{ year}}</h2>
+  {% endif %}
+  {% endif %}
+        <li>
+          <a href="{{ post.url }}">
+            <time datetime="{{ post.date | date_to_xmlschema }}" class="in-line"> <i>{{ post.date | date_to_string }}</i> </time>
+            {{ post.title }}
+          </a>
+        </li>
+{% endfor %}
