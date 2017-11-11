@@ -1,6 +1,7 @@
 ---
 title: Hello World
 categories: note
+tags: note
 ---
 *This is our first post. Hello World!*
 

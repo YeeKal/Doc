@@ -1,6 +1,7 @@
 ---
 title: archive test
 categories: test
+tags: test
 ---
 *archive test*
 

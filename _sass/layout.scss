@@ -285,6 +285,20 @@ code {
       -ms-border-radius: 4px;
           border-radius: 4px;
 }
+/*tag cloud*/
+.octicon-tag {
+    display: inline-block !important;
+    margin: 15px 5px 0 0 !important;
+    padding: 0 15px;
+    height: 30px;
+    line-height: 30px;
+    background: rgba(0, 0, 0, 0.05);
+    color: #666;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
 /* Footer */
 
