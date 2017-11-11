@@ -15,15 +15,16 @@ function getUrlVars(){
    }
    var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }';
    var data = JSON.parse(dataStr);
-    var s=getUrlVars()["cat"];
-    alert(s);
+    var catName=getUrlVars()["cat"];
+    alert(catName);
   //  var curTag = $.query.get("cat");
-  var catname=data[s];
-    alert(catname);
+  var catPosts=data[catName];
+    alert(catPosts);
+//element property
+    document.getElementById("detail-head").innerHTML=s;
 </script>
 
-<h2>{{s}}</h2>
-{% for post in archieves %}
+<h2 id="detail-head"></h2>
 
 <ul>
         <li>
@@ -33,4 +34,3 @@ function getUrlVars(){
           </a>
         </li>
 </ul>
-{% endfor %}
