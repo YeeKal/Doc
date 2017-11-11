@@ -13,15 +13,16 @@ function getUrlVars(){
        }
        return vars;
    }
-//var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }';
-  //  data = JSON.parse(dataStr);
+   var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }';
+   var data = JSON.parse(dataStr);
     var s=getUrlVars()["cat"];
     alert(s);
-    var curTag = $.query.get("cat");
-    alert(s);
+  //  var curTag = $.query.get("cat");
+  var catname=data[s];
+    alert(catname);
 </script>
 
-<h2>{{curTag}}</h2>
+<h2>{{s}}</h2>
 {% for post in archieves %}
 
 <ul>
