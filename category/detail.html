@@ -9,8 +9,8 @@ var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories
     archieves = data[curTag];
 </script>
 
-<h2>{{cat}}</h2>
-{% for post in archives %}
+<h2>{{curTag}}</h2>
+{% for post in archieves %}
 
 <ul>
         <li>
