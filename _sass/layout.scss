@@ -290,7 +290,7 @@ code {
 
 footer {
   background-color: $background-color;
-  color: $text-color;
+  color: lighten($text-color, 25%);
   text-align: center;
   padding: 0.6667em 0;
 }
