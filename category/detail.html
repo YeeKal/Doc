@@ -18,13 +18,15 @@ function getUrlVars(){
     var catName=getUrlVars()["cat"];
   //  var curTag = $.query.get("cat");
   var catPosts=data[catName];
-    alert(catPosts[1]['title']);
+    alert(catPosts[0]['title']);
 //element property
     document.getElementById("detail-head").innerHTML=catName;
 </script>
 
 <h2 id="detail-head"></h2>
-
+<script type="text/javascript">
+document.getElementById("detail-head").innerHTML=catName;
+</script>
 <ul>
         <li>
           <a href="{{ post.url }}">
