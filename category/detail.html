@@ -16,10 +16,9 @@ function getUrlVars(){
    var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }';
    var data = JSON.parse(dataStr);
     var catName=getUrlVars()["cat"];
-    alert(catName);
   //  var curTag = $.query.get("cat");
   var catPosts=data[catName];
-    alert(catPosts);
+    alert(catPosts[1]['title']);
 //element property
     document.getElementById("detail-head").innerHTML=catName;
 </script>
