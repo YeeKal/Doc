@@ -8,7 +8,7 @@ title: Category-detail
 var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }',
     data = JSON.parse(dataStr),
     var s=location.search.substring(1);//这个就是页面?后面的内容，自己处理一下
-    s=s.replace('dela=','');
+    s=s.replace('cat=','');
     //curTag = $.query.get("cat"),
     archieves = data[s];
 </script>
