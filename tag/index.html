@@ -3,8 +3,6 @@ layout: page
 title: TagCloud
 ---
 
-<div class="well">
-
 <div class="tags-cloud">
 {% for tag in site.tags %}
 <a href="#{{ tag[0] }}" class="octicon octicon-tag" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
