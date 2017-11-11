@@ -1,0 +1,23 @@
+---
+layout: page
+title: Category
+---
+<script type="text/javascript">
+var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }',
+    data = JSON.parse(dataStr),
+    curTag = $.query.get("cat"),
+    archieves = data[curTag];
+</script>
+
+<h2>{{cat}}</h2>
+{% for post in archives %}
+
+<ul>
+        <li>
+          <a href="{{ post.url }}">
+            <time datetime="{{ post.date | date_to_xmlschema }}" class="in-line"> <i>{{ post.date | date_to_string }}</i> </time>
+            {{ post.title }}
+          </a>
+        </li>
+</ul>
+{% endfor %}
