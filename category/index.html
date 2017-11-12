@@ -3,7 +3,7 @@ layout: page
 title: Category
 ---
 {% for category in site.categories %}
-<h2><a href="/category/detail.html?cat={{category | first}}">{{ category | first }}<a></h2>
+<h2><a href="#">{{ category | first }}<a></h2>
 <ul>
     {% for post in category.last %}
         <li>

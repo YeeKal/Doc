@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: 
 title: Category-detail
 ---
 <script type="text/javascript">
@@ -19,20 +19,4 @@ function getUrlVars(){
   //  var curTag = $.query.get("cat");
   var catPosts=data[catName];
 //element property
-</script>
-
-<h2 id="detail-head"></h2>
-<script type="text/javascript">
-document.getElementById("detail-head").innerHTML=catName;
-</script>
-
-<ul id="detail-ul"></ul>
-<script type="text/javascript">
-for(post in catPosts){
-  var parent=document.getElementById("detail-ul");
-  var li=document.createElement("div");
-  li.setAttribute("id","li-detail");
-  li.innerHTML='<a href='+post[url]+'><time class="in-line"> <i>'+post[date]+'</i> </time>'+ post[title]+'</a>';
-  parent.append(li);
-}
 </script>
