@@ -46,7 +46,7 @@ body {
 }
 */
 /*- Link -*/
-a {
+a,a:visited {
 	color: $text-color;
 	text-decoration: none;
 	font-weight: 700;
