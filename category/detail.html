@@ -26,16 +26,13 @@ function getUrlVars(){
 document.getElementById("detail-head").innerHTML=catName;
 </script>
 
-{% for category in site.categories %}
-<h2><a href="/category/detail.html?cat={{category | first}}">{{ category | first }}<a></h2>
-<ul>
-    {% for post in category.last %}
-        <li>
-          <a href="{{ post.url }}">
-            <time datetime="{{ post.date | date_to_xmlschema }}" class="in-line"> <i>{{ post.date | date_to_string }}</i> </time>
-            {{ post.title }}
-          </a>
-        </li>
-    {% endfor %}
-</ul>
-{% endfor %}
+<ul id=""></ul>
+<script type="text/javascript">
+for(post in catPosts){
+var li=document.createElement("div");
+li.setAttribute("id","li-detail");
+li.innerHTML='<a href="{{ post.url }}">\
+  <time datetime="{{ post.date | date_to_xmlschema }}" class="in-line"> <i>{{ post.date | date_to_string }}</i> </time>\
+  {{ post.title }}</a>';
+}
+</script>
