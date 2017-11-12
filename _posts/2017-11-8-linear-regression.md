@@ -1,7 +1,7 @@
 ---
 title: linear regression
 categories: cs
-tags； ml
+tags: ml
 ---
 *note 1 for cs229:Machine Learning in Coursera*
 
