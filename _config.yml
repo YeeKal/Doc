@@ -6,6 +6,7 @@ url: "https://yeekal.github.io/"
 # Build settings
 baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
+highlight: true
 source: .
 destination: ./_site
 permalink: /:title

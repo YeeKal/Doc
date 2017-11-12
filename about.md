@@ -2,6 +2,8 @@
 layout: page
 title: About Me
 ---
-## personal blog
+## Github
 
-Initially forked from [thereviewindex/blog](https://github.com/thereviewindex/blog)
+[Yeekal.github.io](https://yeekal.github.io/)
+
+Initially forked from [thereviewindex/blog](https://github.com/thereviewindex/blog).
