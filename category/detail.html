@@ -13,7 +13,7 @@ function getUrlVars(){
        }
        return vars;
    }
-   var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }';
+   var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date_to_string}}"}{% endfor %}]{% endfor %} }';
    var data = JSON.parse(dataStr);
     var catName=getUrlVars()["cat"];
   //  var curTag = $.query.get("cat");
@@ -26,13 +26,13 @@ function getUrlVars(){
 document.getElementById("detail-head").innerHTML=catName;
 </script>
 
-<ul id=""></ul>
+<ul id="detail-ul"></ul>
 <script type="text/javascript">
 for(post in catPosts){
-var li=document.createElement("div");
-li.setAttribute("id","li-detail");
-li.innerHTML='<a href="{{ post.url }}">\
-  <time datetime="{{ post.date | date_to_xmlschema }}" class="in-line"> <i>{{ post.date | date_to_string }}</i> </time>\
-  {{ post.title }}</a>';
+  var parent=document.getElementById("detail-ul");
+  var li=document.createElement("div");
+  li.setAttribute("id","li-detail");
+  li.innerHTML='<a href='+post[url]+'><time class="in-line"> <i>'+post[date]+'</i> </time>'+ post[title]+'</a>';
+  parent.append(li);
 }
 </script>
