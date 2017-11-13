@@ -17,7 +17,7 @@ where
 
 $$g(z)=\frac{1}{1+e^{-z}}=\frac{e^z}{1+e^z} \\$$
 
-is called the **sigmoid function** or **logistic function**. Here is a plot showing $g(z)$:![sigmoid function](\img\logistic-regression-1.jpg)
+is called the **sigmoid function** or **logistic function**. Here is a plot showing $g(z)$:![sigmoid function](..\img\logistic-regression-1.jpg)
 
 We suppose y=1 when $h_\theta \ge 0.5$, which means $\theta^Tx \ge 0$. Consider logistic regression has two features $x_1$ and $x_2$, when $\theta^Tx = 0$, $\theta_0+\theta_1 x_1+\theta_2x_2=0$. So in the $x_1-x_2$ plane, the seperation is a line, which is called **decision boundary**. However, if two features with quadratic polynomial, the boundary is non-linear and may be a circle. In higher order polynomial, the shape is more complex.
 
