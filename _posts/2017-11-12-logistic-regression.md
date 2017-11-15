@@ -7,7 +7,7 @@ description: note 2 for cs229:Machine Learning in Coursera
 
 Classification problem. For now, we will focus on the **binary classification** problem in which $y$ can only takes two values, 0 and 1.
 
-## logistic regression
+## logistic model
 
 Change the form for our hypotheses $h_\theta(x)$:
 
@@ -41,13 +41,17 @@ $$l(\theta)=logL(\theta)=\sum_{i=1}^my^{(i)}logh(x^{(i)})+(1-y^{(i)})log(1-h(x^{
 
 $$\frac{\partial}{\partial\theta_j}l(\theta)=(y-h_\theta(x))x_j \\$$
 
-This therefor gives us the stochastic ([sto'kæstɪk]随机的) gradient ascent rule:
+This therefor gives us the stochastic ([sto'kæstɪk]随机的) **gradient ascent** rule:
 
 $$\theta_j:=\theta_j+\alpha(y^{(i)}-h_\theta(x^{(i)}))x_j^{(i)} \\$$
 
+A vectorized implementation is:
+
+$$ \theta:=\theta-\alpha X^T(g(X\theta)-\overrightarrow y) \\$$
+
 It has identical  expression compred with LMS.
 
-In fact, they are all aimed to get the maximum likelihood.  To get the maximum number, we are supposed to find the solution of the first-order derivative. So the problem is thansfered to finding the solution of $f(x)=0$. **think about your Numerical Analysis(数值分析)**
+In fact, they are all aimed to get the maximum likelihood, which is the same as the cost function.  To get the maximum number, we are supposed to find the solution of the first-order derivative. So the problem is thansfered to finding the solution of $f(x)=0$. **Think about your Numerical Analysis(数值分析)**
 
 Considerating **Newton**'s  method:
 
@@ -62,3 +66,15 @@ where $H$ is the **Hessian matrix**, whise entries are given by:
 $$H_{ij}=\frac{\partial^2l(\theta)}{\partial \theta_i\partial \theta_j} \\$$
 
 Newton's method typically enjorys faster convergence.
+
+More advanced optimization method:
+
+- BFGS
+- L-BFGS
+
+## Multiclass classification
+
+For **multiclass classfication**,  train a logistic regression classifier $h_\theta^{(i)}(x)$ for each $y=i$, which is also called one-vs-all.
+
+
+
