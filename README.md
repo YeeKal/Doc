@@ -1,4 +1,3 @@
 ## personal blog
 
-## About
-forked from [thereviewindex/blog](https://github.com/thereviewindex/blog)
+revised from [thereviewindex/blog](https://github.com/thereviewindex/blog)
