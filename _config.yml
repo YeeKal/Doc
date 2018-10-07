@@ -34,6 +34,10 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: "documents/article"
+    values:
+      layout: "post"
 
 # Plugins
 gems:
