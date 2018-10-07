@@ -35,7 +35,7 @@ defaults:
     values:
       layout: "post"
   - scope:
-      path: "documents/article"
+      path: "documents/_article"
     values:
       layout: "post"
 
