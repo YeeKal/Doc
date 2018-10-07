@@ -22,6 +22,7 @@ collections:
   ompl:
     output: true
     permalink: /:collection/:name
+    layout: "post"
   article:
     output: true
     permalink: /:collection/:name
