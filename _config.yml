@@ -21,6 +21,10 @@ collections:
   ompl:
     output: true
     permalink: /:collection/:name
+  文:
+    output: true
+    permalink: /:collection/:name
+
 
 #add front matter values to static files sometime
 defaults:
