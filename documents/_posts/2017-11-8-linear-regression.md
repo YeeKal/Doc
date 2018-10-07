@@ -2,6 +2,7 @@
 title: linear regression
 categories: cs
 tags: ml
+date: 2017-11-08
 description: note 1 for cs229:Machine Learning in Coursera
 ---
 
