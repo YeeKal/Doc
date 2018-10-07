@@ -36,6 +36,12 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "ompl"
+    values:
+      layout: "post"
 
 # Plugins
 gems:
