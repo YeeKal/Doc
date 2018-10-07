@@ -9,7 +9,7 @@ markdown: kramdown
 kramdown:
     input: GFM
 
-highlight: true
+#highlight: true
 source: .
 destination: ./_site
 permalink: /:title
