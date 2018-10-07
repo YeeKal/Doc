@@ -10,7 +10,7 @@ title: TagCloud
 </div>
 
 {% for tag in site.tags %}
-<h2><a href="#" id={{ tag | first }}>{{ tag | first }}<a></h2>
+<h2 class="document-title"><a href="#" id={{ tag | first }}>{{ tag | first }}<a></h2>
 <ul>
     {% for post in tag.last %}
         <li>
