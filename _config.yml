@@ -21,7 +21,7 @@ collections:
   ompl:
     output: true
     permalink: /:collection/:name
-  文:
+  article:
     output: true
     permalink: /:collection/:name
 
