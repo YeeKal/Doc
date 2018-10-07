@@ -23,8 +23,8 @@ MathJax.Hub.Config({
     });
 </script>
 
-<link rel="stylesheet" href="js/prettify/sons-of-obsidian.css">
-<script src="js/prettify/prettify.js"></script>
+<link rel="stylesheet" href="{{ "js/prettify/prettify.css" | prepend: site.baseurl | replace: '//', '/' }}">
+<script src="js/prettify/prettify.js" | prepend: site.baseurl | replace: '//', '/' }}"></script>
 <script type="text/javascript">
   $(function(){
     $("pre").addClass("prettyprint linenums");

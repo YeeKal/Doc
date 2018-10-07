@@ -9,3 +9,7 @@
 - category/index.html: 继承page
 - archive/index.html: 继承page
 - tag/index.html: 继承page
+
+## reference
+
+[侧边栏](http://www.thomaszhao.cn/2015/01/08/how-do-i-build-this-jekyll-blog/)

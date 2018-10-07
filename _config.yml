@@ -8,12 +8,6 @@ baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
 kramdown:
     input: GFM
-    syntax_highlighter: rouge
-highlighter: rouge
-
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough","superscript"]
-
 
 #highlight: true
 source: .
