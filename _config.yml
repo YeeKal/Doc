@@ -38,7 +38,7 @@ defaults:
       layout: "post"
   - 
     scope:
-      path: ""
+      path: "documents/_ompl"
       type: "ompl"
     values:
       layout: "post"
