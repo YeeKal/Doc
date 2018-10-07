@@ -8,6 +8,7 @@ baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
 kramdown:
     input: GFM
+
 highlight: true
 source: .
 destination: ./_site
@@ -32,10 +33,6 @@ defaults:
     scope:
       path: ""
       type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: "documents/_article"
     values:
       layout: "post"
 
