@@ -17,7 +17,10 @@ paginate_path: /page:num/
 
 # Default values
 collections_dir: documents
-#collections:
+collections:
+  ompl:
+    output: true
+    permalink: /:collection/:name
 
 #add front matter values to static files sometime
 defaults:
