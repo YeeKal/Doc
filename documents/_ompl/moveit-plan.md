@@ -4,6 +4,7 @@ title: moveitPlan
 categories: ompl
 tags: planning
 description: note 1 for cs229:Machine Learning in Coursera
+date: 2018-09-01
 ---
 ## moveit 规划源码解析
 
