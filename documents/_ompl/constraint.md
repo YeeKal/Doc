@@ -1,5 +1,4 @@
 ---
-#layout: post
 title: constraint
 categories: ompl
 tags: planning

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: moveitPlan
 categories: ompl
 tags: planning
