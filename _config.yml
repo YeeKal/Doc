@@ -12,10 +12,13 @@ highlight: true
 source: .
 destination: ./_site
 permalink: /:title
-paginate: 5    #how many items should be displayed in one page
+paginate: 8    #how many items should be displayed in one page
 paginate_path: /page:num/
 
 # Default values
+collections_dir: documents
+#collections:
+
 #add front matter values to static files sometime
 defaults:
   -
