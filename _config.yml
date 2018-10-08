@@ -24,7 +24,7 @@ collections:
     output: true
     permalink: /:collection/:name
     layout: "post"
-  article:
+  paper:
     output: true
     permalink: /:collection/:name
 
@@ -41,6 +41,12 @@ defaults:
     scope:
       path: ""
       type: "ompl"
+    values:
+      layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "paper"
     values:
       layout: "post"
 

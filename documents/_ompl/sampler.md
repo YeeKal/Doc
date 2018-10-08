@@ -17,7 +17,7 @@ si_->checkMotion(nmotion->state, dstate);//check a valid path exists or not
 
 - virtual sampleUniform(state): 随机采样，不对状态合法性进行判断
 
-##validStateSampler
+## validStateSampler
 
 - virtual sample(State *state): 合法性采样
 
