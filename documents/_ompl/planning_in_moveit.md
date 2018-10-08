@@ -142,6 +142,7 @@ OMPLPlannerManager : public planning_interface::PlannerManager{
 
 OMPLInterface::getPlanningContext(){
 	ModelBasedPlanningContextPtr ctx = context_manager_.getPlanningContext(planning_scene, req, error_code);
+	configureContext(ctx);
 }
 
 PlanningContextManager::getPlanningContext(){
@@ -214,35 +215,6 @@ void ModelBasedStateSpace::copyToRobotState(robot_state::RobotState& rstate,
   rstate.update();
 }
 ```
-**construct constraints**
-
-- [kinematic_constraints utils.cpp](https://github.com/kunal15595/ros/blob/master/moveit/src/moveit_core/kinematic_constraints/src/utils.cpp)
-- [moveit msgs](https://github.com/ros-planning/moveit_msgs/tree/kinetic-devel/msg)
-
-MotionPLanRequest通过`kinematic_constraints::constructGoalConstraints()`来构造约束方式。`move_group_interface`中`constructMotionPlanRequest()`也是通过不同的约束标记来构造`MotionPlanRequest res`.
-
-```c++
-//MotionPlanRequest definition
-WorkspaceParameters workspace_parameters
-RobotState start_state
-Constraints[] goal_constraints  //
-Constraints path_constraints	//
-TrajectoryConstraints trajectory_constraints //
-string planner_id
-string group_name
-int32 num_planning_attempts
-float64 allowed_planning_time
-float64 max_velocity_scaling_factor
-float64 max_acceleration_scaling_factor
-//Constraints
-string name
-JointConstraint[] joint_constraints  //[low,high]
-PositionConstraint[] position_constraints
-OrientationConstraint[] orientation_constraints //[orientation tolerance]
-VisibilityConstraint[] visibility_constraints
-```
-
-
 
 ## model based state space
 
