@@ -98,6 +98,9 @@ res中一个Constraints: path_constraints,另一个Constraints[]: goal_constrain
 
 **constructs constraints by planner**
 
+- [constraint_samplers cpp](https://github.com/ros-planning/moveit/tree/kinetic-devel/moveit_core/constraint_samplers/src)
+- [constraint_sampler head](https://github.com/ros-planning/moveit/tree/kinetic-devel/moveit_core/constraint_samplers/include/moveit/constraint_samplers)
+
 ```c++
 /*in omplinterface::getPlanningContext()*/
 configureContext(context);//构造constraints_approximation,但是需要用户自定义，默认没有
@@ -111,6 +114,17 @@ context->setPathConstraints(req.path_constraints, &error_code);
 context->setGoalConstraints(req.goal_constraints, req.path_constraints, &error_code);
 
 context->configure();
+```
+```c++
+configure(...){
+    ....
+    //state_space_: reference planning_context_manager.cpp in line 224
+    ompl::base::ScopedState<> ompl_start_state(spec_.state_space_);
+    spec_.state_space_->copyToOMPLState(ompl_start_state.get(), getCompleteInitialRobotState());
+    ompl_simple_setup_->setStartState(ompl_start_state);//set start state
+    ompl_simple_setup_->setStateValidityChecker(ob::StateValidityCheckerPtr(new StateValidityChecker(this)));//set default validity checker
+    ....
+}
 ```
 ```c++
 //in constructor function
@@ -130,18 +144,10 @@ allocPathConstrainedSampler(){
     logDebug("%s: Allocating default state sampler for state space", name_.c_str());
     return ss->allocDefaultStateSampler();
 }
+
+
 ```
-```c++
-configure(...){
-    ....
-    //state_space_: reference planning_context_manager.cpp in line 224
-    ompl::base::ScopedState<> ompl_start_state(spec_.state_space_);
-    spec_.state_space_->copyToOMPLState(ompl_start_state.get(), getCompleteInitialRobotState());
-    ompl_simple_setup_->setStartState(ompl_start_state);//set start state
-    ompl_simple_setup_->setStateValidityChecker(ob::StateValidityCheckerPtr(new StateValidityChecker(this)));//set default validity checker
-    ....
-}
-```
+
 
 
 
