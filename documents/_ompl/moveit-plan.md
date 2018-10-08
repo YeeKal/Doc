@@ -1,11 +1,10 @@
 ---
 layout: post
-title: moveitPlan
+title: moveit 规划源码解析
 categories: ompl
 tags: planning
 date: 2018-09-01
 ---
-## moveit 规划源码解析
 
 - `MoveGroupInterface`类构建`move_group`
 - `Plan` 结构体实例化`my_plan`
