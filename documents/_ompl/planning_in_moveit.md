@@ -1,6 +1,5 @@
 ---
-layout: post
-title: moveit 规划源码解析
+title: analyze planning in moveit 
 categories: ompl
 tags: planning
 date: 2018-09-01
