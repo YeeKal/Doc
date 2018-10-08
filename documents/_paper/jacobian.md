@@ -2,7 +2,7 @@
 title: jacobian and tangent space
 categories: paper
 tags: closed
-date: 2016-06-15
+date: 2018-06-15
 ---
 
 ## tangent space

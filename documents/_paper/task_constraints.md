@@ -2,10 +2,10 @@
 title: task constraint motion planning
 categories: paper
 tags: closed
-date: 2016-06-10
+date: 2018-07-24
 ---
 
-##Motion Planning With Constraints Using Configuration Space Approximations
+## Motion Planning With Constraints Using Configuration Space Approximations
 
 ```
 read: 2018-09-27
@@ -18,7 +18,7 @@ publish: 2012
 1. starts with compution an approximation of the constraint manifold offline
 2. planning on the constraint manifold directly instead of planning in the full configuration space
 
-**approximating constraint manifolds**
+** approximating constraint manifolds**
 
 1. generating an approximation graph
 
@@ -45,7 +45,7 @@ Output: Approximation Graph
     - sampling configurations uniformly in a ball
 3. 
 
-##sampling-based-methods-for-motion-planning-with-constraints
+## sampling-based-methods-for-motion-planning-with-constraints
 
 ```
 read: 2018-07-1

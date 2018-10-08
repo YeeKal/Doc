@@ -2,7 +2,7 @@
 title: closed constraint motion planning
 categories: paper
 tags: closed
-date: 2016-06-01
+date: 2018-06-01
 ---
 
 ## A Probabilistic Roadmap Approach for Systems with Closed
@@ -85,6 +85,5 @@ Y_n&=-\frac{\partial{X_n}}{\partial{q_n}}
 10. &emsp;Return L; 
 11. else 
 10. &emsp;Return FAILURE
-
 
 **tangent space**
