@@ -220,6 +220,34 @@ bool IKConstraintSampler::sampleHelper(robot_state::RobotState& state, const rob
 }
 ```
 
+**inverse kinematics**
+
+- [kinematics_base.cpp](https://github.com/ros-planning/moveit/blob/kinetic-devel/moveit_core/kinematics_base/src/kinematics_base.cpp)
+- [kinematics_base.h](https://github.com/ros-planning/moveit/blob/kinetic-devel/moveit_core/kinematics_base/include/moveit/kinematics_base/kinematics_base.h)
+- [moveit kinematics](https://github.com/ros-planning/moveit/tree/kinetic-devel/moveit_kinematics)
+
+moveit kinemtics继承kinematics_base, 是逆解的具体执行者。
+
+```c++
+//in callIk()
+/*
+geometry_msgs::Pose& ik_query;
+std::vector<double> ik_sol;
+std::vector<double> seed;
+*/
+kinematics::KinematicsBaseConstPtr kb_; 
+kb_->searchPositionIK(ik_query, seed, timeout, ik_sol, adapted_ik_validity_callback, error)
+
+//in robotState
+setFromIk(){
+    ....
+    const kinematics::KinematicsBaseConstPtr& solver = jmg->getSolverInstance();
+    solver->searchPositionIK(ik_queries, seed, timeout, consistency_limits, ik_sol, ik_callback_fn, error, options,this);
+    ....
+}
+```
+
+
 
 
 
