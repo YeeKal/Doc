@@ -129,7 +129,7 @@ configure(...){
 ```c++
 //in constructor function
 ompl_simple_setup_->getStateSpace()->setStateSamplerAllocator(boost::bind(&ModelBasedPlanningContext::allocPathConstrainedSampler, this, _1));
-allocPathConstrainedSampler(){
+ompl::base::StateSamplerPtr allocPathConstrainedSampler(){
     if(path_constraints_){
         ....
         constraint_samplers::ConstraintSamplerPtr cs;
@@ -144,8 +144,80 @@ allocPathConstrainedSampler(){
     logDebug("%s: Allocating default state sampler for state space", name_.c_str());
     return ss->allocDefaultStateSampler();
 }
+typedef std::function< StateSamplerPtr(const StateSpace *)> 	StateSamplerAllocator;
+```
+
+cs 是constraint_samplers::ConstraintSampler的一个子类，定义在ompl_interface/detail中，返回的是ob::StateSampler类型，即constraintSampler作为ob:StateSampler的一个属性而存在. 
+
+多约束情况下，函数返回UnionConstraintSampler，是ConstraintSampler众多子类的集合。
+
+```c++
+bool UnionConstraintSampler::sample(...){
+    ...
+    for (std::size_t i = 1; i < samplers_.size(); ++i)
+    {
+        state.updateLinkTransforms();
+        if (!samplers_[i]->sample(state, state, max_attempts))
+        return false;
+    }
+}
+```
 
 
+**sampling** 
+
+
+```c++
+void ompl_interface::ConstrainedSampler::sampleUniform(ob::State *state)
+{
+    //调用3次
+    if (!sampleC(state) && !sampleC(state) && !sampleC(state))
+        default_->sampleUniform(state);
+}
+
+bool ompl_interface::ConstrainedSampler::sampleC(ob::State *state)
+{
+    //调用moveit定义的constraintSampler::sample()
+    if (constraint_sampler_->sample(work_state_, planning_context_->getCompleteInitialRobotState(), planning_context_->getMaximumStateSamplingAttempts()))
+    {
+        planning_context_->getOMPLStateSpace()->copyToOMPLState(state, work_state_);
+        if (space_->satisfiesBounds(state))
+        {
+        ++constrained_success_;
+        return true;
+        }
+    }
+    ++constrained_failure_;
+    return false;
+}
+```
+
+在[default_constraint_sampler.h](https://github.com/ros-planning/moveit/blob/kinetic-devel/moveit_core/constraint_samplers/include/moveit/constraint_samplers/default_constraint_samplers.h)中，默认构建了两个子类：JointConstraintSampler,IKConstraintSampler来分别处理joint_constraints和position_constraints/orientation_constraints.
+
+```c++
+bool IKConstraintSampler::sample(robot_state::RobotState& state, const robot_state::RobotState& reference_state,
+                                 unsigned int max_attempts)
+{
+  return sampleHelper(state, reference_state, max_attempts, false);
+}
+
+bool IKConstraintSampler::sampleHelper(robot_state::RobotState& state, const robot_state::RobotState& reference_state,
+                                       unsigned int max_attempts, bool project)
+{
+    ....
+    for (unsigned int a = 0; a < max_attempts; ++a)
+    {
+        // sample a point in the constraint region
+        Eigen::Vector3d point;
+        Eigen::Quaterniond quat;
+        samplePose(point, quat, reference_state, max_attempts)
+
+        //求逆解
+        if (callIK(ik_query, adapted_ik_validity_callback, ik_timeout_, state, project && a == 0))
+            return true;
+    }
+    ....
+}
 ```
 
 
