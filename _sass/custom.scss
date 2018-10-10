@@ -5,12 +5,22 @@ p {
   color:#444444;
 }
 .highlight  {
-        background-color: rgb(36, 36, 36);
-        border-radius:0.3em; 
-        margin: 1em 1em;
+  word-wrap: break-word;
+  color: #24292e;
+  margin-bottom: 16px;
         }
 .document-title{
   font-family: Lato;
+}
+.highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
 }
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
