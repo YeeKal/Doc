@@ -4,6 +4,14 @@
 p {
   color:#444444;
 }
+.content a{
+  color: #0366d6;
+}
+.content a:hover,content a:active {
+  text-decoration: underline;
+  color: #0366d6;
+}
+
 .highlight  {
   word-wrap: break-word;
   color: #24292e;
@@ -26,7 +34,7 @@ p {
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { color: #22863a; font-weight: bold } /* Keyword */
-.highlight .o { color: #dddddd; font-weight: bold } /* Operator */
+.highlight .o { color: #5e5e5e; font-weight: bold } /* Operator */
 .highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
 .highlight .cp { color: #999999; font-weight: bold; font-style: italic } /* Comment.Preproc */
 .highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
