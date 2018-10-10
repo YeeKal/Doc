@@ -4,14 +4,15 @@
 p {
   color:#444444;
 }
-.content a{
+//markdown 
+.content a,.content a:hover,content a:active{
   color: #0366d6;
+  font-weight: 100;
 }
 .content a:hover,content a:active {
-  text-decoration: underline;
-  color: #0366d6;
+  text-decoration: underline; 
 }
-
+//highlight
 .highlight  {
   word-wrap: break-word;
   color: #24292e;
