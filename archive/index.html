@@ -36,7 +36,8 @@ title: Archive
   function sort_by_date(x,y){
     return x.date.localeCompare(y.date);
   }
-  posts.sort(sort_by_date)
+  posts.sort(sort_by_date);
+  alert("num"+posts.length);
   var element=document.getElementById("page");
   for(var i=0;i<posts.length;i++){
     var content=[
