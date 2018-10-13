@@ -27,6 +27,9 @@ collections:
   paper:
     output: true
     permalink: /:collection/:name
+  ros:
+    output: true
+    permalink: /:collection/:name
 
 
 #add front matter values to static files sometime
@@ -47,6 +50,12 @@ defaults:
     scope:
       path: ""
       type: "paper"
+    values:
+      layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "ros"
     values:
       layout: "post"
 
