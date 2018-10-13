@@ -2,7 +2,7 @@
 title: motoman driver structure
 categories: ros
 tags: industrical driver
-data: 2018-10-11
+date: 2018-10-11
 ---
 
 [industrical](http://docs.ros.org/kinetic/api/simple_message/html/namespaceindustrial.html)

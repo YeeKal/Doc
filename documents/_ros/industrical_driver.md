@@ -2,7 +2,7 @@
 title: industrical driver basic class
 categories: ros
 tags: industrical driver
-data: 2018-10-12
+date: 2018-10-12
 ---
 [industrical](http://docs.ros.org/kinetic/api/simple_message/html/namespaceindustrial.html)
 
