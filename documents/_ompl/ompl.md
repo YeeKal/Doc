@@ -1,5 +1,5 @@
 ---
-title: ompl
+title: ompl installation
 categories: ompl
 tags: planning
 date: 2018-07-18

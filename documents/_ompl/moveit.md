@@ -1,7 +1,7 @@
 ---
-title: moveit
+title: 初识moveit及其基本类
 categories: ompl
-tags: planning
+tags: moveit
 date: 2018-07-15
 ---
 
