@@ -20,3 +20,34 @@ title: Archive
           </a>
         </li>
 {% endfor %}
+<script>
+  var posts=new Array();
+  var posts_num=0;
+  {% for collection in site.collections %}
+   {% for post in collection.docs %}
+    posts[posts_num]=new Object();
+    posts[posts_num].category=collection.label;
+    posts[posts_num].title="{{post.title}}";
+    posts[posts_num].url="{{ post.url }}";
+    posts[posts_num].date="{{ post.date| date_to_string}}";
+    posts_num=posts_num+1;
+   {% endfor %}
+  {% endfor %}
+  function sort_by_date(x,y){
+    return x.date.localeCompare(y.date);
+  }
+  posts.sort(sort_by_date)
+  var element=document.getElementById("page");
+  for(var i=0;i<posts.length;i++){
+    var content=[
+      '<li>',
+          '<a href="'+posts[i].url+'">',
+            '<time datetime="'+posts[i].date+'" class="in-line"> <i>' +posts[i].date+'</i> </time>',
+            post[i].title,
+          '</a>',
+        '</li>'
+                ].join("");
+    element.append(content);
+  }
+
+  </script>
