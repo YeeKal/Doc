@@ -1,5 +1,5 @@
 ---
-title: analyze planning in moveit 2 
+title: planning in moveit - constraint sampling 
 categories: ompl
 tags: planning
 date: 2018-10-08

@@ -29,6 +29,10 @@ IKConstraintSampler::configure(){
 void ompl_interface::ModelBasedPlanningContext::configure(){
     ompl_simple_setup_->setStateValidityChecker(ob::StateValidityCheckerPtr(new StateValidityChecker(this)));
 }
+//调用planning_scene的函数进行碰撞检测
+planning_context_->getPlanningScene()->checkCollision()；
+planning_context_->getPlanningScene()->isStateFeasible();
+
 ```
 
 ## add collision to the world

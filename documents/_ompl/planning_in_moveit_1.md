@@ -1,5 +1,5 @@
 ---
-title: analyze planning in moveit 
+title: planning in moveit - ompl interface
 categories: ompl
 tags: planning
 date: 2018-09-01
