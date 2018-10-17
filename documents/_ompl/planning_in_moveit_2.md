@@ -218,6 +218,15 @@ bool IKConstraintSampler::sampleHelper(robot_state::RobotState& state, const rob
     }
     ....
 }
+
+bool samplePose(){
+    if (sampling_pose_.position_constraint_){
+    }
+    if (sampling_pose_.orientation_constraint_){
+        // sample a rotation matrix within the allowed bounds
+        //
+    }
+}
 ```
 
 **inverse kinematics**
@@ -245,6 +254,10 @@ setFromIk(){
     solver->searchPositionIK(ik_queries, seed, timeout, consistency_limits, ik_sol, ik_callback_fn, error, options,this);
     ....
 }
+```
+
+```c++
+typedef boost::function< bool(RobotState *robot_state, const JointModelGroup *joint_group, const double *joint_group_variable_values)> 	GroupStateValidityCallbackFn;
 ```
 
 
