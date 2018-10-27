@@ -31,4 +31,14 @@ q.z() = 0;
 q.w() = PI/8;    // Half of the rotation angle must be specified, even IDK why
 
 Eigen::Matrix3d R = q.normalized().toRotationMatrix();
+
+Eigen::Vector3d r;
+r=start_rot1.eulerAngles(2,1,0);//z y x 按欧拉角顺序
+Eigen::Matrix3d after;
+after=(Eigen::AngleAxisd(r[0],Eigen::Vector3d::UnitZ()))* (Eigen::AngleAxisd(r[1], Eigen::Vector3d::UnitY()))*(Eigen::AngleAxisd(r[2], Eigen::Vector3d::UnitX()));
+    
+```
+
+```c++
+Eigen::MatrixXd::Zero(6,6);
 ```

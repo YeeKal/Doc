@@ -92,3 +92,36 @@ static_cast< type-id >(expression);//强制把expression转换为type-id类型
 
 - RealVectorBounds 在类的初始化时需要初始化维度
 - StateSpaceSampler 必须要在`StateSpace`定义之前定义
+
+- longestValidSegmentFraction_: 离散化的两点间最大长度占规划空间的百分比,defailt_=0.01
+- longestValidSegmentCountFactor_： 两点间离散点个数合法倍数，default_=1
+- longestValidSegment_： 两点间最大长度
+```c++
+
+ unsigned int validSegmentCount(const State *state1, const State *state2) const
+ {
+     return longestValidSegmentCountFactor_ * (unsigned int)ceil(distance(state1, state2) / longestValidSegment_);
+ }
+```
+[magic_constants](http://ompl.kavrakilab.org/MagicConstants_8h_source.html#l00090)
+
+```c++
+ namespace ompl
+ {
+     namespace magic
+     {
+         static const double PROJECTION_DIMENSION_SPLITS = 20.0;
+         static const unsigned int PROJECTION_EXTENTS_SAMPLES = 100;
+         static const double PROJECTION_EXPAND_FACTOR = 0.05;
+         static const double MAX_MOTION_LENGTH_AS_SPACE_EXTENT_FRACTION = 0.2;//规划器距离参数
+         static const double COST_MAX_MOTION_LENGTH_AS_SPACE_EXTENT_FRACTION = 0.175;
+         static const double STD_DEV_AS_SPACE_EXTENT_FRACTION = 0.1;
+         static const unsigned int MAX_VALID_SAMPLE_ATTEMPTS = 100;
+         static const unsigned int FIND_VALID_STATE_ATTEMPTS_WITHOUT_TERMINATION_CHECK = 2;
+         static const unsigned int TEST_STATE_COUNT = 1000;
+         static const unsigned int NEAREST_K_RECALL_SOLUTIONS = 10;
+     }
+ }
+ 
+```
+- maxDistance_
