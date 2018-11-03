@@ -49,3 +49,6 @@ void ConstrainedStateSpace::interpolate(const State *from, const State *to, cons
 ```
 
 [ProjectedStateSpace](http://ompl.kavrakilab.org/ProjectedStateSpace_8cpp_source.html)实现了`discreteGeodesic()`和三个采样函数。
+
+
+distance and interpolation in se3 spaec.

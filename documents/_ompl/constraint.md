@@ -15,3 +15,5 @@ auto constraint_space=std::make_shared<ompl::base::ProjectedStateSpace>(space,co
 //注册自定义投影类
 constraint_space->registerProjection("sphere", std::make_shared<SphereProjection>(constraint_space));
 ```
+
+[cbirrt in openrave](https://github.com/robEllenberg/comps-plugins/blob/master/cbirrt2/TaskSpaceRegion.cpp)

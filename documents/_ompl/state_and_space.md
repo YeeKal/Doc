@@ -125,3 +125,53 @@ static_cast< type-id >(expression);//强制把expression转换为type-id类型
  
 ```
 - maxDistance_
+
+## in moveit
+
+pg.interpolate(std::max((unsigned int)floor(0.5 + pg.length() / max_solution_segment_length_), minimum_waypoint_count_))
+- max_solution_segment_length_ (0.01*maximum_extent)
+- minimum_waypoint_count_(2)
+- max_goal_samples_(10)
+- max_state_sampling_attempts_(4) 
+- max_goal_sampling_attempts_(1000)-
+
+## state space in moveit
+
+- [parameterization cpp](https://github.com/ros-planning/moveit/tree/melodic-devel/moveit_planners/ompl/ompl_interface/src/parameterization)
+- [parameterization head](https://github.com/ros-planning/moveit/tree/melodic-devel/moveit_planners/ompl/ompl_interface/include/moveit/ompl_interface/parameterization)
+
+[planning_context_manager](https://github.com/ros-planning/moveit/blob/melodic-devel/moveit_planners/ompl/ompl_interface/src/planning_context_manager.cpp) will choose the corresponding **state space** according to the constraints.
+
+```mermaid
+graph LR
+B(PoseModelStateSpace) --> A(ModelBasedStateSpace);
+C(JointModelStateSpace) --> A(ModelBasedStateSpace);
+```
+
+1. 注册默认的两类state_space存储在map映射表里。
+```c++
+std::map<std::string, ModelBasedStateSpaceFactoryPtr> state_space_factories_;
+void registerStateSpaceFactory(const ModelBasedStateSpaceFactoryPtr& factory)
+  {
+    state_space_factories_[factory->getType()] = factory;
+  }
+```
+2. **getStateSpaceFactory**选择最佳的**StateSpaceFactory**.通过循环选择之前存储的factory，调用canRepresentProblem判断优先级。事实上姿态约束问题是选择了**PoseModelStateSpace**，而没有约束的问题选择**JointModelStateSpace**,而**JointModelStateSpace**就是**ModelBasedStateSpace**,并没有对其进行拓展。
+
+```c++
+getStateSpaceFactory2(
+    const std::string& group, const moveit_msgs::MotionPlanRequest& req) const;
+int canRepresentProblem(const std::string& group,
+                        const moveit_msgs::MotionPlanRequest& req,
+                        const robot_model::RobotModelConstPtr& kmodel) const;
+```
+3. 由factory选择出相对应的state_space。
+```c++
+context_spec.state_space_ = factory->getNewStateSpace(space_spec);
+```
+
+## PoseModelStateSpace
+
+[jointTrajectoryAction manager](https://github.com/ros-planning/moveit/blob/aac8c0de00d5f01c2c3e908b8f4028c84756a920/moveit_plugins/moveit_simple_controller_manager/include/moveit_simple_controller_manager/follow_joint_trajectory_controller_handle.h)
+
+
