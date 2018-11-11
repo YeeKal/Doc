@@ -61,6 +61,12 @@ defaults:
       type: "ros"
     values:
       layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "linux"
+    values:
+      layout: "post"
 
 # Plugins
 gems:
