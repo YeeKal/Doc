@@ -30,6 +30,9 @@ collections:
   ros:
     output: true
     permalink: /:collection/:name
+  linux:
+    output: true
+    permalink: /:collection/:name
 
 
 #add front matter values to static files sometime
