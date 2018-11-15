@@ -42,3 +42,5 @@ after=(Eigen::AngleAxisd(r[0],Eigen::Vector3d::UnitZ()))* (Eigen::AngleAxisd(r[1
 ```c++
 Eigen::MatrixXd::Zero(6,6);
 ```
+
+[eigen geometry reference](https://github.com/Ewenwan/MVision/blob/master/vSLAM/ch3/useGeometry/eigenGeometry.cpp)
