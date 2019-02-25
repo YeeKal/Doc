@@ -96,6 +96,8 @@ static_cast< type-id >(expression);//强制把expression转换为type-id类型
 - longestValidSegmentFraction_: 离散化的两点间最大长度占规划空间的百分比,defailt_=0.01
 - longestValidSegmentCountFactor_： 两点间离散点个数合法倍数，default_=1
 - longestValidSegment_： 两点间最大长度
+- delta_: 0.05
+- lambda——
 ```c++
 
  unsigned int validSegmentCount(const State *state1, const State *state2) const

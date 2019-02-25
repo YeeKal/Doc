@@ -52,3 +52,25 @@ void ConstrainedStateSpace::interpolate(const State *from, const State *to, cons
 
 
 distance and interpolation in se3 spaec.
+
+约束空间插值没有考虑函数参数中的个数。
+
+```c++
+//class ConstrainedSpaceInformation
+unsigned int getMotionStates(const State *s1, const State *s2, std::vector<State *> &states,
+                                          unsigned int count, bool endpoints, bool alloc) const override
+             {
+                 bool success = stateSpace_->as<ConstrainedStateSpace>()->discreteGeodesic(s1, s2, true, &states);
+ 
+                 if (endpoints)
+                 {
+                     if (!success && states.size() == 0)
+                         states.push_back(cloneState(s1));
+ 
+                     if (success)
+                         states.push_back(cloneState(s2));
+                 }
+ 
+                 return states.size();
+             }
+```

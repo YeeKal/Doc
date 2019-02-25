@@ -41,6 +41,11 @@ If you've already generated MoveIt! config files for your robot, modify /config/
 
 for the older package which uses moveit, clean the build files(delete build||devel) and re-build this package.
 
+```
+catkin build //rebuild
+ catkin config --cmake-args -DCMAKE_BUILD_TYPE=Debug //set build model debug/release
+```
+
 [official](http://moveit.ros.org/install/source/)
 [qiu-zhihu](https://www.zhihu.com/question/55861914)
 

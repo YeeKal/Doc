@@ -12,6 +12,7 @@ date: 2018-07-15
     - [RobotModel](http://docs.ros.org/kinetic/api/moveit_core/html/classmoveit_1_1core_1_1RobotModel.html)
     - [planning scene](https://github.com/ros-planning/moveit/tree/kinetic-devel/moveit_core/planning_scene)
     - [JointModelGroup](http://docs.ros.org/kinetic/api/moveit_core/html/joint__model__group_8h_source.html)
+    - [RobotTrajectory](http://docs.ros.org/jade/api/moveit_core/html/robot__trajectory_8cpp_source.html)
 - [eigen_msg](http://docs.ros.org/jade/api/eigen_conversions/html/eigen__msg_8h.html)
 - [moveit msgs](https://github.com/ros-planning/moveit_msgs/tree/kinetic-devel/msg)
 - [PlanningPipeline](http://docs.ros.org/jade/api/moveit_ros_planning/html/classplanning__pipeline_1_1PlanningPipeline.html)

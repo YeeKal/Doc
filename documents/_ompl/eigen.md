@@ -6,6 +6,10 @@ Eigen::Map<Eigen::Matrix3i>(array);
 MatrixXd eigenX = Map<MatrixXd>( array, nRows, nCols );
 Eigen::Map<Eigen::VectorXi, 0, InnerStride<2> >(array, 6);
 
+double a[6]={0.1,0.1,0.1,0.01,0.01,3.14159};
+//double a[6]={0.1,0.1,0.1,0.1,0.1,0.1};
+tolerance_=Eigen::Map<Eigen::VectorXd>(a,6); 
+
 float* p = nullptr;
 Eigen::Map<Eigen::MatrixXf>(p, m.rows(), m.cols());
 Eigen::Map<Eigen::MatrixXf>(p, m.rows(), m.cols()) = m;//copy matrix to the pointer array
@@ -19,9 +23,19 @@ p=new float[vec.size()];
 memcpy(p, &vec[0], vec.size()*sizeof(float));
 
 memcpy(&vec[0],p,10*sizeof(float));
+
+double *array=new double[6];
+Eigen::Map<Eigen::VectorXd> map(array,6);//share the same memory
+//copy the <Eigen::Map> to construct vector
+//does not share the memory
+Eigen::VectorXd test1_eigen=Eigen::Map<Eigen::VectorXd>(array,6);
+
 ```
 
-## 几何变换
+## geometry
+
+- Eigen::Affine3d: 仿射变换=线性变换+平移
+- EIgen::Isometry3d: 等距变换对应的是U矩阵($R*R=I$),欧式空间中的等距变换对应正交矩阵($R^TR=I$).
 
 ```c++
 Eigen::Quaterniond q(w,x,y,z);
@@ -44,3 +58,14 @@ Eigen::MatrixXd::Zero(6,6);
 ```
 
 [eigen geometry reference](https://github.com/Ewenwan/MVision/blob/master/vSLAM/ch3/useGeometry/eigenGeometry.cpp)
+
+eigen 构造函数进行转换
+
+Matrix3d rot;
+Quaterniond q(rot);
+
+AngleAxis a(rot);
+
+[] 只针对vector合法
+
+Eigen::Ref<>:若不加const则无需加引用

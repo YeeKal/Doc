@@ -5,6 +5,28 @@ tags: linux
 date: 2018-05-17
 ---
 
+## ros include header from another package
+
+<pag-a> will include "b_include.h" file in <pag-b>:  
+```xml
+catkin_package(
+  CATKIN_DEPENDS
+    roscpp
+    ...
+  DEPENDS
+    EIGEN3
+    ...
+  INCLUDE_DIRS  #which is neede to indicate the include path
+    include
+)
+
+## Install project namespaced headers
+install(DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  FILES_MATCHING PATTERN "*.h"
+  PATTERN ".svn" EXCLUDE)
+```
+
 only one *demo.cpp* file.
 
 ```
