@@ -163,7 +163,7 @@ key: tangent space sampling(TS)
         $$\Delta q^{'}=(I-J^\dagger CJ)\Delta q$$
         - the project sample: $q^{'}_s=q_{near}+\Delta q^{'}$. Due to the nonlinearty of the constraint manifold, $q^{'}_s$ is still unlikely to within error tolerance, then RGD is applied to further reduce the task-space error.
     - first-order retraction
-        - find the task space error and compute the least-norm joint space displacement that compensates for error
+        - find the task space error and compute the least-norm joint space displacement that compensates for error. The common projection method.
 
         在`end-effector constraints` 中，限制函数显示作用在任务空间中，所以通过正运动学对关节空间中变量求得任务空间中误差，再通过雅可比伪逆球的关节空间中误差。
         $$\begin{aligned}
@@ -212,7 +212,17 @@ d^c_i-C_{i_{min}} \quad& if d_i^c<C_{i_{min}} \\
 \end{aligned}
 \right.$$
 
-## Smapling-Based Methods for Motion Planning with Constraints
+## Task Space Regions:A framework for pose-constrained manipulation planning
+
+```
+ read: 2019-02-27
+ publish: 2011
+ key: CBIRRT2 task-space-region
+```
+
+- constraint representation: task space region/ task space region chain
+- TSR definition: the tsr frame and twist bounds
+- TSR distance: 
 
 
 
