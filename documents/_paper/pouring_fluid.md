@@ -9,5 +9,4 @@ date: 2019-05-11
 
 - 2016
 - pour liquid with 7DOF robot 
-
 - [address](http://gamma.cs.unc.edu/FluidMotion/)
