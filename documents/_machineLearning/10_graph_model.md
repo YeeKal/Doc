@@ -3,7 +3,7 @@
  categories: ml
  tags: ml
  date: 2018-06-05
- ---
+---
 
 ## probabilistic graphical model
 

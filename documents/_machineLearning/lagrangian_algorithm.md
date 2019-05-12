@@ -3,7 +3,7 @@
  categories: ml
  tags: ml
  date: 2018-03-28
- ---
+---
 
 **lagrange multiplier**
 

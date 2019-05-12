@@ -3,7 +3,7 @@
  categories: ml
  tags: ml
  date: 2019-04-18
- ---
+---
 
 The generalized linear model **(GLM, 广义线性模型)** is a flexible  generalization of ordinary linear regression.把自变量的线性预测函数当作因变量的估计值。The target variable y is also called **response variable** in GLM.
 

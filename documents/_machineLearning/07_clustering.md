@@ -3,7 +3,7 @@
  categories: ml
  tags: ml
  date: 2018-06-03
- ---
+---
 
 Training datas without labels are just a set of points.
 

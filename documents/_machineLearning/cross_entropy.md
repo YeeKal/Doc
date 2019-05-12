@@ -3,7 +3,7 @@
  categories: ml
  tags: ml
  date: 2019-04-19
- ---
+---
 
 cross entropy loss:
 $$H:=-\sum_iy_i'log(y_i)$$

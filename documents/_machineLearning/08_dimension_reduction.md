@@ -3,7 +3,7 @@
  categories: ml
  tags: ml
  date: 2018-06-03
- ---
+---
 
 **Motivation**: data compression / reducing complexity. Extracting hidden structure from high dimensional datasets.
 
