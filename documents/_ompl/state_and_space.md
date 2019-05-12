@@ -96,8 +96,9 @@ static_cast< type-id >(expression);//强制把expression转换为type-id类型
 - longestValidSegmentFraction_: 离散化的两点间最大长度占规划空间的百分比,defailt_=0.01
 - longestValidSegmentCountFactor_： 两点间离散点个数合法倍数，default_=1
 - longestValidSegment_： 两点间最大长度
-- delta_: 0.05
-- lambda——
+- delta_: 0.05 约束流形motion步长，与maximum_extent无关,sample one each delta_
+- lambda_: 约束流行采样最大步长相对delta的倍数，2.0,若两点间距大于delta_*lambda_，则失败
+- maxDistance_:规划器步长，0.2*maxExtent,public
 ```c++
 
  unsigned int validSegmentCount(const State *state1, const State *state2) const
@@ -126,7 +127,7 @@ static_cast< type-id >(expression);//强制把expression转换为type-id类型
  }
  
 ```
-- maxDistance_
+
 
 ## in moveit
 

@@ -40,6 +40,8 @@ for(int i=0;i<urdf_model->getRoot()->child_links.size();i++){
 
 ## kdl twist:
 
+[diff()](https://github.com/orocos/orocos_kinematics_dynamics/blob/master/orocos_kdl/src/frames.inl)
+
 differentiate position and orientations 
 
 interpolation for rigid body motion

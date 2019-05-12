@@ -12,6 +12,8 @@ date: 2018-07-18
     - prerequisites
 - [building from source](http://moveit.ros.org/install/source/dependencies/)
 
+- uninstall moveit: sudo apt-get remove ros-kinetic-moveit-*
+
 **errors**
 
 1. [Removed EuclideanProjection, changed to Eigen vector.](https://github.com/ros-planning/moveit/pull/903/files)
