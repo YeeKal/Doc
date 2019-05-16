@@ -1,6 +1,6 @@
 ---
 title: 短章-海子
-categories: poem
+categories: 诗
 tags: 海子
 date: 2018-10-13
 ---
