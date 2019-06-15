@@ -45,5 +45,11 @@ pip install <package> -i <source-url>
 	
 - update kernel from 4.4 to 4.13
 
+8. git 下载速度
+
+- 配置socks代理：
+
+git config --global https.proxy 'socks5://127.0.0.1:1080'
+
 
 

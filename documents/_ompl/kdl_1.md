@@ -46,3 +46,7 @@ differentiate position and orientations
 
 interpolation for rigid body motion
 
+## kdl dynamics
+
+[RNE: recursive newton euler](http://docs.ros.org/indigo/api/orocos_kdl/html/classKDL_1_1ChainIdSolver__RNE.html)
+
