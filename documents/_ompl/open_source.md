@@ -80,4 +80,8 @@ Constrained Manipulation Planning Suite
     - [lab main page](http://lasa.epfl.ch/)
     - [github](https://github.com/epfl-lasa)
     - [object trajectory predicition](https://github.com/epfl-lasa/Object-Trajectory-Prediction)
+- Kinodynamic Comfort Trajectory Planning for Car-like Robots
+    - [github](https://github.com/HeechanShin/KinodynamicComfortTrajectoryPlanning)
+- lqrrt: Kinodynamic RRT Implementation for car-like
+    - [github](https://github.com/jnez71/lqRRT)
 
