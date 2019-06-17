@@ -2,7 +2,7 @@
 title: open source for motion planning
 categories: ompl
 tags: moveit
-date: 2018-07-15
+date: 2019-06-14
 ---
 
 ## HPP: Humanoid Path Planner

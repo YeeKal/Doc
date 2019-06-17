@@ -76,6 +76,12 @@ defaults:
       type: "machineLearning"
     values:
       layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "motionPlanning"
+    values:
+      layout: "post"
 
 # Plugins
 gems:
