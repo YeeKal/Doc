@@ -36,6 +36,9 @@ collections:
   machineLearning:
     output: true
     permalink: /:collection/:name
+  motionPlanning:
+    output: true
+    permalink: /:collection/:name
 
 
 #add front matter values to static files sometime
