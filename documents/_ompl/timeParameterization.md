@@ -12,6 +12,8 @@ Interpolation:
 - cubic curves: Hermite cubic splines, Bezier curve, B-spline, nonuniform rational B-spline
 - cubic spline: 三次样条曲线
 - quintic spline: 五次样条曲线
+- Reeds-Shepp 曲线
+- Dubins 曲线
 
 ## trajectory processing in moveit:
 - [class documentation](http://docs.ros.org/melodic/api/moveit_core/html/classtrajectory__processing_1_1IterativeParabolicTimeParameterization.html)
