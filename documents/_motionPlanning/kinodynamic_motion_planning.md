@@ -13,3 +13,6 @@ BVP: boundary value problem
 
 规划位置的同时还要规划速度
 
+Generalized waiter-motion with no-sliding constraints/generalized waiter-motion problem
+
+time-optimal motion planning/jerky motion
