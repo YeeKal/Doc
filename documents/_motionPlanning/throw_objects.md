@@ -14,7 +14,7 @@ when the flying object hit ground, let $y=0$:
         $$\text{flying time: }  t=\sqrt{\frac{2y_0}{g}+\frac{v_y^2}{g^2}}+\frac{v_y}{g}\\
         \text{flying distance: }    d=x_0+v_x \sqrt{\frac{2y_0}{g}+\frac{v_y^2}{g^2}}+\frac{v_xv_y}{g}       $$
 assume $x_0=y_0=0$:
-        $$y=-\frac{1}{2}\frac{g}{v_x^2}x^2+\frac{v_y}{v_x}x$$
+        $$y=-\frac{1}{2}\frac{g }{v_x^2}x^2+\frac{v_y}{v_x}x$$
 
 Velocity in cartesian space transformed to joint space:
         $$\dot{q}=J^{-1}(q)v$$
