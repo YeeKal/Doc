@@ -51,5 +51,19 @@ pip install <package> -i <source-url>
 
 git config --global https.proxy 'socks5://127.0.0.1:1080'
 
+9. vscode 配置
 
+- 官网下载.deb
+- 
 
+10. linux 实时内核补丁
+
+- [patch](https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/)
+- [kernel in tsinghua]
+- ref to [csdn1](https://blog.csdn.net/x356982611/article/details/77370385)
+
+11. set priority
+
+- [ref1:set real time attributes](https://www.cyberciti.biz/faq/howto-set-real-time-scheduling-priority-process/)
+- [ref2: 处理nice与priority](https://ubuntuqa.com/article/1176.html)
+- set real time:'chrt -f -p [1-99] {pid}'
