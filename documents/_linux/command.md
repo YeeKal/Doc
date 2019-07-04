@@ -66,4 +66,5 @@ git config --global https.proxy 'socks5://127.0.0.1:1080'
 
 - [ref1:set real time attributes](https://www.cyberciti.biz/faq/howto-set-real-time-scheduling-priority-process/)
 - [ref2: 处理nice与priority](https://ubuntuqa.com/article/1176.html)
+- [ref3: build a simple rt application](https://wiki.linuxfoundation.org/realtime/documentation/howto/applications/application_base)
 - set real time:'chrt -f -p [1-99] {pid}'
