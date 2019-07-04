@@ -84,4 +84,6 @@ Constrained Manipulation Planning Suite
     - [github](https://github.com/HeechanShin/KinodynamicComfortTrajectoryPlanning)
 - lqrrt: Kinodynamic RRT Implementation for car-like
     - [github](https://github.com/jnez71/lqRRT)
+- parabolic smoothing as an openrave plugin
+    - [github](https://github.com/personalrobotics/or_parabolicsmoother)
 
