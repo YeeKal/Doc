@@ -7,6 +7,16 @@ date: 2018-07-18
 
 ## source installation with moveit
 
+reference:
+
+- [official](http://moveit.ros.org/install/source/)
+- [qiu-zhihu](https://www.zhihu.com/question/55861914)
+
+version corresponding:
+
+- moveit-melodic with ompl-master
+- moveit-kinetic with ompl-1.4.0
+
 - install ros
 - [moveit source installation](http://moveit.ros.org/install/source/)
     - prerequisites
@@ -48,8 +58,6 @@ catkin build //rebuild
  catkin config --cmake-args -DCMAKE_BUILD_TYPE=Debug //set build model debug/release
 ```
 
-[official](http://moveit.ros.org/install/source/)
-[qiu-zhihu](https://www.zhihu.com/question/55861914)
 
 ## reference
 

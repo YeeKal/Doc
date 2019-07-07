@@ -24,11 +24,23 @@ git remote rename <old-name> <new-name>
 ```
 
 ```python
+#切换分支
 git checkout -b <new-branch> #等同下面两条
 git branch <new-branch>  #新建
 git branch -vv #查看各个分支追踪关系
 git checkout <new-branch>  ##切换
+
+#本地创建新分支关联远程
+git checkout -b <new branch>  #create local branch
+git branch -vv  #show the local branch connection relationship
+git push origin <new branch>  #create new branch in remote
+git branch --set-upstream-to=origin/<new branch>  #create new connection
+
+#删除分支
+git branch -d <dev> #删除本地分支
+git push origin --delete <dev> #删除远程分支
 ```
+
 
 ## git fetch
 
@@ -45,14 +57,6 @@ git
 git pull <远程主机名> <远程分支名>:<本地分支名> #取回远程分支并合并
 ```
 
-本地创建新分支关联远程
-```python
-git checkout -b <new branch>  #create local branch
-git branch -vv  #show the local branch connection relationship
-git push origin <new branch>  #create new branch in remote
-git branch --set-upstream-to=origin/<new branch>  #create new connection
-
-```
 ## git merge
 
 ```python
