@@ -44,7 +44,22 @@ Light Weight Environment for ROS
 
 cartesian path planner
 
-[github](https://github.com/ros-industrial-consortium/descartes)
+- [github](https://github.com/ros-industrial-consortium/descartes)
+- [code api](http://wiki.ros.org/descartes)
+    - [descartes_core](http://docs.ros.org/indigo/api/descartes_core/html/index.html)
+    - [descartes_moveit](http://docs.ros.org/indigo/api/descartes_moveit/html/)
+    - [descartes_planner](http://docs.ros.org/indigo/api/descartes_planner/html/)
+    - [descartes_trajectory ](http://docs.ros.org/indigo/api/descartes_trajectory/html/)
+- [tutorial](http://wiki.ros.org/descartes/Tutorials)
+- [rep](https://github.com/ros-industrial/rep)
+- [industrial training](https://industrial-training-master.readthedocs.io/en/melodic/_source/session4/Motion-Planning-CPP.html)
+
+## fermi
+ 
+ Cartesian Path Planner MoveIt Plug-in
+
+- [github](https://github.com/ros-industrial-consortium/fermi/tree/hydro-devel)
+- [tutorial](http://wiki.ros.org/moveit_cartesian_plan_plugin)
 
 ## prpy
 
