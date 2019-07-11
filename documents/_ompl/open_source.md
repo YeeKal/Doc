@@ -4,6 +4,7 @@ categories: ompl
 tags: moveit
 date: 2019-06-14
 ---
+[Awesome Robotics Libraries](https://github.com/jslee02/awesome-robotics-libraries#motion-planning-and-control): a collection of robotivs resources.
 
 ## HPP: Humanoid Path Planner
 

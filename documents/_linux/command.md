@@ -68,3 +68,12 @@ git config --global https.proxy 'socks5://127.0.0.1:1080'
 - [ref2: 处理nice与priority](https://ubuntuqa.com/article/1176.html)
 - [ref3: build a simple rt application](https://wiki.linuxfoundation.org/realtime/documentation/howto/applications/application_base)
 - set real time:'chrt -f -p [1-99] {pid}'
+
+12. screenshot via ssh
+
+- xwd -out <name>.xwd -root -display :0.0
+
+13. openrave
+
+- [ref1](https://scaron.info/teaching/installing-openrave-on-ubuntu-16.04.html)
+- [ref2](https://fsuarez6.github.io/blog/workstation-setup-xenial/)
