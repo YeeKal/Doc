@@ -6,7 +6,50 @@ date: 2019_07_13
 ---
 ## Device
 
-[device-api](https://gepettoweb.laas.fr/hpp/hpp-pinocchio/doxygen-html/a00067.html)
+- [device-api](https://gepettoweb.laas.fr/hpp/hpp-pinocchio/doxygen-html/a00067.html)
+- [abstract device](https://gepettoweb.laas.fr/hpp/hpp-pinocchio/doxygen-html/a00061.html)
+```c++
+/***********************************************************************
+hpp::pinocchio::AbstractDevice <-- hpp::pinocchio::Device
+************************************************************************/
+numberDof();        //
+configSize();       //
+nbJoints();         //number of (active) joints
+currentConfiguration(); //return the current configuration
+neutralConfiguration();
+
+```
+
+## ProblemSolver
+the complete wrapper class
+
+- [github cpp](https://github.com/humanoid-path-planner/hpp-core/blob/master/src/problem-solver.cc)
+
+```c++
+distanceType (const std::string& type);
+steeringMethodType (const std::string& type);
+pathPlannerType (const std::string& type);
+configurationShooterType (const std::string& type);
+addPathOptimizer (const std::string& type);
+pathValidationType (const std::string& type,const value_type& tolerance);
+```
+
+## extraConfigspace
+
+[ExtraConfigSpace](https://github.com/humanoid-path-planner/hpp-pinocchio/blob/master/include/hpp/pinocchio/extra-config-space.hh)
+```c++
+lower(i);
+lower();
+upper(i);
+upper();
+dimension();
+private: setDimension();
+
+size_type dimension_;
+vector_t lowerBounds_;
+vector_t upperBounds_;
+friend class Device;
+```
 
 
 ## Configuration_t
@@ -31,3 +74,15 @@ typedef std::pair<value_type, value_type> hpp::core::interval_t
 path->extract(const interval_t &subInterval);   //extract path in [t1,t2]
 path->extract(t1,t2); 
 ```
+
+## Joint
+
+
+## typedef
+
+```c++
+typedef ::pinocchio::SE3 hpp::pinocchio::Transform3f
+typedef ::pinocchio::SE3 hpp::pinocchio::SE3
+
+```
+

@@ -16,8 +16,16 @@ date: 2019-06-14
 - [official website](https://humanoid-path-planner.github.io/hpp-doc/)
 - [api doc](https://gepettoweb.laas.fr/hpp/hpp-doc/doxygen-html/index.html)
 - install:
+    - [openrobot](http://robotpkg.openrobots.org/debian.html)
     - sudo apt update
     - sudo apt install robotpkg-hpp-tutorial robotpkg-qt4-hpp-gui
+## pinocchio
+
+- [github](https://github.com/stack-of-tasks/pinocchio)
+- [official website](https://stack-of-tasks.github.io/pinocchio/)
+- [api doc](https://gepettoweb.laas.fr/doc/stack-of-tasks/pinocchio/master/doxygen-html/md_doc_d-practical-exercises_intro.html)
+
+
 
 ## ompl
 
