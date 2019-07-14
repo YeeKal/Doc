@@ -13,6 +13,8 @@ date: 2019-06-14
 - deal with constraint motion planning
 - constraints and optimization
 - [dimt-rrt dev](https://github.com/humanoid-path-planner/hpp-core/blob/814f6ede053b2154e29c44f32183dadd8b3ab1ba/src/dimt-rrt.cc)
+- [official website](https://humanoid-path-planner.github.io/hpp-doc/)
+- [api doc](https://gepettoweb.laas.fr/hpp/hpp-doc/doxygen-html/index.html)
 - install:
     - sudo apt update
     - sudo apt install robotpkg-hpp-tutorial robotpkg-qt4-hpp-gui
