@@ -18,6 +18,16 @@ nbJoints();         //number of (active) joints
 currentConfiguration(); //return the current configuration
 neutralConfiguration();
 
+loadRobotModel (const DevicePtr_t& robot,
+			   const std::string& rootJointType,
+			   const std::string& package,
+			   const std::string& modelName,
+			   const std::string& urdfSuffix,
+                           const std::string& srdfSuffix)
+//urdf path: package://<package>/urdf/<modelName><urdfSuffix>.urdf 
+//srdf path: package://<package>/srdf/<modelName><srdfSuffix>.srdf 
+
+
 ```
 
 ## ProblemSolver
@@ -73,6 +83,10 @@ path->end();            //return the last configuration
 typedef std::pair<value_type, value_type> hpp::core::interval_t
 path->extract(const interval_t &subInterval);   //extract path in [t1,t2]
 path->extract(t1,t2); 
+
+typedef std::vector< PathVectorPtr_t > hpp::core::PathVectors_t
+typedef boost::shared_ptr<PathVector> hpp::core::PathVectorPtr_t
+at (const value_type &time, ConfigurationOut_t result) 
 ```
 
 ## Joint
