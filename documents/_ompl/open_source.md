@@ -6,6 +6,13 @@ date: 2019-06-14
 ---
 [Awesome Robotics Libraries](https://github.com/jslee02/awesome-robotics-libraries#motion-planning-and-control): a collection of robotivs resources.
 
+## CHOREO
+
+robotic motion planning platform for discrete architectural assembly
+
+- [github: ros version](https://github.com/yijiangh/Choreo)
+- [github: pybullet version](https://github.com/yijiangh/pychoreo)
+
 ## HPP: Humanoid Path Planner
 
 [github](https://github.com/humanoid-path-planner)

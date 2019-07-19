@@ -20,6 +20,7 @@ date: 2018-07-15
 - [eigen_conversions](http://docs.ros.org/jade/api/eigen_conversions/html/files.html)
   - [eigen_kdl](http://docs.ros.org/jade/api/eigen_conversions/html/eigen__kdl_8cpp.html)
   - [eigen_msg](http://docs.ros.org/jade/api/eigen_conversions/html/eigen__msg_8cpp.html)
+  - [eigen_stl_container](http://docs.ros.org/melodic/api/eigen_stl_containers/html/namespaceEigenSTL.html)
 - [kdl_conversion](https://github.com/ros/geometry/blob/melodic-devel/kdl_conversions/src/kdl_msg.cpp)
 - [tf_conversion](https://github.com/ros/geometry/blob/melodic-devel/tf_conversions/src/tf_eigen.cpp)
 
