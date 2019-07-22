@@ -2,7 +2,7 @@
 title: kinodynamic planning on manipulator
 categories: motion planning
 tags: kinodynamic
-date:2019-07-04
+date: 2019-07-04
 ---
 
 ## papers
