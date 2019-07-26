@@ -77,3 +77,7 @@ git config --global https.proxy 'socks5://127.0.0.1:1080'
 
 - [ref1](https://scaron.info/teaching/installing-openrave-on-ubuntu-16.04.html)
 - [ref2](https://fsuarez6.github.io/blog/workstation-setup-xenial/)
+
+14. ros-move_group died
+
+- when affine3d converted to geometry_msgs::pose, this fault will occur if the rotation in affine3d is not the standard rotation matrix

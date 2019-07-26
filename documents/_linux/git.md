@@ -57,6 +57,12 @@ git
 git pull <远程主机名> <远程分支名>:<本地分支名> #取回远程分支并合并
 ```
 
+## 更新远程分支信息
+```
+git remote update origin --prune
+
+```
+
 ## git merge
 
 ```python
