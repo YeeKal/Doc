@@ -13,7 +13,7 @@ initialize a repository and the existing file will remain.
 
 将本地仓库和远程仓库连接起来。
 
-## git clone
+## git remote
 
 ```python
 git remote  #list all remote 
@@ -39,6 +39,18 @@ git branch --set-upstream-to=origin/<new branch>  #create new connection
 #删除分支
 git branch -d <dev> #删除本地分支
 git push origin --delete <dev> #删除远程分支
+```
+
+## 撤销更改
+
+```python
+#文件已存在，更改的是文件内容
+git checkout -- <file>  #撤销git add的更改
+git reset HEAD <file>   #撤销git commit 的更改
+
+#新加的文件
+git rm --cached <file>  #将文件从缓存中删除，但不删除物理文件
+git rm -f <file>          #不仅将文件从缓存中删除，也会删除物理文件
 ```
 
 
