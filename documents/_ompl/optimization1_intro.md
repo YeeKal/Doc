@@ -1,5 +1,5 @@
 ---
-title: optimization
+title: optimization1 intro
 categories: ompl
 tags: optimization
 date: 2019-07-12

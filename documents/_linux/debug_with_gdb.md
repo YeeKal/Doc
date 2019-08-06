@@ -1,7 +1,7 @@
 ---
 title: debug with gdb
-categories: ros
-tags: ros
+categories: linux
+tags: linux
 date: 2019-01-02
 ---
 **dubug with ros**
