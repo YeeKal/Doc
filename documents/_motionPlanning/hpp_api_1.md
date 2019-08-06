@@ -100,3 +100,12 @@ typedef ::pinocchio::SE3 hpp::pinocchio::SE3
 
 ```
 
+## collision
+
+- [fcl-collision](http://docs.ros.org/fuerte/api/fcl/html/classfcl_1_1CollisionObject.html)\
+- [fcl-transform](http://docs.ros.org/fuerte/api/fcl/html/classfcl_1_1Transform3f.html)
+
+```c++
+
+```
+

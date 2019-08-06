@@ -84,9 +84,60 @@ planning algorithm:
         \ddot Q_a(t_r)=0=\ddot Q_b(t_r)$$
 - then define the object function to optimize
 
+reference to **[2008_A technique for time-jerk optimal planning of robot trajectories](../trajectory_optimization/)**.
+
+## Flight Trajectory Simulation of Robotic Throwing Shuttlecock 
+
+- 2018
+- 1 degree of freedom
 
 ## Planning Longest Pitch Trajectories for Compliant Serial Manipulators
 
 - 2016
 - plan an optimal pitching trajectory for compliant serial manipulators
 - on kuka
+
+## Time-optimal trajectory generation for path following with bounded acceleration and velocity
+
+- 2012
+- path following
+- [github](https://github.com/tobiaskunz/trajectories)
+
+## experiment on ur
+
+ur5
+
+![](pics/ur5-1.png)
+
+ur10
+
+![](pics/ur10-1.png)
+ 
+```
+# ur5
+- 
+joint: 0.7201124121729614 -1.313842408349126 1.7595723112421104, 0.24912787113682036 2.1975531391698917 0.4551817753281454
+cartesiaN VEL: 1.25  0  1.25  0  -0.3  0
+JOINT VEL:  -2.03297 -0.0193843   -3.66577    2.40697   -1.43494   -1.79475
+
+-
+joint: 0.03363972841571032, -1.1570948663262197, 1.531941426459243, 0.27119440827586067, 1.627028593915378, 0.0423902909835748
+joint v: -0.0867491    1.55845   -5.70574    3.84408 -0.0631924 -0.0603776
+
+# ur10
+
+joint: 0.7201124121729614 -1.313842408349126 1.7595723112421104, 0.24912787113682036 2.1975531391698917 0.4551817753281454
+cartesiaN VEL: 1.25  0  1.25  0  -0.3  0
+joint vel: -1.36305 -0.00115985     -2.5122      1.5458   -0.920344    -1.26516
+
+-
+joint: 0.03363972841571032, -1.1570948663262197, 1.531941426459243, 0.27119440827586067, 1.627028593915378, 0.0423902909835748
+joint vel:-0.0585142    1.07089    -3.9108    2.53765 -0.0406475 -0.0433524
+
+- 
+joint: 0.4696961125055863, -1.292321774554368, 1.655893219561577, -0.0861575872871991, 1.0583137045298303, -0.24666646486363952
+joint vel: -0.838175  0.756023   -3.3074   2.48649 -0.768942 -0.413232
+```
+
+相同关节姿态，相同迪卡尔空间速度下，ur10所需的关节角速度较小
+

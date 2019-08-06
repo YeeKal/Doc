@@ -75,3 +75,14 @@ AngleAxis a(rot);
 [] 只针对vector合法
 
 Eigen::Ref<>:若不加const则无需加引用
+
+
+## 求逆
+
+```c++
+//线性方程组求逆
+Eigen::MatrixXd jac;
+Eigen::VectorXd vels;
+jac.jacobiSvd(Eigen::ComputeThinU | Eigen::ComputeThinV).solve(vels);
+jac.colPivHouseholderQr().solve(vels;
+```
