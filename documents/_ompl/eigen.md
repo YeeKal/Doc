@@ -84,5 +84,5 @@ Eigen::Ref<>:若不加const则无需加引用
 Eigen::MatrixXd jac;
 Eigen::VectorXd vels;
 jac.jacobiSvd(Eigen::ComputeThinU | Eigen::ComputeThinV).solve(vels);
-jac.colPivHouseholderQr().solve(vels;
+jac.colPivHouseholderQr().solve(vels);
 ```
