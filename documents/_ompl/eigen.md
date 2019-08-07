@@ -85,4 +85,9 @@ Eigen::MatrixXd jac;
 Eigen::VectorXd vels;
 jac.jacobiSvd(Eigen::ComputeThinU | Eigen::ComputeThinV).solve(vels);
 jac.colPivHouseholderQr().solve(vels);
+
+//正交基
+Eigen::MatrixXd z_jac(z_axis.transpose());
+Eigen::FullPivLU<Eigen::MatrixXd> decomp =z_jac.fullPivLu();
+Eigen::MatrixXd phi( decomp.kernel().householderQr().householderQ() * Eigen::MatrixXd::Identity(3, 2));
 ```
