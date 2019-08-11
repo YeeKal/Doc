@@ -5,7 +5,7 @@
  date: 2018-06-03
 ---
 
-##2018 spring 
+## 2018 spring 
 
 exam:50
 
@@ -26,3 +26,7 @@ password: ml2017
     - clustering
     - dimensionality reduction
 - reinforcement learning
+
+## ref
+
+- [李宏毅机器学习笔记(LeeML-Notes)](https://datawhalechina.github.io/leeml-notes/#/)

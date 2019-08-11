@@ -6,8 +6,6 @@
 ---
 
 neuron networks
-neuron networks
-neuron networks
 
 non-linear hypothesis
 

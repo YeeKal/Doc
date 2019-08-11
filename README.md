@@ -12,5 +12,6 @@
 
 ## reference
 
-[侧边栏](http://www.thomaszhao.cn/2015/01/08/how-do-i-build-this-jekyll-blog/)
-[github markdown css](https://github.com/sindresorhus/github-markdown-css/blob/gh-pages/github-markdown.css)
+- [侧边栏](http://www.thomaszhao.cn/2015/01/08/how-do-i-build-this-jekyll-blog/)
+- [github markdown css](https://github.com/sindresorhus/github-markdown-css/blob/gh-pages/github-markdown.css)
+- [docsify tutorial](https://blog.csdn.net/weixin_33874713/article/details/88705987)

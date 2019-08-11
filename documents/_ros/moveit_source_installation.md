@@ -32,6 +32,8 @@ version corresponding:
 2. libompl.so: copied from "/usr/local/lib" to destination.
 3. "stack smashing detected" when collision checking with fcl after install openrave with fcl source installation. Checkout to the kinect version(fcl-0.5) and make install, then rebuild moveit.
 
+The initial libfcl.so is installed in '/usr/lib/x86_64-linux-gnu', however the new built library is installed in '/usr/local/lib'， so the 'devel' and 'build' directory should be deleted before re-build moveit.
+
 ## add a new planner
 
 **Modify MoveIt! Source**
