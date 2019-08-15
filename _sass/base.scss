@@ -3,6 +3,11 @@
  */
 
 /*- Base reset -*/
+$background-color: #FFFFFF;
+$text-color: #444444;
+$text-light-color: rgba(0,0,0,0.6);
+$text-dark-color: #000000;
+$theme-blue-color: #34495e;
 
 * {
   -webkit-box-sizing: border-box;
@@ -10,25 +15,18 @@
           box-sizing: border-box;
 }
 
-html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+
 body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.72222;
-  color: #34495e;
+  color: $theme-blue-color;
   background-color: #fff;
 }
 
 /*- Base color -*/
 
-$background-color: #FFFFFF;
-$text-color: #444444;
-$text-light-color: rgba(0,0,0,0.6);
-$text-dark-color: #000000;
+
 
 
 
@@ -43,25 +41,6 @@ html {
 	line-height: 1.5;
 	color: $text-color;
 }
-/*
-body {
- max-width: 1000px;
- margin: 0 auto;
- padding: 0 10px;
-}
-*/
-/*- Link -*/
-/*
-a {
-	color: $text-color;
-	text-decoration: none;
-	font-weight: 700;
-	// &:hover,
-	// &:focus {
-	// 	border-bottom: 2px solid #0366d6; 
-	// }
-}
-*/
 
 /* Common classes */
 
