@@ -16,7 +16,11 @@ html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img {
   border: 0;
 }
 body {
-
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.72222;
+  color: #34495e;
+  background-color: #fff;
 }
 
 /*- Base color -*/
@@ -47,6 +51,7 @@ body {
 }
 */
 /*- Link -*/
+/*
 a {
 	color: $text-color;
 	text-decoration: none;
@@ -56,6 +61,7 @@ a {
 	// 	border-bottom: 2px solid #0366d6; 
 	// }
 }
+*/
 
 /* Common classes */
 
