@@ -5,11 +5,12 @@ p {
   color:#444444;
 }
 //markdown 
-.content a,.content a:hover,content a:active{
-  color: #0366d6;
+.content a,.content a:hover,.content a:active{
+  cursor: pointer;
+  color: $text-green-color;
   font-weight: normal;
 }
-.content a:hover,content a:active {
+.content a:hover,.content a:active {
   text-decoration: underline; 
 }
 //highlight

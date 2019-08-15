@@ -9,6 +9,7 @@
 - category/index.html: 继承page
 - archive/index.html: 继承page
 - tag/index.html: 继承page
+- page.layout == "page" 查找菜单栏的各选型
 
 ## reference
 
