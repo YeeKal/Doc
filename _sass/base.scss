@@ -47,6 +47,32 @@ body {
 	align-items: center;
 }
 
+.navbar-inverse .navbar-collapse {
+    border-color: #2f4154;
+	border-width: 2px;
+	border-radius: 6px;
+	box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+	display: flex!important;
+	flex-basis: auto;
+	padding-right: 21px;
+	-webkit-box-flex: 1;
+	flex-grow: 1;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+.navbar-inverse .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+	flex-direction: row;
+	margin: 0;
+	display: flex;
+	padding-left: 0;
+	list-style: none;
+	flex-wrap: wrap;
+	text-align: left;
+}
+
 /*- Base color -*/
 
 
