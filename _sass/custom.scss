@@ -17,8 +17,7 @@ p {
 }
 
 .container a:hover,.container a:active{
-  text-decoration: underline;
-
+  border-bottom: 2px solid #0366d6; 
 }
 //highlight
 .highlight  {
