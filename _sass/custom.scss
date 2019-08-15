@@ -13,6 +13,9 @@ p {
 .content a:hover,.content a:active {
   text-decoration: underline; 
 }
+.content a:visited{
+  color: pink;
+}
 //highlight
 .highlight  {
   word-wrap: break-word;
