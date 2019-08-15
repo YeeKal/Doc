@@ -1,20 +1,19 @@
 /*- Custom style -*/
 
 // -- Put custom style under this point -- //
+$link-green-color: #42b983;
+$link-blue-color:  #0366d6;
 p {
   color:#444444;
 }
 //markdown 
 .content a,.content a:hover,.content a:active{
   cursor: pointer;
-  color: $text-green-color;
+  color: $link-blue-color;
   font-weight: normal;
 }
 .content a:hover,.content a:active {
   text-decoration: underline; 
-}
-.content a:visited{
-  color: pink;
 }
 //highlight
 .highlight  {
