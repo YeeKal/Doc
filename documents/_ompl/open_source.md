@@ -105,6 +105,10 @@ Constrained Manipulation Planning Suite
 
 - Symbolic Framework for Modeling and Identification of Robot Dynamics
 
+## bio ik
+
+moveit kinematics-based plugin basedn on particle optimization & GA
+
 ## project
 
 - kuka youbot torque control
