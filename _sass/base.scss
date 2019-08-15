@@ -80,6 +80,50 @@ a {
 	text-align: left;
 }
 
+.navbar-nav {
+	margin: 0;
+  }
+  
+  .navbar-nav > li > a {
+	font-size: 16px;
+	padding: 15px 0;
+	line-height: 23px;
+	font-weight: 700;
+	position: relative;
+	display: block;
+  }
+  
+  @media (min-width: 768px) {
+	.navbar-nav > li > a {
+	  padding-left: 21px;
+	  padding-right: 21px;
+	}
+  }
+  
+  .navbar-nav > li > a:hover,
+  .navbar-nav > li > a:focus,
+  .navbar-nav .show > a:focus,
+  .navbar-nav .show > a:hover {
+	background-color: transparent;
+  }
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+
+.navbar-brand {
+	@media (min-width: 768px){
+    line-height: 1.042;
+	padding: 14px 21px;
+	}
+}
+
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+	color: #1abc9c;
+	background-color: transparent;
+  }
+
 /*- Base color -*/
 
 
