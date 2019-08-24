@@ -23,6 +23,8 @@ which contains three executable trajectory processing methods:
 - IterativeParabolicTimeParameterization
 - IterativeSplineParameterization
 - TimeOptimalTrajectoryGeneration
+    - [website](http://www.golems.org/projects/traj.html)
+    - 
 
 ## 轨迹规划-离散时间序列
 

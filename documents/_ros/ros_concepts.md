@@ -64,4 +64,5 @@ or:
 ## tf 
 
 
-rosrun tf tf_echo /graber_4t_link /graber_end
+> rosrun tf tf_echo /graber_4t_link /graber_end
+> rosrun tf view_frames   //监听当前时刻所有通过ros广播的tf坐标

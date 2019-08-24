@@ -17,7 +17,7 @@ BVP: boundary value problem
 
 - time-optimal motion planning/jerky motion
 
-- differential constraints / dynamic constraints
+- differential constraints, dynamic constraints
 
 - differential models: $\dot{x}=f(x,u)$
 - discrete-time approximation:$x_{k+1}=f(x_k,u_k)$
@@ -42,3 +42,9 @@ $$x(\Delta t)\approx x(o)+\frac{\Delta t}{6}(w_1,w_2,w_3,w_4)   \\
 
 - steering method
 - driftless, 无向的
+
+## steering method
+
+- [toppra](https://toppra.readthedocs.io/en/latest/tutorials/tut3_non_zero_velocities.html)
+
+Non-zero starting and ending velocities
