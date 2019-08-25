@@ -81,3 +81,8 @@ $$\Gamma_{kj}^i=\frac{1}{2}\sum_{n=1}^mg^{ni}(\frac{\partial g_{kn}}{\partial\th
 - [黎曼几何引论 陈维桓 8.0](https://book.douban.com/subject/1231151/)
 - [黎曼几何初步-伍鸿熙-9.3](https://book.douban.com/subject/1110681/)
 - [黎曼几何-彼得森-9.8](https://book.douban.com/subject/2013529/)
+
+## reference
+
+- [黎曼几何-王作勤](https://www.icourse.club/course/12637/)
+- [博客](http://blog.sina.com.cn/s/blog_3dc397910102yajh.html)

@@ -27,6 +27,12 @@ Use matlab and dataset is open
 
 - [introduction site](http://pr.cs.cornell.edu/deepgrasping/)
 
+**GQ-CNN**
+
+input a depth image and grasp, and output the predicted probability that the grasp will successfully hold the object while lifting, transporting, and shaking the object.
+
+- [official docs](https://berkeleyautomation.github.io/gqcnn/install/install.html)
+
 **personal**
 
 - [Grasp detection algorithm using deep learning](https://github.com/RobopticsFeng/DeepGrasp)

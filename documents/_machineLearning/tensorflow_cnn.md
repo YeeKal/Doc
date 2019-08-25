@@ -19,7 +19,10 @@ h1_pool=tf.nn.max_pool(h1,ksize=[1,2,2,1],strides=[1,2,2,1],padding='SAME')
 h1_pool=tf.nn.max_pool(h1,ksize=[1,2,2,1],strides=[1,2,2,1],padding='SAME')
 '''
 ksize=[1,height,width] 不想在batch与channel上做池化
-strides=[1,stride,stride,1] 华东步长
+strides=[1,stride,stride,1] 滑动步长
 '''
 
+tf.matmul(x,y) #x*y
+tf.multiply(x,y) #x，y各元素对应相乘
+tf.nn.dropout() #是tensorflow里面为了防止或减轻过拟合而使用的函数，它一般用在全连接层
 ```
