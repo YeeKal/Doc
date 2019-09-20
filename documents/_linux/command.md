@@ -81,3 +81,10 @@ git config --global https.proxy 'socks5://127.0.0.1:1080'
 14. ros-move_group died
 
 - when affine3d converted to geometry_msgs::pose, this fault will occur if the rotation in affine3d is not the standard rotation matrix
+
+15 mp4 to gif
+
+- apt-get install mplayer
+- apt-get install imagemagick
+- mplayer -ao null xxxx.mp4 -vo jpeg:outdir=output	//生成jpeg文件
+- convert output/*.jpg -resize 45% output/view.gif	//生成gif文件
