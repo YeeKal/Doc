@@ -1,5 +1,5 @@
 ---
-title: Reiman geometry
+title: Riemann geometry
 categories: manifold
 tags: manifold
 date: 2019-08-26
