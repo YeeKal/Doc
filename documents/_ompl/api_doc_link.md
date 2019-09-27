@@ -23,6 +23,7 @@ date: 2018-07-15
   - [eigen_stl_container](http://docs.ros.org/melodic/api/eigen_stl_containers/html/namespaceEigenSTL.html)
 - [kdl_conversion](https://github.com/ros/geometry/blob/melodic-devel/kdl_conversions/src/kdl_msg.cpp)
 - [tf_conversion](https://github.com/ros/geometry/blob/melodic-devel/tf_conversions/src/tf_eigen.cpp)
+- [roslib python](http://docs.ros.org/melodic/api/roslib/html/python/roslib-module.html)
 
 
      
