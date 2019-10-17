@@ -5,6 +5,13 @@ tags: navigation
 date: 2019-09-24
 ---
 
+- mapping
+    - gmapping
+- location
+- planning
+    - A*:
+    - D*: dynamic planning
+
 ## [ros navigation](http://wiki.ros.org/navigation/)
 
 ![overview](pics/overview.png)
@@ -48,6 +55,12 @@ date: 2019-09-24
 - [ros navigation](http://wiki.ros.org/navigation/)
 - [cmd_vel to wheel speed](https://blog.csdn.net/heyijia0327/article/details/41823809)
 - [用ROS开发自己的机器人](https://blog.csdn.net/heyijia0327/article/category/2768679)
+- [机器人学习笔记-知乎](https://zhuanlan.zhihu.com/c_1112687943243862016)
+
+## course
+
+- [Introduction to Mobile Robotics](http://ais.informatik.uni-freiburg.de/teaching/ss19/robotics/)
+- [Robot Mapping](http://ais.informatik.uni-freiburg.de/teaching/ws19/mapping/)
 
 
 ## paper

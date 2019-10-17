@@ -34,3 +34,5 @@ date: 2019-09-10
 - [ME 5286: Robotics-Computer Vision(2019)](http://www.me.umn.edu/courses/me5286/vision/notes.shtml)
 - [ME 5286: Robotics-Computer Vision(2015)](http://me.umn.edu/courses/me5286/vision/Notes/2015/)
 - [CS5670: Introduction to Computer Vision](http://www.cs.cornell.edu/courses/cs5670/2019sp/)
+
+- [sift 详解](https://blog.csdn.net/u010440456/article/details/81483145)

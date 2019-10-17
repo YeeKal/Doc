@@ -12,3 +12,5 @@ date: 2019_08_17
 - Receding horizon control
 
 D-star
+
+sst: stable sparse rrt, [code]([sst code](http://pracsyslab.org/sst_software))
