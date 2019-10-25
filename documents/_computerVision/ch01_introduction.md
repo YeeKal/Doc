@@ -29,6 +29,7 @@ date: 2019-09-10
 - [Computer Vision : Models,Learning and Inference](http://www.computervisionmodels.com/)
 - [Learning OpenCV]()
 - [Computer Vision : Algorithms and Applications](http://szeliski.org/Book/)
+- [Circular and linear regression: Fitting circles and lines by least squares](https://people.cas.uab.edu/~mosya/cl/index.html)
 5. 参考课程
 
 - [ME 5286: Robotics-Computer Vision(2019)](http://www.me.umn.edu/courses/me5286/vision/notes.shtml)

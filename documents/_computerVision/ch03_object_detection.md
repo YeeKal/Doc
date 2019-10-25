@@ -30,3 +30,8 @@ date: 2019-09-10
 - [RGBD-Hough-Forest](https://github.com/ibadami/RGBD-Hough-Forest)
 
 
+I have received the coding.I am not familiar to openrave, and i have two questions.
+
+1. I follow the official tutorial to write a C++ plugin last night, but i always get the "symbol lookup error" when using the plugin in python. Are you allowed to give me some instructions on how to write a plugin, or i have to complete this all by myself?
+
+2. When i try to use the built-in planner(birrt), the planner failed to find a solution.  Is it designed deliberately on purpose?

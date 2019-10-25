@@ -7,6 +7,15 @@ date: 2019-10-12
 
 ICP: Iterative Closest Point
 
+- icp
+- ndt
+- Super4PCS
+- eICP
+- ransac
+- halcon
+- [知乎-匹配定位算法](https://www.zhihu.com/question/39513724)
+- [shape-based-matching](https://github.com/meiqua/shape_based_matching)
+
 ## problem summary
 
 - given: two corresponding point sets
@@ -93,3 +102,4 @@ speed
 - [icp_with gpu](https://github.com/michaelwillett/Iterative-Closest-Point)
 - [icp-intel-search](https://github.com/1988kramer/intel_dataset)
 - [Introduction to Mobile Robotics](http://ais.informatik.uni-freiburg.de/teaching/ss19/robotics/)
+- [myvision](https://github.com/Ewenwan/MVision/blob/master/PCL_APP/5_%E7%82%B9%E4%BA%91%E9%85%8D%E5%87%86%20Registration.md)
