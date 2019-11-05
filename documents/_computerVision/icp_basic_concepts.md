@@ -1,6 +1,6 @@
 ---
-title: icp tutorial
-categories: navigation
+title: icp-basic concepts
+categories: cv
 tags: icp
 date: 2019-10-12
 ---
@@ -16,6 +16,12 @@ ICP: Iterative Closest Point
 - [知乎-匹配定位算法](https://www.zhihu.com/question/39513724)
 - [shape-based-matching](https://github.com/meiqua/shape_based_matching)
 
+#### application
+
+- reconstruct 2D or 3D surface
+- localize robots
+- register bone models
+
 ## problem summary
 
 - given: two corresponding point sets
@@ -28,15 +34,15 @@ where $x_i$ and $p_i$ are coresponding points. So this problem actually contains
 1. find the corresponding pairs of points; 
 2. find the transformation.
 
-## Iterative Closest Point
+#### Iterative Closest Point
 
 iterate to find alignment
 
 Method1: iterative to find the closet point in P for point in X. This does not work so well.
 
-## Find the transformation
+#### Find the transformation
  
- SVD&optimization
+ SVD & optimization
 
  If the correvt correspondences are known, the correct relative rotation/translation can be calculated in closed form by SVD.
 
@@ -103,3 +109,4 @@ speed
 - [icp-intel-search](https://github.com/1988kramer/intel_dataset)
 - [Introduction to Mobile Robotics](http://ais.informatik.uni-freiburg.de/teaching/ss19/robotics/)
 - [myvision](https://github.com/Ewenwan/MVision/blob/master/PCL_APP/5_%E7%82%B9%E4%BA%91%E9%85%8D%E5%87%86%20Registration.md)
+- [pcl-icp 源码解析](https://www.cnblogs.com/yhlx125/p/5234156.html)

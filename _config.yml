@@ -85,6 +85,18 @@ defaults:
       type: "motionPlanning"
     values:
       layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "navigation"
+    values:
+      layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "computerVision"
+    values:
+      layout: "post"
 
 # Plugins
 gems:

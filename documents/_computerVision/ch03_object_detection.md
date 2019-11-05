@@ -5,6 +5,8 @@ tags: cv
 date: 2019-09-10
 ---
 
+opencv cvMatchTemplate 模板匹配
+
 ## 参考
 - [csdn-用Hough投票做物体检测的3篇文献](https://blog.csdn.net/zhoutongchi/article/details/8253179)
 - [zhihu-传统目标检测之HOG特征](https://zhuanlan.zhihu.com/p/75538637)
