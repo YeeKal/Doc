@@ -31,7 +31,7 @@ P=\{p_1,\cdots,p_n\}$$
 $$E(R,t)=\frac{1}{N_p}\sum^{N_p}_{i=1}||x_i-Rp_i-t||^2$$
 where $x_i$ and $p_i$ are coresponding points. So this problem actually contains two sub-problem: 
 
-1. find the corresponding pairs of points; 
+1. find the corresponding pairs of points(association); 
 2. find the transformation.
 
 #### Iterative Closest Point

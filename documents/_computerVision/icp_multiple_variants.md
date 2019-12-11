@@ -11,8 +11,12 @@ date: 2019-11-03
 - 距离度量方式
     - 点到点
     - PLICP: 点到线 [2008]
+        > Censi, A. (2008). "An ICP variant using a point-to-line metric." IEEE International Conference on Robotics & Automation. IEEE,: 19-25.
+        > CSM（Canonical Scan Matcher）源码     http://censi.mit.edu/software/csm/
     - 点到面
     - GICP： 面到面, 泛化的ICP
+        > http://www.roboticsproceedings.org/rss05/p21.pdf
+        > GICP学习笔记: https://blog.csdn.net/u014509577/article/details/86912909
 - 封闭解
     - SVD
     - Unit Quaternions: 单位四元数
@@ -36,13 +40,6 @@ date: 2019-11-03
 [CSM](https://censi.science/software/csm/): a pure C implementation of a very fast variation of ICP using a point-to-line metric optimized for range-finder scan matching
 
 
-
-## Super4PCS
-
-- [Super4PCS Library: Not maitained ](http://nmellado.github.io/Super4PCS/)
-- [OpenGR: replace the initial Super4PCS](https://storm-irit.github.io/OpenGR/index.html)
-- [CSDN-点云配准算法之super-4pcs](https://blog.csdn.net/peach_blossom/article/details/80955343)
-- [4PCS阅读笔记](https://blog.csdn.net/Ha_ku/article/details/79480613)
 
 ```python
 # install

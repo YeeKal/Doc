@@ -117,3 +117,5 @@ add_library(Mod2 STATIC
     - CMAKE_SOURCE_DIR | PROJECT_SOURCE_DIR | [project_name]_SOURCE_DIR: 工程顶级目录
     - CMAKE_CURRENT_SOURCE_DIR: CMakeList.txt所在当前目录
     - PROJECT_NAME: 项目名称
+
+## building libraries
