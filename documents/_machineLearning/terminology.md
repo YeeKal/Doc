@@ -16,3 +16,5 @@
     - GDA GMM 朴素贝叶斯和隐马科夫
 - discriminative model
     - k近邻，感知机 决策树，支持向量机
+
+- 残差网络

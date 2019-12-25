@@ -95,3 +95,7 @@ git config --global https.proxy 'socks5://127.0.0.1:1080'
 	-  https://mirrors-wan.geekpie.club/CTAN/systems/texlive/Images/
 	- https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/
 - 图形化界面安装，安装图形化工具：sudo apt-get install perl-tk
+
+17. kill all python process
+
+>ps -ef | grep python | cut -c 9-15| xargs kill -s 9
