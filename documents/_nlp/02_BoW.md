@@ -2,7 +2,7 @@
  title: 01-Bow
  categories: nlp
  tags: nlp
- date: 2019-06-17
+ date: 2020-06-17
 ---
 
 ## 文本表示 (text representation)

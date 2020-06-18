@@ -2,7 +2,7 @@
  title: 04_text_classification
  categories: nlp
  tags: nlp
- date: 2019-06-19
+ date: 2020-06-19
 ---
 
 ## refer

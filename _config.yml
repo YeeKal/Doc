@@ -42,6 +42,9 @@ collections:
   nlp:
     output: true
     permalink: /:collection/:name
+  python:
+    output: true
+    permalink: /:collection/:name
 
 
 #add front matter values to static files sometime
@@ -98,6 +101,18 @@ defaults:
     scope:
       path: ""
       type: "computerVision"
+    values:
+      layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "nlp"
+    values:
+      layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "python"
     values:
       layout: "post"
 

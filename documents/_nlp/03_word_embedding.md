@@ -2,7 +2,7 @@
  title: 03_word_embedding
  categories: nlp
  tags: nlp
- date: 2019-06-18
+ date: 2020-06-18
 ---
 
 ## ref
