@@ -1,5 +1,5 @@
 ---
- title: post_installation_for_ubuntu
+ title: post installation for ubuntu
  categories: linux
  tags: linux
  date: 2020-04-15
