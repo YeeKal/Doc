@@ -25,5 +25,109 @@ RNN的一级层次是由上图中的t标识的，表示有多少个简单的网�
 Forward Propagation:
 $$\begin{align} s_t &= f_1(U x_{t}+W s_{t-1})=tanh(U x_{t}+W s_{t-1}) \\
                 \hat{y_t} &=f_2(Vs_t)=softmax(Vs_t) \\
-                E_t(y,\hat{y})&=\sum_{t}E_t(y_t,\hat{y_t})  \longrightarrow \text{  loss function}\\
+                E_t(y,\hat{y})&=-y_t\log{\hat{y_t}} \\
+                E(y,\hat{y})&=\sum_{t}E_t(y_t,\hat{y_t})  \longrightarrow \text{  loss function}\\
                             &=-\sum_{t}y_t\log{\hat{y_t}} \end{align}$$
+
+![rnn-bptt](imgs/rnn-bptt1.png)
+
+Back Propagation:
+
+$$$$
+
+
+```latex{cmd hide}
+\documentclass[tikz,border=10pt]{standalone}
+\begin{document}
+\begin{tikzpicture}
+
+\node[circle,
+minimum width =30pt ,
+minimum height =30pt ,draw=blue] (1) at(0,2){$x_1$};
+\node[circle,
+minimum width =30pt ,
+minimum height =30pt ,draw=blue] (2) at(0,0){$x_2$};
+\node[circle,
+minimum width =30pt ,
+minimum height =30pt ,draw=orange] (3) at(2,-1){$a_3^{(2)}$};
+\node[circle,
+minimum width =30pt ,
+minimum height =30pt ,draw=orange] (4) at(2,1){$a_2^{(2)}$};
+\node[circle,
+minimum width =30pt ,
+minimum height =30pt ,draw=orange] (5) at(2,3){$a_1^{(2)}$};
+\node[circle,
+minimum width =30pt ,
+minimum height =30pt ,draw=orange] (6) at(4,-1){$a_3^{(3)}$};
+\node[circle,
+minimum width =30pt ,
+minimum height =30pt ,draw=orange] (7) at(4,1){$a_2^{(3)}$};
+\node[circle,
+minimum width =30pt ,
+minimum height =30pt ,draw=orange] (8) at(4,3){$a_1^{(3)}$};
+\node[circle,
+minimum width =30pt ,
+minimum height =30pt ,draw=purple] (9) at(6,2){$a_1^{(4)}$};
+\node[circle,
+minimum width =30pt ,
+minimum height =30pt ,draw=purple] (10) at(6,0){$a_2^{(4)}$};
+\draw[->] (1) --(3);
+\draw[->] (1) --(4);
+\draw[->] (1) --(5);
+\draw[->] (2) --(3);
+\draw[->] (2) --(4);
+\draw[->] (2) --(5);
+\draw[->] (3) --(6);
+\draw[->] (3) --(7);
+\draw[->] (3) --(8);
+\draw[->] (4) --(6);
+\draw[->] (4) --(7);
+\draw[->] (4) --(8);
+\draw[->] (5) --(6);
+\draw[->] (5) --(7);
+\draw[->] (5) --(8);
+\draw[->] (6) --(9);
+\draw[->] (6) --(10);
+\draw[->] (7) --(9);
+\draw[->] (7) --(10);
+\draw[->] (8) --(9);
+\draw[->] (8) --(10);
+
+\end{tikzpicture}
+\end{document}
+```
+$$\begin{aligned}
+\frac{\partial E_{3}}{\partial V} &=\frac{\partial E_{3}}{\partial \hat{y}_{3}} \frac{\partial \hat{y}_{3}}{\partial V} \\
+&=\frac{\partial E_{3}}{\partial \hat{y}_{3}} \frac{\partial \hat{y}_{3}}{\partial z_{3}} \frac{\partial z_{3}}{\partial V} \\
+&=\left(\hat{y}_{3}-y_{3}\right) \otimes s_{3}
+\end{aligned},\text{ where }z_3=Vs_3$$
+
+![bptt2](imgs/bptt2.png)
+由于参数共享，需要把受w影响的各个级联的单元都算上。而$\frac{\partial s_{j}}{\partial s_{k}}=\prod_{k+1}^{j} \frac{\partial h_{j}}{\partial h_{j-1}}$,在梯度求导时存在连乘项，则会产生梯度消失或梯度爆炸。由于连乘项的存在，对于较远时刻之前的信息也无法捕捉到。这也被称为long-range dependency probelm。
+
+$$\frac{\partial E_{3}}{\partial W}=\sum_{k=0}^{3} \frac{\partial E_{3}}{\partial \hat{y}_{3}} \frac{\partial \hat{y}_{3}}{\partial s_{3}} \frac{\partial s_{3}}{\partial s_{k}} \frac{\partial s_{k}}{\partial W}$$
+
+$$\frac{\partial E_{3}}{\partial U}=\frac{\partial E_{3}}{\partial \hat{y}_{3}} \frac{\partial \hat{y}_{3}}{\partial s_{3}} \frac{\partial s_{3}}{\partial U}$$
+
+$\otimes$,外积。对于两个向量，外积生成矩阵。
+
+编程技巧：
+- 反向计算误差($\delta$)
+- 再计算梯度
+
+
+cross-entropy:
+    $$\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}$$
+
+softmax:
+
+softmax是非一对一操作，故不能简单求导
+
+$$\frac{\partial{y}}{\partial{x}}=(1-y)y$$
+
+- softmax和交叉熵的配合
+
+tanh:
+$$f(x)=tanh(x)=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}} \\
+f'(x)=1-tanh(x)^2$$
+
