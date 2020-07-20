@@ -25,7 +25,7 @@
     - [谷歌黑板报数学之美](https://china.googleblog.com/2006/04/blog-post_7327.html)
     - [Analyzing Text with the Natural Language Toolkit](http://www.nltk.org/book/)
 - course
-    - [stanford-CS224d: Deep Learning for Natural Language Processing](http://cs224d.stanford.edu/syllabus.html)
+    - [stanford-CS224d: Deep Learning for Natural Language Processing](http://web.stanford.edu/class/cs224n/index.html#schedule)
     - [stanford-CS229: Machine Learning](http://cs229.stanford.edu/)
     - [oxford-cs-deepnlp](https://github.com/oxford-cs-deepnlp-2017)
 

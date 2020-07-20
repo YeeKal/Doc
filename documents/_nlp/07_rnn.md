@@ -107,7 +107,41 @@ $$\begin{aligned}
 
 $$\frac{\partial E_{3}}{\partial W}=\sum_{k=0}^{3} \frac{\partial E_{3}}{\partial \hat{y}_{3}} \frac{\partial \hat{y}_{3}}{\partial s_{3}} \frac{\partial s_{3}}{\partial s_{k}} \frac{\partial s_{k}}{\partial W}$$
 
-$$\frac{\partial E_{3}}{\partial U}=\frac{\partial E_{3}}{\partial \hat{y}_{3}} \frac{\partial \hat{y}_{3}}{\partial s_{3}} \frac{\partial s_{3}}{\partial U}$$
+但在编程实践上一般不这样算。考虑到在每一级，每一个参数只输出到一个神经元，所以先算出在t时刻该神经元处反向传递过来的梯度值，再计算t时刻该参数的梯度。
+
+$$\begin{aligned}\frac{\partial E}{\partial W}&=\frac{\partial E}{\partial s_0}\frac{\partial s_0}{\partial W} + \frac{\partial E}{\partial s_1}\frac{\partial s_1}{\partial W} +\cdots + + \frac{\partial E}{\partial s_4}\frac{\partial s_4}{\partial W} \end{aligned}$$
+
+```latex{cmd hide}
+\documentclass[tikz,border=10pt]{standalone}
+\begin{document}
+\begin{tikzpicture}
+
+\node[circle,
+minimum width =30pt ,
+minimum height =30pt ,draw=blue] (1) at(0,0){$s_t$};
+\node[circle,
+minimum width =30pt ,
+minimum height =30pt ,draw=blue] (2) at(0,2){$E_t$};
+\node[circle,
+minimum width =30pt ,
+minimum height =30pt ,draw=orange] (3) at(2,0){$s_{t+1}$};
+\draw[->] (1) --(2);
+\draw[->] (1) --(3);
+
+\end{tikzpicture}
+\end{document}
+```
+在RNN网络结构中神经元$s_t$的流向有两个$E_t,s_{t+1}$,则根据链式法则：
+$$\Delta s_t=\frac{\partial E}{\partial s_t} =\frac{\partial E_t}{\partial s_t} + \frac{\partial s_{t+1}}{\partial s_t}=\frac{\partial E_t}{\partial s_t} + \Delta s_{t+1} W^T \\
+\Delta W^{(t)}=s_{t-1}^T \cdot (\Delta s_t \cdot \frac{d s_t}{d z_t})=s_{t-1} \otimes (\Delta s_t \odot \frac{d s_t}{d z_t})  \\
+\Delta W=\sum_{t} \Delta W^{(t)}$$
+
+$$\Delta U^{(t)}=x_t^T \cdot (\Delta s_t \cdot \frac{d s_t}{d z_t}) =x_{t-1} \otimes (\Delta s_t \odot \frac{d s_t}{d z_t}) \\
+\Delta U=\sum_{t} \Delta U^{(t)}$$
+
+这样整体的梯度传播结构就比较清晰，也遵循一般的传导经验：
+1. 先计算误差在每一个神经元的梯度，同时注意有多条分支的神经元应该把每一条分支传递的梯度都加起来
+2. 再计算与每一个神经元直接相连接的参数的梯度
 
 $\otimes$,外积。对于两个向量，外积生成矩阵。
 
@@ -129,5 +163,11 @@ $$\frac{\partial{y}}{\partial{x}}=(1-y)y$$
 
 tanh:
 $$f(x)=tanh(x)=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}} \\
-f'(x)=1-tanh(x)^2$$
+f'(x)=1-tanh(x)^2=1-y^2$$
+
+## diy
+
+- [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
+- [Differentiable Neural Computer in Numpy](https://github.com/krocki/dnc)
+- [min-char-rnn](https://gist.github.com/karpathy/d4dee566867f8291f086)
 
