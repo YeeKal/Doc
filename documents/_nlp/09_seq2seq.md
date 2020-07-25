@@ -1,3 +1,10 @@
+---
+ title: 09 seq2seq
+ categories: nlp
+ tags: nlp
+ date: 2020-07-15
+---
+
 ## seq2seq
 
 ![seq2seq](imgs/seq2seq1.png)

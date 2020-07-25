@@ -29,3 +29,7 @@ zz2=(xx-yy).^2          %
 [cs231 in stanford](http://cs231n.github.io/)
 
 $$\bigtriangledown f(x)=f(x)\bigtriangledown \log f(x)$$
+
+## ref
+
+- [Visual Information Theory](https://colah.github.io/posts/2015-09-Visual-Information/)

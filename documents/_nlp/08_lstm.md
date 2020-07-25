@@ -1,3 +1,10 @@
+---
+ title: 08 lstm
+ categories: nlp
+ tags: nlp
+ date: 2020-07-10
+---
+
 ## ref 
 - [机器之心-LSTM入门必读：从入门基础到工作方式详解](https://www.jiqizhixin.com/articles/2017-07-24-2)
 - [medium-Understanding LSTM and its diagrams](https://medium.com/mlreview/understanding-lstm-and-its-diagrams-37e2f46f1714)

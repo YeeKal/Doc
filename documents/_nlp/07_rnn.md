@@ -1,3 +1,10 @@
+---
+ title: 06 rnn
+ categories: nlp
+ tags: nlp
+ date: 2020-07-05
+---
+
 ## ref
 
 Recurrent Neural Networks Tutorial:

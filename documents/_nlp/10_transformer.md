@@ -1,3 +1,10 @@
+---
+ title: 10 transformer
+ categories: nlp
+ tags: nlp
+ date: 2020-07-20
+---
+
 ## attention
 
 Encoder-Decoder框架没有体现出注意力集中，即Decoder使用的编码后的隐藏语义是同一个，没有体现出对于不同词的不同的关注度（权重）。而注意力集中则是对于不同的词给予不同的权重。
@@ -44,22 +51,47 @@ $$\text { Attention }(Q, K, V)=\operatorname{softmax}\left(\frac{Q K^{T}}{\sqrt{
 
 #### self attention in transformaer
 
-a1. 针对词向量构造Q,K,V
+a1. 针对词向量构造Q,K,V. $W^q,W^k,W^v$为共享参数
 
 ![tr-self atention](imgs/tr-self-1.png)
 
-a2. 生成权重系数（这里相似度计算省略了归一化分母）
+a2. 生成权重系数（这里相似度计算省略了归一化分母，论文中分母取词向量维数的开方）
 ![tr-self atention](imgs/tr-self-2.png)
 
 a3. 权重加权求和
 ![tr-self atention](imgs/tr-self-3.png)
 
-a4. 总结
+a4. 总结 (矩阵并行运算，方便在gpu加速)
 ![tr-self atention](imgs/tr-self-4.png)
 
+#### Multi-Head Attention
 
+a1. 每个词生成多个{q,k,v}，论文中有8个head
+![tr-self atention](imgs/tr-mh.png)
 
+#### position encoding
 
+位置编码加入了词的位置信息，形成与词向量等长的一个向量，向量的奇偶位置数值计算如下：
+$$\begin{aligned}
+P E_{(p o s, 2 i)} &=\sin \left(p o s / 10000^{2 i / d_{\text {model }}}\right) \\
+P E_{(p o s, 2 i+1)} &=\cos \left(p o s / 10000^{2 i / d_{\text {model }}}\right)   \\
+pos :& 词所在的位置     \\
+d_{model} :& 词向量维度
+\end{aligned}$$
+
+位置向量与词向量相加形成最终输入的向量。
+
+#### structure
+
+单个encoder的架构图如下，其中Normalize采用了[layer-normalization](https://arxiv.org/abs/1607.06450).
+![tf1](imgs/tf-s1.png)
+
+decoder中服用了encode中的K, V.
+![tf2](imgs/tf-s2.png)
+
+## variants
+
+## application
 
 
 ## ref
