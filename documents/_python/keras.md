@@ -5,9 +5,207 @@
  date: 2019-12-15
 ---
 
+## Intro
 
-[Getting started with Keras](https://keras.io/getting-started/sequential-model-guide/)
+一个Model包含多个Layers，每个Layer有输入和输出，各个Layer由输入输出相连形成Model。
 
+```python
+# tf has wrapped keras
+import tensorflow as tf
+from tensorflow import keras
+
+keras
+|- models
+|- layers
+```
+
+## Model
+```
+keras
+|- models
+   |- Model
+   |- load_model()
+   |- save_model()
+|- Sequential
+|- layers
+```
+
+two ways to get a model
+```python
+'''
+1. 通过多个相连接的Layer的输入输出来构造Model
+tf.keras.Model()
+- inputs: The input(s) of the model: a keras.Input object or list of keras.Input objects.
+- outputs: The output(s) of the model. 
+- name: String, the name of the model.
+'''
+encoder_inputs = Input(shape=(None, num_encoder_tokens))
+encoder = LSTM(latent_dim, return_state=True)
+encoder_outputs, state_h, state_c = encoder(encoder_inputs)
+encoder_states = [state_h, state_c]
+model = Model([encoder_inputs, decoder_inputs], encoder_states)
+
+'''
+2. 通过Sequential叠加Layer
+'''
+model = tf.keras.Sequential()
+model.add(tf.keras.layers.Dense(8, input_shape=(16,)))
+model.add(tf.keras.layers.Dense(4))
+```
+
+Model && Sequential API
+
+```python
+
+Sequential.add(layer)
+Sequential.pop()    # Removes the last layer in the model.
+
+Model.summary(line_length=None, positions=None, print_fn=None)
+Model.get_layer(name=None, index=None)
+
+Model.compile()     # Configures the model for training.
+Model.fit()
+model.predict()
+Model.evaluate()
+
+# model save & serialization
+Model.save(
+    filepath,
+    overwrite=True,
+    include_optimizer=True,
+    save_format=None,
+    signatures=None,
+    options=None,
+)
+model.save('my_model.h5')
+model = load_model('my_model.h5')
+
+Model.get_weights()
+Model.set_weights(weights)
+Model.load_weights()
+Model.get_config()  # Returns a dict of  config of the layer
+Model.from_config(config, custom_objects=None)
+tf.keras.models.model_from_config(config, custom_objects=None)
+Model.to_json(**kwargs)
+tf.keras.models.model_from_json(json_string, custom_objects=None)
+tf.keras.models.clone_model(model, input_tensors=None, clone_function=None)
+```
+
+## Layers
+
+```
+keras
+|- models
+   |- Model
+   |- load_model()
+   |- save_model()
+|- Sequential
+|- layers
+    |- Activation
+|- activations
+```
+
+A Layer instance is callable, much like a function: given input, and get output. A Layer  is more than a general function, it maintain a state.
+
+Core layers
+```python
+'''
+tf.keras.Input(
+    shape=None,
+    batch_size=None,
+    name=None,
+    dtype=None,
+    sparse=False,
+    tensor=None,
+    ragged=False,
+    **kwargs
+)
+
+shape:
+    A shape tuple (integers), not including the batch size. 
+    For instance, shape=(32,) indicates that the expected input will be batches of 32-dimensional vectors
+'''
+
+x = Input(shape=(32,))
+
+'''
+tf.keras.layers.Dense(
+    units,
+    activation=None,
+    use_bias=True,
+    kernel_initializer="glorot_uniform",
+    bias_initializer="zeros",
+    kernel_regularizer=None,
+    bias_regularizer=None,
+    activity_regularizer=None,
+    kernel_constraint=None,
+    bias_constraint=None,
+    **kwargs
+)
+Dense operation: output = activation(dot(input, kernel) + bias)
+    activation: the element-wise activation function
+    kernel: weights
+    bias: a bias vector
+Dim explain:
+    input: (batch_size,d0,d1)
+    output: (batch_size,d0,units)  
+    weights(kernel): (d1,units) 右乘
+'''
+
+'''
+tf.keras.layers.Activation(activation, **kwargs)
+'''
+layer = tf.keras.layers.Activation('relu')
+layer = tf.keras.layers.Activation(tf.nn.relu)
+output = layer([-3.0, -1.0, 0.0, 2.0])
+list(output.numpy())
+
+# general function
+Layer.get_weights()
+Layer.set_weights(weights)
+```
+
+## Activation
+
+usage
+```python
+# 1. through an Activation layer
+model.add(layers.Dense(64))
+model.add(layers.Activation(activations.relu))
+
+# 2. through the activation argument
+model.add(layers.Dense(64, activation='relu'))
+    # or
+model.add(layers.Dense(64, activation=activations.relu))
+
+# 3. function call
+foo = tf.constant([-10, -5, 0.0, 5, 10], dtype = tf.float32)
+tf.keras.activations.relu(foo).numpy()
+```
+
+functions: built-in activation function
+```python
+tf.keras.activations
+|- relu:        max(x, 0)
+|- softmax:     exp(x) / tf.reduce_sum(exp(x))
+|- sigmoid:     1 / (1 + exp(-x))
+|- softplus:    log(exp(x)+1)
+|- softsign:    x / (abs(x) + 1)
+|- tanh:        ((exp(x) - exp(-x))/(exp(x) + exp(-x)))
+|- selu:        if x > 0: return scale * x
+                if x < 0: return scale * alpha * (exp(x) - 1)
+|- elu:     
+
+```
+
+## Layer weight initializers
+
+## ref
+
+- [Getting started with Keras](https://keras.io/getting-started/sequential-model-guide/)
+- [keras api](https://keras.io/api/)
+
+## code
 
 construction
 ```python
@@ -64,25 +262,6 @@ def mean_pred(y_true, y_pred):
 model.compile(optimizer='rmsprop',
               loss='binary_crossentropy',
               metrics=['accuracy', mean_pred])
-```
-
-Training
-
-```python
-model.fit(data, labels, epochs=10, batch_size=32)
-```
-
-Evaluation
-```python
-score = model.evaluate(x_test, y_test, batch_size=32)
-results=model.predict(x_test)
-```
-
-Parameters
-```python
-model.summary() 
-model.get_weights()
-model.layers.weights/name
 ```
 
 

@@ -66,4 +66,4 @@ The paper presents two model sizes for BERT:
 - [从Word Embedding到Bert模型—自然语言处理中的预训练技术发展史](https://zhuanlan.zhihu.com/p/49271699)
 - [A Step-by-Step NLP Guide to Learn ELMo for Extracting Features from Text](https://www.analyticsvidhya.com/blog/2019/03/learn-to-use-elmo-to-extract-features-from-text/)
 - [ BERT FineTuning with Cloud TPUs notebook](https://colab.research.google.com/github/tensorflow/tpu/blob/master/tools/colab/bert_finetuning_with_cloud_tpus.ipynb)
-- [语言模型和迁移学习](https://zhuanlan.zhihu.com/p/42618178)
+- [语言模型和迁移学习b457 ](https://zhuanlan.zhihu.com/p/42618178)
