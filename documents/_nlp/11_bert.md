@@ -61,9 +61,41 @@ The paper presents two model sizes for BERT:
 - transformer encoder
 - masked tokens
 
+## code
+- [google bert](https://github.com/google-research/bert)
+- [BertViz:a tool for visualizing attention in the Transformer model](https://github.com/jessevig/bertviz)
+- [kerasbert](https://github.com/CyberZHG/keras-bert)
+- [bertsearch: elasticsearch with bert](https://github.com/Hironsan/bertsearch)
+
 ## ref
 
 - [从Word Embedding到Bert模型—自然语言处理中的预训练技术发展史](https://zhuanlan.zhihu.com/p/49271699)
 - [A Step-by-Step NLP Guide to Learn ELMo for Extracting Features from Text](https://www.analyticsvidhya.com/blog/2019/03/learn-to-use-elmo-to-extract-features-from-text/)
 - [ BERT FineTuning with Cloud TPUs notebook](https://colab.research.google.com/github/tensorflow/tpu/blob/master/tools/colab/bert_finetuning_with_cloud_tpus.ipynb)
 - [语言模型和迁移学习b457 ](https://zhuanlan.zhihu.com/p/42618178)
+- [BERT-related-papers](https://github.com/tomohideshibata/BERT-related-papers)
+
+
+<table>
+  <tr><a href="https://github.com/jina-ai/jina"><img src="https://github.com/jina-ai/jina/blob/master/.github/1500х667.gif?raw=true" alt="Jina banner" width="100%"></a></tr>
+  <tr>
+      <td width="30%">
+    <a href="https://github.com/jina-ai/jina/tree/master/docs/chapters/101">
+      <img src="https://github.com/jina-ai/jina/blob/master/docs/chapters/101/img/ILLUS12.png?raw=true" alt="Jina 101 Concept Illustration Book, Copyright by Jina AI Limited" title="Jina 101 Concept Illustration Book, Copyright by Jina AI Limited"/>
+    </a>
+    </td>
+    <td width="70%">
+<h3><a href="https://github.com/jina-ai/jina/tree/master/docs/chapters/101">► Jina 101: First Thing to Learn About Jina</a></h3>
+&nbsp;&nbsp;<a href="https://github.com/jina-ai/jina/tree/master/docs/chapters/101">English</a> •
+  <a href="https://github.com/jina-ai/jina/tree/master/docs/chapters/101/README.ja.md">日本語</a> •
+  <a href="https://github.com/jina-ai/jina/tree/master/docs/chapters/101/README.fr.md">français</a> •
+  <a href="https://github.com/jina-ai/jina/tree/master/docs/chapters/101/README.de.md">Deutsch</a> •
+  <a href="https://github.com/jina-ai/jina/tree/master/docs/chapters/101/README.ru.md">Русский язык</a> •
+  <a href="https://github.com/jina-ai/jina/tree/master/docs/chapters/101/README.zh.md">中文</a>
+<br>
+    <h3><a href="https://github.com/jina-ai/examples/tree/master/x-as-service">► From BERT-as-Service to X-as-Service</a></h3>
+Learn how to use Jina to extract feature vector using any deep learning representation	
+
+</td>
+  </tr>
+</table>
