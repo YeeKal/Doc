@@ -124,5 +124,9 @@ gems:
 # Custom variables
 version: "1.0.2"
 
+# sass:
+#     sass_dir: _sass
+#     style: compressed
+
 # Options
 reverse: false
