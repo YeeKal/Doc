@@ -123,7 +123,7 @@ gems:
 
 # Custom variables
 version: "1.0.2"
-
+excerpt_separator: ""
 # sass:
 #     sass_dir: _sass
 #     style: compressed
