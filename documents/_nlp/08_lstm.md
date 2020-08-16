@@ -67,45 +67,45 @@ h_{t} &=o_{t} * \tanh \left(C_{t}\right)
     font=\sf \scriptsize,
     >=LaTeX,
     % Styles
-    cell/.style={% For the main box
+    cell/.style={ % For the main box
         rectangle, 
         rounded corners=5mm, 
         draw,
         very thick,
         },
-    operator/.style={%For operators like +  and  x
+    operator/.style={ %For operators like +  and  x
         circle,
         draw,
         inner sep=-0.5pt,
         minimum height =.2cm,
         },
-    function/.style={%For functions
+    function/.style={ %For functions
         ellipse,
         draw,
         inner sep=1pt
         },
-    ct/.style={% For external inputs and outputs
+    ct/.style={ % For external inputs and outputs
         circle,
         draw,
         line width = .75pt,
         minimum width=1cm,
         inner sep=1pt,
         },
-    gt/.style={% For internal inputs
+    gt/.style={ % For internal inputs
         rectangle,
         draw,
         minimum width=4mm,
         minimum height=3mm,
         inner sep=1pt
         },
-    mylabel/.style={% something new that I have learned
+    mylabel/.style={ % something new that I have learned
         font=\scriptsize\sffamily
         },
-    ArrowC1/.style={% Arrows with rounded corners
+    ArrowC1/.style={ % Arrows with rounded corners
         rounded corners=.25cm,
         thick,
         },
-    ArrowC2/.style={% Arrows with big rounded corners
+    ArrowC2/.style={ % Arrows with big rounded corners
         rounded corners=.5cm,
         thick,
         },

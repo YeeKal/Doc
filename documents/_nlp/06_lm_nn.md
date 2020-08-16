@@ -37,7 +37,7 @@ $$\begin{align}\Delta H_1 & =\Delta O\cdot (W^3)^T  \\
 N_x&=X\cdot W^1   \\
 \Delta W^2&=(X\cdot W^1)^T\cdot \Delta O\cdot (W^3)^T \end{align}$$
 也许发现了一个规律：
-$$\Delta W^i=\overbrace{(X \cdot W^1 \dots W^{i-1})^T}^{第i层的输入} \cdot \underbrace{\Delta O\cdot (W^{i+1}\cdot W^{n})^T}_{{第i层的误差}}$$
+$$\Delta W^i=\overbrace{(X \cdot W^1 \dots W^{i-1})^T}^{第i层的输入} \cdot \underbrace{\Delta O\cdot (W^{i+1}\cdot W^{n})^T}_{第i层的误差}$$
 
 ## 中间层非线性元
 
