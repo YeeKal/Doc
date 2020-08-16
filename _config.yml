@@ -45,6 +45,12 @@ collections:
   python:
     output: true
     permalink: /:collection/:name
+  wen:
+    output: true
+    permalink: /:collection/:name
+  optimization:
+    output: true
+    permalink: /:collection/:name
 
 
 #add front matter values to static files sometime
@@ -113,6 +119,18 @@ defaults:
     scope:
       path: ""
       type: "python"
+    values:
+      layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "wen"
+    values:
+      layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "optimization"
     values:
       layout: "post"
 
