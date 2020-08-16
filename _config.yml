@@ -6,13 +6,47 @@ url: "https://yeekal.github.io/"
 # Build settings
 baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
+kramdown:
+    input: GFM
+    hard_wrap: true
+
+#highlight: true
 source: .
 destination: ./_site
 permalink: /:title
-paginate: 5    #how many items should be displayed in one page
+paginate: 8    #how many items should be displayed in one page
 paginate_path: /page:num/
 
 # Default values
+collections_dir: documents
+collections:
+  ompl:
+    output: true
+    permalink: /:collection/:name
+    layout: "post"
+  paper:
+    output: true
+    permalink: /:collection/:name
+  ros:
+    output: true
+    permalink: /:collection/:name
+  linux:
+    output: true
+    permalink: /:collection/:name
+  machineLearning:
+    output: true
+    permalink: /:collection/:name
+  motionPlanning:
+    output: true
+    permalink: /:collection/:name
+  nlp:
+    output: true
+    permalink: /:collection/:name
+  python:
+    output: true
+    permalink: /:collection/:name
+
+
 #add front matter values to static files sometime
 defaults:
   -
@@ -21,18 +55,74 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-#categories
-my_categories:
-  web
-  note
-  cs
+  - 
+    scope:
+      path: ""
+      type: "ompl"
+    values:
+      layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "paper"
+    values:
+      layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "ros"
+    values:
+      layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "linux"
+    values:
+      layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "machineLearning"
+    values:
+      layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "motionPlanning"
+    values:
+      layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "navigation"
+    values:
+      layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "computerVision"
+    values:
+      layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "nlp"
+    values:
+      layout: "post"
+  - 
+    scope:
+      path: ""
+      type: "python"
+    values:
+      layout: "post"
+
 # Plugins
 gems:
   - jekyll-paginate
   - jekyll-sitemap
 
 # Custom variables
-version: "1.0.0"
+version: "1.0.2"
 
 # Options
 reverse: false

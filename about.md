@@ -1,8 +1,7 @@
 ---
 layout: page
 title: About Me
-description: This page describes monochrome.
 ---
-## About
+## Github
 
-add your own description.
+[Yeekal.github.io](https://github.com/YeeKal/YeeKal.github.io)

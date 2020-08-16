@@ -1,1 +1,39 @@
-<script src="{{ "/js/main.js" | prepend: site.baseurl | replace: '//', '/' }}"></script>	
+<script src="{{ "/js/main.js" | prepend: site.baseurl | replace: '//', '/' }}"></script>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+<script type="text/x-mathjax-config">
+//inline latex support
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<link rel="stylesheet" href="{{ "/js/prettify/prettify.css" | prepend: site.baseurl | replace: '//', '/' }}" type="text/css" media="all">
+<script src="{{"/js/prettify/prettify.js" | prepend: site.baseurl | replace: '//', '/' }}"></script>
+<script type="text/javascript">
+  $(function(){
+    $("pre").addClass("prettyprint linenums");
+    prettyPrint();
+  });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<!-- Bootstrap 4 requires Popper.js -->
+<script src="https://unpkg.com/popper.js@1.14.1/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="{{"/js/flat-ui.js" | prepend: site.baseurl | replace: '//', '/' }}"></script>
+<script src="{{"/js/application.js" | prepend: site.baseurl | replace: '//', '/' }}"></script>

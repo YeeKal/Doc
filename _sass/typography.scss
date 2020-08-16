@@ -5,7 +5,7 @@
 
 body
 {
-  font-family : "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family : "Source Sans Pro","Helvetica Neue","Arial","sans-serif";//"Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;Source Sans Pro,Helvetica Neue,Arial,sans-serif
   font-style: normal;
   font-weight: 400;
   font-size   : 16px;
@@ -17,23 +17,26 @@ body
 p, ul, ol {
 	font-size: 1em; /* 16px */
 	line-height: 1.5em; /* 24px/16px */
-	margin-bottom: 1.5em; /* 24px/16px */
+	/*margin-bottom: 1.5em;  24px/16px */
+}
+p{
+  padding-bottom: 0.375em;
 }
 
 h1 {
-	font-size: 2.25em; /* 36px/16px */
+	font-size: 2em; /* 36px/16px */
 	line-height: 1.3333em; /* 48px/36px */
 	padding: 0.33335em 0; /* 12px/36px * 2 (Use padding instead of margin to maintain proximity with paragraph) */
 }
 
 h2 {
-	font-size: 1.5em; /* 24px/16px */
+	font-size: 1.2em; /* 24px/16px */
 	line-height: 1em; /* 24px/24px */
-	padding: 1em 0 0 0; /* 12px/24px * 2, only top (Use padding instead of margin to maintain proximity with paragwithph) */
+	padding: 0.8em 0 0.8em 0; /* 12px/24px * 2, only top (Use padding instead of margin to maintain proximity with paragwithph) */
 }
 
 h3, h4, h5, h6 {
-	font-size: 1.125em; /* 18px/16px */
+	font-size: 1em; /* 18px/16px */
 	line-height: 1.3334em; /* 24px/18px */
 	padding: 0.66667em 0; /* 12px/18px * 2 (Use padding instead of margin to maintain proximity with paragraph) */
 }
@@ -59,7 +62,10 @@ blockquote {
 p, ul, ol {
 	font-size: 1em; /* 18px */
 	line-height: 1.3334em; /* 24px/18px */
-	margin-bottom: 1.3334em; /* 24px/18px */
+	/*margin-bottom: 1.3334em;  24px/18px */
+}
+p{
+  margin-bottom: 0.3334em;
 }
 
 h1 {
@@ -69,7 +75,7 @@ h1 {
 }
 
 h2 {
-	font-size: 2em; /* 36px/18px */
+	font-size: 1.6em; /* 36px/18px */
 	line-height: 1.3334em; /* 48px/36px */
 	padding: 0.66667em 0 0 0; /* 12px/36px * 2, pnly top (Use padding instead of margin to maintain proximity with paragraph) */
 }

@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<title>{{ site.title }}{%if page.title %}-{{ page.title }}{% endif %}</title>
   <meta name="description" content="{%if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
 	<!-- CSS & fonts -->
@@ -15,5 +15,6 @@
 
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs
+/jquery/1.4.0/jquery.min.js"></script>
 </head>

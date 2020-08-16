@@ -3,20 +3,7 @@
 
 {% include head.html %}
 
-<body>
-	<div id="header-back">
-	<!-- Navigation -->
-	{% include menu.html %}
-
-<!-- Icon menu -->
-<a {% if site.reverse == true %}id="nav-menu-left"{% else %}id="nav-menu"{% endif %}>
-	<div id="menu"></div>
-</a>
-
-	<!-- Header -->
-
-		{% include header.html %}
-</div>
+  {% include flat_header.html %}
 	<div id="wrap">
 
 

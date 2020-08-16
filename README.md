@@ -1,18 +1,18 @@
-## personal blog
+## structure
 
-## About
-forked from https://github.com/thereviewindex/blog
+- _layouts
+  - default.html: 网页模板框架，包含_includes中组件
+  - post.html: 文章模板, 由文章直接继承
+  - page.html: 非文章页面模板
+- index.html: 继承default
+- about.md: 继承page
+- category/index.html: 继承page
+- archive/index.html: 继承page
+- tag/index.html: 继承page
+- page.layout == "page" 查找菜单栏的各选型
 
-## Features
+## reference
 
-- Completely responsive and mobile first
-- Clean SEO friendly URLs, auto-generated from post title (no messy dates in the url)
-- SEO title/description integration
-- Sitemap ready
-- Pagination support
-- Mobile friendly navigation menu
-- Easy customization for header, footer, navigation links, colors, favicon etc
-- Default Monochrome Color Palette - black, white, greys
-- About page
-- 404 page
-- ..and a lot more
+- [侧边栏](http://www.thomaszhao.cn/2015/01/08/how-do-i-build-this-jekyll-blog/)
+- [github markdown css](https://github.com/sindresorhus/github-markdown-css/blob/gh-pages/github-markdown.css)
+- [docsify tutorial](https://blog.csdn.net/weixin_33874713/article/details/88705987)
