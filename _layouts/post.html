@@ -10,3 +10,14 @@ layout: default
 
 	</div>
 </article>
+
+<script type="text/javascript"> 
+	var urls_items=window.location.href.split('/');
+	var label=urls_items[urls_items.length-2]
+	var re="/^imgs/";
+	var img_item = document.getElementById("post-page").getElementsByClassName("content")[0].getElementsByTagName("img");
+
+	for(var i=0;i<img_item.length;i++){
+		img_item[i].src=label+"/"+img_item[i].src;
+	}
+</script>

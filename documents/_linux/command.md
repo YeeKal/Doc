@@ -99,3 +99,16 @@ git config --global https.proxy 'socks5://127.0.0.1:1080'
 17. kill all python process
 
 >ps -ef | grep python | cut -c 9-15| xargs kill -s 9
+
+18. ubuntu防火墙
+
+```python
+# open
+sudo ufw enable
+# restart
+sudo ufw reload
+# open port
+ufw allow 9000
+# check status
+ufw status
+```

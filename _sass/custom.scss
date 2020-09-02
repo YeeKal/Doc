@@ -29,6 +29,8 @@ container a:hover i,.container a:active i{
   display: flex;
   flex-wrap:wrap; // 换行
   margin-top:80px;
+  text-align:center;
+  margin: 0 auto;
 }
 
 .category-block{
@@ -42,6 +44,7 @@ container a:hover i,.container a:active i{
   // background: -webkit-gradient(linear,left top,left bottom,from(#ff00ca),to(#cd9400));
   box-shadow:10px 10px 8px -4px #444444;
   color: #ffffff;
+  overflow:hidden;
 }
 
 .category-category:hover {
