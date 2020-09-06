@@ -1,15 +1,6 @@
-## structure
+个人博客markdown文档库
 
-- _layouts
-  - default.html: 网页模板框架，包含_includes中组件
-  - post.html: 文章模板, 由文章直接继承
-  - page.html: 非文章页面模板
-- index.html: 继承default
-- about.md: 继承page
-- category/index.html: 继承page
-- archive/index.html: 继承page
-- tag/index.html: 继承page
-- page.layout == "page" 查找菜单栏的各选型
+本地更新推送到远程之后，webhook会自动同步更新远程web的文档库，完成网页更新。
 
 ## improve
 
@@ -20,5 +11,3 @@
 
 - [侧边栏](http://www.thomaszhao.cn/2015/01/08/how-do-i-build-this-jekyll-blog/)
 - [github markdown css](https://github.com/sindresorhus/github-markdown-css/blob/gh-pages/github-markdown.css)
-- [docsify tutorial](https://blog.csdn.net/weixin_33874713/article/details/88705987)
-- [liquid api](https://huang-qing.github.io/github/2017/10/19/GitHub-Jekyll-Liquid-API/)
