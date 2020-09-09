@@ -5,6 +5,12 @@ tags: optimization
 date: 2019-07-12
 ---
 
+## ref
+
+- [nonlinear programming](http://ocw.nctu.edu.tw/course_detail.php?bgid=3&gid=0&nid=358)
+- [bilibili-线性规划 方述诚](https://www.bilibili.com/video/av455050227/)
+
+
 ## intro
 
 - 线性最优
