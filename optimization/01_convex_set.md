@@ -33,3 +33,5 @@ $$P=\left\{\mathbf{x} \in \mathbf{R}^{n} \mid \mathbf{A} \mathbf{x}=\mathbf{b}, 
 
 - P是A的列向量组成的超平面相交之后再与凸锥($x\geq 0$)相交的集合
 - $\mathbf{A} \mathbf{x}=\mathbf{b}, \mathbf{x} \geq \mathbf{0}$意味着，向量b落入由A的列向量形成的凸锥中。
+
+## 凸函数

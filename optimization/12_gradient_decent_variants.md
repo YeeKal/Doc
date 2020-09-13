@@ -1,13 +1,6 @@
----
- title: optimizer
- categories: ml
- tags: ml
- date: 2019-12-24
----
-SGD optimization on saddle point：
-![SGD optimization on saddle point](imgs/optimizer2.gif) ![SGD optimization on saddle point](imgs/optimizer1.gif)
 
-## Introduction
+
+## 梯度下降改进算法
 
 一个高屋建瓴的框架：
 - 初始化：
@@ -21,6 +14,9 @@ SGD optimization on saddle point：
     4. 根据下降梯度进行更新:$w_{t+1}=w_{t}-\eta_{t}$
 
 为了防止分母为0,通常需要加入平滑项$\epsilon$，一般取1e-8：$\eta_{t}=\alpha \cdot m_{t} / \sqrt{v_{t}+\epsilon}$
+
+SGD optimization on saddle point：
+![SGD optimization on saddle point](pics/optimizer2.gif) ![SGD optimization on saddle point](pics/optimizer1.gif)
 
 ## SGD
 
@@ -125,4 +121,3 @@ $$g_{t}=\nabla f\left(w_{t}-\alpha \cdot m_{t-1} / \sqrt{v_{t-1}}\right)$$
 - [一个框架看懂优化算法之异同 SGD/AdaGrad/Adam](https://zhuanlan.zhihu.com/p/32230623)
 - [详解深度学习中的Normalization，BN/LN/WN](https://zhuanlan.zhihu.com/p/33173246)
 - [An overview of gradient descent optimization algorithms](https://ruder.io/optimizing-gradient-descent/)
-

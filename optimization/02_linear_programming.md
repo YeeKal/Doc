@@ -40,7 +40,8 @@ x_{1}, x_{2} \geq 0
 ## 松驰型（增广矩阵）
 
 $$\left\{\begin{array}{l}
-\min _{x=b}^{T} x \\
+\min {c}^{T} x \\
+Ax=b \\
 x \geq 0
 \end{array}\right.$$
 
@@ -53,6 +54,13 @@ x_{1}-x_{2}+x_{3}=0 \\
 50 x_{1}+20 x_{2}+x_{5}=2000 \\
 x_{1}, x_{2}, x_{3}, x_{4}, x_{5} \geq 0
 \end{array}$$
+
+从集合的角度理解一下优化问题：
+
+$$P=\left\{\mathbf{x} \in \mathbf{R}^{n} \mid \mathbf{A} \mathbf{x}=\mathbf{b}, \mathbf{x} \geq \mathbf{0}\right\}$$
+
+- P是A的列向量组成的超平面相交之后再与凸锥($x\geq 0$)相交的集合
+- $\mathbf{A} \mathbf{x}=\mathbf{b}, \mathbf{x} \geq \mathbf{0}$意味着，向量b落入由A的列向量形成的凸锥中。
 
 ## 单纯形法(simplex method)
 ## 椭圆法(Ellipsoid method)
