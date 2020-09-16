@@ -75,16 +75,6 @@ A_{eq}S=B_{eq}$$
 
 - L-SQP
 
-## 拟牛顿法
-
-- DFP
-- BFGS
-- L-BFGS
-
-
-temp:
-
-把关节值范围转化成不等式约束
 
 
 ## 凸优化基础
@@ -98,4 +88,6 @@ temp:
 07. Discrete Optimization
 08. GD, SGD, Adam, Adagrad
 09. L-BFGS, ADMM
+
+- [Optimization Methods](ECE236C - Optimization Methods for Large-Scale Systems)
 

@@ -37,6 +37,7 @@ x=x_k-\frac{f'(x_k)}{f''(x_k)}$$
 
 令$d_k=-\frac{f'(x_k)}{f''(x_k)}$是迭代中每一步更新的步长. 对于有n维变量的函数而言，偏导数$\Delta f(x)=f'(x_k)\in R^n, H(f(x))=f''(x_k)\in R^{(n\times n)}$,所以$d_k$并不是由两个矩阵直接相除，而是通过解方程$H(f(x))d_k=-\Delta f(x)$得到。
 
+
 ## 随机梯度下降(SGD)
 
 $$x=x_k-\alpha \Delta f(x)$$
@@ -69,6 +70,10 @@ $$\theta_{j}:=\theta_{j}-\alpha \frac{1}{10} \sum_{k=i}^{i+9}\left(h_{\theta}\le
 - 缺点：准确度下降，并不是全局最优；不易于并行实现
 
 $$\theta_{j}:=\theta_{j}+\alpha\left(y^{(i)}-h_{\theta}\left(x^{(i)}\right)\right) x_{j}^{(i)}$$
+
+**总结**
+
+- 牛顿法需要计算二阶导数，这使得牛顿法在以离散数据为基础的机器学习上很难适用
 
 
 ## 符号

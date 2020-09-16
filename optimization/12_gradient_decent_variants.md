@@ -31,7 +31,7 @@ v_t=I^2     \\
 
 ## SGDM
 
-SGD with Momentum.在SGD基础上引入了一阶动量:
+SGD with Momentum.在SGD基础上引入了一阶动量,加入惯性:
 $$m_{t}=\beta_{1} \cdot m_{t-1}+\left(1-\beta_{1}\right) \cdot g_{t}    \\
 \eta_t=\alpha\cdot m_t$$
 
