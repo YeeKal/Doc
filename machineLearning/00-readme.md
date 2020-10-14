@@ -31,3 +31,4 @@ password: ml2017
 
 - [李宏毅机器学习笔记(LeeML-Notes)](https://datawhalechina.github.io/leeml-notes/#/)
 - [github-数据科学相关](https://github.com/fengdu78/Data-Science-Notes)
+- [Machine-Learning-with-Python](https://github.com/susanli2016/Machine-Learning-with-Python)：大量实战脚本

@@ -54,12 +54,15 @@ kkt条件将多个约束方程转化成求零点的一个方程。
 ## SQP
 
 序列二次规划的算法思路是把约束问题的目标函数在迭代点$x^\ast$处通过泰勒展开简化成二次函数：
+
 $$min\ f(x)=\frac{1}{2}(x-x^*)^T\Delta^2f(x^\ast)(x-x^\ast)+\Delta f(x^\ast)(x-x^\ast) \\
 s.t.\ \Delta g_j(x^\ast)^T(x-x^*)+g_j(x^\ast)\leq 0\ (j=1,2,\dots,m) \\
 \Delta h_k(x^\ast)^T(x-x^*)+h_k(x^\ast)= 0\ (k=1,2,\dots,l)
 $$
+
 此问题是原约束问题的近似问题，其解不一定是原问题的可行点(**??**)，为此，令：
-$$\begin{align}
+
+$$\begin{aligned}
 S&=x-x^\ast \\
 H&=\Delta^2f(x^\ast) \\
 C&=\Delta f(x^\ast)  \\
@@ -67,8 +70,10 @@ A_{eq}&=[\Delta h_1(x^\ast),\Delta h_2(x^\ast),\dots,\Delta h_l(x^\ast)]^T \\
 A&=[\Delta g_1(x^\ast),\Delta g_2(x^\ast),\dots,\Delta g_m(x^\ast)]^T \\
 B_{eq}&=[h_1(x^\ast),h_2(x^\ast),\dots,h_l(x^\ast)]^T \\
 B&=[g_1(x^\ast),g_2(x^\ast),\dots,g_l(x^\ast)]^T 
-\end{align}$$
+\end{aligned}$$
+
 则原约束问题转变为二次规划问题的一般形式：
+
 $$min \ F(S)=\frac{1}{2}S^THS \\
 s.t.\ AS\leq B \\
 A_{eq}S=B_{eq}$$

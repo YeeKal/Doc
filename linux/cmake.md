@@ -7,8 +7,9 @@ date: 2018-05-17
 
 ## ros include header from another package
 
-<pag-a> will include "b_include.h" file in <pag-b>:  
-```xml
+will include "b_include.h" file in :  
+
+```python
 catkin_package(
   CATKIN_DEPENDS
     roscpp
@@ -20,7 +21,7 @@ catkin_package(
     include
 )
 
-## Install project namespaced headers
+// Install project namespaced headers
 install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
   FILES_MATCHING PATTERN "*.h"
