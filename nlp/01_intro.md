@@ -7,6 +7,7 @@
 
 - wordvector
 - bert
+- xlnet
 - tsne
     - [blog-How to Use t-SNE Effectively](https://distill.pub/2016/misread-tsne/)
 - nlp reference
