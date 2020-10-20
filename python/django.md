@@ -359,7 +359,7 @@ def __unicode__(self):		#可视化
 ```python
 python manage.py createsuperuser
 username:yee
-password:125forever
+password:
 ```
 
 

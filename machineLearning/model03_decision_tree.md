@@ -1,9 +1,10 @@
 ---
- title: 决策树
- categories: ml
- tags: ml
- date: 2020-10-17
+title: 决策树
+categories: ml
+tags: ml
+date: 2020-10-17
 ---
+
 ## intro
 
 决策树(decision tree): 根据各个特征构建的二叉树(多叉树)，并将该树用于分类或回归任务。
