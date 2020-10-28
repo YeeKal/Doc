@@ -42,3 +42,6 @@ AI (Artificial Intelligence): IJCAI, AAAI
 ## blog
 
 - [知乎专栏-推荐系统与NLP](https://www.zhihu.com/column/c_1068100809786458112)
+- [推荐系统/计算广告/机器学习/CTR预估资料汇总](https://awesomeopensource.com/project/mJackie/RecSys)
+- [知乎专栏 - 深度推荐系统](https://www.zhihu.com/column/deep-recsys)
+- [知乎专栏 - 深度学习强化学习推荐算法](https://www.zhihu.com/column/c_1122565407583678464)

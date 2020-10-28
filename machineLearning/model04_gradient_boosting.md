@@ -70,10 +70,14 @@ $$F_{0}(x)=\underset{c}{\arg \min } \sum_{i=1}^{N} L\left(y_{i}, c\right)$$
 ## ref
 
 - blog
+    - [梯度提升树(GBDT)原理小结](https://www.cnblogs.com/pinard/p/6140514.html)
     - [梯度提升（Gradient Boosting）算法](https://mp.weixin.qq.com/s/Ods1PHhYyjkRA8bS16OfCg)
     - [zhihu-深入理解GBDT回归算法](https://zhuanlan.zhihu.com/p/81016622)
     - [zhihu-深入理解提升树（Boosting tree）算法](https://zhuanlan.zhihu.com/p/84139957)
     - [zhihu-XGBoost: 从0开始理解](https://zhuanlan.zhihu.com/p/88955721)
     - [Gradient Boosting Machines](https://uc-r.github.io/gbm_regression)
+    - [A Step by Step Gradient Boosting Decision Tree Example](https://sefiks.com/2018/10/04/a-step-by-step-gradient-boosting-decision-tree-example/)
 - open code
     - [WeChat-zhihu-csdnblog-code](https://github.com/Microstrong0305/WeChat-zhihu-csdnblog-code/tree/master/Ensemble%20Learning/GBDT_Regression)
+    - [gbdt-c++](https://github.com/qiyiping/gbdt)
+    - [A-Simple-GBDT-Implementation-for-Regression](https://github.com/chenlianMT/A-Simple-GBDT-Implementation-for-Regression/tree/master/gbdt)
