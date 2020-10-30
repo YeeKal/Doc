@@ -1,5 +1,14 @@
 ## 2013 dssm microsoft
 
+![2013_dssm](imgs/2013_dssm.png)
+
+网络结构： 
+
+- input: query/doc 都统一转化为单词，再把单词转化为n-gram，两者网络结构相同，只是训练的权重不同
+- 中间处理：
+    - term vector: 500k, 单词树；bang，表示单词的one-hot编码
+    - word hashing: 
+
 ## 2016 item2vec
 
 - [Embedding在推荐算法中的应用总结](https://zhuanlan.zhihu.com/p/78144408)
@@ -15,6 +24,10 @@
 
 - [github-dlrm](https://github.com/facebookresearch/dlrm)
 
+## embedding
+
+- ig2vec :instagram, instagrams explore recommender system
+- [Recommender Systems: The Most Valuable Application of Machine Learning](https://towardsdatascience.com/recommender-systems-the-most-valuable-application-of-machine-learning-part-1-f96ecbc4b7f5)
 
 ## ref
 
@@ -29,6 +42,7 @@
     - [dssm](https://github.com/InsaneLife/dssm)
     - [DSSM-Pytorch](https://github.com/ChrisCN97/DSSM-Pytorch)
     - [dssm](https://github.com/baharefatemi/DSSM)
+    - [ant-learn-recsys](https://github.com/peiss/ant-learn-recsys/tree/08f8df7d158706716e9323424f8085d01b047366)
 4. open project
     - [DeepCTR](https://github.com/shenweichen/DeepCTR)
     - [DeepMatch](https://github.com/shenweichen/DeepMatch)
