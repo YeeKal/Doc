@@ -1,3 +1,13 @@
+---
+ title: 推荐系统中的embedding方法/语义匹配
+ categories: recsys
+ tags: recsys
+ date: 2020-10-25
+---
+
+- 预测 点击/打分
+- 正负样本， 打分作为惩罚/奖励因子
+
 ## 2013 dssm microsoft
 
 ![2013_dssm](imgs/2013_dssm.png)
@@ -16,7 +26,7 @@
     - 通过所有的doc计算softmax，而只对正样本进行四然估计
         - 正样本$D^+$： 当前query被点击的doc
         - 负样本$D^-$： 当前query未被点击的doc，这里只随机取了4个来代替
-        - 样本集合$D=D^+ \cupD^-$：这里用部分来代表整体 
+        - 样本集合$D=D^+ \cup D^-$：这里用部分来代表整体 
 - 总结：
     - 优点：
         - 解决字典爆炸
@@ -30,10 +40,29 @@
 
 ## 2016 item2vec
 
-- [Embedding在推荐算法中的应用总结](https://zhuanlan.zhihu.com/p/78144408)
-- [DNN论文分享 - Item2vec](https://zhuanlan.zhihu.com/p/24339183?refer=deeplearning-surfing)
+Item2Vec: Neural Item Embedding for Collaborative Filtering
+
+原始优化目标：
+
+$$\frac{1}{K} \sum_{i=1}^{K} \sum_{-c \leq j \leq c, j \neq 0} \log p\left(w_{i+j} \mid w_{i}\right)\\
+p\left(w_{j} \mid w_{i}\right)=\frac{\exp \left(u_{i}^{T} v_{j}\right)}{\sum_{k \in I_{W}} \exp \left(u_{i}^{T} v_{k}^{T}\right)}$$
+
+借鉴了skip-gram中的负采样, 优化目标函数退化为:
+
+$$p\left(w_{j} \mid w_{i}\right)=\sigma\left(u_{i}^{T} v_{j}\right) \prod_{k=1}^{N} \sigma\left(-u_{i}^{T} v_{k}\right)\\
+\sigma(x)=1 / 1+\exp (-x)$$
+
+to overcome the imbalance between rare and frequent words the following subsampling procedure is proposed：
+
+$$p(\text {discard} \mid w)=1-\sqrt{\frac{\rho}{f(w)}}$$
+
+
+ref: 
+- [1] Mikolov T, Sutskever I, Chen K, Corrado GS, Dean J. Distributed representations of words and phrases and their compositionality. In Advances in neural information processing systems 2013 (pp. 3111-3119).
 
 ## 2016 youtube dnn
+
+Deep Neural Networks for YouTube Recommendations
 
 - 数据：
     - 特征选择： 把看过的视频作为用户的特征
@@ -56,6 +85,8 @@
 
 ## 2019 youtube 
 
+Sampling-Bias-Corrected Neural Modeling for Large Corpus Item Recommendations
+
 ![2019_two_tower](imgs/2019_two_tower.png)
 
 分别构建query和item端参数结构，通过内积进行embedding:
@@ -65,7 +96,7 @@ $$s(x, y)=\langle u(x, \theta), v(y, \theta)\rangle$$
 treated as multi-class classification, $r_i$ is the reward:
 
 $$\mathcal{P}(y \mid x ; \theta)=\frac{e^{s(x, y)}}{\sum_{j \in[M]} e^{s\left(x, y_{j}\right)}} \\
-L_{T}(\theta):=-\frac{1}{T} \sum_{i \in[T]} r_{i} \cdot \log \left(\mathcal{P}\left(y_{i} \mid x_{i} ; \theta\right)\right) $$
+L_{T}(\theta):=-\frac{1}{T} \sum_{i \in[T]} r_{i} \cdot \log \left(\mathcal{P}\left(y_{i} \mid x_{i} ; \theta\right)\right)$$
 
 负采样，选用部分来代表整体。从视频榴中选择的话，较热门的视频有更高的概率被作为负样本，所以引入log修正：
 
@@ -73,20 +104,16 @@ $$s^{c}\left(x_{i}, y_{j}\right)=s\left(x_{i}, y_{j}\right)-\log \left(p_{j}\rig
 
 With the correction, we have
 
-$$
-\mathcal{P}_{B}^{c}\left(y_{i} \mid x_{i} ; \theta\right)=\frac{e^{s^{c}\left(x_{i}, y_{i}\right)}}{e^{s^{c}\left(x_{i}, y_{i}\right)+\sum_{j \in[B], j \neq i} e^{s^{c}\left(x_{i}, y_{j}\right)}}}
-$$
+$$\mathcal{P}_{B}^{c}\left(y_{i} \mid x_{i} ; \theta\right)=\frac{e^{s^{c}\left(x_{i}, y_{i}\right)}}{e^{s^{c}\left(x_{i}, y_{i}\right)+\sum_{j \in[B], j \neq i} e^{s^{c}\left(x_{i}, y_{j}\right)}}}$$
 
 the batch loss function
 
-$$
-L_{B}(\theta):=-\frac{1}{B} \sum_{i \in[B]} r_{i} \cdot \log \left(\mathcal{P}_{B}^{c}\left(y_{i} \mid x_{i} ; \theta\right)\right)
-$$
+$$L_{B}(\theta):=-\frac{1}{B} \sum_{i \in[B]} r_{i} \cdot \log \left(\mathcal{P}_{B}^{c}\left(y_{i} \mid x_{i} ; \theta\right)\right)$$
+
 Running SGD with learning rate $\gamma$ yields the model parameter update as
 
-$$
-\theta \leftarrow \theta-\gamma \cdot \nabla L_{B}(\theta)
-$$
+$$\theta \leftarrow \theta-\gamma \cdot \nabla L_{B}(\theta)$$
+$$\theta \leftarrow \theta-\gamma \cdot \nabla L_{B}(\theta)$$
 
 - perspectives of data
 - model architecture: nomination/retrival/candidate  rank
@@ -95,7 +122,27 @@ $$
 
 ## 2019 facebook dlrm
 
-- [github-dlrm](https://github.com/facebookresearch/dlrm)
+Deep Learning Recommendation Model for Personalization and Recommendation Systems
+
+![2019_facebook_dlrm](imgs/2019_facebook_dlrm.png)
+
+
+
+- model structure:
+    - embedding: 
+        - categorical feature -> embedding vector
+        - dense feature -> concat -> MLP generate the same length vector
+    - nn: MLP
+    - interactions: 所有特征向量点积，跟原始向量拼接
+    - nn: FC layer
+- improvement: parallelism
+- 与dcn对比
+
+MLP: multilayer perceptron
+
+FC: fully connected
+
+open code: [github-dlrm](https://github.com/facebookresearch/dlrm)
 
 ## 离散特征工程
 
@@ -126,10 +173,5 @@ $$
     - [dssm](https://github.com/InsaneLife/dssm)
     - [DSSM-Pytorch](https://github.com/ChrisCN97/DSSM-Pytorch)
     - [dssm](https://github.com/baharefatemi/DSSM)
-    - [ant-learn-recsys](https://github.com/peiss/ant-learn-recsys/tree/08f8df7d158706716e9323424f8085d01b047366)
-4. open project
-    - [DeepCTR](https://github.com/shenweichen/DeepCTR)
-    - [DeepMatch](https://github.com/shenweichen/DeepMatch)
-    - [MatchZoo](https://github.com/NTMC-Community/MatchZoo)
-    - [dlrm](https://github.com/facebookresearch/dlrm)
+    - [two_tower_recommendation_system](https://github.com/cdj0311/two_tower_recommendation_system)
 
