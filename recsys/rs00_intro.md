@@ -1,7 +1,7 @@
 ---
- title: fm模型
- categories: rs
- tags: rs
+ title: 推荐系统简介
+ categories: recsys
+ tags: recsys
  date: 2020-10-11
 ---
 

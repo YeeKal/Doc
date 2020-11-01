@@ -77,6 +77,7 @@ Django版本众多，兼容性差。指定版本安装	**`pip install django==1.
 python manage.py runserver  # 开启服务器
 python manage.py runserver 8001 #使用其它端口，ctrl+C退出
 python manage.py runserver 0.0.0.0:8000
+python manage.py runserver 0.0.0.0:80
 #监听机器上所有ip 8000端口，访问时用电脑的ip代替 127.0.0.1
 ctrl+c //终止
 ```

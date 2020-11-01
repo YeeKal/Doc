@@ -34,6 +34,7 @@ password: ml2017
 - [Machine-Learning-with-Python](https://github.com/susanli2016/Machine-Learning-with-Python)：大量实战脚本
 - [PyTorch实现，GitHub 4000星：这是微软开源的计算机视觉库机器之心](https://zhuanlan.zhihu.com/p/193092679)
 - [Machine Learning Crash Course by google](https://developers.google.com/machine-learning/crash-course/embeddings/obtaining-embeddings)
+- [Downloadable: Cheat Sheets for AI, Neural Networks, Machine Learning, Deep Learning & Data Science PDF](https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-science-pdf-f22dc900d2d7)
 
 ## datasources
 

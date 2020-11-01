@@ -1,7 +1,7 @@
 ---
  title: gbdt
- categories: rs
- tags: rs
+ categories: recsys
+ tags: recsys
  date: 2020-10-17
 ---
 
