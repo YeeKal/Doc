@@ -5,6 +5,15 @@
  date: 2020-10-31
 ---
 
+## 阿里巴巴-淘宝
+
+- [阿里云开发者社区-深度语义模型以及在淘宝搜索中的应用](https://developer.aliyun.com/article/422338)
+
+- [搜索与推荐技术公开课](https://developer.aliyun.com/article/776606?spm=a2c6h.12873581.0.dArticle776606.46661cc6jM1eOj)
+## 百度
+
+- [百度NLP | 神经网络语义匹配技术](https://www.jiqizhixin.com/articles/2017-06-15-5)
+
 ## twiter
 
 - [twitter posts](https://blog.twitter.com/engineering/en_us.html)

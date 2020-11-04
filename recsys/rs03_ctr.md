@@ -14,10 +14,15 @@
 ## ref
 
 1. blog:
+    - [CTR预估模型：DeepFM/Deep&Cross/xDeepFM/AutoInt代码实战与讲解](https://zhuanlan.zhihu.com/p/109933924)
+    - [CTR预估模型发展过程与关系图谱](https://zhuanlan.zhihu.com/p/104307718)
+    - [从FM推演各深度CTR预估模型(附代码)](https://blog.csdn.net/longxinchen_ml/article/details/81031736)
     - [推荐系统CTR实战——Deep & Cross](https://fuhailin.github.io/Deep-and-Cross-Network/)
     - [谷歌、阿里们的杀手锏：三大领域，十大深度学习CTR模型演化图谱](https://cloud.tencent.com/developer/article/1455807)
 2. personal code:
     - [Deep-Cross-Net](https://github.com/FitzFan/Deep-Cross-Net)
+    - [github-CTR模型代码实战](https://github.com/NELSONZHAO/zhihu/tree/master/ctr_models)
+    - [CTR Prediction 论文、个人学习笔记分享](https://github.com/duboya/CTR-Prediction)
 3. open project
 
 

@@ -7,6 +7,9 @@
 
 - 预测 点击/打分
 - 正负样本， 打分作为惩罚/奖励因子
+- dssm/wide&deep/wide&cross
+- graph embedding
+- 文本匹配/语义匹配
 
 ## 2013 dssm microsoft
 
@@ -36,6 +39,10 @@
         - wordhashing出现hash冲突
         - 词袋，损失了语序，后期变种CNN-DSSM， LSTM-DSSM
         - 曝光量会影响用户的点击，全部用点击作为政府样本容易出现噪声
+    - 变种：
+        - lstm-dssm
+        - cnn-dssm: A latent semantic model with convolutional-pooling structure for information retrieval
+        - mv-dssm: multi-view dssm, A multi-view deep learning approach for cross domain user modeling in recommendation systems
 
 
 ## 2016 item2vec
@@ -163,12 +170,14 @@ open code: [github-dlrm](https://github.com/facebookresearch/dlrm)
 ## ref
 
 1. blog
+    - [论文｜从DSSM语义匹配到Google的双塔深度模型召回和广告场景中的双塔模型思考](https://zhuanlan.zhihu.com/p/166469248)
     - [实践DSSM召回模型](https://zhuanlan.zhihu.com/p/136253355)
     - [推荐系统中不得不说的DSSM双塔模型](https://zhuanlan.zhihu.com/p/139541282)
     - [DSSM|基于Transformer的语义相似度计算模型DSSM及代码开源](https://blog.csdn.net/qq_28385535/article/details/92803375)
     - [推荐召回算法之深度召回模型串讲](https://zhuanlan.zhihu.com/p/63343894)
 2. paper
     - [2019-facebook-dlrm](Deep Learning Recommendation Model for Personalization and Recommendation Systems)
+    - [airbnb]()
 3. personal code
     - [dssm](https://github.com/InsaneLife/dssm)
     - [DSSM-Pytorch](https://github.com/ChrisCN97/DSSM-Pytorch)
