@@ -11,6 +11,23 @@
 - AiBox
 - DCN: Deep Cross Net, 2019 google
 
+## 2016 wide &deep
+
+![2016_deep_wide](imgs/2016_deep_wide.png)
+
+two parts:
+- wide component: a linear model, $y=\mathbf{w}^{T} \mathbf{x}+b$ 
+- deep component: feed-forward neural network, $a^{(l+1)}=f\left(W^{(l)} a^{(l)}+b^{(l)}\right)$
+
+Area Under Receiver Operator Characteristic Curve (AUC)
+
+## 2016 deepFM
+
+![2016_deepfm](imgs/2016_deepfm.png)
+
+replace linear model with fm model
+
+
 ## ref
 
 1. blog:

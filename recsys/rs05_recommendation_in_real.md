@@ -14,6 +14,10 @@
 
 - [百度NLP | 神经网络语义匹配技术](https://www.jiqizhixin.com/articles/2017-06-15-5)
 
+## 蘑菇街
+
+- [Emdedding向量技术在蘑菇街推荐场景的应用](https://mp.weixin.qq.com/s/tmv4UqFZImV6sUitnwuhBQ)
+
 ## twiter
 
 - [twitter posts](https://blog.twitter.com/engineering/en_us.html)

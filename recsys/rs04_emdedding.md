@@ -7,9 +7,16 @@
 
 - 预测 点击/打分
 - 正负样本， 打分作为惩罚/奖励因子
-- dssm/wide&deep/wide&cross
+- dssm/wide&deep/wide&cross/ ali mind
 - graph embedding
-- 文本匹配/语义匹配
+- 文本匹配/语义匹配/语义检索
+
+ref:
+
+- [Semantic Re-ranking](https://github.com/caiyinqiong/Semantic-Ranking-Models/blob/main/semantic%20reranking.md)
+- [召回，排序算法相关论文笔记](https://www.zhihu.com/column/c_1098542257317171200)
+- [语义索引（向量检索）的几类经典方法](https://zhuanlan.zhihu.com/p/161467314)
+- [《搜索与推荐中的深度学习匹配》之搜索篇](https://zhuanlan.zhihu.com/p/38296950)
 
 ## 2013 dssm microsoft
 
@@ -127,6 +134,10 @@ $$\theta \leftarrow \theta-\gamma \cdot \nabla L_{B}(\theta)$$
 - training
 - serving
 
+## 2019-baidu-mobius
+
+mobius
+
 ## 2019 facebook dlrm
 
 Deep Learning Recommendation Model for Personalization and Recommendation Systems
@@ -150,6 +161,51 @@ MLP: multilayer perceptron
 FC: fully connected
 
 open code: [github-dlrm](https://github.com/facebookresearch/dlrm)
+
+## 2020-JD
+
+- [JD 个性化语义召回](https://zhuanlan.zhihu.com/p/149058532)
+
+- attention,multi-head 向量而不是单一向量
+- 样本构建：用户点击的噪声
+
+## 2020-facebook-embedding based retrieval in facebook search
+
+ebr: embedding-based retrieval, 语义检索/向量召回
+
+unified embedding: 对各种特征的embedding，用以区分text embedding
+
+0. triplet loss:
+
+$$L=\sum_{i=1}^{N} \max \left(0, D\left(q^{(i)}, d_{+}^{(i)}\right)-D\left(q^{(i)}, d_{-}^{(i)}\right)+m\right)$$
+
+1. 正负样本的选择
+    - 点击作为正样本，随机从候选集中选择负样本
+    - 负样本： 1. 随机选取; 2. 同一session中只曝光未点击的作为负样本。只用第二种效果会比较差，具体实践需要结合。
+    - 正样本： 1. 选择点击; 2. 选择曝光作为正样本。实践结果发现差不多。paper中采用了点击。有笔者认为应该选择曝光，因为召回模型的结果本来就是用来曝光的。但本人认为在当前排序不好的情况下，选择点击是最好的正样本。
+2. 特征工程
+    - 文本特征: character n-gram + word n-gram + hash 降维
+    - 地域特征: city/region/country/language
+    - 社交特征: trained a seperate embedding model based on the Facebook social graph
+3. later-stage optimization: 由于模型依据的是历史结果，新召回的item难以在精派的过程中得到重视
+    - embedding as ranking feature:
+    - training data feedback loop
+4. hard mining
+    - hard negative mining: 观察到在召回的结果中目标结果与其他结果的得分并没有特别的优势。原因在于随机选取的负样本与正样本差别本就太大导致很容易被区分，不能在训练中获得较好的优化方向。解决办法是可以选择与正样本较为接近的样本作为负样本，增加区分性。
+        - onLine hard negative mining：在每一个min-batch的训练批次中选择其他query对应的正样本作为本次训练集中的负样本
+        - offline hard negative mining: 
+            - hard selection strategy: 迭代召回，每次选则排序在后面的（101-500）作为负样本
+            - retrival task optimization: 
+                - mixed easy/hard training: easy-hard=100-1
+                - transfer learning from hard model to easy:
+    - hard positive mining: 从session日志中挖掘没有被点击的正样本
+5. ref:
+    - [zhihu-Embedding-based Retrieval in Facebook Search](https://zhuanlan.zhihu.com/p/152570715)
+    - [负样本为王：评Facebook的向量化召回算法](https://zhuanlan.zhihu.com/p/165064102)
+
+
+
+
 
 ## 离散特征工程
 
