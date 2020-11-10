@@ -1,22 +1,9 @@
 ---
- title: 推荐系统中的embedding方法/语义匹配
+ title: 推荐系统中的向量检索01-双塔模型
  categories: recsys
  tags: recsys
- date: 2020-10-25
+ date: 2020-11-10
 ---
-
-- 预测 点击/打分
-- 正负样本， 打分作为惩罚/奖励因子
-- dssm/wide&deep/wide&cross/ ali mind
-- graph embedding
-- 文本匹配/语义匹配/语义检索
-
-ref:
-
-- [Semantic Re-ranking](https://github.com/caiyinqiong/Semantic-Ranking-Models/blob/main/semantic%20reranking.md)
-- [召回，排序算法相关论文笔记](https://www.zhihu.com/column/c_1098542257317171200)
-- [语义索引（向量检索）的几类经典方法](https://zhuanlan.zhihu.com/p/161467314)
-- [《搜索与推荐中的深度学习匹配》之搜索篇](https://zhuanlan.zhihu.com/p/38296950)
 
 ## 2013 dssm microsoft
 
@@ -136,6 +123,11 @@ $$\theta \leftarrow \theta-\gamma \cdot \nabla L_{B}(\theta)$$
 
 ## 2019-baidu-mobius
 
+ref:
+
+- [浅谈百度新一代query-ad 推荐引擎如何提升广告收益率]
+- [MOBIUS 百度凤巢广告系统最新论文]
+
 mobius
 
 ## 2019 facebook dlrm
@@ -175,6 +167,8 @@ ebr: embedding-based retrieval, 语义检索/向量召回
 
 unified embedding: 对各种特征的embedding，用以区分text embedding
 
+![2020_facebook_embedding](imgs/2020_facebook_embedding.png)
+
 0. triplet loss:
 
 $$L=\sum_{i=1}^{N} \max \left(0, D\left(q^{(i)}, d_{+}^{(i)}\right)-D\left(q^{(i)}, d_{-}^{(i)}\right)+m\right)$$
@@ -204,25 +198,6 @@ $$L=\sum_{i=1}^{N} \max \left(0, D\left(q^{(i)}, d_{+}^{(i)}\right)-D\left(q^{(i
     - [负样本为王：评Facebook的向量化召回算法](https://zhuanlan.zhihu.com/p/165064102)
 
 
-
-
-
-## 离散特征工程
-
-- labelEncoding: 离散特征编程数字
-- OneHotEncoding
-- HashEncoding
-    - hash trick
-    - hash 冲突
-- embedding
-    - 多值离散特征: 相加，平均
-    - 多个特征： 拼接
-
-## embedding
-
-- ig2vec :instagram, instagrams explore recommender system
-- [Recommender Systems: The Most Valuable Application of Machine Learning](https://towardsdatascience.com/recommender-systems-the-most-valuable-application-of-machine-learning-part-1-f96ecbc4b7f5)
-
 ## ref
 
 1. blog
@@ -231,8 +206,10 @@ $$L=\sum_{i=1}^{N} \max \left(0, D\left(q^{(i)}, d_{+}^{(i)}\right)-D\left(q^{(i
     - [推荐系统中不得不说的DSSM双塔模型](https://zhuanlan.zhihu.com/p/139541282)
     - [DSSM|基于Transformer的语义相似度计算模型DSSM及代码开源](https://blog.csdn.net/qq_28385535/article/details/92803375)
     - [推荐召回算法之深度召回模型串讲](https://zhuanlan.zhihu.com/p/63343894)
+    - [Recommender Systems: The Most Valuable Application of Machine Learning](https://towardsdatascience.com/recommender-systems-the-most-valuable-application-of-machine-learning-part-1-f96ecbc4b7f5)
 2. paper
     - [2019-facebook-dlrm](Deep Learning Recommendation Model for Personalization and Recommendation Systems)
+    - ig2vec :instagram, instagrams explore recommender system
     - [airbnb]()
 3. personal code
     - [dssm](https://github.com/InsaneLife/dssm)
