@@ -5,6 +5,9 @@
  date: 2020-11-10
 ---
 
+- 2013 dssm microsoft
+- 2016 item2vec
+
 ## 2013 dssm microsoft
 
 ![2013_dssm](imgs/2013_dssm.png)
@@ -33,7 +36,7 @@
         - wordhashing出现hash冲突
         - 词袋，损失了语序，后期变种CNN-DSSM， LSTM-DSSM
         - 曝光量会影响用户的点击，全部用点击作为政府样本容易出现噪声
-    - 变种：
+    - 变种：通过卷积或者rnn捕捉时序信息
         - lstm-dssm
         - cnn-dssm: A latent semantic model with convolutional-pooling structure for information retrieval
         - mv-dssm: multi-view dssm, A multi-view deep learning approach for cross domain user modeling in recommendation systems
@@ -153,6 +156,8 @@ MLP: multilayer perceptron
 FC: fully connected
 
 open code: [github-dlrm](https://github.com/facebookresearch/dlrm)
+
+## 2020-zhihu Beyond Lexical: A Semantic Retrieval Framework for Textual Search
 
 ## 2020-JD
 

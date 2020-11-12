@@ -11,6 +11,22 @@
 - AiBox
 - DCN: Deep Cross Net, 2019 google
 
+1. CF models:
+    - Based on Neural Collaborative Filtering (NCF) framework:
+        - NeuMF: Neural Matrix Factorization (He et al, WWW'17) 
+        - ConvNCF: Outer Product-based NCF (He et al, IJCAI'18) 
+    - Based on Translation framework:
+        - TransRec: Translation-based Recommendation (He et al, Recsys'17) 
+        - LRML: Latent Relational Metric Learning (Tay et al, WWW'18)
+2. Feature-based models:
+    - Based on Multi-Layer Perceptron:
+        - Wide\&Deep (Cheng et al, DLRS'16), 
+        - Deep Crossing (Shan et al, KDD'16) 
+    - Based on Factorization Machines (FM):
+        - Neural FM (He and Chua, SIGIR'17), 
+        - Attentional FM (Xiao et al, IJCAI'17), 
+        - DeepFM (Guo et al, IJCAl'17)
+
 ## 2016 wide &deep
 
 ![2016_deep_wide](imgs/2016_deep_wide.png)
