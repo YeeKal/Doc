@@ -476,6 +476,7 @@ extensions=[
 ```
 python manage.py createsuperuser
 python manage.py runserver 0.0.0.0:8234
+nohup python manage.py runserver 0.0.0.0:8234 1>/dev/null 2>1 &
 python manage.py makemigrations
 python manage.py migrate
 ```
