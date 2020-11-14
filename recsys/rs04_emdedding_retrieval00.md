@@ -1,5 +1,5 @@
 ---
-title: 推荐系统中的向量检索00-概述11
+title: 推荐系统中的向量检索00-概述
 categories: recsys
 tags: recsys
 date: 2020-10-25
