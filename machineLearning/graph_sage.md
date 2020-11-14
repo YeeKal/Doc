@@ -1,3 +1,9 @@
+---
+title: 图神经网络
+categories: ml
+tags: ml
+date: 2020-11-14
+---
 
 - [gnn](graph neural network)
 - graph embedding
@@ -13,6 +19,8 @@
 - blog
     - [图嵌入（Graph embedding）综述](https://zhuanlan.zhihu.com/p/62629465)
     - [gituhb-GNNPapers-清华大学整理图神经网络LIST](https://github.com/thunlp/GNNPapers)
+    - [从图(Graph)到图卷积(Graph Convolution)：漫谈图神经网络模型](https://www.cnblogs.com/SivilTaram/p/graph_neural_network_1.html)
+        - [github-imgs](https://github.com/SivilTaram/Graph-Neural-Network-Note/tree/master/images)
 - personal code
 - paper
     - [Graph Neural Networks: A Review of Methods and Applications](https://arxiv.org/pdf/1812.08434.pdf)

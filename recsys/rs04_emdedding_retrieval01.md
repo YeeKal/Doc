@@ -5,8 +5,11 @@
  date: 2020-11-10
 ---
 
-- 2013 dssm microsoft
+- [2013 dssm microsoft](2013 dssm microsoft)
 - 2016 item2vec
+- alibaba mind
+
+## 2020 Mixed Negative Sampling for Learning Two-tower Neural Networks in Recommendations
 
 ## 2013 dssm microsoft
 
@@ -46,6 +49,8 @@
 
 Item2Vec: Neural Item Embedding for Collaborative Filtering
 
+从文本的embedding到item的embedding
+
 原始优化目标：
 
 $$\frac{1}{K} \sum_{i=1}^{K} \sum_{-c \leq j \leq c, j \neq 0} \log p\left(w_{i+j} \mid w_{i}\right)\\
@@ -83,9 +88,6 @@ Deep Neural Networks for YouTube Recommendations
 
 ![2016-youtube-dnn1](imgs/2016-youtube-dnn1.png)
 ![2016-youtube-dnn2](imgs/2016-youtube-dnn2.png)
-
-
-## 2018 alibaba tdm
 
 ## 2019 youtube 
 

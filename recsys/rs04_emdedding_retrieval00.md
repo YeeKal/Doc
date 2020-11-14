@@ -76,8 +76,13 @@ $$s=u^{T} f\left(q^{T} \mathbf{M}^{[1: r]} d+V\begin{bmatrix} q \\ d \end{bmatri
 
 ## 图模型
 
-- dssm/wide&deep/wide&cross/ ali mind
-- graph embedding
+- random walk
+    - deepwalk(2014)
+    - node2vec(2016)
+    - eges(2018)
+- line(Lareg-scale information network embedding MSRA 2015)
+- SDNE (Structural deep network embedding)
+- graphsage(2017)
 
 
 ## 关于匹配

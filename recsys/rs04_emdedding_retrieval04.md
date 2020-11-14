@@ -5,6 +5,10 @@
  date: 2020-10-31
 ---
 
+## 知乎
+
+- 2020 [Beyond Lexical: A Semantic Retrieval Framework for Textual SearchEngine]()
+
 ## 阿里巴巴-淘宝
 
 - [阿里云开发者社区-深度语义模型以及在淘宝搜索中的应用](https://developer.aliyun.com/article/422338)
@@ -13,6 +17,10 @@
 ## 百度
 
 - [百度NLP | 神经网络语义匹配技术](https://www.jiqizhixin.com/articles/2017-06-15-5)
+
+## 美图
+
+- [深度学习技术在美图个性化推荐的应用实践](https://mp.weixin.qq.com/s/b8DkQWZbUc5-jzWKBd8iUA)
 
 ## 蘑菇街
 

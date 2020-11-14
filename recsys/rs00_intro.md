@@ -50,6 +50,7 @@ AI (Artificial Intelligence): IJCAI, AAAI
 - [知乎专栏 - 王喆的机器学习笔记](https://zhuanlan.zhihu.com/wangzhenotes)
 - [知乎专栏 - 推荐算法学习笔记](https://www.zhihu.com/column/c_1223287189188190208)
 - [知乎专栏 - 推荐系统打怪升级之路](https://www.zhihu.com/column/c_1112294571937193984)
+- [知乎专栏 - 推荐系统实验室](https://www.zhihu.com/column/wangziji)
 - [推荐系统理论及实战](https://www.jianshu.com/nb/21403842)
 
 
