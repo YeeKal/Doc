@@ -1,8 +1,8 @@
 ---
- title: 推荐系统中的向量检索04-大厂实践
- categories: recsys
- tags: recsys
- date: 2020-10-31
+title: 推荐系统中的向量检索04-大厂实践
+categories: recsys
+tags: recsys
+date: 2020-10-31
 ---
 
 ## 知乎

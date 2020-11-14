@@ -1,3 +1,10 @@
+---
+title: 强化学习 - 初识
+categories: rl
+tags: rl
+date: 2019-05-05
+---
+
 ## notes
 
 - [Qlearning](q_learning.md)

@@ -1,3 +1,10 @@
+---
+title: 强化学习 - Q learning
+categories: rl
+tags: rl
+date: 2019-05-05
+---
+
 ## Q learning algorithm:
 
 1. initialize $Q$-values($Q(s,a)$) arbitrarity for all state-action pairs.
