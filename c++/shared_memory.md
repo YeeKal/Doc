@@ -1,7 +1,7 @@
 ---
 title: shared memory
-categories: linux
-tags: linux
+categories: c++
+tags: c++
 date: 2019-05-20
 ---
 ## In C 

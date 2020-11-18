@@ -9,7 +9,7 @@
 - 2016 item2vec
 - alibaba mind
 
-## 2020 Mixed Negative Sampling for Learning Two-tower Neural Networks in Recommendations
+- 字节deep retrieval
 
 ## 2013 dssm microsoft
 
@@ -208,6 +208,7 @@ $$L=\sum_{i=1}^{N} \max \left(0, D\left(q^{(i)}, d_{+}^{(i)}\right)-D\left(q^{(i
 ## ref
 
 1. blog
+    - [字节Deep Retrieval笔记](https://zhuanlan.zhihu.com/p/260453374)
     - [论文｜从DSSM语义匹配到Google的双塔深度模型召回和广告场景中的双塔模型思考](https://zhuanlan.zhihu.com/p/166469248)
     - [实践DSSM召回模型](https://zhuanlan.zhihu.com/p/136253355)
     - [推荐系统中不得不说的DSSM双塔模型](https://zhuanlan.zhihu.com/p/139541282)

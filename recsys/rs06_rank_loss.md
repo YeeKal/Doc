@@ -1,10 +1,18 @@
 ---
-title: triplet loss
+title: 深度推荐系统中的损失函数
 categories: recsys
 tags: recsys
 date: 2020-11-10
 ---
 
+## negative Sampling
+
+1. 只有一层Embedding层，即embedding可以通过label取出来，则直接在线选择
+2. 把负样本的label作为输入
+3. 把batch中其他样本作为负样本
+
+- [tensorflow implementation](tensorflow_recommenders/tasks/retrieval.py)
+ 
 ## triplet less
 
 $$L=\sum_{i=1}^{N} \max \left(0, D\left(q^{(i)}, d_{+}^{(i)}\right)-D\left(q^{(i)}, d_{-}^{(i)}\right)+m\right)$$
@@ -19,4 +27,9 @@ $$L=\sum_{i=1}^{N} \max \left(0, D\left(q^{(i)}, d_{+}^{(i)}\right)-D\left(q^{(i
 
     $$d(q,d_+) < d(q,d_-) < d(q,d_+)+m$$
 
-## 训练
+#### 训练
+
+## 2020 Mixed Negative Sampling for Learning Two-tower Neural Networks in Recommendations
+
+
+## ref

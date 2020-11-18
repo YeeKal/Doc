@@ -112,3 +112,7 @@ ufw allow 9000
 # check status
 ufw status
 ```
+
+19 axel多线程下载
+
+- axel -n 8 [url]

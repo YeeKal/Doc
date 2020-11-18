@@ -75,15 +75,24 @@ $$J_{quant}=\frac{1}{N} \sum_{i=1}^{N} \mathbb{I}_{\hat{y}_{i} \geq y_{i}}(1-r)\
 
 通常的回归算法是拟合目标值的期望或者中位数，而分位数回归可以通过给定不同的分位点，拟合目标值的不同分位数。当$r=0.5$时，分位数损失退化为 MAE 损失，从这里可以看出 MAE 损失实际上是分位数损失的一个特例 — 中位数回归.
 
-## Cross Entropy
+## Cross Entropy(交叉熵)
 
-#### 二分类
+$$L=-\sum_{i} y_{i} \log \left(p_{i}\right)$$
+
+
+#### binary classification(二分类)
 
 在二分类中我们通常使用 Sigmoid 函数将模型的输出压缩到 (0, 1) 区间内$\hat{y}_i\in (0,1)$ ，用来代表给定输入$x_i$后模型判断为正类的概率。在该类问题中通过最大似然估计得到交叉熵函数为：
 $$N L L(x, y)=J_{C E}=-\sum_{i=1}^{N} y_{i} \log \left(\hat{y}_{i}\right)+\left(1-y_{i}\right) \log \left(1-\hat{y}_{i}\right)$$
 
 ![binary-cross-entropy](imgs/binary_cross_entropy.jpg)
 从图中可以看出越接近目标值损失越小。
+
+别名： Logistic Loss/Multinomial Logistic Loss
+
+- Caffe: Multinomial Logistic Loss Layer. Is limited to multi-class classification (does not support multiple labels).
+- Pytorch: BCELoss. Is limited to binary classification (between two classes).
+- TensorFlow: log_loss.
 
 #### 多分类
 
@@ -98,9 +107,23 @@ $$N L L(x, y)=J_{C E}=-\sum_{i=1}^{N} \sum_{k=1}^{K} y_{i}^{k} \log \left(\hat{y
 由于$y_i$是一个 one-hot 向量，除了目标类为 1 之外其他类别上的输出都为 0，因此上式也可以写为:
 $$J_{C E}=-\sum_{i=1}^{N} y_{i}^{c_{i}} \log (y_{i}^{\hat{\imath}_{i}})$$
 
-通常这个应用于多分类的交叉熵损失函数也被称为 Softmax Loss 或者 Categorical Cross Entropy Loss.
 
-相对熵，也叫KL(Kullback–Leibler Divergence)散度，给定分布p，q，则两者的散度公式：
+
+在多分类任务中，由于标签一般是one-hot向量，假设标签值为c，则简化为：
+$$L=-\log \left(p_{c}\right)=-log(\frac{e^{p_c}}{\sum e^{p_i}})$$
+
+$$\frac{\partial}{\partial p_c}(-log(\frac{e^{p_c}}{\sum e^{p_i}}))=\frac{e^{p_c}}{\sum e^{p_i}}-1 \\
+\frac{\partial}{\partial p_j}(-log(\frac{e^{p_c}}{\sum e^{p_i}}))=\frac{e^{p_j}}{\sum e^{p_i}}$$
+
+别名： Categorical Cross Entropy Loss.
+
+- Caffe: SoftmaxWithLoss Layer. Is limited to multi-class classification.
+- Pytorch: CrossEntropyLoss. Is limited to multi-class classification.
+- TensorFlow: softmax_cross_entropy. Is limited to multi-class classification.
+
+#### 相对熵
+
+也叫KL(Kullback–Leibler Divergence)散度，给定分布p，q，则两者的散度公式：
 $$K L(p, q)=\sum_{k=1}^{K} p \log (p)-\sum_{k=1}^{K} p \log (q)$$
 该公式衡量了两个分布之间的差异性，若p=q则散度为0.在分类问题中我们的目的是要学习到真实的分布，因此要最小化真实值和预测值分布的散度，而在散度公式中第一项完全由真实值分布确定，故优化目标函数变为$p\log{q}$，这与通过最大似然估计得到的交叉熵公式一致。
 
@@ -137,4 +160,5 @@ $$J_{h i n g e}=\sum_{i=1}^{N} \max \left(0,1-\operatorname{sgn}\left(y_{i}\righ
 
 - [机器学习常用损失函数小结](https://zhuanlan.zhihu.com/p/77686118)
 - [5 Regression Loss Functions All Machine Learners Should Know](https://heartbeat.fritz.ai/5-regression-loss-functions-all-machine-learners-should-know-4fb140e9d4b0)
+- [Understanding Categorical Cross-Entropy Loss, Binary Cross-Entropy Loss, Softmax Loss, Logistic Loss, Focal Loss and all those confusing names](https://gombru.github.io/2018/05/23/cross_entropy_loss/)
 
