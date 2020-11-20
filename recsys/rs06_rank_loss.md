@@ -33,3 +33,5 @@ $$L=\sum_{i=1}^{N} \max \left(0, D\left(q^{(i)}, d_{+}^{(i)}\right)-D\left(q^{(i
 
 
 ## ref
+
+- [Retrieval with Deep Learning: A Ranking loss Survey Part 1](https://medium.com/@ahmdtaha/retrieval-with-deep-learning-a-ranking-loss-survey-part-1-8e88a6f8e091)
