@@ -29,6 +29,8 @@ $$L=\sum_{i=1}^{N} \max \left(0, D\left(q^{(i)}, d_{+}^{(i)}\right)-D\left(q^{(i
 
 ![triplets1](imgs/triplets1.png)
 
+在人脸识别领域，anchor和负样本是同一种事物，都是人脸;而在搜索推荐领域，anchor一般为用户，政府样本为物品。这样在构造数据集的方法上略有不同。
+
 实现的多种方式：
 
 - online: 在同一个batch中在线计算选择正负样本
@@ -71,5 +73,7 @@ online:
 - blog
     - [Triplet Loss and Online Triplet Mining in TensorFlow](https://omoindrot.github.io/triplet-loss)
     - [Retrieval with Deep Learning: A Ranking loss Survey Part 1](https://medium.com/@ahmdtaha/retrieval-with-deep-learning-a-ranking-loss-survey-part-1-8e88a6f8e091)
+    - [三元组损失与tensorflow在线三元组挖掘]
 - code
     -  [Triplet loss in TensorFlow](https://github.com/omoindrot/tensorflow-triplet-loss)
+
