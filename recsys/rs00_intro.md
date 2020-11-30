@@ -53,6 +53,7 @@ AI (Artificial Intelligence): IJCAI, AAAI
 - [知乎专栏 - 推荐系统实验室](https://www.zhihu.com/column/wangziji)
 - [推荐系统理论及实战](https://www.jianshu.com/nb/21403842)
 - [Recommendation System Series Part 2: The 10 Categories of Deep Recommendation Systems That Academic Researchers Should Pay Attention To](https://towardsdatascience.com/recommendation-system-series-part-2-the-10-categories-of-deep-recommendation-systems-that-189d60287b58)
+- [readingList](https://github.com/DeepGraphLearning/RecommenderSystems/blob/master/readingList.md)
 
 
 ## personal code

@@ -31,3 +31,4 @@ date: 2020-11-14
     - [Graph Learning Approaches to Rec Systems: A Review]()
 - project
     - [graphsage](http://snap.stanford.edu/graphsage/)
+    - [graphvite](https://github.com/DeepGraphLearning/graphvite)
