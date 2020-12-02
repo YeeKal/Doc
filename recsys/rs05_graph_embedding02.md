@@ -2,7 +2,7 @@
 title: 图神经网络01 - 图嵌入历程 
 categories: ml
 tags: ml
-date: 2020-11-14
+date: 2020-11-20
 ---
 
 ## index
