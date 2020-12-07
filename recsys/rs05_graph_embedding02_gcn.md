@@ -1,5 +1,5 @@
 ---
-title: 图神经网络01 - 图卷积神经网络
+title: 图神经网络02 - 图卷积神经网络
 categories: ml
 tags: ml
 date: 2020-12-02
@@ -39,7 +39,7 @@ $$L=D-A$$
 $$\begin{aligned}\Delta h &=L\cdot H \\
 &=\begin{bmatrix}\sum_{H^{(k)}\in nei(H^{(1)})} (H^{(1)}-H^{(k)}) \\ \sum_{H^{(k)}\in nei(H^{(2)})} (H^{(2)}-H^{(k)})\\ ... \end{bmatrix} \end{aligned}$$
 
-如果如上式展开矩阵，则可以发现该矩阵表示了当前状态与各个邻接点之间的差值。这一差值可以标记为状态更新时的增量。则这一增量表达式表示**状态之间的传递强度正比于状态的差异**，这种情况类似于物理中的热传导，也在一定程度上表示了图状态的传递本质([Johnny Richards-如何理解 Graph Convolutional Network（GCN）？](https://www.zhihu.com/question/54504471))。矩阵中把邻接点的信息纳入进来进行计算，这在GraphSage的aggregator函数中也有体现。
+如果如上式展开矩阵，则可以发现该矩阵表示了当前状态与各个邻接点之间的差值。这一差值可以标记为状态更新时的增量。则这一增量表达式表示**状态之间的传递强度正比于状态的差异(相邻节点具有比不相邻节点更密切的关系)**，这种情况类似于物理中的热传导，也在一定程度上表示了图状态的传递本质([Johnny Richards-如何理解 Graph Convolutional Network（GCN）？](https://www.zhihu.com/question/54504471))。矩阵中把邻接点的信息纳入进来进行计算，这在GraphSage的aggregator函数中也有体现。
 
 常用的拉普拉斯矩阵有三种：
 
@@ -152,12 +152,49 @@ $$\begin{aligned}(f*g)&=\mathcal{F}^{-1}[\hat{h}\cdot \hat{f}]  \\
 &=U\left(\left(U^{T} h\right) \odot\left(U^{T} f\right)\right) \end{aligned}\\
 \odot: \text{Hadamard product, element-wise production}$$
 
+## 谱图卷积发展历程
 
+如何理解 Graph Convolutional Network (GCN)
+
+度被定义为有多少条边连接出去
+
+卷积核的参数通过优化求出才能呢个实现特征提取的作用，gcn的理论很大一部分就是为了引入可以优化的卷积核
+
+拉普拉斯矩阵就是离散拉普拉斯算子
+
+离散中的傅里叶变换是向量和特征向量进行内积运算的加和
+
+**spectral cnn**
+
+2013: Spectral networks and locally connected networks on graphs
+
+使用对角阵作为卷积核，其中对角中的元素都是可训练参数。
+
+$$y_{\text {output}}=\sigma\left(U\left(\begin{array}{lll}
+\theta_{1} & & \\
+& \ddots & \\
+& & \theta_{n}
+\end{array}\right) U^{T} x\right.$$
+
+**Chebyshev Spectral CNN**
+
+2016:Convolutional neural networks on graphs with fast localized spectral filtering
+
+用切比雪夫多项式来近似$g_\theta$
+
+**GCN**
+
+2016: Semi-Supervised Classification with Graph Convolutional Networks
+
+普遍意义上的图卷积函数，谱图卷积的一阶近似(first-order approximation of spectral graph convolutions)
+
+$$f\left(H^{(l)}, A\right)=\sigma\left(\hat{D}^{-\frac{1}{2}} \hat{A} \hat{D}^{-\frac{1}{2}} H^{(l)} W^{(l)}\right)$$
 
 ## ref 
 
 - blog
     - [gcn author - GRAPH CONVOLUTIONAL NETWORKS](http://tkipf.github.io/graph-convolutional-networks/)
+    - [gcn常用数据集](https://mayi1996.top/2019/03/14/%E5%9B%BE%E7%BD%91%E7%BB%9C/)
 - personal code
 - paper
     - [2017 ICLR SEMI-SUPERVISED CLASSIFICATION WITH
