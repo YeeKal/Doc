@@ -154,6 +154,10 @@ $$\begin{aligned}(f*g)&=\mathcal{F}^{-1}[\hat{h}\cdot \hat{f}]  \\
 
 ## 谱图卷积发展历程
 
+图注意力网络
+
+图门控网络
+
 如何理解 Graph Convolutional Network (GCN)
 
 度被定义为有多少条边连接出去
@@ -195,8 +199,15 @@ $$f\left(H^{(l)}, A\right)=\sigma\left(\hat{D}^{-\frac{1}{2}} \hat{A} \hat{D}^{-
 - blog
     - [gcn author - GRAPH CONVOLUTIONAL NETWORKS](http://tkipf.github.io/graph-convolutional-networks/)
     - [gcn常用数据集](https://mayi1996.top/2019/03/14/%E5%9B%BE%E7%BD%91%E7%BB%9C/)
+    - [图表示学习Graph Embedding综述](https://blog.csdn.net/abcdefg90876/article/details/105591876)
+    - [图卷积网络到底怎么做，这事一份极简的numpy实现]
+    - [GNNPapers](https://github.com/thunlp/GNNPapers)
+    - [图拉普拉斯算子为何定义为D-W](https://zhuanlan.zhihu.com/p/50742283)
+    - [【辩难】DSSM 损失函数是 Pointwise Loss 吗？](https://zhuanlan.zhihu.com/p/322065156)
 - personal code
 - paper
-    - [2017 ICLR SEMI-SUPERVISED CLASSIFICATION WITH
-GRAPH CONVOLUTIONAL NETWORKS]()
+    - [2016 ICLR Semi-Supervised Classification with Graph Convolutional Networks]()
+    - [Attentional Factorization Machines: Learning the Weight of Feature Interactions via Attention Networks]()
+    - [Billion-scale Commodity Embedding for E-commerce Recommendation in Alibaba]()
 - project
+    - [pugcn]

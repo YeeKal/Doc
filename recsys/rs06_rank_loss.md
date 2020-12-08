@@ -68,6 +68,7 @@ online:
 ## 2020 Mixed Negative Sampling for Learning Two-tower Neural Networks in Recommendations
 
 
+
 ## ref
 
 - blog
@@ -76,4 +77,6 @@ online:
     - [三元组损失与tensorflow在线三元组挖掘]
 - code
     -  [Triplet loss in TensorFlow](https://github.com/omoindrot/tensorflow-triplet-loss)
+- paper
+    - [2020-Exploring Simple Siamese Representation Learning]()
 
