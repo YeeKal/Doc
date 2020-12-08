@@ -186,6 +186,8 @@ $$y_{\text {output}}=\sigma\left(U\left(\begin{array}{lll}
 
 用切比雪夫多项式来近似$g_\theta$
 
+**wavelets on graphs via spectral graph theory**
+
 **GCN**
 
 2016: Semi-Supervised Classification with Graph Convolutional Networks
