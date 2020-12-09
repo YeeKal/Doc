@@ -1,7 +1,7 @@
 ---
 title: 图神经网络02 - 图卷积神经网络
 categories: ml
-tags: ml
+tags: gnn
 date: 2020-12-02
 ---
 

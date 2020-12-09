@@ -1,7 +1,7 @@
 ---
 title: 图神经网络1 - 入门简介
 categories: ml
-tags: ml
+tags: gnn
 date: 2020-11-14
 ---
 
