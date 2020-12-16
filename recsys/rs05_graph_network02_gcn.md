@@ -212,4 +212,4 @@ $$f\left(H^{(l)}, A\right)=\sigma\left(\hat{D}^{-\frac{1}{2}} \hat{A} \hat{D}^{-
     - [Attentional Factorization Machines: Learning the Weight of Feature Interactions via Attention Networks]()
     - [Billion-scale Commodity Embedding for E-commerce Recommendation in Alibaba]()
 - project
-    - [pugcn]
+    - [pygcn]

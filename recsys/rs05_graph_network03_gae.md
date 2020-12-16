@@ -54,6 +54,24 @@ $$g(x)=g_{2}\left(g_{1}(x)\right), h(x)=h_{2}\left(h_{1}(x)\right), g_{1}(x)=h_{
 
 $$z=h(x) \zeta+g(x), \zeta \sim \mathcal{N}(0, I)$$即通过采样一个实系数来获得对高维向量的采样，使得该过程可导
 
+**损失函数**
+
+损失函数包括两部分，一个是衡量生成的$\hat{x}$与真实值之间的距离，第二个是让$p(z/x)$分布向标准正太分布看齐。故：
+
+$$L=L_1+L_2    \\
+L_1=||x-\hat{x}||^2 \\
+\begin{aligned} L_2 &=KL(N(\mu_x,\sigma_x ^2),N(0,1))   \\
+&=\frac{1}{2}\sum(-log \sigma_x^2+\mu^2+\sigma^2-1) \end{aligned}$$
+
+正态分布KL散度公式推导：
+
+$$\begin{aligned}
+& K L\left(N\left(\mu, \sigma^{2}\right) \| N(0,1)\right) \\
+=& \int \frac{1}{\sqrt{2 \pi \sigma^{2}}} e^{-(x-\mu)^{2} / 2 \sigma^{2}}\left(\log \frac{e^{-(x-\mu)^{2} / 2 \sigma^{2}} / \sqrt{2 \pi \sigma^{2}}}{e^{-x^{2} / 2 / \sqrt{2 \pi}}}\right) d x \\
+=& \int \frac{1}{\sqrt{2 \pi \sigma^{2}}} e^{-(x-\mu)^{2} / 2 \sigma^{2}} \log \left\{\frac{1}{\sqrt{\sigma^{2}}} \exp \left\{\frac{1}{2}\left[x^{2}-(x-\mu)^{2} / \sigma^{2}\right]\right\}\right\} d x \\
+=& \frac{1}{2} \int \frac{1}{\sqrt{2 \pi \sigma^{2}}} e^{-(x-\mu)^{2} / 2 \sigma^{2}}\left[-\log \sigma^{2}+x^{2}-(x-\mu)^{2} / \sigma^{2}\right] d x
+\end{aligned}$$
+
 ## 图自编码器(GAE)
 
 - 图用 $\mathcal{G}=(\mathcal{V}, \mathcal{E})$ 表示，其中 $\mathcal{V}$ 表示节点集合， $\mathcal{E}$ 表示边集合
@@ -106,9 +124,11 @@ $$\mathcal{L}=\mathbb{E}_{q(\mathbf{Z} \mid \mathbf{X}, \mathbf{A})}[\log p(\mat
         - [github- code, imgs](https://github.com/WojciechMormul/vae)
     - [图自编码器的起源和应用](https://zhuanlan.zhihu.com/p/112206566)
 - personal code
+    - [github-vae](https://github.com/bojone/vae)
 - paper
     - [2014_Auto-Encoding Variational Bayes]()
     - [2016_Tutorial on Variational Autoencoders]()
     - [Variational Graph Auto-Encoders]()
     - [2018-Graph Convolution Matrix Completion]()
 - project
+    - [gae-tf](https://github.com/tkipf/gae)
