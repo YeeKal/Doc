@@ -5,6 +5,10 @@
  date: 2020-09-06
 ---
 
+## 文本分类
+
+- [Chinese-Text-Classification-Pytorch](https://github.com/649453932/Chinese-Text-Classification-Pytorch)
+
 ## plan
 
 - 09-06 —— 09-13: xlnet  
