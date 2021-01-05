@@ -72,6 +72,7 @@ AI (Artificial Intelligence): IJCAI, AAAI
 - [DeepMatch](https://github.com/shenweichen/DeepMatch)
 - [MatchZoo](https://github.com/NTMC-Community/MatchZoo)
 - [dlrm](https://github.com/facebookresearch/dlrm)
+- [librec-java]
 
 ## open cource
 

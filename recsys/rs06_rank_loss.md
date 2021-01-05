@@ -5,6 +5,8 @@ tags: recsys
 date: 2020-11-10
 ---
 
+Bayesian Personalized Ranking(BPR) loss
+
 ## negative Sampling
 
 1. 只有一层Embedding层，即embedding可以通过label取出来，则直接在线选择

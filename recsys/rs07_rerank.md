@@ -49,6 +49,11 @@ date: 2020-11-18
 ## LambdaMart
 
 相比于MART改变了梯度的计算方式，该计算方式命名为lambda
+
+- [浅谈Learning to Rank中的RankNet和LambdaRank算法](https://zhuanlan.zhihu.com/p/68682607)
+- [搜索排序基于listwise的LambdaMART算法](https://zhuanlan.zhihu.com/p/55375160)
+- [lambdaMART 不太简短之介绍|](https://liam.page/2016/07/10/a-not-so-simple-introduction-to-lambdamart/)
+
 ## LambdaRank
 
 ## RankNet

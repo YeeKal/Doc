@@ -5,6 +5,9 @@ tags: recsys
 date: 2020-12-23
 ---
 
+- topn 推荐： 准确率 / 召回率
+- LFM(latent factor model): 隐因子模型，基于矩阵分解
+- als/slope one
 
 ## svd 分解
 
@@ -34,12 +37,12 @@ $$\min e_{i j}^{2}=\sum(r_{i j}-\hat{r}_{i j})^{2}=\sum(r_{i j}-\sum_{k=1}^{K} p
 
 正则化：
 
-$$\min e_{i j}^{2}=\sum(r_{i j}-\sum_{k=1}^{K} p_{i k} q_{k j})^{2} +\lambda(||p_{ik}||^2+||q_{kj}||^2)$$
+$$\min L=\sum(r_{i j}-\sum_{k=1}^{K} p_{i k} q_{k j})^{2} +\lambda(||p_{ik}||^2+||q_{kj}||^2)$$
 
 梯度下降：
 
 $$\frac{\partial{L}}{\partial{p_{ik}}} =-2q_{kj}(r_{i j}-\sum_{k=1}^{K} p_{i k} q_{k j})+2\lambda p_{ik}=-2q_{kj}e_{ij}+2\lambda p_{ik} \\
-\frac{\partial{L}}{\partial{p_{kj}}} =-2p_{ik}(r_{i j}-\sum_{k=1}^{K} p_{i k} q_{k j})+2\lambda q_{kj}=-2p_{ik}e_{ij}+2\lambda q_{kj}$$
+\frac{\partial{L}}{\partial{q_{kj}}} =-2p_{ik}(r_{i j}-\sum_{k=1}^{K} p_{i k} q_{k j})+2\lambda q_{kj}=-2p_{ik}e_{ij}+2\lambda q_{kj}$$
 
 ## PMF(2008)
 
@@ -51,13 +54,36 @@ FunkSVD的概率解释版本
 
 > Koren et al. Matrix factorization techniques for recommender systems.Computer 42.8 (2009).
 
-$$\min_{p,q,b_u,b_i} e_{i j}^{2}=\sum(r_{i j}-(\sum_{k=1}^{K} p_{i k} q_{k j}+\mu+b_u+b_i)^{2} +\lambda(||p_{ik}||^2+||q_{kj}||^2+b_u^2+b_i^2)$$
+$$\min_{p,q,b_u,b_i} L=\sum(r_{i j}-(\sum_{k=1}^{K} p_{i k} q_{k j}+\mu+b_u+b_i)^{2} +\lambda(||p_{ik}||^2+||q_{kj}||^2+||b_u||^2+||b_i||^2)$$
 
-- $\mu$: 整体平均评分 
-- $b_\mu$: 用户评分偏差
-- $b_i$: item被评分偏差
+- $\mu$: 整体平均评分,已知常量 
+- $b_\mu$: 用户评分偏差, 待训练向量，与用户数目等长
+- $b_i$: item被评分偏差，待训练向量，与物品数目等长
+- $\hat{r}_{ij}=\sum_{k=1}^{K} p_{i k} q_{k j}+\mu+b_u+b_i$
+
+梯度下降：
+
+$$\frac{\partial{L}}{\partial{p_{ik}}} =-2q_{kj}(r_{i j}-\hat{r}_{ij})+2\lambda p_{ik}=-2q_{kj}e_{ij}+2\lambda p_{ik} \\
+\frac{\partial{L}}{\partial{q_{kj}}} =-2p_{ik}(r_{i j}-\hat{r}_{ij})+2\lambda q_{kj}=-2p_{ik}e_{ij}+2\lambda q_{kj} \\
+\frac{\partial{L}}{\partial{b_u}}=-2e_{ij}+2\lambda b_u \\
+\frac{\partial{L}}{\partial{b_u}}=-2e_{ij}+2\lambda b_i$$
 
 ## SVD++
+
+在BiasSVD的基础上引入隐式反馈
+
+$$\hat{r}_{ij}=\mu+b_u+b_i+q_j^T(p_{i}+\frac{1}{\sqrt{||R_u||}}\sum_{j\in R_u}y_j)$$
+
+- $||R_u||$: $R_u$为user 打分的item的id， 因此这个值可以看作是user打分的item的个数
+- $y$: (item_size, dim), 每一个item对应的权重系数矩阵
+
+梯度下降：
+
+$$\frac{\partial{L}}{\partial{p_{ik}}} =-2q_{kj}(r_{i j}-\hat{r}_{ij})+2\lambda p_{ik}=-2q_{kj}e_{ij}+2\lambda p_{ik} \\
+\frac{\partial{L}}{\partial{q_{kj}}} =-2p_{ik}(r_{i j}-\hat{r}_{ij})+2\lambda q_{kj}=-2e_{ij}(p_{ik}+\frac{1}{\sqrt{||R_u||}}\sum_{j\in R_u}y_{kj})+2\lambda q_{kj} \\
+\frac{\partial{L}}{\partial{b_u}}=-2e_{ij}+2\lambda b_u \\
+\frac{\partial{L}}{\partial{b_u}}=-2e_{ij}+2\lambda b_i \\
+y_{kj}=-2e_{ij}\cdot q_{kj} \cdot \frac{1}{\sqrt{||R_u||}}  +2\lambda y_{kj}$$
 
 ## timeSVD
 

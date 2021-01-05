@@ -8,6 +8,7 @@
 - [2013 dssm microsoft](2013 dssm microsoft)
 - 2016 item2vec
 - alibaba mind
+- esmm, mv-dssm
 
 - 字节deep retrieval
 
