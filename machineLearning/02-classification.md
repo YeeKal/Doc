@@ -40,9 +40,13 @@ the maximum likelihood estimation:
 
 $$\begin{align}L(\theta)&=\prod_{i=1}^mp(y^{(i)}|x{(i)};\theta)\\&=\prod_{i=1}^m(h_\theta(x^{(i)}))^{y^{(i)}}(1-h_\theta(x^{(i)}))^{1-y^{(i)}}\end{align} \\$$
 
-$$l(\theta)=logL(\theta)=\sum_{i=1}^my^{(i)}logh(x^{(i)})+(1-y^{(i)})log(1-h(x^{(i)})) \\$$
+$$l(\theta)=-logL(\theta)=-\sum_{i=1}^my^{(i)}logh(x^{(i)})+(1-y^{(i)})log(1-h(x^{(i)})) \\$$
 
-$$\frac{\partial}{\partial\theta_j}l(\theta)=(y-h_\theta(x))x_j \\$$
+$$\begin{align}\frac{\partial}{\partial\theta_j}l(\theta) &=\frac{\partial l}{\partial h_{\theta}(x)} \frac{\partial  h_{\theta}(x)}{\partial z} \frac{\partial  z}{\partial \theta_j}  \\
+&=\sum_{i=1}^m (-\frac{y^i}{h_\theta(x)}-+\frac{1-y^i}{1-h_\theta(x)})\cdot h_\theta(x)(1-h_\theta(x))\cdot x_j \\
+&=\sum_{i=1}^m(-y^i(1-h_\theta(x))+(1-y^i)h_\theta(x))\cdot x_j \\
+&=-\sum_{i=1}^m (y^i-h_\theta(x^i))x^i_j
+\end{align}$$
 
 This therefor gives us the stochastic ([sto'kæstɪk]随机的) gradient ascent rule:
 
@@ -69,3 +73,7 @@ Newton's method typically enjorys faster convergence.
 ##Fisher's LDA
 
 **linear discriminant analysis(线性判别分析)**
+
+## ref
+
+- [由Logistic Regression 所联想到的]()

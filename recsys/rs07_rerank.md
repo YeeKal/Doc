@@ -38,11 +38,24 @@ date: 2020-11-18
 
 ## 评价指标
 
-- MAP(Mean Average Precision)
+**MAP(Mean Average Precision)**
 
 假设有两个主题，主题1有4个相关网页，主题2有5个相关网页。某系统对于主题1检索出4个相关网页，其rank分别为1, 2, 4, 7；对于主题2检索出3个相关网页，其rank分别为1,3,5。对于主题1，平均准确率为(1/1+2/2+3/4+4/7)/4=0.83。对于主题2，平均准确率为(1/1+2/3+3/5+0+0)/5=0.45。则MAP= (0.83+0.45)/2=0.64。
 
-- NDCG(Normalized Discounted Cumulative Gain)
+$$
+\text{precision at posion k}\quad PK=\frac{\text{revelent docs in topk results}}{k}    \\
+\text{average precision for query q}\quad AP=\frac{\sum_k PK}{\text{revelent docs}}
+\text{MAP: averaged AP over all quries}\quad 
+$$
+
+**NDCG(Normalized Discounted Cumulative Gain)**
+
+$$\text{Discounted Cumulative Gain:}\quad DCG=\sum_k\frac{2^{rel_k}-1}{log(k)+1}   \\
+rel_k: \text{revelative reward} $$
+
+但是不同的query下的排序集合长度不一，不能呢个直接进行平均，故先求出每个query下最理想的DCG(Ideal DCG,IDCG)值进行归一化再进行平均。
+$$NDCG=\frac{DCG}{IDCG} \\
+IDCG=\sum_k\frac{2^{rel_k}-1}{log(k)+1}, \text{其中排序按照相关度来排}$$
 
 ## FTRL
 

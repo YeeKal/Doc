@@ -24,6 +24,12 @@ $$ \text{预测： } r_{i,j}=U_k\Sigma_k^{-1/2}(i) \cdot \Sigma_k^{-1/2} V_k^T(j
 
 事实上隐向量矩阵可以看作是对用户和物品向量化的编码，即挖掘用户和物品在多个维度下的隐藏特征。
 
+## ALS (2008)
+
+Alternating Least Squares(ALS): 交替最小二乘
+
+矩阵分解求解的一种优化算法，而FunkSVD看作是基于随机梯度下降的求解
+
 ## FunkSVD
 
 既然矩阵分解的目的可以看作是得到隐向量的过程，则可以把矩阵分解转化为一个优化问题，直接初始化该隐向量，并通过迭代优化寻找满足得分矩阵的最优的隐向量。
@@ -87,6 +93,14 @@ y_{kj}=-2e_{ij}\cdot q_{kj} \cdot \frac{1}{\sqrt{||R_u||}}  +2\lambda y_{kj}$$
 
 ## timeSVD
 
+## ConvMF(2016)
+
+- paper: Convolutional Matrix Factorization for Document Context-Aware Recommendation
+- [ConvMF-github](https://github.com/cartopy/ConvMF)
+
+
+
+
 ## NMF
 
 > Learning the parts of objects by non-negative matrix factorization, 1999
@@ -102,6 +116,9 @@ y_{kj}=-2e_{ij}\cdot q_{kj} \cdot \frac{1}{\sqrt{||R_u||}}  +2\lambda y_{kj}$$
 - paper
     - [Matrix Factorization Techniques for Recommender Systems]()
     - [Large-scale Parallel Collaborative Filtering for the Netflix Prize]()
+    - [可能是史上最全推荐系统资料了]()
+    - [为什么spark中只有als]()
+    - [文哥的学习日记-jianshu](https://www.jianshu.com/u/c5df9e229a67)
 - personal code
 
 
