@@ -5,23 +5,38 @@
  date: 2020-10-11
 ---
 
-Ensemble learning: 混合模型学习, [ref1](http://www.scholarpedia.org/article/Ensemble_learning#Voting_based_methods) 
+##  推荐系统的进化脉络
 
-## 推荐分类
+**传统推荐系统演化关系**
 
-- 协同过滤(CF): Item-based CF和User-based CF
-- 模型：
-- 矩阵分解：
-    - SVD
-    - FunkSVD
-    - BiasSVD
-    - SVD++
-    - BiasSVDwithU
-- 深度学习
+![recsys_revolution1](imgs/recsys_revolution1.png)
+
+1. 协同过滤
+    - UserCF具有较强的社交属性，故适于新闻推荐等及时性，热点性的领域。ItemCF更适用于兴趣变化较为稳定的领域，比如电商。
+    - 协同过滤头部效应明显，处理稀疏向量能力弱。仅利用交互信息，无法表示更深层次的表达。
+2. 矩阵分解
+    - 由于隐向量的提出，泛化能力比协同过滤增强，空间复杂度降低
+    - 但是矩阵分解人然只利用了交互信息，所以依然存在冷启动问题，并且无法利用更丰富的上下文信息
+3. 逻辑回归
+    - 逻辑回归开始考虑加入丰富的特征，并且把交互信息作为训练目标，有比协同过滤更加泛化的能力。并且计算简单，直观，易用。
+    - 但是没有进行特征交叉。
+4. FM系列
+    - 开始引入特征交叉，表达能力更强
+5. GBDT+LR
+    - 高维特征组合和筛选， 推进特征工程模型化（实现特征的端到端生成）
+    - 以树模型进行初步特征抽取，以线性模型进行进一步分类的概念
+
+**深度推荐系统演化关系**
+
+![recsys_revolution2](imgs/recsys_revolution2.jpg)
+
+
+## 推荐系统架构
 
 
 
-## 会议&paper
+
+## 会议&PAPER
 
 RecSys | SIGIR | KDD
 
