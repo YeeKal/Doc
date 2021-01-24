@@ -109,3 +109,8 @@ $$\begin{align} h_\theta(x)&=E[T(y)|x]\\&=E\begin{bmatrix} 1\{y=1\}\\\cdots\\1\{
 Our hypothesis will output the estimates probability for $p(y=i|x;\theta)$,[$p(y=k)=1-\sum_{i=1}^{k-1}p(y=i)$].The log-likelihood is:
 
 $$l(\theta)=\sum_{i=1}^{m}log\prod_{i=1}^k(\frac{e^{\theta_l^T x^{(i)}}}{\sum_{j=1}^k e^{\theta_j^T x^{(i)}}})^{1\{y^{(i)}=l\}} \\$$
+
+## ref
+
+- [从线性模型到广义线性模型（1）——模型假设](https://cosx.org/2011/01/how-does-glm-generalize-lm-assumption/)
+

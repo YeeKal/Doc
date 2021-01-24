@@ -1,6 +1,6 @@
 ---
 title: 图神经网络03-survey
-categories: rs
+categories: ml
 tags: gnn
 date: 2020-12-09
 ---

@@ -69,6 +69,8 @@ online:
 
 ## 2020 Mixed Negative Sampling for Learning Two-tower Neural Networks in Recommendations
 
+##Bayesian Personalized Ranking(BPR) loss
+
 
 
 ## ref

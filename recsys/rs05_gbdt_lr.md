@@ -1,9 +1,11 @@
 ---
- title: gbdt
+ title: GBDT+LR
  categories: recsys
  tags: recsys
  date: 2020-10-17
 ---
+
+把多颗回归树的输出节点以0/1编码，这样就形成了一个高维的0-1向量，这个向量在一定程度上反映了数据的多维特征。之后再对这一多维向量进行LR回归。
 
 ## ref
 

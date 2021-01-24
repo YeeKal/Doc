@@ -61,3 +61,7 @@
         git config --global https.proxy 'socks5://127.0.0.1:1080'
 
 https://pypi.tuna.tsinghua.edu.cn/simple some-package
+
+## 安装中文输入法
+
+[fctix设置](https://www.cnblogs.com/voyagee/p/6898054.html)
