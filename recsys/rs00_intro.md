@@ -76,6 +76,7 @@ AI (Artificial Intelligence): IJCAI, AAAI
 
 ## blog
 
+- [知乎-石塔西](https://www.zhihu.com/people/si-ta-xi/posts)
 - [知乎专栏-推荐系统与NLP](https://www.zhihu.com/column/c_1068100809786458112)
 - [推荐系统/计算广告/机器学习/CTR预估资料汇总](https://awesomeopensource.com/project/mJackie/RecSys)
 - [知乎专栏 - 深度推荐系统](https://www.zhihu.com/column/deep-recsys)
@@ -105,7 +106,8 @@ AI (Artificial Intelligence): IJCAI, AAAI
 - [DeepMatch](https://github.com/shenweichen/DeepMatch)
 - [MatchZoo](https://github.com/NTMC-Community/MatchZoo)
 - [dlrm](https://github.com/facebookresearch/dlrm)
-- [librec-java]
+- [librec-java]()
+- [Recommender Systems Datasets](https://cseweb.ucsd.edu/~jmcauley/datasets.html)
 
 ## open cource
 

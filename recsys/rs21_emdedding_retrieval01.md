@@ -9,6 +9,7 @@
 - 2016 item2vec
 - alibaba mind
 - esmm, mv-dssm
+- graph tr
 
 - 字节deep retrieval
 

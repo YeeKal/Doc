@@ -4,6 +4,7 @@ categories: recsys
 tags: recsys
 date: 2020-11-10
 ---
+sampled softmax loss: 通过采样部分负样本代替整体分母
 
 Bayesian Personalized Ranking(BPR) loss
 
