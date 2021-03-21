@@ -82,8 +82,122 @@ $$\gamma_{k m}=\frac{\sum_{x_{i} \in R_{k m}} \frac{\partial C}{\partial s_{i}}}
 
 从广义上讲，lambda损失只是一种损失函数的形式，而得分$s_i$可以采用任何一种机器学习/深度学习的方法来做。因此可以说对于排序任务，如何定义损失函数是其精髓所在;另一方面，在ltr领域，把深度学习纳入进得分函数，便可以通过损失函数的设计，通过深度学习来处理排序任务。
 
+## RankLib
+
+```python
+# lambdamart实现参考： https://github.com/lezzago/LambdaMart/blob/master/lambdamart.py
+
+# dcg 计算 参考
+def dcg(scores):
+	"""
+		Returns the DCG value of the list of scores.
+		Parameters
+		----------
+		scores : list
+			Contains labels in a certain ranked order
+		
+		Returns
+		-------
+		DCG_val: int
+			This is the value of the DCG on the given scores
+	"""
+	return np.sum([
+						(np.power(2, scores[i]) - 1) / np.log2(i + 2)
+						for i in xrange(len(scores))
+					])
+
+def ideal_dcg(scores):
+	"""
+		Returns the Ideal DCG value of the list of scores.
+		Parameters
+		----------
+		scores : list
+			Contains labels in a certain ranked order
+		
+		Returns
+		-------
+		Ideal_DCG_val: int
+			This is the value of the Ideal DCG on the given scores
+	"""
+	scores = [score for score in sorted(scores)[::-1]]
+	return dcg(scores)
+
+def ideal_dcg_k(scores, k):
+	"""
+		Returns the Ideal DCG value of the list of scores and truncates to k values.
+		Parameters
+		----------
+		scores : list
+			Contains labels in a certain ranked order
+		k : int
+			In the amount of values you want to only look at for computing DCG
+		
+		Returns
+		-------
+		Ideal_DCG_val: int
+			This is the value of the Ideal DCG on the given scores
+	"""
+	scores = [score for score in sorted(scores)[::-1]]
+	return dcg_k(scores, k)
+
+def single_dcg(scores, i, j):
+	"""
+		Returns the DCG value at a single point.
+		Parameters
+		----------
+		scores : list
+			Contains labels in a certain ranked order
+		i : int
+			This points to the ith value in scores
+		j : int
+			This sets the ith value in scores to be the jth rank
+		
+		Returns
+		-------
+		Single_DCG: int
+			This is the value of the DCG at a single point
+	"""
+	return (np.power(2, scores[i]) - 1) / np.log2(j + 2)
+
+#  lambda梯度计算参考
+
+z_ndcg = abs(single_dcgs[(i,j)] - single_dcgs[(i,i)] + single_dcgs[(j,i)] - single_dcgs[(j,j)]) / idcg
+rho = 1 / (1 + np.exp(predicted_scores[i] - predicted_scores[j]))
+rho_complement = 1.0 - rho
+lambda_val = z_ndcg * rho
+lambdas[i] += lambda_val
+lambdas[j] -= lambda_val
+
+w_val = rho * rho_complement * z_ndcg
+w[i] += w_val
+w[j] += w_val
+```
+
+```java
+// RankLib中LambdaMart计算梯度方式
+protected void computePseudoResponses(int start, int end, int current)
+	{
+        ...
+		//compute the lambda for each document (a.k.a "pseudo response")
+        double deltaNDCG = Math.abs(changes[j][k]);
+        if(deltaNDCG > 0)
+        {
+            double rho = 1.0 / (1 + Math.exp(modelScores[mj] - modelScores[mk]));
+            double lambda = rho * deltaNDCG;
+            pseudoResponses[mj] += lambda;
+            pseudoResponses[mk] -= lambda;
+            double delta = rho * (1.0 - rho) * deltaNDCG;
+            weights[mj] += delta;
+            weights[mk] += delta;
+        }
+        ...
+	
+	}
+```
+
 ## ref
 
+- [排序学习(LTR)杂谈(上)](https://zhuanlan.zhihu.com/p/138436325)
 - [排序学习(LTR)杂谈 (下)](https://zhuanlan.zhihu.com/p/138436960)
 
 $$f=\frac{1}{1+e^x}\\
