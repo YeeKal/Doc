@@ -57,6 +57,11 @@ $$F_{0}(x)=\underset{c}{\arg \min } \sum_{i=1}^{N} L\left(y_{i}, c\right)$$
 
 ![boosted_stumps](imgs/640.webp)
 
+0. gbdt算法流程
+1. 为何使用负梯度
+- 统一迭代方向
+- 随机梯度下降的函数版本
+
 ## 正则化
 
 

@@ -1,0 +1,86 @@
+- [rigidbody transformation](#rigidbody transformation)
+- [FK](# forward kinematics)
+- [IK](# inverse kinematics)
+
+## rigidbody transformation
+
+**旋转运动**
+
+根据**欧拉定理**，任意三维空间旋转运动可以表示为绕某一单位轴$w\in \mathcal{R}^3$转动角度$\theta$,则旋转矩阵可以表示为矩阵指数的形式：
+$$R=e^{\hat{w}\theta} \in \mathcal{R}^{3\times 3}  \\
+\hat{w}=\begin{bmatrix}0 &-w_3 & w_2 \\w_3 & 0 & -w_1 \\-w_2 & w_1 & 0 \end{bmatrix}$$
+$$so(3)与SO(3)的指数映射\text{(Exponential map)}关系  \{\begin{array}{lr} 
+        \hat{w}\in so(3)\in \mathcal{R}^{3\times 3} \\
+        \quad \\ 
+        \theta \in  \mathcal{R} 
+\end{array}  \Rightarrow  e^{\hat{w}\theta}\in SO(3)$$
+angles: $\theta=cos^{-1}(\frac{tr(R)-1}{2})$
+
+rotation angle: $[n]_\times=\frac{R-R^T}{2sin(\theta)}$,   $n=[-[n]_\times(2,3),[n]_\times(1,3),-[n]_\times(1,2)]$
+
+In **unit quaternions(四元数)**: q=$(cos(\theta/2),\omega sin(\theta/2))$
+
+**刚体运动**
+
+与旋转相似，根据**Chasels定理**，任意刚体运动均可以通过绕一轴的运动加上平行于该轴的移动实现:
+$$T=e^{\hat{\xi}\theta} \in \mathcal{R}^{4\times 4}  \\
+\hat{\xi}=\begin{bmatrix} \hat{w} & \upsilon \\ 0& 0 \end{bmatrix}  \\
+e^{\hat{\xi}\theta}=\begin{bmatrix} e^{\hat{w}\theta}& (I-e^{\hat{w}\theta})(w\times \upsilon)+ww^T\upsilon\theta\\0 &1 \end{bmatrix}$$
+
+$$se(3)与SE(3)的指数映射(Exponential map)关系  \{\begin{array}{lr} 
+        \hat{\xi}\in se(3)\in \mathcal{R}^{3\times 3} \\
+        \quad \\ 
+        \theta \in  \mathcal{R} 
+\end{array}  \Rightarrow  e^{\hat{\xi}\theta}\in SE(3)$$
+
+## forward kinematics
+
+- for revolute joint: $\theta_i \in S^1$,unit circle in the plane
+- for prismatic joint: $\theta_i \in \mathcal{R}$
+- $T^p$ to denote the p-torus, defined to be the **Cartesian product** of p copies of $S^1$: $$T^p=S^1\times S^1\times \cdots \times S^1$$
+- joint space(configuration space) of a manipulator with p revolute joints and r prismatic joints: $Q=T^p \times R^
+r$
+- the forward kinematics map: $g_{st}$, t-tool frame and s-base frame:
+ $$g_{st}(\theta)=g_{sl_1}(\theta_1)g_{l_1l_2}(\theta_2)\cdots g_{l_nt}$$
+
+ 
+
+**指数积公式**
+
+If $\xi$ is a twist, then the rigid motion associated with rotating and translating along the axis of the twist is given by:
+$$g_{ab}(\theta)=e^{\hat{\xi}\theta}g_{ab}(0)$$
+g: is a pose and also a transformation
+
+The product of exponential formula(POE):
+$$g_{st}(\theta)=e^{\hat{\xi}_1\theta_1}e^{\hat{\xi}_2\theta_2}\dots e^{\hat{\xi}_n\theta_n}g_{ab}(0)$$
+
+Generalize this procedure:
+
+- Define the **reference configuration**(初始位置) of the manipulator to be the configuration corresponding to $\theta=0$.  
+- For each joint, construct a twist $\xi_i$ at $g_{st}(0)$
+    - $\omega_i \in \mathcal{R}^3$,unit vector in the direction of th twist axis
+    - $q_i \in \mathcal{R}^3$,any point on the axis(determine the direction)
+    - $v_i \in \mathcal{R}^3$,unit vector pointing in the direction of translation  
+    - all vectors are specified **relative to the base coordinate frame**
+$$\begin{align}
+\text{for revolute } \xi_i&=\begin{bmatrix}-\omega_i\times q_i \\ \omega_i  \end{bmatrix} or \begin{bmatrix}q_i\times \omega_i \\ \omega_i  \end{bmatrix} \\
+\text{for prismatic } \xi_i&=\begin{bmatrix}v_i \\ 0  \end{bmatrix}
+\end{align}$$
+    - 指数积公式只能描述末端关节对基坐标系的变换，而不能得知每个关节相对于坐标系的变换。 
+
+## inverse kinematics
+
+Paden-Kahan subproblem
+
+## Velocity
+
+The instantaneous spatial velocity of the end effector:
+$$ \begin{align} ln(g_{st}(\theta))&= \hat{\xi}_1\theta_1+\dots+\hat{\xi}_n\theta_n+ln(g_{ab}(0)) \\
+\frac{\dot{g}_{st}(\theta)}{g_{st}(\theta)}&=\hat{\xi}_1\dot{\theta_1}+\dots+\hat{\xi}_n\dot{\theta_n} \\
+\hat{V}^s_{st}&=\dot{g}_{st}(\theta)g_{st}^{-1}(\theta)   \\
+    &=\sum^n_{i=1}{(\frac{\partial{g_{st}}}{\partial{\theta_i}}\dot{\theta_i})g^{-1}_{st}}  \\
+    &=\sum^n_{i=1}{(\frac{\partial{g_{st}}}{\partial{\theta_i}}g^{-1}_{st})\dot{\theta_i}}  \\
+    &=J^s_{st}(\theta)\dot{\theta}
+\end{align}
+$$
+where $J^s_{st}(\theta)=[(\frac{\partial{g_{st}}}{\partial{\theta_1}}g^{-1}_{st}) \dots (\frac{\partial{g_{st}}}{\partial{\theta_n}}g^{-1}_{st})]$ is the *spatial manipulator Jacobian*.

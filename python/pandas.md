@@ -13,7 +13,10 @@ df_train.describe() #统计 min/std/max/mean
 df.count() #计算每个类别的数目
 df.isnull() #显示nan数据
 
-pd.loc[] # 行访问数据，可以切片
+iloc[1:10] # 按照逻辑行索引
+pd.loc[] # 行访问数据，可以切片， 按照标签行
+pd.iloc[].at[]
+pd.iloc[].iat[]
 pd.columns # 列名
 pd.shape # (row_num,column_num)
 ```
