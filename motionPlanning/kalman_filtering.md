@@ -1,0 +1,1 @@
+Kalman filtering provides a recursive method of estimating the state of a dynamical system int he presence of a noise.
