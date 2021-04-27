@@ -20,11 +20,14 @@ Interpolation:
 - [github](https://github.com/ros-planning/moveit/tree/master/moveit_core/trajectory_processing/src)
 
 which contains three executable trajectory processing methods:
-- IterativeParabolicTimeParameterization
+
+- IterativeParabolicTimeParameterization:
+    - [ref github issue](https://github.com/ros-planning/moveit/issues/160)
 - IterativeSplineParameterization
+    - [ref github issue](https://github.com/ros-planning/moveit/pull/382)
 - TimeOptimalTrajectoryGeneration
     - [website](http://www.golems.org/projects/traj.html)
-    - 
+    - TOPP
 
 ## 轨迹规划-离散时间序列
 

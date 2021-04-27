@@ -44,6 +44,32 @@ for(int i=0;i<urdf_model->getRoot()->child_links.size();i++){
 
 differentiate position and orientations 
 
+```c++
+
+// Returns a vector with the direction of the equiv. axis
+// and its norm is angle
+Vector Rotation::GetRot() const
+{
+Vector axis;
+double angle;
+angle = Rotation::GetRotAngle(axis,epsilon);
+return axis * angle;
+}
+
+// from frames.inl
+IMETHOD Vector diff(const Rotation& R_a_b1,const Rotation& R_a_b2,double dt) {
+	Rotation R_b1_b2(R_a_b1.Inverse()*R_a_b2);
+	return R_a_b1 * R_b1_b2.GetRot() / dt;
+}
+
+IMETHOD Twist diff(const Frame& F_a_b1,const Frame& F_a_b2,double dt) {
+	return Twist(
+			diff(F_a_b1.p,F_a_b2.p,dt),
+			diff(F_a_b1.M,F_a_b2.M,dt)
+			);
+}
+```
+
 interpolation for rigid body motion
 
 ## kdl dynamics
