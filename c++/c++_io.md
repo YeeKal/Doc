@@ -1,3 +1,33 @@
+## OJ输入模板
+
+```c++
+// 同一行多个数字
+int a,b;
+cin>>a>>b;
+
+// 多行输入
+int n; // 数据的组数
+cin >> n; // 读取组数
+for(int i=0; i<n; ++i){
+    int a, b;
+    cin >> a >> b;
+    cout << a+b <<endl;
+}
+
+// 一整行
+string s;
+getline(cin, s);
+
+// 多行，行数未知
+string str;
+vector<string> vec;
+while(getline(cin,str)){
+    if(str.size()>0){
+        vec.push_back(str);
+    }
+}
+``` 
+
 ## 控制台输入
 
 ```c++

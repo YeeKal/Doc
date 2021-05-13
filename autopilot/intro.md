@@ -44,7 +44,9 @@ date: 2021-04-27
     - [移动机器人运动规划课程](https://zhuanlan.zhihu.com/p/82784940)
 - blog
     - [自动驾驶汽车：综述（七）---决策系统之运动规划Motion Plan](https://zhuanlan.zhihu.com/p/59794261)
+    - [一起自学吧](https://www.17zixueba.com/thread-9088-1-1.html)
     - [无人驾驶SOTA代码](https://zhuanlan.zhihu.com/p/59769293)
     - [mit 无人驾驶](https://deeplearning.mit.edu/)
+    - [自动驾驶决策控制及运动规划史上最详细最接地气总览现状](https://zhuanlan.zhihu.com/p/260707853)
 - paper
     - [2019-self driving cars a survey](https://arxiv.org/abs/1901.04407)

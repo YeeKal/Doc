@@ -48,3 +48,12 @@ $$x(\Delta t)\approx x(o)+\frac{\Delta t}{6}(w_1,w_2,w_3,w_4)   \\
 - [toppra](https://toppra.readthedocs.io/en/latest/tutorials/tut3_non_zero_velocities.html)
 
 Non-zero starting and ending velocities
+
+## ref
+
+- blog
+- code
+- project
+- paper
+    - [Kinodynamic RRT*: Optimal Motion Planning for Systems with Linear Differential Constraints](https://arxiv.org/abs/1205.5088)
+    - [A New Approach to Time-Optimal Path Parameterization Based on Reachability Analysis]()
