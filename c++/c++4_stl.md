@@ -209,4 +209,9 @@ const T& min( const T& a, const T& b); // Returns the smaller of a and b.
 ForwardIt min_element(ForwardIt first, ForwardIt last); //Finds the smallest element in the range [first, last)
 int a[10];
 min_element(a,a+10);//
+
+sort(v.begin(),v.end());
+
+#include<numeric>
+accumulate(ivec.begin() , ivec.end() , 0);  // 求和
 ```

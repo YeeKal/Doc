@@ -31,6 +31,12 @@ the advantage of parameterizing policies according to the softmax in action pref
 - the approximate policy can approach a deterministic policy
 - enables the selection of actions with arbitrary probabilities
 
+**softmax policy**
+
+$$\pi(a|s,\theta)=\frac{e^{h(s,a,\theta)}}{\sum_b e^{h(s,b,\theta)}}    \\
+\pi(a|s,\theta) \propto e^{h(s,a,\theta)} \\
+\nabla_{\theta} \log \pi_{\theta}(s, a)=h(s, a)-\mathbb{E}_{\pi_{\theta}}[h(s, \cdot)]$$
+
 
 **objective**
 
@@ -40,7 +46,7 @@ $J(\theta)$: performance measure
 
 1. start value: 在一个完整的序列下，以初始状态的累计奖励值来衡量策略的优势. $V_{\pi_\theta}$ is the true value for $\pi_\theta$, the policy determined by $\theta$. In this discussion the discounting rate $\gamma$ is not included.
 $$J_1(\theta)=V_{\pi_\theta}(s_1)=E_{\pi_\theta}[v_1]$$
-2. average reward: 在连续环境条件下，不存在某个初始状态。把个体在某时data_path刻下的状态看成各个状态概率分布，则把每一时刻得到的奖励按各状态的概率分布求和：
+2. average reward: 在连续环境条件下，不存在某个初始状态。把个体在某时data_path刻下的状态看成各个状态概率分布，则把每一时刻得到的奖励按各状态的概率分布求和, $d_{\pi\theta}$是在某一策略下的s的概率分布：
 $$J_{avV}(\theta)=\sum_sd_{\pi_\theta}V_{\pi_\theta}(s)$$
 3. average reward per time-step: 每一时间步长下的平均奖励：
 $$J_{avR}(\theta)=\sum_sd_{\pi_\theta}(s)\sum_a\pi_\theta(s,a)R^a_s$$
@@ -49,7 +55,14 @@ $$J_{avR}(\theta)=\sum_sd_{\pi_\theta}(s)\sum_a\pi_\theta(s,a)R^a_s$$
 
 $$\bigtriangledown J(\theta)\propto \sum_s d_{\pi_\theta}(s)\sum_{a}q_\pi(s,a)\bigtriangledown \pi(a|s,\theta)$$
 
-[公式推倒参考](https://www.jianshu.com/p/e9d47bb2dab2)
+
+梯度的中间变形：
+
+$$\begin{aligned}
+\nabla_{\theta} \boldsymbol{\pi}_{\theta}(\mathbf{s}, \mathbf{a}) &=\frac{\boldsymbol{\pi}_{\theta}(\mathbf{s}, \mathbf{a})}{\boldsymbol{\pi}_{\theta}(\mathbf{s}, \mathbf{a})} \nabla_{\theta} \boldsymbol{\pi}_{\theta}(\mathbf{s}, \mathbf{a}) \\
+&=\boldsymbol{\pi}_{\theta}(\mathbf{s}, \mathbf{a}) \frac{\nabla_{\theta} \boldsymbol{\pi}_{\theta}(\mathbf{s}, \mathbf{a})}{\boldsymbol{\pi}_{\theta}(\mathbf{s}, \mathbf{a})} \\
+&=\boldsymbol{\pi}_{\theta}(\mathbf{S}, \mathrm{a}) \nabla_{\theta} \log \boldsymbol{\pi}_{\theta}(\mathbf{s}, \mathbf{a})
+\end{aligned}$$
 
 假设目标函数如下所示，$x\sim p(x|\theta)$表示变量x服从以$\theta$为参数的$p(x|\theta)$分布，而我们的目地是求$f(x)$在概率分布$p(x|\theta)$下的期望。若$f(x)$表示reward，则在策略梯度求解中的目地是通过改变$\theta$的值，来改变x的分布，从而使得$J(\theta)$最大化。
 $$J(\theta)=E_{x\sim p(x|\theta)}(f(x))$$
@@ -66,7 +79,7 @@ $$\begin{align} \bigtriangledown E_{x\sim p(x|\theta)}(f(x))&=\bigtriangledown_\
 
 基于整个回合数据的方法，称为reinforce算法。这里基于Monte Carto进行采样。在梯度上升更新过程中，右乘的$v_t$是该动作的奖励值，奖励值的大小影响上升梯度中由该动作所造成的梯度。（让原始策略先跑一轮，若得到正向反馈，增加选择该动作的概率，若得到负向反馈，则减少选择该动作的概率，从而更新策略。以数学的角度来看，反馈即是reward，梯度又乘便得到反馈对梯度的选择作用，参数更新即是在更新策略。）
 
-![reinforce](resources/reinforce.png)
+![reinforce](imgs/reinforce.png)
 
 最大化$\log\pi_\theta(s,a)v$等效于最小化-$\log\pi_\theta(s,a)v$，故在tensorflow中的处理可以用交叉熵最小化loss：
 ```python
