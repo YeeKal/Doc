@@ -49,6 +49,40 @@ void* myMemcpy(void *dest,const void* src,size_t n){
 - 全局静态存储区：全局变量和静态变量
 - 常量存储区：存放常量
 
+5. NULL和nullptr的区别
+
+```c++
+// in C
+#define NULL ((void *)0) // c中是空指针
+
+
+// in C++
+#ifdef __cplusplus 
+#define NULL 0  // c++ 中NULL就是0，因为C++不支持void *类型的空指针隐式转换为其他类型指针
+#else
+#define NULL ((void *)0)
+#endif
+
+// 因此在C++中NULL可能在指针与int类型之间产生二义性
+// 索引C++中引入nullptr
+
+const class nullptr_t
+{
+public:
+    template<class T>
+    inline operator T*() const
+        { return 0; }
+
+    template<class C, class T>
+    inline operator T C::*() const
+        { return 0; }
+ 
+private:
+    void operator&() const;
+} nullptr = {};
+```
+
+
 
 ## ref
 
