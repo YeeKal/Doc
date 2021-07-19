@@ -10,7 +10,13 @@
 2. visual studio code
 3. 卸载不必要的自带软件: https://www.jianshu.com/p/67a86505279f
 4. v2rayl: https://gitee.com/sLarson/v2rayL
-5. git: sudo apt install git
+
+```python
+sudo apt install git # git
+sudo apt install axel
+```
+
+5. 
 5. unable to access samsung_t5: sudo apt-get install exfat-utils exfat-fuse
 6. python 安装PyQt5: sudo apt-get install python3-pyqt5
 7. ssh server
@@ -62,9 +68,45 @@
     - git clone git仓库地址 --depth=1 下载最新的一个版本而不是所有版本
     - git config --global http.proxy 'socks5://127.0.0.1:1080'
         git config --global https.proxy 'socks5://127.0.0.1:1080'
-
+16. pip 源设置
 https://pypi.tuna.tsinghua.edu.cn/simple some-package
 
 ## 安装中文输入法
 
 [fctix设置](https://www.cnblogs.com/voyagee/p/6898054.html)
+
+## 启动项
+
+windows-10 + ubuntu-16双系统，切换至windows之后再重启ubuntu引导项丢失:
+
+解决方案：使用easyuefi增加引导项
+
+![easyuefi](imgs/easyuefi.jpg)
+
+## 添加自动启动项
+
+gnome-session-properties：打开 Startup Applications Preferences
+
+## ubuntu
+
+- bin: ~/bin
+- path: ~/.profile
+- desktop: /home/yee/.local/share/applications
+
+## pytorch
+
+[ref](https://pytorch.org/get-started/previous-versions/)
+
+```python
+axel -n 16 https://download.pytorch.org/whl/cu100/torch-1.3.0%2Bcu100-cp36-cp36m-linux_x86_64.whl
+
+axel -n 16 https://download.pytorch.org/whl/cu100/torchvision-0.4.1%2Bcu100-cp36-cp36m-linux_x86_64.whl
+
+pip install xxx.whl
+```
+
+## tensorflow
+
+pip install tensorflow-gpu==2.0.0
+
+

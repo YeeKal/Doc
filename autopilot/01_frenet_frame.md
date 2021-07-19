@@ -162,4 +162,6 @@ void CartesianFrenetConverter::frenet_to_cartesian(
 - code
 - project
 - paper
+    - [Optimal Trajectory Generation for Dynamic Street Scenarios in a Frenet Frame](http://vigir.missouri.edu/~gdesouza/Research/Conference_CDs/IEEE_ICRA_2010/data/papers/1650.pdf)
+        - [blog](https://fjp.at/posts/optimal-frenet/)
 

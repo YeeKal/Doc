@@ -4,6 +4,51 @@ categories: autopilot
 tags: autopilot
 date: 2021-04-27
 ---
+
+## 车体
+
+- 传感器
+    - 相机
+    - 激光雷达
+    - 毫米波雷达
+    - 超声波雷达
+
+## 感知
+
+- 传感器融合
+    - 雷达感知
+    - 视觉感知
+    - 激光雷达感知
+
+- 地图
+- 定位
+
+- 决策
+- 规划
+- 控制
+
+
+- [工程实践中，目标检测为何要加目标追踪？](https://zhuanlan.zhihu.com/p/70268783)
+
+## 视觉感知
+
+- 视觉：
+    - 传统视觉：特征，统计
+    - 深度学习：
+- 视觉感知：
+    - 传统视觉：车道线B-Spline拟合/DPM物体检测
+    - 深度学习：yolo/ssd/xpilot
+
+
+
+SFM:
+
+dtam: 从时序图估计出深度
+MVDepthNet:单目深度估计
+atlas: [atlas](https://github.com/magicleap/Atlas)
+
+
+
 ## requirement
 
 - 熟悉路径规划相关算法(A*,RRT,Lattice planner等),了解机器人决策系统,如决策状态机、决策树、专家系统,强化学习,POMDP
@@ -12,6 +57,13 @@ date: 2021-04-27
 - 自动驾驶决策控制与运动规划 Decision Making And Motion Planning, DMAP
 - 模型预测控制: model predictive control
 - POMDP: Partially Observable Markov Decision Processes
+
+## 规控
+
+- 全局规划
+- 决策：换道/超车/减速
+- 运动规划
+- 控制：根据当前状态跟踪轨迹
 
 ## 路径规划
 
