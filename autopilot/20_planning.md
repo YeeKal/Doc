@@ -7,9 +7,7 @@ date: 2021-07-06
 
 ## hybrid a*
 
-- [blog](https://blog.habrador.com/2015/11/explaining-hybrid-star-pathfinding.html)
-    - [explain code](https://github.com/Habrador/Self-driving-vehicle)
-- [Practical Search Techniques in Path Planning for Autonomous Driving](Practical Search Techniques in Path Planning for Autonomous Driving)
+
 
 ## teb
 
