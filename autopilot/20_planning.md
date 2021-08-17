@@ -13,6 +13,8 @@ date: 2021-07-06
 
 - [Efficient trajectory optimization using a sparse model]()
 
+
+
 ## ref
 
 - blog
