@@ -19,6 +19,26 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build/bin)
 SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 ```
 
+target_include_directories()：指定目标包含的头文件路径, 自己所依赖的头文件放在那
+
+target_link_libraries()：指定目标链接的库， 所依赖的库文件
+
+target_compile_options()：指定目标的编译选项
+
+include_directories(): 全局包含，向下传递
+
+目标 由 add_library() 或 add_executable() 生成。
+
+关键字说明：
+
+1. private: 不包含链接库所依赖的模块，只能使用链接库所提供的功能
+2. public: 链接库所依赖的模块都会被包含进来
+3. interface: 链接库没有使用但是链接目标需要使用链接库所依赖的头文件
+
+
+- [cmake 之 PUBLIC|PRIVATE|INTERFACE 关键字](https://ravenxrz.ink/archives/e40194d1.html)
+
+
 ## 单目录源文件
 
 ```cmake

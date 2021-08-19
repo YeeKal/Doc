@@ -140,7 +140,18 @@ B_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} x(t) \sin n t d t
 
 ## 离散空间
 
-轨迹优化是一个求解泛函优化的问题。可以将该问题离散化。转化为一个函数优化的问题，降低求解难度。（泛函优化和函数优化）即直接求解轨迹点而不关注该函数的表达式。把一个微分方程转化为有m*n（维度*控制点）个优化参数的优化问题。以下是两种常用的微分/积分近似方法。
+![trajectory_optimization2](pics/trajectory_optimization2.png)
+
+
+轨迹优化是一个求解泛函优化的问题。可以将该问题离散化。转化为一个函数优化的问题，降低求解难度。（泛函优化和函数优化）即直接求解轨迹点而不关注该函数的表达式。把一个微分方程转化为有m*n（维度*控制点）个优化参数的优化问题。
+
+微分方程和离散法对比：基于微分方程的变分法是更加精确的解法，但是求解通常比较困难，特别在复杂问题以及有约束的情况下。而离散优化的方法则更加通用，降低求解复杂度，虽然牺牲了一些精确性（由于插值的存在，曲线可能不是最优）。
+![trajectory_optimization3](pics/trajectory_optimization3.png)
+
+
+
+
+两种常用的微分/积分近似方法。
 
 **Trapezoidal Collocation**：
     $$\min _{u(t)} \int_{t_{0}}^{t_{N}} u^{2}(\tau) d \tau \approx \min _{u_{0} . . u_{N}} \sum_{k=0}^{N-1} \frac{1}{2}\left(h_{k}\right)\left(u_{k}^{2}+u_{k+1}^{2}\right) \\
@@ -204,8 +215,6 @@ h_{k}=t_{k+1}-t_{k} \\
 ## ref
 
 - blog 
-    - [参数化最优控制 约束-控制-图形参数](https://blog.csdn.net/Neo11111/article/details/105960645)
-    - [基于多项式螺旋曲线的轨迹优化](https://blog.csdn.net/github_39582118/article/details/117754864?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-1.control&spm=1001.2101.3001.4242)
     - [trajectory optimization slides](http://www.matthewpeterkelly.com/tutorials/trajectoryOptimization/cartPoleCollocation.svg#frame1129)
         - [OptimTraj-maTLAB](https://github.com/MatthewPeterKelly/OptimTraj/tree/master/demo/cartPole)
         - [2017-An Introduction to Trajectory Optimization: How to Do Your Own Direct Collocation]()
