@@ -1,15 +1,71 @@
 ---
-title: 轨迹优化(trajectory optimization) 
+title: 关于轨迹优化(trajectory optimization) 
 categories: motion planning
 tags: planning
-date: 2021-08-17
+date: 2021-08-19
 ---
 
-## 2003-Reactive Nonholonomic Trajectory Generation via Parametric Optimal Control
+轨迹优化，并不太准确，这里的重点在轨迹上，即怎么产生一条轨迹。
 
-**Abstract**
+首先，在讨论轨迹之前，定义一下什么是路径。从运动规划角度，路径是由一系列离散位置点组成的：
 
-1. parametric trajectory reduce computation time, at the cost os potentially introducing suboptimality
+$$\mathcal{P}=\{(x,)\}, x\in \mathcal{R}^n$$
+
+而轨迹在其基础上增加了动力学因子，这样不仅决定了机器人行走的路径形状，也决定了时序，即什么时候到了哪个位置。
+
+$$\mathcal{J}=\{(x,v,a,...)\}, x\in \mathcal{R}^n\\
+\begin{align}x&: 位置  \\
+               v&: 速度 \\
+               a&: 加速度\end{align}$$
+
+据个人观察总结，关于轨迹的讨论有三个方向：
+
+1. 根据已有路径点（或者是轨迹点）生成轨迹（轨迹拟合，轨迹通过路经点，不改变路径形状）
+2. 直接生成轨迹
+3. 根据已有路经点，对其进行优化，并可能改变路经形状（轨迹优化）
+
+## 根据已有点生成轨迹——轨迹拟合
+
+#### 根据离散轨迹点生成连续轨迹
+
+![trajectory_optimization0](pics/trajectory_optimization0.png)
+
+先考虑二维平面两个轨迹点的轨迹拟合：
+
+$$(x_0^1,x_0^2,v_0^1,v_0^2),\quad (x_1^1,x_1^2,v_1^1,v_1^2)$$
+
+常用的方法是通过多项式进行拟合。在二维平面上有两个维度，每个维度都用一个多项式。这里每个维度有四个已知变量，可以用两个三次多项式求出解析解。
+
+$$s_1=a_1+b_1t+c_1t^2+d_1t^3, t\in [0,T]\\
+s_2=a_2+b_2t+c_2t^2+d_2t^3, t\in [0,T]\\
+\begin{bmatrix}s_1(0) \\s_1(T) \\s_1'(0) \\s_1'(T) \\
+s_2(0) \\s_2(T) \\s_2'(0) \\s_2'(T) \end{bmatrix} \begin{bmatrix}a_1 \\a_1+b_1T+c_1T^2+d_1T^3 \\
+b_1 \\b_1+2c_1T+3d_1T^2 \\
+a_2 \\a_2+b_2T+c_2T^2+d_2T^3 \\
+b_2 \\b_2+2c_2T+3d_2T^2  \end{bmatrix} = \begin{bmatrix}x_0^1 \\x_1^1 \\v_0^1 \\v_1^1 \\
+x_0^2 \\x_1^2 \\v_0^2 \\v_1^2 \\ \end{bmatrix} $$
+
+如果有多个数据点，则每两点之间拟合一个多项式。
+
+上述的应用一般是根据少量的轨迹点拟合之后，插值得到更加细粒度的轨迹点。
+
+这里能得出解析解是因为路经点的速度已知，若路经点的速度未知，并只给出首尾的速度边界条件，则多项式会有冗余参数，无法求得解析解，这时就可以加入优化目标，比如
+
+$$J=min \sum a^2$$
+
+事实上若s为更高阶的多项式，优化目标也会更加丰富：
+
+$$\begin{align}J&=min \sum a^2 \quad &a=s'' \quad s\in polynominal^3 \\ 
+J&=min \sum jerk^2 \quad &jerk=s''' \quad s\in polynominal^5\\
+J&=min \sum snap^2 \quad &snap=s'''' \quad s\in polynominal^7
+\end{align}$$
+
+
+
+
+
+
+
 
 
 
@@ -58,26 +114,7 @@ $$\kappa=\kappa(s)  \\
 
 ![trajectory_optimization1](pics/trajectory_optimization1.png)
 
-## 变分法
 
-设优化目标是使加速度的积分最小:
-
-$$J=\int_{0}^{1} u^{2}(\tau) d \tau=\int_{0}^{1} \ddot{x}^{2}(\tau) d \tau$$
-
-其对应泛函：
-
-$$\mathcal{L}(x, \dot{x}, \ddot{x}|t)=\mathcal{L}(\ddot{x}|t)=\ddot{x}^{2}$$
-
-根据E-L(欧拉拉格朗日)方程:
-    $$\frac{\partial \mathcal{L}}{\partial x}-\frac{d}{dt}(\frac{\partial \mathcal{L}}{\partial x'})-\frac{d^2}{dt^2}(\frac{\partial \mathcal{L}}{\partial x''}) =0$$
-可推导出x具有三次多项式的形式：
-$$x^{(4)}=0$$
-
-同理可以求得:
-
-- 3次多项式：最小加速度
-- 5次多项式：最小jerk
-- 7次多项式： 最小snapw
 
 ## 轨迹拟合
 
