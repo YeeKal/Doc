@@ -26,8 +26,6 @@ $$\mathcal{J}=\{(x,v,a,...)\}, x\in \mathcal{R}^n\\
 
 ## 根据已有点生成轨迹——轨迹拟合
 
-#### 根据离散轨迹点生成连续轨迹
-
 ![trajectory_optimization0](pics/trajectory_optimization0.png)
 
 先考虑二维平面两个轨迹点的轨迹拟合：
@@ -60,24 +58,122 @@ J&=min \sum jerk^2 \quad &jerk=s''' \quad s\in polynominal^5\\
 J&=min \sum snap^2 \quad &snap=s'''' \quad s\in polynominal^7
 \end{align}$$
 
+## 直接生成轨迹——轨迹规划
+
+这里讨论的是给定起点和终点状态直接生成连续的轨迹，而不依赖中间路经点。
+
+轨迹规划是个人约定，业界不一定是这个含义
+
+![point_traj](pics/point_traj.png)
 
 
+> 为什么需要轨迹
 
+考虑上图(a)中平面两个点$s_1,s_2$, 如果没有其他障碍物，则直接直线相连就是最优路径. 而对于图(b)中的平面小车，假设其可以转向，起始状态为：$s_1=(x^1_1,x^2_1,\theta_1=0), s_1=(x^1_2,x^2_2,\theta_2=0)$。对于单纯的路径规划而言这个小车的规划结果跟图(a)中的质点是一样的，直接直线相连。但是在实际中这样的轨迹小车是没办法走的，小车的横向运动必须依赖于前轮纵向转弯，即小车三个维度的运动（纵向，横向，旋转）是耦合的，这种耦合使得小车只能走类似上图中绿色线条的轨迹而不能走一个斜线。
 
+所谓的这种"耦合"性的约束，指的就是机器人的动力学方程(这种耦合有更加专业的描述，比如非完整性约束，欠驱动)，或者控制系统中的状态方程。比如质点的运动模型是最简单的:
 
+$$\begin{bmatrix} \dot{x} \\ \dot{v} \end{bmatrix} = \begin{bmatrix} v \\ a \end{bmatrix} \quad \underrightarrow{\text{对于二维}} \quad
+\begin{bmatrix} \dot{x^1} \\ \dot{x^2} \\ \dot{v^1} \\ \dot{v^2} \end{bmatrix}=\begin{bmatrix} v^1 \\ v^2 \\ a^1 \\ a^2 \end{bmatrix}$$
 
+车辆常用的自行车模型可以看出其耦合性：
 
+$$\begin{align}
+ \dot{x} &=v\cdot cos(\theta)  \\
+ \dot{y} &=v\cdot sin(\theta)  \\
+ \dot{\theta} &=\frac{v \cdot tan(\phi)}{L}  \\
+ \dot{v} &= a
+\end{align}$$
 
+而轨迹优化的目的就是使得计算的结果满足动力学方程，这样才是一条机器人能走的路。
 
-## optimization
+> 轨迹：运动规划 vs 最优控制
 
+上述规划出满足动力学方程的轨迹的过程也是最优控制的范畴。最优控制是在动力系统的约束下在特定的时间内，找到使特定的损失函数最优的控制过程，而这个过程在机器人领域实际上就是运动轨迹（当然最优控制的应用范围更加广泛，这只是其概念覆盖的一小部分，比如最优控制也可以用在电路设计等系统中）。比如我们要控制一个倒立摆，实际上就是找到摆球的轨迹的过程:
 
-- [polytraj](https://github.com/jsford/PolyTraj)
-- [Trajectory Optimization motion planning](https://github.com/bestvibes/motion-planner)
-- [Convex Optimization for motion plannin](https://github.com/Theochiro/motion-planning)
-- [trajopt](https://rll.berkeley.edu/trajopt/doc/sphinx_build/html/)
+$$q_1: \text{小车移动距离}\\
+q_2: \text{摆球偏角}$$
+![pics/cart_pole](pics/cart_pole.png)
 
-路径: 可以称为一条曲线，但是这条曲线本身并不依赖时间因子。同样的一条曲线可以以不同的速度运动。因此这条曲线上面的导数并不代表速度，如果在二维(X-Y), 这个导数代表了不同纬度速度的比值,而不是速度本身。
+\* 图片引用自[trajectory optimization by Matthew Kelly](http://www.matthewpeterkelly.com/tutorials/trajectoryOptimization/cartPoleCollocation.svg#frame1100)
+
+在部分机器人运动的问题上最优控制和轨迹优化指的是同样的过程，虽然两者的覆盖范围并没有完全重叠，但是在本小节所讨论的机器人运动轨迹上是相同的。
+
+既然运动规划的结果并不能让机器人实际行走，而最优控制/轨迹优化能直接计算出符合动力学的轨迹，那么运动规划存在的意义是什么。
+
+![point_traj2.png](pics/point_traj2.png)
+
+考虑在规划中加入障碍物。上图（a）中通过常用的比如搜索或采样的方法可以很快找到一条路径。而图（b）中如果直接采用最优控制的方法，则不得不在约束条件中加入障碍物约束。而最优控制是一个数值计算和优化的过程，如果这样的障碍物比较多(如图c),那么这个最优化过程通常很耗时间或者很难解得出来，但这种障碍物数量和分布情况在运动规划问题中是很常见，也是也比较容易处理的。因此通常见到的最优控制在计算的时候很少会有复杂障碍物的约束，而运动规划则很少见到没有障碍物的问题。总结一下可以看出，运动规划过程考虑更多的同时也比较善于处理的是外界对自身运动的限制，这也是运动规划中通常把机器人看成质点，把规划空间抽象成状态空间的原因。而最优控制更加关注自身动力学的限制，通常是一段较短距离，假设不会发生障碍物碰撞的优化过程，有时也把这个过程叫做局部规划。当然运动规划中也有动力学约束的规划的概念，比如hybrid a*, drnamic rrt等，这些一般是针对低维的平面小车或者是空间飞行器。而对更高阶维度的机械臂，通常采用先规划出路径，在通过轨迹拟合的方法添加时间戳的方式，这也是上一小节讨论的范围。
+
+> 最优控制
+
+对于一个机器人，约定了初始状态和终点状态以及定义了动力学方程之后，符合约束的轨迹通常会有很多条，即轨迹有冗余。有冗余就可以加入优化目标求得最优轨迹。这是最优控制比较简单的理解。
+
+![trajectory_optimization1](pics/trajectory_optimization1.png)
+\* 图片引用自[trajectory optimization by Matthew Kelly](http://www.matthewpeterkelly.com/tutorials/trajectoryOptimization/cartPoleCollocation.svg#frame1100)
+
+上图中优化目标的积分项是轨迹优化中常用的指标，这在离散空间里被定义成了累加：
+$$\begin{align}J&=\int a^2\approx min \sum a^2 \quad &a=s'' \\ 
+J&=\int jerk^2\approx min \sum jerk^2 \quad &jerk=s''' \\
+J&=\int snap^2\approx min \sum snap^2 \quad &snap=s'''' \end{align}$$
+
+根据最优控制理论，一般有两种常用的解法：变分法和配点法(variational method and collocation methods, 中文翻译名不一定对)。
+
+变分法是根据微分方程以及欧拉拉格朗日方程(E-L)直接解出目标函数最优的函数形式，在根据边界条件求得函数参数得出最终的函数方程。
+
+比如假设优化目标是使加速度的积分最小:
+
+$$J=\int_{0}^{1} u^{2}(\tau) d \tau=\int_{0}^{1} \ddot{x}^{2}(\tau) d \tau$$
+
+其对应泛函：
+
+$$\mathcal{L}(x, \dot{x}, \ddot{x}|t)=\mathcal{L}(\ddot{x}|t)=\ddot{x}^{2}$$
+
+根据E-L(欧拉拉格朗日)方程:
+    $$\frac{\partial \mathcal{L}}{\partial x}-\frac{d}{dt}(\frac{\partial \mathcal{L}}{\partial x'})-\frac{d^2}{dt^2}(\frac{\partial \mathcal{L}}{\partial x''}) =0$$
+可推导出x具有三次多项式的形式：
+$$x^{(4)}=a_0\\
+x=a+bt+ct^2+dt^3$$
+
+在根据边界条件求得$a,b,c,d$.
+
+同理总结为:
+
+- 3次多项式：最小加速度
+- 5次多项式：最小jerk
+- 7次多项式： 最小snap
+
+这也是上一小节所讨论的采用多项式拟合的理论支撑。
+
+> collocation methods 配点法
+
+其实我想把这个方法叫做参数优化法。这种方法不关注具体的函数形式，直接假设轨迹由n个点组成，把这n个点当作参数，通过最优化方法求出n个点的具体值。这里的技巧是把优化目标中的积分变成累加，把约束中的状态方程改成积分的近似计算公式。
+
+$$\begin{align}
+\text{目标函数}&\quad \quad  \int_{t_{0}}^{t_{F}} w(\tau) d \tau \quad \approx \sum_{k=0}^{N-1} \frac{h_{k}}{2}\left(w_{k}+w_{k+1}\right)   \\
+\text {状态方程}&\quad \quad \begin{gathered}
+  \quad \dot{\boldsymbol{x}}(t)=\boldsymbol{f}(t, \boldsymbol{x}(t), \boldsymbol{u}(t)) \\
+\Downarrow  \\
+\boldsymbol{x}\left(t_{k+1}\right)=\boldsymbol{x}\left(t_{k}\right)+\int_{t_{k}}^{t_{k+1}} \boldsymbol{f}(\tau, \boldsymbol{x}(\tau), \boldsymbol{u}(\tau)) d \tau \\
+\approx \\
+\boldsymbol{x}_{k+1}=\boldsymbol{x}_{k}+\frac{h_{k}}{2}\left(\boldsymbol{f}_{k+1}+\boldsymbol{f}_{k}\right)
+\end{gathered} \end{align}$$
+
+上述近似采用的是简单的梯形公式，当然还有其他的近似方法，比如Simpson积分公式。
+
+配点法不需要求复杂的微分方程，这能很好地处理复杂系统以及有约束的问题。同时这种方法不拘泥于函数的形式，能比较方便地应用于轨迹优化中。
+
+## 根据已有路经点进行优化
+
+在这一小节中，对路经点的优化会改变路经点本身的数值。
+
+其实在上一小节中从无到有的过程已经体现了通过改变路径点进行优化的过程了（比如把原始路径当作初值扔到上述的优化问题中）。但是也正如前所述，上述的方法难以处理复杂的障碍物的情况。对于简单的障碍物，可以用方程表述的，比如平面中的一个圆，可以列出与圆碰撞检测的方程，并把该方程放到约束条件中，从而计算出无碰撞的路径。但是当障碍物无法用方程描述，或者方程非常复杂的时候，就难以找到关于障碍物距离的梯度，也就难以对问题进行优化。因此这里的关键是如何对障碍物相关的代价进行定义，以方便方程能够进行梯度优化。
+
+目前了解到的三个知名度较高的轨迹优化的方法：CHOMP， STOMP， TrajOpt， 其核心思路都是在上一小节的基础上增加了对障碍物的定义，然后通过梯度进行优化。另外这三种方法也都是“标准的”在构型空间里对轨迹进行优化的方法，即所有的动力学方程都被简化为质点模型，这也是运动规划比较通用的形式，也是更加适合机械臂的方法（假设机械臂各个关节的运动相互独立）。
+
+## 一些想法
+
+轨迹: 可以称为一条曲线，但是这条曲线本身并不依赖时间因子。同样的一条曲线可以以不同的速度运动。因此这条曲线上面的导数并不代表速度，如果在二维(X-Y), 这个导数代表了不同纬度速度的比值,而不是速度本身。
 
 曲线：曲线需要有规律。这个规律是指可以用有限个参数的函数来表示，这样才能约束点与点之间的关系。另一方面，为了满足运动学特性，需要曲线n阶连续(速度，加速度...),所以一般会选择多项式来进行曲线拟合。曲线需要满足一些条件，比如路经点的位置，速度，加速度等作为约束。这样的曲线可能有无数条，因此再定义一个目标函数(比如，路径最短，能量最小等)转化为一个优化问题，求出在该目标函数下最优的一条曲线。
 
@@ -90,169 +186,6 @@ $$\kappa=\kappa(s)  \\
 
 尺度: 不同尺度相同位置的点会得到相同的曲线， 这样会造成原本只需首尾是曲线中间大部分是直线的解没办法得到。即曲线只适合较短路径的拟合？(受制于参数方程的本身特性)
 
-避障：如何避障？这也决定了参数方程拟合的方式适合短距离无障碍物的假设空间。
-
-规划 or 轨迹优化: 这种方法更适合在有了路径点之后，对路径进行轨迹化。
-
-- 为路径添加时间序列
-- 基于优化的规划
-- 轨迹优化(会改变路径点)
-
-
-轨迹:
-
-最优控制和轨迹优化： 都需要状态方程来联系
-
-机器人运动规划需要考虑障碍物，平面小车无障碍物下可以转化为最优控制问题，但如果有障碍物则要么采用现有路径，在根据路径生成轨迹的方式，要么采用chomp/stomp/trajopt等方式。
-
-## 轨迹优化
-
-- 约束： 系统动力学。边界条件
-- 可行解: 满足约束的解
-- 目标函数: 包含边界项和积分项
-- 最优解: 最小化目标函数的解
-
-![trajectory_optimization1](pics/trajectory_optimization1.png)
-
-
-
-## 轨迹拟合
-
-通过连续曲线连接路经点
-
-维度：拟合的曲线参数组数跟数据点的维度一致
-
-**polynomials**
-
-三次多项式曲线： $\theta(t)=a_0+a_1t+a_2t^2+a_3t^3$
-
-边界条件:
-
-$$\begin{bmatrix}\theta_i \\ \theta_{i+1} \\ \dot\theta_i \\ \dot\theta_{i+1}  \end{bmatrix} =
-\begin{bmatrix} 1 & 0& 0&0 \\
-     1 & \Delta t& \Delta t^2&\Delta t^3 \\
-      0 & 1& 0&0 \\
-     0 & 1& 2\Delta t& 3\Delta t^2 
- \end{bmatrix}  \begin{bmatrix} a_0 \\a_1\\a_2\\a_3\end{bmatrix}$$
-
-保证速度连续，有唯一解
-
-多个数据点 -> 曲线拟合：
-
-- n个数据点， m维度
-- (n-1)*m条曲线， 4*(n-1)*m个
-- 首尾边界条件 + 中间边界条件 + 中间连续条件 = 4*m+2*(n-2)*m+2*(n-2)*m=4*(n-1)*m
-
-**正交多项式**
-
-根据变分法中求得的微分方程，需要根据具体条件解出该方程的参数。这里可以使用正交多项式来求解。
-
-两类常用正交多项式：
-    
-$$\begin{aligned}
-\text{基于Taylor展开的指数多项式}\quad &1, t, t^{2}, t^{3}, \ldots\\
-\text{基于Fourier展开的三角多项式}\quad&1, \sin t, \cos t, \sin 2 t, \cos 2 t, \ldots
-\end{aligned}$$
-
-- 多项式轨迹拟合:
-    - 最小加速度： $x(t)=a_{0}+a_{1} t+a_{2} t^{2}+a_{3} t^{3}$
-    - 最小jerk: $\quad x(t)=a_{0}+a_{1} t+a_{2} t^{2}+a_{3} t^{3}+a_{4} t^{4}+a_{5} t^{5}$
-    - 最小snap: $\quad x(t)=a_{0}+a_{1} t+a_{2} t^{2}+a_{3} t^{3}+a_{4} t^{4}+a_{5} t^{5}+a_{6} t^{6}+a_{7} t^{7}$
-- 三角函数轨迹拟合:
-    - 正弦轨迹: $ x(t)=a_{0}+a_{1} \cos a_{2} t+a_{3} \sin a_{2} t $
-    - 摆线轨迹: $ x(t)=a_{0}+a_{1} t-a_{2} \sin a_{3} t $
-    - Fourier轨迹: $x(t)=\frac{A_{0}}{2}+\sum_{n=1}^{\infty}\left[A_{n} \cos n t+B_{n} \sin n t\right]$
-
-    $$\begin{gathered}
-A_{0}=\frac{1}{\pi} \int_{-\pi}^{\pi} x(t) d t \\
-A_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} x(t) \cos n t d t \\
-B_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} x(t) \sin n t d t
-\end{gathered}$$
-
-## 数值积分
-
-插值型数值积分方法：
-
-1. 梯形公式： $I_{1}(f)=\frac{b-a}{2}(f(a)+f(b))$
-2. Simspon公式: $I_{2}(f)=\frac{b-a}{6}\left(f(a)+4 f\left(\frac{a+b}{2}\right)+f(b)\right)$
-3. cote
-4. gauss
-5. 复化Simspon
-6. ....
-
-## 离散空间
-
-![trajectory_optimization2](pics/trajectory_optimization2.png)
-
-
-轨迹优化是一个求解泛函优化的问题。可以将该问题离散化。转化为一个函数优化的问题，降低求解难度。（泛函优化和函数优化）即直接求解轨迹点而不关注该函数的表达式。把一个微分方程转化为有m*n（维度*控制点）个优化参数的优化问题。
-
-微分方程和离散法对比：基于微分方程的变分法是更加精确的解法，但是求解通常比较困难，特别在复杂问题以及有约束的情况下。而离散优化的方法则更加通用，降低求解复杂度，虽然牺牲了一些精确性（由于插值的存在，曲线可能不是最优）。
-![trajectory_optimization3](pics/trajectory_optimization3.png)
-
-
-
-
-两种常用的微分/积分近似方法。
-
-**Trapezoidal Collocation**：
-    $$\min _{u(t)} \int_{t_{0}}^{t_{N}} u^{2}(\tau) d \tau \approx \min _{u_{0} . . u_{N}} \sum_{k=0}^{N-1} \frac{1}{2}\left(h_{k}\right)\left(u_{k}^{2}+u_{k+1}^{2}\right) \\
-    \int_{t_{0}}^{t_{F}} w(\tau, \boldsymbol{x}(\tau), \boldsymbol{u}(\tau)) d \tau \quad \approx \sum_{k=0}^{N-1} \frac{1}{2} h_{k} \cdot\left(w_{k}+w_{k+1}\right)$$
-
-system dynamics:
-
-$$\begin{aligned}
-\dot{\boldsymbol{x}} &=\boldsymbol{f}, \\
-\int_{t_{k}}^{t_{k+1}} \dot{\boldsymbol{x}} d t &=\int_{t_{k}}^{t_{k+1}} \boldsymbol{f} d t, \\
-\boldsymbol{x}_{k+1}-\boldsymbol{x}_{k} & \approx \frac{1}{2} h_{k} \cdot\left(\boldsymbol{f}_{k+1}+\boldsymbol{f}_{k}\right)
-\end{aligned}$$
-
-**Simpspon**
-
-$$\int_{t_{0}}^{t_{F}} w(\tau) d \tau \approx \sum_{k=0}^{N-1} \frac{h_{k}}{6}\left(w_{k}+4 w_{k+\frac{1}{2}}+w_{k+1}\right)$$
-
-system dynamics
-$$\begin{aligned}
-&x_{k+1}-x_{k}=\frac{1}{6} h_{k}\left(\boldsymbol{f}_{k}+4 \boldsymbol{f}_{k+\frac{1}{2}}+\boldsymbol{f}_{k+1}\right) \\
-&x_{k+\frac{1}{2}}=\frac{1}{2}\left(x_{k}+x_{k+1}\right)+\frac{h_{k}}{8}\left(\boldsymbol{f}_{k}-\boldsymbol{f}_{k+1}\right)
-\end{aligned}$$
-
-**曲线插值**
-
-为了从控制点恢复连续轨迹，需要进行曲线插值。
-
-梯形配置法(Trapezoidal Collocation)求解：
-
-$$\begin{gathered}
-\boldsymbol{f}(t)=\dot{\boldsymbol{x}}(t) \approx \boldsymbol{f}_{k}+\frac{\tau}{h_{k}}\left(\boldsymbol{f}_{k+1}-\boldsymbol{f}_{k}\right) \\
-\boldsymbol{x}(t)=\int \dot{\boldsymbol{x}}(t) d \tau \approx \boldsymbol{c}+\boldsymbol{f}_{k} \tau+\frac{\tau^{2}}{2 h_{k}}\left(\boldsymbol{f}_{k+1}-\boldsymbol{f}_{k}\right) \\
-\qquad \boldsymbol{x}(t) \approx \boldsymbol{x}_{k}+\boldsymbol{f}_{k} \tau+\frac{\tau^{2}}{2 h_{k}}\left(\boldsymbol{f}_{k+1}-\boldsymbol{f}_{k}\right)
-\end{gathered}$$
-
-Simpson配置法(Hermite–Simpson Collocation)求解:
-
-$$\tau=t-t_{k}  \\
-h_{k}=t_{k+1}-t_{k} \\
-\boldsymbol{u}(t)=\frac{2}{h_{k}^{2}}\left(\tau-\frac{h_{k}}{2}\right)\left(\tau-h_{k}\right) \boldsymbol{u}_{k}-\frac{4}{h_{k}^{2}}(\tau)\left(\tau-h_{k}\right) \boldsymbol{u}_{k+\frac{1}{2}}+\frac{2}{h_{k}^{2}}(\tau)\left(\tau-\frac{h_{k}}{2}\right) \boldsymbol{u}_{k+1}    \\
-\begin{aligned}
-&\boldsymbol{x}(t)=\int \dot{\boldsymbol{x}} d t \\
-&=\int\left[\boldsymbol{f}_{k}+\left(-3 \boldsymbol{f}_{k}+4 \boldsymbol{f}_{k+\frac{1}{2}}-\boldsymbol{f}_{k+1}\right)\left(\frac{\tau}{h_{k}}\right)+\left(2 \boldsymbol{f}_{k}-4 \boldsymbol{f}_{k+\frac{1}{2}}+2 \boldsymbol{f}_{k+1}\right)\left(\frac{\tau}{h_{k}}\right)^{2}\right] d t
-\end{aligned}   \\
-\begin{aligned}
-\boldsymbol{x}(t)=& \boldsymbol{x}_{k}+\boldsymbol{f}_{k}\left(\frac{\tau}{h_{k}}\right)+\frac{1}{2}\left(-3 \boldsymbol{f}_{k}+4 \boldsymbol{f}_{k+\frac{1}{2}}-\boldsymbol{f}_{k+1}\right)\left(\frac{\tau}{h_{k}}\right)^{2} \\
-&+\frac{1}{3}\left(2 \boldsymbol{f}_{k}-4 \boldsymbol{f}_{k+\frac{1}{2}}+2 \boldsymbol{f}_{k+1}\right)\left(\frac{\tau}{h_{k}}\right)^{3}
-\end{aligned}$$
-
-## 
-
-- mesh refinement: 
-    - h-method: increase number of segments
-    - p-method: increase polynomial order
-
-
-
-
-
 ## ref
 
 - blog 
@@ -262,7 +195,10 @@ h_{k}=t_{k+1}-t_{k} \\
     - [Transcription Methods for Trajectory Optimization](https://arxiv.org/pdf/1707.00284.pdf)
     - [轨迹优化04. 轨迹拟合 & 轨迹插值](https://zhuanlan.zhihu.com/p/342012866)
 - project
-    
+    - [polytraj](https://github.com/jsford/PolyTraj)
+    - [Trajectory Optimization motion planning](https://github.com/bestvibes/motion-planner)
+    - [Convex Optimization for motion plannin](https://github.com/Theochiro/motion-planning)
+    - [trajopt](https://rll.berkeley.edu/trajopt/doc/sphinx_build/html/)
 - course
     - [台大机器人学之运动学——林沛群-b站](https://www.bilibili.com/video/BV1v4411H7ez)
 - paper

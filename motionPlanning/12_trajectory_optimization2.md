@@ -1,54 +1,9 @@
 ---
-title: 轨迹优化(trajectory optimization) 
+title: 轨迹优化之轨迹规划
 categories: motion planning
 tags: planning
 date: 2021-08-17
 ---
-
-## 2003-Reactive Nonholonomic Trajectory Generation via Parametric Optimal Control
-
-**Abstract**
-
-1. parametric trajectory reduce computation time, at the cost os potentially introducing suboptimality
-
-
-
-## optimization
-
-
-- [polytraj](https://github.com/jsford/PolyTraj)
-- [Trajectory Optimization motion planning](https://github.com/bestvibes/motion-planner)
-- [Convex Optimization for motion plannin](https://github.com/Theochiro/motion-planning)
-- [trajopt](https://rll.berkeley.edu/trajopt/doc/sphinx_build/html/)
-
-路径: 可以称为一条曲线，但是这条曲线本身并不依赖时间因子。同样的一条曲线可以以不同的速度运动。因此这条曲线上面的导数并不代表速度，如果在二维(X-Y), 这个导数代表了不同纬度速度的比值,而不是速度本身。
-
-曲线：曲线需要有规律。这个规律是指可以用有限个参数的函数来表示，这样才能约束点与点之间的关系。另一方面，为了满足运动学特性，需要曲线n阶连续(速度，加速度...),所以一般会选择多项式来进行曲线拟合。曲线需要满足一些条件，比如路经点的位置，速度，加速度等作为约束。这样的曲线可能有无数条，因此再定义一个目标函数(比如，路径最短，能量最小等)转化为一个优化问题，求出在该目标函数下最优的一条曲线。
-
-参数方程(以二维平面举例)：若只关注曲线，没有速度，加速度，则位置以s为参数进行表示。
-
-曲率: 描述了几何体的弯曲程度。在二维平面上，曲率表示了曲线上某个点的切线方向角对弧长的转动率。曲率代表了曲线本身的特性。
-
-$$\kappa=\kappa(s)  \\
-\theta=\int \kappa(s)ds$$
-
-尺度: 不同尺度相同位置的点会得到相同的曲线， 这样会造成原本只需首尾是曲线中间大部分是直线的解没办法得到。即曲线只适合较短路径的拟合？(受制于参数方程的本身特性)
-
-避障：如何避障？这也决定了参数方程拟合的方式适合短距离无障碍物的假设空间。
-
-规划 or 轨迹优化: 这种方法更适合在有了路径点之后，对路径进行轨迹化。
-
-- 为路径添加时间序列
-- 基于优化的规划
-- 轨迹优化(会改变路径点)
-
-
-轨迹:
-
-最优控制和轨迹优化： 都需要状态方程来联系
-
-机器人运动规划需要考虑障碍物，平面小车无障碍物下可以转化为最优控制问题，但如果有障碍物则要么采用现有路径，在根据路径生成轨迹的方式，要么采用chomp/stomp/trajopt等方式。
-
 ## 轨迹优化
 
 - 约束： 系统动力学。边界条件

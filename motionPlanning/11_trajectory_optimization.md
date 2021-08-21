@@ -1,21 +1,9 @@
 ---
-title: 轨迹优化(trajectory optimization) 
+title: 轨迹优化之轨迹拟合
 categories: motion planning
 tags: planning
 date: 2021-08-17
 ---
-## trajopt
-
-
-## chomp
-
-functional gradient: 泛函梯度
-
-$$\bar{\nabla} u[\xi]=\frac{\partial v}{\partial \xi}-\frac{d}{d t} \frac{\partial v}{\partial \xi^{\prime}}$$
-
-梯度下降：
-
-$$\xi_{i+1}=\xi_{i}-\eta_{i} \bar{\nabla} U[\xi]$$
 
 
 ## 2003-Reactive Nonholonomic Trajectory Generation via Parametric Optimal Control
@@ -76,7 +64,6 @@ $$
     - [参数化最优控制 约束-控制-图形参数](https://blog.csdn.net/Neo11111/article/details/105960645)
     - [基于多项式螺旋曲线的轨迹优化](https://blog.csdn.net/github_39582118/article/details/117754864?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-1.control&spm=1001.2101.3001.4242)
 - project 
-    - [trajopt](https://rll.berkeley.edu/trajopt/doc/sphinx_build/html/)
 - course
 - paper
     - [2011-Parallel Algorithms for Real-time Motion Planning](https://www.ri.cmu.edu/pub_files/2011/7/mcnaughton-thesis.pdf)
