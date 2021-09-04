@@ -4,7 +4,8 @@ categories: linux
 tags: linux
 date: 2019-01-02
 ---
-**dubug with ros**
+
+## dubug with ros
 
 ```c++
 //edit cmakelist.txt
@@ -19,18 +20,18 @@ rosrun --prefix 'gdb -ex run --args' [package_name] [node_name]
 
 ```
 
-**gdb commands**
+## gdb commands
 
 In gdb the initial character of the command has the same function as th command word.
 
 - run: execute program
 - finish: quit the program
 - next/n: step over
-- step: step into
+- step/s: step into
 - <line number>:
 - break <line number>:set break point at line number
 - continue: run until next breakpoint
-- print:
+- print/p:
 - bt: 查看函数堆栈
 - list <line number>: list source code near line number
 - list func: list source code of the function
@@ -42,4 +43,9 @@ In gdb the initial character of the command has the same function as th command 
 - set print object on/set print pretty on: default is off; its better to open.
 - set args 10 20 30 40 50:设置参数
 - gdb  *array@length:查看数组值
+
+## cdgb:
+    - esc: switch to source window
+    - o: open a file
+    - space: set breakpoint in a line
 
