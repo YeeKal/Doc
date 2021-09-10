@@ -109,4 +109,17 @@ pip install xxx.whl
 
 pip install tensorflow-gpu==2.0.0
 
+## hp z420 
+
+1. Advanced -> Device options -> mass storage option roms -> EFI
+
+## install 
+
+sudo apt install curl
+sudo apt install openssh-server
+            cmake
+
+flameshot: screenshot, sudo apt install flameshot
+
+
 

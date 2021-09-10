@@ -24,6 +24,33 @@ $$\xi_{i+1}=\xi_{i}-\eta_{i} \bar{\nabla} U[\xi]$$
 - Iterative Spline Parameterization
 - Iterative Parabolic Time Parameterization
 
+## time optimal path
+
+## 2014-TOPP
+
+A General, Fast, and Robust Implementation of the Time-Optimal Path Parameterization Algorithm
+
+#### introduction
+
+three families of methods：
+
+- dynamic programming: divide the$(s, \dot{s})$ plane into a grid and find the optimal trajectory in the $(s,\dot{s})$ plane
+- convex optimization: discretize the s-axis into N segments and subsequently convert into a convex optimization problem
+- numerical integration: Pontryagin Maximum Principle(庞特里雅金极大原理 ), the optimal trajectory in the $(s, \dot{s})$ plane is known to be “bang-bang” and can thus be found by integrating successively the maximum and minimum accelerations $\ddot{s}$. But the programming is difficult with the so-called dynamic singularities
+
+
+This paper develops a numerical integration method considering the dynamic singularities.
+
+bang-bang control: 起停式控制，有迟滞区间。在最优控制中，若最优控制信号为其上限或下限，则该最优控制问题可以以起停式控制为最优解。起停式控制常出现在最短时间的最佳控制问题中[2]。例如要车辆行驶一定距离，且从出发到最后停止的时间要最短，其解法是在经过某一“切换点”前用最大油门加速，过切换点后以最大刹车方式刹车，让车停在想要的位置。---- [wiki](https://zh.wikipedia.org/wiki/%E8%B5%B7%E5%81%9C%E5%BC%8F%E6%8E%A7%E5%88%B6)
+
+#### improve the robustness of the numerical integration approach
+
+General formulation of the TOPP problem:
+
+
+
+
+
 
 
 
@@ -31,17 +58,23 @@ $$\xi_{i+1}=\xi_{i}-\eta_{i} \bar{\nabla} U[\xi]$$
 
 - blog 
 - paper
-    - trajectory
-        - [2012_IJRR_Collisionfree and smooth trajectory computation in cluttered environments]()
-        - [2014-A general, fast, and robust implementation of the time-optimal path parameterization algorithm]()
-        - [2012-rss-TOTG-Time-optimal trajectory generation for path following with bounded acceleration and velocity](http://www.roboticsproceedings.org/rss08/p27.pdf)
-            - [projects](http://www.golems.org/projects/traj.html)
-            - [code](https://github.com/tobiaskunz/trajectories)
-        - [2018_TOPP_A New Approach to Time-Optimal Path Parameterization Based on Reachability Analysis](https://arxiv.org/abs/1707.07239)
-            - [code-github](https://github.com/quangounet/TOPP)
-            - [Improved IPTP by fitting a cubic spline](https://github.com/ros-planning/moveit/pull/382)
-            - [github-Improved IPTP](https://github.com/ros-planning/moveit/tree/master/moveit_core/trajectory_processing/src)
-
+    - time optimal path
+        - Numerical Integration
+            - [2016-Essential Properties of Numerical Integration for Time-optimal Trajectory Planning Along a Specified Path]()
+            - [2013-A general, fast, and robust implementation of the time-optimal path parameterization algorithm]()
+            - [2018_TOPP_A New Approach to Time-Optimal Path Parameterization Based on Reachability Analysis](https://arxiv.org/abs/1707.07239)
+                - [code-github](https://github.com/quangounet/TOPP)
+                - [Improved IPTP by fitting a cubic spline](https://github.com/ros-planning/moveit/pull/382)
+                - [github-Improved IPTP](https://github.com/ros-planning/moveit/tree/master/moveit_core/trajectory_processing/src)
+        - convex optimization
+            - [Time-Optimal Path Tracking for Robots: A Convex Optimization Approach]()
+            - [2012_IJRR_Collisionfree and smooth trajectory computation in cluttered environments]()
+            - [2012-rss-TOTG-Time-optimal trajectory generation for path following with bounded acceleration and velocity](http://www.roboticsproceedings.org/rss08/p27.pdf)
+                - [projects](http://www.golems.org/projects/traj.html)
+                - [code](https://github.com/tobiaskunz/trajectories)
+            - [2013-Fast Interpolation and Time-Optimization on Implicit Contact Submanifolds]()
+                - [project](https://motion.cs.illinois.edu/mintos/)
+            
     - motion planning
         - [2013_rss_Finding locally optimal, collision-free trajectories with sequential convex optimization]()
         - [2009-CHOMP:Gradient optimization techniques for efficient motion planning]()
