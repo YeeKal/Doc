@@ -116,5 +116,17 @@ sudo apt-get install openssl
 
 sudo apt-get install libssl-dev
 ```
+## hp z420 
+
+1. Advanced -> Device options -> mass storage option roms -> EFI
+
+## install 
+
+sudo apt install curl
+sudo apt install openssh-server
+            cmake
+
+flameshot: screenshot, sudo apt install flameshot
+
 
 

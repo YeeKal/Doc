@@ -80,6 +80,13 @@ A_{eq}S=B_{eq}$$
 
 - L-SQP
 
+## 优化库
+
+- python
+    - cvxpy: 符号计算凸优化库
+- c++
+    - [OSQP](https://osqp.org/)
+    - [IPOPT]()
 
 
 ## 凸优化基础
@@ -95,4 +102,12 @@ A_{eq}S=B_{eq}$$
 09. L-BFGS, ADMM
 
 - [Optimization Methods](ECE236C - Optimization Methods for Large-Scale Systems)
+
+## ref
+
+- blog
+    - [SQP 算法实现](https://zhuanlan.zhihu.com/p/348666680)
+- project
+    - [CppOptimizationLibrary](https://github.com/PatWie/CppNumericalSolvers)
+
 
