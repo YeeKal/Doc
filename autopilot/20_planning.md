@@ -10,6 +10,16 @@ date: 2021-07-06
 - [blog](https://blog.habrador.com/2015/11/explaining-hybrid-star-pathfinding.html)
     - [explain code](https://github.com/Habrador/Self-driving-vehicle)
 - [Practical Search Techniques in Path Planning for Autonomous Driving](Practical Search Techniques in Path Planning for Autonomous Driving)
+- [github code: path planner](https://github.com/karlkurzer/path_planner)
+    - [github-解释代码](https://github.com/teddyluo/hybrid-a-star-annotation)
+    - [voroni]()
+    - [dubins]()
+
+
+ref:
+
+- [2016-Path Planning in Unstructured Environments : A Real-time Hybrid A* Implementation for Fast and Deterministic Path Generation for the KTH Research Concept Vehicle]()
+
 
 ## teb
 

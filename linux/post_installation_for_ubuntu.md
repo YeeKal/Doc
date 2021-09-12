@@ -109,4 +109,12 @@ pip install xxx.whl
 
 pip install tensorflow-gpu==2.0.0
 
+## openssl
+
+```python
+sudo apt-get install openssl
+
+sudo apt-get install libssl-dev
+```
+
 

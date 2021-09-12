@@ -5,6 +5,32 @@ tags: TAG
 date: 2021-07-19
 ---
 
+ESP8266
+
+* nodemcu引脚对应数字：     
+
+ * 16=D0; 
+
+ *  4=D2;
+
+ *  0=D3;
+
+ *  2=D4;
+
+ * 14=D5;
+
+ * 12=D6;
+
+ * 13=D7;
+
+ * 15=D8;
+
+ *  3=D9;
+
+ *  1=D10; 
+
+- [nodemcu](https://wiki.diustou.com/cn/ESP8266_NodeMCU%E5%85%A5%E9%97%A8%EF%BC%9AIO%E5%8F%A3%E6%93%8D%E4%BD%9C)
+
 ## 舵机
 
 - 转角范围: $0-180$, 也有其他的范围
