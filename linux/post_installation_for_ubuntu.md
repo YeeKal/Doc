@@ -124,9 +124,16 @@ sudo apt-get install libssl-dev
 
 sudo apt install curl
 sudo apt install openssh-server
-            cmake
+            cmake 
+            git
+            kazam
+            tmux
+            flameshot: screenshot
 
-flameshot: screenshot, sudo apt install flameshot
+
+opengl
+foxitreader
+vs code
 
 
 
