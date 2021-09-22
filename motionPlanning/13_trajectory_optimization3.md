@@ -58,6 +58,7 @@ General formulation of the TOPP problem:
 
 - blog 
 - paper
+    - [trajectory planning for automatic machines and robots]()
     - time optimal path
         - Numerical Integration
             - [2016-Essential Properties of Numerical Integration for Time-optimal Trajectory Planning Along a Specified Path]()
@@ -66,6 +67,7 @@ General formulation of the TOPP problem:
                 - [code-github](https://github.com/quangounet/TOPP)
                 - [Improved IPTP by fitting a cubic spline](https://github.com/ros-planning/moveit/pull/382)
                 - [github-Improved IPTP](https://github.com/ros-planning/moveit/tree/master/moveit_core/trajectory_processing/src)
+            - [2019-Time-optimal path tracking for robots a numerical integration-like approach combined with an iterative learning algorithm]()
         - convex optimization
             - [Time-Optimal Path Tracking for Robots: A Convex Optimization Approach]()
             - [2012_IJRR_Collisionfree and smooth trajectory computation in cluttered environments]()

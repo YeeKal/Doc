@@ -165,5 +165,9 @@ tensorflow:
 ```
 
 
+xrandr --output HDMI-0 --primary --mode 3840x2160 --scale 0.66x0.66  --output HDMI-1 --left-of HDMI-0
+
+xrandr --output HDMI-1 --rate 60 --scale 1x1 --mode 2560x1440 --auto --primary --pos 0x0 --output HDMI-0 --rate 60 --scale 0.66x0.66 --pos 2560x0 --auto
+
 
 
