@@ -50,6 +50,45 @@ global planner -> local planner
 
 TEB is a local planner
 
+- configuration: $Q=\left\{\mathbf{x}_{i}\right\}_{i=0 \ldots n} \quad n \in \mathbb{N}$
+- time sequence: $\tau=\left\{\Delta T_{i}\right\}_{i=0 \ldots n-1}$
+- TEB: $B:=(Q, \tau)$, a tuple of both sequence
+
+$$\begin{aligned}
+f(B) &=\sum_{k} \gamma_{k} f_{k}(B) \\
+B^{*} &=\underset{B}{\operatorname{argmin}} f(B)
+\end{aligned}$$
+运动被视为在teb上一系列的约束函数的集合，规划则是在约束的基础上找到最优的序列。这些约束一般是针对局部特性而言，因此约束的系数矩阵将会是一个对称的稀疏矩阵，这能够极大加速优化过程。
+
+
+为了让边界约束可微，论文设计了一个函数：
+$$e_{\Gamma}\left(x, x_{r}, \epsilon, S, n\right) \simeq \begin{cases}\left(\frac{x-\left(x_{r}-\epsilon\right)}{S}\right)^{n} & \text { if } x>x_{r}-\epsilon \\ 0 & \text { otherwise }\end{cases}$$
+
+$$\text{蓝色：}e_{\Gamma}(x,0.4,0.1, 0.1, 2) \quad \text{红色：}e_{\Gamma}(x,0.4,0.1, 0.05, 2)$$
+![teb1.png](imgs/teb1.png)
+
+#### obstacles
+
+
+$$\begin{aligned}
+f_{\text {path }} &=e_{\Gamma}\left(d_{\min , j}, r_{p_{\max }}, \epsilon, S, n\right) \\
+f_{o b} &=e_{\Gamma}\left(-d_{\min , j},-r_{o_{\min }}, \epsilon, S, n\right)
+\end{aligned}$$
+
+#### velocity and acceleration
+
+#### non-holonomic kinematics
+
+#### fastest path
+
+之前的elastic band通过“收缩力”减少路径长度，这里是定义了时间长度作为优化目标
+
+$$f_{k}=\left(\sum_{i=1}^{n} \Delta T_{i}\right)^{2}$$
+
+
+
+
+
 
 
 ## ref

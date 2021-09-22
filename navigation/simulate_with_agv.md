@@ -165,6 +165,30 @@ class EBandPlanner:
         case3: fill gap
     
     calcInternalForces(bubble_num, band, cur_bubble, force)
+
+// eband 算法无法处理非完整性约束，所以需要本地控制器计算速度指令
+class EBandTrajectoryCtrl:
+    getTwist()
+```
+
+## teb local planner
+
+teb自定义了robot model和obstacle类，因此需要对通用的costmap_对象进行转换，同时需要根据参数初始化robot model类型。
+
+```c++
+class TebLocalPlannerROS
+
+    computeVelocityCommands():
+
+        updateObstacleContainerWithCostmap():
+
+    // convert costmap to obstacle
+    updateObstacleContainerWithCostmap():
+        1. 遍历map长宽
+        2. 取障碍物点，变换到世界坐标系下
+        3. 储存内部obstacle类型
+        obstacles_.push_back(ObstaclePtr(new PointObstacle(obs)));
+
 ```
 
 

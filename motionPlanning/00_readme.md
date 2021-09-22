@@ -7,6 +7,9 @@
 - course
     - [MIT 6.832: Underactuated Robotics](http://underactuated.csail.mit.edu/Spring2021/)
         - [code](https://github.com/RussTedrake/underactuated)
+- project
+    - [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics)
+    - [PathPlanning](https://github.com/zhm-real/PathPlanning)
 
 
 
