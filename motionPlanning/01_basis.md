@@ -97,8 +97,6 @@ while not frontier.empty():
 - [ijrr](http://journals.sagepub.com/home/ijr)
 - [ras](http://www.ieee-ras.org/) 
 - [icra2018](https://icra2018.org/program/)
-- lab
-    - [IML: Intelligent motion laboratory](https://motion.cs.illinois.edu/index.html)
 
 
 

@@ -5,9 +5,9 @@
  date: 2020-04-15
 ---
 
+yangganggang@10.8.116.81
+yee@10.8.106.60
 
-1. google chrome: https://blog.csdn.net/lxlong89940101/article/details/86287279
-2. visual studio code
 3. 卸载不必要的自带软件: https://www.jianshu.com/p/67a86505279f
 4. v2rayl: https://gitee.com/sLarson/v2rayL
 
@@ -37,12 +37,16 @@ sudo apt install axel
     - sudo apt-get install build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev libgtk-3-dev libgtkglext1-dev libgstreamer1.0-dev libavresample-dev  libgphoto2-dev libopenblas-dev libatlas-dev doxygen libgstreamer-ocaml-dev libgstreamer-plugins-bad1.0-dev libgstreamer-plugins-base0.10-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-good1.0-dev libgstreamer0.10-dev libgstreamer1.0-dev libgstreamermm-1.0-dev tesseract-ocr-dev liblept5 libleptonica-dev liblapacke-dev python3-numpy libv4l-dev python3-numpy python3-pip python-pip libprotobuf-dev libhdf5-dev libgflags-dev
     - mkdir build
     - cmake -D CMAKE_INSTALL_PREFIX=/usr/local -D CMAKE_BUILD_TYPE=Release -D OPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules -D BUILD_opencv_python3=ON -D PYTHON3_EXECUTABLE=/home/yee/program/anaconda3/envs/tf36/bin/python3 -D PYTHON3_INCLUDE_DIR=/home/yee/program/anaconda3/envs/tf36/include/python3.6m -D PYTHON_DEFAULT_EXECUTABLE=/home/yee/program/anaconda3/envs/tf36/bin/python3 -D PYTHON3_LIBRARY=~/program/anaconda3/envs/tf36/lib/libpython3.6m.so.1.0 -D BUILD_opencv_xfeatures2d=ON  -D BUILD_TIFF=ON -D ENABLE_PRECOMPILED_HEADERS=OFF ..
+    - cmake .. -D CMAKE_BUILD_TYPE=RELEASE -D OPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_opencv_python2=OFF -D BUILD_opencv_python3=OFF -D WITH_CUDA=OFF -D BUILD_opencv_xfeatures2d=ON  -D BUILD_TIFF=ON -D ENABLE_PRECOMPILED_HEADERS=OFF
+
 
     - make error:  libzstd.so.1, needed by/lib/libtiff.so.5, not found
         - cmake加入参数： -D BUILD_TIFF=ON -D ENABLE_PRECOMPILED_HEADERS=OFF 
     - cannot find .i file: build/CMakeDownloadLog.txt 有下载链接
     - no such file or directory:用绝对路径
     - sfm: include_directories(/home/yee/program/opencv-3.4.1/opencv_contrib/modules/xfeatures2d/include)
+    - 找不到cuda.hpp即matchers.hpp:52:42: fatal error: opencv2/xfeatures2d/cuda.hpp: No such file or directory
+    - 解决方法: opencv/modules/stitching/CMakeLists.txt文件中加入一条语句使其include opencv_contrib/modules/xfeatures2d/include，可以是绝对路径，如
 13. sudo apt-get install libeigen3-dev
 14. Sophus
     ```
@@ -122,18 +126,44 @@ sudo apt-get install libssl-dev
 
 ## install 
 
+```sh
 sudo apt install curl
-sudo apt install openssh-server
-            cmake 
-            git
-            kazam
-            tmux
-            flameshot: screenshot
-
+                openssh-server
+                cmake 
+                git
+                kazam
+                tmux
+                flameshot: screenshot
+                axel
+                p7zip-full
+                libeigen3-dev
 
 opengl
 foxitreader
 vs code
+python
+    matplotlib
+    scipy
+    numpy
+```
+
+```
+python 3.6.9
+cuda 11.0
+cudnn 8.0
+pytorch 
+    - commond: pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
+    - ref: https://pytorch.org/get-started/previous-versions/
+tensorflow:
+    - command
+        - pip3 install tensorflow-gpu==2.4
+        - pip install .whl
+    - ref: https://pypi.tuna.tsinghua.edu.cn/simple/tensorflow-gpu/
+
+
+
+```
+
 
 
 

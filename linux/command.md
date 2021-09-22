@@ -116,3 +116,9 @@ ufw status
 19 axel多线程下载
 
 - axel -n 8 [url]
+
+20. 添加用户到docker用户组
+
+[ref](https://blog.csdn.net/point0mine/article/details/79448402)
+
+添加完之后需要重新进入: su yee

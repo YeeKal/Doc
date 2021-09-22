@@ -40,6 +40,8 @@ date: 2019-09-24
 - 使用rqt_tf_tree: rosrun rqt_tf_tree rqt_tf_tree
 - 使用tf_echo: rosrun tf tf_echo [parent_frame_id] [child_frame_id]
 
+mbf: Move Base Flex A Highly Flexible Navigation Framework for Mobile Robots
+
 **map**
 
 - 地图种类
@@ -58,6 +60,7 @@ date: 2019-09-24
 - [机器人学习笔记-知乎](https://zhuanlan.zhihu.com/c_1112687943243862016)
 - [ASL: Autonomous Syatem Lab](https://projects.asl.ethz.ch/datasets/doku.php?id=laserregistration:laserregistration)
 - [MRPT: ](https://www.mrpt.org/)
+- [move base tutorial: robot_navigation](https://github.com/KeoChi/robot_navigation)
 
 ## course
 
