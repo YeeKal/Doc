@@ -51,3 +51,51 @@ $$\mathcal{F}_{o b s}[\xi]=\int_{0}^{1} \max _{u \in \mathcal{B}} c(x(\xi(t), u)
 $$\mathcal{F}_{\text {smooth }}[\xi]=\frac{1}{2} \int_{0}^{1}\left\|\frac{d}{d t} \xi(t)\right\|^{2} d t$$
 
 平滑性以加速度衡量。
+
+## implementation in moveit
+
+[chmop in moveit](https://github.com/ros-planning/moveit2/tree/main/moveit_planners/chomp/chomp_motion_planner)
+
+```c++
+ChompPlanner::solve(planning_scene, req, params, res)
+    // initialize trajectory
+    ChompTrajectory trajectory(planning_scene->getRobotModel(), 3.0, .03, req.group_name);
+    
+    // fill in start point
+    robotStateToArray(start_state, req.group_name, trajectory.getTrajectoryPoint(0));
+
+    // fill in goal point
+    robotStateToArray(goal_state, req.group_name, trajectory.getTrajectoryPoint(goal_index));
+
+    // fill in whole trajectory
+    // 1. 根据已知轨迹填充
+    trajectory.fillInFromTrajectory(*res.trajectory_[0])
+    // 2. 曲线拟合方式填充
+    trajectory.fillInMinJerk(); // default
+    trajectory.fillInLinearInterpolation();
+    trajectory.fillInCubicInterpolation();
+
+    // optimization
+    optimizer =ChompOptimizer(&trajectory, planning_scene, req.group_name, &params_nonconst, start_state);
+    optimizer->optimize();
+
+```
+
+chomp 中依赖planningscene中的检测器。planningscene默认检测器为`CollisionDetectorAllocatorFCL`，chomp要求为`CollisionDetectorAllocatorHybrid`.
+
+ref: [CollisionDetectorAllocator](http://docs.ros.org/en/kinetic/api/moveit_core/html/classcollision__detection_1_1CollisionDetectorAllocator.html)
+
+```c++
+// planning_scene
+
+// 默认情况会自定义一个
+setActiveCollisionDetector(collision_detection::CollisionDetectorAllocatorFCL::create());
+
+// 该函数也可以手动调用，设置完之后，该collision会作为最新的检测器
+setActiveCollisionDetector()
+
+// 手动设置
+planning_scene::PlanningScenePtr ps = planning_scene_->diff();
+ps->setActiveCollisionDetector(collision_detection::CollisionDetectorAllocatorHybrid::create(), true);
+
+```
