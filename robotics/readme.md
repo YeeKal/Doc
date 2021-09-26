@@ -1,7 +1,9 @@
-**教材**
+**教材&课程**
 
 - [机器人学导论](https://book.douban.com/subject/1831719/)
 - [机器人学-建模、规划与控制]()
+- [A Mathematical Introduction to Robotic Manipulation](http://www.cds.caltech.edu/~murray/mlswiki/index.php?title=Main_Page)
+- [MIT 6.832 Underactuated Robotics](http://underactuated.csail.mit.edu/Spring2021/index.html)
 
 **video**
 

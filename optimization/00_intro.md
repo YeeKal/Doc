@@ -105,9 +105,13 @@ A_{eq}S=B_{eq}$$
 
 ## ref
 
+- book  
+    - [numerical optimization]()
+        - [csdn - 数值优化（Numerical Optimization）学习系列-目录](https://blog.csdn.net/fangqingan_java/article/details/48951191)
 - blog
     - [SQP 算法实现](https://zhuanlan.zhihu.com/p/348666680)
 - project
     - [CppOptimizationLibrary](https://github.com/PatWie/CppNumericalSolvers)
+
 
 
