@@ -22,6 +22,10 @@ g++ opengl_demo.cpp -o opengl_demo -lGL -lglut -lGLU
 多边形
 四边形
 
+1. 全局静态变量实现opengl回调到类内部
+2. 每一个功能包装成函数对象，存储到列表里
+3. 链表存储函数对象，集合根据名称快速定位是否存在
+
 ## 坐标系
 
 ```sh
@@ -58,6 +62,33 @@ z
 
     return eye_to_world;
 }
+
+
+```
+
+观察矩阵变换关系
+
+- $T_c$: camera transformation relative to world
+- $T_m$: model global transformation relative to world
+- $T_n$: new camera transformation
+
+$$T_n^{-1}\cdot T_c^{-1} \cdot T_m = T_c^{-1} \cdot T_{m-new}   \\
+ T_{m-new}= T_c \cdot T_n^{-1}\cdot T_c^{-1} \cdot T_m $$
+
+
+鼠标与观察矩阵变换关系：
+
+```sh
+# 鼠标屏幕坐标              opengl 画面坐标
+----------->  x            |   y
+|                          |
+|                          |
+| y                        ------------> x
+
+鼠标右移  mx增大  相机相反  相机x减小  dx = - （x -last_x）  rot_y =(x-last_x)
+鼠标上移  my减小  画面y增大 相机y减小  dy =  （y -last_y）   rot_x = (y-last_y)
+
+
 ```
 
 ![](pics/opengl_matrix.webp)
@@ -260,6 +291,12 @@ int main(int argc, char ** argv){
     - [docs.gl](http://docs.gl/gl3/glMatrixMode)
     - [glut api](https://www.opengl.org/resources/libraries/glut/spec3/spec3.html)
     - [OpenGL® 2.1, GLX, and GLU Reference Pages](https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/)
+    - [不定参数函数模板](https://blog.csdn.net/ttomqq/article/details/78263733)
 - code
 - project
+    - [OpenGL Matrix Class](http://www.songho.ca/opengl/gl_matrix.html)
+    - [Quaternion to Rotation Matrix](http://www.songho.ca/opengl/gl_quaternion.html)
+    - [3dmaths](https://github.com/ljcduo/3dmaths)
+    - [opengl tutorial](http://www.songho.ca/opengl/index.html)
+    - [libigl - A simple C++ geometry processing library](https://libigl.github.io/)
 - paper
