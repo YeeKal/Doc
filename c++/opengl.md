@@ -38,30 +38,26 @@ z
 ``` 
 
 ```c++
-	glPushMatrix();
-	glLineWidth(4);
-	glBegin(GL_LINES);
-		glColor3f(1.0,0.1,0.1);
-		glVertex3f(0,0,0);
-		glVertex3f(1,0,0);
-		glColor3f(0.1,1.0,0.1);
-		glVertex3f(0,0,0);
-		glVertex3f(0,1,0);
-		glColor3f(0.1,0.1,1.0);
-		glVertex3f(0,0,0);
-		glVertex3f(0,0,1);
-	glEnd();
-	glTranslatef(0,0,1.0);
-	glutSolidCone(0.1,0.4,10,10);	// z cone
-	glColor3f(1.0,0.1,0.1);
-	glTranslatef(1.0,0,-1.0);
-	glRotatef(90,0,1,0);
-	glutSolidCone(0.1,0.4,10,10);	// x cone
-	glColor3f(0.1,1.0,0.1);
-	glRotatef(-90,0,1,0);
-	glTranslatef(-1.0,1.0,0.0);
-	glRotatef(-90,1,0,0);
-	glutSolidCone(0.1,0.4,10,10);	// x cone
+	Eigen::Vector3f eye_at(0.0, 1.0, 5.0);
+    Eigen::Vector3f eye_look(0.0, 1.0, 0.0);
+    Eigen::Vector3f eye_up(0.0, 1.0, 0.0);
+
+    Eigen::Isometry3f getLookMatrix(){
+    Eigen::Vector3f cz=(eye_at - eye_look).normalized();
+    Eigen::Vector3f cx = eye_up.cross(cz).normalized();
+    Eigen::Vector3f cy = cz.cross(cx).normalized();
+    Eigen::Isometry3f eye_to_world=Eigen::Isometry3f::Identity();
+    Eigen::Matrix4f trans;
+    trans<< cx[0], cy[0], cz[0], eye_at[0],
+                   cx[1], cy[1], cz[1], eye_at[1],
+                   cx[2], cy[2], cz[2], eye_at[2],
+                   0, 0, 0, 1;
+    
+    std::cout<<"eye_to_world:\n"<<trans<<std::endl;
+    std::cout<<"world to eye:\n"<<trans.inverse()<<std::endl;
+
+    return eye_to_world;
+}
 ```
 
 ![](pics/opengl_matrix.webp)
