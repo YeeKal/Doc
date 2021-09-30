@@ -35,6 +35,10 @@ $$B(b)=\{\mathbf{q}:\|\mathbf{b}-\mathbf{q}\|<\rho(\mathbf{b})\}$$
 
 距离障碍物越近，bubble越小，数量也会越多。bubble的形状不限于圆形，也可以为椭圆，但是计算量会增大。
 
+force demonstration
+
+![eb_force](imgs/eb_force.png)
+
 #### deform strategy
 
 $$\begin{align}

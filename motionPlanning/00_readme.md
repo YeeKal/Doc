@@ -17,19 +17,31 @@
 
 ## topic
 
-- a-star
+- search
+    - a-star
+    - decomposition methods
+    - cell decomposition
+    - mixed integer planning
+    Approximate decompositions for complex environments
 - rrt
     - RRT-sharp
     - RRTx
     - Kinodynamic-RRT*
     - LQR-RRT*
-- decomposition methods
-    - cell decomposition
-    - mixed integer planning
-    Approximate decompositions for complex environments
+- topology
+    - triangulation
+    - cell-decomposition
+    - visibility graph
+
+- optimization based
+    - direct
+    - indirect, shooting
 
 
 
+## paper
+
+- [2015 Homotopy-Based Divide-and-Conquer Strategy for Optimal Trajectory Planning via Mixed-Integer Programming]()
 
 
 
