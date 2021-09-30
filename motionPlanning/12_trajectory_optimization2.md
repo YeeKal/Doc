@@ -168,6 +168,12 @@ h_{k}=t_{k+1}-t_{k} \\
     - p-method: increase polynomial order
 
 
+## 最优控制
+
+- [Numerical Optimal Control-course](https://www.syscop.de/teaching/ss2020/numerical-optimal-control-online)
+- [NUMERICAL METHODS FOR OPTIMAL CONTROL](https://mariozanon.wordpress.com/numerical-methods-for-optimal-control/)
+- [zhihu - optimal control](https://www.zhihu.com/column/c_1378929738640089088)
+
 
 
 

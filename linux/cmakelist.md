@@ -4,6 +4,16 @@ categories: linux
 tags: linux
 date: 2019-05-30
 ---
+
+## thread
+
+```cmake
+find_package (Threads)
+
+target_link_libraries(producer_consumer  ${CMAKE_THREAD_LIBS_INIT})
+```
+
+
 - add_library: 生成链接库文件.o,比如类文件，可以被执行文件调用
 - target_link_libraries： 库文件链接到指定的可执行文件
 - link_directories: 添加库文件搜索路径
@@ -38,6 +48,8 @@ include_directories(): 全局包含，向下传递
 
 - [cmake 之 PUBLIC|PRIVATE|INTERFACE 关键字](https://ravenxrz.ink/archives/e40194d1.html)
 
+
+## 常用包写法
 
 ## 单目录源文件
 

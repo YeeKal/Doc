@@ -5,25 +5,8 @@ tags: planning
 date: 2021-07-06
 ---
 
-## hybrid a*
-
-- [blog](https://blog.habrador.com/2015/11/explaining-hybrid-star-pathfinding.html)
-    - [explain code](https://github.com/Habrador/Self-driving-vehicle)
-- [Practical Search Techniques in Path Planning for Autonomous Driving](Practical Search Techniques in Path Planning for Autonomous Driving)
-- [github code: path planner](https://github.com/karlkurzer/path_planner)
-    - [github-解释代码](https://github.com/teddyluo/hybrid-a-star-annotation)
-    - [voroni]()
-    - [dubins]()
-
-
-ref:
-
-- [2016-Path Planning in Unstructured Environments : A Real-time Hybrid A* Implementation for Fast and Deterministic Path Generation for the KTH Research Concept Vehicle]()
-
-
-## teb
-
-- [Efficient trajectory optimization using a sparse model]()
+- hybrid a*
+- teb
 
 
 
@@ -34,6 +17,8 @@ ref:
     - [无人车运动规划的52篇文章](https://zhuanlan.zhihu.com/p/68337127)
 - code
 - project
+    - [Hierarchical Optimization-Based Collision Avoidance](https://github.com/XiaojingGeorgeZhang/H-OBCA)
+    - [Optimization-Based Collision Avoidance](https://github.com/XiaojingGeorgeZhang/OBCA)
 - paper
     - [全球首个落地无人挖掘机作业系统！百度技术成果获《ScienceRobotics》刊发](https://mp.weixin.qq.com/s?src=11&timestamp=1625584774&ver=3174&signature=HoTuxskSiyBIwqZ9jtL7DssDLoSYOo9MW5FxiP1ooGMlY38z2KkxT-xbKq9ggPaDJCJI-j-3ePo1m4*kOOZAPjFbXsWvIcfqxwwFD8m7THQj11F*RCNgUquK2j3cdAtI&new=1)
     - [2017-The Convex Feasible Set Algorithm for Real Time Optimization in Motion Planning](https://arxiv.org/pdf/1709.00627.pdf)

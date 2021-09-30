@@ -42,25 +42,56 @@ z
 ``` 
 
 ```c++
-	Eigen::Vector3f eye_at(0.0, 1.0, 5.0);
-    Eigen::Vector3f eye_look(0.0, 1.0, 0.0);
-    Eigen::Vector3f eye_up(0.0, 1.0, 0.0);
 
-    Eigen::Isometry3f getLookMatrix(){
-    Eigen::Vector3f cz=(eye_at - eye_look).normalized();
-    Eigen::Vector3f cx = eye_up.cross(cz).normalized();
-    Eigen::Vector3f cy = cz.cross(cx).normalized();
-    Eigen::Isometry3f eye_to_world=Eigen::Isometry3f::Identity();
-    Eigen::Matrix4f trans;
-    trans<< cx[0], cy[0], cz[0], eye_at[0],
-                   cx[1], cy[1], cz[1], eye_at[1],
-                   cx[2], cy[2], cz[2], eye_at[2],
-                   0, 0, 0, 1;
-    
-    std::cout<<"eye_to_world:\n"<<trans<<std::endl;
-    std::cout<<"world to eye:\n"<<trans.inverse()<<std::endl;
+void ViewerManager::getGlobalTrans(){
+	Eigen::Vector3f gtrans={x_trans_, y_trans_,z_trans_};
+	Eigen::Isometry3f t_n =Eigen::Isometry3f::Identity();
+	t_n.pretranslate(gtrans);
 
-    return eye_to_world;
+	model_view_ = cam_view_ * t_n.inverse() * cam_view_.inverse() * model_view_;
+
+}
+
+void ViewerManager::getGlobalRot(){
+	Eigen::Vector3f axis={ -y_angle_,x_angle_,0};
+	float scale = axis.norm();
+	Eigen::Vector3f axis_n=axis.normalized();
+	Eigen::Vector3f gtrans={x_trans_, y_trans_,z_trans_};
+
+	std::cout<<"gangle:\n"<<axis.transpose()<<std::endl;
+	std::cout<<"gtrans:\n"<<gtrans.transpose()<<std::endl;
+
+	Eigen::Matrix3f rot;
+	rot=Eigen::AngleAxisf(scale, axis_n);
+
+	Eigen::Isometry3f t_n =Eigen::Isometry3f::Identity();
+	t_n.prerotate(rot);
+	t_n.pretranslate(gtrans);
+	// 按照屏幕坐标旋转，容易转过视野
+	// model_view_ = cam_view_ * t_n.inverse() * cam_view_.inverse() * model_view_;
+
+	// 按照视觉中心点旋转
+	// model_view_ =  model_view_ *t_n; 
+
+	// 按照自身坐标系旋转
+	// model_view_ = t_n * model_view_;
+
+
+	// 按照视觉中心点的位置和屏幕坐标的方向
+	Eigen::Isometry3f c_c=cam_view_;
+	c_c(0,3) = 0;
+	c_c(1,3) = 0;
+	c_c(2,3) = 0;
+
+	Eigen::Vector3f axis_origin=c_c * axis_n;
+
+	Eigen::Matrix3f rot2;
+	rot2=Eigen::AngleAxisf(scale, axis_origin);
+
+	Eigen::Isometry3f t_n2 =Eigen::Isometry3f::Identity();
+	t_n2.prerotate(rot2);
+	model_view_ = t_n2 * model_view_;
+
 }
 
 
@@ -299,4 +330,5 @@ int main(int argc, char ** argv){
     - [3dmaths](https://github.com/ljcduo/3dmaths)
     - [opengl tutorial](http://www.songho.ca/opengl/index.html)
     - [libigl - A simple C++ geometry processing library](https://libigl.github.io/)
+    - [opengl based gui tutorial](http://openglgui.sourceforge.net/tutorials.html)
 - paper

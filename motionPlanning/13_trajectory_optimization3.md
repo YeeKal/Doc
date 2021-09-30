@@ -18,6 +18,8 @@ $$\bar{\nabla} u[\xi]=\frac{\partial v}{\partial \xi}-\frac{d}{d t} \frac{\parti
 
 $$\xi_{i+1}=\xi_{i}-\eta_{i} \bar{\nabla} U[\xi]$$
 
+## stomp
+
 ## moveit 三种轨迹优化方法对比
 
 - Time-optimal Trajectory Parameterization
@@ -84,6 +86,7 @@ General formulation of the TOPP problem:
         - [2012_ICAPS_ITOMP: Incremental trajectory optimization for real-time replanning in dynamic environments]()
         - [2017_ISRR_Fast any time motion planning in point clouds by interleaving sampling and interior point optimization]()
         - [trajopt](https://rll.berkeley.edu/trajopt/doc/sphinx_build/html/) 
+            - [code](https://github.com/joschu/trajopt)
         - [2011-Parallel Algorithms for Real-time Motion Planning](https://www.ri.cmu.edu/pub_files/2011/7/mcnaughton-thesis.pdf)
     - grasp motion planning
         - [2020_ICRA_GOMP: Grasp-Optimized Motion Planning for Bin Picking]()

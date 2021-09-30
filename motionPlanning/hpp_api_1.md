@@ -4,6 +4,9 @@ categories: hpp
 tags: planning
 date: 2019_07_13
 ---
+
+- [Humanoid Path Planner](https://humanoid-path-planner.github.io/hpp-doc/)
+- [hpp-core](https://github.com/humanoid-path-planner/hpp-core)
 ## Device
 
 - [device-api](https://gepettoweb.laas.fr/hpp/hpp-pinocchio/doxygen-html/a00067.html)
