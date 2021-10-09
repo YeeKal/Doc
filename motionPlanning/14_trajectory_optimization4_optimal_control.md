@@ -156,6 +156,7 @@ $$\begin{array}{ll}
         - [code](https://github.com/studywolf/control/blob/master/studywolf_control/controllers/lqr.py)
 - paper
     - [Control-limited differential dynamic programmin]()
+    - [DIRCON](https://github.com/mposa/DIRCON)
 
 
 

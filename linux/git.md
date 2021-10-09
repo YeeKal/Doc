@@ -117,4 +117,13 @@ git lfs track "FrameworkFold/*"
 
 ```
 
+## 
+```python
+# 忘记密码
+git config --system --unset credential.helper
+
+# 长期保存密码
+git config --global credential.helper store
+```
+
 

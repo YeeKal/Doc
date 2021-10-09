@@ -4,6 +4,7 @@
 - [机器人学-建模、规划与控制]()
 - [A Mathematical Introduction to Robotic Manipulation](http://www.cds.caltech.edu/~murray/mlswiki/index.php?title=Main_Page)
 - [MIT 6.832 Underactuated Robotics](http://underactuated.csail.mit.edu/Spring2021/index.html)
+- [CS 287: Advanced Robotics](https://people.eecs.berkeley.edu/~pabbeel/cs287-fa19/)
 
 **video**
 

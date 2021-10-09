@@ -5,6 +5,11 @@ tags: planning
 date: 2021-08-17
 ---
 
+- elastic band
+- chomp
+- stomp
+- trajopt
+
 ## trajopt
 
 
