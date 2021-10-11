@@ -157,6 +157,7 @@ $$\begin{array}{ll}
 - paper
     - [Control-limited differential dynamic programmin]()
     - [DIRCON](https://github.com/mposa/DIRCON)
+    - [Synthesis and Stabilization of Complex Behaviors through Online Trajectory Optimization](https://homes.cs.washington.edu/~todorov/papers/TassaIROS12.pdf)
 
 
 

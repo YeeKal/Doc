@@ -107,13 +107,15 @@ $$\begin{align}v_\pi(s)&=\sum_{a\in A}\pi(a/s)(r+\gamma\sum_{s'\in S}P_{ss'}^av_
 &=\sum_{a\in A}\pi(a/s)\sum_{s',r}p(s',r|s,a)(r+\gamma v_\pi(s'))
 \end{align}$$
 
-1. iterative policy evaluation: prediction
+#### Policy Iteration
+
+1. policy evaluation: 
 
 ![policy_evaluation_dp](imgs/policy_evaluation_dp.png)
 
 策略已知，通过值函数迭代公式使值函数收敛（$\Delta v=0$）。
 
-2. policy iteration/Policy improvement
+2. Policy improvement
 
 improve the policy by acting greedily:
 $$\pi^*(s)=arg\max_{a\in A}q_\pi(s,a)\\
@@ -124,12 +126,26 @@ the optimal value funtion and optimal policy are found.
 
 在值函数未知及策略未知的情况下（由于最优策略可完全由最有值函数得出，故值函数未知，则最优策略未知），通过值函数迭代公式使值函数收敛（$\Delta v=0$），收敛后的值函数便是所求的值函数，因此最优策略也可因此而得出。这里的值函数迭代由于没有策略函数，故采用最优值函数迭代公式，即策略是选择局部最大值函数进行迭代。
 
-3. value iteration
+#### value iteration
 
 ![value iteration](imgs/dp_value_iteration.png)
 
 
 对于预测问题，相当策略已知，通过贝尔曼方程迭代可以求得。而对于控制问题，需要不断更新Q表使其收敛，则最优策略也即得出（最有策略依据最大值函数）。策略迭代：根据探索率更新策略。价值迭代：探索率接近0时，依据值函数更新。
+
+#### policy-iteration vs value-iteration
+
+![policy_value](imgs/policy_value.jpg)
+
+- 在Policy Iteration中
+    - 第一步 Policy Eval：一直迭代至收敛，获得准确的V(s)
+    - 第二步 Policy Improvement：根据准确的V(s)，求解最好的Action
+- 对比之下，在Value Iteration中
+    - 第一步 "Policy Eval"：迭代只做一步，获得不太准确的V(s)
+    - 第二步 "Policy Improvement"：根据不太准确的V(s)，求解最好的Action
+
+这两种迭代过程都需要知道采取该动作后的奖励值是多少。
+
 
 **asynchronous dynamic programming**
 - in-place dtnamic programming

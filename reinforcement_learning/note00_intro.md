@@ -51,6 +51,7 @@ date: 2019-05-05
     - [assignment](http://web.stanford.edu/class/cs234/assignments.html)
 - [CS 287: Advanced Robotics, Fall 2015（Peter Abeel,强化学习和机器人](https://people.eecs.berkeley.edu/~pabbeel/cs287-fa15/#syllabus)
 - [CS294-前言，模仿学习，机器人背景相关](http://rail.eecs.berkeley.edu/deeprlcourse/)
+- [REINFORCEMENT LEARNING AND OPTIMAL CONTROL ](http://www.mit.edu/~dimitrib/RLbook.html)
 
 ## people
 
