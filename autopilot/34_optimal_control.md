@@ -32,11 +32,11 @@ ODE(Ordinary differential equation): 常微分方程
 
 $$\min_{u^0,\cdots,u^T}\sum_t C^t(x^t), x^{t+1}=f(x^t, u^t)$$
 
-对定步长时间序列，通过参数方程对控制变量离散化： $u(t,q)$
+对定步长时间序列，通过选择基函数作为参数方程对控制变量参数化： $u(t,q)$
 
 $$u(t,q)=q_k \quad \text{for} \quad t\in[t_K, t_{k+1}]$$
 
-$x(t)$则被视为因变量，通过对状态方程积分得到。因此有可以被写为$x(t,q)$. 如此转化为关于q的最优化问题。
+$x(t)$则被视为因变量，通过对状态方程积分得到。因此有可以被写为$x(t,q)$. 如此转化为关于q的最优化问题。根据积分后与最终目标的误差得到关于参数的梯度，从而通过不断调整参数改变控制量使得能`射中`目标。这里的参数方程可以是一个常数值，也可以是一条曲线。
 
 ## collocation
 
@@ -48,4 +48,8 @@ $$\min_{x^0,\cdots,x^T}\sum_t C^t(x^t), u^{t}=f^{-1}(x^t, x^{t+1})$$
 - course
     - [Numerical Optimal Control](https://www.syscop.de/teaching/ss2020/numerical-optimal-control-online)
     - [NUMERICAL METHODS FOR OPTIMAL CONTROL](https://mariozanon.wordpress.com/numerical-methods-for-optimal-control/)
-
+- blog
+    - [shooting](https://zhuanlan.zhihu.com/p/396020054)
+- project
+    - [python-casadi example](https://github.com/casadi/casadi/tree/master/docs/examples/python)
+        - [doc](http://casadi.sourceforge.net/v3.2.3/users_guide/html/node8.html)
