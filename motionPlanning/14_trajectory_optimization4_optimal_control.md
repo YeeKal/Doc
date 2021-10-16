@@ -12,6 +12,10 @@ date: 2021-08-17
     - Direct Collocation
     - Planning As Interface
 
+
+legged robots
+legged locomotion
+
 ## 动力学
 
 ## 非线性系统的线性化
@@ -147,6 +151,17 @@ $$\begin{array}{ll}
 - Factor graphs and GTSAM: A hands-on introduction
 - Factor graphs for robot perception.
 
+## dynamics with contact
+
+contact invariant optimization
+
+shooting 和collocation方法能比较方便应用于无碰撞的控制过程。而对于有接触的有碰撞过程则不适用，比如机械臂和人形机器人的交互。碰撞没有梯度。
+
+- paper
+  - [Discovery of Complex Behaviors through Contact-Invariant Optimization](https://homes.cs.washington.edu/~todorov/papers/MordatchSIGGRAPH12.pdf)
+  - [Contact-Invariant Optimization for Hand Manipulation](https://homes.cs.washington.edu/~zoran/MordatchSCA12.pdf)
+    - [github Contact Invariant Optimization](https://github.com/carismoses/CIO)
+
 ## ref
 
 - blog
@@ -158,6 +173,11 @@ $$\begin{array}{ll}
     - [Control-limited differential dynamic programmin]()
     - [DIRCON](https://github.com/mposa/DIRCON)
     - [Synthesis and Stabilization of Complex Behaviors through Online Trajectory Optimization](https://homes.cs.washington.edu/~todorov/papers/TassaIROS12.pdf)
+- lab
+    - [Momvement Control Laboratory](https://homes.cs.washington.edu/~todorov/index.php?video=TassaICRA14&paper=Tassa,%20ICRA%202014)
+- project
+    - [Planning and Control Algorithms for Robotics](https://github.com/junhyeokahn/PnC)
+    - [PyPnC](https://github.com/junhyeokahn/PyPnC)
 
 
 

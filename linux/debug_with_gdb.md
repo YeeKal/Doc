@@ -43,6 +43,7 @@ In gdb the initial character of the command has the same function as th command 
 - set print object on/set print pretty on: default is off; its better to open.
 - set args 10 20 30 40 50:设置参数
 - gdb  *array@length:查看数组值
+- p *ptr._M_ptr  # 打印只能指针数据
 
 ## cdgb:
     - esc: switch to source window

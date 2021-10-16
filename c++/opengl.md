@@ -26,6 +26,84 @@ g++ opengl_demo.cpp -o opengl_demo -lGL -lglut -lGLU
 2. 每一个功能包装成函数对象，存储到列表里
 3. 链表存储函数对象，集合根据名称快速定位是否存在
 
+## glDrawElements, glDrawArrays
+
+定点数组
+
+```cpp
+//指定需要启动的数组(GL_VERTEX_ARRAY,GL_COLOR_ARRAY,GL_INDEX_ARRAY等8个可用数组)
+void glEnableClientState(GLenum array);
+
+void drawCube()
+{
+    // enable and specify pointers to vertex arrays
+    //指定需要启动的数组(GL_VERTEX_ARRAY,GL_COLOR_ARRAY,GL_INDEX_ARRAY等8个可用数组)
+    glEnableClientState(GL_NORMAL_ARRAY);
+    glEnableClientState(GL_COLOR_ARRAY);
+    glEnableClientState(GL_VERTEX_ARRAY);
+
+    // 指定数组数据
+    glNormalPointer(GL_FLOAT, 0, normals);
+    glColorPointer(3, GL_FLOAT, 0, colors);
+    glVertexPointer(3, GL_FLOAT, 0, vertices);
+
+    glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_BYTE, indices);
+
+    glDisableClientState(GL_VERTEX_ARRAY);  // disable vertex arrays
+    glDisableClientState(GL_COLOR_ARRAY);
+    glDisableClientState(GL_NORMAL_ARRAY);
+}
+
+
+
+//获取当前所哟启用的数组第ith个顶点数据（从0开始算）
+void glArrayElement(GLint ith);
+
+//mode指定要创建图元的类型（和glBegin参数相同），count为顶点数量，type为顶点数据类型，indices表示索引数组首地址
+//glDrawElements的作用相当于多条glArrayElement(indices[i])
+void glDrawElements(GLenum mode,GLsize count,GLenum type,const GLvoid* indices);
+//相当于primcount条glDrawElements(mode,count[i],type,indices[i])语句
+void glMultiDrawElements(GLenum mode,GLsize* count,GLenum type,const GLvoid** indices,GLsizei primcount);
+//相当于有范围的glDrawElements，范围为[start,end]
+void glDrawRangeElements(GLenum mode,GLuint start,GLuint end,GLsize count,GLenum type,const GLvoid* indices);
+ 
+//创建一个图元序列，从每个被启用的数组，范围为[first,first + count - 1]
+void glDrawArrays(GLenum mode,GLint first,GLsizei count);
+//相当于primcount条glDrawArrays(mode,first[i],count[i])
+void glMultiDrawArrays(GLenum mode,GLint* first,GLsizei* count,GLsizei primcount);
+```
+
+## 光照和材质
+
+```cpp
+// set light
+void glLightfv (GLenum light, GLenum pname, const GLfloat *params);
+
+// 位置在(0,0,0)，没有环境光，镜面反射光和漫反射光都为白光的光源
+GLfloat light_position[] = { 0.0, 0.0, 0.0, 0.0 }; 
+GLfloat light_ambient [] = { 0.0, 0.0, 0.0, 1.0 };
+GLfloat light_diffuse [] = { 1.0, 1.0, 1.0, 1.0 };
+GLfloat light_specular[] = { 1.0, 1.0, 1.0, 1.0 }; 
+glLightfv(GL_LIGHT0, GL_POSITION, light_position); 
+glLightfv(GL_LIGHT0, GL_AMBIENT , light_ambient );
+glLightfv(GL_LIGHT0, GL_DIFFUSE , light_diffuse ); 
+glLightfv(GL_LIGHT0, GL_SPECULAR, light_specular);
+
+// open light
+glEnable(GL_LIGHTING)
+glEnable(GL_LIGHTX)
+
+// depth
+
+display: glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+init: glEnable(GL_DEPTH_TEST);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
+```
+
+```cpp
+// set material
+void  glMaterialfv (GLenum face, GLenum pname, const GLfloat *params);
+```
 ## 坐标系
 
 ```sh

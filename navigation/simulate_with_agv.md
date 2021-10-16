@@ -15,6 +15,9 @@ open in terminal:
 - taleop_twist_keyboard:键盘控制
 
 
+- [mpc_local_planner](https://github.com/rst-tu-dortmund/mpc_local_planner)
+
+
 ## costmap_2d:
 
 ref: https://blog.csdn.net/Neo11111/article/details/104798065

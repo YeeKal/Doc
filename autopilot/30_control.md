@@ -196,6 +196,15 @@ DDP solution:
 
 滚动时域DDP（Receding horizon DDP）: 在无限时域上求积分是不现实的，实际中可以设定一定步长变为有限离散个数。
 
+shooting方法中的开环控制:
+
+$$\min_{u_),u_1,\cdots,u_H}c(x_0, u_0)+c(f(x_0, u_0), u_1)+c(f(f(x_0, u_0), u_1), u_2), \cdots$$
+
+而iLQR可以看成是：Specific example of a shooting method, with linear controllers, and second order optimization
+
+
+
+
 
 ## applications
 
@@ -234,6 +243,7 @@ affine system: nonlinear system that are linear in the  input
     - [pylqr](https://hub.fastgit.org/navigator8972/pylqr)
     - [trajopt](https://hub.fastgit.org/hanyas/trajopt)
     - [matlab-DDP with Nonlinear Constraints](https://github.com/ggory15/CDDP)
+
 
 
 

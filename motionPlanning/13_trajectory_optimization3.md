@@ -9,6 +9,7 @@ date: 2021-08-17
 - chomp
 - stomp
 - trajopt
+- itomp
 
 ## trajopt
 
@@ -86,6 +87,7 @@ General formulation of the TOPP problem:
             
     - motion planning
         - [2013_rss_Finding locally optimal, collision-free trajectories with sequential convex optimization]()
+            - [blog](https://rll.berkeley.edu/trajopt/rss/)
         - [2009-CHOMP:Gradient optimization techniques for efficient motion planning]()
         - [2011_icra_STOMP: Stochastic trajectory optimization for motion planning]()
         - [2012_ICAPS_ITOMP: Incremental trajectory optimization for real-time replanning in dynamic environments]()
@@ -93,5 +95,12 @@ General formulation of the TOPP problem:
         - [trajopt](https://rll.berkeley.edu/trajopt/doc/sphinx_build/html/) 
             - [code](https://github.com/joschu/trajopt)
         - [2011-Parallel Algorithms for Real-time Motion Planning](https://www.ri.cmu.edu/pub_files/2011/7/mcnaughton-thesis.pdf)
+        - [itomp]()
+            - [blog](https://gamma.cs.unc.edu/ITOMP/ITOMP_ROS/)
+            - [github - code](https://github.com/Chpark/itomp)
     - grasp motion planning
         - [2020_ICRA_GOMP: Grasp-Optimized Motion Planning for Bin Picking]()
+- projects
+    - [Efficient Trajectory Optimization for Robot Motion Planning -- Examples](https://github.com/yzhao334/Efficient-Trajectory-Optimization-for-Robot-Motion-Planning--Examples)
+    - [towr](https://github.com/ethz-adrl/towr)
+    - [gpmp2](https://github.com/gtrll/gpmp2)

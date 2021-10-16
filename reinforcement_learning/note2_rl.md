@@ -109,6 +109,8 @@ $$\begin{align}v_\pi(s)&=\sum_{a\in A}\pi(a/s)(r+\gamma\sum_{s'\in S}P_{ss'}^av_
 
 #### Policy Iteration
 
+策略迭代包括策略估计和策略提升。策略评估过程中根据当前策略迭代使得值函数收敛。提升阶段是根据评估时的值函数更新策略。
+
 1. policy evaluation: 
 
 ![policy_evaluation_dp](imgs/policy_evaluation_dp.png)
@@ -127,6 +129,8 @@ the optimal value funtion and optimal policy are found.
 在值函数未知及策略未知的情况下（由于最优策略可完全由最有值函数得出，故值函数未知，则最优策略未知），通过值函数迭代公式使值函数收敛（$\Delta v=0$），收敛后的值函数便是所求的值函数，因此最优策略也可因此而得出。这里的值函数迭代由于没有策略函数，故采用最优值函数迭代公式，即策略是选择局部最大值函数进行迭代。
 
 #### value iteration
+
+值迭代再每一步值更新的过程中都重新选择策略，减少了迭代次数。值迭代的更新公式其实就是贝尔曼最优公式。
 
 ![value iteration](imgs/dp_value_iteration.png)
 

@@ -66,6 +66,7 @@ mbf: Move Base Flex A Highly Flexible Navigation Framework for Mobile Robots
 
 - [Introduction to Mobile Robotics](http://ais.informatik.uni-freiburg.de/teaching/ss19/robotics/)
 - [Robot Mapping](http://ais.informatik.uni-freiburg.de/teaching/ws19/mapping/)
+- [github-移动机器人路径规划-深蓝学院](https://github.com/Boyang--Li/Motion-Planning-Course)
 
 
 ## paper

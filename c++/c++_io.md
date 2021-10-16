@@ -51,8 +51,13 @@ cin.sync();//清空控制台
 ## 文件读取
 
 ```c++
-/* fstream: 逐行读取 */
 #include <fstream>
+
+
+// default
+ofstream out("...", ios::out);  // write
+ifstream in("...", ios::in);    // read
+fstream foi("...", ios::in|ios::out);
 
 string file_dir="Pt.txt";
 ifstream pts_file;
@@ -63,12 +68,13 @@ if(!pts_file.is_open()){
     return -1;
 }
 
+// read by line
 string line;
 while(getline(pts_file,line)){
     cout<<line.length()<<"\t"<<line<<endl;
 }
 
-/* fstream: 逐字符读入 */
+// read by char
 ifstream in_file;
 char c;
 while (!infile.eof())
