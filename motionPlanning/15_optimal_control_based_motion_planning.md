@@ -115,14 +115,6 @@ subproblems simultaneously
 - barycentric interpolation
 
 
-## Pseudospectral
-
-ref: 最优控制问题的Legendre_伪谱法求解及其应用
-
-- Gauss  伪谱法
-- radau  伪谱法
-- Legendre  伪谱法
-- Chebyshev  伪谱法
 
 ## ref
 
@@ -136,8 +128,10 @@ ref: 最优控制问题的Legendre_伪谱法求解及其应用
     - [Efficient Trajectory Optimization for Robot Motion Planning -- Examples](https://github.com/yzhao334/Efficient-Trajectory-Optimization-for-Robot-Motion-Planning--Examples)
     - [towr](https://github.com/ethz-adrl/towr)
     - [gpmp2](https://github.com/gtrll/gpmp2)
+    - [Optimal Control Framework - python](https://github.com/jhu-asco/optimal_control_framework)
 - paper
     - pseudospectral
         - [2010-A Pseudospectral Optimal Motion Planner for Autonomous Unmanned Vehicles](https://core.ac.uk/download/pdf/36737091.pdf)
         - [2007-A Pseudospectral Method for Real-Time Motion Planning and Obstacle Avoidance ](https://apps.dtic.mil/sti/pdfs/ADA478686.pdf)
     - [Obstacle avoidance using optimal control theory](https://www.semanticscholar.org/paper/Obstacle-avoidance-using-optimal-control-theory-Hagenaars/7fc04bb7953ad69efdfe00721f589dce60e69f5f)
+    - [On Motion Planning Using Numerical Optimal Control](http://liu.diva-portal.org/smash/get/diva2:1318297/FULLTEXT01.pdf)
