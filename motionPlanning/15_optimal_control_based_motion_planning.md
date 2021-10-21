@@ -24,6 +24,10 @@ u(t) &\in \mathcal{U}_{feas},  \quad \forall t \quad \text{(control-limits)}
         - interior point: IPOPT, SNOPT
         - active  set methods: SAS
 
+
+lqr, mpc
+
+
 #### considerate dynamics
 
 directly generate dynamically-feasible trajectory, the tricky points:
@@ -111,7 +115,29 @@ subproblems simultaneously
 - barycentric interpolation
 
 
+## Pseudospectral
+
+ref: 最优控制问题的Legendre_伪谱法求解及其应用
+
+- Gauss  伪谱法
+- radau  伪谱法
+- Legendre  伪谱法
+- Chebyshev  伪谱法
+
 ## ref
 
 - blog
     - [References on Optimal Control, Reinforcement Learning and Motion Planning](https://github.com/eleurent/phd-bibliography)
+
+- course
+    - [Robotic Systems](https://motion.cs.illinois.edu/RoboticSystems/)
+    - [Model Predictive Control](http://cse.lab.imtlucca.it/~bemporad/mpc_course.html)
+- projects
+    - [Efficient Trajectory Optimization for Robot Motion Planning -- Examples](https://github.com/yzhao334/Efficient-Trajectory-Optimization-for-Robot-Motion-Planning--Examples)
+    - [towr](https://github.com/ethz-adrl/towr)
+    - [gpmp2](https://github.com/gtrll/gpmp2)
+- paper
+    - pseudospectral
+        - [2010-A Pseudospectral Optimal Motion Planner for Autonomous Unmanned Vehicles](https://core.ac.uk/download/pdf/36737091.pdf)
+        - [2007-A Pseudospectral Method for Real-Time Motion Planning and Obstacle Avoidance ](https://apps.dtic.mil/sti/pdfs/ADA478686.pdf)
+    - [Obstacle avoidance using optimal control theory](https://www.semanticscholar.org/paper/Obstacle-avoidance-using-optimal-control-theory-Hagenaars/7fc04bb7953ad69efdfe00721f589dce60e69f5f)

@@ -100,7 +100,4 @@ General formulation of the TOPP problem:
             - [github - code](https://github.com/Chpark/itomp)
     - grasp motion planning
         - [2020_ICRA_GOMP: Grasp-Optimized Motion Planning for Bin Picking]()
-- projects
-    - [Efficient Trajectory Optimization for Robot Motion Planning -- Examples](https://github.com/yzhao334/Efficient-Trajectory-Optimization-for-Robot-Motion-Planning--Examples)
-    - [towr](https://github.com/ethz-adrl/towr)
-    - [gpmp2](https://github.com/gtrll/gpmp2)
+
