@@ -32,7 +32,7 @@ lqr, mpc
 
 directly generate dynamically-feasible trajectory, the tricky points:
 
-- obstacle avoidance
+- obstacle avoidance， nonlinear inequality constraints
 - hybrid mode switch (contact force)
 - energy efficiency and smoothness(min jerk, snap)
 
