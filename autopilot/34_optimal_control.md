@@ -88,3 +88,5 @@ s.t.\quad u^{t}=f^{-1}(x^t, x^{t+1})$$
     - [python-casadi example](https://github.com/casadi/casadi/tree/master/docs/examples/python)
         - [doc](http://casadi.sourceforge.net/v3.2.3/users_guide/html/node8.html)
     - [Trajectory Methods for dynamic system](https://github.com/p-ruediger/Trajectory-Methods)
+    - [ilar](https://github.com/anassinator/ilqr)
+    - [IterativeLQR/DDP code written in python](https://github.com/ADVRHumanoids/ilqr)

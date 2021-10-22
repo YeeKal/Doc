@@ -55,6 +55,7 @@ Clenshaw–Curtis quadrature
 
 
 
+
 ## A Pseudospectral Method for Real-Time Motion Planning and Obstacle Avoidance 
 
 1. use p-norm to represent box, circle
