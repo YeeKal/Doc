@@ -142,6 +142,55 @@ $$\begin{array}{ll}
 其中.$\delta x_{d}=x_{d}-x_{0}, Q_{f}$ 是远大于$Q$的正定矩阵. $A，B$在不同的位置需要局部线性化。
 
 
+## lqr 价值函数角度
+
+1. backward recursion
+
+for $t=T$ to 1 :
+$$
+\begin{aligned}
+&\mathbf{Q}_{t}=\mathbf{C}_{t}+\mathbf{F}_{t}^{T} \mathbf{V}_{t+1} \mathbf{F}_{t} \\
+&\mathbf{q}_{t}=\mathbf{c}_{t}+\mathbf{F}_{t}^{T} \mathbf{V}_{t+1} \mathbf{f}_{t}+\mathbf{F}_{t}^{T} \mathbf{v}_{t+1} \\
+&Q\left(\mathbf{x}_{t}, \mathbf{u}_{t}\right)=\text { const }+\frac{1}{2}\left[\begin{array}{c}
+\mathbf{x}_{t} \\
+\mathbf{u}_{t}
+\end{array}\right]^{T} \mathbf{Q}_{t}\left[\begin{array}{c}
+\mathbf{x}_{t} \\
+\mathbf{u}_{t}
+\end{array}\right]+\left[\begin{array}{c}
+\mathbf{x}_{t} \\
+\mathbf{u}_{t}
+\end{array}\right]^{T} \mathbf{q}_{t} \\
+&\mathbf{u}_{t} \leftarrow \arg \min _{\mathbf{u}_{t}} Q\left(\mathbf{x}_{t}, \mathbf{u}_{t}\right)=\mathbf{K}_{t} \mathbf{x}_{t}+\mathbf{k}_{t} \\
+&\mathbf{K}_{t}=-\mathbf{Q}_{\mathbf{u}_{t}, \mathbf{u}_{t}}^{-1} \mathbf{Q}_{\mathbf{u}_{t}, \mathbf{x}_{t}} \\
+&\mathbf{k}_{t}=-\mathbf{Q}_{\mathbf{u}_{t}, \mathbf{u}_{t}}^{-1} \mathbf{q}_{\mathbf{u}_{t}} \\
+&\mathbf{V}_{t}=\mathbf{Q}_{\mathbf{x}_{t}, \mathbf{x}_{t}}+\mathbf{Q}_{\mathbf{x}_{t}, \mathbf{u}_{t}} \mathbf{K}_{t}+\mathbf{K}_{t}^{T} \mathbf{Q}_{\mathbf{u}_{t}, \mathbf{x}_{t}}+\mathbf{K}_{t}^{T} \mathbf{Q}_{\mathbf{u}_{t}, \mathbf{u}_{t}} \mathbf{K}_{t} \\
+&\mathbf{v}_{t}=\mathbf{q}_{\mathbf{x}_{t}}+\mathbf{Q}_{\mathbf{x}_{t}, \mathbf{u}_{t}} \mathbf{k}_{t}+\mathbf{K}_{t}^{T} \mathbf{Q}_{\mathbf{u}_{t}}+\mathbf{K}_{t}^{T} \mathbf{Q}_{\mathbf{u}_{t}, \mathbf{u}_{t}} \mathbf{k}_{t} \\
+&V\left(\mathbf{x}_{t}\right)=\text { const }+\frac{1}{2} \mathbf{x}_{t}^{T} \mathbf{V}_{t} \mathbf{x}_{t}+\mathbf{x}_{t}^{T} \mathbf{v}_{t}
+\end{aligned}
+$$
+
+#### ilqr
+
+backward
+
+$$\begin{aligned}
+&Q_{\mathrm{x}}=\ell_{\mathbf{x}}+\mathbf{f}_{\mathbf{x}}^{\top} V_{\mathbf{x}}^{\prime}\\
+&Q_{\mathbf{u}}=\ell_{\mathbf{u}}+\mathbf{f}_{\mathbf{u}}^{\top} V_{\mathbf{x}}^{\prime}\\
+&Q_{\mathrm{xx}}=\ell_{\mathbf{x} \mathbf{x}}+\mathbf{f}_{\mathbf{x}}^{\top} V_{\mathbf{x}}^{\prime} \mathbf{f}_{\mathbf{x}}+V_{\mathbf{x}}^{\prime} \cdot \mathbf{f}_{\mathbf{x} \mathbf{x}}\\
+&Q_{\mathrm{uu}}=\ell_{\mathbf{u u}}+\mathbf{f}_{\mathbf{u}}^{\top} V_{\mathbf{x x}}^{\prime} \mathbf{f}_{\mathbf{u}}+V_{\mathbf{x}}^{\prime} \cdot \mathbf{f}_{\mathbf{u u}}\\
+&Q_{\mathrm{ux}}=\ell_{\mathbf{u x}}+\mathbf{f}_{\mathbf{u}}^{\top} V_{\mathbf{x x}}^{\prime} \mathbf{f}_{\mathbf{x}}+V_{\mathbf{x}}^{\prime} \cdot \mathbf{f}_{ux}     \\
+    \\
+\delta u^{*} &=\underset{\delta u}{\arg \min } Q(\delta x, \delta u)=-Q_{u u}^{-1}\left(Q_{u}+Q_{u x} \delta x\right) \\
+&=\mathbf{k}+\mathbf{K} \delta x    \\
+\mathbf{K} &=-Q_{u u}^{-1} Q_{u x} \\
+\mathbf{k} &=-Q_{u u}^{-1} Q_{u}    \\
+\Delta V(i) &=\quad-\frac{1}{2} Q_{\mathbf{u}} Q_{\mathbf{u u}}^{-1} Q_{\mathbf{u}} \\
+V_{\mathbf{x}}(i) &=Q_{\mathbf{x}}-Q_{\mathbf{u}} Q_{\mathbf{u u}}^{-1} Q_{\mathbf{u x}} \\
+V_{\mathbf{x x}}(i) &=Q_{\mathbf{x x}}-Q_{\mathbf{x u}} Q_{\mathbf{u u}}^{-1} Q_{\mathrm{ux}}
+\end{aligned}$$
+
+
 
 
 

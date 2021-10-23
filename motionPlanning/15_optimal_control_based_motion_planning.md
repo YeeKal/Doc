@@ -126,6 +126,7 @@ subproblems simultaneously
     - [Model Predictive Control](http://cse.lab.imtlucca.it/~bemporad/mpc_course.html)
     - [cs 285 RL](http://rail.eecs.berkeley.edu/deeprlcourse-fa19/)
     - [UofT Robotics Institute](https://www.cs.toronto.edu/~florian/)
+    - [Autonomous Systems, Control and Optimization (ASCO) Lab](https://asco.lcsr.jhu.edu/courses/)
     - 
 - projects
     - [Efficient Trajectory Optimization for Robot Motion Planning -- Examples](https://github.com/yzhao334/Efficient-Trajectory-Optimization-for-Robot-Motion-Planning--Examples)
