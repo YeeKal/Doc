@@ -11,6 +11,7 @@ differential dynamic programming
 ## mpc
 
 ## lqr
+代价函数是二次的，而状态方程是线性的
 
 lqr 只看下一时刻， 而mpc关注接下来多个时刻
 
@@ -201,6 +202,8 @@ shooting方法中的开环控制:
 $$\min_{u_),u_1,\cdots,u_H}c(x_0, u_0)+c(f(x_0, u_0), u_1)+c(f(f(x_0, u_0), u_1), u_2), \cdots$$
 
 而iLQR可以看成是：Specific example of a shooting method, with linear controllers, and second order optimization
+
+
 
 
 
