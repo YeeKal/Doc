@@ -407,7 +407,7 @@ int main(int argc, char ** argv){
     - [Quaternion to Rotation Matrix](http://www.songho.ca/opengl/gl_quaternion.html)
     - [3dmaths](https://github.com/ljcduo/3dmaths)
     - [opengl tutorial](http://www.songho.ca/opengl/index.html)
-    - [libigl - A simple C++ geometry processing library](https://libigl.github.io/)
+    - [libigl - A simple C++ geometry processing library](https://libigl.github.io/):可参考许多的io写法
     - [opengl based gui tutorial](http://openglgui.sourceforge.net/tutorials.html)
     - [OPENGL EXAMPLES](https://cs.lmu.edu/~ray/notes/openglexamples/)
     - [opengl examples](https://web.media.mit.edu/~gordonw/OpenGL/)

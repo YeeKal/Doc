@@ -221,12 +221,10 @@ shooting 和collocation方法能比较方便应用于无碰撞的控制过程。
 - paper
     - [Control-limited differential dynamic programmin]()
     - [DIRCON](https://github.com/mposa/DIRCON)
-    - [Synthesis and Stabilization of Complex Behaviors through Online Trajectory Optimization](https://homes.cs.washington.edu/~todorov/papers/TassaIROS12.pdf)
-- lab
-    - [Momvement Control Laboratory](https://homes.cs.washington.edu/~todorov/index.php?video=TassaICRA14&paper=Tassa,%20ICRA%202014)
+
 - project
-    - [Planning and Control Algorithms for Robotics](https://github.com/junhyeokahn/PnC)
-    - [PyPnC](https://github.com/junhyeokahn/PyPnC)
+    
+    
 
 
 

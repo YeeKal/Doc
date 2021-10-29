@@ -1,5 +1,5 @@
 ---
-title: iLQR
+title: LQR and iLQR
 categories: motion planning
 tags: planning
 date: 2021-10-23
@@ -143,3 +143,4 @@ $$
 - projects
     - [Constrained iLQR with c++/eigen](https://hub.fastgit.org/pparmesh/Constrained_ILQR)
     - [iLQR with python/casadi](https://hub.fastgit.org/ADVRHumanoids/ilqr)
+    - [Constrained Iterative LQR controller for an Autonomous Vehicle](https://github.com/pparmesh/Constrained_ILQR)

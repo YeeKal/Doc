@@ -69,6 +69,40 @@ where the origin of frame{$C_i$} is at the center of the body, with the same ori
 
 由关节位置，速度和加速度计算所需的关节力矩。
 
+
+forward equation: vel, acceleration
+
+$$\begin{aligned}
+&\boldsymbol{\omega}_{i}=\boldsymbol{\omega}_{i-1}+\mathbf{z}_{i} \dot{\theta}_{i} \\
+&\dot{\boldsymbol{\omega}}_{i}=\dot{\boldsymbol{\omega}}_{i-1}+\mathbf{z}_{i} \ddot{\theta}_{i}+\boldsymbol{\omega}_{i-1} \times \mathbf{Z}_{i} \dot{\theta}_{i} \\
+&\mathbf{a}_{i}=\mathbf{a}_{i-1}+\dot{\boldsymbol{\omega}}_{i-1} \times \mathbf{s}_{i-1}+\boldsymbol{\omega}_{i-1} \times\left(\boldsymbol{\omega}_{i-1} \times \mathbf{s}_{i-1}\right) \\
+&\mathbf{a}_{C_{i}}=\mathbf{a}_{i}+\dot{\boldsymbol{\omega}}_{i} \times \mathbf{r}_{i-1}+\boldsymbol{\omega}_{i} \times\left(\boldsymbol{\omega}_{i} \times \mathbf{r}_{i-1}\right)
+\end{aligned}$$
+
+
+forward:
+
+$$\begin{aligned}
+&{ }^{i+1} \omega_{i+1}={ }_{i}^{i+1} R^{i} \omega_{i}+\dot{\theta}_{i+1}{ }^{i+1} Z_{i+1}\\
+&{ }^{i+1} \dot{\omega}_{i+1}={ }_{i}^{i+1} R^{i} \dot{\omega}_{i}+_{i}^{i+1} R^{i} \omega_{i} \times \dot{\boldsymbol{\theta}}_{i+1}{ }^{i+1} \hat{Z}_{i+1}+\ddot{\theta}_{i+1}{ }^{i+1} \hat{Z}_{i+1}\\
+&{ }^{i+1} \dot{v}_{i+1}=_{i}^{i+1} R\left(^{i} \dot{\omega}_{i} \times^{i} P_{i+1}+^{i} \omega_{i} \times\left({ }^{i} \omega_{i} \times{ }^{i} P_{i+1}\right)+{ }^{i} \dot{v}_{i}\right)\\
+&{ }^{i+1} \dot{v}_{c_{i+1}}={ }^{i+1} \dot{\omega}_{i+1} \times{ }^{i+1} P_{C_{i+1}}\\
+&+{ }^{i+1} \omega_{i+1} \times\left({ }^{i+1} \omega_{i+1} x^{i+1} P_{c_{i+1}}\right)+{ }^{i+1} \dot{v}_{i+1}\\
+&{ }^{i+1} F_{i+1}=m_{i+1}{ }^{i+1} \dot{v}_{C_{i+1}}\\
+&{ }^{i+1} N_{i+1}={ }^{c_{i+1}} I_{i+1}{ }^{i+1} \dot{\omega}_{i+1}+{ }^{i+1} \omega_{i+1} \times{ }^{c_{i+1}} I_{i+1}{ }^{i+1} \omega_{i+1}\end{aligned}$$
+
+
+backward
+
+$$\begin{aligned}&{ }^{i} f_{i}={ }_{i+1}^{i} R^{i+1} f_{i+1}+{ }^{i} F_{i}\\
+&n_{i}=^{i} N_{i}+{ }_{i+1}^{i} R^{i+1} n_{i+1}+{ }^{i} P_{C_{i}} \times{ }^{i} F_{i}\\
+&+{ }^{i} P_{i+1} \times_{i+1}^{i} R^{i+1} f_{i+1}\\
+&\tau_{i}={ }^{i} n_{i}^{T i} \hat{Z}_{i}
+\end{aligned}$$
+
+
+[two link arm ref](https://www.guyuehome.com/19198)
+
 ## 动力学方程的结构
 
 **state space equation**

@@ -1,3 +1,12 @@
+---
+title: 基于最优化的轨迹规划/运动规划 
+categories: motion planning
+tags: planning
+date: 2021-10-21
+---
+
+PDE: 偏微分方程(Partial Differential Equation)
+
 
 ## optimal control based planning
 
@@ -27,14 +36,13 @@ u(t) &\in \mathcal{U}_{feas},  \quad \forall t \quad \text{(control-limits)}
 
 lqr, mpc
 
+## challenge
 
-#### considerate dynamics
+在考虑动力学的情况下会遇到的挑战：
 
-directly generate dynamically-feasible trajectory, the tricky points:
-
-- obstacle avoidance， nonlinear inequality constraints
-- hybrid mode switch (contact force)
-- energy efficiency and smoothness(min jerk, snap)
+1. obstacle avoidance: 不可导，非凸。
+2. hybrid mode switch (contact force)
+3. energy efficiency and smoothness(min jerk, snap)
 
 #### obstacle avoidance
 
@@ -78,45 +86,11 @@ Discovery of Complex Behaviors through Contact-Invariant Optimization
 
 
 
-## paper reading:
-
-**Simultaneous path planning and trajectory optimization for robotic manipulators using discrete
-mechanics and optimal control**
-
-- three stage
-    - path planning
-    - trajectory planning: velocity, smooth
-    - control: torque
-- swarm-intelligence based algorithm:
-    - PSO(Particle Swarm Optimization)
-    - ACO(Ant Colony OPtimization)
-    - ABC(Artificial Bee Colony Optimization)
-    - FA(Firefly Algorithms)
-    - BA(Bat Algorithm) 
-- dp
-
-
-
-- trajectory planning
-- trajectory optimization
-- optimal trajectory planning
-
-
-Time-optimal Control of Manipulators: 李群上机械臂的最有控制，路径规划和轨迹优化同时进行
-
-
-**Efficient Trajectory Optimization for Robot Motion Planning**
-
-an optimal control based approach to address the path planning and trajectory planning
-subproblems simultaneously
-
-- Pseudospectral Method: Legendre拟谱方法
-- Chebyshev-Lobatto points：$T_i=\frac{t_f}{2}(cos(\frac{i\pi}{N})+1) i=0,\cdots,N$
-- barycentric interpolation
-
-
 
 ## ref
+
+- lab
+    - [Momvement Control Laboratory](https://homes.cs.washington.edu/~todorov/index.php?video=TassaICRA14&paper=Tassa,%20ICRA%202014)
 
 - blog
     - [References on Optimal Control, Reinforcement Learning and Motion Planning](https://github.com/eleurent/phd-bibliography)
@@ -127,18 +101,12 @@ subproblems simultaneously
     - [cs 285 RL](http://rail.eecs.berkeley.edu/deeprlcourse-fa19/)
     - [UofT Robotics Institute](https://www.cs.toronto.edu/~florian/)
     - [Autonomous Systems, Control and Optimization (ASCO) Lab](https://asco.lcsr.jhu.edu/courses/)
-    - 
+    - [Numerical Optimal Control](https://www.syscop.de/teaching/ss2020/numerical-optimal-control-online)
 - projects
-    - [Efficient Trajectory Optimization for Robot Motion Planning -- Examples](https://github.com/yzhao334/Efficient-Trajectory-Optimization-for-Robot-Motion-Planning--Examples)
-    - [towr](https://github.com/ethz-adrl/towr)
     - [gpmp2](https://github.com/gtrll/gpmp2)
     - [Optimal Control Framework - python](https://github.com/jhu-asco/optimal_control_framework)
     - [Geometric Control Optimization and Planning Library](https://github.com/jhu-asco/gcop)
-    - [Constrained Iterative LQR controller for an Autonomous Vehicle](https://github.com/pparmesh/Constrained_ILQR)
 - paper
-    - pseudospectral
-        - [2010-A Pseudospectral Optimal Motion Planner for Autonomous Unmanned Vehicles](https://core.ac.uk/download/pdf/36737091.pdf)
-        - [2007-A Pseudospectral Method for Real-Time Motion Planning and Obstacle Avoidance ](https://apps.dtic.mil/sti/pdfs/ADA478686.pdf)
     - [Obstacle avoidance using optimal control theory](https://www.semanticscholar.org/paper/Obstacle-avoidance-using-optimal-control-theory-Hagenaars/7fc04bb7953ad69efdfe00721f589dce60e69f5f)
     - [On Motion Planning Using Numerical Optimal Control](http://liu.diva-portal.org/smash/get/diva2:1318297/FULLTEXT01.pdf)
     - [Synthesis and Stabilization of Complex Behaviors through Online Trajectory Optimization](https://homes.cs.washington.edu/~todorov/papers/TassaIROS12.pdf)
