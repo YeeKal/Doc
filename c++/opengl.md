@@ -411,4 +411,5 @@ int main(int argc, char ** argv){
     - [opengl based gui tutorial](http://openglgui.sourceforge.net/tutorials.html)
     - [OPENGL EXAMPLES](https://cs.lmu.edu/~ray/notes/openglexamples/)
     - [opengl examples](https://web.media.mit.edu/~gordonw/OpenGL/)
+    - [nanogui](https://github.com/wjakob/nanogui)
 - paper
