@@ -140,6 +140,8 @@ $$
 
 ## ref
 
+- blog
+    - [Continuous_Time_LQR](https://coursys.sfu.ca/2019fa-cmpt-419-x1/pages/Continuous_Time_LQR/view)
 - projects
     - [Constrained iLQR with c++/eigen](https://hub.fastgit.org/pparmesh/Constrained_ILQR)
     - [iLQR with python/casadi](https://hub.fastgit.org/ADVRHumanoids/ilqr)

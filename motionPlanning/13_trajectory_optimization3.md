@@ -11,7 +11,50 @@ date: 2021-08-17
 - trajopt
 - itomp
 
+轨迹优化的层次：安全， 轨迹平滑， 控制可行。运动规划侧重前两个， 最优控制侧重后两个。而在轨迹规划既涉及到运动规划，又涉及到最优控制，因此概念上覆盖全部的三个层次。
+
+- collision-free：
+- kinematically feasible
+- dynamically feasible
+
+
+
+优化的方法：区别在与对约束函数或者是目标函数的整理。类似于直接计算并不太好计算，而是进一步整理成另一种更加容易计算或者是更加高效的形式
+
+
+
 ## trajopt
+
+#### introduction
+
+1. use l1 penalties for equality and inequality
+2. computed signed distance using convex-convex collision detection
+
+#### related work
+
+轨迹优化是最优控制中的一个基本概念。
+
+- potential field
+- CHOMP
+- STOMP
+- ITOMP
+
+#### Sequential Convex Optimization
+
+solves a non-convex optimization problem by repeatedly constructing a convex subproblem—an approximation to the problem around the current iterate x
+
+turning the infeasible constraints into penalty:
+
+$$g_i(x) \leq 0 \quad \longrightarrow \quad  |g_i(x)|^+ \\
+h_i(x)  =0 \quad \longrightarrow \quad  |h_i(x)| \\
+\text{where}\quad |x|^+ = \max(x,0)$$
+
+two loops:
+
+- outer loop(PenaltyIteration):  increase the penalty coefficient µ until all the constraints are satisfied
+- next loop(ConvexifyIteration): repeatedly construct a convex approximation to the problem 
+
+l2 VS l1:
 
 
 ## chomp
@@ -98,6 +141,9 @@ General formulation of the TOPP problem:
         - [itomp]()
             - [blog](https://gamma.cs.unc.edu/ITOMP/ITOMP_ROS/)
             - [github - code](https://github.com/Chpark/itomp)
+        - [gpmp2: Gaussian Process Motion Planner 2](https://github.com/gtrll/gpmp2)
     - grasp motion planning
         - [2020_ICRA_GOMP: Grasp-Optimized Motion Planning for Bin Picking]()
+- project
+    - [Time-Optimal Path Following with Bounded Acceleration and Velocity](https://github.com/tobiaskunz/trajectories)
 

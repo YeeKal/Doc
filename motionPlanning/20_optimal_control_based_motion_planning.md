@@ -7,6 +7,13 @@ date: 2021-10-21
 
 PDE: 偏微分方程(Partial Differential Equation)
 
+最优控制的方法在轨迹优化中主要使用直接法中的配点法。配点法中由于积分和为分的处理又会有梯形积分，simpson等各种积分法的区别。从广义上讲，伪谱法也属于配点法，与上述积分类似，也是通过吧为分和积分通过另一种方式离散化，转化为更容易构造优化方程的形式。
+
+- collocation methods
+- pseudo
+
+- scaling
+
 
 ## optimal control based planning
 
@@ -102,11 +109,20 @@ Discovery of Complex Behaviors through Contact-Invariant Optimization
     - [UofT Robotics Institute](https://www.cs.toronto.edu/~florian/)
     - [Autonomous Systems, Control and Optimization (ASCO) Lab](https://asco.lcsr.jhu.edu/courses/)
     - [Numerical Optimal Control](https://www.syscop.de/teaching/ss2020/numerical-optimal-control-online)
+    - [Optimal Control for Robotics - Spring 2018](https://github.com/MatthewPeterKelly/ME149_Spring2018)
 - projects
-    - [gpmp2](https://github.com/gtrll/gpmp2)
+    
     - [Optimal Control Framework - python](https://github.com/jhu-asco/optimal_control_framework)
     - [Geometric Control Optimization and Planning Library](https://github.com/jhu-asco/gcop)
+    - [optimTraj - matlab](https://github.com/MatthewPeterKelly/OptimTraj)
+    - [OBCA: Optimization-Based Collision Avoidance](https://github.com/XiaojingGeorgeZhang/OBCA)
+    - [ALTRO: TrajectoryOptimizatio](https://github.com/RoboticExplorationLab/TrajectoryOptimization.jl)
+    - [Pontryagin-Differentiable-Programming](https://github.com/wanxinjin/Pontryagin-Differentiable-Programming)
 - paper
     - [Obstacle avoidance using optimal control theory](https://www.semanticscholar.org/paper/Obstacle-avoidance-using-optimal-control-theory-Hagenaars/7fc04bb7953ad69efdfe00721f589dce60e69f5f)
     - [On Motion Planning Using Numerical Optimal Control](http://liu.diva-portal.org/smash/get/diva2:1318297/FULLTEXT01.pdf)
     - [Synthesis and Stabilization of Complex Behaviors through Online Trajectory Optimization](https://homes.cs.washington.edu/~todorov/papers/TassaIROS12.pdf)
+    - [2010- Practical Methods for Optimal Control and Estimation Using Nonlinear Programming]()
+    - [1998- A Survey of Numerical Methods for Trajectory Optimization]()
+    - [2009 - A survey of numerical methods for optimal control]()
+    - [ALTRO: A Fast Solver for Constrained Trajectory Optimization](https://roboticexplorationlab.org/papers/altro-iros.pdf)

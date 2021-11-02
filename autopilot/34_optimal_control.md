@@ -75,6 +75,28 @@ s.t.\quad u^{t}=f^{-1}(x^t, x^{t+1})$$
 
 最优控制的路径约束
 
+## numerical quadrature in collocation
+
+#### Hermite-Simpson collocation method
+
+基本形式：
+
+$$\int_{t_{0}}^{t_{F}} w(\tau) d \tau \quad \approx \sum_{k=0}^{N-1} \frac{h_{k}}{6}\left(w_{k}+4 w_{k+\frac{1}{2}}+w_{k+1}\right)$$
+
+应用到状态微分方程:
+
+$$\dot{x} = f \quad \rightarrow \quad \int_{t_{k}}^{t_{k+1}} \dot{\boldsymbol{x}} d t=\int_{t_{k}}^{t_{k+1}} \boldsymbol{f} d t \\
+\Downarrow \\
+\boldsymbol{x}_{k+1}-\boldsymbol{x}_{k}=\frac{1}{6} h_{k}\left(\boldsymbol{f}_{k}+4 \boldsymbol{f}_{k+\frac{1}{2}}+\boldsymbol{f}_{k+1}\right)
+$$
+
+其中$f_{k+\frac{1}{2}}$是未知量，通过计算可得（[ref](https://mec560sbu.github.io/2016/09/30/direct_collocation/)）：
+
+$$f_{k+\frac{1}{2}}=-\frac{3}{2 h}\left(x_{k}-x_{k+1}\right)-\frac{1}{4}\left[f_k+f_{k+1} \right]$$
+
+
+
+
 
 ## ref
 
@@ -87,6 +109,5 @@ s.t.\quad u^{t}=f^{-1}(x^t, x^{t+1})$$
 - project
     - [python-casadi example](https://github.com/casadi/casadi/tree/master/docs/examples/python)
         - [doc](http://casadi.sourceforge.net/v3.2.3/users_guide/html/node8.html)
-    - [Trajectory Methods for dynamic system](https://github.com/p-ruediger/Trajectory-Methods)
-    - [ilar](https://github.com/anassinator/ilqr)
+    - [ilqr](https://github.com/anassinator/ilqr)
     - [IterativeLQR/DDP code written in python](https://github.com/ADVRHumanoids/ilqr)

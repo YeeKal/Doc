@@ -63,3 +63,4 @@ Time-optimal Control of Manipulators: 李群上机械臂的最有控制，路径
 - paper
     - [Optimal manipulator path planning with obstacles using disjunctive programming]()
     - [2016 - Mixed-Integer Quadratic Program - Optimal Trajectory Planning for Autonomous Driving Integrating Logical Constraints: An MIQP Perspective]()
+    
