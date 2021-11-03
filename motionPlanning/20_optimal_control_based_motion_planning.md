@@ -9,6 +9,10 @@ PDE: 偏微分方程(Partial Differential Equation)
 
 最优控制的方法在轨迹优化中主要使用直接法中的配点法。配点法中由于积分和为分的处理又会有梯形积分，simpson等各种积分法的区别。从广义上讲，伪谱法也属于配点法，与上述积分类似，也是通过吧为分和积分通过另一种方式离散化，转化为更容易构造优化方程的形式。
 
+最优控制 VS 轨迹优化：
+
+最优控制 VS 非线性优化
+
 - collocation methods
 - pseudo
 
@@ -20,7 +24,7 @@ PDE: 偏微分方程(Partial Differential Equation)
 $$\begin{aligned}
 u^*(t):&=arg\min_{u(.)}\int^{t_f}_{t_0}C(x(t), u(t))dt  \\
 s.t.\quad x(t_0)&=x_0   \\
-\dot{x}(t) &=f(x(t), u(t))   \quad \forall t \\
+\dot{x}(t) &=f(x(t), u(t))   \quad \forall t  \quad \text{(states function)} \\
 x(t) &\in \mathcal{X}_{feas},  \quad \forall t \quad \text{(collision-free)} \\
 u(t) &\in \mathcal{U}_{feas},  \quad \forall t \quad \text{(control-limits)} 
 \end{aligned}$$
