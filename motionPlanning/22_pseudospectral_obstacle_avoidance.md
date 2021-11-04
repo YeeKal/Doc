@@ -169,3 +169,4 @@ Clenshaw–Curtis quadrature
     - [2010-A Pseudospectral Optimal Motion Planner for Autonomous Unmanned Vehicles](https://core.ac.uk/download/pdf/36737091.pdf)
     - [2007-A Pseudospectral Method for Real-Time Motion Planning and Obstacle Avoidance ](https://apps.dtic.mil/sti/pdfs/ADA478686.pdf)
     - [A review of pseudospectral optimal control: From theory to flight]()
+    - [2020 Optimal Motion Planning for Differential Drive Mobile Robots based on Multiple-Interval Chebyshev Pseudospectral Methods]()

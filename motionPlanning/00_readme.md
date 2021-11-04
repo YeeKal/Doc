@@ -43,6 +43,9 @@
 ## paper
 
 - [2015 Homotopy-Based Divide-and-Conquer Strategy for Optimal Trajectory Planning via Mixed-Integer Programming]()
+- project
+    - [Kris' Locomotion and Manipulation Planning Toolkit](https://github.com/krishauser/Klampt)
+    - [robotic manipulators - python](https://github.com/Sarrasor/RoboticManipulators/blob/main/rr_robot_dynamics.py)
 
 
 

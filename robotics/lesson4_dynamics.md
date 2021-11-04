@@ -84,10 +84,10 @@ forward:
 
 $$\begin{aligned}
 &{ }^{i+1} \omega_{i+1}={ }_{i}^{i+1} R^{i} \omega_{i}+\dot{\theta}_{i+1}{ }^{i+1} Z_{i+1}\\
-&{ }^{i+1} \dot{\omega}_{i+1}={ }_{i}^{i+1} R^{i} \dot{\omega}_{i}+_{i}^{i+1} R^{i} \omega_{i} \times \dot{\boldsymbol{\theta}}_{i+1}{ }^{i+1} \hat{Z}_{i+1}+\ddot{\theta}_{i+1}{ }^{i+1} \hat{Z}_{i+1}\\
+&{ }^{i+1} \dot{\omega}_{i+1}={ }_{i}^{i+1} R^{i} \dot{\omega}_{i}+_{i}^{i+1} R^{i} \omega_{i} \times (\dot{\boldsymbol{\theta}}_{i+1}{ }^{i+1} Z_{i+1})+\ddot{\theta}_{i+1}{ }^{i+1} Z_{i+1}\\
 &{ }^{i+1} \dot{v}_{i+1}=_{i}^{i+1} R\left(^{i} \dot{\omega}_{i} \times^{i} P_{i+1}+^{i} \omega_{i} \times\left({ }^{i} \omega_{i} \times{ }^{i} P_{i+1}\right)+{ }^{i} \dot{v}_{i}\right)\\
 &{ }^{i+1} \dot{v}_{c_{i+1}}={ }^{i+1} \dot{\omega}_{i+1} \times{ }^{i+1} P_{C_{i+1}}\\
-&+{ }^{i+1} \omega_{i+1} \times\left({ }^{i+1} \omega_{i+1} x^{i+1} P_{c_{i+1}}\right)+{ }^{i+1} \dot{v}_{i+1}\\
+&+{ }^{i+1} \omega_{i+1} \times\left({ }^{i+1} \omega_{i+1} \times ^{i+1} P_{c_{i+1}}\right)+{ }^{i+1} \dot{v}_{i+1}\\
 &{ }^{i+1} F_{i+1}=m_{i+1}{ }^{i+1} \dot{v}_{C_{i+1}}\\
 &{ }^{i+1} N_{i+1}={ }^{c_{i+1}} I_{i+1}{ }^{i+1} \dot{\omega}_{i+1}+{ }^{i+1} \omega_{i+1} \times{ }^{c_{i+1}} I_{i+1}{ }^{i+1} \omega_{i+1}\end{aligned}$$
 
@@ -97,11 +97,29 @@ backward
 $$\begin{aligned}&{ }^{i} f_{i}={ }_{i+1}^{i} R^{i+1} f_{i+1}+{ }^{i} F_{i}\\
 &n_{i}=^{i} N_{i}+{ }_{i+1}^{i} R^{i+1} n_{i+1}+{ }^{i} P_{C_{i}} \times{ }^{i} F_{i}\\
 &+{ }^{i} P_{i+1} \times_{i+1}^{i} R^{i+1} f_{i+1}\\
-&\tau_{i}={ }^{i} n_{i}^{T i} \hat{Z}_{i}
+&\tau_{i}={ }^{i} n_{i}^{T} \cdot {}^iZ_{i}
 \end{aligned}$$
+
+惯性张量：
+
+$$\mathbf{I}=\left[\begin{array}{lll}
+I_{x x} & I_{x y} & I_{x z} \\
+I_{y x} & I_{y y} & I_{y z} \\
+I_{z x} & I_{z y} & I_{z z}
+\end{array}\right]$$
+
+设 $w=[w_x, w_y, w_z]^T$,角动量：$L=Iw$
 
 
 [two link arm ref](https://www.guyuehome.com/19198)
+
+
+- inverse dynamics: q to torque
+- forward dynamics: torque to q
+
+$$\ddot{q} = M^{-1}(q)(\tau-C(q, \dot{q})\dot{q} -G(q))     \\
+\dot{q} = \int \ddot{q}dt   \\
+q = \int \dot{q}dt$$
 
 ## 动力学方程的结构
 
@@ -109,11 +127,15 @@ $$\begin{aligned}&{ }^{i} f_{i}={ }_{i+1}^{i} R^{i+1} f_{i+1}+{ }^{i} F_{i}\\
 
 $$\tau=M(q)\ddot{q}+V(q, \dot{q})+G(q)$$
 
+$$\tau=M(q)\ddot{q}+V(q, \dot{q})+G(q) + J^T(\theta) F_{tip}$$
+
+
 **configuration space equation**
 
 $$\tau=M(q)\ddot{q}+B(q)[\dot{q}\dot{q}]+C(q)[\dot{q}^2]+G(q)$$
 
-##Lagrange equation
+
+## Lagrange equation
 
 $$L=K-U$$(kinetic energy-potential energy)
 
@@ -131,7 +153,53 @@ $$\begin{align}\frac{d}{dt}\frac{\partial K}{\partial \dot{q}}-\frac{\partial K}
 
 kinetic energy: work done by external forces to bring the system from rest to its current state.
 
+## 
 
+## two link arm
+
+$$\begin{aligned}
+&\boldsymbol{\tau}=\boldsymbol{M}(\boldsymbol{\theta}) \ddot{\boldsymbol{\theta}}+\boldsymbol{h}(\boldsymbol{\theta}, \dot{\boldsymbol{\theta}})+\boldsymbol{g}(\boldsymbol{\theta}) \\
+&\boldsymbol{M}(\boldsymbol{\theta})=\left[\begin{array}{ll}
+M_{11} & M_{12} \\
+M_{21} & M_{22}
+\end{array}\right] \quad \boldsymbol{h}(\boldsymbol{\theta}, \dot{\boldsymbol{\theta}})=\left[\begin{array}{c}
+-m_{2} l_{1} l_{12} \dot{\theta}_{2}\left(2 \dot{\theta}_{1}+\dot{\theta}_{2}\right) \sin \theta_{2} \\
+m_{2} l_{1} l_{g 2} \dot{\theta}_{1}^{2} \sin \theta_{2}
+\end{array}\right] \\
+&\boldsymbol{g}(\boldsymbol{\theta})=\left[\begin{array}{c}
+m_{1} g l_{g 1} \cos \theta_{1}+m_{2} g\left(l_{1} \cos \theta_{1}+l_{g 2} \cos \left(\theta_{1}+\theta_{2}\right)\right) \\
+m_{2} g l_{92} \cos \left(\theta_{1}+\theta_{2}\right)
+\end{array}\right. \\
+&M_{11}=I_{1}+I_{2}+m_{1} l_{g 1}^{2}+m_{2}\left(l_{1}^{2}+l_{g 2}^{2}+2 l_{1} l_{g 2}+2 l_{1} l_{g 2} \cos \theta_{2}\right) \\
+&M_{12}=M_{21}=I_{2}+m_{2}\left(l_{g 2}^{2}+l_{1} l_{g 2} \cos \theta_{2}\right) \\
+&M_{22}=I_{2}+m_{2} l_{g 2}^{2}
+\end{aligned}$$
+
+
+another version:
+
+$$
+\begin{aligned}
+&\tau_{1}=H_{11} \ddot{\theta}_{1}+H_{12} \ddot{\theta}_{2}-h \dot{\theta}_{2}^{2}-2 h \dot{\theta}_{1} \dot{\theta}_{2}+G_{1} \\
+&\tau_{2}=H_{22} \ddot{\theta}_{2}+H_{21} \ddot{\theta}_{1}+h \dot{\theta}_{1}^{2}+G_{2}
+\end{aligned}
+$$
+where
+$$
+\begin{aligned}
+&H_{11}=m_{1} \ell_{c 1}^{2}+I_{1}+m_{2}\left(\ell_{1}^{2}+\ell_{c 2}^{2}+2 \ell_{1} \ell_{c 2} \cos \theta_{2}\right)+I_{2} \\
+&H_{22}=m_{2} \ell_{c 2}^{2}+I_{2} \\
+&H_{12}=m_{2}\left(\ell_{c 2}^{2}+\ell_{1} \ell_{c 2} \cos \theta_{2}\right)+I_{2} \\
+&h=m_{2} \ell_{1} \ell_{c 2} \sin \theta_{2} \\
+&G_{1}=m_{1} \ell_{c 1} g \cos \theta_{1}+m_{2} g\left\{\ell_{c 2} \cos \left(\theta_{1}+\theta_{2}\right)+\ell_{1} \cos \theta_{1}\right\} \\
+&G_{2}=m_{2} g \ell_{c 2} \cos \left(\theta_{1}+\theta_{2}\right)
+\end{aligned}
+$$
+
+
+## ref
+
+- [from urdf to kinematic and dynamic](https://github.com/mahaarbo/urdf2casadi/blob/master/urdf2casadi)
 
 
 

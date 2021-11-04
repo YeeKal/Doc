@@ -77,3 +77,5 @@ spectrally: approximation will converge spectrally (i.e., at an exponential rate
 
 - paper
     - [2010-A Survey of Numerical Methods for Optimal Control](https://www.researchgate.net/publication/268042868_A_Survey_of_Numerical_Methods_for_Optimal_Control)
+- project
+    - [opty: using direct collocation in the optimization of dynamic systems](https://github.com/csu-hmc/opty/blob/master/opty)
