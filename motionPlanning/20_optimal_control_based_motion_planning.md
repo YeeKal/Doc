@@ -130,3 +130,4 @@ Discovery of Complex Behaviors through Contact-Invariant Optimization
     - [1998- A Survey of Numerical Methods for Trajectory Optimization]()
     - [2009 - A survey of numerical methods for optimal control]()
     - [ALTRO: A Fast Solver for Constrained Trajectory Optimization](https://roboticexplorationlab.org/papers/altro-iros.pdf)
+    - [2021-Creating Better Collision-Free Trajectory for Robot Motion Planning by Linearly Constrained Quadratic Programming](https://www.frontiersin.org/articles/10.3389/fnbot.2021.724116/full)

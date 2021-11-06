@@ -199,6 +199,7 @@ $$\kappa=\kappa(s)  \\
     - [Trajectory Optimization motion planning](https://github.com/bestvibes/motion-planner)
     - [Convex Optimization for motion plannin](https://github.com/Theochiro/motion-planning)
     - [trajopt](https://rll.berkeley.edu/trajopt/doc/sphinx_build/html/)
+    - [kRRT* with fast RO](https://github.com/kyleYehh/kino_sampling_with_regional_opti)
 - course
     - [台大机器人学之运动学——林沛群-b站](https://www.bilibili.com/video/BV1v4411H7ez)
 - paper

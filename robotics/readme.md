@@ -29,6 +29,19 @@
 - [《经典力学的数学方法》](https://book.douban.com/subject/1728598/) 数学要求高
 
 
+## 基本工具
+
+so3 / se3
+
+- [Modern Robotics: cpp version](https://github.com/Le0nX/ModernRoboticsCpp)
+- [Modern Robotics: python version](https://github.com/NxRLab/ModernRobotics/tree/master/packages/Python)
+
+
+## projects
+
+- [urdf parser in python](https://github.com/mahaarbo/urdf2casadi/blob/master/urdf2casadi/urdfparser.py)
+- [tiny urdf parser in c++](https://github.com/ORB-HD/URDF_Parser)
+
 ## vision
 
 **computational stereo** 

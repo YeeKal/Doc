@@ -47,7 +47,10 @@ void drawCube()
     glColorPointer(3, GL_FLOAT, 0, colors);
     glVertexPointer(3, GL_FLOAT, 0, vertices);
 
-    glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_BYTE, indices);
+    glDrawElements(GL_TRIANGLES,    // 绘图模式
+                    36,   // 每次读出的点的个数
+                    GL_UNSIGNED_BYTE, 
+                    indices);   // 索引数组
 
     glDisableClientState(GL_VERTEX_ARRAY);  // disable vertex arrays
     glDisableClientState(GL_COLOR_ARRAY);
@@ -75,19 +78,32 @@ void glMultiDrawArrays(GLenum mode,GLint* first,GLsizei* count,GLsizei primcount
 
 ## 光照和材质
 
+- 光照模型
+    - 全局环境光
+    - 环境光：环境光是一种无处不在的光。环境光源放出的光线被认为来自任何方向。因此，当你仅为场景指定环境光时，所有的物体无论法向量如何，都将表现为同样的明暗程度
+    - 镜面光：反射到某一个方向
+    - 散射光：
+- 光源
+
+- 环境光：环境光是一种无处不在的光。环境光源放出的光线被认为来自任何方向。因此，当你仅为场景指定环境光时，所有的物体无论法向量如何，都将表现为同样的明暗程度
+- 点光源：来自同一点
+- 平行光：反射到某一个方向
+- 聚光灯：锥体光源，像手电筒
+
 ```cpp
+
 // set light
 void glLightfv (GLenum light, GLenum pname, const GLfloat *params);
 
 // 位置在(0,0,0)，没有环境光，镜面反射光和漫反射光都为白光的光源
-GLfloat light_position[] = { 0.0, 0.0, 0.0, 0.0 }; 
+GLfloat light_position[] = { 0.0, 0.0, 0.0, 0.0 };  // -1 表示无限远
 GLfloat light_ambient [] = { 0.0, 0.0, 0.0, 1.0 };
 GLfloat light_diffuse [] = { 1.0, 1.0, 1.0, 1.0 };
 GLfloat light_specular[] = { 1.0, 1.0, 1.0, 1.0 }; 
 glLightfv(GL_LIGHT0, GL_POSITION, light_position); 
-glLightfv(GL_LIGHT0, GL_AMBIENT , light_ambient );
-glLightfv(GL_LIGHT0, GL_DIFFUSE , light_diffuse ); 
-glLightfv(GL_LIGHT0, GL_SPECULAR, light_specular);
+glLightfv(GL_LIGHT0, GL_AMBIENT , light_ambient );  // 环境光
+glLightfv(GL_LIGHT0, GL_DIFFUSE , light_diffuse );  // 漫反射
+glLightfv(GL_LIGHT0, GL_SPECULAR, light_specular);  // 镜面光
 
 // open light
 glEnable(GL_LIGHTING)
@@ -98,11 +114,19 @@ glEnable(GL_LIGHTX)
 display: glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 init: glEnable(GL_DEPTH_TEST);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
-```
+```、
+材质：
 
 ```cpp
 // set material
 void  glMaterialfv (GLenum face, GLenum pname, const GLfloat *params);
+
+/**
+face: 表明当前材质应该应用到物体的哪一个面上
+    GL_FRONT、GL_BACK、GL_FRONT_AND_BACK
+pname:
+    GL_SHINESS
+**/
 ```
 ## 坐标系
 
@@ -412,4 +436,5 @@ int main(int argc, char ** argv){
     - [OPENGL EXAMPLES](https://cs.lmu.edu/~ray/notes/openglexamples/)
     - [opengl examples](https://web.media.mit.edu/~gordonw/OpenGL/)
     - [nanogui](https://github.com/wjakob/nanogui)
+    - [disc0ver-Engine](https://github.com/leo6033/disc0ver-Engine)
 - paper
