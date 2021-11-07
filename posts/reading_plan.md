@@ -5,7 +5,10 @@ tags: 文
 date: 2021-10-31
 ---
 
+规则：
 
+1. 每天读书不少于一小时
+2. 每周读书天数不少于六天
 
 ## November   2021         
 |Sun | Mon | Tue  | Wed | Thu | Fri | Sat 
