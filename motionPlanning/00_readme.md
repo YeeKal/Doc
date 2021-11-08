@@ -3,6 +3,8 @@
 
 
 ## ref
+- paper source
+    - [Robotics: Science and Systems](http://www.roboticsproceedings.org/rss17/index.html)
 - lab
     - [IML: Intelligent motion laboratory](https://motion.cs.illinois.edu/index.html)
     - [GAMMA: Motion and path planning](http://gamma.cs.unc.edu/research/robotics/)
@@ -46,6 +48,7 @@
 - project
     - [Kris' Locomotion and Manipulation Planning Toolkit](https://github.com/krishauser/Klampt)
     - [robotic manipulators - python](https://github.com/Sarrasor/RoboticManipulators/blob/main/rr_robot_dynamics.py)
+    - [Kris Hauser's LMPL ](https://github.com/panjia1983/KLMPL)
 
 
 
