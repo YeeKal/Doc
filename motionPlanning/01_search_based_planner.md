@@ -1,17 +1,5 @@
 
-**optimization**
 
-- probabilistically complete: finds a feasible path with probability approaching one as the number of iterations approaches infinity.
-- asymptotic optimality: the path is shotest with enough time
-
-**geometrical representation**
-
-- configuration space: representation of robot manipulation states
-
-**collision checking**
-
-- FCL: Flexible Collision Library
-- PCD: Proximity Collision Detection
 
 **planning algorithms**
 

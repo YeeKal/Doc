@@ -111,7 +111,10 @@ A_{eq}S=B_{eq}$$
 - blog
     - [SQP 算法实现](https://zhuanlan.zhihu.com/p/348666680)
 - project
-    - [CppOptimizationLibrary](https://github.com/PatWie/CppNumericalSolvers)
+    - [CppNumericalSolvers](https://github.com/PatWie/CppNumericalSolvers)
+- course
+    - [Convex Optimization 1](https://web.stanford.edu/class/ee364a/lectures.html)
+    - [Convex Optimization 2](https://web.stanford.edu/class/ee364b/lectures.html)
 
 
 
