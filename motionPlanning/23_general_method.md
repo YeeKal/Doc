@@ -33,6 +33,82 @@ date: 2021-10-29
     - a smooth reformulation of the collision avoidance constraint for point-mass controlled objects and polyhedral obstacles: [2011 Trajectory generation for aircraft avoidance maneuvers using online optimization]()
 
 
+#### problem definition
+
+
+**collision modeling:**
+
+- Robot: $\mathbb{E}(x_k) \subset \mathbb{R}^n$, space occupied by the controlled object at time $k$
+- Obstacle: 
+
+$$\mathbb{O}^{(m)}=\{y\in \mathbb{R}^n:A^{(m)} y \preceq _{\mathcal{K}}b^{(m)}\}, \quad A^{(m)} \in \mathbb{R}^{l \times n}, b^{(m)} \in \mathbb{R}^{l}, \text { and } \mathcal{K} \subset \mathbb{R}^{l}$$
+
+$\mathcal{K}$ is a closed convex pointed cone with non-empty interior, this is entirely generic since any compact convex set admits a conic representation of the form,[ref: Convex Analysis, 1970]().(虽然这里符号复杂，但其实就是说障碍物可以用一个非齐次线性不等式表示.对于多面体，这时取$\mathcal{K}=\mathbb{R}^l_{+}$,非负象限也是正常锥的一种， 此时$\preceq _{\mathcal{K}}b^{(m)} = \leq$. 对于椭圆，可以取$\mathcal{K}=\mathbb{R}^l_{+}$为二阶锥。)
+
+for point-mass robot: $\mathbb{E}(x_k)$ degenerate to a point $p_k$
+
+for *full-dimensional* objects: model as the rotation and translation of the initial convex set $\mathbb{B}\subset \mathbb{R}^n$
+
+$$\mathbb{E}\left(x_{k}\right)=R\left(x_{k}\right) \mathbb{B}+t\left(x_{k}\right), \quad \mathbb{B}:=\left\{y: G y \preceq_{\overline{\mathcal{K}}} g\right\}$$
+
+#### collision avoidance for point-mass models
+
+dual problem:
+
+$$\begin{aligned}
+\operatorname{dist}(\mathbb{E}(x), \mathbb{O}) &>\mathrm{d}_{\min } \\
+& \Longleftrightarrow \exists \lambda \succeq_{\mathcal{K}^{*}} 0:(A p-b)^{\top} \lambda>\mathrm{d}_{\min },\left\|A^{\top} \lambda\right\|_{*} \leq 1
+\end{aligned}$$
+
+the problem as:
+
+$$\begin{aligned}
+\min _{\mathbf{x}, \mathbf{u}, \boldsymbol{\lambda}} & \sum_{k=0}^{N} \ell\left(x_{k}, u_{k}\right) \\
+\text { s.t. } & x_{0}=x_{S}, x_{N+1}=x_{F} \\
+& x_{k+1}=f\left(x_{k}, u_{k}\right), h\left(x_{k}, u_{k}\right) \leq 0 \\
+&\left(A^{(m)} p_{k}-b^{(m)}\right)^{\top} \lambda_{k}^{(m)}>0 \\
+&\left\|A^{(m)^{\top}} \lambda_{k}^{(m)}\right\|_{*} \leq 1, \lambda_{k}^{(m)} \succeq_{\mathcal{K}^{*}} 0 \\
+& \text { for } k=0, \ldots, N, m=1, \ldots, M
+\end{aligned}$$
+
+
+**collision free trajectory generation**
+
+signed distance: 把碰撞这个bool变量编码成带有碰撞程度的连续函数表达式中，让机器人明白这个障碍物的碰撞能到多大程度，以及走多远之后其碰撞的程度是怎么样的。这样碰撞就变得可微
+
+$$\begin{aligned}
+\operatorname{sd}(\mathbb{E}(x), \mathbb{O}) &>\mathrm{d} \\
+& \Longleftrightarrow \exists \lambda \succeq_{\mathcal{K}^{*}} 0:(A p-b)^{\top} \lambda>\mathrm{d},\left\|A^{\top} \lambda\right\|_{*}=1
+\end{aligned}$$
+
+```python
+                      signed distance              
+        +----------------------------------------+ 
+      2 |:                   :                  :| 
+        | :                  :                 .'| 
+        |  :                 :                .' | 
+        |   :                :               .'  | 
+        |    :               :              .'   | 
+        |     :              :             .'    | 
+        |      :             :            .'     | 
+   y    |       :            :           .'      | 
+        |        :           :          .'       | 
+        |         :          :         .'        | 
+        |''''''''''':'''''''':'''''''':''''''''''| 
+        |            '.      :      .'           | 
+        |              '.    :    .'             | 
+        |                '.  :  .'               | 
+     -1 |                  '.:.'                 | 
+        +----------------------------------------+ 
+         -2                                     2  
+                             x                     
+
+```
+
+
+
+
+
 ## Simultaneous path planning and trajectory optimization for robotic manipulators using discrete
 mechanics and optimal control
 

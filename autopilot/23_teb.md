@@ -52,6 +52,10 @@ $$\begin{align}
 
 global planner -> local planner
 
+Teb 把各种约束条件通过线性相加的形式整合到一起（scalarized multi-objective optimization problem），比如时间/路径长度/避障/动力学约束/运动学约束/集合约束。这些约束大部分依赖于局部的运动状态，其结构可以使用稀疏矩阵来表述，因而可以方便地使用g2o优化库来解决。
+
+#### optimization problem
+
 TEB is a local planner
 
 - configuration: $Q=\left\{\mathbf{x}_{i}\right\}_{i=0 \ldots n} \quad n \in \mathbb{N}$
@@ -63,6 +67,11 @@ f(B) &=\sum_{k} \gamma_{k} f_{k}(B) \\
 B^{*} &=\underset{B}{\operatorname{argmin}} f(B)
 \end{aligned}$$
 运动被视为在teb上一系列的约束函数的集合，规划则是在约束的基础上找到最优的序列。这些约束一般是针对局部特性而言，因此约束的系数矩阵将会是一个对称的稀疏矩阵，这能够极大加速优化过程。
+
+#### hyper-graph
+
+把该稀疏系统以hyper-graph的形式表示
+
 
 
 为了让边界约束可微，论文设计了一个函数：

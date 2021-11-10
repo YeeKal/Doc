@@ -52,10 +52,26 @@ q.w() = PI/8;    // Half of the rotation angle must be specified, even IDK why
 
 Eigen::Matrix3d R = q.normalized().toRotationMatrix();
 
+// rotation matrix to quaternion
+Matrix3f mat;
+Quaternionf q(mat);
+
+Quaternionf q;
+q = mat;
+
+//  angle axis to rotation matrix
 Eigen::Vector3d r;
 r=start_rot1.eulerAngles(2,1,0);//z y x 按欧拉角顺序
 Eigen::Matrix3d after;
 after=(Eigen::AngleAxisd(r[0],Eigen::Vector3d::UnitZ()))* (Eigen::AngleAxisd(r[1], Eigen::Vector3d::UnitY()))*(Eigen::AngleAxisd(r[2], Eigen::Vector3d::UnitX()));
+
+Eigen::Matrix3f m;
+m = AngleAxisf(0.25*M_PI, Vector3f::UnitX())
+  * AngleAxisf(0.5*M_PI, Vector3f::UnitY())
+  * AngleAxisf(0.33*M_PI, Vector3f::UnitZ());
+
+// rotation matrix ro axgle axis
+Vector3f ea = m.eulerAngles(2, 1, 0);
     
 ```
 

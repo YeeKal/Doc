@@ -149,6 +149,12 @@ $$x \preceq_{K} y \quad \Longleftrightarrow \quad y-x \in K, \quad x \prec_{K} y
 1. element-wise 不等式： $x \preceq_{\mathbf{R}_{+}^{n}} y \Longleftrightarrow x_{i} \leq y_{i}, \quad i=1, \ldots, n$
 2. matrix inequality: $X \preceq \mathbf{S}_{+}^{n} Y \quad \Longleftrightarrow \quad Y-X \text { positive semidefinite }$
 
+a positive  definite matrix A defines a sllipsoid:
+
+$$\mathcal{E}_{A}=\left\{u: u^{T} A u \leq 1\right\}$$
+
+the correspondence between $A$ and $\mathcal{E}_A$ is one-to-one, moreover, $A\succeq B$ if and only if $\mathcal{E}_B$ contains $\mathcal{E}_B$.
+
 ## minimum and minimal elements
 
 如果对于每个y， x都广义小于等于y，则x是集合的最小元(minimum element)。
@@ -164,67 +170,17 @@ $$
 y \in S, \quad y \preceq_{K} x \quad \Longrightarrow \quad y=x
 $$
 
+## separating hyperplane theorem
+
+
+if $C$ and $D$ are nonempty disjoint convex sets, there exist $a \neq 0, b$ s.t.
+
+$$a^{T} x \leq b \text { for } x \in C, \quad a^{T} x \geq b \text { for } x \in D$$
+
+the hyperplane $\left\{x \mid a^{T} x=b\right\}$ separates $C$ and $D$
+strict separation requires additional assumptions (e.g., $C$ is closed, $D$ is a singleton)
 
 
 
 
 
-
-
-
-```c++
-
-/**
-           ⡤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⢤       
-         1 ⡇⠀⠀⠀⠀⠀⠀⢀⠖⢹⠉⢢⠀⠀⢀⠞⠉⠉⢢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠞⠉⠀⠀⠀⢸ cos(x)
-           ⡇⠀⠀⠀⠀⠀⢠⠊⠀⢸⠀⠀⠳⣠⠊⠀⠀⠀⠀⠣⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⢸ sin(x)
-           ⡇⠀⠀⠀⠀⢀⠇⠀⠀⢸⠀⠀⢠⢷⠀⠀⠀⠀⠀⠀⢱⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠇⠀⠀⠀⠀⠀⠀⢸       
-           ⡇⠀⠀⠀⠀⡜⠀⠀⠀⢸⠀⠀⡜⠀⢧⠀⠀⠀⠀⠀⠀⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡎⠀⠀⠀⠀⠀⠀⠀⢸       
-           ⡇⠀⠀⠀⢸⠀⠀⠀⠀⢸⠀⢸⠀⠀⠘⡄⠀⠀⠀⠀⠀⠘⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⡸⠀⠀⠀⠀⠀⠀⠀⠀⢸       
-           ⡇⠀⠀⢀⠇⠀⠀⠀⠀⢸⢀⠇⠀⠀⠀⢱⠀⠀⠀⠀⠀⠀⢱⠀⠀⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⠀⠀⠀⢸       
-           ⡇⠀⠀⡜⠀⠀⠀⠀⠀⢸⡜⠀⠀⠀⠀⠈⡆⠀⠀⠀⠀⠀⠈⡆⠀⠀⠀⠀⠀⠀⠀⡜⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸       
-   f(x)    ⡇⠤⠤⠧⠤⠤⠤⠤⠤⢼⠧⠤⠤⠤⠤⠤⠼⡤⠤⠤⠤⠤⠤⠼⡤⠤⠤⠤⠤⠤⢴⠥⠤⠤⠤⠤⠤⢤⠤⠤⠤⢸       
-           ⡇⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⢣⠀⠀⠀⠀⠀⠀⢣⠀⠀⠀⠀⢀⠇⠀⠀⠀⠀⠀⢀⠇⠀⠀⠀⢸       
-           ⡇⠀⠀⠀⠀⠀⠀⠀⡸⢸⠀⠀⠀⠀⠀⠀⠀⠈⡆⠀⠀⠀⠀⠀⠈⡆⠀⠀⠀⡸⠀⠀⠀⠀⠀⠀⡸⠀⠀⠀⠀⢸       
-           ⡇⠀⠀⠀⠀⠀⠀⢀⠇⢸⠀⠀⠀⠀⠀⠀⠀⠀⢱⠀⠀⠀⠀⠀⠀⢱⠀⠀⢠⠃⠀⠀⠀⠀⠀⢠⠃⠀⠀⠀⠀⢸       
-           ⡇⠀⠀⠀⠀⠀⠀⡞⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⢇⠀⠀⠀⠀⠀⠀⢇⠀⡞⠀⠀⠀⠀⠀⠀⡎⠀⠀⠀⠀⠀⢸       
-           ⡇⠀⠀⠀⠀⠀⡸⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡆⠀⠀⠀⠀⠀⠘⡾⠀⠀⠀⠀⠀⠀⡸⠀⠀⠀⠀⠀⠀⢸       
-           ⡇⠀⠀⠀⠀⡰⠁⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢄⠀⠀⠀⠀⡜⠙⣄⠀⠀⠀⠀⡜⠁⠀⠀⠀⠀⠀⠀⢸       
-        -1 ⡇⠀⢀⣀⠜⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢦⣀⣀⠜⠀⠀⠈⢦⣀⣠⠜⠀⠀⠀⠀⠀⠀⠀⠀⢸       
-           ⠓⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠒⠚       
-           ⠀-2⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀7⠀       
-           ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀x⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                      Example Plot                       
-       ┌────────────────────────────────────────┐        
-     3 │             :''''''''''''''''''''''''':│ my line
-       │             :                         :│        
-       │             :                         :│        
-       │             :                         :│        
-       │             :                         :│        
-       │:'''''''''''':'''''''''''':            :│        
-       │:            :            :            :│        
-   y   │:            :            :            :│        
-       │:            :            :            :│        
-       │:            :            :            :│        
-       │:          ..''''''''''''':'''''''''''''│        
-       │:        .'               :             │        
-       │:     .''                 :             │        
-       │:  ..'                    :             │        
-     0 │:.:.......................:             │        
-       └────────────────────────────────────────┘        
-        0                                      3     
-
-
-julia: UnicodePLots
-
-                          Population                 
-            ┌                                        ┐ 
-      Paris ┤■■■■■■ 2.244                              
-   New York ┤■■■■■■■■■■■■■■■■■■■■■■■ 8.406             
-     Moskau ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 11.92   
-     Madrid ┤■■■■■■■■■ 3.165                           
-            └                                        ┘ 
------------------→
-**/
-
-```
