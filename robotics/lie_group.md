@@ -64,4 +64,42 @@ $$\begin{align}
 \end{align}$$
     - 指数积公式只能描述末端关节对基坐标系的变换，而不能得知每个关节相对于坐标系的变换。 
 
+## only math
 
+matrix exponential(矩阵指数):
+
+$$e^A = \sum_{k=0} \frac{1}{k!}A^k$$
+
+for a skew-symmetric matrix:
+
+$$C=\left[\begin{array}{ccc}
+0 & -a_{3} & a_{2} \\
+a_{3} & 0 & -a_{1} \\
+-a_{2} & a_{1} & 0
+\end{array}\right]$$
+
+Let $x=\sqrt{a_1^2 + a_2^2 + a_3^2 }$， then $C^3 = -x^2C$, Hence:
+
+$$C^{2m+1}=(-1)^mx^{2m} \\
+C^{2m}=(-1)^{m-1}x^{2m-2}C^2$$
+
+Therefore:
+
+$$\begin{aligned}
+&e^{C}=\sum_{n=0}^{\infty} \frac{1}{n !} C^{n}=I+\sum_{m=0}^{\infty} \frac{1}{(2 m+1) !} C^{2 m+1}+\sum_{m=1}^{\infty} \frac{1}{(2 m) !} C^{2 m} \\
+&=I+\sum_{m=0}^{\infty} \frac{(-1)^{m} x^{2 m}}{(2 m+1) !} C+\sum_{m=1}^{\infty} \frac{(-1)^{m-1} x^{2 m-2}}{(2 m) !} C^{2} \\
+&=I+\frac{1}{x} \sum_{m=0}^{\infty} \frac{(-1)^{m} x^{2 m+1}}{(2 m+1) !} C-\frac{1}{x^{2}} \sum_{m=1}^{\infty} \frac{(-1)^{m} x^{2 m}}{(2 m) !} C^{2} \\
+&=I+\frac{\sin x}{x} C+\frac{1-\cos x}{x^{2}} C^{2}
+\end{aligned}$$
+
+
+
+## ref
+
+- paper
+    - [A tutorial on SE(3) transformation parameterizations and on-manifold optimization](https://ingmec.ual.es/~jlblanco/papers/jlblanco2010geometry3D_techrep.pdf)
+    - [2018_A micro Lie theory for state estimation in robotics]()
+- project
+    - [c++: manif](https://github.com/artivis/manif)
+    - [c++: sophus](https://github.com/strasdat/Sophus)
+    - [python: liegroups](https://github.com/utiasSTARS/liegroups)

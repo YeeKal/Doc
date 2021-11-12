@@ -44,6 +44,18 @@ Eigen::VectorXd test1_eigen=Eigen::Map<Eigen::VectorXd>(array,6);
 - EIgen::Isometry3d: 等距变换对应的是U矩阵($R*R=I$),欧式空间中的等距变换对应正交矩阵($R^TR=I$).
 
 ```c++
+
+// isometry from rotation and translation
+Eigen::Isometry3d t1=Eigen::Isometry3d::Identity();
+t1.rotate(rot_max);
+t1.pretranslate(trans_max);
+
+// quaternion to matrix3d
+Eigen::Quaterniond q1(w, x, y, z);// 第一种方式
+
+Eigen::Quaterniond q2(Vector4d(x, y, z, w));// 第二种方式
+
+Eigen::Quaterniond q2(Matrix3d(R));// 第三种方式
 Eigen::Quaterniond q(w,x,y,z);
 q.x() = 0;
 q.y() = 1;
