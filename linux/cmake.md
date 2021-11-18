@@ -5,6 +5,37 @@ tags: linux
 date: 2018-05-17
 ---
 
+## 指定C/C++的标准
+
+```py
+# CMake的最小版本要求
+cmake_minimum_required(VERSION 3.0.0)
+# 项目名称以及版本号
+project(demo VERSION 0.1.0)
+
+#启动对C++14标准的支持
+set(CMAKE_CXX_STANDARD 14)
+
+# 显式要求指明支持C++标准
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# 启动对C11标准的支持
+# set(CMAKE_C_STANDARD 11)
+# 显式要求指明支持C标准
+# set(CMAKE_C_STANDARD_REQUIRED True)
+
+# 归档静态库到指定目录
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/lib)
+# 归档动态库到指定目录
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/lib)
+# 归档可执行文件到指定目录
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/bin)
+
+#设置可执行程序
+add_executable(demo main.cpp)
+```
+
+
 ## ros include header from another package
 
 will include "b_include.h" file in :  
