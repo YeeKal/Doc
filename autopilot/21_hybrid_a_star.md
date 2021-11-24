@@ -8,6 +8,8 @@ date: 2021-08-11
 ## hybrid a-star
 
 
+$$f(x) = |x|, \quad \frac{df}{dx} = \frac{x}{|x|},\quad x \neq 0$$
+
 ```python
 # A*
 '''
@@ -54,5 +56,6 @@ h_cost: 从目标点开始，计算到当前点的dijkstra路径代价
 - paper
     - [2020-Speed Planning for Autonomous Driving in Dynamic Urban Driving Scenarios](https://ieeexplore.ieee.org/document/9235659)
     - [2016-Path Planning in Unstructured Environments: A Real-time Hybrid A* Implementation for Fast and Deterministic Path Generation for the KTH Research Concept Vehicle]()
-    - [2008-Practical Search Techniques in Path Planning for Autonomous Driving]()
+    - [hybrid a* short version: 2008 - Practical Search Techniques in Path Planning for Autonomous Driving]()
+    - [hybrid a* long version: 2010 - Path Planning for Autonomous Vehicles in Unknown Semi-structured Environments]()
 
