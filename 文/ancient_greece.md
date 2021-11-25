@@ -133,3 +133,12 @@ Crete: 克里特岛
 ![attica](pics/greek/attica.png)
 
 
+- Anatolia(安那托利亚)/Asia Minor Peninsula(小亚细亚)
+
+## Minoan(circa 2600 – 1200 BCE)
+
+文明区域：克里特crete，罗得斯岛，赛普卢斯，
+
+## Mycenaean(circa 1600 – 1100 BCE)
+
+中心转移，希腊大陆以及爱琴海诸岛

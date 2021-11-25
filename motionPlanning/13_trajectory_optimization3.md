@@ -22,7 +22,58 @@ date: 2021-08-17
 优化的方法：区别在与对约束函数或者是目标函数的整理。类似于直接计算并不太好计算，而是进一步整理成另一种更加容易计算或者是更加高效的形式
 
 
+## 2021 - Integrating Fast Regional Optimization into Sampling-based Kinodynamic Planning for Multirotor Flight
 
+**intro**
+
+1. use kinodynamic rrt* as the heuristic plan, then optimized by a regional trajectory optimizer
+2. this optimizer is a sequence of QP problem
+3. regional trajectory optimizer reference:
+    - [2016-A framework to integrate local information into optimal path planning]()
+    - [2018-Dancing prm*: Simultaneous planning of sampling and optimization with configuration free space approximation]()
+    - [2019 Volumetric tree*: Adaptive sparse graph for effective exploration of homotopy classes]()
+
+**related workd**
+
+regional optimization: consider the local domain information, such as CHOMP
+
+problem: inefficient for narrow passage situation
+
+**methodogy**
+
+k-rrt*: 
+
+- solve BVP by Pontryagin Maximum Principle, obtaining the optimal transition time τ∗ and deriving the unconstrained optimal transition  rajectory as a 5th-degree polynomial.
+- check collision, if the path is violated, then relax τ to get a new polynominal
+
+quadratic objective function:
+
+1. smoothness cost: squared jerk
+2. resemblance cost: distance to original trajectory
+3. collision cost: distance to some anchor point, which  providing dragging force to draw the collided part to nearby collision-free areaas
+
+$$\begin{aligned}
+J_{c} &=\sum_{a p \in A P s} \int_{t_{s, a p}}^{t_{e, a p}}\left[p(t)-p_{a p}(t)\right]^{2} d t \\
+&=\sum_{a p \in A P s} \sum_{i \in L}\left(\mathbf{c}_{i}-\mathbf{c}_{i}^{a p}\right)^{\top} \int_{t_{s, i, a p}}^{t_{c, i, a p}} \mathbf{t t}^{\top} d t\left(\mathbf{c}_{i}-\mathbf{c}_{i}^{a p}\right) \\
+&=\sum_{a p \in A P s}\left(\mathbf{c}-\mathbf{c}^{a p}\right)^{\top} \mathbf{Q}_{c, a p}\left(\mathbf{c}-\mathbf{c}^{a p}\right)
+\end{aligned}$$
+
+iteractive optimization process
+
+1. solve the quadratic objective iteractively
+2. it cillides with new obstacles, adding new attracting points to provide accurate dragging force
+3. if the state and control violate saturations, increase time duration
+4. selection of the attracting points: 标记轨迹中碰撞区域（更高维度中很难决定哪些区域是碰撞的）的起点和终点，通过A* 快速找到一条无碰撞路径。选取碰撞轨迹区段中点与A*路径中点向外延伸作为`attracting point`.,通过局部选择牵引点的方式避免计算碰撞梯度
+
+![to_attracting_point](pics/to_attracting_point.png)
+
+
+**overview**
+
+对于障碍物的表达： 使用A* 选取牵引点，以与牵引点的距离作为优化梯度避开障碍物
+
+
+**trajectory refinement**
 ## trajopt
 
 #### introduction
@@ -142,6 +193,8 @@ General formulation of the TOPP problem:
             - [blog](https://gamma.cs.unc.edu/ITOMP/ITOMP_ROS/)
             - [github - code](https://github.com/Chpark/itomp)
         - [gpmp2: Gaussian Process Motion Planner 2](https://github.com/gtrll/gpmp2)
+        - [2017 Search-based Motion Planning for Quadrotors using Linear Quadratic Minimum Time Control](https://arxiv.org/abs/1709.05401)
+            - [source code]()
     - grasp motion planning
         - [2020_ICRA_GOMP: Grasp-Optimized Motion Planning for Bin Picking]()
 - project
