@@ -13,10 +13,18 @@ find_package (Threads)
 target_link_libraries(producer_consumer  ${CMAKE_THREAD_LIBS_INIT})
 ```
 
+```py
+#  生成链接库文件.o,比如类文件，可以被执行文件调用
+add_library()
 
-- add_library: 生成链接库文件.o,比如类文件，可以被执行文件调用
-- target_link_libraries： 库文件链接到指定的可执行文件
-- link_directories: 添加库文件搜索路径
+#  库文件链接到指定的可执行文件
+target_link_libraries()
+
+# 添加库文件搜索路径
+link_directories()
+```
+
+
 
 ```cmake
 #设置库文件存放路径

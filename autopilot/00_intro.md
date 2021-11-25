@@ -90,8 +90,6 @@ atlas: [atlas](https://github.com/magicleap/Atlas)
 
 ## ref
 
-- 招聘
-    - [阿里巴巴打磨元](https://cn.indeed.com/viewjob?jk=2c5947f7b0b845af&tk=1f44mj6bapqcu801&from=serp&vjs=3)
 - 知识点参考
     - [移动机器人运动规划课程](https://zhuanlan.zhihu.com/p/82784940)
 - blog
@@ -102,3 +100,5 @@ atlas: [atlas](https://github.com/magicleap/Atlas)
     - [自动驾驶决策控制及运动规划史上最详细最接地气总览现状](https://zhuanlan.zhihu.com/p/260707853)
 - paper
     - [2019-self driving cars a survey](https://arxiv.org/abs/1901.04407)
+- project
+    - [Steering Functions for Car-Like Robots](https://github.com/hbanzhaf/steering_functions)

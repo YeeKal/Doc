@@ -68,4 +68,5 @@ $$
 - paper
     - [2011-Parallel Algorithms for Real-time Motion Planning](https://www.ri.cmu.edu/pub_files/2011/7/mcnaughton-thesis.pdf)
     - [2003-parametric trajectory reduce computation time, at the cost os potentially introducing suboptimality]()
+    - [2008-Online Safe Trajectory Generation for Quadrotors Using Fast Marching Method and Bernstein Basis Polynomial]()
     
