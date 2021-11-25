@@ -26,6 +26,46 @@ g++ opengl_demo.cpp -o opengl_demo -lGL -lglut -lGLU
 2. 每一个功能包装成函数对象，存储到列表里
 3. 链表存储函数对象，集合根据名称快速定位是否存在
 
+## viewer
+
+drawer: scale, color, pose
+viewer: global mutux
+util: default color
+
+- 2d
+    - points: size, color, pose
+    - path: line-width, color, pose
+    - lines (connect between two points), line-width, color, pose
+    - pologon
+        - circle
+        - triangle: size, color, pose, fill
+        - rectangle: size, color, pose, fill
+- 3d
+    - 3d points
+    - 3d lines
+    - 3d path
+    -  polyhedron
+        - sphere
+        - cube
+        - 
+- 3d model
+    - stl
+    - ply
+
+drawer: inner data update / pose update
+
+environment:
+
+2dmap:
+    - robot: D2Robot
+        - pointRobot
+        - CircleRobot
+        - linkRobot
+    - obstacle:
+        - rectangle
+        - circle
+
+
 ## glDrawElements, glDrawArrays
 
 定点数组
@@ -253,6 +293,13 @@ void glPopMatrix(void);
 /**
 每一次push都把当前变换矩阵存入栈中，接下来操作都在当前矩阵上改变。因此push可以看作是一次镜像拷贝。当前矩阵操作完成之后，调用pop，移出栈，矩阵回退到矩阵拷贝之前的状态。
 **/
+```
+
+## anti-aliasing
+
+```cpp
+glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_MULTISAMPLE);
+glEnable(GL_MULTISAMPLE);
 ```
 
 ## 变换方式
