@@ -37,8 +37,11 @@ Balkans(巴尔干半岛)： 巴尔干山脉，多瑙河水系及愛琴海水系�
 
 Anatolia(安那托利亚)/Asia Minor Peninsula(小亚细亚)：
 
+- Assyrian: 亚述人, 又称叙利亚人（Syriacs）, 西亚两河流域
+- Hittite: 赫梯人,小亚细亚中西部古国(BC1700 - BC1180)
 - Lydian: 吕底亚， 小亚细亚中西部古国(BC700-BC546), 印歐語系安那托利亞語族
 - carian: 卡利亚
+- Phoenicia：腓尼基人， 古代地中海东岸， 其范围接近于如今的黎巴嫩和叙利亚
 
 ![greece.png](pics/greek/greece.png)
 
@@ -71,31 +74,46 @@ Crete: 克里特岛
     - arcadia
     - argolis(阿尔戈利斯)
 
-希腊中部
+- 希腊中部
+    - Aeniania（埃尼亚尼亚）
+    - Attica (阿提卡), 主要城邦为雅典
+    - Boeotia(玻俄提亚, 主要城邦为底比斯)
+    - Doris 多利斯
+    - Euboea 优卑亚
+    - Locris 洛克里斯
+    - Malis 马利斯
+    - Megaris 墨伽利斯
+    - Oetaea 奥塔
+    - Phocis 福基斯
 
-
-
-希腊中部，可分为10个小地区：埃尼亚尼亚（Aeniania）、阿提卡（Attica，主要城邦为雅典）、玻俄提亚（Boeotia，主要城邦为底比斯）、多利斯（Doris）、优卑亚（Euboea）、洛克里斯（Locris）、马利斯（Malis）、墨伽利斯（Megaris，主要城邦为墨伽拉）、奥塔（Oetaea）、福基斯（Phocis）
-
-希腊西部
-
-
-
-可分为4个小地区：阿卡纳尼亚（Acarnania）、埃托利亚（Aetolia）、阿佩兰提亚（Aperantia）、多罗皮亚（Dolopia）
+- 希腊西部
+    - Acarnania 阿卡纳尼亚
+    - Aetolia 埃托利亚
+    - Aperantia 阿佩兰提亚
+    - Dolopia 多罗皮亚
 
 ![classical period](pics/greek/greek_3.jpeg)
 
+**海域和海岛**
+- Cyprus (塞浦路斯)
+- aegean sea
+    - 罗得斯岛
+    - 米洛斯岛
+
+
+**culture**
 
 - 爱琴文明：希腊及爱琴海沿岸古代文明的总称。包括Minoan, Mycenaean
-- Cyprus (塞浦路斯)
+
 
 
 **people**
 
 **period**
 
-## minoan period(米诺斯文明)
+## Minoan(米诺斯文明 circa 2600 – 1200 BCE)
 
+- 文明区域：克里特crete，罗得斯岛，Cyprus
 - 起源 BC6000
 - 鼎盛：BC1600-BC1400
 
@@ -114,9 +132,12 @@ Crete: 克里特岛
 
 夕克拉底群岛：米洛斯， 赛拉岛
 
-## Mycenaean period(迈锡尼)
+## Mycenaean(迈锡尼 circa 1600 – 1100 BCE)
 
-米洛斯岛的黑曜石l
+中心转移，希腊大陆以及爱琴海诸岛
+
+
+米洛斯岛的黑曜石
 
 希腊大陆
 
@@ -125,6 +146,11 @@ Crete: 克里特岛
 荷马史诗和希腊神话： 阿加门农
 
 神话人物的地域性
+
+晚期大移民
+
+北方蛮族入侵，各地城镇被毁又被入侵者建立新的领地。原住民流往各地，原始的部落分布被重新打散重组。
+
 
 ## socrates and plato
 
@@ -135,10 +161,5 @@ Crete: 克里特岛
 
 - Anatolia(安那托利亚)/Asia Minor Peninsula(小亚细亚)
 
-## Minoan(circa 2600 – 1200 BCE)
 
-文明区域：克里特crete，罗得斯岛，赛普卢斯，
 
-## Mycenaean(circa 1600 – 1100 BCE)
-
-中心转移，希腊大陆以及爱琴海诸岛

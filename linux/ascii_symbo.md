@@ -28,3 +28,12 @@ correct symbol
 &#9658;
 &#767;
 &#2400; &#x2713;
+
+item list
+
+•
+
+## circle
+
+◯
+⚫
