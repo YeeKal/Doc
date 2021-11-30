@@ -15,6 +15,8 @@ arrow
 ⬉ ⬆ ⬈
 ⬅ ⊙ ➡
 ⬋ ⬇ ⬊
+
+⟶
 ```
 
 correct symbol
