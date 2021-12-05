@@ -5,6 +5,9 @@ tags: 古代史
 date: 2021-11-24
 ---
 
+古希腊史
+
+
 ## periods overview
 
 - Paleolithic (circa 400,000 – 13,000 BP)
@@ -71,7 +74,7 @@ Crete: 克里特岛
 
 - 伯罗奔尼撒：Peloponnisos[,peləpə'ni:səs]
     - achaea(亚该亚/阿卡亚)
-    - arcadia
+    - arcadia(阿卡迪亚)
     - argolis(阿尔戈利斯)
 
 - 希腊中部
@@ -98,12 +101,21 @@ Crete: 克里特岛
 
 - megara 墨伽拉/麦加拉 attica 地区
 - argos 阿戈斯
+- 科林斯  Corinth
 
 **海域和海岛**
 - Cyprus (塞浦路斯)
 - aegean sea
     - 罗得斯岛
     - 米洛斯岛
+
+**pilotics**
+
+- oligarchy / ˈɒlɪɡɑːki / 寡头政治
+- monarchy  / ˈmɒnəki / 君主政体
+- aristocracy / ˌærɪˈstɒkrəsi /  贵族统治
+
+
 
 
 **culture**
@@ -114,6 +126,7 @@ Crete: 克里特岛
 
 - Acropolis  [əˈkrɒpəlɪs] 卫城
 - Delohi 德尔斐: 福基斯（Phocis）地区， 被古希臘人認為是世界的中心，為一處奉獻給阿波罗的泛希臘化聖地，亦為阿波羅神女祭司皮媞亞的駐地，在此傳達德尔菲神谕。在帕那索斯山上建立有阿波罗神庙。
+- trireme / ˈtraɪriːm / 三桨座船
 
 **people**
 
@@ -506,6 +519,63 @@ BC432 同盟大会 与雅典战
 埃斯库罗斯
 索福克勒斯 BC496-BC406
 ```
+
+柏拉图 阿卡地米学园
+
+亚理士多德 莱西昂学园 亚历山大老师 亚历山大为其建造第一座图书馆
+
+狄奥根尼  西诺普人 以木桶为家  犬儒
+
+## 斯巴达
+
+## 马其顿
+
+
+
+菲利普 / 腓力二世  Philip II of Macedon 
+
+```yaml
+BC359-BC36
+古希臘著名王室阿吉德王朝成員  Argead dynasty
+
+
+assassination [əˌsæsɪˈneɪʃn] 刺杀
+```
+
+
+亚历山大大帝  Alexander the Great
+
+```yaml
+
+亚历山大 三世
+
+父死 争权
+阿门塔斯 其父作为其摄政王
+异母弟 阿尔希达攸斯
+
+
+
+
+BC335 移平底比斯
+
+
+
+亚历山大东征
+
+埃及
+
+波斯   Achaemenid Empire  [əˈkemənɪd] 
+
+印度
+
+BC322 于巴比伦 死 
+
+```
+
+![MacedonEmpire](pics/greek/MacedonEmpire.jpg)
+
+
+
 
 
 
