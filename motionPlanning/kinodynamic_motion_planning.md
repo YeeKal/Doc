@@ -56,6 +56,15 @@ Non-zero starting and ending velocities
 - blog
 - code
 - project
+    - [avp-rrt](https://github.com/stephane-caron/avp-rrt)
+    - [lqrrt](https://github.com/jnez71/lqRRT)
+    - [Kinodynamic Planning](https://github.com/palliprasanth/Kinodynamic-Planning)
 - paper
-    - [Kinodynamic RRT*: Optimal Motion Planning for Systems with Linear Differential Constraints](https://arxiv.org/abs/1205.5088)
+    - [1993 - Kinodynamic Motion Planning](http://www.cs.duke.edu/~reif/paper/canny/kinodynamic.pdf)
+    - [2012-Kinodynamic RRT*: Optimal Motion Planning for Systems with Linear Differential Constraints](https://arxiv.org/abs/1205.5088)
     - [A New Approach to Time-Optimal Path Parameterization Based on Reachability Analysis](https://arxiv.org/abs/1707.07239)
+    - [2013-rss-Kinodynamic Planning in the Configuration Space via Admissible Velocity Propagation](http://www.roboticsproceedings.org/rss09/p52.html)
+        - [suplementary materials](http://www.programmingvision.com/rosendiankovthesis.pdf)
+        - [source code: avp-rrt](https://github.com/stephane-caron/avp-rrt)
+    - [2014-sst-Asymptotically Optimal Sampling-based Kinodynamic Planning](https://arxiv.org/abs/1407.2896)
+    - [2018-Sampling-based optimal kinodynamic planning with motion primitives](https://arxiv.org/abs/1809.02399)

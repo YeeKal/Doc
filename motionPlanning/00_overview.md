@@ -59,6 +59,7 @@ date: 2018-01-01
     - [MIT 6.832: Underactuated Robotics](http://underactuated.csail.mit.edu/Spring2021/)
         - [code](https://github.com/RussTedrake/underactuated)
 - project
+    - [2d path planning maps](https://www.movingai.com/benchmarks/grids.html)
     - [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics)
     - [PathPlanning](https://github.com/zhm-real/PathPlanning)
     - [Motion Planning Library with ROS](https://github.com/moribots/motion_planning)
