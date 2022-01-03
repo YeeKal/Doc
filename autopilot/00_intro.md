@@ -100,5 +100,6 @@ atlas: [atlas](https://github.com/magicleap/Atlas)
     - [自动驾驶决策控制及运动规划史上最详细最接地气总览现状](https://zhuanlan.zhihu.com/p/260707853)
 - paper
     - [2019-self driving cars a survey](https://arxiv.org/abs/1901.04407)
+    - [2019-A Survey of Deep Learning Techniques for Autonomous Driving](https://arxiv.org/abs/1910.07738)
 - project
     - [Steering Functions for Car-Like Robots](https://github.com/hbanzhaf/steering_functions)
