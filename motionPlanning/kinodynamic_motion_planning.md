@@ -9,7 +9,14 @@ date: 2019_06_17
 
 ## kinodynamic motion planning
 
-The term kinodynamic planning was introduced by Canny, Donald, Reif, and Xavier [290] to refer to **motion planning problems for which velocity and acceleration bounds must be satisfied**.
+- kinodynamic solution: mapping from time to generalized forces or accelerations
+- time optimal kinodynamic solution: require minimal time
+- NP-hard  寻找近似解
+- 质点在2D/3D情景下的近似解
+
+kinematic constraints: joint limits, obstacle avoidance
+
+dynamic constraints: time-derivatives of configuration, which include dynamics laws and bounds on velocity, acceleration, and applied force
 
 BVP: boundary value problem
 
