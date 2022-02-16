@@ -145,6 +145,8 @@ python
     matplotlib
     scipy
     numpy
+
+peek  #  to gif 
 ```
 
 ```
