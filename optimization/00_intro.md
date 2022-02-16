@@ -1,6 +1,6 @@
 ---
 title: optimization1 intro
-categories: ompl
+categories: optimization
 tags: optimization
 date: 2019-07-12
 ---

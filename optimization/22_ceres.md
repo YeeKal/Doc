@@ -1,4 +1,11 @@
-intro to ceres
+---
+title: intro to ceres
+categories: optimization
+tags: optimization
+date: 2022-01-01
+---
+
+
 
 ## basic structure
 

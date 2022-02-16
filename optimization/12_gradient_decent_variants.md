@@ -1,4 +1,9 @@
-
+---
+title: 12_gradient_decent_variants
+categories: optimization
+tags: optimization
+date: 2019-12-25
+---
 
 ## 梯度下降改进算法
 
