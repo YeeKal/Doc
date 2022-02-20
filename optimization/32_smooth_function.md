@@ -1,3 +1,10 @@
+---
+title: smooth function
+categories: optimization
+tags: optimization
+date: 2022-02-01
+---
+
 ## 不可导函数的可导化
 
 ## |x|
