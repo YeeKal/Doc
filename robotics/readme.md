@@ -41,8 +41,11 @@ so3 / se3
 
 - [urdf parser in python](https://github.com/mahaarbo/urdf2casadi/blob/master/urdf2casadi/urdfparser.py)
 - [tiny urdf parser in c++](https://github.com/ORB-HD/URDF_Parser)
+- [robotics-toolbox-python](https://github.com/petercorke/robotics-toolbox-python)
 
 ## vision
+
+
 
 **computational stereo** 
 
