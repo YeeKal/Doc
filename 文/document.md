@@ -19,12 +19,14 @@ date: 2021-11-24
 ## The Early Middle Ages, 284–1000
 
 - [course mainpage](https://oyc.yale.edu/history/hist-210)
-
-
-《历史的轨迹-二千年教会史》
 - [中世纪思潮 Inside the Medieval Mind](https://movie.douban.com/subject/3289233/)
 
 ## 十字军
+
+
+
+
+
 
 -  夏末秋字幕组：BBC：The Crusades 十字军东征
 - 《圣殿骑士》（圣堂武士）上下两部 
