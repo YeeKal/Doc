@@ -110,11 +110,14 @@ A_{eq}S=B_{eq}$$
         - [csdn - 数值优化（Numerical Optimization）学习系列-目录](https://blog.csdn.net/fangqingan_java/article/details/48951191)
 - blog
     - [SQP 算法实现](https://zhuanlan.zhihu.com/p/348666680)
+    - [optim docs](https://optimlib.readthedocs.io/en/latest/api/sumt.html)
 - project
     - [CppNumericalSolvers](https://github.com/PatWie/CppNumericalSolvers)
+    - [optim](https://github.com/kthohr/optim)
 - course
     - [Convex Optimization 1](https://web.stanford.edu/class/ee364a/lectures.html)
     - [Convex Optimization 2](https://web.stanford.edu/class/ee364b/lectures.html)
+
 
 
 
