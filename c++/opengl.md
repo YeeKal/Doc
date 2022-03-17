@@ -14,6 +14,7 @@ g++ opengl_demo.cpp -o opengl_demo -lGL -lglut -lGLU
 局部个体
 
 - 颜色
+- size
 - 数据
 
 图元类型
