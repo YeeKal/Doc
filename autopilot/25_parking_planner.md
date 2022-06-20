@@ -15,4 +15,5 @@ date: 2021-11-15
     - [文献阅读之自主泊车APA的路径规划](https://zhuanlan.zhihu.com/p/95680738)
 - paper
     - [Autonomous Parking Using Optimization-Based Collision Avoidance]()
+    - [Motion Planning in Complex Environments using Closed-loop Prediction]()
 

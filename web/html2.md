@@ -145,3 +145,16 @@ type="application/x-shockwave-flash">
 
 ## web存储
 
+## web语义化标签
+
+```html
+<em>
+  <strong>
+
+<dl>
+<dt>
+<dp>
+```
+## ref
+
+- [awesome-html5-canvas-examples](https://onaircode.com/awesome-html5-canvas-examples-source-code/)

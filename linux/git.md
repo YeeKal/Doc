@@ -5,6 +5,20 @@ tags: linux
 date: 2018-01-15
 ---
 
+## 指定分支/指定深度
+
+```
+git clone -b <branch-name> --depth=1
+
+```
+
+## clear cache
+
+```
+git config --global --unset credential.helper
+git config --system --unset credential.helper
+```
+
 ## git init
 
 initialize a repository and the existing file will remain.
