@@ -26,7 +26,7 @@ date: 2022-07-11
 $$\begin{aligned} R_{E_{i n i t} r} &=\frac{d_{C_{l} E_{\text {init }}}{ }^{2}-R_{E_{l} \min }{ }^{2}}{2 R_{E_{l} \min }+2 d_{E_{\text {init }} C_{l}} \cos \alpha} \\ \delta_{r} &=\arctan \left(a / R_{E_{\text {init }} r}\right) \end{aligned}$$
 
 ## LCC
-
+$$
 ![parallel_parking_lcc](imgs/parallel_parking_lcc.png)
 
 $3 R_{1}^{2}-d^{2}+2 d R_{1} \cos \alpha=0$
@@ -94,6 +94,30 @@ $\theta_{lim}=\frac{\kappa_{max}^{2}}{2 \alpha}$
 if $\theta <\theta_{lim}: R(\theta)=R(\theta)$
 
 if $\theta \geq\theta_{lim}: R(\theta)=R(\theta_{lim})$
+
+## 螺旋线与圆相切
+
+
+![spiral_tan_circle.png](imgs/spiral_tan_circle.png)
+
+螺旋线与圆相切实际上就是直线过渡到圆的螺旋线路径。
+
+在表达式中$\kappa(s)=\alpha s$，曲率变化率$\alpha$确定之后，则可以通过转弯半径$R$计算出一段从直线过度到圆的螺旋线$C_{OP}$.圆心$c$通过端点$P$的位置以及$\theta$确定。
+
+$$P = \left\{
+    \begin{aligned} \kappa_p &= \frac{1}{R}\\
+     x_{p}&=\sqrt{\frac{\pi}{\alpha}}C_f(\sqrt{\frac{\kappa_p^2}{\alpha \pi}}) \\
+    y_{p}&=\sqrt{\frac{\pi}{\alpha}}S_f(\sqrt{\frac{\kappa^2}{\alpha \pi}}) \\
+    s_p &= \frac{1}{R\alpha} \\
+    \theta_{p} &= \frac{1}{2}\alpha s^2 = \frac{1}{2}k_ps_p
+    \end{aligned}
+\right.$$
+
+连接圆心$c$和起点$O$可以得到一个更大的半径$R_l$，螺旋线$C_{OP}$就在这个更大的圆内，并且起点$O$与大圆在$O$点的切线夹角记为$\mu$
+
+
+
+## 两圆相切的过渡曲线
 
 
 

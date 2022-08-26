@@ -142,4 +142,12 @@ git config --system --unset credential.helper
 git config --global credential.helper store
 ```
 
+## 切换协议
+
+```bash
+git remote -v  # 查看当前remote 地址
+
+git remote set-url [origin] [url] # 切换协议
+```
+
 
