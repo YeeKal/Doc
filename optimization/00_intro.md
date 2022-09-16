@@ -19,6 +19,25 @@ date: 2019-07-12
     - 一般的凸优化问题
 - 非线性优化
 
+## 数学符号
+
+$\nabla$: nabla算子，向量微分算子，表示对各个方向求梯度
+
+三维情况下， $\nabla=\frac{\partial}{\partial x} \mathbf{i}+\frac{\partial}{\partial y} \mathbf{j}+\frac{\partial}{\partial z} \mathbf{k}$ 或 $\nabla=\left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z}\right)$
+二维情况下， $\nabla=\frac{\partial}{\partial x} \mathbf{i}+\frac{\partial}{\partial y} \mathbf{j}$ 或 $\nabla=\left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}\right)$
+
+$\nabla$与函数之间通过不同的符号连接表示不同的含义：
+
+1. $\nabla F$: 求梯度，标量函数梯度为向量，向量梯度为二阶张量
+$$\nabla F=(\frac{\partial F_{x}}{\partial x}, \frac{\partial F_{y}}{\partial y},\frac{\partial F_{z}}{\partial z})$$
+
+2. $\nabla \cdot F$: 求散度
+
+$$\operatorname{div} \mathbf{F}=\nabla \cdot \mathbf{F}=\frac{\partial F_{x}}{\partial x}+\frac{\partial F_{y}}{\partial y}+\frac{\partial F_{z}}{\partial z} $$
+
+3. $\nabla \times F$: 求旋度
+
+
 ## linear optimization
 
 - 单纯形法
@@ -111,12 +130,14 @@ A_{eq}S=B_{eq}$$
 - blog
     - [SQP 算法实现](https://zhuanlan.zhihu.com/p/348666680)
     - [optim docs](https://optimlib.readthedocs.io/en/latest/api/sumt.html)
+    - [优化器列表](https://www.twblogs.net/a/5b7f9a6f2b717767c6b073d6)
 - project
     - [CppNumericalSolvers](https://github.com/PatWie/CppNumericalSolvers)
     - [optim](https://github.com/kthohr/optim)
 - course
     - [Convex Optimization 1](https://web.stanford.edu/class/ee364a/lectures.html)
     - [Convex Optimization 2](https://web.stanford.edu/class/ee364b/lectures.html)
+    - [Optimization Theory](https://www.math.uh.edu/~rohop/fall_06/)
 
 
 
