@@ -4,6 +4,7 @@ categories: optimization
 tags: optimization
 date: 2022-09-15
 ---
+quadratic programming
 
 二次规划的基本形式：
 
@@ -17,9 +18,21 @@ $$\begin{aligned}
 
 $Q$ 可被认为是目标函数的Hessian matrix.
 
-## 全局解
+**常用求解方法：**
 
-如果$Q$是正定矩阵，则目标函数是凸函数，则局部最小值就是全局最小值。一般我们说QP问题默认其是凸函数。
+1. 内点法 interior point
+2. 激活集法 active set
+3. 共轭梯度法 conjugate gradient
+4. 椭球法 若Q为正定矩阵，则相应的二次规划问题可由椭球法在多项式时间内求解
+5. 增广拉格朗日法 augmented lagrangian
+6. 梯度投影法 gradient projection
+
+## 参数特性
+
+1. 如果Q是半正定矩阵，那么f(x)是一个凸函数。相应的二次规划为凸二次规划问题；此时若约束条件定义的可行域不为空，且目标函数在此可行域有下界，则该问题有全局最小值。
+2. 如果Q是正定矩阵，则该问题有唯一的全局最小值。
+3. 若Q为非正定矩阵，则目标函数是有多个平稳点和局部极小点的NP问题。
+4. 如果Q=0，二次规划问题就变成线性规划问题
 
 ## 无约束条件
 
@@ -43,11 +56,17 @@ F(X, \lambda, \mu) = f(x) + \lambda^T (Ax-a)+\mu^T (Bx-b)
 \end{aligned}$$
 KKT 条件：
 $$\begin{aligned}
-\nabla_x F(X, \lambda, \mu) &= q + \frac{1}{2}Qx + A^T\lambda+B^T\mu  \\
+\nabla_x F(X, \lambda, \mu) &= q + Qx + A^T\lambda+B^T\mu  \\
 Ax -a & = 0    \\
 Bx - b & \leq 0 \\
 \lambda^T \neq 0,& \quad \mu^T \geq 0, \quad x \geq 0
 \end{aligned}$$
+
+## 等式约束
+
+kkt条件可以写为：
+$$\begin{bmatrix} Q & A^T \\ A & 0  \end{bmatrix} 
+\begin{bmatrix} x \\ \lambda  \end{bmatrix} =\begin{bmatrix} -q \\ a  \end{bmatrix} $$
 
 
 ## solution strategy
@@ -56,6 +75,8 @@ Bx - b & \leq 0 \\
 -  inequality constraints: interior point and active set methods
 - box constraint $x^L\leq x \leq x^U$: trust-region methods
 - all general constraint: NLP solver
+
+## 对偶性
 
 ## ref
 

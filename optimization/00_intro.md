@@ -5,12 +5,6 @@ tags: optimization
 date: 2019-07-12
 ---
 
-## ref
-
-- [nonlinear programming](http://ocw.nctu.edu.tw/course_detail.php?bgid=3&gid=0&nid=358)
-- [bilibili-线性规划 方述诚](https://www.bilibili.com/video/av455050227/)
-
-
 ## intro
 
 - 凸优化
@@ -28,7 +22,7 @@ $\nabla$: nabla算子，向量微分算子，表示对各个方向求梯度
 
 $\nabla$与函数之间通过不同的符号连接表示不同的含义：
 
-1. $\nabla F$: 求梯度，标量函数梯度为向量，向量梯度为二阶张量
+1. $\nabla F$: 求梯度，标量函数梯度为向量，向量函数为二阶张量
 $$\nabla F=(\frac{\partial F_{x}}{\partial x}, \frac{\partial F_{y}}{\partial y},\frac{\partial F_{z}}{\partial z})$$
 
 2. $\nabla \cdot F$: 求散度
@@ -37,6 +31,28 @@ $$\operatorname{div} \mathbf{F}=\nabla \cdot \mathbf{F}=\frac{\partial F_{x}}{\p
 
 3. $\nabla \times F$: 求旋度
 
+4. 雅可比矩阵，是指针对多元变量的向量函数求梯度
+
+$$\begin{align}f&=\begin{bmatrix} f_1\\f_2\\\dots\\f_m\end{bmatrix}=\begin{bmatrix} f_1(q)\\f_2(q)\\ \dots \\f_m(q) \end{bmatrix}    \\
+J_f(q)&  =\begin{bmatrix}\nabla f_1 \\\nabla f_2 \\ \cdots \\ \nabla f_m \end{bmatrix}\end{align} $$
+
+5. Hesse-Matrix: 多变量实函数的二阶偏导
+
+$$\mathbf{H}=\left[\begin{array}{cccc}
+\frac{\partial^2 f}{\partial x_1^2} & \frac{\partial^2 f}{\partial x_1 \partial x_2} & \cdots & \frac{\partial^2 f}{\partial x_1 \partial x_n} \\
+\frac{\partial^2 f}{\partial x_2 \partial x_1} & \frac{\partial^2 f}{\partial x_2^2} & \cdots & \frac{\partial^2 f}{\partial x_2 \partial x_n} \\
+\vdots & \vdots & \ddots & \vdots \\
+\frac{\partial^2 f}{\partial x_n \partial x_1} & \frac{\partial^2 f}{\partial x_n \partial x_2} & \cdots & \frac{\partial^2 f}{\partial x_n^2}
+\end{array}\right]$$
+
+$$H_{ij} = \frac{\partial^2 f}{\partial x_i \partial x_j}\\
+H(f)=J(\nabla f)$$
+
+6. 函数向量： $f(x) = Ax$
+
+$$\nabla f = J_f = A$$
+$$\text{let } h(x) = \lambda^T f(x) = \lambda^T A x \quad \text{退化为多变量实函数}\\
+\nabla h = J_f^T \lambda =  A^T \lambda$$
 
 ## linear optimization
 
@@ -138,6 +154,8 @@ A_{eq}S=B_{eq}$$
     - [Convex Optimization 1](https://web.stanford.edu/class/ee364a/lectures.html)
     - [Convex Optimization 2](https://web.stanford.edu/class/ee364b/lectures.html)
     - [Optimization Theory](https://www.math.uh.edu/~rohop/fall_06/)
+    - [nonlinear programming](http://ocw.nctu.edu.tw/course_detail.php?bgid=3&gid=0&nid=358)
+- [bilibili-线性规划 方述诚](https://www.bilibili.com/video/av455050227/)
 
 
 
