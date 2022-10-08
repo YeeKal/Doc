@@ -68,6 +68,8 @@ kkt条件可以写为：
 $$\begin{bmatrix} Q & A^T \\ A & 0  \end{bmatrix} 
 \begin{bmatrix} x \\ \lambda  \end{bmatrix} =\begin{bmatrix} -q \\ a  \end{bmatrix} $$
 
+求解变成了解线性方程，在参数规模不大的时候，可以通过矩阵分解求得 $x, \lambda$.
+
 
 ## solution strategy
 
