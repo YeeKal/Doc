@@ -54,6 +54,8 @@ $$\nabla f = J_f = A$$
 $$\text{let } h(x) = \lambda^T f(x) = \lambda^T A x \quad \text{退化为多变量实函数}\\
 \nabla h = J_f^T \lambda =  A^T \lambda$$
 
+$\Delta$ 拉普拉斯算子：二阶偏导的加和，一般也写作 $\nabla^2$
+
 ## linear optimization
 
 - 单纯形法
