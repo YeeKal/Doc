@@ -184,3 +184,49 @@ strict separation requires additional assumptions (e.g., $C$ is closed, $D$ is a
 
 
 
+## 凸函数
+
+- 定义：
+
+$$f:R^n\longrightarrow R \text{ is convex  if dom }f\text{ is a convex set and} \\
+f(\theta x+(1-\theta) y) \leq \theta f(x)+(1-\theta) f(y)\\
+\text{for all } x,y\in \text{dom} f, 0\leq \theta \leq 1$$
+
+- 性质
+    - $f$ is concave if −$f$ is convex
+    - $f$ is strictly convex if dom $f$ is convex and $f(\theta x+(1-\theta) y) < \theta f(x)+(1-\theta) f(y), \quad 0< \theta < 1$
+
+上镜图 (Epigraph/Supergraph)：在函数$y=f(⋅)$曲线及其上方的所有的点构成的集合:
+
+$$epi = \{(x,y):x\in R^n, y\in R, y\geq f(x)\}$$
+当这个点集是凸集（Convex Set）的时候，对应的函数是凸函数，反之亦然
+
+- 凹函数 concave function
+- 严格凸函数（Strictly Convex Function）: 去掉不等式的等号
+- 广义凸函数（Generalized Convex Function）: 不要求函数可导
+
+一阶条件： 切线总是在函数的下方
+
+
+## 次梯度
+
+subgradient: 用于解决并不总是处处可导的凸函数
+
+类比凸函数的一阶条件，给定函数$f$， 对于$\forall y$， 如果满足：
+
+$$f(y)\geq f(x)+g^T(y-x)$$
+
+则称$g$是函数$f$在点$x$处的次梯度。
+
+次梯度不唯一，也可能不存在。
+
+把$f$在$x$处所有次梯度构成的集合称为$f$在$x$处的次微分(Subdifferential), 记作$\partial f(x)$
+
+- [ref code with python](https://github.com/minigonche/subgradient_descent/blob/master/subgradient.py)
+## ref
+
+- blog
+    - [Hessian矩阵和凸函数](http://yangzhou301.xyli.me/2016/03/14/826442654/)
+- course
+- books
+    - [convex analysis]()
