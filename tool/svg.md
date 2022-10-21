@@ -1,31 +1,75 @@
 ---
 title: 使用svg画图
-categories: 
-tags: 
+categories:  svg
+tags: tool
 date: 2022-10-17
 ---
 
+- [ ] hjsdf
+
+## spin
+
+<div style="color:#00FF00;width:200px;background-color: powderblue;">
+  <h3>This is a header</h3>
+  <p>This is a paragraph.</p>
+</div>
+
+## js event
+
+<svg width="600" height="600">
+  <script type="text/JavaScript">
+    <![CDATA[
+        function showColor() {
+          document.getElementById("rect1").style.fill="green";
+        }
+        function showArea(event){
+          document.getElementById("rect1").style.width="300";
+        }
+        function showRootChildrenCount() {
+          alert("Total Children: "+document.documentElement.childNodes.length);
+        }
+    ]]>
+  </script>
+  <g>
+    <text x="30" y="50" onMouseOver="showColor()">Click me to show rectangle color.</text>
+    <rect id="rect1" x="100" y="100" width="200" height="200" 
+    stroke="green" stroke-width="3" fill="red" 
+    onClick="showArea(event)"/>
+    <text x="30" y="400" onClick="showRootChildrenCount()">
+    Click me to print child node count.</text>
+  </g>
+</svg>
+
+## svg source  animation
+
+![audio](imgs/svg-loaders/audio.svg)
+
+![audio](imgs/svg-loaders/circles.svg)
+
+![FidgetSpinner](imgs/FidgetSpinner.svg)
+
+
+<!-- <svg width="500px" height="500px" viewBox="0 0 500 500"> 
+    <rect x="0" y="0" width="100" height="100" fill="#feac5e"> 
+        <animate attributeName="x" from="0" to="500" dur="2s" repeatCount="indefinite" /> 
+    </rect> 
+</svg> -->
+
 ![net](imgs/net.svg)
 
+<p style="color:blue; opacity:0.5;font-size:40px;text-align:center;"> HAHA</p>
 
-
-<svg xmlns="http://www.w3.org/2000/svg" width="150" height="100">
-  <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="green" />
-
-  <rect x="200" y="50" width="80" height="80" style = "stroke:gray;stroke-width:2;opacity:0.5"/>
-</svg>
-
-
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <polyline d="M 0 50 L 10 50 L 11 0 L 20 0 L 30 0 L 31 50 L 40 50"  fill="none" stroke="red"
-  stroke-width="3"
-  opacity="0.5" />
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <polygon points="200,10 250,190 160,210"
+<svg width="300" height="400">
+<circle cx="100" cy="50" r="10" stroke="black" stroke-width="2" opacity="0.5" fill="none" />
+<circle cx="130" cy="50" r="10" stroke="black" stroke-width="2" opacity="0.5" fill="green" />
+<rect x="200" y="50" width="80" height="80" style = "stroke:gray;stroke-width:2;opacity:0.5"/>
+<polygon points="200,10 250,190 160,210"
   style="fill:lime;stroke:purple;stroke-width:1"/>
 </svg>
+
+
+
+
 
 <svg width="300" height="1000">
    <g>
@@ -224,3 +268,6 @@ stroke-width="1" fill="none"/>
 
 - [beautiful plot](http://deathfromabove.co/)
 - [svg generator](https://www.magicpattern.design/tools/svg-chart-generator)
+- [svg demo](https://www.tutorialspoint.com/svg/svg_loader.htm)
+- [svg_reference](https://www.w3schools.com/graphics/svg_reference.asp)
+- [svg examples](https://steamcoded.org/lessons/)

@@ -8,6 +8,11 @@
 yangganggang@10.8.116.81
 yee@10.8.106.60
 
+- 录制终端转化为 svg: pip3 install --user termtosvg
+    - sudo snap install termtosvg-simosx
+    - termtosvg-simosx.termtosvg animacion.svg
+![record](imgs/record_term1.svg)
+
 3. 卸载不必要的自带软件: https://www.jianshu.com/p/67a86505279f
 4. v2rayl: https://gitee.com/sLarson/v2rayL
 

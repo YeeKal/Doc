@@ -1,7 +1,7 @@
 ---
 title: 配色方案
-categories: linux
-tags: linux
+categories: color
+tags: tool
 date: 2022-10-08
 ---
 

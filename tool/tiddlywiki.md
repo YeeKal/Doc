@@ -1,7 +1,7 @@
 ---
 title: tiddlywiki 初探
-categories: notes 
-tags: linux
+categories: note
+tags: tool
 date: 2022-10-14
 ---
 

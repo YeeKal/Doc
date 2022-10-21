@@ -1,7 +1,7 @@
 ---
 title: introduction to latex
-categories: linux
-tags: linux
+categories: note
+tags: tool
 date: 2019-03-01
 ---
 ## A Short Instroduction to LaTeX
