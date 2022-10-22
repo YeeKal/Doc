@@ -1,7 +1,7 @@
 ---
-title: 临时笔记 定期清理
-categories: linux
-tags: linux
+title: 临时笔记 定期清理 
+categories: linux 
+tags: linux 
 date: 2021-11-24
 ---
 

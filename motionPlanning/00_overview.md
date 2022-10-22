@@ -49,6 +49,8 @@ date: 2018-01-01
 
 
 ## ref
+- conference
+    - [rss 2022](https://roboticsconference.org/)
 - paper source
     - [Robotics: Science and Systems](http://www.roboticsproceedings.org/rss17/index.html)
 - lab
