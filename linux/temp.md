@@ -5,6 +5,11 @@ tags: linux
 date: 2021-11-24
 ---
 
+- risk-aware motion planner
+- receding horizon
+- Risk-Aware Motion Planning for Collision-Tolerant Aerial Robots Subject to Localization Uncertainty
+- 凸函数与 Hilbert 投影定理
+
 ## convex decomposition
 
 process of turning a single concave hull into multiple convex hulls
