@@ -10,6 +10,48 @@ date: 2021-10-31
 1. 每天读书不少于一小时
 2. 每周读书天数不少于六天
 
+## reading blocks
+
+
+<svg width="800" height="600">
+  <script type="text/JavaScript">
+    <![CDATA[
+        function displayBlock() {
+          var block_size=12;
+          var xmlns = "http://www.w3.org/2000/svg";
+          var group=document.getElementById("group1");
+          for(var i =0;i<52;i++){
+            for(var j=0;j<7;j++){
+              var rect1=document.createElementNS(xmlns, "rect");
+              rect1.setAttributeNS(null, 'x', (block_size+2)*i);
+              rect1.setAttributeNS(null, 'y', (block_size+2)*j);
+              rect1.setAttributeNS(null, 'ry', 2);
+              rect1.setAttributeNS(null, 'ry', 2);
+              rect1.setAttributeNS(null, 'width', block_size);
+              rect1.setAttributeNS(null, 'height', block_size);
+              rect1.setAttributeNS(null, 'fill', "green");
+              rect1.setAttributeNS(null, 'opacity', 0.5);
+              group.appendChild(rect1);
+            }
+          }
+        }
+        function showText(){
+          document.getElementById("group1").children[1].style.opacity="1.0";
+        }
+        function showRootChildrenCount() {
+          alert("Total Children: "+document.documentElement.childNodes.length);
+        }
+        document.addEventListener('DOMContentLoaded',displayBlock());
+    ]]>
+  </script>
+  <g id="group1" onMouseOver="displayBlock()" onMouseOut="hiddenText()" width=400 height=400>
+    <rect id="rect1" x="100" y="100" width="200" height="200" 
+    stroke="none" stroke-width="3" fill="green" />
+    <text id="text1" x="160" y="200" fill="white">2022-1018</text>
+  </g>
+</svg>
+
+
 ## January   2022   
 
 |Sun | Mon | Tue  | Wed | Thu | Fri | Sat 
@@ -117,7 +159,7 @@ date: 2021-10-31
 
 |Sun | Mon | Tue  | Wed | Thu | Fri | Sat 
 |---| ---| ---| ---| ---| ---| ---|
-|  |  | [1](#111)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [2](#112)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [3](#113)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [4](#114)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [5](#115)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg |
+|  |  | [1](#111)<br> <input type="checkbox" checked="checked"> ella<br> <input type="checkbox"> ygg | [2](#112)<br> <input type="checkbox" checked="checked"> ella<br> <input type="checkbox"> ygg | [3](#113)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [4](#114)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [5](#115)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg |
 | [6](#116)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [7](#117)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [8](#118)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [9](#119)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [10](#1110)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [11](#1111)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [12](#1112)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg |
 | [13](#1113)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [14](#1114)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [15](#1115)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [16](#1116)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [17](#1117)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [18](#1118)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [19](#1119)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg |
 | [20](#1120)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [21](#1121)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [22](#1122)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [23](#1123)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [24](#1124)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [25](#1125)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg | [26](#1126)<br> <input type="checkbox"> ella<br> <input type="checkbox"> ygg |
