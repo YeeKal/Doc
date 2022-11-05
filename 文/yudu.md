@@ -5,54 +5,9 @@ tags: 读书
 date: 2021-05-30
 ---
 
-福楼拜
-都德
-艾伦坡
+#### 202211
 
-勒内·笛卡尔(René Descartes)         1596-1650
-布莱兹‧帕斯卡(Blaise Pascal)        1623-1662   《思想錄》
-约翰·洛克(John Locke)               1632-1704   《人类理解论》    《政府论》
-休谟
-帕斯卡
-康德
-黑格尔
-叔本华
-尼采
-罗素
-卡夫卡
-加缪
-萨特
-
-
-
-## 庄子
-
-#### 公开课
-
-- [庄子-台大公开课](http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/100S103)
-- [庄子寓言文学](http://list.youku.com/albumlist/show/id_23223087.html)
-- [正是时候读庄子](http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/103S123/2)
-
-#### 书
-
-- [庄子哲学讲记](https://book.douban.com/subject/26793142/)
-- [庄子四讲](https://book.douban.com/subject/3672176/)
-- [庄子今注今译](https://book.douban.com/subject/1051919//)
-
-
-#### 古希腊罗马哲学
-
-- 《古希腊罗马哲学》 [西方古典哲学原著选辑](https://book.douban.com/series/1514)
-- 《希腊和罗马哲学 : 科普勒斯顿哲学史（第1卷）》 系列
-- 《希腊哲学史》 4卷本 douban-9.2 
-    -  前苏格拉底/苏格拉底和柏拉图/亚里士多德/后
-    - [第二卷](https://book.douban.com/subject/25894190/)
-
-- [《古希腊思想通识课:希罗多德篇》](https://book.douban.com/subject/35664972/)
-- [《柏拉图的次优城邦》](https://book.douban.com/subject/25927372/)
-- [《古希腊罗马哲学研究》](https://book.douban.com/subject/26686932/)
-- 《哲学门》
-- 《古代哲学的基本概念》 海德格尔
+- 《白色画像》
 
 #### 202210
 - 《我的一生 : 卡萨诺瓦自传》
