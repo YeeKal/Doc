@@ -5,6 +5,8 @@ tags: autopilot
 date: 2022-10-08
 ---
 
+not end to end, but mid 2 mid
+
 ## ChauffeurNet
 
 ChauffeurNet: Learning to Drive by Imitating the Best and Synthesizing the Worst
@@ -155,9 +157,46 @@ adding realistic perturnations
 - collision loss
     - measure overlap of predicted agent box
     - add perturbation for later train
+$$\mathcal{L}_{\text {collision }}=\frac{1}{W H} \sum_x \sum_y B_k(x, y) \cdot \operatorname{Obj}_k^{g t}(x, y)$$
+- on load loss
+    - measure overlap of the predicted agent
+$$\mathcal{L}_{\text {onroad }}=\frac{1}{W H} \sum_x \sum_y B_k(x, y) \cdot\left(1-\operatorname{Road}^{g t}(x, y)\right)$$
+- geometry loss
+- auxiliary loss
+    - co-training perceptionrnn loss:
+    - co-train road mask  cross-entropy
+co-training: induce the feature network to learn better features that are suited to both tasks(另一个维度的投影)
+
+**5.2 imitation dropout**
+
+randomly dropping out the imitation losses
+
+## Experiments
 
 
+**data**
 
+1. 80m x 80m
+2. $R_{forward} = 64m$
+3. data augmentation $\Delta = \pm 25^0$
+
+**models**
+
+**closed loop evaluation**
+
+- model ablation tests
+    - nudging around a parked car
+    - Recovering from a trajectory perturbation
+    - Slowing down for a slow car
+- input ablation test
+- logged data simulated driving
+- real world driving
+
+**open loop evaluation**
+
+**failure modes**
+
+**sampling speed profiles**
 ## Multipath
 Multipath: Multiple Probabilistic Anchor Trajectory Hypotheses for Behavior Prediction
 
