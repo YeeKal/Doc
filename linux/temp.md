@@ -10,6 +10,24 @@ date: 2021-11-24
 - Risk-Aware Motion Planning for Collision-Tolerant Aerial Robots Subject to Localization Uncertainty
 - 凸函数与 Hilbert 投影定理
 
+## 序列化与反序列化
+
+- [csdn:自动序列化与反序列化](https://blog.csdn.net/ZJU_fish1996/article/details/102643222)
+
+
+## Convex Feasible Set Algorithm
+
+subgradient method python
+
+
+
+- paper
+    - A convex optimization approach to smooth trajectories for motion planning with car-like robots
+- blog
+    - [Subgradient-Descent](https://mcneela.github.io/machine_learning/2020/04/24/Subgradient-Descent.html)
+    - [凸优化学习笔记](https://www.zhihu.com/column/c_1201908961185931264)
+    - [【凸优化笔记2】-凸函数、下水平集、范数](https://zhuanlan.zhihu.com/p/102098039)
+
 ## convex decomposition
 
 process of turning a single concave hull into multiple convex hulls
