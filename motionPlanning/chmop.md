@@ -99,3 +99,14 @@ planning_scene::PlanningScenePtr ps = planning_scene_->diff();
 ps->setActiveCollisionDetector(collision_detection::CollisionDetectorAllocatorHybrid::create(), true);
 
 ```
+
+## ref
+
+- blog
+- mainpage
+    - [Optimized Robotics](https://www.nathanratliff.com/thesis-research/chomp)
+- library
+    - [trychomp - 2d](https://github.com/poftwaresatent/trychomp)
+    - [chomp-multigrid](https://github.com/gprice1/chomp)
+    - [or_cdchomp](https://github.com/personalrobotics/or_cdchomp)
+    - [chomp_planner](https://github.com/mktk1117/chomp_planner)
