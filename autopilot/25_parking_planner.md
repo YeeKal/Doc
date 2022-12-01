@@ -8,6 +8,13 @@ date: 2021-11-15
 
 
 
+## paper
+
+reeds-sheep path
+
+Optimal paths for a car that goes both
+forward and backwards
+
 
 ## ref
 

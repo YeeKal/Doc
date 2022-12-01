@@ -9,6 +9,7 @@ date: 2021-11-24
 - receding horizon
 - Risk-Aware Motion Planning for Collision-Tolerant Aerial Robots Subject to Localization Uncertainty
 - 凸函数与 Hilbert 投影定理
+- sac 碰撞检测
 
 ## 序列化与反序列化
 
