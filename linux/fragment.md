@@ -38,6 +38,9 @@ open source: [HACD](http://khaledmammou.com/hacd.html)
 ## books
 
 - [libgen](https://libgen.gs/index.php)
+    - gen.lib.rus.ec
+    - ibgen.is
+    - http://93.174.95.27/
 - [易书论坛](https://bbs.yibook.org/)
 - [z-library 1](https://bbs.yibook.org/d/211-z-librarywang-zhan-10tdian-zi-shu-chong-zi-yue-1800mo-ce)
 - [识典古籍](https://shidianguji.com/) 
