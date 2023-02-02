@@ -35,8 +35,13 @@ process of turning a single concave hull into multiple convex hulls
 
 open source: [HACD](http://khaledmammou.com/hacd.html)
 
-## books
+## about blog
 
+- [Live (Github-flavored) Markdown Editor](https://github.com/jbt/markdown-editor)
+
+
+## books
+ 
 - [libgen](https://libgen.gs/index.php)
     - gen.lib.rus.ec
     - ibgen.is

@@ -22,11 +22,18 @@ date: 2021-10-31
           var block_size=12;
           var xmlns = "http://www.w3.org/2000/svg";
           var group=document.getElementById("group1");
+          var text_month=document.createElementNS(xmlns, "text");
+          text_month.setAttributeNS(null, 'x', block_size);
+          text_month.setAttributeNS(null, 'id', 'text2');
+          text_month.setAttributeNS(null, 'y', 0);
+          text_month.setAttributeNS(null, 'fill', 'green');
+          text_month.textContent = "hahhtht";
+          group.appendChild(text_month);
           for(var i =0;i<52;i++){
             for(var j=0;j<7;j++){
               var rect1=document.createElementNS(xmlns, "rect");
               rect1.setAttributeNS(null, 'x', (block_size+2)*i);
-              rect1.setAttributeNS(null, 'y', (block_size+2)*j);
+              rect1.setAttributeNS(null, 'y', (block_size+2)*(j+1));
               rect1.setAttributeNS(null, 'ry', 2);
               rect1.setAttributeNS(null, 'ry', 2);
               rect1.setAttributeNS(null, 'width', block_size);
@@ -36,17 +43,27 @@ date: 2021-10-31
               group.appendChild(rect1);
             }
           }
+          showText();
         }
         function showText(){
           document.getElementById("group1").children[1].style.opacity="1.0";
+        }
+        function hiddenText(){
+          document.getElementById("group1").children[1].style.opacity="0.0";
         }
         function showRootChildrenCount() {
           alert("Total Children: "+document.documentElement.childNodes.length);
         }
         document.addEventListener('DOMContentLoaded',displayBlock());
+
+
+
+
+
     ]]>
   </script>
   <g id="group1" onMouseOver="displayBlock()" onMouseOut="hiddenText()" width=400 height=400>
+    <text id="text2" x="12" y="0" fill="red">JAN</text>
     <rect id="rect1" x="100" y="100" width="200" height="200" 
     stroke="none" stroke-width="3" fill="green" />
     <text id="text1" x="160" y="200" fill="white">2022-1018</text>
