@@ -14,3 +14,11 @@ date: 2021-10-29
 第一种情况 三角形面积大于原始正方形;第二种情况在连续动态的环境里不会发生，如果发生必定已经发生了第一种情况。
 
 $$S_{\Delta P A B}+S_{\Delta P B C}+S_{\Delta P C D}+S_{\Delta P D A}>S_{\square A B C D}$$
+
+
+## ref
+
+- paper 
+    - [Efficient Formulation of Collision Avoidance Constraints in Optimization Based Trajectory Planning and Control](https://arxiv.org/abs/2104.12641)
+- blog
+    - [论文阅读：Efficient Formulation of Collision Avoidance Constraints in Optimization Based Trajectory](https://zhuanlan.zhihu.com/p/592762287)

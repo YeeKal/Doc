@@ -95,9 +95,6 @@ Contact-Invariant Optimization for Hand Manipulation: https://homes.cs.washingto
 Discovery of Complex Behaviors through Contact-Invariant Optimization
 ```
 
-
-
-
 ## ref
 
 - lab
@@ -115,7 +112,6 @@ Discovery of Complex Behaviors through Contact-Invariant Optimization
     - [Numerical Optimal Control](https://www.syscop.de/teaching/ss2020/numerical-optimal-control-online)
     - [Optimal Control for Robotics - Spring 2018](https://github.com/MatthewPeterKelly/ME149_Spring2018)
 - projects
-    
     - [Optimal Control Framework - python](https://github.com/jhu-asco/optimal_control_framework)
     - [Geometric Control Optimization and Planning Library](https://github.com/jhu-asco/gcop)
     - [optimTraj - matlab](https://github.com/MatthewPeterKelly/OptimTraj)

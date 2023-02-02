@@ -14,10 +14,6 @@ date: 2023-01-12
 - within-STC constraints
 - [Collision Detection Accelerated:An Optimization Perspective](https://arxiv.org/pdf/2205.09663.pdf)
 
-## practice
-
-- [courses/ko/parking](https://cw.fel.cvut.cz/b202/_media/courses/ko/parking.pdf)
-
 ## geometry path pattern
 A new geometry-based secondary path planning for automatic parking
 
@@ -45,16 +41,47 @@ freespace规划
 后处理的碰撞检测使用within-STC constraints
 
 ## 2022 Continuous-Curvature Target Tree Algorithm for Path Planning in Complex Parking Environments
+
+1. 根据直线长度,采样多条出库路径,然后计算cost最小的出库长度以及target-tree
+2. 采用rrt* 进行连接(?怎么连接的)
+
 泊车路径
 rrt*
 
 连续曲率轨迹 
 
+## 2016 Optimisation based path planning for car parking in narrow environments
+
+1. phase A and phase B 的规划
+2. 对于狭窄空间,guide-tree 进行换挡采样
+
+- [courses/ko/parking:对以上算法的实践](https://cw.fel.cvut.cz/b202/_media/courses/ko/parking.pdf)
+
+
+## 2017 Autonomous Path Planning for Road Vehicles in Narrow Environments: An Efficient Continuous Curvature Approach
+
+TTS-RTR planner : 基于运动学的采样方法
+
+
+## 0130
+
+- [2016 Spatio-temporal decomposition: a knowledge-based initialization strategy for parallel parking motion optimization]()
+- [2017 Hybrid curvature steer: A novel extend function for sampling-based nonholonomic motion planning in tight environments]()
+- [2022 Parallel Parking: Optimal Entry and Minimum Slot Dimensions](https://arxiv.org/abs/2205.02523)
+- [2016 Time-Optimal Maneuver Planning in Automatic Parallel Parking Using a Simultaneous Dynamic Optimization Approach]()
+
 ## ref
 
 - paper
-    - [Optimisation based path planning for car parking in narrow environments]()
-    - [A fast motion planning algorithm for car parking based on static optimization]()
+    - [2016 Optimisation based path planning for car parking in narrow environments]()
+    - [2013 A fast motion planning algorithm for car parking based on static optimization]()
     - [Practical motion planning for car-parking control in narrow environment]()
     - [A new geometry-based secondary path planning for automatic parking](https://journals.sagepub.com/doi/full/10.1177/1729881420930575)
-    - [Continuous-Curvature Target Tree Algorithm for Path Planning in Complex Parking Environments](https://arxiv.org/pdf/2201.03163.pdf)
+    - [2022 Continuous-Curvature Target Tree Algorithm for Path Planning in Complex Parking Environments](https://arxiv.org/pdf/2201.03163.pdf)
+- paper(NN)
+    - [Time-Optimized Online Planning For Parallel Parking With Nonlinear Optimization and Improved Monte Carlo Tree Search](https://www.semanticscholar.org/paper/Time-Optimized-Online-Planning-For-Parallel-Parking-Song-Chen/9ace2c192aea884f16ceac206ec278007139651d)
+- course
+    - [EECS C106B](https://pages.github.berkeley.edu/EECS-106/sp22-site/resources/)
+    - [Path-Planning-for-a-Simple-Car](https://jckantor.github.io/CBE30338/07.06-Path-Planning-for-a-Simple-Car.html)
+- tool / library
+    - [2017_PYROBOCOP: Python-based Robotic Control & Optimization Package for Manipulation and Collision Avoidance]()
