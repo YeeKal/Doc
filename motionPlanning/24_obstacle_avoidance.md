@@ -5,7 +5,14 @@ tags: optimal control
 date: 2021-10-29
 ---
 
-两个box 碰撞检测
+- 按照维度区分
+    - 2D 平面
+    - 3D 
+- 按照优化方案
+    - 直接计算
+    - 优化中的梯度计算
+
+## 两个box 碰撞检测
 
 分两种情况: 有一个点在另一个内部/重叠但是没有点在内部
 
@@ -15,6 +22,33 @@ date: 2021-10-29
 
 $$S_{\Delta P A B}+S_{\Delta P B C}+S_{\Delta P C D}+S_{\Delta P D A}>S_{\square A B C D}$$
 
+# 两条线的碰撞检测
+
+转化为符号表达式, 参考
+
+# polygon point collision
+
+- [POLYGON/POINT](http://www.jeffreythompson.org/collision-detection/poly-point.php)
+- [How can I determine whether a 2D Point is within a Polygon?](https://stackoverflow.com/questions/217578/how-can-i-determine-whether-a-2d-point-is-within-a-polygon/2922778#2922778)
+- [PNPOLY - Point Inclusion in Polygon Test](https://wrfranklin.org/Research/Short_Notes/pnpoly.html)
+
+## polygon
+
+- polygon circle
+    - circle with line
+    - center point in polygon
+- polygon rectangle
+    - rectangle with line
+    - center point inside polygon
+
+## PIVOT2D
+
+
+## 优化问题中的平面凸多边形碰撞检测的处理
+
+- [Apollo规划算法基于多边形分离的平滑分析](https://zhuanlan.zhihu.com/p/74528875)
+- [自动泊车规划算法基于多边形分离的平滑分析](https://zhuanlan.zhihu.com/p/162973842)
+- [apollo obca中的实现](https://zhuanlan.zhihu.com/p/157743632)
 
 ## ref
 
@@ -25,3 +59,4 @@ $$S_{\Delta P A B}+S_{\Delta P B C}+S_{\Delta P C D}+S_{\Delta P D A}>S_{\square
         - [PyRoboCOP](https://github.com/merlresearch/PyRoboCOP)
 - blog
     - [论文阅读：Efficient Formulation of Collision Avoidance Constraints in Optimization Based Trajectory](https://zhuanlan.zhihu.com/p/592762287)
+    - [collision-detection tutorial](http://www.jeffreythompson.org/collision-detection/table_of_contents.php)
