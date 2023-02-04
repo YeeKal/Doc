@@ -57,6 +57,8 @@ $$S_{\Delta P A B}+S_{\Delta P B C}+S_{\Delta P C D}+S_{\Delta P D A}>S_{\square
     - [PYROBOCOP: Python-based Robotic Control & Optimization Package for Manipulation and Collision Avoidance](https://arxiv.org/pdf/2106.03220.pdf)
         - [Research Software — PyRoboCOP](https://www.merl.com/research/license/PyRoboCOP)
         - [PyRoboCOP](https://github.com/merlresearch/PyRoboCOP)
+    - [2004 Efficient collision detection between 2D polygons](https://www.academia.edu/7251297/Efficient_Collision_Detection_between_2D_Polygons)
+    - [2022-Differentiable Collision Detection for a Set of Convex Primitives](https://arxiv.org/pdf/2207.00669.pdf)
 - blog
     - [论文阅读：Efficient Formulation of Collision Avoidance Constraints in Optimization Based Trajectory](https://zhuanlan.zhihu.com/p/592762287)
     - [collision-detection tutorial](http://www.jeffreythompson.org/collision-detection/table_of_contents.php)

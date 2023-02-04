@@ -103,3 +103,4 @@ $$\begin{aligned}
     - [c++: manif](https://github.com/artivis/manif)
     - [c++: sophus](https://github.com/strasdat/Sophus)
     - [python: liegroups](https://github.com/utiasSTARS/liegroups)
+    - [lie based casadi](https://github.com/ami-iit/liecasadi)
