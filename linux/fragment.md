@@ -5,6 +5,8 @@ tags: linux
 date: 2021-11-24
 ---
 
+
+- Orthogonal Collocation Method 正交配置法
 - risk-aware motion planner
 - receding horizon
 - Risk-Aware Motion Planning for Collision-Tolerant Aerial Robots Subject to Localization Uncertainty

@@ -50,6 +50,22 @@ $$S_{\Delta P A B}+S_{\Delta P B C}+S_{\Delta P C D}+S_{\Delta P D A}>S_{\square
 - [自动泊车规划算法基于多边形分离的平滑分析](https://zhuanlan.zhihu.com/p/162973842)
 - [apollo obca中的实现](https://zhuanlan.zhihu.com/p/157743632)
 
+$$\begin{aligned}
+& -b_1 \lambda-b_2 \mu>0 \\
+& A_1^T \lambda+z=0 \\
+& A_2^T \mu-z=0 \\
+& \|z\|_* \leq 1 \\
+& \lambda \succeq 0 \\
+& \mu \succeq 0
+\end{aligned}$$
+
+- [polyhedra-and-polytopes](https://scaron.info/blog/polyhedra-and-polytopes.html)
+
+
+## PYROBOCOP: Python-based Robotic Control & Optimization Package for Manipulation and Collision Avoidance
+
+Orthogonal Collocation Method 正交配置法, 是加权余项法(Method of Weighted Residuals)的一种, 与传统差分法相比，具有计算精度高和稳定性好等优点.
+
 ## ref
 
 - paper 

@@ -209,6 +209,66 @@ $$
 
 ![parking_opti_two_phase](imgs/parking_opti_two_phase.png)
 
+在phase B状态,规划器尽量找到能使自车到达一个方便脱困的位置的轨迹.在垂直和斜列车位,只需要保持航向不变,前进或后退到某个点. 而对于水平车位车需要摆过一定的角度才方便从库位内脱困出来(如下图水平车位的Phase switching point).
+
+![parking_opti_parallel_switch](imgs/parking_opti_parallel_switch.png)
+
+因此在phase B的规划阶段,目标航向的变化在垂直和斜列场景设为0,而在水平场景设置为$\frac{\pi}{2}$:
+$$
+\theta_O = \theta_P + \gamma \\
+\gamma= \begin{cases}+ \frac{\pi}{2} & \text { for parallel parking from left }\\ -\frac{\pi}{2} & \text { for parallel parking from right} \\ 0 & \text { else }\end{cases}
+$$
+
+同时在权重系数设置上,对于航向误差设置较大的参数,位置误差设置为0,使得优化器能尽快摆到脱困的航向位姿.(水平的目标航向不设置为$q_P$的航向,猜测$q_P$不是个定点,因此才把目标航向设置的比较大,让优化器尽力朝着脱困的航向优化)
+
+在phase A:$q_P\rightarrow q_S$阶段,起点$q_S$被当作目标点. 坐标系设置为以$q_S$为原点,x为纵向,y为横向.目标点航向为0. 在该阶段, y方向和航向误差的参数设置的比较大,而在行驶方向--即x方向上的参数比较小. 
+
+**switching point的计算**
+
+文中把转换点分为两类,一类是上文提到的`phase switching point`, 另一类是`driving switching point`, 是指在同一phase的轨迹规划内的前进和倒退的换档点.
+
+1. `phase switching point`的计算: 在垂直和斜列车位场景是让车沿直线开出一定距离,而水平是当左前角点突出一定距离之后认为是可以脱困的点.
+
+![parking_opti_phase_switch_point.png](imgs/parking_opti_phase_switch_point.png)
+
+2. `driving switching point`的计算, rule1:当遇到障碍物没有足够的行驶空间的时候就是换档的时期. 这一条规则在phase B和phase A都适用.在phase B中,主要存在于水平车位场景,即当水平车位较窄时,可能需要在库内多次换档.在这一阶段的优化中,当遇到障碍物没有足够的行驶空间的时候就换档,如此循环直到满足脱困条件.
+
+3. `driving switching point`的计算, rule2:当最优解的损失函数开始增大的时候($l^*_{O_i}>l^*_{O_{i-1}}$)标志着需要换档了.主要针对phase A场景.文中以下图解释如此操作的原因.下图从$q_P$到switching point的过程中,y方向和航向与目标点的偏差逐渐缩小,因此这两方面的损失也迅速减小.而x方向的误差逐渐增大,损失函数也逐渐增大,总的损失函数趋近减小. 当y方向和航向趋近于0的时候,$q_P$和switching point基本在一条直线上,这也是较好的换档位置.同时由于y方向和航向的权重参数比较大,在这一位置,如果再往前则总的损失函数趋近增大,因此可以通过$l^*_{O_i}>l^*_{O_{i-1}}$来判断是否是比较好的换挡位置.
+
+![parking_opti_parallel_driving_switch](imgs/parking_opti_parallel_driving_switch.png)
+
+[实际案例 附图+评论]
+到这里,文中已经完整描述了一个完整的针对泊车的基于优化的轨迹规划的方法.优化的方法一般需要比较好的初始值才能很好得收敛到最优解.这种优化方法是一次性优化整条路径.但是本文不使用初始轨迹,而是每次优化只往前迭代一步,通过cost function引导路径走向终点.全局路径的优化方法难以处理换档点,而本文提出的方法可以在迭代过程中根据当前的状态判断是否需要换档.
+
+- 全局优化
+    - 优化整条轨迹
+    - 需要初始值
+    - 无法处理换档点
+- 本文的分步优化
+    - 优化当前的一步
+    - 不需要初始值
+    - 能处理换档点
+
+但是正因为每次只向前走一步,因此无法把握全局的环境信息,路径不一定最优. 对换档点的判断处理过于简单,会导致非常多的换档点.下图是一个简单场景下求解失败的例子.当从起点走到P点,y和theta误差都在迅速下降,cost减小. 但是y和theta误差可能不是同步到达最小值,因此会由于cost的增加而提前换档,这个时候继续往前会很快又到达换档点,因此会无故增加很多次换档.
+![parking_opti_practice1](imgs/parking_opti_practice1.png)
+
+
+| var   | tiny | large |
+| ----- | ---- | ----- |
+| y     | 小   | 大    |
+| theta | 大   | 小    |
+| x     | 最小 | 最小  |
+
+正因为如此,文中又提出了在狭窄场景下的引导树构建方法.
+
+
+
+占位符
+- 不同车型可视化适配
+- topic缺省保护， 如果有一个空bag，脚本能否正常运行
+- 如何更方便的添加一个新的图层 ➜ 架构设计
+- 如何更方便添加文本图层
+- 添加更多的topic信息展示（planning/info, mff指令， ODO中tline ...）
 
 
 ## 2017 Autonomous Path Planning for Road Vehicles in Narrow Environments: An Efficient Continuous Curvature Approach
