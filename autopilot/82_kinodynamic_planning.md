@@ -10,10 +10,13 @@ date: 2023-02-04
 
 - blog
     - [MOTION PLANNING](http://motion.cs.illinois.edu/RoboticSystems/PlanningWithDynamicsAndUncertainty.html)
+- paper
+    - [2022 db-A*: Discontinuity-bounded Search for Kinodynamic Mobile Robot Motion Planning](https://arxiv.org/abs/2203.11108)
+    - [2017-A tutorial on newton methods for constrained trajectory optimization and relations to slam, gaussian process smoothing, optimal control, and probabilistic inference](https://argmin.lis.tu-berlin.de/papers/17-toussaint-Newton.pdf)
 - book
     - [Robotic Systems](https://motion.cs.illinois.edu/RoboticSystems/)
 - library
     - * Search-based: ARA* (using SBPL http://www.sbpl.net/)
     - * Sampling-based: SST* (using OMPL https://ompl.kavrakilab.org/)
-    - * Optimization-based: KOMO (using RAI https://github.com/MarcToussaint/rai)
-    - * Hybrid: db-A*
+    - * Optimization-based: KOMO(K-Order Markov Optimization) (using RAI https://github.com/MarcToussaint/rai)
+    - * [Hybrid: db-A*](https://github.com/IMRCLab/kinodynamic-motion-planning-benchmark)

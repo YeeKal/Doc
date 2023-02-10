@@ -6,6 +6,18 @@ date: 2022-06-16
 ---
 
 
+- [generate Bézier curves using continuity conditions C2 and C1](https://www.jointjs.com/blog/how-to-create-nice-looking-curves-in-svg-with-fixed-tangents)
+- [Smooth Bézier Spline Through Prescribed Points](https://www.particleincell.com/2012/bezier-splines/)
+
+## generate Bézier curves using continuity conditions C2 and C1
+
+只有两个点,考虑方向
+
+Catmull-Rom splines: pass through all control points
+
+- [Catmull-Rom splines](https://lucidar.me/en/mathematics/catmull-rom-splines/)
+
+长度: 根据三次多项式积分得到曲线长度
 ## collision
 
 interact for line to curve:
