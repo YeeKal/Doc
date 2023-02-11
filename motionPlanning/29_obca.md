@@ -13,4 +13,5 @@ date: 2023-02-02
 - projects
     - [OBCA: Optimization-Based Collision Avoidance](https://github.com/XiaojingGeorgeZhang/OBCA)
     - [TDR-OBCA: A Reliable Planner for Autonomous Driving in Free-Space Environment](https://arxiv.org/pdf/2009.11345.pdf)
+    - [2018_zhang_Autonomous Parking using Optimization-Based Collision Avoidance [Optimization][Obstacles]](http://files.davidqiu.com/research/papers/2018_zhang_Autonomous%20Parking%20using%20Optimization-Based%20Collision%20Avoidance%20[Optimization][Obstacles].pdf)
     

@@ -9,9 +9,11 @@ date: 2021-11-24
 - Orthogonal Collocation Method 正交配置法
 - risk-aware motion planner
 - receding horizon
-- Risk-Aware Motion Planning for Collision-Tolerant Aerial Robots Subject to Localization Uncertainty
 - 凸函数与 Hilbert 投影定理
 - sac 碰撞检测
+ 
+- [grep:代码搜索引擎](https://grep.app/)
+https://github.com/zjhellofss/KuiperInfer
 
 ## 序列化与反序列化
 
