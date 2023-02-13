@@ -1,90 +1,27 @@
+#! https://zhuanlan.zhihu.com/p/605693570
 ---
-title: 自动泊车规划器
-categories: autopilot
-tags: autopilot
-date: 2023-01-12
+title: paper阅读: Optimisation based path planning for car parking in narrow environments
+categories: blog
+tags: 运动规划|自动驾驶
+date: 2023-02-12
 ---
 
-## methods
-
-- 分形搜索 Fractal Search
-- NMPC 碰撞检测
-- CBF: Control Barrier Functions
-
-- within-STC constraints
-- [Collision Detection Accelerated:An Optimization Perspective](https://arxiv.org/pdf/2205.09663.pdf)
-
-## geometry path pattern
-A new geometry-based secondary path planning for automatic parking
-
-## minkowski sum
-
-实质则是构型空间？如何转化为优化问题
-
-- [2020-Closed-Form Minkowski Sum Approximations for Efficient Optimization-Based Collision Avoidance](https://arxiv.org/abs/2203.15977)
-- [2015-Efficient Configuration Space Construction and Optimization for Motion Planning](https://cdr.lib.unc.edu/downloads/6682xd766)
-- [A Simple Method for Computing Minkowski Sum Boundary in 3D Using Collision Detection](https://cs.gmu.edu/~jmlien/lib/exe/fetch.php?media=lien_wafr08.pdf)
-- [Exact and Efficient Construction of Planar Minkowski Sums using the Convolution Method](http://www.cs.jhu.edu/~misha/Spring20/Wein06.pdf)
-- [2019 Efficient Exact Collision Detection between Ellipsoids and Superquadrics via Closed-form Minkowski Sums]()
-- [Real-time Reciprocal Collision Avoidance with Elliptical Agents]()
-- [2011 Fast and robust 2D Minkowski sum using reduced convolution](http://masc.cs.gmu.edu/wiki/uploads/ReducedConvolution/iros11-mksum2d.pdf)
-- [Polygonal Minkowski Sums via Convolution:Theory and Practice]()
-
-Reciprocal Velocity Obstacles (RVO)
-
-- [Optimal Reciprocal Collision Avoidance](https://gamma.cs.unc.edu/ORCA/)
-- projects
-    - [RVO2 Library: Reciprocal Collision Avoidance for Real-Time Multi-Agent Simulation](https://gamma.cs.unc.edu/RVO2/)
-
-碰撞检测
-GJK，全称Gilbert–Johnson–Keerthi distance algorithm  
-
-- [box2d: b2_distance.h](https://github.com/erincatto/Box2D)
-- [Separating Axis Theorem](http://www.metanetsoftware.com/technique/tutorialA.html)
-
-## An Optimization-Based Motion Planner for Car-like Logistics Robots on Narrow Roads
-
-结合TED进行窄通道的freespace规划
-
-Narrow-Roads-Timed-Elastic-Band
-
-## 2021_Autonomous_Parking_Trajectory_Planning_With_Tiny_Passages_A_Combination_of_Multistage_Hybrid_A-Star_Algorithm_and_Numerical_Optimal_Control
-
-freespace规划
-
-1. A* 发现窄通道
-2. 混合A* 连接窄通道
-3. 基于优化方案进行后处理
-
-后处理的碰撞检测使用within-STC constraints
-
-## 2022 Continuous-Curvature Target Tree Algorithm for Path Planning in Complex Parking Environments
-
-1. 根据直线长度,采样多条出库路径,然后计算cost最小的出库长度以及target-tree
-2. 采用rrt* 进行连接(?怎么连接的)
-
-泊车路径
-rrt*
-
-连续曲率轨迹 
-
-## 2016 Optimisation based path planning for car parking in narrow environments
-
+```
+@publish date 2016
+```
 `运动规划(motion planning)` `基于优化的方法(optimization based)` `自动驾驶(autopilot)`
 
-1. phase A and phase B 的规划
-2. 对于狭窄空间,guide-tree 进行换挡采样
 
-- [courses/ko/parking:对以上算法的实践](https://cw.fel.cvut.cz/b202/_media/courses/ko/parking.pdf)
+## Abstract
 
-#### abstract
+- a static optimization problem is formulated
+- a tree-based guidance for the local planner 
 
--  a static optimization problem is formated while considering
-    1. distance to obstacles
-    2. longer driving distances
-- in narrow scenarios, a tree-based guidance for the local planner is introduced
+本文把泊车的运动规划问题看成一个静态的优化问题(a static optimization problem)来处理，同时考虑了在无碰撞的情况下尽可能得提高可行使长度。对于狭窄场景，提出了基于树采样进行引导(a tree-based guidance)规划的方法。
 
-#### 1. introduction
+所谓`a static optimization problem`, 笔者理解为 不考虑速度，只考虑路径；障碍物都当作静态障碍物的场景。
+
+## Introduction
 
 - build roadmap
 - rrt with kinematic constraints, Integrating the differential equations of the robot for a specified distance 
@@ -93,7 +30,7 @@ rrt*
 - geometry
     - Dubins
     - Reeds and Shepp
-    - β-spline [14, 15], Bezi´er [16] or polynomial [17] curves.
+    - β-spline, Bezier or polynomial [17] curves
 - hybrid a-star
 - non-holonomic characteristics
     - small-time-controllable
@@ -102,9 +39,9 @@ rrt*
     - clothoid curves
 - optimal control problem
 
-以上方法可能对某些场景或者单一泊车场景有效果，但是对于更加泛化和多元化的，以及狭窄空间下的停车场景也许无法计算出有效轨迹。因此本文提出了一种基于优化方法的泊车规划器，能够以较低的计算代价实现狭窄场景下的实时规划。
+文中先是列举了常用的规划方法，并提出以上方法可能对某些场景或者单一泊车场景有效果，但是对于更加泛化和多元化的，以及狭窄空间下的停车场景也许无法计算出有效轨迹。因此本文提出了一种基于优化方法的泊车规划器，能够以较低的计算代价实现狭窄场景下的实时规划。
 
-#### 2. problem statement
+## Problem statement
 本文首先讨论了普通场景下的三种车位的规划方法，即
 
 - parallel slot: 水平车位， 侧方位停车
@@ -114,6 +51,8 @@ rrt*
 后面又更深入扩展了规划器再狭窄场景下和比较杂乱的停车场(parking deck)下的规划方法
 
 ![parking_opti_slot](imgs/parking_opti_slot.png)
+<font color=Grey size = 1>图片引用自原论文</font>
+
 
 根据自行车模型，把状态量对时间求导，可列出小车的动力学方程：
 
@@ -161,7 +100,7 @@ D u_l
 
 其中$D\in\{-1, 1\}$指示车行驶的方向，1代表向前，-1代表向后。
 
-### 3. Path Planning for Car Parking
+## Path Planning for Car Parking
 
 对于上述非线性方程，根据路径s进行二阶离散。注意这里步长$\eta_i\in[\eta_{min}, \eta_{max}]$也是一个变量。得到如下表达式：
 
@@ -210,10 +149,13 @@ $$
 2. phase A: $q_P\rightarrow q_S$,从转换点到起点
 
 ![parking_opti_two_phase](imgs/parking_opti_two_phase.png)
+<font color=Grey size = 1>图片引用自原论文</font>
+
 
 在phase B状态,规划器尽量找到能使自车到达一个方便脱困的位置的轨迹.在垂直和斜列车位,只需要保持航向不变,前进或后退到某个点. 而对于水平车位车需要摆过一定的角度才方便从库位内脱困出来(如下图水平车位的Phase switching point).
 
 ![parking_opti_parallel_switch](imgs/parking_opti_parallel_switch.png)
+<font color=Grey size = 1>图片引用自原论文</font>
 
 因此在phase B的规划阶段,目标航向的变化在垂直和斜列场景设为0,而在水平场景设置为$\frac{\pi}{2}$:
 $$
@@ -232,14 +174,17 @@ $$
 1. `phase switching point`的计算: 在垂直和斜列车位场景是让车沿直线开出一定距离,而水平是当左前角点突出一定距离之后认为是可以脱困的点.
 
 ![parking_opti_phase_switch_point.png](imgs/parking_opti_phase_switch_point.png)
+<font color=Grey size = 1>图片引用自原论文</font>
+
 
 2. `driving switching point`的计算, rule1:当遇到障碍物没有足够的行驶空间的时候就是换档的时期. 这一条规则在phase B和phase A都适用.在phase B中,主要存在于水平车位场景,即当水平车位较窄时,可能需要在库内多次换档.在这一阶段的优化中,当遇到障碍物没有足够的行驶空间的时候就换档,如此循环直到满足脱困条件.
 
 3. `driving switching point`的计算, rule2:当最优解的损失函数开始增大的时候($l^*_{O_i}>l^*_{O_{i-1}}$)标志着需要换档了.主要针对phase A场景.文中以下图解释如此操作的原因.下图从$q_P$到switching point的过程中,y方向和航向与目标点的偏差逐渐缩小,因此这两方面的损失也迅速减小.而x方向的误差逐渐增大,损失函数也逐渐增大,总的损失函数趋近减小. 当y方向和航向趋近于0的时候,$q_P$和switching point基本在一条直线上,这也是较好的换档位置.同时由于y方向和航向的权重参数比较大,在这一位置,如果再往前则总的损失函数趋近增大,因此可以通过$l^*_{O_i}>l^*_{O_{i-1}}$来判断是否是比较好的换挡位置.
 
 ![parking_opti_parallel_driving_switch](imgs/parking_opti_parallel_driving_switch.png)
+<font color=Grey size = 1>图片引用自原论文</font>
 
-[实际案例 附图+评论]
+
 到这里,文中已经完整描述了一个完整的针对泊车的基于优化的轨迹规划的方法.优化的方法一般需要比较好的初始值才能很好得收敛到最优解.这种优化方法是一次性优化整条路径.但是本文不使用初始轨迹,而是每次优化只往前迭代一步,通过cost function引导路径走向终点.全局路径的优化方法难以处理换档点,而本文提出的方法可以在迭代过程中根据当前的状态判断是否需要换档.
 
 - 全局优化
@@ -252,24 +197,19 @@ $$
     - 能处理换档点
 
 但是正因为每次只向前走一步,因此无法把握全局的环境信息,路径不一定最优. 对换档点的判断处理过于简单,会导致非常多的换档点.下图是一个简单场景下求解失败的例子.当从起点走到P点,y和theta误差都在迅速下降,cost减小. 但是y和theta误差可能不是同步到达最小值,因此会由于cost的增加而提前换档,这个时候继续往前会很快又到达换档点,因此会无故增加很多次换档.
-![parking_opti_practice1](imgs/parking_opti_practice1.png)
-
-
-| var   | tiny | large |
-| ----- | ---- | ----- |
-| y     | 小   | 大    |
-| theta | 大   | 小    |
-| x     | 最小 | 最小  |
+![parking_opti_practice2](imgs/parking_opti_practice2.png)
 
 正因为如此,文中又提出了在狭窄场景下的引导树构建方法. 本小节中的方法(主要是phase A阶段的规划)会作为通用的局部规划器在下一节描述的方法中用到。
 
-### 4. Path Planning in Narrow Environments
+## Path Planning in Narrow Environments
 
 采样关键点的方法一般会用来应对复杂场景中的运动规划，而对于非完整性约束(non-holonomic)的系统，采样法又存在几个难点：1. 无碰撞 2. 微分方程约束的可达性 3. 距离衡量。因此这种方法经常需要大量的采样点以及计算耗时。
 
 根据人类泊车的经验，文中针对泊车场景提出了一种高度定制化的采样方法。对于停车场的道路环境，以及人类开车的习惯，泊车时一般会走直线移动一段距离(parallel displacement)或者打弯走向垂直方向的某个位置(orthogonal displacement)。基于以上先验认知，文中提出了以当前起始点$q_0$沿水平方向的水平采样点$q_{R_P}$,和沿垂直方向的垂直采样点$q_{R_O}$,如下图所示：
 
 ![parking_opti_ref_config](imgs/parking_opti_ref_config.png)
+<font color=Grey size = 1>图片引用自原论文</font>
+
 $$\mathbf{q}_{R_P}=\mathbf{q}_0+\left[\begin{array}{c}
 \Delta x+\sigma_{x_P} \\
 \sigma_{y_P} \\
@@ -295,6 +235,8 @@ N_{sp}&:\quad \text{当前为止的换挡次数}
 若实际采样点能连接到最后的终点，则规划成功， 否则把这些点加入到候选集中，根据代价函数循环进行下一次采样。整体规划思路如下：
 
 ![parking_opti_narrow](imgs/parking_opti_narrow.png)
+<font color=Grey size = 1>图片引用自原论文</font>
+
 
 下图展示了一次采样的例子。其中$q_{L_1}$是以水平采样点$q_{R_P}$为导向由局部规划器生成的对应于水平方向上的实际采样点。$q_{L_2}, q_{L_3}, q_{L_4}$是以垂直采样点$q_{R_O}$为导向由局部规划器生成的对应于垂直方向上的实际采样点，而$q_{L_2}, q_{L_3}$又是局部轨迹上的换挡点。
 
@@ -304,58 +246,30 @@ N_{sp}&:\quad \text{当前为止的换挡次数}
 
 水平+垂直+斜列的普通泊车场景：
 ![parking_opti_sim1](imgs/parking_opti_sim1.png)
+<font color=Grey size = 1>图片引用自原论文</font>
 
 垂直车位的杂乱场景（虚线为Hybrid A\*的结果）：
 ![parking_opti_sim2](imgs/parking_opti_sim2.png)
+<font color=Grey size = 1>图片引用自原论文</font>
 
 垂直车位的狭窄场景：
 ![parking_opti_sim3](imgs/parking_opti_sim3.png)
+<font color=Grey size = 1>图片引用自原论文</font>
 
 
 ### 总结
 
-本文提出了一种操作性强，极具定制化的基于优化的泊车运动规划算法。由于优化过程是单步优化，因此求解速度比较快，同时方便判断换挡时机。但也因为缺少全局优化项，难以求得最优路径，这在文中的实验中也体现了出来，即相比于Hybrid A\*有更长的路径和更多的换挡次数。文中的实验在成功率上相比Hybrid A\*有些许提高，但对比不是特别明显。文中提到平均求解时间在20ms左右，并且比较稳定，但是没有给出详细的对比数据。文中基于先验知识提出的采样方法极具借鉴意义。
+本文提出了一种操作性强，极具定制化的基于优化的泊车运动规划算法。由于优化过程是单步优化，因此求解速度比较快，同时方便判断换挡时机。但也因为缺少全局优化项，难以求得最优路径，这在文中的实验中也体现了出来，即相比于Hybrid A\*有更长的路径和更多的换挡次数。在另一篇实践作业中也描述了换挡次数非常多的不合理结果[^算法的实践报告]。文中的实验在成功率上相比Hybrid A\*有些许提高，但对比不是特别明显。文中提到平均求解时间在20ms左右，并且比较稳定，但是没有给出详细的对比数据。文中基于先验知识提出的采样方法极具借鉴意义。
 
-## 2017 Autonomous Path Planning for Road Vehicles in Narrow Environments: An Efficient Continuous Curvature Approach
+## 代码实现
 
-TTS-RTR planner : 基于运动学的采样方法
+[待填坑]
 
 
-## 0130
-
-- [2016 Spatio-temporal decomposition: a knowledge-based initialization strategy for parallel parking motion optimization]()
-- [2017 Hybrid curvature steer: A novel extend function for sampling-based nonholonomic motion planning in tight environments]()
-- [2022 Parallel Parking: Optimal Entry and Minimum Slot Dimensions](https://arxiv.org/abs/2205.02523)
-- [2016 Time-Optimal Maneuver Planning in Automatic Parallel Parking Using a Simultaneous Dynamic Optimization Approach]()
-
-## 0203
-
-- [Trajectory optimization for Car-Like Vehicles in Structured and Semi-Structured Environments](https://ieeexplore.ieee.org/document/8500373)
-- [Efficient_Collision_Detection_between_2D_Polygons](https://www.researchgate.net/publication/221546279_Efficient_Collision_Detection_between_2D_Polygons)
-
-## ref
-
-- paper
-    - [2016 Optimisation based path planning for car parking in narrow environments]()
-    - [2013 A fast motion planning algorithm for car parking based on static optimization]()
-    - [Practical motion planning for car-parking control in narrow environment]()
-    - [A new geometry-based secondary path planning for automatic parking](https://journals.sagepub.com/doi/full/10.1177/1729881420930575)
-    - [2022 Continuous-Curvature Target Tree Algorithm for Path Planning in Complex Parking Environments](https://arxiv.org/pdf/2201.03163.pdf)
-    - [ALTRO: A Fast Solver for Constrained Trajectory Optimization](https://www.ri.cmu.edu/publications/altro-a-fast-solver-for-constrained-trajectory-optimization/)
-    - [Solving Constrained Trajectory Planning Problems Using Biased Particle Swarm Optimization](https://dspace.lib.cranfield.ac.uk/bitstream/handle/1826/16453/Solving_Constrained_Trajectory_Planning_problems-2021.pdf?sequence=4)
-    - [2020-An Optimization-Based Receding Horizon Trajectory Planning Algorithm](https://www.sciencedirect.com/science/article/pii/S2405896320330810)
-    - [kinodynamic-motion-planning-benchmark](https://github.com/IMRCLab/kinodynamic-motion-planning-benchmark)
-- paper(NN)
-    - [Time-Optimized Online Planning For Parallel Parking With Nonlinear Optimization and Improved Monte Carlo Tree Search](https://www.semanticscholar.org/paper/Time-Optimized-Online-Planning-For-Parallel-Parking-Song-Chen/9ace2c192aea884f16ceac206ec278007139651d)
-- course
-    - [EECS C106B](https://pages.github.berkeley.edu/EECS-106/sp22-site/resources/)
-    - [Path-Planning-for-a-Simple-Car](https://jckantor.github.io/CBE30338/07.06-Path-Planning-for-a-Simple-Car.html)
-- tool / library
-    - [2017_PYROBOCOP: Python-based Robotic Control & Optimization Package for Manipulation and Collision Avoidance]()
-    - [nmpc by casadi](https://github.com/devsonni/MPC-Implementation/tree/main/Python%20Implementation)
-
-## cites
+## Ref
 
 [^1]:[2000-Randomized kinodynamic motion planning with moving obstacles](http://ai.stanford.edu/~latombe/papers/IJRR-kino/final.pdf)
 [^2]:1991-A fast path planner for a car-like indoor mobile robot
 [^3]: [Spatial planning: A configuration space approach,” IEEE Trans. Comput., vol. C-32, no. 2, pp. 108–120, 1983.](https://dspace.mit.edu/handle/1721.1/5684)
+[^算法的实践报告]: [算法的实践报告](https://cw.fel.cvut.cz/b202/_media/courses/ko/parking.pdf)
+[^paper]:[Optimisation based path planning for car parking in narrow environments]()

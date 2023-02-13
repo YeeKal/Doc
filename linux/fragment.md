@@ -19,7 +19,8 @@ https://github.com/zjhellofss/KuiperInfer
 
 - [csdn:自动序列化与反序列化](https://blog.csdn.net/ZJU_fish1996/article/details/102643222)
 
-
+- [local ChatGPT api](https://github.com/acheong08/ChatGPT)
+- [huggingface](https://huggingface.co/)
 ## Convex Feasible Set Algorithm
 
 subgradient method python
