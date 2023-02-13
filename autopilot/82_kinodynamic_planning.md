@@ -22,4 +22,5 @@ https://github.com/sailist/Awesome-Paper-List-py/blob/master/pdfs/sync-bypy.py
     - * Search-based: ARA* (using SBPL http://www.sbpl.net/)
     - * Sampling-based: SST* (using OMPL https://ompl.kavrakilab.org/)
     - * Optimization-based: KOMO(K-Order Markov Optimization) (using RAI https://github.com/MarcToussaint/rai)
+        - [doc](https://github.com/MarcToussaint/rai/wiki)
     - * [Hybrid: db-A*](https://github.com/IMRCLab/kinodynamic-motion-planning-benchmark)
