@@ -91,11 +91,11 @@ reference to **[2008_A technique for time-jerk optimal planning of robot traject
 
 ur5
 
-![](pics/ur5-1.png)
+![](imgs/ur5-1.png)
 
 ur10
 
-![](pics/ur10-1.png)
+![](imgs/ur10-1.png)
  
 ```
 # ur5

@@ -37,7 +37,7 @@ ref:
 Balkans(巴尔干半岛)： 巴尔干山脉，多瑙河水系及愛琴海水系的分水嶺. 当前位于Bulgaria(保加利亚)境内
 
 
-![Balkan_Peninsula](pics/greek/balkan.png)
+![Balkan_Peninsula](imgs/greek/balkan.png)
 
 Anatolia(安那托利亚)/Asia Minor Peninsula(小亚细亚)：
 
@@ -47,7 +47,7 @@ Anatolia(安那托利亚)/Asia Minor Peninsula(小亚细亚)：
 - carian: 卡利亚
 - Phoenicia：腓尼基人， 古代地中海东岸， 其范围接近于如今的黎巴嫩和叙利亚
 
-![greece.png](pics/greek/greece.png)
+![greece.png](imgs/greek/greece.png)
 
 
 #### 希腊半岛大区
@@ -62,7 +62,7 @@ Crete: 克里特岛
 
 
 
-![classical period](pics/greek/classical_period.jpg)
+![classical period](imgs/greek/classical_period.jpg)
 
 海域：
 
@@ -96,7 +96,7 @@ Crete: 克里特岛
     - Aperantia 阿佩兰提亚
     - Dolopia 多罗皮亚
 
-![classical period](pics/greek/greek_3.jpeg)
+![classical period](imgs/greek/greek_3.jpeg)
 
 **city**
 
@@ -138,7 +138,7 @@ Crete: 克里特岛
 3. Aeolians 伊奥利亚人 古希腊时期在小亚细亚滨临地中海的西至西北地区和几个近海的岛屿（尤其是莱斯沃斯岛），是众多伊奥利亚城邦的所在地。伊奥利亚北邻密细亚，本身包含其南部地区，南邻愛奧尼亞（Ἰωνία，Ionia），东邻吕底亚
 4. Ionians 伊奧尼亞人 伊奧尼亞方言是古希臘世界中使用第三廣的方言，只次於多利安方言與伊歐里斯方言。建立城邦： 雅典、优卑亚岛、與基克拉泽斯。最狹義的意思，專指小亞細亞的伊奧尼亞地區。广义说是由伊奧尼亞人建立的城邦。这里指古希腊时期伊奧尼亞人的部落。
 
-![people](pics/greek/people.png)
+![people](imgs/greek/people.png)
 
 ## Minoan(米诺斯文明 circa 2600 – 1200 BCE)
 
@@ -197,7 +197,7 @@ BC12-BC9
 
 苏格拉底到伯拉图时期的阿提卡地图
 
-![attica](pics/greek/attica.png)
+![attica](imgs/greek/attica.png)
 
 
 - Anatolia(安那托利亚)/Asia Minor Peninsula(小亚细亚)
@@ -410,7 +410,7 @@ BC506 雅典击败由克列奥尼明组织的军事联盟 开始以独立自主�
 
 - 第二次希波战争 second Persian invasion of Greece
 
-![pesian_wars](pics/greek/pesian_wars.png)
+![pesian_wars](imgs/greek/pesian_wars.png)
 
 BC480 
 希腊联合
@@ -422,11 +422,11 @@ BC480
 温泉关战役 Battle of Thermopylae
 斯巴達國王列奧尼達一世据守温泉关 拖住波斯大军 最终阵亡
 
-![Thermopylae](pics/greek/Thermopylae.jpg)
+![Thermopylae](imgs/greek/Thermopylae.jpg)
 
 萨拉米斯战役 Battle of Salamis
 
-![Salamis](pics/greek/Salamis.png)
+![Salamis](imgs/greek/Salamis.png)
 
 
 普拉提亚之战 Battle of Plataea 
@@ -573,7 +573,7 @@ BC322 于巴比伦 死
 
 ```
 
-![MacedonEmpire](pics/greek/MacedonEmpire.jpg)
+![MacedonEmpire](imgs/greek/MacedonEmpire.jpg)
 
 
 

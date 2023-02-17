@@ -16,7 +16,7 @@ date: 2021-10-29
 
 分两种情况: 有一个点在另一个内部/重叠但是没有点在内部
 
-![box collision](pics/box_collision.jpg)
+![box collision](imgs/box_collision.jpg)
 
 第一种情况 三角形面积大于原始正方形;第二种情况在连续动态的环境里不会发生，如果发生必定已经发生了第一种情况。
 
@@ -63,10 +63,54 @@ $$\begin{aligned}
 
 
 ## PYROBOCOP: Python-based Robotic Control & Optimization Package for Manipulation and Collision Avoidance
+---
 
 Orthogonal Collocation Method 正交配置法, 是加权余项法(Method of Weighted Residuals)的一种, 与传统差分法相比，具有计算精度高和稳定性好等优点.
 
-## ref
+## 2022 Differentiable Collision Avoidance Using Collision Primitives
+---
+
+
+> Supplementary: 
+- [video](https://youtu.be/et0bu--wuy4)
+- ref:[Optimal control via second order sensitivity analysis]()
+- [🐯 code:DCA-Differentiable collision avoidance](https://github.com/SimiPro/DCA)
+- iros
+
+Algorithms:
+
+usion basic collision primitives to represent obstacle:
+
+$$\mathbf{P}(\mathbf{x}, \mathbf{t})=\mathbf{p}(\mathbf{x})+\sum_{l=1}^L t_l \mathbf{v}_l(\mathbf{x}), \quad 0 \leq t_l \leq 1, \forall l$$
+
+![collision_primitive](imgs/collision_primitive.png)
+
+
+
+1. barrier function
+2. make collision constraints soft
+
+
+## 2022 Motion Planning around Obstacles with Convex Optimization
+
+- [:tiger:code: GCS-Graphs of Convex Sets](https://github.com/mpetersen94/gcs)
+
+- Mixed-Integer Convex Programming (MICP) 
+- Second-Order-Cone Programs (SOCPs)
+- ref
+    - [2015ICRA:Efficient mixed-integer planning for UAVs in cluttered environments]()
+
+## 2022 finding and optimizing certified, collision-free regions in configuration space for robot manipulators
+
+- `C-Iris`: C-space Iterative Regional Inflation by Semidefinite programming
+- [code:C_Iris based drake](https://github.com/AlexandreAmice/drake/tree/C_Iris)
+
+computing collision-free C-space regions:
+- maximal-volume ellipse
+- maximal expansion of the polytope
+
+![ciris_maximal_expansion](imgs/ciris_maximal_expansion.jpg)
+## Ref
 
 - paper 
     - [Efficient Formulation of Collision Avoidance Constraints in Optimization Based Trajectory Planning and Control](https://arxiv.org/abs/2104.12641)
@@ -75,6 +119,9 @@ Orthogonal Collocation Method 正交配置法, 是加权余项法(Method of Weig
         - [PyRoboCOP](https://github.com/merlresearch/PyRoboCOP)
     - [2004 Efficient collision detection between 2D polygons](https://www.academia.edu/7251297/Efficient_Collision_Detection_between_2D_Polygons)
     - [2022-Differentiable Collision Detection for a Set of Convex Primitives](https://arxiv.org/pdf/2207.00669.pdf)
+    - [2022_Motion Planning using Reactive Circular Fields:A 2D Analysis of Collision Avoidance and Goal Convergence](https://arxiv.org/pdf/2210.16106v1.pdf)
+    - [2022 Motion Planning around Obstacles with Convex Optimization](https://arxiv.org/pdf/2205.04422v1.pdf)
+    - [finding and optimizing certified, collision-free regions in configuration space for robot manipulators](https://arxiv.org/abs/2205.03690)
 - blog
     - [论文阅读：Efficient Formulation of Collision Avoidance Constraints in Optimization Based Trajectory](https://zhuanlan.zhihu.com/p/592762287)
     - [collision-detection tutorial](http://www.jeffreythompson.org/collision-detection/table_of_contents.php)

@@ -8,7 +8,7 @@ date: 2019-07-12
 
 **matlab 例程**
 
-![kalman1](pics/kalman.jpg)
+![kalman1](imgs/kalman.jpg)
 
 ```matlab
 clc

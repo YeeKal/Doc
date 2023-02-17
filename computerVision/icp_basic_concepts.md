@@ -73,7 +73,7 @@ selecting source points:
     - decrease the number of correspondences
     - higher efficiency and higher accuracy
     - requires preprocessing
-![feature_based_sampling](pics/feature_based_sampling.png)
+![feature_based_sampling](imgs/feature_based_sampling.png)
 - **normal-sapce sampling**
     - Ensure that samples have normals distributed as
 uniformly as possible

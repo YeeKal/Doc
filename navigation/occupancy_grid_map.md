@@ -15,7 +15,7 @@ ref: [占据栅格地图-当机器人遇上了学习](https://zhuanlan.zhihu.com
 - free state: p(s=0)
 - $Occ(s)=\log Odd(s)=\frac{p(s=1)}{p(s=0)}$, 当前的状态表示
 
-![occu1](pics/occu1.png)
+![occu1](imgs/occu1.png)
 
 
 根据新的测量值$z\in [0,1]$,更新当前状态:$Odd(s|z)=\frac{p(s=1|z)}{p(s=0|z)}$.根据贝叶斯公式：
@@ -42,5 +42,5 @@ $$S_{init}=Occ(s)=\log \frac{p(s=1)}{p(s=0)}=\log \frac{0.5}{0.5}=0$$
 $$(i,j)=(ceil(x/r),ceil(y/r))$$
 其中，$i,j$为离散地图坐标，r为离散方格边长。另外障碍物点和激光原点之间的非障碍点也需要更新，可以用Bresenham算法来找到两点之间的中间点。
 
-![presenham](pics/bresenham.png)
+![presenham](imgs/bresenham.png)
 

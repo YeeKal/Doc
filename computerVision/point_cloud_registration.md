@@ -124,7 +124,7 @@ ANN: approximate nearest neighbor
 
 ####  recognition pipelines
 
-![pipelines](pics/pipelines.png)
+![pipelines](imgs/pipelines.png)
 
 
 

@@ -16,6 +16,7 @@ https://github.com/sailist/Awesome-Paper-List-py/blob/master/pdfs/sync-bypy.py
 - paper
     - [2022 db-A*: Discontinuity-bounded Search for Kinodynamic Mobile Robot Motion Planning](https://arxiv.org/abs/2203.11108)
     - [2017-A tutorial on newton methods for constrained trajectory optimization and relations to slam, gaussian process smoothing, optimal control, and probabilistic inference](https://argmin.lis.tu-berlin.de/papers/17-toussaint-Newton.pdf)
+    - [2008-kpiece:Kinodynamic Motion Planning by Interior-Exterior Cell Exploration](https://ioan.sucan.ro/files/pubs/wafr2008.pdf)
 - book
     - [Robotic Systems](https://motion.cs.illinois.edu/RoboticSystems/)
 - library

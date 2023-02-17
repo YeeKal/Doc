@@ -65,12 +65,12 @@ public int GetHashCode(string str)
 
 优点： 红黑树不是高度平衡的，算是一种折中，插入最多两次旋转，删除最多三次旋转。
 
-![honghei](pics/honghei1.png)
+![honghei](imgs/honghei1.png)
 红黑树的三种基本操作：左旋，右旋，变色
 
 #### 左旋
 
-![left_rotate](pics/left_rotate.jpg)
+![left_rotate](imgs/left_rotate.jpg)
 
 ```c++
 /* 
@@ -120,7 +120,7 @@ public int GetHashCode(string str)
 
 #### 右旋
 
-![right_rotate](pics/right_rotate.jpg)
+![right_rotate](imgs/right_rotate.jpg)
 
 ```c++
 /* 

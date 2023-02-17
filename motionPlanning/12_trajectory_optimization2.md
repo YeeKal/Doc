@@ -11,7 +11,7 @@ date: 2021-08-17
 - 目标函数: 包含边界项和积分项
 - 最优解: 最小化目标函数的解
 
-![trajectory_optimization1](pics/trajectory_optimization1.png)
+![trajectory_optimization1](imgs/trajectory_optimization1.png)
 
 ## 变分法
 
@@ -100,13 +100,13 @@ B_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} x(t) \sin n t d t
 
 ## 离散空间
 
-![trajectory_optimization2](pics/trajectory_optimization2.png)
+![trajectory_optimization2](imgs/trajectory_optimization2.png)
 
 
 轨迹优化是一个求解泛函优化的问题。可以将该问题离散化。转化为一个函数优化的问题，降低求解难度。（泛函优化和函数优化）即直接求解轨迹点而不关注该函数的表达式。把一个微分方程转化为有m*n（维度*控制点）个优化参数的优化问题。
 
 微分方程和离散法对比：基于微分方程的变分法是更加精确的解法，但是求解通常比较困难，特别在复杂问题以及有约束的情况下。而离散优化的方法则更加通用，降低求解复杂度，虽然牺牲了一些精确性（由于插值的存在，曲线可能不是最优）。
-![trajectory_optimization3](pics/trajectory_optimization3.png)
+![trajectory_optimization3](imgs/trajectory_optimization3.png)
 
 
 

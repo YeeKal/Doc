@@ -39,7 +39,7 @@ $$\begin{aligned}
 \end{aligned}
 $$
 
-![spiral](pics/spiral.png)
+![spiral](imgs/spiral.png)
 
 **polytraj 代码原理**
 

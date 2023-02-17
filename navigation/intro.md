@@ -14,7 +14,7 @@ date: 2019-09-24
 
 ## [ros navigation](http://wiki.ros.org/navigation/)
 
-![overview](pics/overview.png)
+![overview](imgs/overview.png)
 三个常用规划包：
 
 1. move_base：根据参照的消息进行路径规划，使移动机器人到达指定的位置；

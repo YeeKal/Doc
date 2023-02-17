@@ -11,7 +11,7 @@ date: 2022-06-21
 
 ## Delaunay Triangulation
 
-![tri](pics/31_tri.png)
+![tri](imgs/31_tri.png)
 
 connect each node to every other node that shares an edge
 
@@ -25,3 +25,5 @@ Delaunay triangulations maximize the minimum angle of all the angles of the tria
 
 - blog
     - [Robot Path Planning Using Generalized Voronoi Diagrams](https://www.cs.columbia.edu/~pblaer/projects/path_planner/)
+- library
+    - [to create triangular decompositions of polygonal 2D environments](http://www.cs.cmu.edu/~quake/triangle.html)

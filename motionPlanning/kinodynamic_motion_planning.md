@@ -54,7 +54,7 @@ $$x(\Delta t)\approx x(o)+\frac{\Delta t}{6}(w_1,w_2,w_3,w_4)   \\
 
 ## steering method
 
-- [toppra](https://toppra.readthedocs.io/en/latest/tutorials/tut3_non_zero_velocities.html)
+- [toppra](https://notebook.community/hungpham2511/toppra/docs/source/tutorials/tut3_non_zero_velocities)
 
 Non-zero starting and ending velocities
 

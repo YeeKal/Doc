@@ -265,7 +265,7 @@ $$T_n^{-1}\cdot T_c^{-1} \cdot T_m = T_c^{-1} \cdot T_{m-new}   \\
 
 ```
 
-![](pics/opengl_matrix.webp)
+![](imgs/opengl_matrix.webp)
 
 - model transformation(model matrix): 物体在世界坐标中的位置变换
 - view transformation(view matrix): 视图变换,观察者从哪个视角观察
@@ -361,7 +361,7 @@ void glFrustum(	GLdouble left,
  	GLdouble nearVal,
  	GLdouble farVal);
 ```
-![frustum](pics/frustum.png)
+![frustum](imgs/frustum.png)
 
 ```c++
 // 3. 透视投影的另一种方式
@@ -385,7 +385,7 @@ void gluPerspective(	GLdouble fovy,
  	GLdouble zFar);
 ```
 
-![perspective](pics/perspective.png)
+![perspective](imgs/perspective.png)
 
 ## 几何图元
 

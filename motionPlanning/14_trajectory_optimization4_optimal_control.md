@@ -129,7 +129,7 @@ LQR是将状态调节到0,而轨迹跟踪是系统误差为0。
 
 LQR是在 $\delta x \neq 0$， 期望通过控制量在一定时间以后使得$\delta x = 0$。另一个类似的问题是反过来，一开始 $\delta x =0$, 期望在一定时间以后使得 $\delta x $为某一常量。
 
-![lqr.png](pics/lqr.png)
+![lqr.png](imgs/lqr.png)
 
 则优化问题变为：
 

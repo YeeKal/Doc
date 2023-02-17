@@ -1,4 +1,3 @@
-#! https://zhuanlan.zhihu.com/p/605693570
 ---
 title: paper阅读: Optimisation based path planning for car parking in narrow environments
 categories: blog
@@ -11,6 +10,7 @@ date: 2023-02-12
 ```
 `运动规划(motion planning)` `基于优化的方法(optimization based)` `自动驾驶(autopilot)`
 
+- https://zhuanlan.zhihu.com/p/605693570
 
 ## Abstract
 

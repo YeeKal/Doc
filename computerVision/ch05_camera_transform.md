@@ -15,7 +15,7 @@ date: 2021-03-28
 - 极点(Epipolar): $e_1,e_2$
 - 基线: $O_1O_2$连线
 - 极线: $l_1,l_2$
-![epipolar_geometry](pics/epipolar_geometry.png)
+![epipolar_geometry](imgs/epipolar_geometry.png)
 
 
 设点$P$在世界坐标系下表示为:

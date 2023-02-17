@@ -9,4 +9,4 @@ date: 2019-07-12
 
 [1994_Robot sensor calibration solving AX=XB on the Euclidean group](https://ieeexplore.ieee.org/document/326576)
 
-![proof](pics/ax_xb_proof.jpg)
+![proof](imgs/ax_xb_proof.jpg)

@@ -8,7 +8,7 @@ date: 2019-11-06
 RANSAC (random sample consensus): 随机抽样一致算法。一种通过使用观测到的数据点来估计数学模型参数的迭代方法。比如对给定的一组数据来拟合直线，最小二乘法会拟合所有的点，而RANSAC会把点集分为inlier和outliner，只对inlier进行拟合。RANSAC首先随机采样n个样本，根据该样本估计模型，再根据模型查找总体样本中符合模型的样本数，通过不断迭代找到样本数最多(代价函数最小)的模型.
 > M. A. Fischler and R. C. Bolles (June 1981). "Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography". Comm. of the ACM 24: 381--395
 
-![ransac1](pics/ransac1.jpg)
+![ransac1](imgs/ransac1.jpg)
 
 ```python
 Given:

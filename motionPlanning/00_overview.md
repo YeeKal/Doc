@@ -66,6 +66,7 @@ date: 2018-01-01
     - [PathPlanning](https://github.com/zhm-real/PathPlanning)
     - [Motion Planning Library with ROS](https://github.com/moribots/motion_planning)
     - [Robot-Motion-Planning-Algorithms](https://github.com/vinaybysani/Robot-Motion-Planning-Algorithms)
+    - [drake](https://drake.mit.edu/gallery.html)
 - paper
     - [2015 Homotopy-Based Divide-and-Conquer Strategy for Optimal Trajectory Planning via Mixed-Integer Programming]()
     - project

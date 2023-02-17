@@ -7,7 +7,7 @@ date: 2019_06_16
 
 ## atlasRRT
 
-![atlas_map1](pics/atlas_map1.png)
+![atlas_map1](imgs/atlas_map1.png)
 
 - $x_i$: a point on the manifold
 - $C_i$: tangent space in $xi$

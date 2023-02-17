@@ -15,7 +15,7 @@ $$y=\theta x_1 + (1-\theta)x_2, \theta \in R$$
 
 ## 集合的表示
 
-![convex_set](pics/convex_set.svg)
+![convex_set](imgs/convex_set.svg)
 
 线性组合：
 
@@ -29,11 +29,11 @@ $$y=\sum \lambda_i x_i$$
 
 线性方程组的解集$C=\{ x| Ax=b \}$是一个仿射集合。反之，任意仿射集合可以表示为一个线性方程组的解集。上式中$A$是一个矩阵，$x,b$都是向量。
 
-![hyper_plane](pics/hyper_plane.png)
+![hyper_plane](imgs/hyper_plane.png)
 
 $\{ x| a^Tx=b \}$这个集合被称为超平面，a，x是向量b是一个常数。任取$x_0$,使得$a^Tx_0=b$, 则解集上任意点$x$,有$a^T(x-x_0)=0$. 即解集以$x_0$为中心，垂直a的所有的线段形成的平面。或者可以理解为x在a上投影的长度为b，则满足条件的x在垂直于a的某一个平面上，而b决定了这个平面的高度。
 
-![halfspace](pics/halfspace.png)
+![halfspace](imgs/halfspace.png)
 $\{a^Tx \leq b \}$ 被成为半空间(halfspace).可以认为是由超平面分割的空间。
 
 超平面是仿射集，也是凸集，半空间是凸集。
@@ -67,7 +67,7 @@ norm ball: $||x-x_c|| \leq r$
 
 norm cone: $||x|| \leq t$. euclidean norm cone is called second-order cone（二阶锥）.
 
-![norm_cone.png](pics/norm_cone.png)
+![norm_cone.png](imgs/norm_cone.png)
 
 norm ball and norm cone are both convex.
 
@@ -77,7 +77,7 @@ norm ball and norm cone are both convex.
 
 $$Ax\preceq b, Cx =d$$
 
-![polyhedra.png](pics/polyhedra.png)
+![polyhedra.png](imgs/polyhedra.png)
 
 **positive semidefinite cone**
 

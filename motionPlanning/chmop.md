@@ -36,7 +36,7 @@ $$\mathcal{U}[\xi]=\mathcal{F}_{\text {obs }}[\xi]+\lambda \mathcal{F}_{\text {s
 
 $$\mathcal{F}_{o b s}[\xi]=\int_{0}^{1} \int_{\mathcal{B}} c(x(\xi(t), u))\left\|\frac{d}{d t} x(\xi(t), u)\right\| d u d t$$
 
-![chmop1](pics/chmop1.png)
+![chmop1](imgs/chmop1.png)
 
 - $x(\xi(t), u)$: 由轨迹点和机器人局部任一位置(body point)定义的全局位置点(workspace position)
 - $x'$: 全局位置点的速度

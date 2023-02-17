@@ -14,7 +14,7 @@ date: 2020-09-09
     - Ellipsoid Method proposed by L. G.Khachian (1979)
     - Interior-Point Method proposed by N.Karmarkar (1984)
 
-![3dpoly](pics/3dpoly.svg)
+![3dpoly](imgs/3dpoly.svg)
 
 ## 标准型
 
