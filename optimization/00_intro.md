@@ -138,7 +138,6 @@ A_{eq}S=B_{eq}$$
 08. GD, SGD, Adam, Adagrad
 09. L-BFGS, ADMM
 
-- [Optimization Methods](ECE236C - Optimization Methods for Large-Scale Systems)
 
 ## ref
 
@@ -157,6 +156,8 @@ A_{eq}S=B_{eq}$$
     - [Convex Optimization 2](https://web.stanford.edu/class/ee364b/lectures.html)
     - [Optimization Theory](https://www.math.uh.edu/~rohop/fall_06/)
     - [nonlinear programming](http://ocw.nctu.edu.tw/course_detail.php?bgid=3&gid=0&nid=358)
+    - [Convex Optimization: Spring 2015](https://www.stat.cmu.edu/~ryantibs/convexopt-S15/)
+    - [ECE236C - Optimization Methods for Large-Scale Systems]()
 - [bilibili-线性规划 方述诚](https://www.bilibili.com/video/av455050227/)
 
 

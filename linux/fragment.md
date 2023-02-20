@@ -14,6 +14,9 @@ date: 2021-11-24
  
 - [grep:代码搜索引擎](https://grep.app/)
 https://github.com/zjhellofss/KuiperInfer
+- deepnote
+- https://www.tpcap.net/#/
+- drake
 
 ## 序列化与反序列化
 
