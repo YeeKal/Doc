@@ -138,12 +138,20 @@ A_{eq}S=B_{eq}$$
 08. GD, SGD, Adam, Adagrad
 09. L-BFGS, ADMM
 
+## 学习
+
+1. 线性代数： MIT公开课《线性代数》
+2. 最优化： Optimization Model + 方述诚 （线性规划 + 非线性规划）
+3. 进阶：应用 + 进阶
+
 
 ## ref
 
 - book  
     - [numerical optimization]()
         - [csdn - 数值优化（Numerical Optimization）学习系列-目录](https://blog.csdn.net/fangqingan_java/article/details/48951191)
+    - [Convex Optimization in signal and communication]()
+    - [Optimization Model]()
 - blog
     - [SQP 算法实现](https://zhuanlan.zhihu.com/p/348666680)
     - [optim docs](https://optimlib.readthedocs.io/en/latest/api/sumt.html)
@@ -152,11 +160,11 @@ A_{eq}S=B_{eq}$$
     - [CppNumericalSolvers](https://github.com/PatWie/CppNumericalSolvers)
     - [optim](https://github.com/kthohr/optim)
 - course
-    - [Convex Optimization 1](https://web.stanford.edu/class/ee364a/lectures.html)
-    - [Convex Optimization 2](https://web.stanford.edu/class/ee364b/lectures.html)
+    - [stanford Convex Optimization 1](https://web.stanford.edu/class/ee364a/lectures.html)
+    - [stanford Convex Optimization 2](https://web.stanford.edu/class/ee364b/lectures.html)
+    - [cmu Convex Optimization: Spring 2015](https://www.stat.cmu.edu/~ryantibs/convexopt-S15/)
     - [Optimization Theory](https://www.math.uh.edu/~rohop/fall_06/)
     - [nonlinear programming](http://ocw.nctu.edu.tw/course_detail.php?bgid=3&gid=0&nid=358)
-    - [Convex Optimization: Spring 2015](https://www.stat.cmu.edu/~ryantibs/convexopt-S15/)
     - [ECE236C - Optimization Methods for Large-Scale Systems]()
 - [bilibili-线性规划 方述诚](https://www.bilibili.com/video/av455050227/)
 
