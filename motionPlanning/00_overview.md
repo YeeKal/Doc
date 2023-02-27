@@ -50,7 +50,12 @@ date: 2018-01-01
 
 ## ref
 - conference
-    - [rss 2022](https://roboticsconference.org/)
+    - [RSS:Robotics: Science and Systems](https://roboticsconference.org/)
+        - [RSS 2022](https://roboticsconference.org/)
+    - [T-RO: IEEE Transactions on Robotics](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8860)
+    - [IJRA: International Journal of Robotics and Automation](https://ijra.iaescore.com/index.php/IJRA)
+    - [IROS]()
+    - [ICRA]()
 - paper source
     - [Robotics: Science and Systems](http://www.roboticsproceedings.org/rss17/index.html)
 - lab

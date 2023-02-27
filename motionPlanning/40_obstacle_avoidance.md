@@ -67,15 +67,15 @@ $$\begin{aligned}
 
 Orthogonal Collocation Method 正交配置法, 是加权余项法(Method of Weighted Residuals)的一种, 与传统差分法相比，具有计算精度高和稳定性好等优点.
 
-## 2022 Differentiable Collision Avoidance Using Collision Primitives
----
+## DCA
 
+2022 Differentiable Collision Avoidance Using Collision Primitives
 
-> Supplementary: 
-- [video](https://youtu.be/et0bu--wuy4)
-- ref:[Optimal control via second order sensitivity analysis]()
-- [🐯 code:DCA-Differentiable collision avoidance](https://github.com/SimiPro/DCA)
-- iros
+> Zimmermann S, Busenhart M, Huber S, et al. **Differentiable collision avoidance using collision primitives**[C]//2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS). IEEE, 2022: 8086-8093.
+> - [video](https://youtu.be/et0bu--wuy4)
+> - [🐯 code:DCA-Differentiable collision avoidance](https://github.com/SimiPro/DCA)
+> - 2022 iros; Collision Primitives
+> - ref:[Optimal control via second order sensitivity analysis]()
 
 Algorithms:
 
@@ -110,6 +110,8 @@ computing collision-free C-space regions:
 - maximal expansion of the polytope
 
 ![ciris_maximal_expansion](imgs/ciris_maximal_expansion.jpg)
+
+## 2022 
 ## Ref
 
 - paper 
