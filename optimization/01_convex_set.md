@@ -5,7 +5,36 @@ tags: optimization
 date: 2020-09-09
 ---
 
-## 直线和线段
+## Linear Combination
+
+<font color='Tomato'> 线性组合 </font>：
+
+$$y=\sum \lambda_i x_i$$ 
+
+- 凸集(convex set): $\sum \lambda_i=1, \lambda_i \geq 0 $, $\rightarrow$ <font color='Tomato'>Convex combination </font>：
+- 仿射集合(Affine set): $\sum \lambda_i=1$
+- 凸锥(conic set): $\lambda_i \geq 0$ $\rightarrow$ <font color='Tomato'>Conic combination </font>
+
+
+
+## Convex Sets
+
+<font color='Tomato'>Convex set: </font> 
+
+&ensp;&ensp; $C \subseteq \mathbb{R}^n$ such that
+$$x, y \in C \Longrightarrow t x+(1-t) y \in C \text { for all } 0 \leq t \leq 1
+$$
+
+In words,  line segment joining any two elements lies entirely in set
+
+1. 平行四边形，给定相邻两个边，$\lambda_1 \in [0, 1], $\lambda_2 \in [0, 1]$
+
+## Affine Sets 仿射集
+
+<font color='Tomato'>Affine Sets(仿射集): </font> 通过两点的直线也在集合内
+
+
+<font color='Tomato'>直线和线段: </font>
 
 记$x_1,x_2\in C$，则直线形式：
 
@@ -13,17 +42,45 @@ $$y=\theta x_1 + (1-\theta)x_2, \theta \in R$$
 
 若$\theta \in [0,1]$则y构成了$x_1$和$x_2$之间的线段。上述直线形式表示了y是基于两个基点所构成的，当$\theta \in [0,1]$y在两点之间变动;当$\theta <0$或$\theta > 1$,y则超出线段，在线段的延伸处。
 
+## Convex Cones
+
+<font color='Tomato'>Cone:</font> $C\subset \mathbb{R}^n$ such that
+
+$$x\in C \Longrightarrow tx\in C \quad \text{ for all }\quad t\geq 0$$
+
+对于一个向量空间$\mathrm{V}$与它的一个子集$\mathrm{C}$，如果子集$\mathrm{C}$中的任意一点x与 任意正数t， 其乘积at仍然属于子集$\mathrm{C}$， 则称$\mathrm{C}$为一个锥
+
+给定任意点集，向外发散
+
+
+<font color='Tomato'>Convex Cone:</font> the conic combination of $x_1, \cdots, x_k\in \mathbb{R}^n$:
+
+$$\theta_1 x_1+\cdots, \theta_k x_k$$
+
+with $\theta_i \geq 0$
+
+存在不是凸的锥
+
+Examples of convex cones:
+
+- <font color='Tomato'>Norm cone</font>
+- <font color='Tomato'>Normal cone</font>
+- 
+
+
+## Key properties of convex sets
+
 ## 集合的表示
 
 ![convex_set](imgs/convex_set.svg)
 
-线性组合：
+<font color='Tomato'> 线性组合 </font>：
 
 $$y=\sum \lambda_i x_i$$ 
 
 - 仿射集合(Affine set): $\sum \lambda_i=1$
 - 凸锥(conic set): $\lambda_i \geq 0$
-- 凸集(convex set): $\sum \lambda_i=1, \lambda_i \geq 0 $
+- 凸集(convex set): $\sum \lambda_i=1, \lambda_i \geq 0 $, $\rightarrow$ <font color='Tomato'>Convex combination </font>：
 
 一条线也是一个仿射集：$x=\theta x_1 +(1-\theta) x_2$.
 
