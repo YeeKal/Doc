@@ -35,6 +35,24 @@ In words,  line segment joining any two elements lies entirely in set
 
 
 <font color='Tomato'>直线和线段: </font>
+- $\sum \theta_i = 1$ <font color='Tomato'>convex hull(凸包)</font>
+
+- Norm ball: $\{x: ||x||\leq r \}$, for given norm $||\cdot||$, radius $r$
+- <font color='Tomato'>Hyperplane</font>: $\{x: a^Tx = b\}$
+- <font color='Tomato'>Affine space</font>: $\{x: A^Tx = b\}$
+- <font color='Tomato'>Polyhedron(多面体)</font>
+
+## 几何视角
+
+- 超平面: $\{x: a^Tx = b\}$
+
+a表示一个向量, b是一个标量, 整个表达式可以看为向量x在向量a的投影长度和向量a长度的乘积为b. a, b都是常量,因此`x在a的投影长度`也是一个定值, 所以可以想到x分布在一个与a垂直的平面上, 这个平面沿a方向远离原点的距离就是`x在a的投影长度`, 或者也可以说b定义了这个超平面的距离.
+
+- Affine space
+
+
+
+## 直线和线段
 
 记$x_1,x_2\in C$，则直线形式：
 
