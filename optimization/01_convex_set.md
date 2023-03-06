@@ -15,6 +15,19 @@ $$y=\sum \lambda_i x_i$$
 - 仿射集合(Affine set): $\sum \lambda_i=1$
 - 凸锥(conic set): $\lambda_i \geq 0$ $\rightarrow$ <font color='Tomato'>Conic combination </font>
 
+下图画出三种组合方式。可以看出，在2D情况下，凸组合是两点之前的线段；仿射组合是过两点的直线；而凸锥组合是原点分别向两个点连接的射线所包围的部分，类似一个尖锥。
+![linear_combination](imgs/linear_combination.png)
+
+
+还有一些其他有意思的线性组合, `方形组合`(我自己起得):
+
+
+$$y=\lambda_1 x_1 + \lambda_2 x_2, \quad \lambda_i \in [0, 1]$$ 
+
+在二维平面, 对于两个向量, `方形组合` 其实是以两个向量为边的平行四边行.
+
+
+![parallel_combination](imgs/parallel_combination.png)
 
 
 ## Convex Sets
@@ -27,24 +40,23 @@ $$
 
 In words,  line segment joining any two elements lies entirely in set
 
+
+Examples:
+- <font color='Tomato'>直线和线段: </font>
+- Norm ball: $\{x: ||x||\leq r \}$, for given norm $||\cdot||$, radius $r$
+- <font color='Tomato'>Hyperplane</font>: $\{x: a^Tx = b\}$
+- <font color='Tomato'>Affine space</font>: $\{x: A^Tx = b\}$
+- <font color='Tomato'>Polyhedron(多面体)</font>
+
 1. 平行四边形，给定相邻两个边，$\lambda_1 \in [0, 1], $\lambda_2 \in [0, 1]$
 
 ## Affine Sets 仿射集
 
 <font color='Tomato'>Affine Sets(仿射集): </font> 通过两点的直线也在集合内
 
-
-<font color='Tomato'>直线和线段: </font>
-- $\sum \theta_i = 1$ <font color='Tomato'>convex hull(凸包)</font>
-
-- Norm ball: $\{x: ||x||\leq r \}$, for given norm $||\cdot||$, radius $r$
-- <font color='Tomato'>Hyperplane</font>: $\{x: a^Tx = b\}$
-- <font color='Tomato'>Affine space</font>: $\{x: A^Tx = b\}$
-- <font color='Tomato'>Polyhedron(多面体)</font>
-
 ## 几何视角
 
-- 超平面: $\{x: a^Tx = b\}$
+<font color='Tomato'>Hyperplane(超平面)</font>: $\{x: a^Tx = b\}$
 
 a表示一个向量, b是一个标量, 整个表达式可以看为向量x在向量a的投影长度和向量a长度的乘积为b. a, b都是常量,因此`x在a的投影长度`也是一个定值, 所以可以想到x分布在一个与a垂直的平面上, 这个平面沿a方向远离原点的距离就是`x在a的投影长度`, 或者也可以说b定义了这个超平面的距离.
 

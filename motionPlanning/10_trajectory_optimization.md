@@ -186,6 +186,10 @@ $$\kappa=\kappa(s)  \\
 
 尺度: 不同尺度相同位置的点会得到相同的曲线， 这样会造成原本只需首尾是曲线中间大部分是直线的解没办法得到。即曲线只适合较短路径的拟合？(受制于参数方程的本身特性)
 
+## optimization library
+
+- [ceres_sandbox](https://github.com/superjax/ceres_sandbox/blob/master/lib/factors/include/factors/dynamics_1d.h)
+
 ## ref
 
 - blog 
