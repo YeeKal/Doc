@@ -5,6 +5,16 @@ tags: linux
 date: 2021-11-24
 ---
 
+learn:
+
+1. optimization
+2. parking method: a* + optimization
+3. obstacle, 不同障碍物
+4. trajectory optimization / 伪谱法
+
+model: bicycle car / cartpole / link arm
+library: casadi / ceres
+
 
 - Orthogonal Collocation Method 正交配置法
 - risk-aware motion planner
@@ -14,9 +24,8 @@ date: 2021-11-24
  
 - [grep:代码搜索引擎](https://grep.app/)
 https://github.com/zjhellofss/KuiperInfer
-- deepnote
 - https://www.tpcap.net/#/
-- drake
+- tkinter custom
 
 ## 序列化与反序列化
 

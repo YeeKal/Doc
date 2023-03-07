@@ -131,7 +131,7 @@ mechanics and optimal control
 - optimal trajectory planning
 
 
-Time-optimal Control of Manipulators: 李群上机械臂的最有控制，路径规划和轨迹优化同时进行
+Time-optimal Control of Manipulators: 李群上机械臂的最优控制，路径规划和轨迹优化同时进行
 
 
 ## ref

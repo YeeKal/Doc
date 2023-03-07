@@ -20,6 +20,7 @@ date: 2021-07-06
 - project
     - [Hierarchical Optimization-Based Collision Avoidance](https://github.com/XiaojingGeorgeZhang/H-OBCA)
     - [Optimization-Based Collision Avoidance](https://github.com/XiaojingGeorgeZhang/OBCA)
+    - [py_obca](https://github.com/maozaizhou/py_obca)
 - paper
     - [全球首个落地无人挖掘机作业系统！百度技术成果获《ScienceRobotics》刊发](https://mp.weixin.qq.com/s?src=11&timestamp=1625584774&ver=3174&signature=HoTuxskSiyBIwqZ9jtL7DssDLoSYOo9MW5FxiP1ooGMlY38z2KkxT-xbKq9ggPaDJCJI-j-3ePo1m4*kOOZAPjFbXsWvIcfqxwwFD8m7THQj11F*RCNgUquK2j3cdAtI&new=1)
     - [2017-The Convex Feasible Set Algorithm for Real Time Optimization in Motion Planning](https://arxiv.org/pdf/1709.00627.pdf)
