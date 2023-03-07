@@ -198,12 +198,15 @@ $$\kappa=\kappa(s)  \\
         - [2017-An Introduction to Trajectory Optimization: How to Do Your Own Direct Collocation]()
     - [Transcription Methods for Trajectory Optimization](https://arxiv.org/pdf/1707.00284.pdf)
     - [轨迹优化04. 轨迹拟合 & 轨迹插值](https://zhuanlan.zhihu.com/p/342012866)
+    - [Tutorial 6: Trajectory Optimization for Underactuated Robots -Day 2 - Tuesday, July 24](https://www.youtube.com/watch?v=4BZRP6h12lI)
+    - [Optimal Control Tutorial 3 - Trajectory Optimization](https://www.youtube.com/watch?v=x4l-Cjxxufg)
 - project
     - [polytraj](https://github.com/jsford/PolyTraj)
     - [Trajectory Optimization motion planning](https://github.com/bestvibes/motion-planner)
     - [Convex Optimization for motion plannin](https://github.com/Theochiro/motion-planning)
     - [trajopt](https://rll.berkeley.edu/trajopt/doc/sphinx_build/html/)
     - [kRRT* with fast RO](https://github.com/kyleYehh/kino_sampling_with_regional_opti)
+    - [RacingTrajectoryOptimization](https://github.com/janismac/RacingTrajectoryOptimization)
 - course
     - [台大机器人学之运动学——林沛群-b站](https://www.bilibili.com/video/BV1v4411H7ez)
 - paper
