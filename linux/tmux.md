@@ -30,3 +30,25 @@ Ctrl+b 0-9：切换到下第几个窗口
 ctrl+b c: new window
 ctrl+b x: 关闭分屏
 ```
+## 
+
+```yaml
+set -g mouse on
+
+set -g default-terminal "screen-256color"
+unbind '"'
+bind - splitw -v
+unbind %
+bind | splitw -h
+
+#witch panes using Shift-arrow without prefix
+bind -n S-Left select-pane -L
+bind -n S-Right select-pane -R
+bind -n S-Up select-pane -U
+bind -n S-Down select-pane -D
+
+# switch windows using Alt-arrow without prefix
+bind -n M-Left previous-window
+bind -n M-Right next-window
+
+```

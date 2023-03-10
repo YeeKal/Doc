@@ -144,6 +144,8 @@ A_{eq}S=B_{eq}$$
 2. 最优化： Optimization Model + 方述诚 （线性规划 + 非线性规划）
 3. 进阶：应用 + 进阶
 
+Convex Analysis And Optimization
+
 
 ## ref
 

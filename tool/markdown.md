@@ -171,3 +171,100 @@ Here is a simple footnote[^1]. With some additional text after it. head[^head]
 
 [^1]: My reference.
 [^head]: jkajf
+
+## Snippets for Markdown
+
+```json
+{
+	"head":{
+		"prefix": "head",
+		"body": [
+			"---",
+			"title: $1",
+			"categories: $2",
+			"tags: $3",
+			"date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+			"---"
+		],
+		"description": " head "
+	},
+	"date":{
+		"prefix": "date",
+		"body": [
+			"$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE"
+		],
+		"description": "date"
+	},
+	"latex inline": {
+		"prefix": "lai",
+		"body": [
+			"\\$$1\\$"
+		],
+		"description": "```latex inline```"
+	},
+	"latex outline": {
+		"prefix": "lao",
+		"body": [
+			"\\$\\$$1\\$\\$"
+		],
+		"description": "```latex inline```"
+	},
+	"```python": {
+		"prefix": "```py",
+		"body": [
+			"```python\n$1\n```"
+		],
+		"description": "```python```"
+	},
+	
+	"`cp": {
+		"prefix": "```cpp",
+		"body": [
+			"```cpp\n$1\n```"
+		],
+		"description": "```cpp```"
+	},
+
+  
+	"ftr": {
+		"prefix": "fontred",
+		"body": [
+			"<font color=#e84118>$1</font>", "$2"
+		],
+		"description": "<font color=red></font>"
+	},
+  
+	"ftb": {
+		"prefix": "fontblue",
+		"body": [
+			"<font color=#00a8ff>$1</font>", "$2"
+		],
+		"description": "<font color=blue></font>"
+	},
+  
+	"ftg": {
+		"prefix": "fontgreen",
+		"body": [
+			"<font color=#4cd137>$1</font>", "$2"
+		],
+		"description": "<font color=green></font>"
+	},
+		"latex-align": {
+		"prefix": "align",
+		"body": [
+			"$$\\begin{aligned}",
+			"$1",
+			"\\end{alined}$$"
+		],
+		"description": "latex-align"
+	},
+	"color": {
+		"prefix": "color",
+		"body": [
+			"<font color='Tomato'>$1</font>"
+		],
+		"description": "font color"
+	}
+
+}
+```

@@ -15,6 +15,8 @@ learn:
 model: bicycle car / cartpole / link arm
 library: casadi / ceres
 
+arctos / mecha / archane
+
 
 - Orthogonal Collocation Method 正交配置法
 - risk-aware motion planner
