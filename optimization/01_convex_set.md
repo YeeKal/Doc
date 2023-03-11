@@ -15,7 +15,7 @@ $$y=\sum \lambda_i x_i$$
 - 仿射集合(Affine set): $\sum \lambda_i=1$
 - 凸锥(conic set): $\lambda_i \geq 0$ $\rightarrow$ <font color='Tomato'>Conic combination </font>
 
-下图画出三种组合方式。可以看出，在2D情况下，凸组合是两点之前的线段；仿射组合是过两点的直线；而凸锥组合是原点分别向两个点连接的射线所包围的部分，类似一个尖锥。
+下图画出三种组合方式。可以看出，在2D情况下，凸组合是两点之前的线段；仿射组合是过两点的直线；而凸锥组合是原点分别向两个点连接的射线所包围的部分，类似一个尖锥。在3D情况下也可以看出，凸组合是包括了所有点的多面体，这也叫<font color='Tomato'>凸包(convex hull) </font>.
 ![linear_combination](imgs/linear_combination.png)
 
 
@@ -48,7 +48,6 @@ Examples:
 - <font color='Tomato'>Affine space</font>: $\{x: A^Tx = b\}$
 - <font color='Tomato'>Polyhedron(多面体)</font>
 
-1. 平行四边形，给定相邻两个边，$\lambda_1 \in [0, 1], $\lambda_2 \in [0, 1]$
 
 ## Affine Sets 仿射集
 
@@ -62,6 +61,9 @@ a表示一个向量, b是一个标量, 整个表达式可以看为向量x在向�
 
 - Affine space
 
+单纯性是线性组合的角度，而多面体是 多个线性不等式
+
+多面体的定义： 线性不等式 + 等式约束
 
 
 ## 直线和线段
@@ -89,13 +91,18 @@ $$\theta_1 x_1+\cdots, \theta_k x_k$$
 
 with $\theta_i \geq 0$
 
-存在不是凸的锥
+存在不是凸的锥。比如只有射线($y=|x|$)，而没有内部. 而$y\geq |x|$是凸锥。
 
 Examples of convex cones:
 
-- <font color='Tomato'>Norm cone</font>
+- <font color='Tomato'>Norm cone(标准锥)</font>: $\{(x, t):||x|| \leq t \}$, for a norm $||\cdot||$. Under $l_2$ norm $||\cdot||_2$, called <font color='Tomato'>second-order cone(二阶锥)</font>
 - <font color='Tomato'>Normal cone</font>
 - 
+
+下面也是一个二阶锥，只是对标准锥做了一个仿射变换：
+
+$$||Ax+b||_2 \leq c^Tx+d \quad \Leftrightarrow \quad (Ax+b, c^Tx+d) \in C$$
+
 
 
 ## Key properties of convex sets
@@ -110,7 +117,7 @@ $$y=\sum \lambda_i x_i$$
 
 - 仿射集合(Affine set): $\sum \lambda_i=1$
 - 凸锥(conic set): $\lambda_i \geq 0$
-- 凸集(convex set): $\sum \lambda_i=1, \lambda_i \geq 0 $, $\rightarrow$ <font color='Tomato'>Convex combination </font>：
+- 凸集(convex set): $\sum \lambda_i=1, \lambda_i \geq 0 $, $\rightarrow$ <font color='Tomato'>Convex combination </font>
 
 一条线也是一个仿射集：$x=\theta x_1 +(1-\theta) x_2$.
 
