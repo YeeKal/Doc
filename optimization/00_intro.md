@@ -168,6 +168,7 @@ Convex Analysis And Optimization
     - [Optimization Theory](https://www.math.uh.edu/~rohop/fall_06/)
     - [nonlinear programming](http://ocw.nctu.edu.tw/course_detail.php?bgid=3&gid=0&nid=358)
     - [ECE236C - Optimization Methods for Large-Scale Systems]()
+    - [Convex and Conic Optimization-Princeton University](https://aaa.princeton.edu/orf523s16)
 - [bilibili-线性规划 方述诚](https://www.bilibili.com/video/av455050227/)
 
 

@@ -11,9 +11,11 @@ date: 2020-09-09
 
 $$y=\sum \lambda_i x_i$$ 
 
-- 凸集(convex set): $\sum \lambda_i=1, \lambda_i \geq 0 $, $\rightarrow$ <font color='Tomato'>Convex combination </font>：
+- 凸集(convex set): $\sum \lambda_i=1, \lambda_i \geq 0 $, $\rightarrow$ <font color='Tomato'>Convex combination, Convex hull </font>：
 - 仿射集合(Affine set): $\sum \lambda_i=1$
-- 凸锥(conic set): $\lambda_i \geq 0$ $\rightarrow$ <font color='Tomato'>Conic combination </font>
+- 凸锥(conic set): $\lambda_i \geq 0$ $\rightarrow$ <font color='Tomato'>Conic combination, convec cone hull </font>
+
+当选定了固定的$x_i$之后，通过凸线性组合则形成凸包(convex hull)， 即包括这些点的最小凸集。通过凸锥组合则形成凸锥包(Convex cone hull), 即包括这些点的最小凸锥。
 
 下图画出三种组合方式。可以看出，在2D情况下，凸组合是两点之前的线段；仿射组合是过两点的直线；而凸锥组合是原点分别向两个点连接的射线所包围的部分，类似一个尖锥。在3D情况下也可以看出，凸组合是包括了所有点的多面体，这也叫<font color='Tomato'>凸包(convex hull) </font>.
 ![linear_combination](imgs/linear_combination.png)
@@ -53,27 +55,6 @@ Examples:
 
 <font color='Tomato'>Affine Sets(仿射集): </font> 通过两点的直线也在集合内
 
-## 几何视角
-
-<font color='Tomato'>Hyperplane(超平面)</font>: $\{x: a^Tx = b\}$
-
-a表示一个向量, b是一个标量, 整个表达式可以看为向量x在向量a的投影长度和向量a长度的乘积为b. a, b都是常量,因此`x在a的投影长度`也是一个定值, 所以可以想到x分布在一个与a垂直的平面上, 这个平面沿a方向远离原点的距离就是`x在a的投影长度`, 或者也可以说b定义了这个超平面的距离.
-
-- Affine space
-
-单纯性是线性组合的角度，而多面体是 多个线性不等式
-
-多面体的定义： 线性不等式 + 等式约束
-
-
-## 直线和线段
-
-记$x_1,x_2\in C$，则直线形式：
-
-$$y=\theta x_1 + (1-\theta)x_2, \theta \in R$$
-
-若$\theta \in [0,1]$则y构成了$x_1$和$x_2$之间的线段。上述直线形式表示了y是基于两个基点所构成的，当$\theta \in [0,1]$y在两点之间变动;当$\theta <0$或$\theta > 1$,y则超出线段，在线段的延伸处。
-
 ## Convex Cones
 
 <font color='Tomato'>Cone:</font> $C\subset \mathbb{R}^n$ such that
@@ -97,19 +78,84 @@ Examples of convex cones:
 
 - <font color='Tomato'>Norm cone(标准锥)</font>: $\{(x, t):||x|| \leq t \}$, for a norm $||\cdot||$. Under $l_2$ norm $||\cdot||_2$, called <font color='Tomato'>second-order cone(二阶锥)</font>
 - <font color='Tomato'>Normal cone</font>
-- 
+- 对称半正定矩阵集合 $S^n_+$
 
 下面也是一个二阶锥，只是对标准锥做了一个仿射变换：
 
 $$||Ax+b||_2 \leq c^Tx+d \quad \Leftrightarrow \quad (Ax+b, c^Tx+d) \in C$$
 
+## 几何视角
+
+<font color='Tomato'>Hyperplane(超平面)</font>: $\{x: a^Tx = b\}$
+
+a表示一个向量, b是一个标量, 整个表达式可以看为向量x在向量a的投影长度和向量a长度的乘积为b. a, b都是常量,因此`x在a的投影长度`也是一个定值, 所以可以想到x分布在一个与a垂直的平面上, 这个平面沿a方向远离原点的距离就是`x在a的投影长度`, 或者也可以说b定义了这个超平面的距离.
+
+超平面是凸集、仿射集，只有在过原点的时候是个凸锥。
+
+<font color='Tomato'>Affine space(仿射空间)</font>
+
+单纯性是线性组合的角度，而多面体是 多个线性不等式
+
+多面体的定义： 线性不等式 + 等式约束
+
+<font color='Tomato'>直线和线段</font>
+
+记$x_1,x_2\in C$，则直线形式：
+
+$$y=\theta x_1 + (1-\theta)x_2, \theta \in R$$
+
+若$\theta \in [0,1]$则y构成了$x_1$和$x_2$之间的线段。上述直线形式表示了y是基于两个基点所构成的，当$\theta \in [0,1]$y在两点之间变动;当$\theta <0$或$\theta > 1$,y则超出线段，在线段的延伸处。
+
+<font color='Tomato'>Ball(球)</font>：
+
+ball with center $x_c$ and radius r:
+
+$$B\left(x_{c}, r\right)=\left\{x \mid\left\|x-x_{c}\right\|_{2} \leq r\right\}=\left\{x_{c}+r u \mid\|u\|_{2} \leq 1\right\}$$
+
+<font color='Tomato'>Ellipsoid:(椭圆)</font>：
 
 
-## Key properties of convex sets
+$$\left\{x \mid\left(x-x_{c}\right)^{T} P^{-1}\left(x-x_{c}\right) \leq 1\right\},\quad P\in S^n_{++} \quad \text{symmetric positive definite}$$
 
-## 集合的表示
+or:
 
-![convex_set](imgs/convex_set.svg)
+$$\left\{x_{c}+A u \mid\|u\|_{2} \leq 1\right\} \text { with } A \text { square and nonsingular }$$
+
+<font color='Tomato'>Norm ball / Norm cone</font>：把二范数扩展到范数
+
+norm ball: $||x-x_c|| \leq r$
+
+norm cone: $||x|| \leq t$. euclidean norm cone is called second-order cone（二阶锥）.
+
+![norm_cone.png](imgs/norm_cone.png)
+
+<font color='Tomato'>Polyhedra(多面体)</font>
+
+solution set of finitely many linear inequalities and equalities
+
+$$Ax\preceq b, Cx =d$$
+
+![polyhedra.png](imgs/polyhedra.png)
+
+<font color='Tomato'>Positive semidefinite cone(半正定锥)</font>
+
+
+$$\begin{aligned}
+A \succeq 0 & \Longleftrightarrow A \text { positive semidefinite } \\
+A \succ 0 & \Longleftrightarrow A \text { positive definite. }  \\
+S^n & \quad \text{set of symmetric n $\times$ x matrics}    \\
+S^n_{+} & =\{X\in S^n | X \succeq 0 \}  \quad \text{positive semidefinite $\times$ x matrics}    \\
+S^n_{++} & =\{X\in S^n | X \succ 0 \}  \quad \text{positive definite $\times$ x matrics}   
+\end{aligned}$$
+
+半正定矩阵$S^n_{+}$组成的集合是一个凸锥。
+
+$$x^TAx \geq 0, x^TBx \geq 0 \rightarrow x^T(\theta_1 A+ \theta_2 B)x \geq 0$$
+
+对称矩阵$S^n$组成的集合是一个凸锥。
+
+
+
 
 <font color='Tomato'> 线性组合 </font>：
 
@@ -141,70 +187,63 @@ $$P=\left\{\mathbf{x} \in \mathbf{R}^{n} \mid \mathbf{A} \mathbf{x}=\mathbf{b}, 
 - P是A的列向量组成的超平面相交之后再与凸锥($x\geq 0$)相交的集合
 - $\mathbf{A} \mathbf{x}=\mathbf{b}, \mathbf{x} \geq \mathbf{0}$意味着，向量b落入由A的列向量形成的凸锥中。
 
-**sphere, ellisoid**
-
-ball with center $x_c$ and radius r:
-
-$$B\left(x_{c}, r\right)=\left\{x \mid\left\|x-x_{c}\right\|_{2} \leq r\right\}=\left\{x_{c}+r u \mid\|u\|_{2} \leq 1\right\}$$
-
-ellipsoid:
-
-$$\left\{x \mid\left(x-x_{c}\right)^{T} P^{-1}\left(x-x_{c}\right) \leq 1\right\},\quad P\in S^n_{++} \quad \text{symmetric positive definite}$$
-
-or:
-
-$$\left\{x_{c}+A u \mid\|u\|_{2} \leq 1\right\} \text { with } A \text { square and nonsingular }$$
-
-**norm ball, norm cone**
-
-norm ball: $||x-x_c|| \leq r$
-
-norm cone: $||x|| \leq t$. euclidean norm cone is called second-order cone（二阶锥）.
-
-![norm_cone.png](imgs/norm_cone.png)
-
-norm ball and norm cone are both convex.
-
-**polyhedra**
-
-多面体： solution set of finitely many linear inequalities and equalities
-
-$$Ax\preceq b, Cx =d$$
-
-![polyhedra.png](imgs/polyhedra.png)
-
-**positive semidefinite cone**
-
-$$\begin{aligned}
-A \succeq 0 & \Longleftrightarrow A \text { positive semidefinite } \\
-A \succ 0 & \Longleftrightarrow A \text { positive definite. }  \\
-S^n & \quad \text{set of symmetric n $\times$ x matrics}    \\
-S^n_{+} & =\{X\in S^n | X \succeq 0 \}  \quad \text{positive semidefinite $\times$ x matrics}    \\
-S^n_{++} & =\{X\in S^n | X \succ 0 \}  \quad \text{positive definite $\times$ x matrics}   
-\end{aligned}$$
-
-半正定矩阵组成的集合是一个凸锥。
 
 
-## Operations that preserve convexity
+
+## Key properties of convex sets
+
+<font color='Tomato'> Separating hyperplane theorem(超平面分离定理) </font>：
+
+if $C$ and $D$ are nonempty disjoint convex sets, there exist $a \neq 0, b$ s.t.
+
+$$a^{T} x \leq b \text { for } x \in C, \quad a^{T} x \geq b \text { for } x \in D$$
+
+the hyperplane $\left\{x \mid a^{T} x=b\right\}$ separates $C$ and $D$
+strict separation requires additional assumptions (e.g., $C$ is closed, $D$ is a singleton)
+
+![](imgs/convex_set_sht.png)
+
+<font color='Tomato'> Supporting hyperplane theorem(超平面支持定理) </font>：a boundary point of a convex set has a supporting hyperplane passing through it. Formally: if $C$ is a nonempty convex set, and $x_0\in bd(C)$, then there exists $a$ such that:
+$$C\subseteq\{x:a^Tx\leq a^T x_0\}$$
+
+![convex_set_sht](imgs/convex_set_sht.jpeg)
+
+## Operations that preserve convexity(保凸运算)
 
 operations between convex set:
 
 - intersection
-- affine functions
+- scaling and translation: 
+
+$C$ is convex $\rightarrow$ $\{ ax+b : x\in C\}$ is convex
+
+- affine functions: affine images and preimages
+
+If $f(x) = Ax+b$, then:
+$$f(C) = \{f(x): x\in C\}
+$$
+
+is convex. If $D$ is convex then:
+$$f^{-1}(D) = \{x: f(x)\in D\}$$
+is convex.
+
 - perspective function
 - linear-fractional function
 
 vintersection** : $S=\left\{x \in \mathbf{R}^{m}|| p(t) \mid \leq 1 \text { for }|t| \leq \pi / 3\right\}$
 
-**affine function**: $f(x)=Ax+b$, 凸集经过仿射函数变换和逆变换都是凸的。
+<font color='Tomato'>affine function</font>
+
+$$f(x)=Ax+b$$
+
+凸集经过仿射函数变换和逆变换都是凸的。
 
 - scaling
 - translation
 - projection
 
 
-**perspective function** $P: \mathbf{R}^{n+1} \rightarrow \mathbf{R}^{n}$ :
+**perspective function(透视函数)** $P: \mathbf{R}^{n+1} \rightarrow \mathbf{R}^{n}$ :
 $$
 P(x, t)=x / t, \quad \operatorname{dom} P=\{(x, t) \mid t>0\}
 $$
@@ -264,15 +303,7 @@ $$
 y \in S, \quad y \preceq_{K} x \quad \Longrightarrow \quad y=x
 $$
 
-## separating hyperplane theorem
 
-
-if $C$ and $D$ are nonempty disjoint convex sets, there exist $a \neq 0, b$ s.t.
-
-$$a^{T} x \leq b \text { for } x \in C, \quad a^{T} x \geq b \text { for } x \in D$$
-
-the hyperplane $\left\{x \mid a^{T} x=b\right\}$ separates $C$ and $D$
-strict separation requires additional assumptions (e.g., $C$ is closed, $D$ is a singleton)
 
 
 
@@ -298,8 +329,18 @@ $$epi = \{(x,y):x\in R^n, y\in R, y\geq f(x)\}$$
 - 凹函数 concave function
 - 严格凸函数（Strictly Convex Function）: 去掉不等式的等号
 - 广义凸函数（Generalized Convex Function）: 不要求函数可导
+- 强凸函数(Strong convex)：with parameter $m > 0: f-\frac{m}{2}||x||^2_2$ is convex. In words, $f$ is at least as convex as a quadratic function.
+
+$$\text{strong convexity} \Longrightarrow \text{strict convexity} \Longrightarrow \text{convexity}  $$
 
 一阶条件： 切线总是在函数的下方
+
+examples:
+
+- $e^{ax}$, for any $a$
+- $x^{a}$, for any $a \geq 0$ or $a \leq 0$, is convex; $x^a$ is concave for $0\leq a \leq 1$
+- $\log x$ is concave
+
 
 
 ## 次梯度
