@@ -144,7 +144,6 @@ A_{eq}S=B_{eq}$$
 2. 最优化： Optimization Model + 方述诚 （线性规划 + 非线性规划）
 3. 进阶：应用 + 进阶
 
-Convex Analysis And Optimization
 
 
 ## ref
@@ -169,6 +168,7 @@ Convex Analysis And Optimization
     - [nonlinear programming](http://ocw.nctu.edu.tw/course_detail.php?bgid=3&gid=0&nid=358)
     - [ECE236C - Optimization Methods for Large-Scale Systems]()
     - [Convex and Conic Optimization-Princeton University](https://aaa.princeton.edu/orf523s16)
+    - [Convex Analysis And Optimization](https://ocw.mit.edu/courses/6-253-convex-analysis-and-optimization-spring-2012/pages/lecture-notes/)
 - [bilibili-线性规划 方述诚](https://www.bilibili.com/video/av455050227/)
 
 

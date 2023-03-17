@@ -333,6 +333,11 @@ $$epi = \{(x,y):x\in R^n, y\in R, y\geq f(x)\}$$
 
 $$\text{strong convexity} \Longrightarrow \text{strict convexity} \Longrightarrow \text{convexity}  $$
 
+<font color='Tomato'>First-order characterization</font> if $f$ is differentiable, then $f$ is convex if and only if dom($f$) is convex, and:
+$$f(y)\geq f(x) + \nabla f(x)^T(y-x) $$
+
+for all $x,y\in dom(f)$
+
 一阶条件： 切线总是在函数的下方
 
 examples:
@@ -340,6 +345,7 @@ examples:
 - $e^{ax}$, for any $a$
 - $x^{a}$, for any $a \geq 0$ or $a \leq 0$, is convex; $x^a$ is concave for $0\leq a \leq 1$
 - $\log x$ is concave
+
 
 
 
