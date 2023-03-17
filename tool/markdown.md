@@ -5,6 +5,28 @@ tags: tool
 date: 2023-01-10
 ---
 
+## use html
+
+```html
+<font face="宋体">宋体</font>
+<font face="楷书">楷书</font>
+<font face="草书">草书</font>
+<font face="隶书">隶书</font>
+<font face="行书">行书</font>
+<font face="黑体">黑体</font>
+<font face="仿宋">仿宋</font>
+<font face="篆书">篆书</font>
+<font face="仿宋_GB2312">仿宋_GB2312</font>
+<font face="微软雅黑">微软雅黑</font>
+<font face="Times New Roman">Times New Roman</font>
+```
+
+
+<font color='Tomato'>Convex combination, Convex hull </font>
+
+<font style='background: #007f16;color: #ffffff'>&nbsp;haha &nbsp;</font>
+
+
 ## Hide-show content
 
 <details>

@@ -311,47 +311,62 @@ $$
 
 ## 凸函数
 
-- 定义：
+**<font color='Tomato'>定义:</font>**
 
 $$f:R^n\longrightarrow R \text{ is convex  if dom }f\text{ is a convex set and} \\
 f(\theta x+(1-\theta) y) \leq \theta f(x)+(1-\theta) f(y)\\
 \text{for all } x,y\in \text{dom} f, 0\leq \theta \leq 1$$
 
-- 性质
-    - $f$ is concave if −$f$ is convex
-    - $f$ is strictly convex if dom $f$ is convex and $f(\theta x+(1-\theta) y) < \theta f(x)+(1-\theta) f(y), \quad 0< \theta < 1$
-
-上镜图 (Epigraph/Supergraph)：在函数$y=f(⋅)$曲线及其上方的所有的点构成的集合:
-
-$$epi = \{(x,y):x\in R^n, y\in R, y\geq f(x)\}$$
-当这个点集是凸集（Convex Set）的时候，对应的函数是凸函数，反之亦然
-
 - 凹函数 concave function
 - 严格凸函数（Strictly Convex Function）: 去掉不等式的等号
-- 广义凸函数（Generalized Convex Function）: 不要求函数可导
+
+$$f(\theta x+(1-\theta) y) < \theta f(x)+(1-\theta) f(y), \quad 0< \theta < 1$$
+
+- 广义凸函数（Generalized Convex Function）: 不要求函数可导, 
 - 强凸函数(Strong convex)：with parameter $m > 0: f-\frac{m}{2}||x||^2_2$ is convex. In words, $f$ is at least as convex as a quadratic function.
 
 $$\text{strong convexity} \Longrightarrow \text{strict convexity} \Longrightarrow \text{convexity}  $$
 
-<font color='Tomato'>First-order characterization</font> if $f$ is differentiable, then $f$ is convex if and only if dom($f$) is convex, and:
-$$f(y)\geq f(x) + \nabla f(x)^T(y-x) $$
 
-for all $x,y\in dom(f)$
+- $f$ is concave if −$f$ is convex
 
-一阶条件： 切线总是在函数的下方
+**<font color='Tomato'>上镜图 (Epigraph/Supergraph):</font>** 在函数$y=f(⋅)$曲线及其上方的所有的点构成的集合:
 
-examples:
+$$epi = \{(x,y):x\in R^n, y\in R, y\geq f(x)\}$$
+当这个点集是凸集（Convex Set）的时候，对应的函数是凸函数，反之亦然
+
+**<font color='Tomato'>Examples:</font>**
 
 - $e^{ax}$, for any $a$
 - $x^{a}$, for any $a \geq 0$ or $a \leq 0$, is convex; $x^a$ is concave for $0\leq a \leq 1$
 - $\log x$ is concave
 
 
+**<font color='Tomato'>First-order characterization</font>**
+
+if $f$ is differentiable, then $f$ is convex if and only if dom($f$) is convex, and:
+$$f(y)\geq f(x) + \nabla f(x)^T(y-x) $$
+
+for all $x,y\in dom(f)$
+
+一阶条件： 切线总是在函数的下方
+
+**<font color='Tomato'>Second-order characterization</font>**
+
+if $f$ is twice differentiable, then $f$ is convex if and only if dom($f$) is convex, and $\nabla^2f(x)\succeq 0 $ for all $x\in dom(f)$
+
+<font color='Tomato'>Jensen's inequality</font>: $f$ is convex, $X$ is a random variable supported on dom($f$), then:
+
+$$f(\mathbb{E}[X])\leq \mathbb{E}[f(X)]$$
 
 
-## 次梯度
 
-subgradient: 用于解决并不总是处处可导的凸函数
+
+## Advanced
+
+<font color='Tomato'>Subgradient(次梯度)</font>
+
+用于解决并不总是处处可导的凸函数
 
 类比凸函数的一阶条件，给定函数$f$， 对于$\forall y$， 如果满足：
 
@@ -361,7 +376,7 @@ $$f(y)\geq f(x)+g^T(y-x)$$
 
 次梯度不唯一，也可能不存在。
 
-把$f$在$x$处所有次梯度构成的集合称为$f$在$x$处的次微分(Subdifferential), 记作$\partial f(x)$
+把$f$在$x$处所有次梯度构成的集合称为$f$在$x$处的<font style='background: #007f16;color: #ffffff'>次微分(Subdifferential)</font>, 记作$\partial f(x)$
 
 - [ref code with python](https://github.com/minigonche/subgradient_descent/blob/master/subgradient.py)
 ## ref
