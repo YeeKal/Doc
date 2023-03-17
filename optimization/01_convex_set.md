@@ -311,18 +311,17 @@ $$
 
 ## 凸函数
 
-**<font color='Tomato'>定义:</font>**
+定义：
 
 $$f:R^n\longrightarrow R \text{ is convex  if dom }f\text{ is a convex set and} \\
 f(\theta x+(1-\theta) y) \leq \theta f(x)+(1-\theta) f(y)\\
 \text{for all } x,y\in \text{dom} f, 0\leq \theta \leq 1$$
 
-- 凹函数 concave function
-- 严格凸函数（Strictly Convex Function）: 去掉不等式的等号
 
-$$f(\theta x+(1-\theta) y) < \theta f(x)+(1-\theta) f(y), \quad 0< \theta < 1$$
-
-- 广义凸函数（Generalized Convex Function）: 不要求函数可导, 
+性质： 
+- 凹函数 concave function: $f$ is concave if −$f$ is convex
+- 严格凸函数（Strictly Convex Function）: 去掉不等式的等号.$f$ is strictly convex if dom $f$ is convex and $f(\theta x+(1-\theta) y) < \theta f(x)+(1-\theta) f(y), \quad 0< \theta < 1$
+- 广义凸函数（Generalized Convex Function）: 不要求函数可导
 - 强凸函数(Strong convex)：with parameter $m > 0: f-\frac{m}{2}||x||^2_2$ is convex. In words, $f$ is at least as convex as a quadratic function.
 
 $$\text{strong convexity} \Longrightarrow \text{strict convexity} \Longrightarrow \text{convexity}  $$
@@ -340,7 +339,17 @@ $$epi = \{(x,y):x\in R^n, y\in R, y\geq f(x)\}$$
 - $e^{ax}$, for any $a$
 - $x^{a}$, for any $a \geq 0$ or $a \leq 0$, is convex; $x^a$ is concave for $0\leq a \leq 1$
 - $\log x$ is concave
+- Affine function: $a^Tx+b$ is both convex and concave
+- Quadratic function: $\frac{1}{2}x^TQx+b^Tx+c$ is convex provided that $Q \succeq 0$(positive semidefinite)
+$$(x-y)^tA(x-y) \geq 0 \Rightarrow A \succeq 0$$
+- Least square loss: $||y-Ax||^2_2$ is always convex, since $A^A$ is always positive semidefinite
+- Norm: ||x|| is convex for any norm:
+$$||x||_p=(\sum x_i^p)\quad \text{for} \quad p\geq 1, ||x||_{\inf} = \max_{i=1,\cdots, n} |x_i|$$
 
+approve:[Why is every p-norm convex?](https://math.stackexchange.com/questions/2280341/why-is-every-p-norm-convex)
+
+
+一阶条件： 切线总是在函数的下方
 
 **<font color='Tomato'>First-order characterization</font>**
 
