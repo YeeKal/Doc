@@ -286,6 +286,13 @@ Here is a simple footnote[^1]. With some additional text after it. head[^head]
 			"<font color='Tomato'>$1</font>"
 		],
 		"description": "font color"
+	},
+		"note": {
+		"prefix": "note",
+		"body": [
+			"<font style='background: #007f16;color: #ffffff;alpha:0.6'>$1</font>"
+		],
+		"description": "green background"
 	}
 
 }

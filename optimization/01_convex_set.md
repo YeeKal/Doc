@@ -368,8 +368,11 @@ if $f$ is twice differentiable, then $f$ is convex if and only if dom($f$) is co
 
 $$f(\mathbb{E}[X])\leq \mathbb{E}[f(X)]$$
 
+## Operations preserving convexity
 
+<font color='Tomato'>Nonnegative linear combination:</font>: $f_1, \cdots, f_m$ convex implies $a_1f_1+\cdots + a_mf_m$ convex for any $a_1, \cdots, a_m \geq 0$
 
+<font color='Tomato'>Pointwise maximation:</font>
 
 ## Advanced
 
