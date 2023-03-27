@@ -14,10 +14,12 @@ https://github.com/sailist/Awesome-Paper-List-py/blob/master/pdfs/sync-bypy.py
 - blog
     - [MOTION PLANNING](http://motion.cs.illinois.edu/RoboticSystems/PlanningWithDynamicsAndUncertainty.html)
     - [Path Planning for a Simple Car](https://jckantor.github.io/ND-Pyomo-Cookbook/notebooks/06.03-Path-Planning-for-a-Simple-Car.html)
+    - [Notebook 7.1 - Introduction to Trajectory Optimisation in Python](https://transport-systems.imperial.ac.uk/tf/60008_21/n7_1_introduction_to_trajectory_optimisation.html)
 - paper
     - [2022 db-A*: Discontinuity-bounded Search for Kinodynamic Mobile Robot Motion Planning](https://arxiv.org/abs/2203.11108)
     - [2017-A tutorial on newton methods for constrained trajectory optimization and relations to slam, gaussian process smoothing, optimal control, and probabilistic inference](https://argmin.lis.tu-berlin.de/papers/17-toussaint-Newton.pdf)
     - [2008-kpiece:Kinodynamic Motion Planning by Interior-Exterior Cell Exploration](https://ioan.sucan.ro/files/pubs/wafr2008.pdf)
+    - [An Optimization-Based Motion Planner for Car-like Logistics Robots on Narrow Roads]()
 - book
     - [Robotic Systems](https://motion.cs.illinois.edu/RoboticSystems/)
 - library
