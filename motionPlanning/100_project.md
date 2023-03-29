@@ -10,7 +10,8 @@ date: 2023-03-17
 - [drake](https://drake.mit.edu/)
 - [openrave]()
 - [pyomo]()
-- [gekko]
+- [gekko]()
+- [komo-RAI](https://github.com/MarcToussaint/rai)
 
 
 ## projects

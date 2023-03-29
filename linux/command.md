@@ -122,3 +122,7 @@ ufw status
 [ref](https://blog.csdn.net/point0mine/article/details/79448402)
 
 添加完之后需要重新进入: su yee
+
+21. convert mp4 to gif 
+
+> ffmpeg -r 35  -i biped_animation.mp4 biped_animation.gif
