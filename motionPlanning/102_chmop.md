@@ -1,5 +1,5 @@
 ---
-title: CHMOP 规划器
+title: CHMOP planner
 categories: motion planning
 tags: planning
 date: 2021_09_22
@@ -52,6 +52,14 @@ $$\mathcal{F}_{\text {smooth }}[\xi]=\frac{1}{2} \int_{0}^{1}\left\|\frac{d}{d t
 
 平滑性以加速度衡量。
 
+<font color='Tomato'>functional gradient: 泛函梯度</font>
+
+$$\bar{\nabla} u[\xi]=\frac{\partial v}{\partial \xi}-\frac{d}{d t} \frac{\partial v}{\partial \xi^{\prime}}$$
+
+梯度下降：
+
+$$\xi_{i+1}=\xi_{i}-\eta_{i} \bar{\nabla} U[\xi]$$
+
 ## implementation in moveit
 
 [chmop in moveit](https://github.com/ros-planning/moveit2/tree/main/moveit_planners/chomp/chomp_motion_planner)
@@ -100,12 +108,17 @@ ps->setActiveCollisionDetector(collision_detection::CollisionDetectorAllocatorHy
 
 ```
 
+## trychomp
+
+
+
+
 ## ref
 
 - blog
 - mainpage
     - [Optimized Robotics](https://www.nathanratliff.com/thesis-research/chomp)
-- library
+- relative library
     - [trychomp - 2d](https://github.com/poftwaresatent/trychomp)
     - [chomp-multigrid](https://github.com/gprice1/chomp)
     - [or_cdchomp](https://github.com/personalrobotics/or_cdchomp)

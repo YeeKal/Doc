@@ -13,6 +13,11 @@ date: 2023-03-17
 - [gekko]()
 - [komo-RAI](https://github.com/MarcToussaint/rai)
 
+- [trajopt]()
+- CHOMP
+- STOMP
+- ITOMP
+
 
 ## projects
 
