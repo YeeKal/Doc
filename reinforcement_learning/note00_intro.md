@@ -66,6 +66,7 @@ date: 2019-05-05
 - [pybullet](https://pybullet.org/wordpress/)
 - [Surreal](https://github.com/SurrealAI/surreal)
 - [MuJoCo](http://www.mujoco.org/)
+    - [MuJoCo-Tutorial](https://github.com/tayalmanan28/MuJoCo-Tutorial)
 - [reinforce_js](https://cs.stanford.edu/people/karpathy/reinforcejs/)
 - [chainerRl](https://github.com/chainer/chainerrl)
 - [rllab](https://github.com/rll/rllab)

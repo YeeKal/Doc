@@ -4,6 +4,33 @@ categories: motion planning
 tags: planning
 date: 2021-08-17
 ---
+
+- Dynamic Programming: Solve Hamilton-Jacobi-Bellman Equations over the entire state space.
+- Indirect Methods: Transcribe problem then find where the slope of the objective is zero.
+- Direct Methods: Transcribe problem then find the minimum of the objective function
+
+运动规划视角: 轨迹拟合 轨迹插值 轨迹优化
+
+## Dynamic Programming
+
+## Indirect Method
+
+## Direct method
+<font color='Tomato'>Shooting:</font> 离散控制量,根据状态方程通过积分求得状态量
+- single shooting
+- multiple shooting
+
+$$\begin{aligned}\min_{u^0 \cdots u^t}&\quad \sum(J(x^t)) \\
+s.t. & \quad x^{t+1} = f(x^t, u^t)\end{aligned}$$
+
+<font color='Tomato'>Collocation(Simultaneous method):</font>同时离散控制量和状态量,把状态方程当作等式约束
+- Direct collocation
+- Orthogonal collocation
+$$\begin{aligned}\min_{u^0 \cdots u^t, x^0 \cdots x^t}&\quad \sum(J(x^t)) \\
+s.t. & \quad x^{t+1} = f(x^t, u^t)\end{aligned}$$
+
+<font color='Tomato'>Pseudospectral(伪谱法):</font>
+
 ## 轨迹优化
 
 - 约束： 系统动力学。边界条件
@@ -88,6 +115,59 @@ B_{n}=\frac{1}{\pi} \int_{-\pi}^{\pi} x(t) \sin n t d t
 \end{gathered}$$
 
 ## 数值积分
+
+<font color='Tomato'>Runge-Kutta methods</font>
+
+对于一个积分问题, 我们希望通过离散的微分得到积分值. 举例来说,对于初值问题:
+$$y' = f(t, y), y(t_0) = y_0$$
+
+这里f是已知的,即导数是可以精确得到的.如果已知$y_n$, 在较小时间步长$h$下, 可以得到$y_{n+1}$:
+
+$$y_{n+1} = y_n + h\cdot f(t_n, y_n)$$
+
+这也被称为<font style='background: #007f16;color: #ffffff;alpha:0.6'>一阶精度的欧拉公式</font>, 其累积误差为$O(h)$.
+
+一种改进的欧拉法:
+
+$$y_{n+1} = y_n + \frac{h}{2}\cdot (f(t_n, y_n)+f(t_n + h, y_n + hf(t_n, y_n))$$
+
+<font style='background: #007f16;color: #ffffff;alpha:0.6'>Runge-Kutta方法</font>进一步修正了迭代方法:
+
+$$\begin{aligned}y_{n+1} &= y_n + \frac{h}{6}\cdot (k_1+2k_2+2k_3+k_4) \\
+\text{其中:}&\\
+k_1 &=f(t_n, y_n)\\
+k_1 &=f(t_n + \frac{h}{2}, y_n + \frac{h}{2}k_1)\\
+k_1 &=f(t_n + \frac{h}{2}, y_n+ \frac{h}{2}k_2)\\
+k_1 &=f(t_n + h, y_n + hk_3)
+\end{aligned}$$
+
+- $k_1$是时间段开始时的斜率；
+- $k_2$是时间段中点的斜率，通过欧拉法采用斜率$k_1$来决定y在点tn + h/2的值；
+- $k_3$也是中点的斜率，但是这次采用斜率$k_2$决定y值；
+- $k_4$是时间段终点的斜率，其y值用$k_3$决定。
+
+上述是4阶Runge-Kutta方法, 也被称为RK4, 其每步的误差是$h^5$阶，而总积累误差为$h^4$阶.
+
+```python
+'''implemented in shooting method'''
+f = Function(x, u)-> [xdot, L] # L(x, u) is the cost
+Q = 0 # overall cost
+for j in range(M):
+       k1, k1_q = f(X, U)
+       k2, k2_q = f(X + DT/2 * k1, U)
+       k3, k3_q = f(X + DT/2 * k2, U)
+       k4, k4_q = f(X + DT * k3, U)
+       X=X+DT/6*(k1 +2*k2 +2*k3 +k4)
+       Q = Q + DT/6*(k1_q + 2*k2_q + 2*k3_q + k4_q)
+
+```
+
+**<font color='Tomato'>Trapezoidal</font>**
+
+**<font color='Tomato'>Hermite–Simpson</font>**
+
+
+
 
 插值型数值积分方法：
 
@@ -185,9 +265,14 @@ h_{k}=t_{k+1}-t_{k} \\
         - [2017-An Introduction to Trajectory Optimization: How to Do Your Own Direct Collocation]()
     - [Transcription Methods for Trajectory Optimization](https://arxiv.org/pdf/1707.00284.pdf)
     - [轨迹优化04. 轨迹拟合 & 轨迹插值](https://zhuanlan.zhihu.com/p/342012866)
+    - [Trajectory Optimization 多种优化方法如何选择](https://zhuanlan.zhihu.com/p/478927012)
+    - [cartPole dynamics](http://www.matthewpeterkelly.com/tutorials/cartPole/)
+     - [Optimal_Control ppt](https://github.com/MeMory-of-MOtion/summer-school/blob/master/materials/memmo_summer_school_Optimal_Control_Nicolas_Mansard.pdf)
 - project
+    - [cartpole_casadi_cplusplus](https://github.com/ytwboxing/cartpole_casadi_cplusplus)
     
 - course
     - [台大机器人学之运动学——林沛群-b站](https://www.bilibili.com/video/BV1v4411H7ez)
+    - [CS287-FA19](https://people.eecs.berkeley.edu/~pabbeel/cs287-fa19/0)
 - paper
     

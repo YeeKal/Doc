@@ -12,6 +12,8 @@ learn:
 3. obstacle, 不同障碍物
 4. trajectory optimization / 伪谱法
 
+平台: replit
+
 model: bicycle car / cartpole / link arm
 library: casadi / ceres
 
@@ -19,7 +21,6 @@ arctos / mecha / archane
 
 
 - Orthogonal Collocation Method 正交配置法
-- risk-aware motion planner
 - receding horizon
 - 凸函数与 Hilbert 投影定理
 - sac 碰撞检测

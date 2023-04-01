@@ -19,6 +19,8 @@ date: 2023-03-17
 - ITOMP
 
 
+- biped /ˈbaɪped/  双足的
+- legged:  腿式的
 ## projects
 
 - motion planner

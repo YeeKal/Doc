@@ -5,6 +5,14 @@ tags: planning
 date: 2021-10-24
 ---
 
+## Overview
+
+a global form of orthogonal collocation： 全局曲线，点是选择的曲线上的点，
+
+spectrally: approximation will converge spectrally (i.e., at an exponential rate) as a function of the number of collocation points
+
+当前一般使用拉格朗日多项式
+
 ## 2018 - Efficient Trajectory Optimization for Robot Motion Planning
 
 an optimal control based approach to address the path planning and trajectory planning

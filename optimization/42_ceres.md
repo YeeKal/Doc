@@ -123,5 +123,6 @@ $$\min \sum(r^2_i) \quad \longrightarrow \quad \min c^2\cdot log(1+(\frac{r_i}{c
 - [pose-graph-optimization](https://github.com/shinsumicco/pose-graph-optimization)
 - [curvefitting](https://github.com/mpkuse/advanced_techniques_for_curvefitting)
 - [Parameter Estimation Techniques: A Tutorial with Application to Conic Fitting, Zhengyou Zhang]()
+- [Ceres Solver Python Tutorial](https://notes.andrewtorgesen.com/doku.php?id=public:ceres)
 
 

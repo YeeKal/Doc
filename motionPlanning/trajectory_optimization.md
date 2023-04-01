@@ -19,6 +19,8 @@
 - [Indirect Optimization Techniques](https://jacobhiggins.github.io/posts/2021/04/30/blog-post/)
 - [Trajectory_optimization](https://en.wikipedia.org/wiki/Trajectory_optimization)
 
+
+
 ## contact_trajectory_optimization
 
 - paper
