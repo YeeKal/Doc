@@ -13,7 +13,6 @@
     - [A*](https://www.redblobgames.com/pathfinding/a-star/introduction.html):  adding obstacle cost and distance cost together
     - ant colony algorithm(蚁群算法)
     - PRM(probability road maps)
-    - RRT(randomly exploring randomized trees)
 - differential constraints
 
 ```python

@@ -5,6 +5,8 @@ tags: planning
 date: 2021-08-19
 ---
 
+
+
 轨迹优化，并不太准确，这里的重点在轨迹上，即怎么产生一条轨迹。
 
 首先，在讨论轨迹之前，定义一下什么是路径。从运动规划角度，路径是由一系列离散位置点组成的：
@@ -144,24 +146,6 @@ x=a+bt+ct^2+dt^3$$
 - 7次多项式： 最小snap
 
 这也是上一小节所讨论的采用多项式拟合的理论支撑。
-
-> collocation methods 配点法
-
-其实我想把这个方法叫做参数优化法。这种方法不关注具体的函数形式，直接假设轨迹由n个点组成，把这n个点当作参数，通过最优化方法求出n个点的具体值。这里的技巧是把优化目标中的积分变成累加，把约束中的状态方程改成积分的近似计算公式。
-
-$$\begin{align}
-\text{目标函数}&\quad \quad  \int_{t_{0}}^{t_{F}} w(\tau) d \tau \quad \approx \sum_{k=0}^{N-1} \frac{h_{k}}{2}\left(w_{k}+w_{k+1}\right)   \\
-\text {状态方程}&\quad \quad \begin{gathered}
-  \quad \dot{\boldsymbol{x}}(t)=\boldsymbol{f}(t, \boldsymbol{x}(t), \boldsymbol{u}(t)) \\
-\Downarrow  \\
-\boldsymbol{x}\left(t_{k+1}\right)=\boldsymbol{x}\left(t_{k}\right)+\int_{t_{k}}^{t_{k+1}} \boldsymbol{f}(\tau, \boldsymbol{x}(\tau), \boldsymbol{u}(\tau)) d \tau \\
-\approx \\
-\boldsymbol{x}_{k+1}=\boldsymbol{x}_{k}+\frac{h_{k}}{2}\left(\boldsymbol{f}_{k+1}+\boldsymbol{f}_{k}\right)
-\end{gathered} \end{align}$$
-
-上述近似采用的是简单的梯形公式，当然还有其他的近似方法，比如Simpson积分公式。
-
-配点法不需要求复杂的微分方程，这能很好地处理复杂系统以及有约束的问题。同时这种方法不拘泥于函数的形式，能比较方便地应用于轨迹优化中。
 
 ## 根据已有路经点进行优化
 

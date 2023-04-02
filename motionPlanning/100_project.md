@@ -12,6 +12,7 @@ date: 2023-03-17
 - [pyomo]()
 - [gekko]()
 - [komo-RAI](https://github.com/MarcToussaint/rai)
+- [PYROBOCOP](https://github.com/merlresearch/PyRoboCOP)
 
 - [trajopt]()
 - CHOMP

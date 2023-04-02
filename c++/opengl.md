@@ -474,6 +474,7 @@ int main(int argc, char ** argv){
     - [OpenGL® 2.1, GLX, and GLU Reference Pages](https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/)
     - [不定参数函数模板](https://blog.csdn.net/ttomqq/article/details/78263733)
 - code
+    - [OpenGL Code Samples](https://www.opengl.org/archives/resources/code/samples/simple/)
 - project
     - [OpenGL Matrix Class](http://www.songho.ca/opengl/gl_matrix.html)
     - [Quaternion to Rotation Matrix](http://www.songho.ca/opengl/gl_quaternion.html)

@@ -5,6 +5,8 @@ tags: motion planning
 date: 2021-10-29
 ---
 
+biped / walked / humanoid / legged
+
 locomotion
 
 ZMP Preview Control
@@ -12,6 +14,22 @@ ZMP Preview Control
 footstep planning
 
 Humanoid Gait Optimization： 步态优化
+
+## biped_trajectory_optimization
+
+- [biped_trajectory_optimization](https://github.com/IvLabs/biped_trajectory_optimization)
+
+## TOWR
+
+TOWR: Trajectory Optimization for WalkingRobots
+
+A light-weight and extensible C++ library for trajectory optimization for legged robots.
+
+- [source code](https://github.com/ethz-adrl/towr)
+- [Gait and Trajectory Optimization for legged systems through Phase-based Endeffector Parameterization](http://www.adrlab.org/archive/18-ral-winkler.pdf)
+- [author mainpage](https://www.alex-winkler.com/)
+- [PhD Thesis: Optimization-based motion planning for legged robots.]()
+- [video](https://www.youtube.com/watch?v=KhWuLvb934g)
 
 ## ref
 
@@ -22,6 +40,9 @@ Humanoid Gait Optimization： 步态优化
     - [Introduction to Humanoid Robotics]()
         - [code -matlab-github](https://github.com/s-kajita/IntroductionToHumanoidRobotics)
     - [2002 - Hybrid Zero Dynamics of Planar Bipedal Walking](http://web.eecs.umich.edu/~grizzle/papers/Grizzle_Westervelt_HZD_IsidoriFest.pdf)
+    - [Trajectory Optimization of 5-Link Biped Robot Using Beetle Antennae Search](https://ieeexplore.ieee.org/document/9365690)
+        - [BAS: Beetle Antennae Search Algorithm for Optimization Problems](https://arxiv.org/abs/1710.10724)
+    - [Gait and Trajectory Optimization for Legged Systems through Phase-based End-Effector Parameterization](http://www.adrlab.org/archive/18-ral-winkler.pdf)
 
 - projects
     - [Pnc: Planning and Control Algorithms for Robotics](https://github.com/junhyeokahn/PnC): Versatile Locomotion Planning and Control for Humanoid Robots
