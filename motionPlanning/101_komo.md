@@ -114,3 +114,27 @@ addObjective(times, featureSymbol, frameNames, objectiveType, scale, target, ord
 (There are many more features defined in the code, but not interfaced with a symbol.)
 ```
 
+## obstacle collision
+
+```cpp
+shared_ptr<ScalarFunction> rai::Shape::functional(bool worldCoordinates){
+  rai::Transformation pose = 0;
+  if(worldCoordinates) pose = frame.ensure_X();
+  //create mesh for basic shapes
+  switch(_type) {
+    case rai::ST_none: HALT("shapes should have a type - somehow wrong initialization..."); break;
+    case rai::ST_box:
+      return make_shared<DistanceFunction_ssBox>(pose, size(0), size(1), size(2), 0.);
+    case rai::ST_sphere:
+      return make_shared<DistanceFunction_Sphere>(pose, radius());
+    case rai::ST_cylinder:
+      return make_shared<DistanceFunction_Cylinder>(pose, size(-2), size(-1));
+    case rai::ST_capsule:
+      return make_shared<DistanceFunction_Capsule>(pose, size(-2), size(-1));
+    case rai::ST_ssBox: {
+      return make_shared<DistanceFunction_ssBox>(pose, size(0), size(1), size(2), size(3));
+    default:
+      return shared_ptr<ScalarFunction>();
+    }
+  }
+```
