@@ -157,6 +157,7 @@ A_{eq}S=B_{eq}$$
     - [SQP 算法实现](https://zhuanlan.zhihu.com/p/348666680)
     - [optim docs](https://optimlib.readthedocs.io/en/latest/api/sumt.html)
     - [优化器列表](https://www.twblogs.net/a/5b7f9a6f2b717767c6b073d6)
+    - [THE GLOBAL TRAJECTORY OPTIMISATION COMPETITION PORTAL](https://sophia.estec.esa.int/gtoc_portal/)
 - project
     - [CppNumericalSolvers](https://github.com/PatWie/CppNumericalSolvers)
     - [optim](https://github.com/kthohr/optim)

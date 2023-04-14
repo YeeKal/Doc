@@ -13,6 +13,7 @@ date: 2023-03-17
 - [gekko]()
 - [komo-RAI](https://github.com/MarcToussaint/rai)
 - [PYROBOCOP](https://github.com/merlresearch/PyRoboCOP)
+- [horizon](https://github.com/ADVRHumanoids/horizon): an intuitive optimization tool tailored to robotics, based on CasADi
 
 - [trajopt]()
 - CHOMP
