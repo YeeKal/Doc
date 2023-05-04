@@ -5,8 +5,11 @@
  date: 2020-04-15
 ---
 
-yangganggang@10.8.116.81
-yee@10.8.106.60
+1. python性能分析工具
+
+https://zhuanlan.zhihu.com/p/110105273
+
+2. 终端录制转化为svg
 
 - 录制终端转化为 svg: pip3 install --user termtosvg
     - sudo snap install termtosvg-simosx

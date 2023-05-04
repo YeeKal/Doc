@@ -1,8 +1,8 @@
 ---
-title: atlas in ompl
-categories: ompl
-tags: planning
-date: 2019_06_16
+title: ompl algorithms
+categories: motion planning
+tags: komo;motion planning
+date: 2023-03-29
 ---
 
 ## atlasRRT
@@ -37,3 +37,6 @@ if (!decomp.isSurjective()) // surjective:满射; injective: 单射
 // Compute the null space and orthonormalize, which is a basis for the tangent space.
 return decomp.kernel().householderQr().householderQ() * Eigen::MatrixXd::Identity(n_, k_);
 ```
+
+
+## Ref

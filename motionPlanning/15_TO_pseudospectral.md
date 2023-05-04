@@ -123,6 +123,11 @@ ref:
 
 ## orthogonal polynominals on [-1, 1]
 
+```
+- 切比雪夫点
+- 切比雪夫插值
+- 切比雪夫多项式
+```
 #### 拉格朗日多项式
 
 拉格朗日插值
@@ -140,7 +145,6 @@ $$l_i(x)=\frac{\prod^n_{j=0}(x-x_j)}{\prod^n_{j=0}(x_i-x_j)} \qquad (i=0,1,\cdot
 - 三角形式：$T_n(x)cos(n \arccos x), -1\leq x\leq 1$
 - 零点：$T_n(x)$在[-1,1]中有n个不同的实根：$x_k=cos(\frac{2k-1}{2n}\pi)$
 - 极值点： $x_k=cos(\frac{k}{n}\pi)$
-
 
 
 #### Legendre polynomials (勒让德多项式)
@@ -168,11 +172,14 @@ Clenshaw–Curtis quadrature
 
 ## ref
 
+- blog
+    - [blog - chebfun](http://www.chebfun.org/)
 - project
     - [PSOPT](https://swmath.org/software/20700)
     - [Pseudospectral-optimal-control-python](https://github.com/NaderTG/Pseudospectral-optimal-control-python)
     - [mpopt: A pseudo-spectral collocation based multi-phase Optimal control problem solver](https://github.com/mpopt/mpopt)
     - [Efficient Trajectory Optimization for Robot Motion Planning -- Examples](https://github.com/yzhao334/Efficient-Trajectory-Optimization-for-Robot-Motion-Planning--Examples)
+    - [github - chebfun](https://github.com/asgeirbirkis/chebfun)
 - paper
     - [2010-A Pseudospectral Optimal Motion Planner for Autonomous Unmanned Vehicles](https://core.ac.uk/download/pdf/36737091.pdf)
     - [2007-A Pseudospectral Method for Real-Time Motion Planning and Obstacle Avoidance ](https://apps.dtic.mil/sti/pdfs/ADA478686.pdf)

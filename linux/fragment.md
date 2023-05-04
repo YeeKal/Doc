@@ -17,7 +17,7 @@ learn:
 model: bicycle car / cartpole / link arm
 library: casadi / ceres
 
-arctos / mecha / archane
+arctos / archane
 
 
 - Orthogonal Collocation Method 正交配置法
@@ -27,15 +27,9 @@ arctos / mecha / archane
  
 - [grep:代码搜索引擎](https://grep.app/)
 https://github.com/zjhellofss/KuiperInfer
-- https://www.tpcap.net/#/
+- [trajectory planning competition](https://www.tpcap.net/#/)
 - tkinter custom
 
-## 序列化与反序列化
-
-- [csdn:自动序列化与反序列化](https://blog.csdn.net/ZJU_fish1996/article/details/102643222)
-
-- [local ChatGPT api](https://github.com/acheong08/ChatGPT)
-- [huggingface](https://huggingface.co/)
 ## Convex Feasible Set Algorithm
 
 subgradient method python
