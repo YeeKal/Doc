@@ -26,7 +26,6 @@ arctos / archane
 - sac 碰撞检测
  
 - [grep:代码搜索引擎](https://grep.app/)
-https://github.com/zjhellofss/KuiperInfer
 - [trajectory planning competition](https://www.tpcap.net/#/)
 - tkinter custom
 

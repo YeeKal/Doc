@@ -37,6 +37,9 @@ password: ml2017
 - [Downloadable: Cheat Sheets for AI, Neural Networks, Machine Learning, Deep Learning & Data Science PDF](https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-science-pdf-f22dc900d2d7)
 - [西瓜书手推笔记](https://github.com/Sophia-11/Machine-Learning-Notes/)
 
+- project
+    - [从零自制深度学习推理框架](https://github.com/zjhellofss/KuiperInfer)
+
 ## datasources
 
 - movielens
