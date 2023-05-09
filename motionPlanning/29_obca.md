@@ -5,6 +5,33 @@ tags:
 date: 2023-02-02
 ---
 
+## Collision Avoidance for Point-Mass Models
+
+<font color='Tomato'>Collision-Free Trajectory Generation</font>
+
+$$\begin{aligned}
+\operatorname{dist}(\mathbb{E}(x), \mathbb{O}) & >\mathrm{d}_{\min } \\
+& \Longleftrightarrow \exists \lambda \succeq_{\mathcal{K}^*} 0:(A p-b)^{\top} \lambda>\mathrm{d}_{\min },\left\|A^{\top} \lambda\right\|_* \leq 1
+\end{aligned}$$
+
+1. K either the standard cone or the second-order cone, which allows us to model polyhedral and ellipsoidal obstacles. 
+2. not able to distinguish between "severe" and "less severe" colliding trajectories
+
+<font color='Tomato'>Minimum-Penetration Trajectory Generation</font>
+
+$$\begin{aligned}
+\operatorname{pen}(\mathbb{E}(x), \mathbb{O}) & <\mathrm{p}_{\max } \\
+& \Longleftrightarrow \exists \lambda \succeq_{\mathcal{K}^*} 0:(b-A p)^{\top} \lambda<\mathrm{p}_{\max },\left\|A^{\top} \lambda\right\|_*=1 .
+\end{aligned}     $$
+
+<font color='Tomato'>combine:</font>
+
+$$\begin{aligned}
+& \operatorname{sd}(\mathbb{E}(x), \mathbb{O})>\mathrm{d} \\
+& \Longleftrightarrow \exists \lambda \succeq \mathcal{K}^* 0:(A p-b)^{\top} \lambda>\mathrm{d},\left\|A^{\top} \lambda\right\|_*=1 . \\
+&
+\end{aligned}$$
+
 ## ref
 
 - blog
