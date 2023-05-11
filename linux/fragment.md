@@ -21,10 +21,6 @@ library: casadi / ceres
 
 arctos / archane
 
-姚大志：哈贝马斯政治哲学的内在逻辑   	
-策兰传
-策兰研究
-刘文瑾《文学作为“对人的乌托邦”之预感——列维纳斯论策兰》，刊登在《外国文学》1021年第一期上。有兴趣的童鞋可以翻原文看。
 
 - Orthogonal Collocation Method 正交配置法
 - receding horizon
@@ -69,3 +65,4 @@ open source: [HACD](http://khaledmammou.com/hacd.html)
 - [z-library 1](https://bbs.yibook.org/d/211-z-librarywang-zhan-10tdian-zi-shu-chong-zi-yue-1800mo-ce)
 - [识典古籍](https://shidianguji.com/) 
 - [zlib collection](http://pilimi.org/zlib.html)
+- [Anna’s Archive](https://annas-archive.org/search?q=)
