@@ -67,13 +67,17 @@ $$
 Using $r=-1$ and the notation $-A:=(-1) A=\{-a: a \in A\}$, it follows that $\inf (-A)=-\sup A \quad$ and $\quad \sup (-A)=-\inf A$.
 **Multiplicative inverse of a set**
 For any set $S$ that does not contain 0 , let
+
 $$
 \frac{1}{S}:=\left\{\frac{1}{s}: s \in S\right\}
 $$
+
 If $S \subseteq(0, \infty)$ is non-empty then
+
 $$
 \frac{1}{\sup S}=\inf \frac{1}{S}
 $$
+
 where this equation also holds when $\sup S=\infty$ if the definition $\frac{1}{\infty}:=0$ is used. ${ }^{[\text {note } 2]}$ This equality may alternatively be written as $\frac{1}{\sup _{s \in S} s}=\inf _{s \in S} \frac{1}{s}$. Moreover, $\inf S=0$ if and only if $\sup \frac{1}{S}=\infty$, where if ${ }^{[n o t e ~ 2]} \inf S>0$, then $\frac{1}{\inf S}=\sup \frac{1}{S}$.
 
 <font color='Tomato'>Duality</font>
@@ -83,6 +87,7 @@ For subsets of the real numbers:
 $$\inf S = -\sup(-S), \text{where } -S:=\{-s:s \in S \}$$
 
 For any functionals $f$ and $g$:
+
 $$\sup\{f(t)+g(t):t\in A\}\leq \sup\{f(t):t\in A\} +  \sup\{g(t):t\in A\}$$
 
 <font color='Tomato'>Complementary slackness</font>
@@ -103,8 +108,11 @@ $$\inf _y\left\{\|y\|-\mu^T y\right\}=0 \text { if }\|\mu\|_* \leq 1$$
 关于求梯度:  [通过次微分进行解释](https://math.stackexchange.com/questions/4104855/why-does-any-dual-optimal-point-provide-a-separating-hyperplane-between-a-point)
 
 the optimality condition for minimizing over $y$ can be written as:
+
 $$\mu \in \partial \|y\|$$
+
 where $\partial_g(y)$ is the subdifferential of $g$ at $y$, and is defined by the set of supporting vectors, $e.g.$:
+
 $$\partial g(y) = \{z : g(x)-g(y) - z^T(x-y) \geq 0,\forall x\}.$$
 
 Then this can be proved: $\partial \|y\| =  \{z : z^Ty = \|y\|,\; \|z\|_* \leq 1\}$. [proofs pdf](https://angms.science/doc/CVX/SubdifferentialOfNorm.pdf)
@@ -118,16 +126,20 @@ convex conjudate: 凸共轭
 Fenchel conjugate is also known as the Fenchel-Legendre transform 
 
 原函数$f:\mathbb{R}^n \rightarrow \mathbb{R}$的共轭函数:
+
 $$f^*(y)=\sup _{x \in \operatorname{dom} f}\left(y^T x-f(x)\right)$$
 
 the dual norm $||\cdot||_*$ of a norm $||\cdot||$ is difined as:
+
 $$||z||_* = \sup_{||u||\leq 1}<z, u>$$
 
 Fenchel不等式: 
+
 $$f^*(x) \geq y^T x-f(x) \\
 f^*(x) + f(x) \geq y^T x$$
 
 3. 绝对值 $f(x) = |x|$, 共軛函数为:
+
 $$f^*(x^*) = \left\{ \begin{aligned} 0, |x^*|\leq 1 \\ \infty, |x^*|> 1 \end{aligned} \right.$$
 
 $$\inf_y\{||y|| - \mu ^Ty\} = 0, \text{for } ||\mu|| \leq 1$$
@@ -193,6 +205,7 @@ $$\max _{\substack{\boldsymbol{x}, \boldsymbol{s} \\ s \geq 0}} \min _{\boldsymb
 For each $\boldsymbol{y}$, the Lagrangian $L(\boldsymbol{y}, \boldsymbol{x}, \boldsymbol{s})$ is linear in $(\boldsymbol{x}, \boldsymbol{s})$ and hence also concave in them. Hence $L(\boldsymbol{x}, s)$ is a concave function, because it is the pointwise minimum (over $y$ ), of a collection of concave functions in $(x, s)$.
 
 This also means that the dual problem is really a convex optimization problem in disguise, because we can flip the sign of $-L(\boldsymbol{x}, s)$ to get a convex function and minimizing this is equivalent to maximizing $L(\boldsymbol{x}, \boldsymbol{s})$.
+
 $$
 \max _{\substack{x, s \\ s \geq 0}} L(\boldsymbol{x}, \boldsymbol{s})=-\min _{\substack{x, s \\ s \geq 0}}-L(\boldsymbol{x}, \boldsymbol{s})
 $$
