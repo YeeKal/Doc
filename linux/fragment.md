@@ -15,7 +15,7 @@ learn:
 4. trajectory optimization / 伪谱法
 
 平台: replit
-
+ 
 model: bicycle car / cartpole / link arm
 library: casadi / ceres
 
