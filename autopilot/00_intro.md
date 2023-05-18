@@ -75,6 +75,10 @@ atlas: [atlas](https://github.com/magicleap/Atlas)
     - 动力学约束RRT*算法 Kinodynamic RRT*
     - 混合A*算法 Hybrid A*
 
+安全性和舒适性
+
+- contingency planning 防御性规划
+- risk-aware planning 预期风险规划 （障碍物的梯度）
 
 ## 轨迹规划
 

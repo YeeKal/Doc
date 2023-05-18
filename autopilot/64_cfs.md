@@ -1,7 +1,7 @@
 ---
 title: Convex Feasible Set Algorithm
-categories: optimization
-tags: autopilot
+categories: autopilot
+tags: planner
 date: 2022-10-09
 ---
 
