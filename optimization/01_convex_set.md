@@ -7,17 +7,17 @@ date: 2020-09-09
 
 ## Linear Combination
 
-<font color='Tomato'> 线性组合 </font>：
+**<font color='Tomato'> 线性组合 </font>**：
 
 $$y=\sum \lambda_i x_i$$ 
 
-- 凸集(convex set): $\sum \lambda_i=1, \lambda_i \geq 0 $, $\rightarrow$ <font color='Tomato'>Convex combination, Convex hull </font>：
+- 凸集(convex set): $\sum \lambda_i=1, \lambda_i \geq 0 $, $\rightarrow$**<font color='Tomato'>Convex combination, Convex hull </font>**：
 - 仿射集合(Affine set): $\sum \lambda_i=1$
-- 凸锥(conic set): $\lambda_i \geq 0$ $\rightarrow$ <font color='Tomato'>Conic combination, convec cone hull </font>
+- 凸锥(conic set): $\lambda_i \geq 0$ $\rightarrow$**<font color='Tomato'>Conic combination, convec cone hull </font>**
 
 当选定了固定的$x_i$之后，通过凸线性组合则形成凸包(convex hull)， 即包括这些点的最小凸集。通过凸锥组合则形成凸锥包(Convex cone hull), 即包括这些点的最小凸锥。
 
-下图画出三种组合方式。可以看出，在2D情况下，凸组合是两点之前的线段；仿射组合是过两点的直线；而凸锥组合是原点分别向两个点连接的射线所包围的部分，类似一个尖锥。在3D情况下也可以看出，凸组合是包括了所有点的多面体，这也叫<font color='Tomato'>凸包(convex hull) </font>.
+下图画出三种组合方式。可以看出，在2D情况下，凸组合是两点之前的线段；仿射组合是过两点的直线；而凸锥组合是原点分别向两个点连接的射线所包围的部分，类似一个尖锥。在3D情况下也可以看出，凸组合是包括了所有点的多面体，这也被称为 **<font color='Tomato'>凸包(convex hull) </font>**.
 ![linear_combination](imgs/linear_combination.png)
 
 
@@ -44,11 +44,11 @@ In words,  line segment joining any two elements lies entirely in set
 
 
 Examples:
-- <font color='Tomato'>直线和线段: </font>
+-**<font color='Tomato'>直线和线段: </font>**
 - Norm ball: $\{x: ||x||\leq r \}$, for given norm $||\cdot||$, radius $r$
-- <font color='Tomato'>Hyperplane</font>: $\{x: a^Tx = b\}$
-- <font color='Tomato'>Affine space</font>: $\{x: A^Tx = b\}$
-- <font color='Tomato'>Polyhedron(多面体)</font>
+-**<font color='Tomato'>Hyperplane</font>**: $\{x: a^Tx = b\}$
+-**<font color='Tomato'>Affine space</font>**: $\{x: A^Tx = b\}$
+-**<font color='Tomato'>Polyhedron(多面体)</font>**
 
 
 ## Affine Sets 仿射集
@@ -76,8 +76,8 @@ with $\theta_i \geq 0$
 
 Examples of convex cones:
 
-- <font color='Tomato'>Norm cone(标准锥)</font>: $\{(x, t):||x|| \leq t \}$, for a norm $||\cdot||$. Under $l_2$ norm $||\cdot||_2$, called <font color='Tomato'>second-order cone(二阶锥)</font>
-- <font color='Tomato'>Normal cone</font>
+-**<font color='Tomato'>Norm cone(标准锥)</font>: $\{(x, t):||x|| \leq t \}$, for a norm $||\cdot||$. Under $l_2$ norm $||\cdot||_2$, called <font color='Tomato'>second-order cone(二阶锥)</font>**
+-**<font color='Tomato'>Normal cone</font>**
 - 对称半正定矩阵集合 $S^n_+$
 
 下面也是一个二阶锥，只是对标准锥做了一个仿射变换：
@@ -163,7 +163,7 @@ $$y=\sum \lambda_i x_i$$
 
 - 仿射集合(Affine set): $\sum \lambda_i=1$
 - 凸锥(conic set): $\lambda_i \geq 0$
-- 凸集(convex set): $\sum \lambda_i=1, \lambda_i \geq 0 $, $\rightarrow$ <font color='Tomato'>Convex combination </font>
+- 凸集(convex set): $\sum \lambda_i=1, \lambda_i \geq 0 $, $\rightarrow$**<font color='Tomato'>Convex combination </font>**
 
 一条线也是一个仿射集：$x=\theta x_1 +(1-\theta) x_2$.
 
@@ -360,6 +360,23 @@ for all $x,y\in dom(f)$
 
 一阶条件： 切线总是在函数的下方
 
+Proof:
+
+$$
+f(\lambda y+(1-\lambda) x) \leq \lambda f(y)+(1-\lambda) f(x), \forall \lambda \in[0,1], x, y \in \operatorname{dom}(f)
+$$
+After rewriting, we have
+$$
+\begin{aligned}
+& f(x+\lambda(y-x)) \leq f(x)+\lambda(f(y)-f(x)) \\
+\Rightarrow & f(y)-f(x) \geq \frac{f(x+\lambda(y-x))-f(x)}{\lambda}, \forall \lambda \in(0,1]
+\end{aligned}
+$$
+As $\lambda \downarrow 0$, we get
+$$
+f(y)-f(x) \geq \nabla f^T(x)(y-x)
+$$
+
 **<font color='Tomato'>Second-order characterization</font>**
 
 if $f$ is twice differentiable, then $f$ is convex if and only if dom($f$) is convex, and $\nabla^2f(x)\succeq 0 $ for all $x\in dom(f)$
@@ -373,6 +390,32 @@ $$f(\mathbb{E}[X])\leq \mathbb{E}[f(X)]$$
 <font color='Tomato'>Nonnegative linear combination:</font>: $f_1, \cdots, f_m$ convex implies $a_1f_1+\cdots + a_mf_m$ convex for any $a_1, \cdots, a_m \geq 0$
 
 <font color='Tomato'>Pointwise maximation:</font>
+
+<font color='Tomato'>Partial minimization:</font>
+
+<font color='Tomato'>Affine composition:</font> $f$ convex implies $g(x) = f(Ax + b)$ convex
+
+<font color='Tomato'>General composition:</font>
+
+<font color='Tomato'>Vector composition:</font>
+
+
+Example:
+
+<font color='Tomato'>log-sum-exp function:</font>
+
+$g(x) = \log(\sum^k_{i=1} e^{a_i^Tx+b_i})$, often called <font style='background: #007f16;color: #ffffff;opacity:1.0;border-radius: 5px; padding:5px;'>softmax </font> function, as it smoothly approximates $\max_{i=1,\cdots,k}(a_i^Tx+b_i)$
+
+1. First, note it suffices to prove convexity of $f(x)=\log \left(\sum_{i=1}^n e^{x_i}\right)$ (affine composition rule)
+2. Now use second-order characterization. Calculate
+$$
+\begin{aligned}
+\nabla_i f(x) & =\frac{e^{x_i}}{\sum_{\ell=1}^n e^{x_{\ell}}} \\
+\nabla_{i j}^2 f(x) & =\frac{e^{x_i}}{\sum_{\ell=1}^n e^{x_{\ell}}} 1\{i=j\}-\frac{e^{x_i} e^{x_j}}{\left(\sum_{\ell=1}^n e^{x_{\ell}}\right)^2}
+\end{aligned}
+$$
+3. Write $\nabla^2 f(x)=\operatorname{diag}(z)-z z^T$, where $z_i=e^{x_i} /\left(\sum_{\ell=1}^n e^{x_{\ell}}\right)$. This matrix is diagonally dominant, hence positive semidefinite
+
 
 ## Advanced
 

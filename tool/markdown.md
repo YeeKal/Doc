@@ -4,6 +4,15 @@ categories: note
 tags: tool
 date: 2023-01-10
 ---
+## block
+
+<font color=#4cd137>██████</font>
+<font color=#4cd137>░</font>
+
+░░░░░░░░
+░
+
+- [unicode block](https://www.compart.com/en/unicode/block/U+2580)
 
 ## use html
 
@@ -24,7 +33,7 @@ date: 2023-01-10
 
 <font color='Tomato'>Convex combination, Convex hull </font>
 
-<font style='background: #007f16;color: #ffffff'>&nbsp;haha &nbsp;</font>
+<font style='background: #007f16;color: #ffffff;opacity:1.0;border-radius: 5px; padding:5px;'>haha</font>
 
 
 ## Hide-show content
@@ -290,7 +299,7 @@ Here is a simple footnote[^1]. With some additional text after it. head[^head]
 		"note": {
 		"prefix": "note",
 		"body": [
-			"<font style='background: #007f16;color: #ffffff;alpha:0.6'>$1</font>"
+			"<font style='background: #007f16;color: #ffffff;opacity:1.0;border-radius: 5px; padding:5px;'>$1</font>"
 		],
 		"description": "green background"
 	}

@@ -15,9 +15,9 @@ date: 2021-08-17
 
 最优控制的解法一般有三种方法：
 
-- <font style='background: #007f16;color: #ffffff;alpha:0.6'>Dynamic Programming</font>: Solve Hamilton-Jacobi-Bellman Equations over the entire state space.
-- <font style='background: #007f16;color: #ffffff;alpha:0.6'>Indirect Methods</font>: Transcribe problem then find where the slope of the objective is zero.
-- <font style='background: #007f16;color: #ffffff;alpha:0.6'>Direct Methods</font>: Transcribe problem then find the minimum of the objective function
+- <font style='background: #007f16;color: #ffffff;opacity:1.0;border-radius: 5px; padding:5px;'>Dynamic Programming</font>: Solve Hamilton-Jacobi-Bellman Equations over the entire state space.
+- <font style='background: #007f16;color: #ffffff;opacity:1.0;border-radius: 5px; padding:5px;'>Indirect Methods</font>: Transcribe problem then find where the slope of the objective is zero.
+- <font style='background: #007f16;color: #ffffff;opacity:1.0;border-radius: 5px; padding:5px;'>Direct Methods</font>: Transcribe problem then find the minimum of the objective function
 
 轨迹优化主要关注第三种即直接法，通过构造一个优化问题进行求解。直接法又分为shooting和collocation方法，主要是从状态方程的表示方法上区分的。
 
@@ -168,13 +168,13 @@ $$y' = f(t, y), y(t_0) = y_0$$
 
 $$y_{n+1} = y_n + h\cdot f(t_n, y_n)$$
 
-这也被称为<font style='background: #007f16;color: #ffffff;alpha:0.6'>一阶精度的欧拉公式</font>, 其累积误差为$O(h)$.
+这也被称为<font style='background: #007f16;color: #ffffff;opacity:1.0;border-radius: 5px; padding:5px;'>一阶精度的欧拉公式</font>, 其累积误差为$O(h)$.
 
 一种改进的欧拉法:
 
 $$y_{n+1} = y_n + \frac{h}{2}\cdot (f(t_n, y_n)+f(t_n + h, y_n + hf(t_n, y_n))$$
 
-<font style='background: #007f16;color: #ffffff;alpha:0.6'>Runge-Kutta方法</font>进一步修正了迭代方法:
+<font style='background: #007f16;color: #ffffff;opacity:1.0;border-radius: 5px; padding:5px;'>Runge-Kutta方法</font>进一步修正了迭代方法:
 
 $$\begin{aligned}y_{n+1} &= y_n + \frac{h}{6}\cdot (k_1+2k_2+2k_3+k_4) \\
 \text{其中:}&\\
