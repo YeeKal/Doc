@@ -258,3 +258,54 @@ Similarly, inequality or equality constraints can be transformed and yield equiv
 
 **<font color='Tomato'>Eliminating equality constraints</font>**
 
+$$\begin{aligned}
+\min _{x} \quad & f(x)  \\
+\text { s.t. } \quad &g_i\left(x\right) \leq 0 \quad \\
+\quad & Ax = b
+\end{aligned}$$
+
+we can express any feasible point as $x = My+x_0$, where $Ax_0=b$ and $col(M) = null (A)$(即表示为一个解和零空间的线性组合). Hence the sbove is equivalent to:
+
+$$\begin{aligned}
+\min _{y} \quad & f(My+x_0)  \\
+\text { s.t. } \quad &g_i(My+x_0) \leq 0 
+\end{aligned}$$
+
+*Note: fully general but not always a good idea*
+
+**<font color='Tomato'>Introducing slack variables</font>**
+
+transform the above inequality constraints via:
+
+$$\begin{aligned}
+\min \quad & f(x)  \\
+\quad & s_i \geq 0\\
+\text { s.t. } \quad &g_i(x) + s_i = 0 \\
+& Ax = b
+\end{aligned}$$
+
+Note: this is no longer convex unless each $g_i(x) = c_i^T x + d_i$, an affine function
+
+**<font color='Tomato'>Relaxing nonaffine equality constraints</font>**
+
+Given an optimization problem
+$$
+\min f(x) \text { subject to } x \in C
+$$
+we can always take <font style='background: #007f16;color: #ffffff;opacity:1.0;border-radius: 5px; padding:5px;'>an enlarged constraint set</font> $\tilde{C} \supseteq C$ and consider
+$$
+\min f(x) \text { subject to } x \in \tilde{C}
+$$
+This is called a relaxation and <font style='background: #007f16;color: #ffffff;opacity:1.0;border-radius: 5px; padding:5px;'> its optimal value is always smaller or equal to</font> that of the original problem.(使用更大的可行集，最优点小于等于原问题。比如把等式约束放宽为小于等于)
+
+Important special case: relaxing nonaffine equality constraints, i.e.,
+
+$$
+h_j(x)=0, j=1, \ldots r
+$$
+
+where $h_j, j=1, \ldots r$ are convex but nonaffine, are replaced with
+
+$$
+h_j(x) \leq 0, j=1, \ldots r
+$$
