@@ -5,24 +5,37 @@ tags: optimization
 date: 2020-09-09
 ---
 
+## What is
+
+$$\begin{aligned}
+\min_x \quad & c^T x \\
+s.t. \quad & Dx\leq d \\
+& Ax = b
+\end{aligned}$$
+
 - 线性规划(Linear programming, LP): 目标函数和约束条件都为线性。
-- 可行域(feasible domain): 有限顶点的凸多边形(三维中则是多面体)
+- 可行域(feasible domain): <font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>有限顶点的凸多边形Polyhedra(三维中则是多面体)</font>
 - 线性规划的最优点总是在多边形的顶点或边
 - 历程：
     - 提出 by G. B. Dantzig (1947)
+    - Closely related to game theory (two-person, zero-sum games)
     - simplex method by G. B. Dantzig (1948)
-    - Ellipsoid Method proposed by L. G.Khachian (1979)
-    - Interior-Point Method proposed by N.Karmarkar (1984)
+    - Ellipsoid Method proposed by L. G.Khachian (1970s)
+    - Interior-Point Method proposed by N.Karmarkar (1980s)
 
 ![3dpoly](imgs/3dpoly.svg)
 
+**<font color='Tomato'>Example: Dantzig selector</font>**
+
+
+
 ## 标准型
 
-$$\left\{\begin{array}{c}
-\min c^{T} x \\
-A x \leq b \\
-x \geq 0
-\end{array}\right.$$
+$$\begin{aligned}
+\min  \quad & c^{T}x \\
+s.t. \quad & A x \leq b \\
+& x \geq 0
+\end{aligned}$$
 
 将任意一个线性变换转化为标准形式：
 

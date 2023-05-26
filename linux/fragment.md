@@ -31,6 +31,10 @@ arctos / archane
 - [trajectory planning competition](https://www.tpcap.net/#/)
 - tkinter custom
 
+## chatgpt
+
+- chatbase
+
 ## Convex Feasible Set Algorithm
 
 subgradient method python
