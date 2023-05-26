@@ -70,4 +70,10 @@ $$\begin{aligned}
 
 This is convex, recalling the convexity of soft max functions. This log-log transformation can be used to convert a larger class of problems, known as <font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>log-log convex programming (LLCP)</font>, into an equivalent convex form.
 
+special character:
+
+- Unlike most non-linear optimization problems, large GPs can be <font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>solved extremely quickly</font>.
+If there exists an optimal solution to a GP, it is guaranteed to be <font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>globally optimal</font>.
+Modern GP solvers require <font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>no initial guesses</font> or tuning of solver parameters.
+
 
