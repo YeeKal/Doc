@@ -170,6 +170,7 @@ A_{eq}S=B_{eq}$$
     - [ECE236C - Optimization Methods for Large-Scale Systems]()
     - [Convex and Conic Optimization-Princeton University](https://aaa.princeton.edu/orf523s16)
     - [Convex Analysis And Optimization](https://ocw.mit.edu/courses/6-253-convex-analysis-and-optimization-spring-2012/pages/lecture-notes/)
+    - [Introduction To Mathematical Programming: 多实践](https://ocw.mit.edu/courses/6-251j-introduction-to-mathematical-programming-fall-2009/pages/readings/?utm_source=wechat_session&utm_medium=social&utm_oi=737654678531096576)
 - [bilibili-线性规划 方述诚](https://www.bilibili.com/video/av455050227/)
 
 

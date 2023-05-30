@@ -1,5 +1,5 @@
 ---
-title: 线性规划
+title: linear programming(LP)
 categories: optimization
 tags: optimization
 date: 2020-09-09
@@ -72,8 +72,13 @@ x_{1}, x_{2}, x_{3}, x_{4}, x_{5} \geq 0
 
 $$P=\left\{\mathbf{x} \in \mathbf{R}^{n} \mid \mathbf{A} \mathbf{x}=\mathbf{b}, \mathbf{x} \geq \mathbf{0}\right\}$$
 
+- $\mathcal{R}_{+}^n := \{x\in \mathcal{R}^n | x\geq 0\}$, is a <font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>closed convex cone</font>. $x$落入非负象限所代表的凸锥内
 - P是A的列向量组成的超平面相交之后再与凸锥($x\geq 0$)相交的集合
 - $\mathbf{A} \mathbf{x}=\mathbf{b}, \mathbf{x} \geq \mathbf{0}$意味着，向量b落入由A的列向量形成的凸锥中。
+
+## dual problem
+
+
 
 ## 单纯形法(simplex method)
 ## 椭圆法(Ellipsoid method)

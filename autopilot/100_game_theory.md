@@ -4,6 +4,23 @@ categories:
 tags: 
 date: 2023-05-10
 ---
+## normal form
+
+相对于`extensive form`, 另一种博弈的表示形式, 通过收益矩阵(payoff matrix / payoff table)来表示.
+
+
+- $s_i$ action performed by player $i$
+- $s_{-i} = \{s1, \cdots, s_{i-1}, s_{i+1}, s_N\}$ set of actions performed by all the other players
+
+**<font color='Tomato'>Best Response(最优反应)</font>**
+
+$$J_i(s_i^*, s_{-i}) \geq J_i(s_i, s_{-i})$$
+
+**<font color='Tomato'>Nash equilibrium(纳什均衡)</font>**
+
+$$J_i(s_i^*, s^*_{-i}) \geq J_i(s_i, s^*_{-i})$$
+
+对于一个策略组合,每一个玩家的策略想对于其他玩家的策略都是最优的,则该策略组合就达到了一个纳什均衡. 不一定是最优的结果,但是一种稳定的局面. 没有玩家可以在不减少收益的情况下单边改变决策.
 
 ## 博弈
 

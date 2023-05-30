@@ -108,3 +108,6 @@ freespace规划
 后处理的碰撞检测使用within-STC constraints
 
 ## Ref
+
+- [An Efficient Spatial-Temporal Trajectory Planner for Autonomous Vehicles in Unstructured Environments](https://arxiv.org/pdf/2208.13160.pdf)
+- [Differential Flatness-Based Trajectory Planning for Autonomous Vehicles]()
