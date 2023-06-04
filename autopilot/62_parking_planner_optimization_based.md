@@ -64,7 +64,7 @@ Narrow-Roads-Timed-Elastic-Band
     1. phase A and phase B 的规划
     2. 对于狭窄空间,guide-tree 进行换挡采样
 - [courses/ko/parking:对以上算法的实践](https://cw.fel.cvut.cz/b202/_media/courses/ko/parking.pdf)
-- [read notes](../blog/paper_read_parking_planner.md)
+- [paper notes](../blog/paper_read_parking_planner.md)
 
 
 ## 0130

@@ -5,10 +5,80 @@ tags: parking|planning|optimization
 date: 2023-05-12
 ---
 
-## TDR-OBCA
+## 2022 Dftpav: Flatness-Based Trajectory
 
-## H-OBCA
+1. analytic trajectory representation with <font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>differential flatness</font> property
+2.  efficient obstacle avoidance with a <font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>safe driving corridor</font> for unmodelled obstacles
+3. <font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>signed distance approximations</font> for
+dynamic moving objects
 
+**<font color='Tomato'>Ref</font>**
+
+- [An Efficient Spatial-Temporal Trajectory Planner for Autonomous Vehicles in Unstructured Environments](https://arxiv.org/pdf/2208.13160.pdf)
+- [Differential Flatness-Based Trajectory Planning for Autonomous Vehicles]()
+- [code](https://github.com/ZJU-FAST-Lab/Dftpav/tree/main)
+
+**<font color='Tomato'>Related Work</font>**
+
+- trajectory optimization:
+    1. convex elastic band smoothing (CES): eliminates the non-convexity of the curvature constraint with fixed path lengths, transform the original problem into a quadratically constrained quadratic program (QCQP)
+    2. dualloop iterative anchoring path smoothing (DL-IAPS): sequential convex optimization (SCP) is used to relax the curvature constraint
+- obstacle avoidance
+    1. two circle to cover ego car
+    2. OBCA: 增加优化问题维数; 对偶元和障碍物数量成正比
+    3. H-OBCA, with MPC
+
+**<font color='Tomato'>SPATIAL-TEMPORAL TRAJECTORY PLANNING</font>**
+
+adopt the lightweight hybridA* algorithm to find a collision-free path that is further optimized by the proposed planner. 
+
+
+<font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>differential flatness</font>
+
+[1995: Differential flatness of mechanical control systems: A catalog of prototype systems]()
+
+对非线性系统通过有限的微分近似进行降维. 对于机器人的运动规划,可以将所有的轨迹约束映射到平坦输出空间,降低优化维数.得到最优解之后再上升回到初始的状态空间中.
+
+比如对于二维车辆,其独立变量理论上只需要两个量.假设取平坦输出为$x, y$, 输入取速度和前轮转角.则可以得到关系式:
+
+$$\begin{aligned}
+& v = \sqrt{\dot{x}^2 + \dot{y}^2}    \\
+& \delta = \arctan [\frac{l(\dot{y}\ddot{x}-\dot{x}\ddot{y})}{v^3}]
+\end{aligned}$$
+
+此时规划轨迹可以只需要得到$x(t), y(t)$. 一般可以选择基函数$\beta(t)$组合成平坦输出:
+
+$$x(t) = \sum_j \alpha_j\beta_j(t) \\
+y(t) = \sum_j \alpha_j\beta_j(t)$$
+
+比如常见的把$x,y$表示为多项式进行表示.
+
+<font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>Differentially Flat Vehicle Model</font>:
+
+$$\begin{aligned}
+\text{let}~ \boldsymbol\sigma& = (\sigma_x, \sigma_y)^T\\
+v & =\eta \sqrt{{\dot{\sigma_x}}^2+{\dot{\sigma_y}}^2} \\
+\theta & =\arctan 2\left(\eta \dot{\sigma}_y, \eta \dot{\sigma}_x\right) \\
+a_t & =\eta\left(\dot{\sigma_x} \ddot{\sigma}_x+\dot{\sigma}_y \ddot{\sigma}_y\right) / \sqrt{{\dot{\sigma_x}}^2+\dot{\sigma}_y^2} \\
+a_n & =\eta\left(\dot{\sigma_x} \ddot{\sigma}_y-\dot{\sigma}_y \ddot{\sigma}_x\right) / \sqrt{{\dot{\sigma_x}}^2+\dot{\sigma}_y^2} \\
+\phi & =\arctan \left(\eta\left(\dot{\sigma}_x \ddot{\sigma}_y-\dot{\sigma}_y \ddot{\sigma}_x\right) L /\left(\dot{\sigma}_x{ }^2+\dot{\sigma}_y{ }^2\right)^{\frac{3}{2}}\right) \\
+\kappa & =\eta\left(\dot{\sigma}_x \ddot{\sigma}_y-{\dot{\sigma_y}}^{\sigma_x}\right) /\left({\dot{\sigma_x}}^2+{\dot{\sigma_y}}^2\right)^{\frac{3}{2}} \\
+\eta & \in \{-1, 1 \} \quad \text{motion direction}
+\end{aligned}$$
+
+"with the natural **differential flatness property**,we can use the **flat outputs and their finite derivatives to characterize arbitrary state quantities** of the vehicle, which **simplifies the trajectory planning** and facilitates optimization".
+
+avoid singularities by fixing the velocity magnitude to a small, non-zero constant when the gear shifts. Both the gear shifting position and directional angle can be optimized(<font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>优化换挡点</font>).
+
+**<font color='Tomato'>INSTANTANEOUS STATE CONSTRAINTS</font>**
+
+**<font color='Tomato'>Dynamic Feasibility</font>**
+
+**<font color='Tomato'>Static Obstacle Avoidance</font>**
+
+generate free convex polygon based on the sampling point([2020 Generating large convex polytopes directly on point clouds](https://arxiv.org/abs/2010.08744), [code](https://github.com/StarryN/Galaxy)).
+
+H-representation:  On canonical representations of convex polyhedra
 ## 2022 FTHA && Iterative NLP
 
 1. 通过hybrid A* 寻找相对较优的轨迹, 避免搜索失败
@@ -107,7 +177,14 @@ freespace规划
 
 后处理的碰撞检测使用within-STC constraints
 
+
+## TDR-OBCA
+
+## H-OBCA
+
 ## Ref
 
 - [An Efficient Spatial-Temporal Trajectory Planner for Autonomous Vehicles in Unstructured Environments](https://arxiv.org/pdf/2208.13160.pdf)
 - [Differential Flatness-Based Trajectory Planning for Autonomous Vehicles]()
+- [2015 CES: A convex optimization approach to smooth trajectories for motion planning with car-like robots]()
+- [2021 Autonomous driving trajectory optimization with dual-loop iterative anchoring path smoothing and piecewise-jerk speed optimization]()
