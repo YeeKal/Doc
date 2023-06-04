@@ -1,0 +1,28 @@
+---
+title: convex corridor 
+categories: 
+tags: 
+date: 2023-06-04
+---
+
+JPS jump point search
+
+## SFC: Safe Flight Corridor
+
+<font color='Tomato'>Ref</font>
+
+- [2017 Planning Dynamically Feasible Trajectories for Quadrotors using Safe Flight Corridors in 3-D Complex Environments]()
+- [code](https://github.com/sikang/DecompUtil/blob/master/test/test_seed_decomp.cpp)
+
+|  seed decomp   |   line segment   | iterative decomp    |  ellipsoid decomp   |
+| --- | --- | --- | --- |
+| ![seed](imgs/output_seed.svg)    | ![seed](imgs/output_line.svg)    |   ![seed](imgs/output_iterative.svg)  | ![seed](imgs/output_ellipsoid.svg)    |
+
+
+## GALAXY
+
+<font color='Tomato'>Ref</font>
+
+- [2020 Generating large convex polytopes directly on point clouds](https://arxiv.org/abs/2010.08744)
+- [code](https://github.com/StarryN/Galaxy)
+- [code 2](https://github.com/ZJU-FAST-Lab/Dftpav/blob/1808107b7fb6fe459f38154e355010a854e4575f/src/Plan/traj_planner/include/plan_utils/CorridorBuilder2d.hpp#L12)

@@ -5,6 +5,12 @@ tags: autopilot
 date: 2023-01-12
 ---
 
+## Jump Point Search
+
+<font color='Tomato'>Ref</font>
+
+- [jps3d](https://github.com/KumarRobotics/jps3d/tree/master)
+
 
 ## 2022 Continuous-Curvature Target Tree Algorithm for Path Planning in Complex Parking Environments
 

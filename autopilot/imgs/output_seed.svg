@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1000" height="1000" version="1.1"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink">
+<g fill-rule="evenodd"><path d="M 0,1000 L 0,0 L 1000,0 L 1000,1000 L 0,1000 z " style="fill-opacity:1.0;fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:2"/></g>
+<circle cx="450" cy="125" r="10" style="fill-opacity:1.0;fill:rgb(255,0,0);"/>
+<circle cx="750" cy="500" r="10" style="fill-opacity:1.0;fill:rgb(255,0,0);"/>
+<circle cx="700" cy="750" r="10" style="fill-opacity:1.0;fill:rgb(255,0,0);"/>
+<circle cx="375" cy="625" r="10" style="fill-opacity:1.0;fill:rgb(255,0,0);"/>
+<polyline points="525,500 524.692,496.089 523.776,492.275 522.275,488.65 520.225,485.305 517.678,482.322 514.695,479.775 511.35,477.725 507.725,476.224 503.911,475.308 500,475 496.089,475.308 492.275,476.224 488.65,477.725 485.305,479.775 482.322,482.322 479.775,485.305 477.725,488.65 476.224,492.275 475.308,496.089 475,500 475.308,503.911 476.224,507.725 477.725,511.35 479.775,514.695 482.322,517.678 485.305,520.225 488.65,522.275 492.275,523.776 496.089,524.692 500,525 503.911,524.692 507.725,523.776 511.35,522.275 514.695,520.225 517.678,517.678 520.225,514.695 522.275,511.35 523.776,507.725 524.692,503.911 525,500" style="opacity:0.4;fill:none;stroke:rgb(118,215,234);stroke-width:5;fill:none"/>
+<g fill-rule="evenodd"><path d="M 588.889,838.889 L 750,710 L 750,85 L 0,185 L 0,250 z " style="fill-opacity:0.2;fill:rgb(51,51,153);stroke:rgb(51,51,153);stroke-width:2"/></g>
+<text style="fill-opacity:1.0;fill:rgb(10,10,250);" x="750" y="950">test_seed_decomp</text>
+</svg>

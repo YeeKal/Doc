@@ -5,7 +5,10 @@ tags: parking|planning|optimization
 date: 2023-05-12
 ---
 
+
+
 ## 2022 Dftpav: Flatness-Based Trajectory
+
 
 1. analytic trajectory representation with <font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>differential flatness</font> property
 2.  efficient obstacle avoidance with a <font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>safe driving corridor</font> for unmodelled obstacles

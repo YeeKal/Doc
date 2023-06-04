@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1000" height="1000" version="1.1"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink">
+<g fill-rule="evenodd"><path d="M 0,1000 L 0,0 L 1000,0 L 1000,1000 L 0,1000 z " style="fill-opacity:1.0;fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:2"/></g>
+<circle cx="450" cy="125" r="10" style="fill-opacity:1.0;fill:rgb(255,0,0);"/>
+<circle cx="500" cy="125" r="10" style="fill-opacity:1.0;fill:rgb(255,0,0);"/>
+<circle cx="500" cy="250" r="10" style="fill-opacity:1.0;fill:rgb(255,0,0);"/>
+<circle cx="750" cy="500" r="10" style="fill-opacity:1.0;fill:rgb(255,0,0);"/>
+<circle cx="950" cy="500" r="10" style="fill-opacity:1.0;fill:rgb(255,0,0);"/>
+<circle cx="700" cy="750" r="10" style="fill-opacity:1.0;fill:rgb(255,0,0);"/>
+<circle cx="375" cy="625" r="10" style="fill-opacity:1.0;fill:rgb(255,0,0);"/>
+<circle cx="312.5" cy="625" r="10" style="fill-opacity:1.0;fill:rgb(255,0,0);"/>
+<circle cx="250" cy="625" r="10" style="fill-opacity:1.0;fill:rgb(255,0,0);"/>
+<circle cx="250" cy="300" r="10" style="fill-opacity:1.0;fill:rgb(255,0,0);"/>
+<polyline points="873.949,433.29 873.915,420.389 864.673,408.524 846.452,397.988 819.7,389.041 785.077,381.903 743.433,376.749 695.796,373.707 643.337,372.851 587.349,374.202 529.21,377.728 470.352,383.341 412.223,390.903 356.257,400.229 303.829,411.087 256.232,423.212 214.638,436.304 180.07,450.04 153.379,464.084 135.224,478.089 126.051,491.71 126.085,504.611 135.327,516.476 153.548,527.012 180.3,535.959 214.923,543.097 256.567,548.251 304.204,551.293 356.663,552.149 412.651,550.798 470.79,547.272 529.648,541.659 587.777,534.097 643.743,524.771 696.171,513.913 743.768,501.788 785.362,488.696 819.93,474.96 846.621,460.916 864.776,446.911 873.949,433.29" style="opacity:0.4;fill:none;stroke:rgb(118,215,234);stroke-width:5;fill:none"/>
+<g fill-rule="evenodd"><path d="M -364.466,630.274 L 322.984,624.374 L 1367.02,320.285 L 1347.46,124.686 L -387.313,401.807 z " style="fill-opacity:0.2;fill:rgb(51,51,153);stroke:rgb(51,51,153);stroke-width:2"/></g>
+<polyline points="125,500 875,425" style="opacity:0.8;fill:none;stroke:rgb(255,0,0);stroke-width:5;fill:none"/>
+<text style="fill-opacity:1.0;fill:rgb(10,10,250);" x="750" y="950">test_line_segment</text>
+</svg>
