@@ -17,7 +17,7 @@ CFS 凸可行集算法
 
 - project
     - [Mixed-Integer Behavior and Motion Planning](https://github.com/bark-simulator/planner-miqp)
-    - [Convex Feasible Set](https://github.com/valkyrjaL/Convex_Feasible_Set)
+    - [Convex Feasible Set python code](https://github.com/valkyrjaL/Convex_Feasible_Set)
     - [CFS on arm with matlab](https://github.com/changliuliu/CFS)
 - blog
     - [论文阅读：Convex Feasible Set Algorithm 01](https://zhuanlan.zhihu.com/p/553262342)
