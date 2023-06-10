@@ -11,4 +11,8 @@ date: 2023-03-31
 
 ## time scale
 
+normalize tf:
+
+dx * dt -> dx
+
 ## collision

@@ -5,6 +5,11 @@
  date: 2020-04-15
 ---
 
+20. code server install
+
+- code-server: vim ~/.config/code-server/config.yaml
+- sudo systemctl restart code-server@$USER
+
 1. python性能分析工具
 
 https://zhuanlan.zhihu.com/p/110105273
