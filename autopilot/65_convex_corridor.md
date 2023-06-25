@@ -7,7 +7,10 @@ date: 2023-06-04
 
 JPS jump point search
 
-## SFC: Safe Flight Corridor
+运动规划 motion planning 方法motion planning
+
+
+### SFC: Safe Flight Corridor
 
 <font color='Tomato'>Ref</font>
 
@@ -19,7 +22,7 @@ JPS jump point search
 | ![seed](imgs/output_seed.svg) | ![seed](imgs/output_line.svg) | ![seed](imgs/output_iterative.svg) | ![seed](imgs/output_ellipsoid.svg) |
 
 
-## GALAXY
+### GALAXY
 
 <font color='Tomato'>Ref</font>
 
@@ -31,3 +34,5 @@ JPS jump point search
 | ----------------------------------------- | -------------------------- |
 | 狭窄环境的多边形边角突出,难以覆盖整个车形 | 空旷环境下效果较好         |
 | ![tiny](imgs/galaxy_tiny.png)             | ![](imgs/galaxy_large.png) |
+
+依赖障碍物信息， 因此若障碍物分布不好，则找到的空旷区域会比较尖锐。

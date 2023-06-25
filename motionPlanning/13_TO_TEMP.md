@@ -187,7 +187,7 @@ General formulation of the TOPP problem:
         - [gpmp2: Gaussian Process Motion Planner 2](https://github.com/gtrll/gpmp2)
         - [2017 Search-based Motion Planning for Quadrotors using Linear Quadratic Minimum Time Control](https://arxiv.org/abs/1709.05401)
             - [source code]()
-        - [2019 - Guaranteed Sequential Trajectory Optimization (GuSTO)](https://github.com/StanfordASL/GuSTO.jl)
+        
     - grasp motion planning
         - [2020_ICRA_GOMP: Grasp-Optimized Motion Planning for Bin Picking]()
 - project
