@@ -12,7 +12,7 @@ positive semidefinite(psd):
 $$v^TXv\geq 0,  v \in \mathcal{R}^n$$
 
 - $S^n$: the set of symmetric $n\times n$ matrices
-- $S_+^n$: the set of  positive semidefinite(psd) symmetric $n\times n$ matrices
+- $S_+^n$: the set of  positive semidefinite(psd) symmetric $n\times n$ matrices, a closed convex cone
 - $S_{++}^n$: the set of  positive definite(psd) symmetric $n\times n$ matrices
 - $X\succeq 0$: x is symmetric and positive semidefinite
 - $X\succ 0$: x is symmetric and positive definite

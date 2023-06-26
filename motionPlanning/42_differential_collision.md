@@ -22,3 +22,12 @@ DCOL: a fast and fully differentiable collision-detection framework that reasons
 -  non-differentiable collision methods
     - GJK
     - enhanced-GJK
+
+
+**<font color='Tomato'>BACKGROUND</font>**
+
+- Conic Optimization
+- Differentiating Through a Cone Program
+
+**<font color='Tomato'>DCOL A LGORITHM</font>**
+
