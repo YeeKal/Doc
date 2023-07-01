@@ -5,6 +5,10 @@ tags:
 date: 2023-05-25
 ---
 
+## Background
+
+LP(线性规划)的高效求解大大促进了LP的广泛使用。研究者们向再非线性问题上也找到类似LP这种快速求解的特性，因此把注意力投到了LP中的非负约束， 即非负凸锥，(sets that are invariant by positive scaling of their elements).
+
 ## Basis
 
 positive semidefinite(psd):
@@ -39,7 +43,7 @@ $$M=\begin{bmatrix}P & v \\ V^t & d\end{bmatrix}$$
 
 在最优化里面每一个元素都是变量,至于怎么排列元素并不改变这一事实.
 
-**<font color='Tomato'>define linear function of $X$</font>**
+**<font color='Tomato'>define linear function of $X$</font>** 
 
 let $C(X)$ is a linear function of $X$, then $C(X)$ can be written as $C\bullet X$, where:
 
@@ -47,7 +51,7 @@ $$C\bullet X := \sum ^n_{i=1}\sum^n_{j=1}C_{ij}X_{ij}$$
 
 <font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>其本质乃是一个线性方程</font>
 
-**<font color='Tomato'>define semidefinite program(SDP)</font>**
+**<font color='Tomato'>define semidefinite program(SDP)</font>** in standard conic form
 
 $$\begin{aligned}\min \quad & C\bullet X \\
 s.t. \quad & A_i X = b_i, i = 1,\cdots,m \\
@@ -58,6 +62,15 @@ $C, A_1, \cdots, A_m$ are symmetric matrix, and $b\in \mathcal{R}^n$
 与标准LP问题类似,在LP中$x$位于非负象限的凸锥中,而这里$X$位于半正定矩阵所形成的凸锥集合中.
 
 通过构造对角元可以很容易把LP问题转化为SDP问题
+
+**<font color='Tomato'>Standard Inequality Form</font>**
+
+$$\begin{aligned}\min  \quad & c^Tx \\
+s.t. \quad & F_0+x_1F_1+\cdots + x_mF_m \succeq 0 \end{aligned}$$
+
+$c\in \mathcal{R}^n,x\in \mathcal{R}^n, F_0, \cdots, F_m$ are symmetric matrix
+
+
 
 
 **<font color='Tomato'>Semidefinite Programming Duality</font>**
@@ -73,7 +86,7 @@ MAXCUT problem
 
 ## SDP in Convex Optimization
 
-<font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>types of constraints that can be modeled in the SDP framework</font> : `linear inequalities`, `convex quadratic inequalities`, `lower bounds on matrix norms`, `lower bounds on determinants of symmetric positive semidefinite matrices`, `lower bounds on the geometric mean of a nonnegative vector`, plus many others.
+<font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:15px;'>types of constraints that can be modeled in the SDP framework</font> : `linear inequalities`, `convex quadratic inequalities`, `lower bounds on matrix norms`, `lower bounds on determinants of symmetric positive semidefinite matrices`, `lower bounds on the geometric mean of a nonnegative vector`, plus many others.
 
 <font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>problems which can be cast in the form of a semidefinite program</font>:`linear programming`, `optimizing a convex quadratic form subject to convex quadratic inequality constraints`, `minimizing the volume of an ellipsoid that covers a given set of points and ellipsoids`, `maximizing the volume of an ellipsoid that is contained in a given polytope`, plus a variety of maximum eigenvalue and minimum eigenvalue problems.
 
@@ -85,6 +98,10 @@ s.t. \quad & x^{T}Q_{i}x+q_{i}^{T}x+c_{i} \leq 0, i = 1,\cdots, m
 \end{aligned}$$
 
 where $Q_0\succeq 0, Q_i\succeq 0$
+
+## Applications
+
+https://inst.eecs.berkeley.edu/~ee127/sp21/livebook/l_sdp_apps.html
 
 ## Ref
 

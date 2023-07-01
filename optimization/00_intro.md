@@ -161,6 +161,7 @@ A_{eq}S=B_{eq}$$
 - project
     - [CppNumericalSolvers](https://github.com/PatWie/CppNumericalSolvers)
     - [optim](https://github.com/kthohr/optim)
+    - [neos algorithms](https://neos-guide.org/guide/algorithms/)
 - course
     - [stanford Convex Optimization 1](https://web.stanford.edu/class/ee364a/lectures.html)
     - [stanford Convex Optimization 2](https://web.stanford.edu/class/ee364b/lectures.html)

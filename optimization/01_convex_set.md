@@ -44,11 +44,12 @@ In words,  line segment joining any two elements lies entirely in set
 
 
 Examples:
--**<font color='Tomato'>直线和线段: </font>**
+
+- **<font color='Tomato'>直线和线段: </font>**
 - Norm ball: $\{x: ||x||\leq r \}$, for given norm $||\cdot||$, radius $r$
--**<font color='Tomato'>Hyperplane</font>**: $\{x: a^Tx = b\}$
--**<font color='Tomato'>Affine space</font>**: $\{x: A^Tx = b\}$
--**<font color='Tomato'>Polyhedron(多面体)</font>**
+- **<font color='Tomato'>Hyperplane</font>**: $\{x: a^Tx = b\}$
+- **<font color='Tomato'>Affine space</font>**: $\{x: A^Tx = b\}$
+- **<font color='Tomato'>Polyhedron(多面体)</font>**: $\{x: A^Tx \leq b\}$
 
 
 ## Affine Sets 仿射集
@@ -93,6 +94,8 @@ a表示一个向量, b是一个标量, 整个表达式可以看为向量x在向�
 超平面是凸集、仿射集，只有在过原点的时候是个凸锥。
 
 <font color='Tomato'>Affine space(仿射空间)</font>
+
+$L$ is an affine set $\iff L = \{x|Ax = b\}$ where $x \in R^n $, for some matrix $A$ and $b$.
 
 单纯性是线性组合的角度，而多面体是 多个线性不等式
 

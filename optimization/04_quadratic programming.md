@@ -18,6 +18,26 @@ $$\begin{aligned}
 
 $Q$ 可被认为是目标函数的Hessian matrix.
 
+## 几何视角
+
+- [quadratic forms](https://users.oden.utexas.edu/~omar/inverse_probs/numopt.pdf)
+- [geometry of the curves of the contour lines of f(x)=12xtAx+btx+c](https://math.stackexchange.com/questions/2883109/find-the-geometry-of-the-curves-of-the-contour-lines-of-fx-frac12xtax)
+
+1. 相比线性规划，QP的变化是二次引入的等高线(contour line)不再是直线， 这样最优解不再限制在角上，可能是边上或者内部。
+
+![qp_contour.jpg](imgs/qp_contour.jpg)
+[ref](https://optimization.cbe.cornell.edu/index.php?title=Quadratic_programming)
+
+2. 另一个则是非凸情况的产生。凸函数对应的是正定矩阵，非凸对应的是不定矩阵（indefinite）
+
+正定矩阵对应的等高线为椭圆。不定矩阵对应的为双曲线。
+
+![quadratic_forms_for_positive](imgs/quadratic_forms_for_positive.png)
+![quadratic_forms_for_indefinite](imgs/quadratic_forms_for_indefinite.png)
+![quadratic_forms_for_semidefinite](imgs/quadratic_forms_for_semi_definite.png)
+
+.png
+
 **常用求解方法：**
 
 1. 内点法 interior point
@@ -33,6 +53,11 @@ $Q$ 可被认为是目标函数的Hessian matrix.
 2. 如果Q是正定矩阵，则该问题有唯一的全局最小值。
 3. 若Q为非正定矩阵，则目标函数是有多个平稳点和局部极小点的NP问题。
 4. 如果Q=0，二次规划问题就变成线性规划问题
+
+目标函数和约束条件：
+
+1. Q是不是半正定的
+2. 是只有等式约束还是有不等式约束
 
 ## 无约束条件
 
@@ -84,5 +109,6 @@ $$\begin{bmatrix} Q & A^T \\ A & 0  \end{bmatrix}
 
 - blog
     - [Quadratic_programming](https://optimization.mccormick.northwestern.edu/index.php/Quadratic_programming)
+    - [一步一步走向锥规划 - QP](https://zhuanlan.zhihu.com/p/83841138)
 - pdf / book / notes
     - [Chapter3](https://www.math.uh.edu/~rohop/fall_06/Chapter3.pdf)

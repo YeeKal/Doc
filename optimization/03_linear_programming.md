@@ -79,6 +79,14 @@ $$P=\left\{\mathbf{x} \in \mathbf{R}^{n} \mid \mathbf{A} \mathbf{x}=\mathbf{b}, 
 ## dual problem
 
 
+## 经典问题
+
+**<font color='Tomato'>LADR：Least Absolute Deviation Regression </font>**
+
+把误差定义为曼哈顿距离(Manhattan distance)
+
+**<font color='Tomato'>Properties of symmetric matrices</font>**
+
 
 ## 单纯形法(simplex method)
 ## 椭圆法(Ellipsoid method)
@@ -88,3 +96,4 @@ $$P=\left\{\mathbf{x} \in \mathbf{R}^{n} \mid \mathbf{A} \mathbf{x}=\mathbf{b}, 
 ## ref
 
 - [线性规划的算法分析](https://www.jianshu.com/p/a0fc8a57f452)
+- [	EXAMPLE OF SIMPLEX PROCEDURE FOR A STANDARD LINEAR PROGRAMMING PROBLEM](http://math.uww.edu/~mcfarlat/s-prob.htm)
