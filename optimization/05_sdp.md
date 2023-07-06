@@ -90,6 +90,15 @@ MAXCUT problem
 
 <font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>problems which can be cast in the form of a semidefinite program</font>:`linear programming`, `optimizing a convex quadratic form subject to convex quadratic inequality constraints`, `minimizing the volume of an ellipsoid that covers a given set of points and ellipsoids`, `maximizing the volume of an ellipsoid that is contained in a given polytope`, plus a variety of maximum eigenvalue and minimum eigenvalue problems.
 
+SDP 中常见的构造方式是通过移项转化为 $u^TAu \geq 0$ 的形式， 然后把约束条件转变为半正定矩阵约束: $$A\succeq 0$$
+
+比如约束条件： 
+
+$$(Au)^T < u^TPu \quad \Rightarrow \quad u^TA^TPAu - u^TPu < 0 \\
+\Downarrow  \\
+P-A^TPA \succ 0
+$$
+
 **<font color='Tomato'>QCQP: quadratically constrained quadratic program</font>**
 
 $$\begin{aligned}
@@ -106,3 +115,4 @@ https://inst.eecs.berkeley.edu/~ee127/sp21/livebook/l_sdp_apps.html
 ## Ref
 
 - [Introduction to Semidefinite Programming](https://ocw.mit.edu/courses/6-251j-introduction-to-mathematical-programming-fall-2009/resources/mit6_251jf09_sdp/)
+- [F. Alizadeh · D. Goldfarb  Second-order cone programming]()
