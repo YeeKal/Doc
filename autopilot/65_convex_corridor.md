@@ -22,7 +22,30 @@ JPS jump point search
 | ![seed](imgs/output_seed.svg) | ![seed](imgs/output_line.svg) | ![seed](imgs/output_iterative.svg) | ![seed](imgs/output_ellipsoid.svg) |
 
 
-### GALAXY
+**<font color='Tomato'>SFC construction</font>**
+
+1. find ellipsoid
+    - 根据最近点缩小椭圆
+2. find polyhedron
+    - 一步步扩大寻找半平面
+3. bounding box: 裁剪
+4. shrink： 寻找更合适的半平面以包括起点和终点
+
+**<font color='Tomato'>Trajectory optimization</font>**
+
+**<font color='Tomato'>RHP: Receding Horizon Planning</font>**
+
+- execution planning $T_e$
+- re-planning for the next epoch when the robot is executing the trajectory at the current epoch
+
+**<font color='Tomato'>ref paper</font>**
+
+- [Efficient mixed-integer planning for uavs in cluttered environments (ICRA), 2015]()
+- [2015 Computing large convex regions of obstacle-free space through semidefinite programming]()
+
+
+
+## GALAXY
 
 <font color='Tomato'>Ref</font>
 

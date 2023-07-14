@@ -48,6 +48,10 @@ subgradient method python
     - [凸优化学习笔记](https://www.zhihu.com/column/c_1201908961185931264)
     - [【凸优化笔记2】-凸函数、下水平集、范数](https://zhuanlan.zhihu.com/p/102098039)
 
+## python
+
+- [Computational Physics with Python: Partial Differential Equations](https://medium.com/@_monitsharma/computational-physics-with-python-partial-differential-equations-2b5054115c0e)
+
 ## convex decomposition
 
 process of turning a single concave hull into multiple convex hulls

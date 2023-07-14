@@ -68,6 +68,8 @@ $$\begin{aligned}
 
 Orthogonal Collocation Method 正交配置法, 是加权余项法(Method of Weighted Residuals)的一种, 与传统差分法相比，具有计算精度高和稳定性好等优点.
 
+mathematical programs with complementarity constraints (MPCCs)
+
 ## DCA
 
 2022 Differentiable Collision Avoidance Using Collision Primitives
