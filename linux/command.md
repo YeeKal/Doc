@@ -51,11 +51,6 @@ pip install <package> -i <source-url>
 
 git config --global https.proxy 'socks5://127.0.0.1:1080'
 
-9. vscode 配置
-
-- 官网下载.deb
-- 
-
 10. linux 实时内核补丁
 
 - [patch](https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/)
