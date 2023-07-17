@@ -7,6 +7,9 @@ date: 2023-01-12
 
 ## Intro
 
+1. MIQP
+2. Bilevel Optimization
+3. Mathematical Program with Complementarity Constraints (MPCC)
 ## methods
 
 - 分形搜索 Fractal Search
@@ -86,6 +89,9 @@ Narrow-Roads-Timed-Elastic-Band
 
 ## ref
 
+
+- project
+    - [Collision Avoidance in Tightly-Constrained Environments without Coordination: a Hierarchical Control Approach](https://sites.google.com/berkeley.edu/sg-control)
 - paper
     - [2016 Optimisation based path planning for car parking in narrow environments]()
     - [2013 A fast motion planning algorithm for car parking based on static optimization]()
@@ -96,6 +102,9 @@ Narrow-Roads-Timed-Elastic-Band
     - [Solving Constrained Trajectory Planning Problems Using Biased Particle Swarm Optimization](https://dspace.lib.cranfield.ac.uk/bitstream/handle/1826/16453/Solving_Constrained_Trajectory_Planning_problems-2021.pdf?sequence=4)
     - [2020-An Optimization-Based Receding Horizon Trajectory Planning Algorithm](https://www.sciencedirect.com/science/article/pii/S2405896320330810)
     - [kinodynamic-motion-planning-benchmark](https://github.com/IMRCLab/kinodynamic-motion-planning-benchmark)
+    - [2008 - On-line Path Planning For an Autonomous Vehicle in an Obstacle Filled Environment](https://folk.ntnu.no/skoge/prost/proceedings/cdc-2008/data/papers/1745.pdf)
+    - [2021 - Fast UAV Trajectory Optimization using Bilevel Optimization with Analytical Gradients](https://arxiv.org/pdf/1811.10753.pdf)
+    - [2019-A bilevel optimal motion planning (BOMP) model with application to autonomous parking]()
 - paper(NN)
     - [Time-Optimized Online Planning For Parallel Parking With Nonlinear Optimization and Improved Monte Carlo Tree Search](https://www.semanticscholar.org/paper/Time-Optimized-Online-Planning-For-Parallel-Parking-Song-Chen/9ace2c192aea884f16ceac206ec278007139651d)
 - course

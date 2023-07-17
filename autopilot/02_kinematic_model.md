@@ -5,6 +5,16 @@ tags: autopilot
 date: 2021-08-10
 ---
 
+- unicycle car model
+- length scale
+- time scale
+
+normalize tf:
+
+dx * dt -> dx
+
+- collision
+
 ## 自行车模型
 
 ![bicycle_model](imgs/bicycle_model.jpg)

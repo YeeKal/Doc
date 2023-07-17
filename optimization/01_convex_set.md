@@ -419,24 +419,6 @@ $$
 $$
 3. Write $\nabla^2 f(x)=\operatorname{diag}(z)-z z^T$, where $z_i=e^{x_i} /\left(\sum_{\ell=1}^n e^{x_{\ell}}\right)$. This matrix is diagonally dominant, hence positive semidefinite
 
-
-## Advanced
-
-<font color='Tomato'>Subgradient(次梯度)</font>
-
-用于解决并不总是处处可导的凸函数
-
-类比凸函数的一阶条件，给定函数$f$， 对于$\forall y$， 如果满足：
-
-$$f(y)\geq f(x)+g^T(y-x)$$
-
-则称$g$是函数$f$在点$x$处的次梯度。
-
-次梯度不唯一，也可能不存在。
-
-把$f$在$x$处所有次梯度构成的集合称为$f$在$x$处的<font style='background: #007f16;color: #ffffff'>次微分(Subdifferential)</font>, 记作$\partial f(x)$
-
-- [ref code with python](https://github.com/minigonche/subgradient_descent/blob/master/subgradient.py)
 ## ref
 
 - blog

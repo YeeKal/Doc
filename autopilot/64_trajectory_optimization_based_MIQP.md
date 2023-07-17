@@ -1,5 +1,5 @@
 ---
-title: autonomous driving planner
+title: trajectory_optimization_based_MIQP
 categories: autopilot
 tags: autopilot
 date: 2023-02-03

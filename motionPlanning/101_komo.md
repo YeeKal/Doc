@@ -138,3 +138,8 @@ shared_ptr<ScalarFunction> rai::Shape::functional(bool worldCoordinates){
     }
   }
 ```
+
+## ref
+
+- Optimization-based: KOMO(K-Order Markov Optimization) (using RAI https://github.com/MarcToussaint/rai)
+	- [doc](https://github.com/MarcToussaint/rai/wiki)

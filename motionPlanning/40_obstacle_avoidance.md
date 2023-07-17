@@ -70,6 +70,20 @@ Orthogonal Collocation Method 正交配置法, 是加权余项法(Method of Weig
 
 mathematical programs with complementarity constraints (MPCCs)
 
+
+**<font color='Tomato'>Collision avoidance</font>**
+
+$$\begin{array}{cc}
+\min _{\alpha_i, \alpha_j} & \left\|V_i(x, y) \alpha_i-V_j(x, y) \alpha_j\right\| \\
+\text { s.t. } & 1^T \alpha_i=1,1^T \alpha_j=1 \\
+& \alpha_i, \alpha_j \geq 0
+\end{array}$$
+
+where $1^T \alpha_i=1$ means the convex linear combination of the polytopes.
+
+Reformulate using First-order stationary conditions.
+
+
 ## DCA
 
 2022 Differentiable Collision Avoidance Using Collision Primitives

@@ -1,13 +1,21 @@
 ---
-title: kinodynamic_motion_planning
-categories: motion planning
-tags: kinodynamic
-date: 2023-02-04
----  
+title: 低维下的运动规划
+categories: autopilot
+tags: autopilot
+date: 2021-04-27
+---
+
+## planning methods
+
+1. 碰撞检测
+2. 状态方程
+3. 换档点的优化
+
 
 - [bench-mr](https://github.com/robot-motion/bench-mr)
 - [chomp-multigrid](https://github.com/eric-heiden/chomp-multigrid/tree/4cd8abef27e51204a0cdd2b3ce411b88eee411c0)
 https://github.com/sailist/Awesome-Paper-List-py/blob/master/pdfs/sync-bypy.py
+
 ## ref
 
 - blog
@@ -23,6 +31,12 @@ https://github.com/sailist/Awesome-Paper-List-py/blob/master/pdfs/sync-bypy.py
 - library
     - * Search-based: ARA* (using SBPL http://www.sbpl.net/)
     - * Sampling-based: SST* (using OMPL https://ompl.kavrakilab.org/)
-    - * Optimization-based: KOMO(K-Order Markov Optimization) (using RAI https://github.com/MarcToussaint/rai)
-        - [doc](https://github.com/MarcToussaint/rai/wiki)
     - * [Hybrid: db-A*](https://github.com/IMRCLab/kinodynamic-motion-planning-benchmark)
+
+## ref
+
+- blog
+- paper
+    - [Implementation of Autonomous Parking with Two Path Planning Algorithms](https://web.archive.org/web/20200608071214/http://kth.diva-portal.org/smash/get/diva2:1329148/FULLTEXT01.pdf)
+- project
+    - [rrt_reeds_shepp](https://github.com/sjs5904/Reeds-Shepp/blob/master/rrt_reeds_shepp.py)

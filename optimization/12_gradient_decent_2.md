@@ -134,4 +134,46 @@ $$f\left(x^{(k)}\right)-f^{\star} \leq c^k\frac{L}{2}||x^{(0)}-x^{\star}||_2^2, 
 
 ## Practice at the condition
 
-## 
+A look at the conditions for a simple problem，$f(\beta) = \frac{1}{2}||y-X\beta||_2^2$
+
+Lipschitz continuity of $\nabla f$:
+- This means $\nabla^2f(x)\preceq LI$
+- As $\nabla^2f(\beta) = X^TX$, we have $L = \sigma^2_{max}(X)$
+
+Strong convexity of $f$ :
+- This means $\nabla^2 f(x) \succeq m I$
+- As $\nabla^2 f(\beta)=X^T X$, we have $m=\sigma_{\min }^2(X)$
+- If $X$ is wide-i.e., $X$ is $n \times p$ with $p>n$-then $\sigma_{\min }(X)=0$, and $f$ can't be strongly convex
+- Even if $\sigma_{\min }(X)>0$, can have a very large condition number $L / m=\sigma_{\max }(X) / \sigma_{\min }(X)$
+
+A function $f$ having Lipschitz gradient and being strongly convex satisfies:
+$$
+m I \preceq \nabla^2 f(x) \preceq L I \text { for all } x \in \mathbb{R}^n,
+$$
+for constants $L>m>0$
+Think of $f$ being sandwiched between two quadratics
+May seem like a strong condition to hold globally (for all $x \in \mathbb{R}^n$ ).
+But a careful look at the proofs shows that we only need Lipschitz gradients/strong convexity over the sublevel set
+$$
+S=\left\{x: f(x) \leq f\left(x^{(0)}\right)\right\}
+$$
+This is less restrictive.
+
+## Practicalities
+
+**<font color='Tomato'>Stopping rules:</font>**
+
+stop when $||\nabla f(x)||_2$ is small
+
+- recall $\nabla f(x^*) = 0$ at solution $x^*$
+- if $f$ is strongly convex with parameter $m$, then:
+
+$$||\nabla f(x)||_2\leq \sqrt{2m\epsilon} \Rightarrow f(x) - f^* \leq \epsilon$$
+
+## Forward stagewise regression
+
+## Steepest descent
+
+## Gradient boosting
+
+不是更新函数的参数而是更新函数本身。如果有误差则添加一个新的函数

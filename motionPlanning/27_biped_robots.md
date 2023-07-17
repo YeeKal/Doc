@@ -57,6 +57,7 @@ A light-weight and extensible C++ library for trajectory optimization for legged
     - [ZMP-Preview-Control-WPG](https://github.com/ekorudiawan/ZMP-Preview-Control-WPG)
     - [humanoid_robot](https://github.com/neka-nat/humanoid_robot)
     - [gym - BipedalWalker](https://github.com/openai/gym/wiki/BipedalWalker-v2)
+    - [Bilevel Planner](https://github.com/OxDuke/Bilevel-Planner)
 - biped 
     - [Planar-Bipedal-Walker](https://github.com/YongxinJackGuo/Planar-Bipedal-Walker)
     - [python implementation of passive dynamic walking](https://github.com/hope-yao/Bipedal)

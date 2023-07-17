@@ -115,7 +115,6 @@ Discovery of Complex Behaviors through Contact-Invariant Optimization
     - [Optimal Control Framework - python](https://github.com/jhu-asco/optimal_control_framework)
     - [Geometric Control Optimization and Planning Library](https://github.com/jhu-asco/gcop)
     - [optimTraj - matlab](https://github.com/MatthewPeterKelly/OptimTraj)
-    - [OBCA: Optimization-Based Collision Avoidance](https://github.com/XiaojingGeorgeZhang/OBCA)
     - [ALTRO: TrajectoryOptimizatio](https://github.com/RoboticExplorationLab/TrajectoryOptimization.jl)
     - [Pontryagin-Differentiable-Programming](https://github.com/wanxinjin/Pontryagin-Differentiable-Programming)
 - paper
