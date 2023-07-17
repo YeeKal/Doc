@@ -33,6 +33,8 @@ A light-weight and extensible C++ library for trajectory optimization for legged
 
 ## ref
 
+- Video
+    - [Tutorial: Gait and Trajectory Optimization for Legged Robots](https://www.youtube.com/watch?v=KhWuLvb934g)
 - course
     - [COMS 6731 HUMANOID ROBOTS](http://www.cs.columbia.edu/~allen/S19/)
 

@@ -38,9 +38,26 @@ x=x_k-\frac{f'(x_k)}{f''(x_k)}$$
 令$d_k=-\frac{f'(x_k)}{f''(x_k)}$是迭代中每一步更新的步长. 对于有n维变量的函数而言，偏导数$\Delta f(x)=f'(x_k)\in R^n, H(f(x))=f''(x_k)\in R^{(n\times n)}$,所以$d_k$并不是由两个矩阵直接相除，而是通过解方程$H(f(x))d_k=-\Delta f(x)$得到。
 
 
-## 随机梯度下降(SGD)
+## 梯度下降
 
 $$x=x_k-\alpha \Delta f(x)$$
+
+另一种视角：
+
+**<font color='Tomato'>Quadratic approximation</font>**
+
+
+define the expansion where replacing usual $\nabla^2f(x)$ by $\frac{1}{t}I$:
+
+$$f(y) \approx f(x)+\nabla f(x)^T(y-x)+\frac{1}{2 t}\|y-x\|_2^2$$
+
+which can be refered as the linear approximzation to $f$, the optimal value is:
+
+$$x^+ = \arg \min_y f(x)+\nabla f(x)^T(y-x)+\frac{1}{2 t}\|y-x\|_2^2 \\
+\Downarrow  \\
+x^+ = x - t \nabla f(x)$$
+
+牛顿法可以看作根据泰勒二次展开的线性近似进行推导，而剃度下降是把泰勒展开中的二次项进一步做近似而得到。两者最后都统一成根据梯度信息进行迭代，只是梯度的系数各不一样。
 
 ## 机器学习中的实践用法变种
 
@@ -76,29 +93,11 @@ $$\theta_{j}:=\theta_{j}+\alpha\left(y^{(i)}-h_{\theta}\left(x^{(i)}\right)\righ
 - 牛顿法需要计算二阶导数，这使得牛顿法在以离散数据为基础的机器学习上很难适用
 
 
-## 符号
 
 
-- $\Delta f(x)$: 单个多变量实函数的导数
 
-    $$\begin{bmatrix} \frac{\partial f}{\partial x_1} \\ \vdots \\ \frac{\partial f}{\partial x_n} \end{bmatrix}$$
 
-- 雅克比矩阵：m个实函数对n个变量的偏导数：
 
-    $$\left[\begin{array}{ccc}
-    \frac{\partial y_{1}}{\partial x_{1}} & \cdots & \frac{\partial y_{1}}{\partial x_{n}} \\
-    \vdots & \ddots & \vdots \\
-    \frac{\partial y_{m}}{\partial x_{1}} & \cdots & \frac{\partial y_{m}}{\partial x_{n}}
-    \end{array}\right]$$
-
-- 海森矩阵(Hessian matrix): 单个多变量实函数的二阶偏导
-
-    $$\left[\begin{array}{cccc}
-    \frac{\partial^{2} f}{\partial x_{1}^{2}} & \frac{\partial^{2} f}{\partial x_{1} \partial x_{2}} & \cdots & \frac{\partial^{2} f}{\partial x_{1} \partial x_{n}} \\
-    \frac{\partial^{2} f}{\partial x_{2} \partial x_{1}} & \frac{\partial^{2} f}{\partial x_{2}^{2}} & \cdots & \frac{\partial^{2} f}{\partial x_{2} \partial x_{n}} \\
-    \vdots & \vdots & \ddots & \vdots \\
-    \frac{\partial^{2} f}{\partial x_{n} \partial x_{1}} & \frac{\partial^{2} f}{\partial x_{n} \partial x_{2}} & \cdots & \frac{\partial^{2} f}{\partial x_{n}^{2}}
-    \end{array}\right]$$
 
 
 

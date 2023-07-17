@@ -116,9 +116,6 @@ v_{t}=\beta_{2} * v_{t-1}+\left(1-\beta_{2}\right) g_{t}^{2}    \\
 在Adam的基础上增加Nesterov项: `Nesterov + Adam = Nadam`
 $$g_{t}=\nabla f\left(w_{t}-\alpha \cdot m_{t-1} / \sqrt{v_{t-1}}\right)$$
 
-
-
-
 ## ref
 
 

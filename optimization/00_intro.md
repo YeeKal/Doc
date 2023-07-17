@@ -15,6 +15,10 @@ date: 2019-07-12
 
 ## 数学符号
 
+- $\Delta f(x)$: 单个多变量实函数的导数
+
+    $$\begin{bmatrix} \frac{\partial f}{\partial x_1} \\ \vdots \\ \frac{\partial f}{\partial x_n} \end{bmatrix}$$
+
 $\nabla$: nabla算子，向量微分算子，表示对各个方向求梯度
 
 三维情况下， $\nabla=\frac{\partial}{\partial x} \mathbf{i}+\frac{\partial}{\partial y} \mathbf{j}+\frac{\partial}{\partial z} \mathbf{k}$ 或 $\nabla=\left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z}\right)$
@@ -165,7 +169,7 @@ A_{eq}S=B_{eq}$$
 - course
     - [stanford Convex Optimization 1](https://web.stanford.edu/class/ee364a/lectures.html)
     - [stanford Convex Optimization 2](https://web.stanford.edu/class/ee364b/lectures.html)
-    - [cmu Convex Optimization: Spring 2015](https://www.stat.cmu.edu/~ryantibs/convexopt-S15/)
+    - **[cmu Convex Optimization: Spring 2015](https://www.stat.cmu.edu/~ryantibs/convexopt-S15/)**
     - [Optimization Theory](https://www.math.uh.edu/~rohop/fall_06/)
     - [nonlinear programming](http://ocw.nctu.edu.tw/course_detail.php?bgid=3&gid=0&nid=358)
     - [ECE236C - Optimization Methods for Large-Scale Systems]()
@@ -174,7 +178,5 @@ A_{eq}S=B_{eq}$$
     - [Introduction To Mathematical Programming: 多实践](https://ocw.mit.edu/courses/6-251j-introduction-to-mathematical-programming-fall-2009/pages/readings/?utm_source=wechat_session&utm_medium=social&utm_oi=737654678531096576)
     - [Convex Optimization](https://www.mccormick.northwestern.edu/industrial/academics/courses/descriptions/keep/458.html)
 - [bilibili-线性规划 方述诚](https://www.bilibili.com/video/av455050227/)
-
-
-
-
+- dataset
+    - [Optimization Test Problems](https://www.sfu.ca/~ssurjano/optimization.html)
