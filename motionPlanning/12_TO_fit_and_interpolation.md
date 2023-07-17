@@ -1,5 +1,5 @@
 ---
-title: 轨迹优化之轨迹规划
+title: 轨迹插值和轨迹拟合
 categories: motion planning
 tags: planning
 date: 2021-08-17

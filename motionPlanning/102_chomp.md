@@ -123,3 +123,5 @@ ps->setActiveCollisionDetector(collision_detection::CollisionDetectorAllocatorHy
     - [chomp-multigrid](https://github.com/gprice1/chomp)
     - [or_cdchomp](https://github.com/personalrobotics/or_cdchomp)
     - [chomp_planner](https://github.com/mktk1117/chomp_planner)
+    - [chomp-multigrid](https://github.com/eric-heiden/chomp-multigrid/tree/4cd8abef27e51204a0cdd2b3ce411b88eee411c0)
+https://github.com/sailist/Awesome-Paper-List-py/blob/master/pdfs/sync-bypy.py
