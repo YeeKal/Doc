@@ -1,3 +1,9 @@
+---
+title: Claude 2
+categories: blog
+tags: blog
+date: 2023-07-24
+---
 ## Claude 2
 
 Claude 升级到二代！注册流程比ChatGPT更简单。

@@ -1,4 +1,4 @@
-## quaternion
+## Quaternion
 
 [kwə'tɝnɪən], 四元数， 复数在三维的推广，是一种新定义的数学表达形式。形式为：
 
@@ -49,14 +49,14 @@ $$q_r=r \\
 q_d=\frac{1}{2}tr$$
 where r is a unit quaternion representing the rotation and t is the quaternion describing the translation.
 
-**operation**
+**<font color='Tomato'>Operation</font>**
 
 - scalar: $aq=aq_r+a\epsilon q_d$
 - multiplication: $q_1+q_2=q_{r1}+q_{r2}+\epsilon (q_{d1}+q_{d2})$
 - conjugate: $q^*={q_r}^*+\epsilon {q_d}^*$
 - unit condition:$||q||=1,\quad {q_r}^*q_d+{q_d}^*q_r=0$
 
-**空间变换**
+**<font color='Tomato'>空间变换</font>**
 
 $$Trans(p)=qpq^*$$
 
@@ -76,3 +76,6 @@ $$e_{12}=q_1q_2^*$$
 the distance of two dual quaternion:
 $$\mathcal{D}(q_1,q_2)=\mathcal{R}(e_{12})$$
 
+## Ref
+
+- [PyXYZ with quaternion](https://github.com/VideojogosLusofona/PyXYZ/tree/main)

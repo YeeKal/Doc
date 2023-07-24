@@ -23,3 +23,14 @@ date: 2023-07-21
 ## LoRA
 
 - [LoRA](https://github.com/microsoft/LoRA)
+
+## claude2
+
+- 镜像站： https://chat.claudeai.ai/chats
+
+## 模型部署
+
+- [gradio: Build & Share Delightful Machine Learning Apps](https://www.gradio.app/) 
+- [SwanHub: AI开源社区](https://swanhub.co/)
+- [Hugging Face: The AI community building the future](https://huggingface.co/spaces)
+- [LangChain: Power your applications with Large Language Models](https://www.langchain.com/)

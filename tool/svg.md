@@ -4,8 +4,173 @@ categories:  svg
 tags: tool
 date: 2022-10-17
 ---
+## Ref
 
-- [ ] hjsdf
+- [deathfromabove](http://deathfromabove.co/)
+- [transform-viewport-to-element-coordinates](https://davidhamann.de/2023/01/13/svg-javascript-transform-viewport-to-element-coordinates/)
+- [svg interactive map](https://www.petercollingridge.co.uk/tutorials/svg/interactive/interactive-map/)
+- [svg interactive map code](https://github.com/petercollingridge/code-for-blog/blob/master/svg-interaction/interactive-map/blank_Africa_map.svg)
+
+## svg interative map
+
+![display_names](imgs/svg-loaders/colour_with_class.svg)
+
+## plot and table
+
+**<font color='Tomato'>Iterative bar table</font>**
+
+<div>
+<svg class="chart" width="420" height="150" aria-labelledby="title desc" role="img">
+  <title id="title">A bar chart showing information</title>
+  <desc id="desc">4 apples; 8 bananas; 15 kiwis; 16 oranges; 23 lemons</desc>
+  <g class="bar">
+    <rect width="40" height="19" fill="red" ></rect>
+    <text x="45" y="9.5" dy=".35em">4 apples</text>
+  </g>
+  <g class="bar">
+    <rect width="80" height="19" y="20"></rect>
+    <text x="85" y="28" dy=".35em">8 bananas</text>
+  </g>
+  <g class="bar">
+    <rect width="150" height="19" y="40"></rect>
+    <text x="150" y="48" dy=".35em">15 kiwis</text>
+  </g>
+  <g class="bar">
+    <rect width="160" height="19" y="60"></rect>
+    <text x="161" y="68" dy=".35em">16 oranges</text>
+  </g>
+  <g class="bar">
+    <rect width="230" height="19" y="80"></rect>
+    <text x="235" y="88" dy=".35em">23 lemons</text>
+  </g>
+</svg>
+<style>
+  .bar {
+  fill: red; /* changes the background */
+  fill-opacity: 0.4;
+  height: 21px;
+  transition: fill .3s ease;
+  cursor: pointer;
+  font-family: Helvetica, sans-serif;
+}
+.bar text {
+  color: black;
+}
+.bar:hover,
+.bar:focus {
+  fill: black;
+}
+.bar:hover text,
+.bar:focus text {
+  fill: red;
+}
+</style>
+</div>
+
+**<font color='Tomato'>Line Chart</font>**
+
+<svg viewBox="0 0 500 150" class="chart">
+<polyline
+     fill="none"
+     stroke="#0074d9"
+     stroke-width="2"
+     points="
+       00,120
+       20,60
+       40,80
+       60,20
+       80,80
+       100,80
+       120,60
+       140,100
+       160,90
+       180,80
+       200, 110
+       220, 10
+       240, 70
+       260, 100
+       280, 100
+       300, 40
+       320, 0
+       340, 100
+       360, 100
+       380, 120
+       400, 60
+       420, 70
+       440, 80
+     "/>
+</svg>
+
+## axes and labels
+
+<div>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="graph" aria-labelledby="title" role="img">
+  <title id="title">A line chart showing some information</title>
+<g class="grid x-grid" id="xGrid">
+  <line x1="90" x2="90" y1="5" y2="371"></line>
+</g>
+<g class="grid y-grid" id="yGrid">
+  <line x1="90" x2="705" y1="370" y2="370"></line>
+</g>
+  <g class="labels x-labels">
+  <text x="100" y="400">2008</text>
+  <text x="246" y="400">2009</text>
+  <text x="392" y="400">2010</text>
+  <text x="538" y="400">2011</text>
+  <text x="684" y="400">2012</text>
+  <text x="400" y="440" class="label-title">Year</text>
+</g>
+<g class="labels y-labels">
+  <text x="80" y="15">15</text>
+  <text x="80" y="131">10</text>
+  <text x="80" y="248">5</text>
+  <text x="80" y="373">0</text>
+  <text x="50" y="200" class="label-title">Price</text>
+</g>
+<g class="data" data-setname="Our first data set">
+  <circle cx="90" cy="192" data-value="7.2" r="4"></circle>
+  <circle cx="240" cy="141" data-value="8.1" r="4"></circle>
+  <circle cx="388" cy="179" data-value="7.7" r="4"></circle>
+  <circle cx="531" cy="200" data-value="6.8" r="4"></circle>
+  <circle cx="677" cy="104" data-value="6.7" r="4"></circle>
+</g>
+</svg>
+<style>
+  body {
+  font-family: 'Open Sans', sans-serif;
+}
+.graph .labels.x-labels {
+  text-anchor: middle;
+}
+.graph .labels.y-labels {
+  text-anchor: end;
+}
+.graph {
+  height: 500px;
+  width: 800px;
+}
+.graph .grid {
+  stroke: #ccc;
+  stroke-dasharray: 0;
+  stroke-width: 1;
+}
+.labels {
+  font-size: 13px;
+}
+.label-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  fill: black;
+}
+.data {
+  fill: red;
+  stroke-width: 1; 
+}
+</style>
+</div>
+
+
 
 ## spin
 
@@ -253,16 +418,10 @@ stroke-width="1" fill="none"/>
 
 - pie
 
-<figure>
-  <figcaption>
-    Percentage of world population by continent
-  </figcaption>
-  
-  <div class="buttons"></div>
-  <svg width="100" height="100" class="chart">
+
+<svg width="100" height="100" class="chart">
     <circle r="25" cx="50" cy="50" class="pie"/>
-  </svg>
-</figure>
+</svg>
 
 ## ref
 
