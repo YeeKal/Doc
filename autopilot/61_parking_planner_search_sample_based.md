@@ -11,6 +11,9 @@ date: 2023-01-12
 
 - [jps3d](https://github.com/KumarRobotics/jps3d/tree/master)
 
+## 2023 A Multi-Heuristic Search-based Motion Planning for Automated Parking
+
+- [paper](https://arxiv.org/pdf/2307.07857.pdf)
 
 ## 2022 Continuous-Curvature Target Tree Algorithm for Path Planning in Complex Parking Environments
 
