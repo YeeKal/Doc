@@ -27,7 +27,7 @@ date: 2023-07-21
 ## claude2
 
 - 镜像站： https://chat.claudeai.ai/chats
-
+- claude 2 web api: https://github.com/all-in-aigc/claude-webapi
 ## Bard
 
 - [Bard-API](https://github.com/dsdanielpark/Bard-API)
