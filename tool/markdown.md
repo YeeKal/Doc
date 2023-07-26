@@ -4,10 +4,49 @@ categories: note
 tags: tool
 date: 2023-01-10
 ---
+
 ## useful tools  
 
 - [List_of_LaTeX_mathematical_symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
 
+
+## table no borders
+
+<style>
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+   border: 1px solid black;
+}
+blockquote {
+    border-left: solid blue;
+    padding-left: 10px;
+}
+</style>
+
+| Column One    | Column Two    |
+|---------------|---------------|
+| data cell one | data cell two |
+
+
+## fig caption
+
+**<font color='Tomato'>use table</font>**
+
+| ![space-1.jpg](https://picsum.photos/600/400) |
+|:---------------------------------------------:|
+|                   *caption*                   |
+
+**<font color='Tomato'>img </font>**
+
+
+<img src="https://picsum.photos/600/400" alt="alt text" title="image Title" width="150"/>
+
+<figure class="f-img">
+<figcaption>VSCode with this plugin</figcaption>
+<img src="https://picsum.photos/600/400" alt="Figure" width="600" height="400">
+</figure>
 
 ## block
 
@@ -294,14 +333,14 @@ Here is a simple footnote[^1]. With some additional text after it. head[^head]
 		],
 		"description": "latex-align"
 	},
-	"color": {
-		"prefix": "color",
+	"tt": {
+		"prefix": "tt",
 		"body": [
-			"<font color='Tomato'>$1</font>"
+			"**<font color='Tomato'>$1</font>**"
 		],
 		"description": "font color"
 	},
-		"note": {
+	"note": {
 		"prefix": "note",
 		"body": [
 			"<font style='background: #007f16;color: #ffffff;opacity:1.0;border-radius: 5px; padding:5px;'>$1</font>"
