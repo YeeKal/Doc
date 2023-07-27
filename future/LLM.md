@@ -44,6 +44,7 @@ HSID=A3_CaFT2X0m94AnbJ; SSID=AmkWgfL5EkqIG0DSJ; APISID=KhJqpFU24iNOzUyl/AhaERC9i
 - [gradio: Build & Share Delightful Machine Learning Apps](https://www.gradio.app/) 
 - [streamlit](https://streamlit.io/)
 - [LangChain: Power your applications with Large Language Models](https://www.langchain.com/)
+- [ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web)
 
 ## AI 开源社区
 

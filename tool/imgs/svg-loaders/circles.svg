@@ -1,4 +1,5 @@
-<svg width="135" height="135" viewBox="0 0 135 135" xmlns="http://www.w3.org/2000/svg" fill="#29612c">
+<svg width="600" height="135" viewBox="0 0 600 135" xmlns="http://www.w3.org/2000/svg" fill="#29612c">
+   <g>
     <path d="M67.447 58c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10zm9.448 9.447c0 5.523 4.477 10 10 10 5.522 0 10-4.477 10-10s-4.478-10-10-10c-5.523 0-10 4.477-10 10zm-9.448 9.448c-5.523 0-10 4.477-10 10 0 5.522 4.477 10 10 10s10-4.478 10-10c0-5.523-4.477-10-10-10zM58 67.447c0-5.523-4.477-10-10-10s-10 4.477-10 10 4.477 10 10 10 10-4.477 10-10z">
         <animateTransform
             attributeName="transform"
@@ -17,4 +18,10 @@
             dur="8s"
             repeatCount="indefinite"/>
     </path>
+    </g>
+
+    <g>
+    <rect id="rounded-rectangle" x="200" y="15" height="80" width="300"  rx="10" stroke-width="1" fill="green" opacity="0.5" /> 
+      <text x="220" y="70" fill="white" opacity="0.3" style="font-size: 55px">小行星齿轮</text>
+    </g>
 </svg>
