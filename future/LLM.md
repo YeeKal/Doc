@@ -20,6 +20,8 @@ date: 2023-07-21
 - [meta-llama](https://huggingface.co/meta-llama)
 - [中文 Falcon & LLaMA & OpenLLaMA 大模型](https://github.com/CVI-SZU/Linly)
 
+- [tiny llama2](https://github.com/karpathy/llama2.c/tree/master)
+
 ## LoRA
 
 - [LoRA](https://github.com/microsoft/LoRA)
@@ -53,6 +55,7 @@ HSID=A3_CaFT2X0m94AnbJ; SSID=AmkWgfL5EkqIG0DSJ; APISID=KhJqpFU24iNOzUyl/AhaERC9i
 
 ## paper&tutorial
 
+- [openai-quickstart](https://github.com/DjangoPeng/openai-quickstart)
 - B站[李沐](https://www.zhihu.com/search?q=%E6%9D%8E%E6%B2%90&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2990037077%7D)老师的视频课程
 - 哈工大的[调研报告](https://www.zhihu.com/search?q=%E8%B0%83%E7%A0%94%E6%8A%A5%E5%91%8A&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2990037077%7D)：ChatGPT-调研报告, 3.6
 - OpenAI的三篇实验报告，尤其是Instruct-GPT和GPT4的报告
