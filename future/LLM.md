@@ -13,6 +13,7 @@ date: 2023-07-21
 ## Llama
 
 - [blog: Every Resource you need](https://www.philschmid.de/llama-2)
+- [llama.cpp](https://github.com/ggerganov/llama.cpp)
 
 - [Llama2-Chinese](https://github.com/FlagAlpha/Llama2-Chinese)
     - [FlagAlpha: huggingface api](https://huggingface.co/FlagAlpha)

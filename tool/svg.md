@@ -172,7 +172,6 @@ date: 2022-10-17
 </div>
 
 
-
 ## spin
 
 <div style="color:#00FF00;width:200px;background-color: powderblue;">
