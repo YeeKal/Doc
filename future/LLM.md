@@ -49,6 +49,12 @@ HSID=A3_CaFT2X0m94AnbJ; SSID=AmkWgfL5EkqIG0DSJ; APISID=KhJqpFU24iNOzUyl/AhaERC9i
 - [LangChain: Power your applications with Large Language Models](https://www.langchain.com/)
 - [ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web)
 
+## 独立开发站
+
+- [gpt+pic no free](http://ai.wydxda.ltd/)
+- [api-usage on vercel](https://github.com/mazzzystar/api-usage)
+- [llm: monitor your OpenAI API usage](https://llm.report/)
+
 ## AI 开源社区
 
 - [Hugging Face: The AI community building the future](https://huggingface.co/spaces)

@@ -5,6 +5,11 @@ tags: ui
 date: 2023-07-24
 ---
 
+## twilwind css
+
+- [customizing-colors](https://tailwindcss.com/docs/customizing-colors)
+- [playground foe tailwind](https://play.tailwindcss.com/)
+
 
 ## W3T template
 

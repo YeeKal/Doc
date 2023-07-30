@@ -9,6 +9,21 @@ date: 2023-01-10
 
 - [List_of_LaTeX_mathematical_symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
 
+## progress bar
+
+━━━━━━━━━⚫⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯━━━━━━━─
+
+`[████████████████████████████............] 70%`
+
+#####⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
+
+> ■■■□□□□□□□ 30%
+
+- [unicode-progress-bars](https://github.com/Changaco/unicode-progress-bars)
+
+![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/07/20230727220600.png)
+
+
 
 ## table no borders
 
