@@ -15,6 +15,12 @@ https://duter2016.github.io/2019/10/03/%E8%8E%B7%E5%8F%96Github%E5%9B%BE%E7%89%8
 
 GitHub + jsDelivr
 
+## font
+
+- [nano font](https://fonts.google.com/noto/specimen/Noto+Sans+TC/glyphs)
+- [Noto+Sans+SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC)
+
+![nano imgs](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/07/noto_sans.png)
 
 ## image
 
@@ -44,9 +50,9 @@ GitHub + jsDelivr
 
 jsDelivr 加速
 
-| ![raw github](https://raw.githubusercontent.com/YeeKal/Doc/master/blog/imgs/070923_Nature_Cover-scaled.jpg) | ![jsdelivr](https://cdn.jsdelivr.net/gh/YeeKal/Doc@master/blog/imgs/070923_Nature_Cover-scaled.jpg)|
-|:--:|:--:|
-| *raw github* | *jsdelivr* |
+| ![raw github](https://raw.githubusercontent.com/YeeKal/Doc/master/blog/imgs/070923_Nature_Cover-scaled.jpg) | ![jsdelivr](https://cdn.jsdelivr.net/gh/YeeKal/Doc@master/blog/imgs/070923_Nature_Cover-scaled.jpg) |
+|:-----------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------:|
+|                                                *raw github*                                                 |                                             *jsdelivr*                                              |
 
 
 

@@ -8,7 +8,9 @@ date: 2023-07-24
 ## twilwind css
 
 - [customizing-colors](https://tailwindcss.com/docs/customizing-colors)
-- [playground foe tailwind](https://play.tailwindcss.com/)
+- [playground for tailwind](https://play.tailwindcss.com/)
+- [tailwindcss](https://www.tailwindcss.cn/)
+- [tailwindcss 备忘录](https://wangchujiang.com/reference/docs/tailwindcss.html)
 
 
 ## W3T template
@@ -19,7 +21,6 @@ date: 2023-07-24
     - 软件地址： https://github.com/rao-pics/rao-pics
     - 官网源码地址： https://github.com/rao-pics/Home
 
-- [tailwindcss](https://www.tailwindcss.cn/)
 - [astro](https://astro.build/blog/)
 
 

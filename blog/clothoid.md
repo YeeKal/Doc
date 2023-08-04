@@ -1,7 +1,7 @@
 ---
 title: 回旋螺线
 categories: blog
-tags: 
+tags: planning
 date: 2022-07-22
 ---
 
@@ -69,14 +69,11 @@ S_{f}(x)=\int_{0}^{x} \sin \frac{\pi}{2} u^{2} d u$$
 
 在表达式中$\kappa(s)=\alpha s$，曲率变化率$\alpha$确定之后，则可以通过转弯半径$R$计算出一段从直线过度到圆的螺旋线$C_{OP}$.圆心$c$通过端点$P$的位置以及$\theta$确定。
 
-$$P = \left\{
-    \begin{aligned} \kappa_p &= \frac{1}{R}\\
-     x_{p}&=\sqrt{\frac{\pi}{\alpha}}C_f(\sqrt{\frac{\kappa_p^2}{\alpha \pi}}) \\
-    y_{p}&=\sqrt{\frac{\pi}{\alpha}}S_f(\sqrt{\frac{\kappa^2}{\alpha \pi}}) \\
-    s_p &= \frac{1}{R\alpha} \\
-    \theta_{p} &= \frac{1}{2}\alpha s^2 = \frac{1}{2}k_ps_p
-    \end{aligned}
-\right.$$
+$$P = \begin{aligned} \kappa_p &= \frac{1}{R}\\
+x_{p}&=\sqrt{\frac{\pi}{\alpha}}C_f(\sqrt{\frac{\kappa_p^2}{\alpha \pi}}) \\
+y_{p}&=\sqrt{\frac{\pi}{\alpha}}S_f(\sqrt{\frac{\kappa^2}{\alpha \pi}}) \\
+s_p &= \frac{1}{R\alpha} \\
+\theta_{p} &= \frac{1}{2}\alpha s^2 = \frac{1}{2}k_ps_p \end{aligned}$$
 
 连接圆心$c$和起点$O$可以得到一个更大的半径$R_l$，螺旋线$C_{OP}$就在这个更大的圆内，并且起点$O$与大圆在$O$点的切线夹角记为$\mu$. 可以看出螺旋线$\vec{OP}$的终点斜率和大圆在X轴处的斜率保持一致。
 

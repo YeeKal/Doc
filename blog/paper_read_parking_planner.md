@@ -5,9 +5,6 @@ tags: 运动规划|自动驾驶
 date: 2023-02-12
 ---
 
-```
-@publish date 2016
-```
 `运动规划(motion planning)` `基于优化的方法(optimization based)` `自动驾驶(autopilot)`
 
 - https://zhuanlan.zhihu.com/p/605693570

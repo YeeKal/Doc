@@ -53,14 +53,14 @@ Django版本众多，兼容性差。指定版本安装	**`pip install django==1.
 
 
 
-# build the first aproject
+## build the first aproject
 
-##build first project
 
 **1. create**
 
-<u>django-admin startproject yeeblog</u>
-终端执行建立的讲哦工程文件夹-project
+> django-admin startproject yeeblog
+
+终端执行建立工程文件夹-project
 
 **2. 目录说明**
 
@@ -115,7 +115,6 @@ url(r'^add/$',first_views.add,name='add'),
 #net
 http://127.0.0.1:8000/add/?a=4&b=5
 ```
-
 
 
 ## 基本命令
