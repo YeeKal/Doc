@@ -7,10 +7,46 @@ date: 2021-11-24
 
 ## ref
 
- - [github emoji](https://github.com/StylishThemes/GitHub-Dark/wiki/Emoji)
- - [Complete list of github markdown emoji markup](https://gist.github.com/rxaviers/7360908)
+- [github emoji](https://github.com/StylishThemes/GitHub-Dark/wiki/Emoji)
+- [Complete list of github markdown emoji markup](https://gist.github.com/rxaviers/7360908)
+- [unicode character recognition](https://shapecatcher.com/index.html)
+## category
 
-arrow
+**<font color='Tomato'>Box-drawing character</font>**
+
+- [Box-drawing character](https://en.wikipedia.org/wiki/Box-drawing_character)
+
+```
+   Col                    Summary                                                                                                                  
+ 1 Petal.Length.setosa         ╾─────▇▇◆▇────╼                                                                                            
+ 2 Petal.Length.versicolor                               ╾──────────────▇▇▇▇▇◆▇▇▇▇───────╼                                           
+ 3 Petal.Length.virginica                     ╾────────▇▇▇▇▇▇▇◆▇▇▇▇▇───────────────╼               
+ 4 Petal.Width.setosa      ╾─◆▇────╼                                                                                                                
+ 5 Petal.Width.versicolor        ╾──▇◆▇▇▇▇───╼                                                                                              
+ 6 Petal.Width.virginica       ╾─────▇▇▇◆▇▇▇▇▇──╼                                                                                   
+ 7 Sepal.Length.setosa      ╾──────▇▇▇◆▇▇▇─────────╼                                
+ 8 Sepal.Length.versicolor            ╾──────────▇▇▇▇◆▇▇▇▇▇▇──────────╼              
+ 9 Sepal.Length.virginica             ╾───────────────────▇▇▇▇◆▇▇▇▇▇▇▇──────────────╼
+10 Sepal.Width.setosa                     ╾─────────────▇▇▇◆▇▇▇▇──────────╼                                                      
+11 Sepal.Width.versicolor                 ╾───────▇▇▇▇▇◆▇▇▇─────╼                                                                     
+12 Sepal.Width.virginica                ╾─────────▇▇▇◆▇▇─────────╼   
+
+
+┌─┬┐  ╔═╦╗  ╓─╥╖  ╒═╤╕
+│ ││  ║ ║║  ║ ║║  │ ││
+├─┼┤  ╠═╬╣  ╟─╫╢  ╞═╪╡
+└─┴┘  ╚═╩╝  ╙─╨╜  ╘═╧╛
+┌───────────────────┐
+│  ╔═══╗ Some Text  │▒
+│  ╚═╦═╝ in the box │▒
+╞═╤══╩══╤═══════════╡▒
+│ ├──┬──┤           │▒
+│ └──┴──┘           │▒
+└───────────────────┘▒
+ ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+```
+
+**<font color='Tomato'>arrow</font>**
 
 ```
 ↖ ↑ ↗

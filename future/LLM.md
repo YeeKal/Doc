@@ -7,10 +7,10 @@ date: 2023-07-21
 
 1. 尝试使用hugging face调用api
 
+## research
 
-## Ret Net
-
-
+- Ret Net
+- vllm 加速
 
 ## LoRA
 

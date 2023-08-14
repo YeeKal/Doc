@@ -5,7 +5,11 @@ tags: linux
 date: 2021-11-24
 ---
 
-- [ ] obca的碰撞检测整理
+## on plan
+- [vLLM: Easy, Fast, and Cheap LLM Serving with PagedAttention](https://vllm.ai/)
+
+## the following
+
 
 learn:
 
