@@ -10,6 +10,7 @@ date: 2021-11-24
 - [github emoji](https://github.com/StylishThemes/GitHub-Dark/wiki/Emoji)
 - [Complete list of github markdown emoji markup](https://gist.github.com/rxaviers/7360908)
 - [unicode character recognition](https://shapecatcher.com/index.html)
+
 ## category
 
 **<font color='Tomato'>Box-drawing character</font>**
