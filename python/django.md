@@ -1,17 +1,10 @@
 ---
- title: django
+ title: django notes
  categories: python
  tags: django
  date: 2020-08-30
 ---
 
-*Django*
-
-Version-1.10.6
-
-[TOC]
-
-# Intro to Django
 
 ## 简介
 

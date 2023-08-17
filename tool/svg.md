@@ -4,6 +4,9 @@ categories:  svg
 tags: tool
 date: 2022-10-17
 ---
+
+![vllm](https://vllm.ai/assets/figures/annimation0.gif)
+
 ## Ref
 
 - [font-awesome-background-svg](https://coliff.github.io/font-awesome-background-svg/index.html)

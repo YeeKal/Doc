@@ -20,3 +20,4 @@ date: 2023-08-08
 - [Snapsrch](https://snapsrch.sparklide.com/)
 - [视频播放](https://openfolder.sh/django-tutorial-as-you-type-search-with-ajax)
 - [idx 首页字母规整](https://idx.dev/)
+- [search ](https://fly.io/docs/getting-started/multi-region-databases/#create-a-postgresql-cluster)
