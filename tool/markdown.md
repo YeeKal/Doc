@@ -5,6 +5,10 @@ tags: tool
 date: 2023-01-10
 ---
 
+<h3 align="center">
+标题居中
+</h3>
+
 ## useful tools  
 
 - [List_of_LaTeX_mathematical_symbols](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
