@@ -26,6 +26,7 @@ GitHub + jsDelivr
 
 - https://foter.com/
 - https://www.pexels.com/
+- [nasa image daily](https://apod.nasa.gov/apod/ap230725.html)
 
 **<font color='Tomato'>unsplash</font>**
 

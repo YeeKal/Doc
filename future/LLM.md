@@ -38,6 +38,7 @@ HSID=A3_CaFT2X0m94AnbJ; SSID=AmkWgfL5EkqIG0DSJ; APISID=KhJqpFU24iNOzUyl/AhaERC9i
 - [LangChain: Power your applications with Large Language Models](https://www.langchain.com/)
 - [ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web)
 - [Text Generation Inference](https://github.com/huggingface/text-generation-inference/tree/main)
+- [haystack: end-to-end NLP framework](https://github.com/deepset-ai/haystack)
 
 ## 独立开发站
 

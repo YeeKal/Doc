@@ -10,10 +10,7 @@ date: 2021-10-31
 1. 每天读书不少于一小时
 2. 每周读书天数不少于六天
 
-
-
 ## reading blocks
-
 
 <svg width="800" height="600">
   <script type="text/JavaScript">
@@ -55,11 +52,6 @@ date: 2021-10-31
           alert("Total Children: "+document.documentElement.childNodes.length);
         }
         document.addEventListener('DOMContentLoaded',displayBlock());
-
-
-
-
-
     ]]>
   </script>
   <g id="group1" onMouseOver="displayBlock()" onMouseOut="hiddenText()" width=400 height=400>

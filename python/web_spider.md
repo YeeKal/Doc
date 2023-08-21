@@ -1,18 +1,48 @@
-**WebSpider**
+---
+title: 网络爬虫1
+categories: python
+tags: spider
+date: 2020-09-06
+---
 
-[TOC]
+- skill
+    - web
+    - requests
+    - re
+    - ​Beautifulsoup/​Selenium
+    - 数据存储
+    - 分布式
+- 目录
+    - [Requests](#requests)
+    - [web](#web)
+    - [正则匹配 re](#正则匹配-re)
+    - [urllib (python3 中已弃用， 替换为requests)](#urllib-python3-中已弃用-替换为requests)
 
-# 爬虫了解
+ 
+## Requests
 
-## what is url
+**<font color='Tomato'>read content</font>**
 
-URL:
+```python
+import requests
 
-​	 Uniform Resource Locator,统一资源定位符,URI的一个子集
+response = requests.get('https://picsum.photos/600/400')
+response.raise_for_status()
+
+with open('demo.png','wb') as f:
+    f.write(response.content)
+```
+
+
+## web
+
+**<font color='Tomato'>What is url</font>**
+
+URL:Uniform Resource Locator,统一资源定位符,URI的一个子集
 
 格式
 
-​	protocol :// hostname[:port] / path / [;parameters][?query]#fragmentURL三部分组成： 
+protocol :// hostname[:port] / path / [;parameters][?query]#fragmentURL三部分组成： 
 
 > ①第一部分是协议(或称为服务方式)。
 >
@@ -22,165 +52,7 @@ URL:
 >
 > - 第一部分和第二部分用“://”符号隔开，第二部分和第三部分用“/”符号隔开。第一部分和第二部分是不可缺少的，第三部分有时可以省略
 
- 
-
-## 进阶之路
-
-1. 基本原理
-
- ​urllib:
-
-  	a package  that collects several modules for working with URLs 
-
- ​	python2中的urllib和urllib统一python3中的urllib
-
- ​re:
-
-2. 爬虫利器
-
- ​requests
-
- ​Beautifulsoup  [官方文档](http://beautifulsoup.readthedocs.io/zh_CN/latest/)
-
- ​Selenium 模拟浏览器提交类似用户的操作，处理js动态产生的网页
-
- ​scrapy
-
-3. 数据存储
-4. 分布式/多线程
-
-# urllib
-
-## urllib 简介
-
-- urllib.request可以用来发送request和获取request的结果
-- urllib.error包含了urllib.request产生的异常
-- urllib.parse用来解析和处理URL
-- urllib.robotparse用来解析页面的robots.txt文件
-
-## urllib.request
-
-​	提供最基本的构造http请求的方法，它可以模拟浏览器的一个请求发起过程
-
-```python
-#urllib.request.urlopen
-response = urllib.request.urlopen('https://www.python.org')	#HTTPResponse 		类的对象
-	#methods：
-    read()、readinto()、getheader(name)、getheaders()、fileno()
-    #属性
-    msg、version、status、reason、debuglevel、closed
-    status: #200,success;404 未找到网页
-    response.read().decode('utf-8')
-urllib.request.urlopen(url, data=None, [timeout, ]*, cafile=None,	     		capath=None, cadefault=False, context=None) 
-	data#data = bytes(urllib.parse.urlencode({'word': 'hello'}), 					encoding='utf8') 
-    timeout#超过请求时间则忽略，抛出time out 错误
-```
-
-```python
-#urllib.request.Request
-request = urllib.request.Request('https://python.org')
-response = urllib.request.urlopen(request)	#利用更强大的Request类来构建一个请求
-#参数
-class urllib.request.Request(url, data=None, headers={}, origin_req_host=None, 		unverifiable=False, method=None)
-	#headers:字典，add_header()方法来添加请求头，伪装浏览器
-	#origin_req_host:请求方的host名称或者IP地址
-    #unverifiable: 这个请求是不是无法验证的，默认是False
-    #method：请求使用的方法，GET,POST,PUT
-```
-
-## urllib.request的高级特性
-
-> BaseHandler:父类
->
-> - `HTTPDefaultErrorHandler`用于处理HTTP响应错误，错误都会抛出`HTTPError`类型的异常。
-> - `HTTPRedirectHandler`用于处理重定向。
-> - `HTTPCookieProcessor`用于处理`Cookie`。
-> - `ProxyHandler`用于设置代理，默认代理为空。
-> - `HTTPPasswordMgr`用于管理密码，它维护了用户名密码的表。
-> - `HTTPBasicAuthHandler`用于管理认证，如果一个链接打开时需要认证，那么可以用它来解决认证问题
-
-```python
-#认证
-    #创建handler——添加属性——build_opener——install_opener——urlopen
-auth_handler = urllib.request.HTTPBasicAuthHandler()
-auth_handler.add_password(realm='PDQ Application',
-                          uri='https://mahler:8092/site-updates.py',
-                          user='klem',
-                          passwd='kadidd!ehopper')
-opener = urllib.request.build_opener(auth_handler)
-urllib.request.install_opener(opener)
-urllib.request.urlopen('http://www.example.com/login.html')
-#代理
-proxy_handler = urllib.request.ProxyHandler({
-    'http': 'http://218.202.111.10:80',
-    'https': 'https://180.250.163.34:8888'
-})	#参数是一个字典，key是协议类型，比如http还是https等，value是代理链接，可以添加	多个代理
-opener = urllib.request.build_opener(proxy_handler)
-response = opener.open('https://www.baidu.com')
-print(response.read())
-#cookies
-filename = 'cookie.txt'
-cookie = http.cookiejar.MozillaCookieJar(filename)
-#cookie = http.cookiejar.LWPCookieJar(filename)	
-	#保存格式不一样
-handler = urllib.request.HTTPCookieProcessor(cookie)
-opener = urllib.request.build_opener(handler)
-response = opener.open('http://www.baidu.com')
-cookie.save(ignore_discard=True, ignore_expires=True)
-```
-
-## urllib.error
-
-> urllib.error.URLError
->
-> urllib.error.HTTPError
->
-> - code
-> - reason
-> - headers
->
-> ```python
-> try:
->     response=request.urlopen('http://cuiqingcai.com/index.htm')
->     print(response)
-> except error.HTTPError as e:
->     print(e.reason,e.code,e.headers,sep='\n')
-> finally:
->     print('this must process')
-> print('then how about this?')
-> ```
->
-> *更优质的写法，先写HTTPError子类，再加上父类*
->
-> ```python
-> try:
->     response = request.urlopen('http://cuiqingcai.com/index.htm')
-> except error.HTTPError as e:
->     print(e.reason, e.code, e.headers, sep='\n')
-> except error.URLError as e:
->     print(e.reason)
-> else:
->     print('Request Successfully')
-> ```
->
-> *e.reason`返回的不一定是字符串*
->
-> *设置超时时间*
->
-> ```python
-> import socket
-> import urllib.request
-> import urllib.error
->
-> try:
->     response = urllib.request.urlopen('https://www.baidu.com', timeout=0.01)
-> except urllib.error.URLError as e:
->     print(type(e.reason))
->     if isinstance(e.reason, socket.timeout):
->         print('TIME OUT')
-> ```
-
-## http状态码
+**<font color='Tomato'>http状态码</font>**
 
 | 状态码  | 说明        | 详情                                 |
 | ---- | --------- | ---------------------------------- |
@@ -224,36 +96,8 @@ cookie.save(ignore_discard=True, ignore_expires=True)
 | 504  | 网关超时      | 服务器作为网关或代理，但是没有及时从上游服务器收到请求。       |
 | 505  | HTTP版本不支持 | 服务器不支持请求中所用的 HTTP 协议版本。            |
 
-## urllib.parse
 
-urllib.parse.urlparse(*urlstring*, *scheme=''*, *allow_fragments=True*)
-
-> 一个标准链接分成6部分
->
-> scheme://netloc/path;parameters?query#fragment
->
-> allow_fragments 若设为False,`fragment`部分就会被忽略,被解析成其他项的一部分
-
-urllib.parse.urlunparse()
-
-> list or tuple必须接收6个参数，可以为空
->
-> ```python
-> data = ['http', 'www.baidu.com', 'index.html', 'user', 'a=6', 'comment']
-> print(urlunparse(data))
-> ```
-
-urllib.parse.urlsplit()
-
-> 将parameters合并到path中
-
-urllib.parse.urlunsplit()
-
-urllib.parse.urljoin(base,url,allow_fragments=True)
-
->`base_url`提供了三项内容，`scheme`、`netloc`、`path`，如果这三项在新的链接里面不存在，那么就予以补充，如果新的链接存在，那么就使用新的链接的部分。`base_url`中的`parameters`、`query`、`fragments`是不起作用的
-
-## 模拟登陆
+**<font color='Tomato'>模拟登陆</font>**
 
 http消息:get/post
 
@@ -264,23 +108,22 @@ get:
 
 
 
-# RegularExpressions
+## 正则匹配 re
+ 
 
-## 相关注解
-
+```
 数量词的贪婪模式
+正则表达式通常用于在文本中查找匹配的字符串。Python 里数量词默认是贪婪的（在少数语言里也可能是默认非贪婪），总是尝试匹配尽可能多的字符；非贪婪的则相反，总是尝试匹配尽可能少的字符。例如：正则表达式 ”ab\*” 如果用于查找 ”abbbc”，将找到 ”abbb”。而如果使用非贪婪的数量词 ”ab*?”，将找到 ”a”
 
-> 正则表达式通常用于在文本中查找匹配的字符串。Python 里数量词默认是贪婪的（在少数语言里也可能是默认非贪婪），总是尝试匹配尽可能多的字符；非贪婪的则相反，总是尝试匹配尽可能少的字符。例如：正则表达式 ”ab\*” 如果用于查找 ”abbbc”，将找到 ”abbb”。而如果使用非贪婪的数量词 ”ab*?”，将找到 ”a”
->
-> 我们一般用非贪婪模式
+我们一般用非贪婪模式
 
 反斜杠
 
-> 原生字符串：r“d”
->
-> 取消python本身的转换
+原生字符串：r“d”
 
-## re
+取消python本身的转换
+
+```
 
 > - re.**compile**(string[,flag])  
 > - re.**match**(pattern, string[, flags])
@@ -351,7 +194,8 @@ re.subn(pattern, repl, string, count=0, flags=0)
 >
 > expand(template):将匹配到的分组代入template中然后返回。template中可以使用\id或\g、\g引用分组，但不能使用编号0。\id与\g是等价的；但\10将被认为是第10个分组，如果你想表达\1之后是字符’0’，只能使用\g0。
 
-## 实战技巧
+
+**<font color='Tomato'>re 常用模式</font>**
 
 - 匹配模式换行
 - 匹配结果替换
@@ -383,6 +227,168 @@ def replaceTool(self,x):
 
 
 
-## 语法表
+**<font color='Tomato'>语法表</font>** 
 
 ![expression](http://img.blog.csdn.net/20130515113723855)
+
+## urllib (python3 中已弃用， 替换为requests)
+
+a package  that collects several modules for working with URLs. python2中的urllib和urllib统一python3中的urllib.
+
+- urllib.request可以用来发送request和获取request的结果
+- urllib.error包含了urllib.request产生的异常
+- urllib.parse用来解析和处理URL
+- urllib.robotparse用来解析页面的robots.txt文件
+
+
+**<font color='Tomato'>urllib.request</font>**
+
+​	提供最基本的构造http请求的方法，它可以模拟浏览器的一个请求发起过程
+
+```python
+#urllib.request.urlopen
+response = urllib.request.urlopen('https://www.python.org')	#HTTPResponse 		类的对象
+	#methods：
+    read()、readinto()、getheader(name)、getheaders()、fileno()
+    #属性
+    msg、version、status、reason、debuglevel、closed
+    status: #200,success;404 未找到网页
+    response.read().decode('utf-8')
+urllib.request.urlopen(url, data=None, [timeout, ]*, cafile=None,	     		capath=None, cadefault=False, context=None) 
+	data#data = bytes(urllib.parse.urlencode({'word': 'hello'}), 					encoding='utf8') 
+    timeout#超过请求时间则忽略，抛出time out 错误
+```
+
+```python
+#urllib.request.Request
+request = urllib.request.Request('https://python.org')
+response = urllib.request.urlopen(request)	#利用更强大的Request类来构建一个请求
+#参数
+class urllib.request.Request(url, data=None, headers={}, origin_req_host=None, 		unverifiable=False, method=None)
+	#headers:字典，add_header()方法来添加请求头，伪装浏览器
+	#origin_req_host:请求方的host名称或者IP地址
+    #unverifiable: 这个请求是不是无法验证的，默认是False
+    #method：请求使用的方法，GET,POST,PUT
+```
+
+
+**<font color='Tomato'>urllib.request的高级特性</font>**
+
+> BaseHandler:父类
+>
+> - `HTTPDefaultErrorHandler`用于处理HTTP响应错误，错误都会抛出`HTTPError`类型的异常。
+> - `HTTPRedirectHandler`用于处理重定向。
+> - `HTTPCookieProcessor`用于处理`Cookie`。
+> - `ProxyHandler`用于设置代理，默认代理为空。
+> - `HTTPPasswordMgr`用于管理密码，它维护了用户名密码的表。
+> - `HTTPBasicAuthHandler`用于管理认证，如果一个链接打开时需要认证，那么可以用它来解决认证问题
+
+```python
+#认证
+    #创建handler——添加属性——build_opener——install_opener——urlopen
+auth_handler = urllib.request.HTTPBasicAuthHandler()
+auth_handler.add_password(realm='PDQ Application',
+                          uri='https://mahler:8092/site-updates.py',
+                          user='klem',
+                          passwd='kadidd!ehopper')
+opener = urllib.request.build_opener(auth_handler)
+urllib.request.install_opener(opener)
+urllib.request.urlopen('http://www.example.com/login.html')
+#代理
+proxy_handler = urllib.request.ProxyHandler({
+    'http': 'http://218.202.111.10:80',
+    'https': 'https://180.250.163.34:8888'
+})	#参数是一个字典，key是协议类型，比如http还是https等，value是代理链接，可以添加	多个代理
+opener = urllib.request.build_opener(proxy_handler)
+response = opener.open('https://www.baidu.com')
+print(response.read())
+#cookies
+filename = 'cookie.txt'
+cookie = http.cookiejar.MozillaCookieJar(filename)
+#cookie = http.cookiejar.LWPCookieJar(filename)	
+	#保存格式不一样
+handler = urllib.request.HTTPCookieProcessor(cookie)
+opener = urllib.request.build_opener(handler)
+response = opener.open('http://www.baidu.com')
+cookie.save(ignore_discard=True, ignore_expires=True)
+```
+
+**<font color='Tomato'>urllib.error</font>**
+
+> urllib.error.URLError
+>
+> urllib.error.HTTPError
+>
+> - code
+> - reason
+> - headers
+>
+> ```python
+> try:
+>     response=request.urlopen('http://cuiqingcai.com/index.htm')
+>     print(response)
+> except error.HTTPError as e:
+>     print(e.reason,e.code,e.headers,sep='\n')
+> finally:
+>     print('this must process')
+> print('then how about this?')
+> ```
+>
+> *更优质的写法，先写HTTPError子类，再加上父类*
+>
+> ```python
+> try:
+>     response = request.urlopen('http://cuiqingcai.com/index.htm')
+> except error.HTTPError as e:
+>     print(e.reason, e.code, e.headers, sep='\n')
+> except error.URLError as e:
+>     print(e.reason)
+> else:
+>     print('Request Successfully')
+> ```
+>
+> *e.reason`返回的不一定是字符串*
+>
+> *设置超时时间*
+>
+> ```python
+> import socket
+> import urllib.request
+> import urllib.error
+>
+> try:
+>     response = urllib.request.urlopen('https://www.baidu.com', timeout=0.01)
+> except urllib.error.URLError as e:
+>     print(type(e.reason))
+>     if isinstance(e.reason, socket.timeout):
+>         print('TIME OUT')
+> ```
+
+**<font color='Tomato'>urllib.parse</font>**
+
+urllib.parse.urlparse(*urlstring*, *scheme=''*, *allow_fragments=True*)
+
+> 一个标准链接分成6部分
+>
+> scheme://netloc/path;parameters?query#fragment
+>
+> allow_fragments 若设为False,`fragment`部分就会被忽略,被解析成其他项的一部分
+
+urllib.parse.urlunparse()
+
+> list or tuple必须接收6个参数，可以为空
+>
+> ```python
+> data = ['http', 'www.baidu.com', 'index.html', 'user', 'a=6', 'comment']
+> print(urlunparse(data))
+> ```
+
+urllib.parse.urlsplit()
+
+> 将parameters合并到path中
+
+urllib.parse.urlunsplit()
+
+urllib.parse.urljoin(base,url,allow_fragments=True)
+
+>`base_url`提供了三项内容，`scheme`、`netloc`、`path`，如果这三项在新的链接里面不存在，那么就予以补充，如果新的链接存在，那么就使用新的链接的部分。`base_url`中的`parameters`、`query`、`fragments`是不起作用的
