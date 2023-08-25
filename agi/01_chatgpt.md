@@ -1,7 +1,7 @@
 ---
 title: chatgpt
-categories: 
-tags: 
+categories: agi
+tags: chatgpt
 date: 2023-07-24
 ---
 

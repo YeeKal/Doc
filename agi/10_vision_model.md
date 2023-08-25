@@ -9,6 +9,9 @@ date: 2023-07-26
 - midjourny
 
 ## Stable Diffusion
+
+What stability AI released ?
+
 Stable Diffusion是2022年發布的深度學習文字到圖像生成模型. 由Stability AI 发布。
 
 - [stablediffusion code on github](https://github.com/Stability-AI/stablediffusion)
@@ -19,6 +22,7 @@ Stable Diffusion是2022年發布的深度學習文字到圖像生成模型. 由S
 **<font color='Tomato'>衍生站</font>**
 
 - [Stable Diffusion Online](https://stablediffusionweb.com/)
+
 
 ## Picture Generator
 
