@@ -12,9 +12,7 @@ date: 2023-07-21
 - Ret Net
 - vllm 加速
 
-## LoRA
 
-- [LoRA](https://github.com/microsoft/LoRA)
 
 ## claude2
 

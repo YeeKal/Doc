@@ -5,6 +5,18 @@ tags:
 date: 2023-08-25
 ---
 
+- [本地部署stable-diffusion-webui](https://sspai.com/post/79868)
+- Lora
+- ControlNet 
+- [AUTOMATIC1111 stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+- [提示词生成器](https://tag.redsex.cc/)
+- [promptart: 提示词搜索](https://promptart.cc/)
+- [civitai: models share](https://civitai.com/)
+- [liblibai: 国内版 models share](https://www.liblibai.com/)
+- [lexica: 提示词搜索](https://lexica.art/)
+- [Stable Diffusion 基础到高阶教程](https://vocus.cc/neversaysd/home)
+
+- [风格提示词](https://supagruen.github.io/StableDiffusion-CheatSheet/)
 ## SDXL model(Stable Diffusion XL)
 
 SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis
@@ -41,14 +53,49 @@ print((datetime.now() - start).seconds)
 display(image)
 ```
 
-| demo1  | demo2  |
-|---|---|
-| ![robot_stands_on_the_moon](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/download.png)  | ![robot_stands_on_the_moon](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/stable_diffusion_robot2.png)  |
+|prompt| demo1  | demo2  |
+|---|---|---|
+|cute robot stands on the moon, shallow depth of field, cinematic composition --ar 16:9| ![robot_stands_on_the_moon](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/download.png)  | ![robot_stands_on_the_moon](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/stable_diffusion_robot2.png)  |
+|||
+|The girl who is drawing. Makoto Shinkai style,Portrait,highly detailed, sharp focus,sci-fi, stunningly beautiful, dystopian, --ar 16:9|![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/20230826123856.png)|![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/20230826131728.png)|
+||![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/20230826132320.png)||
 
 
 - ref links
     - [medium: how to run sdxl 1.0](https://medium.com/@andysingal/how-to-run-sdxl-1-0-model-629048e49e70)
 
+防止超时断连
+
+```js
+function ConnectButton(){
+    console.log("Connect pushed"); 
+    document.querySelector("#top-toolbar > colab-connect-button").shadowRoot.querySelector("#connect").click() 
+}
+setInterval(ConnectButton,60000);
+
+// id: the result outpur
+// clearInterval(id);  // stop the execution
+```
+
+突破77token限制
+
+## Stable diffusion webui on colab
+
+- [stable-diffusion-webui-colab](https://github.com/camenduru/stable-diffusion-webui-colab)
+
 ## Stable Diffusion API
 
 - [api reference](https://platform.stability.ai/docs/api-reference#tag/v1user)
+
+## LoRA 微调
+
+- [LoRA](https://github.com/microsoft/LoRA)
+- [lora for fine-tuning diffusion model](https://github.com/cloneofsimo/lora)
+
+Low-Rank Adaptation of Large Language Models
+
+通过注入训练层对模型进行微调,由于没有直接改变大模型的权重.大大减少了训练计算量
+
+## 提示词
+
+extremely detail
