@@ -5,8 +5,6 @@ tags: 哲学
 date: 2022-04-01
 ---
 
-# 希腊哲学史
-
 ## 导论
 
 俄尔普斯主义：orphic / orpheus（俄尔普斯），a Hellenistic mystery religion

@@ -15,9 +15,20 @@ date: 2021-11-24
     - [庄子寓言文学](http://list.youku.com/albumlist/show/id_23223087.html)
     - [正是时候读庄子](http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/103S123/2)
 - 释读
-    - [庄子哲学讲记](https://book.douban.com/subject/26793142/)
-    - [庄子四讲](https://book.douban.com/subject/3672176/)
-    - [庄子今注今译](https://book.douban.com/subject/1051919//)
+    - [庄子哲学讲记 郑开 8.4](https://book.douban.com/subject/26793142/)
+    - 《庄子四讲》
+        - [庄子四讲 中华书局 8.6](https://book.douban.com/subject/3672176/)
+        - [莊子四講: 聯經出版公司](https://book.douban.com/subject/6860065/)
+    - [庄子真义 杨广学 9.0](https://book.douban.com/subject/36348774/)
+    - [庄子今注今译  陈鼓应 注译  9.3](https://book.douban.com/subject/1051919//)
+    - [庄子諵譁 南怀瑾 8.9](https://book.douban.com/subject/2149717/)
+    - [庄子讲义 陈引驰 8.4](https://book.douban.com/subject/35218798/)
+
+## 中国当代政治哲学
+
+- 史景迁 《追寻现代中国》 时报出版社
+- 余世存
+- 余英时
 
 ## 文艺复兴&启蒙时代
 
