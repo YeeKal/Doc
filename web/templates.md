@@ -5,6 +5,10 @@ tags:
 date: 2023-08-05
 ---
 
+## 主页设计网站
+
+- [kee: 在线个人主页](https://kee.so/home)
+
 ## 学术主页单页面
 
 - [RT-2: Vision-Language-Action Models](https://robotics-transformer2.github.io/)

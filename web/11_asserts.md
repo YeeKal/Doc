@@ -69,6 +69,6 @@ jsDelivr 加速
 - 阿里云OSS(opens new window)
 - 七牛云(opens new window)
 - Amazon S3(opens new window)
-- Imgur(opens new window)
+- Imgur(opens new window): 稳定 半墙
 - Flickr(opens new window)   FLICKR xts~
 - 自定义, 包括chevereto (opens new window)等

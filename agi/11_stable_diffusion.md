@@ -59,6 +59,7 @@ display(image)
 |||
 |The girl who is drawing. Makoto Shinkai style,Portrait,highly detailed, sharp focus,sci-fi, stunningly beautiful, dystopian, --ar 16:9|![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/20230826123856.png)|![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/20230826131728.png)|
 ||![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/20230826132320.png)||
+|snoopy||![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/20230827102254.png)|
 
 
 - ref links
@@ -96,6 +97,20 @@ Low-Rank Adaptation of Large Language Models
 
 通过注入训练层对模型进行微调,由于没有直接改变大模型的权重.大大减少了训练计算量
 
+|lora model|example||
+|---|---|---|
+|[KoreanDollLikeness_v10](https://huggingface.co/Kanbara/doll-likeness-series) 同系列：ChinaDollLikeness, JapaneseDollLikeness|![alt](https://files.catbox.moe/r61ozj.png) |![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/20230827121527.png)|
+|[cutegirlmix4](https://civitai.com/models/14171/cutegirlmix4)|![alt](https://i.imgur.com/EUu1iZ2.jpg)|![alt](https://i.imgur.com/xLtYSU7.png)|
+|[Makoto Shinkai style LoRA](https://civitai.com/models/10626/makoto-shinkai-your-name-substyles-style-lora)|![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/20230827122526.png)|![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/20230827122603.png)|
+
+
 ## 提示词
 
 extremely detail
+
+## style
+
+
+|||
+|---|---|
+|Neo-expressionism of a cartoonish pluto , in the style of pulled, scraped, and scratched, meditative, unconventional poses, spiky mounds, 1970s, twisted characters, soggy Banksy style, vintage, by tim burton style --ar 2:3 --v 5.2 <\br> Neo-expressionism of 新表现主义 cartoonish pluto 卡通般的冥王星 in the style of 在拉、刮和划痕的风格 pulled, scraped, and scratched meditative 冥想 unconventional poses 非常规姿势 spiky mounds 尖锐的土堆 1970s 1970年代 twisted characters 扭曲的人物 soggy Banksy style 湿漉漉的Banksy风格 vintage 复古 by tim burton style 蒂姆·伯顿风格|![alt](https://d1tbi5ymsmhzj2.cloudfront.net/attachments/933565701162168371/1124782195991658527/RikeR_Neo-expressionism_of_a_cartoonish_pluto__in_the_style_of__db1cabb8-2b2d-4715-9865-9a4a8e51b671.webp)|
