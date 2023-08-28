@@ -11,9 +11,12 @@ date: 2023-08-08
 
 -[美叶](https://www.meiye.art/app/1/1958)
 
-## 学术主页
+## 学术静态主页
 
-- [vllm-project.github.io](https://github.com/vllm-project/vllm-project.github.io)
+- [vllm-project.github.io](https://github.com/vllm-project/vllm-project.github.io)\
+- [nerfies template](https://nerfies.github.io/)
+- [CoDeF](https://qiuyu96.github.io/CoDeF/)
+- [Learning to Model the World with Language](https://dynalang.github.io/)
 
 ## 好看网站收集
 
