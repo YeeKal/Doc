@@ -228,9 +228,7 @@ Using `<iframe>` tag
 Here is a simple footnote[^1]. With some additional text after it. head[^head]
 
 
-## file tree
-
-# Code & components for pages
+## Code & components for pages
 
 '''
 ./src/* 
