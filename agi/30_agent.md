@@ -27,3 +27,7 @@ date: 2023-08-28
 ```
 
 - [Implementation of RT1 (Robotic Transformer) in Pytorch](https://github.com/lucidrains/robotic-transformer-pytorch/tree/main)
+
+## OP3 Soccer
+
+- [Learning Agile Soccer Skills for a Bipedal Robot with Deep Reinforcement Learning](https://sites.google.com/view/op3-soccer)

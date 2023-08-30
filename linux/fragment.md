@@ -5,6 +5,8 @@ tags: linux
 date: 2021-11-24
 ---
 
+- [tensorrt](https://developer.nvidia.com/tensorrt)
+
 ## on plan
 - [vLLM: Easy, Fast, and Cheap LLM Serving with PagedAttention](https://vllm.ai/)
 

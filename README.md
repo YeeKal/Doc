@@ -1,7 +1,8 @@
-## |烂笔头
 
-> 好记性不如烂笔头
+<h3 align="center">烂笔头<br/><span style="font-size: 50%;color:#007f16">学习笔记 | 好记性不如烂笔头</span></h3>
+<p align="center" style="line-height: 0.6;font-size: 60%;"><span style="background:#ef4444;color:#991b1b;border-radius:5px;padding:5px;margin:5px;">ai</span><span style="background:#f97316;color:#9a3412;border-radius:5px;padding:5px;margin:5px;">robot</span><span style="background:#84cc16;color:#3f6212;border-radius:5px;padding:5px;margin:5px;">code</span></p>
 
+![arctos](https://cdn.jsdelivr.net/gh/YeeKal/img_land/icon/arctos_1080x1080.jpg)
 
 ## TODO
 
@@ -10,11 +11,8 @@
 - 文档表头美化
 - meta 说明
 
-## improve
 
-- 高亮
-- 首页色块
+## Stargazers over time
 
-## reference
+[![Stargazers over time](https://starchart.cc/YeeKal/Doc.svg)](https://starchart.cc/YeeKal/Doc)
 
-- [github markdown css](https://github.com/sindresorhus/github-markdown-css/blob/gh-pages/github-markdown.css)

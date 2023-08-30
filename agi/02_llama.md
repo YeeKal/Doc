@@ -21,3 +21,10 @@ date: 2023-08-03
 ## Derivate
 
 - [LLaMA2-Accessory](https://github.com/Alpha-VLLM/LLaMA2-Accessory)
+
+## fine-tune version
+
+基于LLaMA2微调的模型
+
+- [WizradMath: 数学推理]()
+- [原子大模型Atom]()

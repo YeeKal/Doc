@@ -1,3 +1,10 @@
+---
+title: 机器人学参考
+categories: robotics
+tags: robotics
+date: 2023-08-30
+---
+
 **教材&课程**
 
 - [机器人学导论](https://book.douban.com/subject/1831719/)

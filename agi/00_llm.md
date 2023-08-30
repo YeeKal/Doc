@@ -52,3 +52,8 @@ date: 2023-07-21
 - OpenAI的三篇实验报告，尤其是Instruct-GPT和GPT4的报告
 - [https://github.com/NielsRogge/Transformers-Tutorials](https://link.zhihu.com/?target=https%3A//github.com/NielsRogge/Transformers-Tutorials)
 - [https://dugas.ch/artificial_curiosity/GPT_architecture.html](https://link.zhihu.com/?target=https%3A//dugas.ch/artificial_curiosity/GPT_architecture.html)
+
+
+## 评测
+
+- [C-Eval： 中文评测](https://cevalbenchmark.com/index.html#home)
