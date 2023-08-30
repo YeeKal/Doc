@@ -5,9 +5,22 @@ tags: tool
 date: 2023-01-10
 ---
 
+## 居中
+
 <h3 align="center">
 标题居中
 </h3>
+
+<h3 align="center">烂笔头<br/><span style="font-size: 50%;color:#007f16">学习笔记 | 好记性不如烂笔头</span></h3>
+
+<p align="center" style="line-height: 0.6;font-size: 60%;"><span style="background:#ef4444;color:#991b1b;border-radius:5px;padding:5px;margin:5px;">ai</span><span style="background:#f97316;color:#9a3412;border-radius:5px;padding:5px;margin:5px;">robot</span><span style="background:#84cc16;color:#3f6212;border-radius:5px;padding:5px;margin:5px;">code</span></p>
+
+## markdown-badges
+
+- [shields](https://shields.io/)
+
+![code](https://img.shields.io/badge/any_text-3f6212?style=for-the-badge&labelColor=84cc16)
+
 
 ## useful tools  
 

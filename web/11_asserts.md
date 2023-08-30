@@ -21,6 +21,7 @@ date: 2023-07-25
 - https://foter.com/
 - https://www.pexels.com/
 - [nasa image daily](https://apod.nasa.gov/apod/ap230725.html)
+- [A simple, fast and free image placeholder service.](https://placehold.co/)
 
 **<font color='Tomato'>unsplash</font>**
 
