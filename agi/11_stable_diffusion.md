@@ -97,11 +97,11 @@ Low-Rank Adaptation of Large Language Models
 
 通过注入训练层对模型进行微调,由于没有直接改变大模型的权重.大大减少了训练计算量
 
-|lora model|example||
-|---|---|---|
-|[KoreanDollLikeness_v10](https://huggingface.co/Kanbara/doll-likeness-series) 同系列：ChinaDollLikeness, JapaneseDollLikeness|![alt](https://files.catbox.moe/r61ozj.png) |![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/20230827121527.png)|
-|[cutegirlmix4](https://civitai.com/models/14171/cutegirlmix4)|![alt](https://i.imgur.com/EUu1iZ2.jpg)|![alt](https://i.imgur.com/xLtYSU7.png)|
-|[Makoto Shinkai style LoRA](https://civitai.com/models/10626/makoto-shinkai-your-name-substyles-style-lora)|![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/20230827122526.png)|![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/20230827122603.png)|
+|lora model|example|
+|---|---|
+|[KoreanDollLikeness_v10](https://huggingface.co/Kanbara/doll-likeness-series) 同系列：ChinaDollLikeness, JapaneseDollLikeness|![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/20230827121527.png)|
+|[cutegirlmix4](https://civitai.com/models/14171/cutegirlmix4)|![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08xLtYSU7.png)|
+|[Makoto Shinkai style LoRA](https://civitai.com/models/10626/makoto-shinkai-your-name-substyles-style-lora)|![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/20230827122526.png)![alt](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/08/20230827122603.png)|
 
 
 ## 提示词
