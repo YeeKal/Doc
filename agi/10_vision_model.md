@@ -7,6 +7,9 @@ date: 2023-07-26
 
 - stable diffusion
 - midjourny
+## CM3leon from Meta
+
+- [CM3leon](https://ai.meta.com/blog/generative-ai-text-images-cm3leon/)
 
 ## Stable Diffusion
 

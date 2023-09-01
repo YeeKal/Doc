@@ -56,4 +56,5 @@ date: 2023-07-21
 
 ## 评测
 
+- [alpaca_eval](https://tatsu-lab.github.io/alpaca_eval/)
 - [C-Eval： 中文评测](https://cevalbenchmark.com/index.html#home)
