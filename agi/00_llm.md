@@ -32,6 +32,7 @@ date: 2023-07-21
 - [Text Generation Inference](https://github.com/huggingface/text-generation-inference/tree/main)
 - [haystack: end-to-end NLP framework](https://github.com/deepset-ai/haystack)
 - [stable-diffusion-webui develop by AUTOMATIC1111]()
+- [不用ps 搭建chatgpt bot](https://github.com/TBXark/ChatGPT-Telegram-Workers/blob/master/doc/DEPLOY.md)
 
 ## 独立开发站
 
@@ -58,3 +59,7 @@ date: 2023-07-21
 
 - [alpaca_eval](https://tatsu-lab.github.io/alpaca_eval/)
 - [C-Eval： 中文评测](https://cevalbenchmark.com/index.html#home)
+
+## Trends
+
+![中国人工智能技术厂商生态图谱](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/082ccc22e8a501f6e8885ca7c4a3bb2ff3.webp)
