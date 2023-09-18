@@ -26,12 +26,27 @@ date: 2023-08-21
 'richardpenman / home &mdash; Bitbucket'
 ```
 
+## headers
+
+```python
+# pip3 install fake_headers
+>>> from fake_headers import Headers
+>>> headers = Headers(headers=True).generate()
+>>> headers
+{'Accept': '*/*', 'Connection': 'keep-alive', 'User-Agent': 'Mozilla/5.0 (X11; Linux i686 on x86_64; rv:52.7.1) Gecko/20100101 Firefox/52.7.1', 'Accept-Encoding': 'gzip, deflate, br', 'Upgrade-Insecure-Requests': '1'}
+>>> 
+```
+
 
 ## Proxy
 
 - github opensource project
     - [haipproxy](https://spiderclub.github.io/haipproxy/)
+    - [proxypool: proxy crawer ref](https://github.com/Python3WebSpider/ProxyPool/blob/master/proxypool/crawlers/public/kuaidaili.py)
     - [proxy_pool](https://github.com/jhao104/proxy_pool)
+    - [proxy-scraper](https://github.com/iw4p/proxy-scraper/tree/master)
+- web
+    - [scrapingant](https://app.scrapingant.com/dashboard)
 
 ```python
 proxies={

@@ -5,6 +5,17 @@ tags: tool
 date: 2023-05-24
 ---
 
+## net speed
+
+- iperf3
+
+## intranet penetration
+
+- frp
+- ZeroTier
+- Neo-reGeorg
+- Tailscale
+
 ## markdown
 
 - [Marktion]()

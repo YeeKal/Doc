@@ -33,6 +33,7 @@ ctrl+b x: 关闭分屏
 ## 
 
 ```yaml
+# ~/.tmux.conf
 set -g mouse on
 
 set -g default-terminal "screen-256color"
