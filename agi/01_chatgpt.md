@@ -9,6 +9,11 @@ date: 2023-07-24
 
 - chatbase
 
+## local mirror
+
+- https://www.v2ex.com/t/973454#reply0
+- [pdf analyse](https://www.knowledgetoproduct.com/)
+
 ## 工具集合
 
 - ChatPaper: 上传论文，分析论文
