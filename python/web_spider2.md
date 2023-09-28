@@ -28,6 +28,8 @@ date: 2023-08-21
 
 ## headers
 
+- [fake-useragent](https://github.com/fake-useragent/fake-useragent)
+
 ```python
 # pip3 install fake_headers
 >>> from fake_headers import Headers
