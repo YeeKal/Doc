@@ -7,8 +7,12 @@ date: 2023-08-28
 
 ## dynalang
 
+- [Scaling up learning across many different robot types](https://www.deepmind.com/blog/scaling-up-learning-across-many-different-robot-types)
 - [Learning to Model the World with Language](https://dynalang.github.io/)
 
+## RT-X
+
+- [robotics-transformer-x.github.io](https://robotics-transformer-x.github.io/)
 
 ## RT-2
 

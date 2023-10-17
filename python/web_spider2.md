@@ -13,6 +13,8 @@ date: 2023-08-21
 
 异步 代理池
 
+
+
 ## cookie
 
 - [browser_cookie3](https://github.com/borisbabic/browser_cookie3): Loads cookies used by your web browser into a cookiejar object
@@ -39,16 +41,7 @@ date: 2023-08-21
 >>> 
 ```
 
-
 ## Proxy
-
-- github opensource project
-    - [haipproxy](https://spiderclub.github.io/haipproxy/)
-    - [proxypool: proxy crawer ref](https://github.com/Python3WebSpider/ProxyPool/blob/master/proxypool/crawlers/public/kuaidaili.py)
-    - [proxy_pool](https://github.com/jhao104/proxy_pool)
-    - [proxy-scraper](https://github.com/iw4p/proxy-scraper/tree/master)
-- web
-    - [scrapingant](https://app.scrapingant.com/dashboard)
 
 ```python
 proxies={
@@ -60,9 +53,46 @@ requests.get(url, proxies = proxies, verify=False)
 ```
 
 
+**<font color='Tomato'>免费代理池</font>**
+
+- github opensource project
+    - [haipproxy](https://spiderclub.github.io/haipproxy/)
+    - [proxypool: proxy crawer ref](https://github.com/Python3WebSpider/ProxyPool/blob/master/proxypool/crawlers/public/kuaidaili.py)
+    - [proxy_pool](https://github.com/jhao104/proxy_pool)
+    - [proxy-scraper](https://github.com/iw4p/proxy-scraper/tree/master)
+- web
+    - [scrapingant](https://app.scrapingant.com/dashboard)
+
+
+
+
+
+**<font color='Tomato'>云函数代理池</font>**
+
+- [SCFProxy](https://github.com/shimmeris/SCFProxy)
+
+```bash
+# http
+./scfproxy  deploy http  -p tencent -r ap-*
+./scfproxy http -l :8066 -c ~/.config/scfproxy/cert/scfproxy.cer -k ~/.config/scfproxy/cert/scfproxy.key
+
+
+#  socks
+./scfproxy socks -l 8066 -s 8067 -h 118.89.135.45
+curl -x socks5://ip:port myip.ipip.net
+```
+
+
 ## 异步 / 协程
 
 iohttp
+
+**<font color='Tomato'>同步&异步</font>**
+
+```python
+cf = partial(singleSkuCheckAsyncProxy, session=session,sku_id=sku, product_id=product)
+ff = loop.run_in_executor(None, cf)
+```
 
 ## requests
 
@@ -79,3 +109,7 @@ res.json()  # json result
 ## Selenium
 
 ## ​scrapy
+
+## ref
+
+- [python 爬虫教程](https://www.yuanrenxue.cn/crawler/crawl-app-tricks.html)

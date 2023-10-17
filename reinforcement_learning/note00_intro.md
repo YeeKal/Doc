@@ -36,6 +36,7 @@ date: 2019-05-05
 - [DeepRLHacks](https://github.com/williamFalcon/DeepRLHacks)
 - [median ](https://medium.com/@jonathan_hui/rl-deep-reinforcement-learning-series-833319a95530)
 - [openai 推荐论文](https://spinningup.openai.com/en/latest/spinningup/keypapers.html)
+- [awesome-rl](https://github.com/aikorea/awesome-rl#robotics)
 
 ## read material
 

@@ -7,6 +7,10 @@ date: 2023-07-21
 
 1. 尝试使用hugging face调用api
 
+LMM: Large multimodal models
+
+LLM: Large Language Models
+
 ## research
 
 - Ret Net
@@ -17,7 +21,9 @@ date: 2023-07-21
 ## claude2
 
 - [镜像站：](https://chat.finechat.ai/chats)
-- claude 2 web api: https://github.com/all-in-aigc/claude-webapi
+- [unofficial web api](https://github.com/all-in-aigc/claude-webapi)
+- [unofficial python api](https://github.com/KoushikNavuluri/Claude-API)
+
 ## Bard
 
 - [Bard-API](https://github.com/dsdanielpark/Bard-API)
@@ -63,3 +69,7 @@ date: 2023-07-21
 ## Trends
 
 ![中国人工智能技术厂商生态图谱](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/082ccc22e8a501f6e8885ca7c4a3bb2ff3.webp)
+
+## comment
+
+- [The Dawn of LMMs: Preliminary Explorations with GPT-4V(ision)](https://arxiv.org/abs/2309.17421)

@@ -22,4 +22,8 @@ date: 2023-07-23
     - [各城市旅游数据：山东威海](https://www.ceicdata.com.cn/datapage/charts/o_china_cn-visitor-arrival-shandong-weihai/?type=area&period=10y&lang=zh-hans)
     - [各城市旅游数据：江苏苏州](https://www.ceicdata.com.cn/datapage/charts/o_china_cn-visitor-arrival-jiangsu-suzhou/?type=area&period=10y&lang=zh-hans)
 
+## movie
+
+- [中国电影数据信息网](https://www.zgdypw.cn/)
+
     
