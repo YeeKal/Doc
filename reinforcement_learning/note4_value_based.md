@@ -9,7 +9,7 @@ manily demonstrated in DQN
 
 ## DQN
 
-![dqn_2013](imgs/dqn_2013.png)
+![dqn_2013.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/reinforcement_learning/imgs/dqn_2013.png)
 
 对于连续或者复杂的状态集合，用离散的Q表来存储显得不太现实。故考虑用神经网络拟合出Q(S,A).
 
@@ -26,7 +26,7 @@ y_i=E[r+\gamma\max_{a'}Q(s',a';\theta_{i-1})]$$
 
 ## Nature DQN
 
-![nature_dqn](imgs/nature_dqn.png)
+![nature_dqn.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/reinforcement_learning/imgs/nature_dqn.png)
 
 在DQN(2013)中，目标Q值使用到了当前Q网络参数来计算，而后在放入经验池中后又根据此来更新网络参数，两者之间有较强的相关性。而在Nature dqn中，构建了两个Q网络，一个当前Q网络用来更新参数，另一个Q‘网络计算目标Q值。Q’网络中的参数每隔一定轮次便复制Q网络中的参数，即Q‘网络延时更新，以减少相关性。
 

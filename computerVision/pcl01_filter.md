@@ -23,7 +23,7 @@ pass.filter (*cloud_filtered);
 
 #### VoxelGrid filter: 体素化网格采样
 
-![voxelgrid](imgs/pcl_filter_voxelgrid.jpg)
+![pcl_filter_voxelgrid.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/computerVision/imgs/pcl_filter_voxelgrid.jpg)
 
 ```c++
 pcl::VoxelGrid<pcl::PCLPointCloud2> sor;

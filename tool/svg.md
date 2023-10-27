@@ -17,7 +17,7 @@ date: 2022-10-17
 
 ## svg interative map
 
-![display_names](imgs/svg-loaders/colour_with_class.svg)
+![svg-loaders/colour_with_class.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/tool/imgs/svg-loaders/colour_with_class.svg)
 
 ## plot and table
 
@@ -210,11 +210,11 @@ date: 2022-10-17
 
 ## svg source  animation
 
-![audio](imgs/svg-loaders/audio.svg)
+![svg-loaders/audio.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/tool/imgs/svg-loaders/audio.svg)
 
-![audio](imgs/svg-loaders/circles.svg)
+![svg-loaders/circles.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/tool/imgs/svg-loaders/circles.svg)
 
-![FidgetSpinner](imgs/FidgetSpinner.svg)
+![FidgetSpinner.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/tool/imgs/FidgetSpinner.svg)
 
 
 <!-- <svg width="500px" height="500px" viewBox="0 0 500 500"> 
@@ -223,7 +223,7 @@ date: 2022-10-17
     </rect> 
 </svg> -->
 
-![net](imgs/net.svg)
+![net.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/tool/imgs/net.svg)
 
 <p style="color:blue; opacity:0.5;font-size:40px;text-align:center;"> HAHA</p>
 

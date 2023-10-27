@@ -18,7 +18,7 @@ $$y=\sum \lambda_i x_i$$
 当选定了固定的$x_i$之后，通过凸线性组合则形成凸包(convex hull)， 即包括这些点的最小凸集。通过凸锥组合则形成凸锥包(Convex cone hull), 即包括这些点的最小凸锥。
 
 下图画出三种组合方式。可以看出，在2D情况下，凸组合是两点之前的线段；仿射组合是过两点的直线；而凸锥组合是原点分别向两个点连接的射线所包围的部分，类似一个尖锥。在3D情况下也可以看出，凸组合是包括了所有点的多面体，这也被称为 **<font color='Tomato'>凸包(convex hull) </font>**.
-![linear_combination](imgs/linear_combination.png)
+![linear_combination.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/linear_combination.png)
 
 
 还有一些其他有意思的线性组合, `方形组合`(我自己起得):
@@ -29,7 +29,7 @@ $$y=\lambda_1 x_1 + \lambda_2 x_2, \quad \lambda_i \in [0, 1]$$
 在二维平面, 对于两个向量, `方形组合` 其实是以两个向量为边的平行四边行.
 
 
-![parallel_combination](imgs/parallel_combination.png)
+![parallel_combination.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/parallel_combination.png)
 
 
 ## Convex Sets
@@ -130,7 +130,7 @@ norm ball: $||x-x_c|| \leq r$
 
 norm cone: $||x|| \leq t$. euclidean norm cone is called second-order cone（二阶锥）.
 
-![norm_cone.png](imgs/norm_cone.png)
+![norm_cone.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/norm_cone.png)
 
 <font color='Tomato'>Polyhedra(多面体)</font>
 
@@ -138,7 +138,7 @@ solution set of finitely many linear inequalities and equalities
 
 $$Ax\preceq b, Cx =d$$
 
-![polyhedra.png](imgs/polyhedra.png)
+![polyhedra.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/polyhedra.png)
 
 <font color='Tomato'>Positive semidefinite cone(半正定锥)</font>
 
@@ -172,11 +172,11 @@ $$y=\sum \lambda_i x_i$$
 
 线性方程组的解集$C=\{ x| Ax=b \}$是一个仿射集合。反之，任意仿射集合可以表示为一个线性方程组的解集。上式中$A$是一个矩阵，$x,b$都是向量。
 
-![hyper_plane](imgs/hyper_plane.png)
+![hyper_plane.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/hyper_plane.png)
 
 $\{ x| a^Tx=b \}$这个集合被称为超平面，a，x是向量b是一个常数。任取$x_0$,使得$a^Tx_0=b$, 则解集上任意点$x$,有$a^T(x-x_0)=0$. 即解集以$x_0$为中心，垂直a的所有的线段形成的平面。或者可以理解为x在a上投影的长度为b，则满足条件的x在垂直于a的某一个平面上，而b决定了这个平面的高度。
 
-![halfspace](imgs/halfspace.png)
+![halfspace.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/halfspace.png)
 $\{a^Tx \leq b \}$ 被成为半空间(halfspace).可以认为是由超平面分割的空间。
 
 超平面是仿射集，也是凸集，半空间是凸集。
@@ -204,12 +204,12 @@ $$a^{T} x \leq b \text { for } x \in C, \quad a^{T} x \geq b \text { for } x \in
 the hyperplane $\left\{x \mid a^{T} x=b\right\}$ separates $C$ and $D$
 strict separation requires additional assumptions (e.g., $C$ is closed, $D$ is a singleton)
 
-![](imgs/convex_set_sht.png)
+![convex_set_sht.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/convex_set_sht.png)
 
 <font color='Tomato'> Supporting hyperplane theorem(超平面支持定理) </font>：a boundary point of a convex set has a supporting hyperplane passing through it. Formally: if $C$ is a nonempty convex set, and $x_0\in bd(C)$, then there exists $a$ such that:
 $$C\subseteq\{x:a^Tx\leq a^T x_0\}$$
 
-![convex_set_sht](imgs/convex_set_sht.jpeg)
+![convex_set_sht.jpeg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/convex_set_sht.jpeg)
 
 ## Operations that preserve convexity(保凸运算)
 

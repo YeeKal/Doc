@@ -47,7 +47,7 @@ date: 2023-02-12
 
 后面又更深入扩展了规划器再狭窄场景下和比较杂乱的停车场(parking deck)下的规划方法
 
-![parking_opti_slot](imgs/parking_opti_slot.png)
+![parking_opti_slot.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/blog/imgs/parking_opti_slot.png)
 <font color=Grey size = 1>图片引用自原论文</font>
 
 
@@ -145,13 +145,13 @@ $$
 1. phase B: $q_E\rightarrow q_P$,从终点到转换点
 2. phase A: $q_P\rightarrow q_S$,从转换点到起点
 
-![parking_opti_two_phase](imgs/parking_opti_two_phase.png)
+![parking_opti_two_phase.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/blog/imgs/parking_opti_two_phase.png)
 <font color=Grey size = 1>图片引用自原论文</font>
 
 
 在phase B状态,规划器尽量找到能使自车到达一个方便脱困的位置的轨迹.在垂直和斜列车位,只需要保持航向不变,前进或后退到某个点. 而对于水平车位车需要摆过一定的角度才方便从库位内脱困出来(如下图水平车位的Phase switching point).
 
-![parking_opti_parallel_switch](imgs/parking_opti_parallel_switch.png)
+![parking_opti_parallel_switch.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/blog/imgs/parking_opti_parallel_switch.png)
 <font color=Grey size = 1>图片引用自原论文</font>
 
 因此在phase B的规划阶段,目标航向的变化在垂直和斜列场景设为0,而在水平场景设置为$\frac{\pi}{2}$:
@@ -170,7 +170,7 @@ $$
 
 1. `phase switching point`的计算: 在垂直和斜列车位场景是让车沿直线开出一定距离,而水平是当左前角点突出一定距离之后认为是可以脱困的点.
 
-![parking_opti_phase_switch_point.png](imgs/parking_opti_phase_switch_point.png)
+![parking_opti_phase_switch_point.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/blog/imgs/parking_opti_phase_switch_point.png)
 <font color=Grey size = 1>图片引用自原论文</font>
 
 
@@ -178,7 +178,7 @@ $$
 
 3. `driving switching point`的计算, rule2:当最优解的损失函数开始增大的时候($l^*_{O_i}>l^*_{O_{i-1}}$)标志着需要换档了.主要针对phase A场景.文中以下图解释如此操作的原因.下图从$q_P$到switching point的过程中,y方向和航向与目标点的偏差逐渐缩小,因此这两方面的损失也迅速减小.而x方向的误差逐渐增大,损失函数也逐渐增大,总的损失函数趋近减小. 当y方向和航向趋近于0的时候,$q_P$和switching point基本在一条直线上,这也是较好的换档位置.同时由于y方向和航向的权重参数比较大,在这一位置,如果再往前则总的损失函数趋近增大,因此可以通过$l^*_{O_i}>l^*_{O_{i-1}}$来判断是否是比较好的换挡位置.
 
-![parking_opti_parallel_driving_switch](imgs/parking_opti_parallel_driving_switch.png)
+![parking_opti_parallel_driving_switch.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/blog/imgs/parking_opti_parallel_driving_switch.png)
 <font color=Grey size = 1>图片引用自原论文</font>
 
 
@@ -194,7 +194,7 @@ $$
     - 能处理换档点
 
 但是正因为每次只向前走一步,因此无法把握全局的环境信息,路径不一定最优. 对换档点的判断处理过于简单,会导致非常多的换档点.下图是一个简单场景下求解失败的例子.当从起点走到P点,y和theta误差都在迅速下降,cost减小. 但是y和theta误差可能不是同步到达最小值,因此会由于cost的增加而提前换档,这个时候继续往前会很快又到达换档点,因此会无故增加很多次换档.
-![parking_opti_practice2](imgs/parking_opti_practice2.png)
+![parking_opti_practice2.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/blog/imgs/parking_opti_practice2.png)
 
 正因为如此,文中又提出了在狭窄场景下的引导树构建方法. 本小节中的方法(主要是phase A阶段的规划)会作为通用的局部规划器在下一节描述的方法中用到。
 
@@ -204,7 +204,7 @@ $$
 
 根据人类泊车的经验，文中针对泊车场景提出了一种高度定制化的采样方法。对于停车场的道路环境，以及人类开车的习惯，泊车时一般会走直线移动一段距离(parallel displacement)或者打弯走向垂直方向的某个位置(orthogonal displacement)。基于以上先验认知，文中提出了以当前起始点$q_0$沿水平方向的水平采样点$q_{R_P}$,和沿垂直方向的垂直采样点$q_{R_O}$,如下图所示：
 
-![parking_opti_ref_config](imgs/parking_opti_ref_config.png)
+![parking_opti_ref_config.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/blog/imgs/parking_opti_ref_config.png)
 <font color=Grey size = 1>图片引用自原论文</font>
 
 $$\mathbf{q}_{R_P}=\mathbf{q}_0+\left[\begin{array}{c}
@@ -231,26 +231,26 @@ N_{sp}&:\quad \text{当前为止的换挡次数}
 
 若实际采样点能连接到最后的终点，则规划成功， 否则把这些点加入到候选集中，根据代价函数循环进行下一次采样。整体规划思路如下：
 
-![parking_opti_narrow](imgs/parking_opti_narrow.png)
+![parking_opti_narrow.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/blog/imgs/parking_opti_narrow.png)
 <font color=Grey size = 1>图片引用自原论文</font>
 
 
 下图展示了一次采样的例子。其中$q_{L_1}$是以水平采样点$q_{R_P}$为导向由局部规划器生成的对应于水平方向上的实际采样点。$q_{L_2}, q_{L_3}, q_{L_4}$是以垂直采样点$q_{R_O}$为导向由局部规划器生成的对应于垂直方向上的实际采样点，而$q_{L_2}, q_{L_3}$又是局部轨迹上的换挡点。
 
-![parking_opti_ref_config_real](imgs/parking_opti_ref_config_real.png)
+![parking_opti_ref_config_real.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/blog/imgs/parking_opti_ref_config_real.png)
 
 ### 仿真结果
 
 水平+垂直+斜列的普通泊车场景：
-![parking_opti_sim1](imgs/parking_opti_sim1.png)
+![parking_opti_sim1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/blog/imgs/parking_opti_sim1.png)
 <font color=Grey size = 1>图片引用自原论文</font>
 
 垂直车位的杂乱场景（虚线为Hybrid A\*的结果）：
-![parking_opti_sim2](imgs/parking_opti_sim2.png)
+![parking_opti_sim2.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/blog/imgs/parking_opti_sim2.png)
 <font color=Grey size = 1>图片引用自原论文</font>
 
 垂直车位的狭窄场景：
-![parking_opti_sim3](imgs/parking_opti_sim3.png)
+![parking_opti_sim3.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/blog/imgs/parking_opti_sim3.png)
 <font color=Grey size = 1>图片引用自原论文</font>
 
 

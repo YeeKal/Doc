@@ -39,7 +39,7 @@ $$\min_{x, u} \int_0^T ;(x(t), u(t))dt +E(x(t))$$
 
 $$\min_{u^0,\cdots,u^T}\sum_t C^t(x^t), x^{t+1}=f(x^t, u^t)$$
 
-![collocation](imgs/shooting_1.png)
+![shooting_1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/shooting_1.png)
 
 
 对定步长时间序列，通过选择基函数作为参数方程对控制变量参数化： $u(t,q)$
@@ -67,7 +67,7 @@ inverse dynamic function:
 $$\min_{x^0,\cdots,x^T}\sum_t C^t(x^t)  \\
 s.t.\quad u^{t}=f^{-1}(x^t, x^{t+1})$$
 
-![collocation](imgs/collocation_1.png)
+![collocation_1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/collocation_1.png)
 
 
 直接法的首要问题是如何解构动力学方程。最优化问题一般都是把变量离散化进行处理。如果把控制量当作优化变量，把状态变量当作临时变量，临时变量通过状态方程由控制变量得出，并只在乎最后状态是否达到了目标，则这就是shooting方法。如果把控制量和状态变量都当作优化变量，状态方程作为约束方程，则这就是collocation方法。一般，如果只把状态变量作为优化变量，控制量由逆状态方程得出，也被成为collocation方法。直接法的第二大问题就是如何离散状态方程，一般有牛顿积分法，荣格-库塔积分，辛普什积分等等。

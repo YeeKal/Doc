@@ -79,7 +79,7 @@ $$\begin{align} \bigtriangledown E_{x\sim p(x|\theta)}(f(x))&=\bigtriangledown_\
 
 基于整个回合数据的方法，称为reinforce算法。这里基于Monte Carto进行采样。在梯度上升更新过程中，右乘的$v_t$是该动作的奖励值，奖励值的大小影响上升梯度中由该动作所造成的梯度。（让原始策略先跑一轮，若得到正向反馈，增加选择该动作的概率，若得到负向反馈，则减少选择该动作的概率，从而更新策略。以数学的角度来看，反馈即是reward，梯度又乘便得到反馈对梯度的选择作用，参数更新即是在更新策略。）
 
-![reinforce](imgs/reinforce.png)
+![reinforce.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/reinforcement_learning/imgs/reinforce.png)
 
 最大化$\log\pi_\theta(s,a)v$等效于最小化-$\log\pi_\theta(s,a)v$，故在tensorflow中的处理可以用交叉熵最小化loss：
 ```python

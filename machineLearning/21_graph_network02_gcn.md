@@ -29,7 +29,7 @@ $$\Delta F=\nabla\cdot (\nabla F)= \frac{\partial^{2} f}{\partial x^{2}}+\frac{\
 
 **拉普拉斯矩阵**
 
-![gcn_01](imgs/gcn_01.png)
+![gcn_01.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/gcn_01.png)
 $$L=D-A$$
 
 - 拉普拉斯矩阵 $L$

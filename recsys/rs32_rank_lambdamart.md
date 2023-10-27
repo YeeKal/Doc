@@ -77,7 +77,7 @@ $$\gamma_{k m}=\frac{\sum_{x_{i} \in R_{k m}} \frac{\partial C}{\partial s_{i}}}
 
 根据下图的步骤，由于这里使用的损失函数交叉熵，并没有直接使用负梯度进行优化，而是采用通用的用近似值代替的方法。事实上在xgboost损失函数中通过二阶泰勒展开，就可以得到没有正则项的同样的公式。
 
-![lambdamart](imgs/lambdamart.png)
+![lambdamart.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/lambdamart.png)
 
 
 从广义上讲，lambda损失只是一种损失函数的形式，而得分$s_i$可以采用任何一种机器学习/深度学习的方法来做。因此可以说对于排序任务，如何定义损失函数是其精髓所在;另一方面，在ltr领域，把深度学习纳入进得分函数，便可以通过损失函数的设计，通过深度学习来处理排序任务。

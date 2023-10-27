@@ -29,7 +29,7 @@ $$x^+ = x - t\nabla f(x)$$
 
 疑问点： 如果迭代之后仍然在$l_2$上方，也有可能是步长太短了，怎么能保证有效性？
 
-![backtrack_line_search.png](imgs/backtrack_line_search.png)
+![backtrack_line_search.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/backtrack_line_search.png)
 
 
 ## Armijo–Goldstein condition
@@ -43,7 +43,7 @@ $$x^+ = x - t\nabla f(x)$$
 $$f(x+t d_k)\leq f(x) + t \alpha  \nabla f(x)^T d_k$$
 
 
-![](imgs/armijo_goldstein.svg)
+![armijo_goldstein.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/armijo_goldstein.svg)
 
 ## Wolfe-Powell condition
 

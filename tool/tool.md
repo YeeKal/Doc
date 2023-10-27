@@ -5,6 +5,12 @@ tags: tool
 date: 2023-05-24
 ---
 
+## free database
+
+- [免费在线 合集](https://wivwiv.com/post/free-online-resource)
+- [mongodb](https://www.mongodb.com/products/platform/cloud)
+- [supabase](https://supabase.com/dashboard)
+
 ## net speed
 
 - iperf3

@@ -100,7 +100,7 @@ $$J_{T}=T_{s_{f}}=\int_0^{T} 1dt\\
 
 
 在该图的横穿场景中，两辆车把同行时间分成了三段。其中A段只有一个上限，B段有上下限，C段有一个下限，三段联合组成了这一位置的时间窗口约束。这里只有A段是凸的而B，C是非凸的条件。一般是通过决策过程选择一端把该问题变成凸问题。
-![speed_planning_1](imgs/speed_planning_1.png)
+![speed_planning_1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/speed_planning_1.png)
 
 - comfort box constraints: use semi-hard constraint 
 

@@ -31,13 +31,13 @@ $$B(b)=\{\mathbf{q}:\|\mathbf{b}-\mathbf{q}\|<\rho(\mathbf{b})\}$$
 
 而elastic band可以看作是由有限个bubble组成。落在这些bubbles中的点保证是无碰撞的。为了保证路径无碰撞，假设各个相邻bubble重叠，则连接邻近bubble的圆心的线段可以保证无碰撞。
 
-![](imgs/teb_bubbles.jpg)
+![teb_bubbles.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/teb_bubbles.jpg)
 
 距离障碍物越近，bubble越小，数量也会越多。bubble的形状不限于圆形，也可以为椭圆，但是计算量会增大。
 
 force demonstration
 
-![eb_force](imgs/eb_force.png)
+![eb_force.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/eb_force.png)
 
 #### deform strategy
 
@@ -78,7 +78,7 @@ B^{*} &=\underset{B}{\operatorname{argmin}} f(B)
 $$e_{\Gamma}\left(x, x_{r}, \epsilon, S, n\right) \simeq \begin{cases}\left(\frac{x-\left(x_{r}-\epsilon\right)}{S}\right)^{n} & \text { if } x>x_{r}-\epsilon \\ 0 & \text { otherwise }\end{cases}$$
 
 $$\text{蓝色：}e_{\Gamma}(x,0.4,0.1, 0.1, 2) \quad \text{红色：}e_{\Gamma}(x,0.4,0.1, 0.05, 2)$$
-![teb1.png](imgs/teb1.png)
+![teb1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/teb1.png)
 
 #### obstacles
 

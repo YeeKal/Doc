@@ -19,15 +19,15 @@ select some complete episodes to train then this becomes a supervised learning p
 
 Integrating learning and planning.
 
-![dyna_framework](imgs/dyna_framework.png)
+![dyna_framework.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/reinforcement_learning/imgs/dyna_framework.png)
 
 Dyna-Q algorithm:
 
-![dyna_q](imgs/dyna_q.png)
+![dyna_q.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/reinforcement_learning/imgs/dyna_q.png)
 
 Dyna2 algorithm:
 
-![dyna2](imgs/dyna2.png)
+![dyna2.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/reinforcement_learning/imgs/dyna2.png)
 
 ## simulation-based search
 

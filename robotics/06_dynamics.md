@@ -65,7 +65,7 @@ $$F_i=m\dot{v}_{c_1} \\ N_i={}^{C_i}I\dot{\omega}_i+\omega_i\times {}^{C_i}I\ome
 
 where the origin of frame{$C_i$} is at the center of the body, with the same orientation as frame{i}.
 
-![newton-euler algorithm](imgs/newton_euler.png)
+![newton_euler.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/robotics/imgs/newton_euler.png)
 
 由关节位置，速度和加速度计算所需的关节力矩。
 

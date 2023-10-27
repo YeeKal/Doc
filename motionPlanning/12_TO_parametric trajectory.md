@@ -39,7 +39,7 @@ $$\begin{aligned}
 \end{aligned}
 $$
 
-![spiral](imgs/spiral.png)
+![spiral.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/motionPlanning/imgs/spiral.png)
 
 **polytraj 代码原理**
 

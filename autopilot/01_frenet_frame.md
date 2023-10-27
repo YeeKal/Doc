@@ -9,11 +9,11 @@ date: 2021-06-06
 
 由于道路一般是弯曲的，使用笛卡尔坐标系会增加描述路线的复杂度，同时难以直观看出车辆相对于道路的偏离程度。自动驾驶中一般使用Frenet坐标系描述汽车相对于道路的位置。一般以车道中心线(或者车道中心线的切向量)为纵坐标，记为s轴(Longitudinal axis);垂直s轴作为横坐标，记为d轴(lateral axis). Frenet的两个坐标值直接给出了车辆的纵向行驶距离和横向偏移距离，这也符合我们对驾驶的物理感受。
 
-![frenet1](imgs/frenet1.svg)
+![frenet1.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/frenet1.svg)
 
 ## 坐标转换
 
-![imgs/frenet2.png](imgs/frenet2.png)
+![frenet2.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/frenet2.png)
 
 **曲率$\kappa$**:曲线密切圆的半径的倒数。曲线越弯曲，则密切圆半径越小，曲率越大。
 $$

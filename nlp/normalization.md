@@ -21,6 +21,6 @@ $$\begin{array}{l}
 \hat{x_{i j}}=\frac{x_{i j}-\mu_{i}}{\sqrt{\sigma_{i}^{2}+\epsilon}}
 \end{array}$$
 
-![norm](imgs/norm1.png)
+![norm1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/norm1.png)
 
 ## ref

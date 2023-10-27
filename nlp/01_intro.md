@@ -35,12 +35,12 @@
     - [github-100-Days-Of-ML-Code](https://github.com/Avik-Jain/100-Days-Of-ML-Code)
     - [lihang_book_algorithm](https://github.com/WenDesi/lihang_book_algorithm)
         - [csdn-author](https://blog.csdn.net/wds2006sdo/category_6314784.html)
-![text_processing](imgs/text_processing.jpg)
+![text_processing.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/text_processing.jpg)
 
 
 ### open source tool
 
-![open nlp tool](imgs/open_nlp_tool.png)
+![open_nlp_tool.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/open_nlp_tool.png)
 
 -  spaCy（网站，博客）[Python; 新兴的开放源码库并自带炫酷的用法示例、API文档和演示应用程序]
     - 网站网址：https://spacy.io/

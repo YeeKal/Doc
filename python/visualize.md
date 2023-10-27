@@ -5,7 +5,7 @@ tags:
 date: 2023-07-26
 ---
 
-![body_volume](imgs/visualize/body_volume.svg)
+![visualize/body_volume.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/python/imgs/visualize/body_volume.svg)
 
 ```python
 '''

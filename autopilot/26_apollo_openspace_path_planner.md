@@ -36,7 +36,7 @@ DistanceSmoothing():
 
 [apollo 优化方法源码](https://github.com/ApolloAuto/apollo/tree/master/modules/planning/open_space/trajectory_smoother)
 
-![apollo_openspace](imgs/apollo_openspace.png)
+![apollo_openspace.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/apollo_openspace.png)
 
 **DistanceApproachInterface**
 

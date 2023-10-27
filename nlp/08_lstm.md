@@ -13,7 +13,7 @@
 ## lstm
  Long Short Term Memory
 
-![lstm2](imgs/lstm2.png)
+![lstm2.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/lstm2.png)
 
 LSTM从RNN衍生而来与RNN有着一致的框架，即从之前的信息中进行学习。而为了解决RNN中梯度消失的问题，LSTM的改进主要集中在对于每一个隐藏单元内部的处理。而下面也主要先从数学表达式上理解数据是怎么转化的，再从逻辑上理解为什要这样做。
 
@@ -34,7 +34,7 @@ w m_{t}&=\text { focus }_{t} \circ \tanh \left(l t m_{t}\right)  \\
 \end{aligned}$$
 区中$\sigma$为激活函数，一般表示sigmoid;$\phi$一般表示tanh。可以看到通过多个表达式把上一时刻的两个变量更新为当前时刻的两个变量。
 
-![lstm1](imgs/lstm1.png)
+![lstm1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/lstm1.png)
 
 核心公式是一致的，怎么编排就可以随心所欲了。
 $$\begin{aligned}
@@ -46,8 +46,8 @@ C_{t}&=f_{t} * C_{t-1}+i_{t} * \tilde{C}_{t}\\
 h_{t} &=o_{t} * \tanh \left(C_{t}\right)
  \end{aligned}$$
 
-![lstm3](imgs/lstm3.png)
-![lstm6](imgs/lstm6.jpg)
+![lstm3.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/lstm3.png)
+![lstm6.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/lstm6.jpg)
 
 
 ```latex{cmd hide}
@@ -182,7 +182,7 @@ h &=\tanh \left(x_{t} U^{h}+\left(s_{t-1} \circ r\right) W^{h}\right) \\
 s_{t} &=(1-z) \circ h+z \circ s_{t-1}
 \end{aligned}$$
 
-![gru](imgs/gru.png)
+![gru.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/gru.png)
 
 - 重置门(reset gate), $z_t$
 - 更新门(update gate), $r_t$
@@ -191,4 +191,4 @@ s_{t} &=(1-z) \circ h+z \circ s_{t-1}
 
 $\odot, \circ$: Hadamard Product/element-wise multiplication/对应元素相乘
 
-![ewe](imgs/ewm.png)
+![ewm.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/ewm.png)

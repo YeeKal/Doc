@@ -72,7 +72,7 @@ $$H:=-\sum_iy_i'log(y_i)$$
 
 当然概率差值的平方和也可以用来作为距离，但是交叉熵在概率的衡量上更有优势。如下图所示，MSE损失只跟差值成正比，在差值为1时达到最大值。而交叉熵则是随着真实概率的增大，损失有增大的趋势，即对于真实概率较大的预测值会有更大的梯度，而在真实值为1,预测为0时逼近最大值。
 
-![](imgs/cross_entropy_loss.png)
+![cross_entropy_loss.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/cross_entropy_loss.png)
 
 ```python
 import matplotlib.pyplot as plt

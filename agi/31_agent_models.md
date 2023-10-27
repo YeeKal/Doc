@@ -5,6 +5,12 @@ tags: robot
 date: 2023-08-28
 ---
 
+## eureka
+
+Eureka: Human-Level Reward Design via Coding Large Language Models
+
+- [project](https://eureka-research.github.io/)
+
 ## dynalang
 
 - [Scaling up learning across many different robot types](https://www.deepmind.com/blog/scaling-up-learning-across-many-different-robot-types)

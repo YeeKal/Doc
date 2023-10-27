@@ -3,7 +3,7 @@ $$\begin{align}\hat v(s,w)&\approx v_\pi(s)\\
 \hat q(s,a,w)&\approx  q_\pi(s,a)\end{align}$$
 
 three kinds input<--->output types:
-![network kinds](imgs/network_kinds.png)
+![network_kinds.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/reinforcement_learning/imgs/network_kinds.png)
 
 Some differentiable function approximators:
 - linear combinations of features

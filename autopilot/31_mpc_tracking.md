@@ -11,13 +11,13 @@ date: 2021-08-11
 
 
 行驶轨迹与实际轨迹并没有完全重合：
-![imgs](imgs/tracking1.png)
+![tracking1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/tracking1.png)
 
 ## mpc
 
 问题: 给定一条轨迹和当前位置，下一步怎么运动，运动的目标是尽可能沿着轨迹走
 
-![mpc1](imgs/mpc1.png)
+![mpc1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/mpc1.png)
 
 
 - ref:

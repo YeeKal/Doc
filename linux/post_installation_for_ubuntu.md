@@ -19,7 +19,7 @@ https://zhuanlan.zhihu.com/p/110105273
 - 录制终端转化为 svg: pip3 install --user termtosvg
     - sudo snap install termtosvg-simosx
     - termtosvg-simosx.termtosvg animacion.svg
-![record](imgs/record_term1.svg)
+![record_term1.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/linux/imgs/record_term1.svg)
 
 3. 卸载不必要的自带软件: https://www.jianshu.com/p/67a86505279f
 4. v2rayl: https://gitee.com/sLarson/v2rayL
@@ -98,7 +98,7 @@ windows-10 + ubuntu-16双系统，切换至windows之后再重启ubuntu引导项
 
 解决方案：使用easyuefi增加引导项
 
-![easyuefi](imgs/easyuefi.jpg)
+![easyuefi.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/linux/imgs/easyuefi.jpg)
 
 ## 添加自动启动项
 

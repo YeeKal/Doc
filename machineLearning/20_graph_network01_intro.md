@@ -44,7 +44,7 @@ o_n=g_w(x_n,l_n)$$
 
 - $f_w$: local transition function. 状态转移函数。通过迭代得出图节点的隐藏状态。函数参数可以根据实际任务选择是否需要加入迭代过程。
 - $o_n$: local output function，局部输出函数。可以认为是下游任务的决策函数，通过图的隐藏状态判断节点的类别。比如对于一个化合物分子，判断该图结构是否为有毒的。
-![gnn_01](imgs/gnn_01.png)
+![gnn_01.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/gnn_01.png)
 
 通过堆叠所有节点的$f_w$为$F_w$,则模型方程可以写为：
 
@@ -74,7 +74,7 @@ $$\begin{aligned}
 
 把$f_w$的参数拼接在一起，再经过前馈神经网络，可以对模型做一个简单的实现。
 
-![gnn_02](imgs/gnn_02.png)
+![gnn_02.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/gnn_02.png)
 
 **model learning**
 
@@ -85,7 +85,7 @@ $$e_{w}=\sum_{i=1}^{p} \sum_{j=1}^{q_{i}}\left(\mathbf{t}_{i, j}-\varphi_{w}\lef
 
 **gnn-rnn**
 
-![gnn_rnn](imgs/gnn-rnn.png)
+![gnn-rnn.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/gnn-rnn.png)
 
 
 

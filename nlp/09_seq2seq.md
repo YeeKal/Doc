@@ -7,16 +7,16 @@
 
 ## seq2seq
 
-![seq2seq](imgs/seq2seq1.png)
+![seq2seq1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/seq2seq1.png)
 
 decoding:
 1. greedy decoding: 取softmax最大值最为下一个输入
 2. beam search:
-    ![beam search](imgs/beam_search.png)
+    ![beam_search.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/beam_search.png)
 
 ## attention
 
-![attention](imgs/attention3.png)
+![attention3.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/attention3.png)
 
 In equations:
 $$\begin{aligned} 

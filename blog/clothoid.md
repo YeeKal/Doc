@@ -22,7 +22,7 @@ $$\kappa = \alpha s$$
 
 
 
-![](imgs/clothoid.png)
+![clothoid.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/blog/imgs/clothoid.png)
 
 ## parametrical clothoid（参数螺旋线）
 
@@ -63,7 +63,7 @@ S_{f}(x)=\int_{0}^{x} \sin \frac{\pi}{2} u^{2} d u$$
 ## 螺旋线与圆相切
 
 
-![spiral_tan_circle.png](imgs/spiral_tan_circle.png)
+![spiral_tan_circle.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/blog/imgs/spiral_tan_circle.png)
 
 螺旋线与圆相切实际上就是直线过渡到圆的螺旋线路径。
 
@@ -83,4 +83,4 @@ s_p &= \frac{1}{R\alpha} \\
 
 由上一节可知螺旋线的出圈点在大圆的弦上，弦和切线的夹角为$\mu$。
 
-![cppc.png](imgs/cppc.png)
+![cppc.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/blog/imgs/cppc.png)

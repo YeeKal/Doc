@@ -82,6 +82,23 @@ requests.get(url, proxies = proxies, verify=False)
 curl -x socks5://ip:port myip.ipip.net
 ```
 
+- [install certificate](http://mitm.it/#Linux)
+
+1. deploy on tencent cloud
+2. install mitmprocy
+    - 安装证书 https://blog.csdn.net/u013091013/article/details/101430260
+
+```bash
+openssl x509 -in  mitmproxy-ca-cert.pem -inform PEM -out mitmproxy-ca-cert.crt
+```
+3. install cer certificate
+
+```bash
+sudo cp mycert.cer /usr/share/ca-certificates/mycert.pem
+$ sudo dpkg-reconfigure ca-certificates
+$ sudo update-ca-certificates
+```
+
 
 ## 异步 / 协程
 

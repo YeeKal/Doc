@@ -35,7 +35,7 @@ approaches to reinforcement learning: Using deep networks to represent value, po
         - policy and/or value function
         - model
 
-![taxonomy](imgs/rl_agent_taxonomy.png)
+![rl_agent_taxonomy.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/reinforcement_learning/imgs/rl_agent_taxonomy.png)
 
 **prediction and control**
 
@@ -113,7 +113,7 @@ $$\begin{align}v_\pi(s)&=\sum_{a\in A}\pi(a/s)(r+\gamma\sum_{s'\in S}P_{ss'}^av_
 
 1. policy evaluation: 
 
-![policy_evaluation_dp](imgs/policy_evaluation_dp.png)
+![policy_evaluation_dp.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/reinforcement_learning/imgs/policy_evaluation_dp.png)
 
 策略已知，通过值函数迭代公式使值函数收敛（$\Delta v=0$）。
 
@@ -132,14 +132,14 @@ the optimal value funtion and optimal policy are found.
 
 值迭代再每一步值更新的过程中都重新选择策略，减少了迭代次数。值迭代的更新公式其实就是贝尔曼最优公式。
 
-![value iteration](imgs/dp_value_iteration.png)
+![dp_value_iteration.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/reinforcement_learning/imgs/dp_value_iteration.png)
 
 
 对于预测问题，相当策略已知，通过贝尔曼方程迭代可以求得。而对于控制问题，需要不断更新Q表使其收敛，则最优策略也即得出（最有策略依据最大值函数）。策略迭代：根据探索率更新策略。价值迭代：探索率接近0时，依据值函数更新。
 
 #### policy-iteration vs value-iteration
 
-![policy_value](imgs/policy_value.jpg)
+![policy_value.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/reinforcement_learning/imgs/policy_value.jpg)
 
 - 在Policy Iteration中
     - 第一步 Policy Eval：一直迭代至收敛，获得准确的V(s)
@@ -188,9 +188,9 @@ v_\pi(s)\approx average(G_t)$$
         \right.
         $$
 
-![mc_control](imgs/mc_control.png)
+![mc_control.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/reinforcement_learning/imgs/mc_control.png)
 
-![e_greedy](imgs/e_greedy_theorem.png)
+![e_greedy_theorem.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/reinforcement_learning/imgs/e_greedy_theorem.png)
 
 **off policy**
 
@@ -212,9 +212,9 @@ $$V(S_t)\leftarrow V(S_t)+\alpha(G_t^{\pi/\mu}-V(S_t))$$
 
 Incremental Implementation
 
-![mc1_off_policy](imgs/mc1_off_policy.png)
+![mc1_off_policy.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/reinforcement_learning/imgs/mc1_off_policy.png)
 
-![mc2_off_policy](imgs/mc2_off_policy.png)
+![mc2_off_policy.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/reinforcement_learning/imgs/mc2_off_policy.png)
 
 ## Temporal-Difference Learning
 
@@ -244,5 +244,5 @@ $$Q(S,A)=Q(S,A)+\alpha(R+\gamma \max_{a}Q(S',A)-Q(S,A))$$
 from **2017-Deep reinforcement learning for robotic
 manipulation-the state of the art**
 
-![drl_topology](imgs/drl_topology.png)
+![drl_topology.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/reinforcement_learning/imgs/drl_topology.png)
 

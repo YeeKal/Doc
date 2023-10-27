@@ -201,7 +201,7 @@ $$\begin{align}
 \end{align}$$
 如下图所示：
 
-![alpha_rank](imgs/alpha_rank.jpg)
+![alpha_rank.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/alpha_rank.jpg)
 
 其中最优值必须满足：$L\leq \alpha_{new} \leq H$：
 $$\begin{align}

@@ -18,7 +18,7 @@ Applications:
 
 ## RNN
 
-![rnn](imgs/rnn.jpg)
+![rnn.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/rnn.jpg)
 
 RNN的一级层次是由上图中的t标识的，表示有多少个简单的网络进行时序连接。比如如果一个句子有5个单词，每个单词都需要输入一个简单网络，则需要五个简单网络连接构成一个完整的RNN网络。
 
@@ -36,7 +36,7 @@ $$\begin{align} s_t &= f_1(U x_{t}+W s_{t-1})=tanh(U x_{t}+W s_{t-1}) \\
                 E(y,\hat{y})&=\sum_{t}E_t(y_t,\hat{y_t})  \longrightarrow \text{  loss function}\\
                             &=-\sum_{t}y_t\log{\hat{y_t}} \end{align}$$
 
-![rnn-bptt](imgs/rnn-bptt1.png)
+![rnn-bptt1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/rnn-bptt1.png)
 
 Back Propagation:
 
@@ -109,7 +109,7 @@ $$\begin{aligned}
 &=\left(\hat{y}_{3}-y_{3}\right) \otimes s_{3}
 \end{aligned},\text{ where }z_3=Vs_3$$
 
-![bptt2](imgs/bptt2.png)
+![bptt2.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/bptt2.png)
 由于参数共享，需要把受w影响的各个级联的单元都算上。而$\frac{\partial s_{j}}{\partial s_{k}}=\prod_{k+1}^{j} \frac{\partial h_{j}}{\partial h_{j-1}}$,在梯度求导时存在连乘项，则会产生梯度消失或梯度爆炸。由于连乘项的存在，对于较远时刻之前的信息也无法捕捉到。这也被称为long-range dependency probelm。
 
 $$\frac{\partial E_{3}}{\partial W}=\sum_{k=0}^{3} \frac{\partial E_{3}}{\partial \hat{y}_{3}} \frac{\partial \hat{y}_{3}}{\partial s_{3}} \frac{\partial s_{3}}{\partial s_{k}} \frac{\partial s_{k}}{\partial W}$$

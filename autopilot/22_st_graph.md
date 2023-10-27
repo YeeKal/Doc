@@ -11,7 +11,7 @@ date: 2021-08-11
 
 以时间t为横轴， 路径长度为纵轴。图中的点表示在t时刻路径s的位置会与障碍物发生碰撞，因此可以根据该图进行最优速度的优化.
 
-![st](imgs/st_apollo.jpg)
+![st_apollo.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/st_apollo.jpg)
 
 ref: Apollo代码中的ST Graph在modules/planning/lattice/behavior/path_time_graph.h文件
 

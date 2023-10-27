@@ -21,7 +21,7 @@ date: 2019-12-25
 为了防止分母为0,通常需要加入平滑项$\epsilon$，一般取1e-8：$\eta_{t}=\alpha \cdot m_{t} / \sqrt{v_{t}+\epsilon}$
 
 SGD optimization on saddle point：
-![SGD optimization on saddle point](imgs/optimizer2.gif) ![SGD optimization on saddle point](imgs/optimizer1.gif)
+![optimizer2.gif](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/optimizer2.gif) ![optimizer1.gif](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/optimizer1.gif)
 
 ## SGD
 

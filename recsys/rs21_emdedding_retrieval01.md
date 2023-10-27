@@ -15,7 +15,7 @@
 
 ## 2013 dssm microsoft
 
-![2013_dssm](imgs/2013_dssm.png)
+![2013_dssm.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/2013_dssm.png)
 
 网络结构： 
 
@@ -88,14 +88,14 @@ Deep Neural Networks for YouTube Recommendations
     - softmax多分类
     - 负采样： 选取一部分样本来代表整体
 
-![2016-youtube-dnn1](imgs/2016-youtube-dnn1.png)
-![2016-youtube-dnn2](imgs/2016-youtube-dnn2.png)
+![2016-youtube-dnn1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/2016-youtube-dnn1.png)
+![2016-youtube-dnn2.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/2016-youtube-dnn2.png)
 
 ## 2019 youtube 
 
 Sampling-Bias-Corrected Neural Modeling for Large Corpus Item Recommendations
 
-![2019_two_tower](imgs/2019_two_tower.png)
+![2019_two_tower.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/2019_two_tower.png)
 
 分别构建query和item端参数结构，通过内积进行embedding:
 
@@ -141,7 +141,7 @@ mobius
 
 Deep Learning Recommendation Model for Personalization and Recommendation Systems
 
-![2019_facebook_dlrm](imgs/2019_facebook_dlrm.png)
+![2019_facebook_dlrm.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/2019_facebook_dlrm.png)
 
 
 
@@ -176,7 +176,7 @@ ebr: embedding-based retrieval, 语义检索/向量召回
 
 unified embedding: 对各种特征的embedding，用以区分text embedding
 
-![2020_facebook_embedding](imgs/2020_facebook_embedding.png)
+![2020_facebook_embedding.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/2020_facebook_embedding.png)
 
 0. triplet loss:
 

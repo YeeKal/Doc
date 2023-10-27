@@ -11,7 +11,7 @@ date: 2022-06-21
 
 ## Delaunay Triangulation
 
-![tri](imgs/31_tri.png)
+![31_tri.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/motionPlanning/imgs/31_tri.png)
 
 connect each node to every other node that shares an edge
 

@@ -79,7 +79,7 @@ Harris Laplace detector
 **直线**
 
 过某一点$(x_0,y_0)$的直线方程满足：$y_0=k\cdot x_0+b$, 或者$b=-x_0\cdot k+y_0$. 则若以$x_0,y_0$为已知量，则所有过该点的直线的参数$(k,b)$在$k-b$坐标系下是一条直线。则$k-b$坐标系下不同直线的交点意味着以该点为参数的直线方程经过不同的$(x,y)$.
-![hough1](imgs/hough1.jpg)
+![hough1.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/computerVision/imgs/hough1.jpg)
 
 由于在实际中$k-b$坐标系无法表示$x=c$形式的直线，故实际中采用极坐标下的参数方程$d=x\cdot \cos(\theta)+y\cdot \sin(\theta)$, 参数空间为$(d,\theta)$.
 
@@ -89,7 +89,7 @@ Harris Laplace detector
 
 **广义霍夫变换(Generalized Hough Transform,GHT)**
 
-![hough2](imgs/hough2.png)
+![hough2.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/computerVision/imgs/hough2.png)
 
 1. preprocessing
     - pick a reference point $(x_c,y_c)$

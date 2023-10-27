@@ -15,7 +15,7 @@
 
 在2003年提出的神经网络语言模型(NNLM)中，每个词被转化为One-hot向量，之后乘以一个权重矩阵C得到高维向量作为网络输入。从另一个角度看One-hot向量与矩阵C相乘之后得到的就是某一行的权重值，这样就把词转化为了向量，这其实跟2013年提出的Word2Vec的思想是一致的，即NNLM在训练结束事实上也得到了一个副产物——矩阵C，其每一行都对应着一个词向量。与NNLM不同的是，词向量在2013年的Word2Vec中不再是副产物，而是主要产物。通过Word2Vec得到的向量也可以直接用来初始化NNLM的C矩阵，而事实上在2013年之后，Word Embedding也确实成为自然语言处理中的主流的编码方式。因此可以把Word Embedding看作一种预训练模型。我们在使用Word Embedding时，直接把词语的one-hot向量一一映射到词向量上作为网络输入就相当于完成了第一层网络参数的初始化。
 
-![nnlm](imgs/nnlm2.jpg)
+![nnlm2.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/nnlm2.jpg)
 
 Word Embedding也有自身的缺陷，即单一的向量无法充分表达多义词在不同语境下的语义的不同。而2018年之后，这一问题也逐渐被新的模型所改善。
 
@@ -34,7 +34,7 @@ $$$$
 $$\begin{aligned} Forward:& \quad p\left(t_{1}, t_{2}, \ldots, t_{N}\right)=\prod_{k=1}^{N} p\left(t_{k} \mid t_{1}, t_{2}, \ldots, t_{k-1}\right) \\
  Backward:& \quad p\left(t_{1}, t_{2}, \ldots, t_{N}\right)=\prod_{k=1}^{N} p\left(t_{k} \mid t_{k+1}, t_{k+2}, \ldots, t_{N}\right) \end{aligned}$$
 
-![elmo](imgs/elmo2.png)
+![elmo2.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/elmo2.png)
 
 
 ## ULM-FiT
@@ -56,7 +56,7 @@ The paper presents two model sizes for BERT:
 - BERT BASE – Comparable in size to the OpenAI Transformer in order to compare performance
 - BERT LARGE – A ridiculously huge model which achieved the state of the art results reported in the paper
 
-![bert block](imgs/bert_block.png)
+![bert_block.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/bert_block.png)
 
 - transformer encoder
 - masked tokens

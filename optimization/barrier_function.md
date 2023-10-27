@@ -54,7 +54,7 @@ t \nabla f\left(x^*(t)\right)-\sum_{i=1}^m \frac{1}{h_i(x)} \nabla h_i(x)+A^{\bo
 
 对于线性优化，$f(x)=c^Tx$, 其central path $x^*(t)$如下图所示:
 
-![central_path](imgs/central_path.jpg)
+![central_path.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/central_path.jpg)
 
 ## Ref
 

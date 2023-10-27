@@ -41,10 +41,10 @@ $$\text { Attention }(Q, K, V)=\operatorname{softmax}\left(\frac{Q K^{T}}{\sqrt{
 
 把文本中的每个词最为query，其他词作为source更新当前文本的表示方式。
 
-![self atention](imgs/self-attention.png)
+![self-attention.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/self-attention.png)
 
 ## Multi-Head Attention
-![multi head atention](imgs/multi-head-attention.png)
+![multi-head-attention.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/multi-head-attention.png)
 
 
 ## Trandformer
@@ -53,21 +53,21 @@ $$\text { Attention }(Q, K, V)=\operatorname{softmax}\left(\frac{Q K^{T}}{\sqrt{
 
 a1. 针对词向量构造Q,K,V. $W^q,W^k,W^v$为共享参数
 
-![tr-self atention](imgs/tr-self-1.png)
+![tr-self-1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/tr-self-1.png)
 
 a2. 生成权重系数（这里相似度计算省略了归一化分母，论文中分母取词向量维数的开方）
-![tr-self atention](imgs/tr-self-2.png)
+![tr-self-2.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/tr-self-2.png)
 
 a3. 权重加权求和
-![tr-self atention](imgs/tr-self-3.png)
+![tr-self-3.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/tr-self-3.png)
 
 a4. 总结 (矩阵并行运算，方便在gpu加速)
-![tr-self atention](imgs/tr-self-4.png)
+![tr-self-4.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/tr-self-4.png)
 
 #### Multi-Head Attention
 
 a1. 每个词生成多个{q,k,v}，论文中有8个head
-![tr-self atention](imgs/tr-mh.png)
+![tr-mh.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/tr-mh.png)
 
 #### position encoding
 
@@ -84,10 +84,10 @@ d_{model} :& 词向量维度
 #### structure
 
 单个encoder的架构图如下，其中Normalize采用了[layer-normalization](https://arxiv.org/abs/1607.06450).
-![tf1](imgs/tf-s1.png)
+![tf-s1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/tf-s1.png)
 
 decoder中服用了encode中的K, V.
-![tf2](imgs/tf-s2.png)
+![tf-s2.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/tf-s2.png)
 
 ## variants
 

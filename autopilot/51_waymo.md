@@ -102,7 +102,7 @@ $$\mathbf{p}_{t+\delta t}=\operatorname{ChauffeurNet}\left(I, \mathbf{p}_t\right
 - Road Mask Network: drivable areas of the field of view
 - PerceptionRNN: iteratively predicts a spatial heatmap for any other moving agent 
 
-![chaufnet_model.png](imgs/chaufnet_model.png)
+![chaufnet_model.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/chaufnet_model.png)
 
 detail model
 

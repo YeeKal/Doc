@@ -16,7 +16,7 @@ date: 2020-12-23
 $$R=U\Sigma V^T\\
 A=U_k\Sigma_k V_k^T\approx R $$
 
-![cf_mf](imgs/cf_mf.png)
+![cf_mf.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/cf_mf.png)
 
 $$ \text{预测： } r_{i,j}=U_k\Sigma_k^{-1/2}(i) \cdot \Sigma_k^{-1/2} V_k^T(j) \\
 \text{用户隐向量矩阵：} P=U_k\Sigma_k^{-1/2}\\

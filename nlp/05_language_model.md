@@ -105,7 +105,7 @@ $$\begin{aligned} C(i)\in  \mathbb{R}^{m}&: \text{feature vector} \\
 g&: \text{a conditional probabilit distribution function} w_t \end{aligned}\\\Downarrow \\ f\left(w_{t}, \cdots, w_{t-n+1}\right)=\hat{P}\left(w_{t} \mid w_{1}^{t-1}\right) \\ 
  f\left(i, w_{t-1}, \cdots, w_{t-n+1}\right)=g\left(i, C\left(w_{t-1}\right), \cdots, C\left(w_{t-n+1}\right)\right)$$
 
-![nnlm](imgs/nnlm.png)
+![nnlm.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/nnlm.png)
 
 
 maximizes the object function:

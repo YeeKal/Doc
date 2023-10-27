@@ -7,7 +7,7 @@ relies heavily on the polygonal representation of the plannar configuration spac
 - adjacency graph
 - connect the midpoints of the vertical extensions  to get the free-path
 
-![trapezoidal-graph](imgs/trapezoidal_graph.JPG)
+![trapezoidal_graph.JPG](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/motionPlanning/imgs/trapezoidal_graph.JPG)
 
 ## triangulation
 

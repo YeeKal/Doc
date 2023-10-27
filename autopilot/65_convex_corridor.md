@@ -19,7 +19,7 @@ JPS jump point search
 
 | seed decomp                   | line segment                  | iterative decomp                   | ellipsoid decomp                   |
 | ----------------------------- | ----------------------------- | ---------------------------------- | ---------------------------------- |
-| ![seed](imgs/output_seed.svg) | ![seed](imgs/output_line.svg) | ![seed](imgs/output_iterative.svg) | ![seed](imgs/output_ellipsoid.svg) |
+| ![output_seed.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/output_seed.svg) | ![output_line.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/output_line.svg) | ![output_iterative.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/output_iterative.svg) | ![output_ellipsoid.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/output_ellipsoid.svg) |
 
 
 **<font color='Tomato'>SFC construction</font>**
@@ -56,6 +56,6 @@ JPS jump point search
 | narrow space                              | hollow space               |
 | ----------------------------------------- | -------------------------- |
 | 狭窄环境的多边形边角突出,难以覆盖整个车形 | 空旷环境下效果较好         |
-| ![tiny](imgs/galaxy_tiny.png)             | ![](imgs/galaxy_large.png) |
+| ![galaxy_tiny.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/galaxy_tiny.png)             | ![galaxy_large.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/galaxy_large.png) |
 
 依赖障碍物信息， 因此若障碍物分布不好，则找到的空旷区域会比较尖锐。

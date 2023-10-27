@@ -65,7 +65,7 @@ iteractive optimization process
 3. if the state and control violate saturations, increase time duration
 4. selection of the attracting points: 标记轨迹中碰撞区域（更高维度中很难决定哪些区域是碰撞的）的起点和终点，通过A* 快速找到一条无碰撞路径。选取碰撞轨迹区段中点与A*路径中点向外延伸作为`attracting point`.,通过局部选择牵引点的方式避免计算碰撞梯度
 
-![to_attracting_point](imgs/to_attracting_point.png)
+![to_attracting_point.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/motionPlanning/imgs/to_attracting_point.png)
 
 
 **overview**

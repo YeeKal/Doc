@@ -37,7 +37,7 @@ dssm开山之作。之后为了捕捉时序信息，有通过CNN进行的改进�
 - Based on RNN
     - LSTM-RNN: Deep Sentence Embedding Using the Long Short Term Memory Network: Analysis and Application to Information Retrieval (Palangi et al., TASLP '16)
 
-![double_tower1](imgs/double_tower1.png)
+![double_tower1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/double_tower1.png)
 
 
 相似度函数/匹配函数计算：
@@ -58,7 +58,7 @@ $$s=W_{2} \cdot \sigma\left(W_{1} \cdot \begin{bmatrix} q \\ d \end{bmatrix}+b_{
 
 $$s=u^{T} f\left(q^{T} \mathbf{M}^{[1: r]} d+V\begin{bmatrix} q \\ d \end{bmatrix}+b\right)$$
 
-![match_func_nn](imgs/match_func_nn.png)
+![match_func_nn.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/match_func_nn.png)
 
 
 ## 单塔模型
@@ -72,7 +72,7 @@ $$s=u^{T} f\left(q^{T} \mathbf{M}^{[1: r]} d+V\begin{bmatrix} q \\ d \end{bmatri
 - Combining matching function learning and representation learning 
     - Representation Learning + Matching Function Learning Duet (Mitra et al., WWW'17)
 
-![single_tower](imgs/single_tower.png)
+![single_tower.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/single_tower.png)
 
 ## 图模型
 

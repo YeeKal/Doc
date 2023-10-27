@@ -20,7 +20,7 @@ gr.Interface(fn=question_answer, inputs=["text", "text"], outputs=["textbox", "t
 ```
 
 
-![gradio_demo](imgs/gradio_demo.png)
+![gradio_demo.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/python/imgs/gradio_demo.png)
 
 ## allow remote access in LAN
 
@@ -43,10 +43,10 @@ demo = gr.ChatInterface(random_response)
 
 demo.launch()
 ```
-![imgs/gradio_chatinterface](imgs/gradio_chatinterface.png)
+![gradio_chatinterface.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/python/imgs/gradio_chatinterface.png)
 
 
 
 ## color block
 
-![imgs/gradio_color_block](imgs/gradio_color_block.png)
+![gradio_color_block.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/python/imgs/gradio_color_block.png)

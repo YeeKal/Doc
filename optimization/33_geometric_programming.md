@@ -48,7 +48,7 @@ $$\begin{split}\begin{array}{llll}\text{}
 
 Another example, <font style='background: #007f16;color: #ffffff;opacity:1.0; border-radius: 5px; padding:5px;'>floor planning</font>:
 
-![floor_planning](imgs/floor_planning.png)
+![floor_planning.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/floor_planning.png)
 
 $$
 \begin{aligned} \min_{W,H,x,y,w,h } \quad & WH \\\text{subject to} \quad &0\leq x_{i}\leq W,\ i=1,\cdots n\\ &0\leq y_{i}\leq H,\ i=1,\cdots n\\  &x_{i}+w_{i}\leq x_{j},\ (i,j)\in \mathcal{L} \\ & y_{i}+h_{i}\leq y_{j},\ (i,j)\in \mathcal{B}  \\ & w_{i}h_{i}=C_{i},\ i=1,\cdots n.\end{aligned} 

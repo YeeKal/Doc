@@ -55,7 +55,7 @@ The matrix A is called document-term matrix. Then a **Truncated Singular Value D
 
 $$ A'\approx USV^T  $$
 
-![lsa_svd](imgs/lsa_svd.png)
+![lsa_svd.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/lsa_svd.png)
 
 ## 词嵌入(word embedding)
 
@@ -87,7 +87,7 @@ $$ A'\approx USV^T  $$
 
 所有出现的句子都是正样本
 
-![w2c1](imgs/w2c1.png)
+![w2c1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/w2c1.png)
 
 句子的概率为各个词的概率的联合概率,对于一条有T个单词的文本，以宽度为m的窗口来计算其概率：
 
@@ -109,7 +109,7 @@ $$P(o|c)=\frac{exp(u_o^T v_c)}{\sum_{w\in V}exp(u_w^T v_c)}$$
 softmax:
 $$softmax(x_i)=\frac{exp(x_i)}{\sum^n_{j=1}exp(x_j)}$$
 
-![w2ctheta](imgs/v2ctheta.png)
+![v2ctheta.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/v2ctheta.png)
 
 - SG(skip-gram): Predict context (”outside”) words (position independent) given center word
 - CBOW(Continuous Bag of Word): Predict center word from (bag of) context words

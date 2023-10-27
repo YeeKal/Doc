@@ -18,7 +18,7 @@ date: 2020-10-17
 - 分类树:  用于分类任务
 - 回归树: 用于回归任务
 
-![decision_tree_intro](imgs/decision_tree_intro.jpg)
+![decision_tree_intro.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/decision_tree_intro.jpg)
 
 决策树的处理步骤一般分为三步：
 

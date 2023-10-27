@@ -33,11 +33,11 @@ $$A = \begin{bmatrix}a_1^T \\ \cdots \\ a_2^T \\a_m^T \end{bmatrix}: Az=0 \right
 
 b是A的列空间的线性组合， 若b中包含了左零空间中的维度($b= p+ e$)，则方程无解。但可以通过投影找到最近的解，即方程退化为$Ax = p$
 
-![imgs](imgs/project_b.png)
+![project_b.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/project_b.png)
 
 x的基础解系是A的行空间的线性组合， 而x可以由零空间拓展成无数个解。
 
-![imgs](imgs/project_four.png)
+![project_four.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/project_four.png)
 
 ## 最小二乘法（Least Squares， LS）
 

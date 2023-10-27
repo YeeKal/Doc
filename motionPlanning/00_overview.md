@@ -12,7 +12,7 @@ date: 2018-01-01
 - 在狭义的概念上,这五个词有其侧重点
 - `运动规划`包含了这几个词所有的含义, 无论在任何时候,都可以直接使用`运动规划`来描述运动规划这件事
 
-![overview](imgs/overview.svg)
+![overview.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/motionPlanning/imgs/overview.svg)
 
 在狭义的概念上,可以认为`运动规划`是一个总集, 而`路径规划`,`轨迹规划`,`轨迹优化`, `路径优化`这四个词是相互有重叠的子集. 在区分这些子集之前, 先规定一下两组词的区别, 即路径VS轨迹, 规划VS优化.
 

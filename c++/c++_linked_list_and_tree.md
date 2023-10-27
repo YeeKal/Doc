@@ -246,7 +246,7 @@ TreeNode* sortHelper(vector<int>& nums,int start,int end){
 ```
 
 **二叉搜索树的插入**
-![insert](imgs/insert1.png)
+![insert1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/c++/imgs/insert1.png)
 ```c++
 //rescursive
 int BSTreeNodeInsertR(BSTreeNode **tree,DataType x) //搜索树的插入

@@ -5,6 +5,12 @@ tags:
 date: 2023-09-06
 ---
 
+## vercel  as proxy
+
+- [vercel-api-prox](https://github.com/souying/vercel-api-proxy)
+
+## Zapier
+
 ## cloudfare worker
 
 ## telegram bot
@@ -14,6 +20,7 @@ date: 2023-09-06
 ## Notion API
 
 - [developers.notion](https://developers.notion.com/)
+- [python notion client](https://github.com/ramnes/notion-sdk-py)
 
 - config:
     - add integration
@@ -24,6 +31,8 @@ date: 2023-09-06
     - [how-to-use-python-with-notion-api](https://dev.to/mihaiandrei97/how-to-use-python-with-notion-api-1n61)
 
 example:
+
+**<font color='Tomato'>Example: read database</font>**
 
 ```python
 import json
@@ -52,6 +61,9 @@ for i in res["results"]:
 
 ```
 
+**<font color='Tomato'>远程数据同步</font>**
+
+- [notion2pg](https://github.com/aaugustin/notion2pg/tree/main)
 
 ## 微信
 

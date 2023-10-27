@@ -4,7 +4,7 @@ categories: robotics
 tags: planning
 date: 2019_08_17
 ---
-![dp1](imgs/dp1.png)
+![dp1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/navigation/imgs/dp1.png)
 
 - Dynamic replanning
 - Anytime planning

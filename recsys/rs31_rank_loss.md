@@ -30,7 +30,7 @@ $$L=\sum_{i=1}^{N} \max \left(0, D\left(q^{(i)}, d_{+}^{(i)}\right)-D\left(q^{(i
 
     $$d(q,d_+) < d(q,d_-) < d(q,d_+)+m$$
 
-![triplets1](imgs/triplets1.png)
+![triplets1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/triplets1.png)
 
 在人脸识别领域，anchor和负样本是同一种事物，都是人脸;而在搜索推荐领域，anchor一般为用户，政府样本为物品。这样在构造数据集的方法上略有不同。
 

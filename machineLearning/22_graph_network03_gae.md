@@ -7,7 +7,7 @@ date: 2020-12-10
 
 ## 自编码器
 
-![gae_autoe1](imgs/gae_autoe1.png)
+![gae_autoe1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/gae_autoe1.png)
 
 自编码器的由一个编码器和一个解码器组成。其基本结构如下：
 
@@ -29,18 +29,18 @@ $$x \rightarrow f_{encoder} \rightarrow z \rightarrow f_{encoder} \hat{x}   \\
 
 变分编码器的编码器输出不是隐空间中的一个点，而是隐空间中的概率分布. 在实践中选择正太分布作为编码器的分布，这一分布实际上由均值$\mu$和方差$\sigma$来表示，而这两个参数是编码器输出的两个向量。则变分编码器的主要训练步骤如下:
 
-![gae_vae1](imgs/gae_vae1.png)
+![gae_vae1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/gae_vae1.png)
 
 - 编码器输出分布向量
 - 在该分布中采样一个点
 - 对采样点进行解码
 - 计算重建误差并进行反向传播
 
-![gae_vae2](imgs/gae_vae2.png)
+![gae_vae2.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/gae_vae2.png)
 
 变分编码器使得编码之后的隐向量不再是一个离散的值，而是强制到生成一个由均值和方差控制的分布，这样整个隐空间趋于连续，位于同一分布区域的点具有相同的解码输出，使得编码器具有更大的泛化能力。
 
-![gae_vae3](imgs/gae_vae3.png)
+![gae_vae3.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/gae_vae3.png)
 
 **权重共享**
 
@@ -83,7 +83,7 @@ $$\begin{aligned}
 - $f$ : embedding 维度
 - $\mathbf{Z} \in \mathbb{R}^{N \times f}:$ 节点的 embedding
 
-![gae](imgs/gae1.png)
+![gae1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/gae1.png)
 
 - encoder: 使用GCN作为编码器
 
@@ -100,7 +100,7 @@ y\in \hat{A}_{ij}$$
 
 ## 变分图自编码器(VGAE)
 
-![gae](imgs/gae2.png)
+![gae2.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/gae2.png)
 
 - encoder: 
 

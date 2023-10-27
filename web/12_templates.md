@@ -7,7 +7,7 @@ date: 2023-08-08
 
 - [html5up](https://html5up.net/)
 
-![template_html5up](imgs/template_html5up.png)
+![template_html5up.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/web/imgs/template_html5up.png)
 
 -[美叶](https://www.meiye.art/app/1/1958)
 

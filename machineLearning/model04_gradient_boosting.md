@@ -51,11 +51,11 @@ $$F_{0}(x)=\underset{c}{\arg \min } \sum_{i=1}^{N} L\left(y_{i}, c\right)$$
     $$F_{m}(x)=F_{m-1}(x)+\sum_{j=1}^{J_{m}} c_{m, j} I\left(x \in R_{m, j}\right)$$
 
 梯度提升可视化：
-![boosted_stumps](imgs/boosted_stumps.gif)
+![boosted_stumps.gif](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/boosted_stumps.gif)
 
 梯度提升对应梯度下降。梯度下降是为了在参数空间消除误差，而梯度提升是为了在函数空间逼近真值。
 
-![boosted_stumps](imgs/640.webp)
+![640.webp](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/640.webp)
 
 0. gbdt算法流程
 1. 为何使用负梯度

@@ -17,7 +17,7 @@ date: 2022-07-11
 #### parallel parking in one tria
 
 
-![parallel_parking_one_trial](imgs/parallel_parking_one_trial.png)
+![parallel_parking_one_trial.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/parallel_parking_one_trial.png)
 
 根据余弦订理$$c^2 = a^2 + b^2 -2abcos\theta$$
 
@@ -27,7 +27,7 @@ $$\begin{aligned} R_{E_{i n i t} r} &=\frac{d_{C_{l} E_{\text {init }}}{ }^{2}-R
 
 ## LCC
 $$
-![parallel_parking_lcc](imgs/parallel_parking_lcc.png)
+![parallel_parking_lcc.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/parallel_parking_lcc.png)
 
 $3 R_{1}^{2}-d^{2}+2 d R_{1} \cos \alpha=0$
 
@@ -74,14 +74,14 @@ S_{f}(x)=\int_{0}^{x} \sin \frac{\pi}{2} u^{2} d u$$
 
 ## CC curve
 
-![parallel_parking_cc.png](imgs/parallel_parking_cc.png)
+![parallel_parking_cc.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/parallel_parking_cc.png)
 
-![parallel_parking_csc.png](imgs/parallel_parking_csc.png)
+![parallel_parking_csc.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/parallel_parking_csc.png)
 
 
 ## 内切圆
 
-![parallel_parking_radius.png](imgs/parallel_parking_radius.png)
+![parallel_parking_radius.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/parallel_parking_radius.png)
 
 $$\begin{aligned}
 R(\theta) &= \frac{x}{\sin \theta}   \\
@@ -98,7 +98,7 @@ if $\theta \geq\theta_{lim}: R(\theta)=R(\theta_{lim})$
 ## 螺旋线与圆相切
 
 
-![spiral_tan_circle.png](imgs/spiral_tan_circle.png)
+![spiral_tan_circle.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/spiral_tan_circle.png)
 
 螺旋线与圆相切实际上就是直线过渡到圆的螺旋线路径。
 
@@ -121,7 +121,7 @@ $$P = \left\{
 
 由上一节可知螺旋线的出圈点在大圆的弦上，弦和切线的夹角为$\mu$。
 
-![cppc.png](imgs/cppc.png)
+![cppc.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/cppc.png)
 
 
 

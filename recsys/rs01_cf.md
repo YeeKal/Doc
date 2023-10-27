@@ -16,7 +16,7 @@ date: 2020-10-17
 推荐系统的两大场景： 评分预测(rating prediction)和topn推荐(item recommendation, item ranking)
 
 打分矩阵，评分预测任务中表示了user和item间的选择关系。以此为基础理解协同过滤。
-![cf_rate.jpg](imgs/cf_rate.jpg)
+![cf_rate.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/cf_rate.jpg)
 
 ## memory-based
 
@@ -58,7 +58,7 @@ $$\hat{r}_{u i}=\overline{r_{u}}+\frac{\sum_{u^{\prime}} \operatorname{sim}\left
 $$R=U\Sigma V^T\\
 A=U_k\Sigma_k V_k^T\approx R $$
 
-![cf_mf](imgs/cf_mf.png)
+![cf_mf.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/cf_mf.png)
 
 $$ \text{预测： } r_{i,j}=U_k\Sigma_k^{-1/2}(i) \cdot \Sigma_k^{-1/2} V_k^T(j) \\
 \text{用户隐向量矩阵：} P=U_k\Sigma_k^{-1/2}\\

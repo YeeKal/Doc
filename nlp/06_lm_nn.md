@@ -11,7 +11,7 @@ $$\begin{align}\text{output layer } O&=W^2W^1X   \\
 \text{activate function } Y&=f(O)   \\
 \text{cost function } J&=L(Y)  \end{align} $$
 
-![nn_bp](imgs/nn_bp.jpg)
+![nn_bp.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/nn_bp.jpg)
 
 如果$X=[x^1,x^3,x^3]$，则$O=XW^1W^2$，并且$W$的形状与左右神经元个数一致，即行数等于神经元输入个数，列数等于神经元输出个数。如果$X=\begin{bmatrix}x^1 \\ x^2 \\ x^3 \end{bmatrix}$，则$O=W^2W^1X$. 这里我们以第一种形式分析反向传播的矩阵形式。
 

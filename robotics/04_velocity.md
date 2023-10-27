@@ -34,7 +34,7 @@ $$\omega=\theta w,|w|=1$$
 $$\omega=\begin{bmatrix}\omega_x \\ \omega_y \\\omega_z  \end{bmatrix}=E_{rpy}\cdot\begin{bmatrix}\dot{\alpha} \\ \dot{\beta} \\ \dot{\gamma}  \end{bmatrix}$$
 
 - 观察投影法
-![angle velocity projection](imgs/angle_velocity_projection.png)
+![angle_velocity_projection.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/robotics/imgs/angle_velocity_projection.png)
 
 依次转动$\gamma, \beta,\alpha$,观察其转动轴在基坐标轴上的投影.其中$E_{rpy}$中第一列表示$\dot{\alpha}$转动轴分别在x-y-z上投影，第二列表示$\dot{\beta}$转动轴分别在x-y-z上投影，第三列表示$\dot{\gamma}$转动轴分别在x-y-z上投影.
 

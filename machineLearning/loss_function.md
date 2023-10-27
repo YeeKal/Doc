@@ -61,7 +61,7 @@ $$J_{\sigma}=\left\{
              \end{array}  
 \right. 
 $$
-![huber](imgs/huber.png)
+![huber.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/huber.png)
 
 结合了 MSE 和 MAE 损失，在误差接近 0 时使用 MSE，使损失函数可导并且梯度更加稳定；在误差较大时使用 MAE 可以降低 outlier 的影响，使训练对 outlier 更加健壮。缺点是需要额外地设置一个 $\sigma$超参数
 
@@ -70,7 +70,7 @@ $$
 分位数损失
 
 $$J_{quant}=\frac{1}{N} \sum_{i=1}^{N} \mathbb{I}_{\hat{y}_{i} \geq y_{i}}(1-r)\left|y_{i}-\hat{y}_{i}\right|+\mathbb{I}_{\hat{y}_{i}<y_{i}} r\left|y_{i}-\hat{y}_{i}\right|$$
-![quantile](imgs/quantile.jpg) 
+![quantile.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/quantile.jpg) 
 
 
 通常的回归算法是拟合目标值的期望或者中位数，而分位数回归可以通过给定不同的分位点，拟合目标值的不同分位数。当$r=0.5$时，分位数损失退化为 MAE 损失，从这里可以看出 MAE 损失实际上是分位数损失的一个特例 — 中位数回归.
@@ -85,7 +85,7 @@ $$L=-\sum_{i} y_{i} \log \left(p_{i}\right)$$
 在二分类中我们通常使用 Sigmoid 函数将模型的输出压缩到 (0, 1) 区间内$\hat{y}_i\in (0,1)$ ，用来代表给定输入$x_i$后模型判断为正类的概率。在该类问题中通过最大似然估计得到交叉熵函数为：
 $$N L L(x, y)=J_{C E}=-\sum_{i=1}^{N} y_{i} \log \left(\hat{y}_{i}\right)+\left(1-y_{i}\right) \log \left(1-\hat{y}_{i}\right)$$
 
-![binary-cross-entropy](imgs/binary_cross_entropy.jpg)
+![binary_cross_entropy.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/binary_cross_entropy.jpg)
 从图中可以看出越接近目标值损失越小。
 
 别名： Logistic Loss/Multinomial Logistic Loss
@@ -141,18 +141,18 @@ zz2=(xx-yy).^2          %
 ```
 平方和：
 
-![mean](imgs/cross_entropy_mean.png)
+![cross_entropy_mean.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/cross_entropy_mean.png)
 
 交叉熵：
 
-![cross](imgs/cross_entropy_cross.png)
+![cross_entropy_cross.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/cross_entropy_cross.png)
 
 ## Hinge Loss
 合页损失
 $$J_{h i n g e}=\sum_{i=1}^{N} \max \left(0,1-\operatorname{sgn}\left(y_{i}\right) \hat{y}_{i}\right)$$
 
 下图是$y$为正类， 即$sgn(y)=1$时，不同输出的合页损失示意图
-![hinge](imgs/hinge.jpg)
+![hinge.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/hinge.jpg)
 
 可以看到当$y$为正类时，模型输出负值会有较大的惩罚，当模型输出为正值且在(0,1)区间时还会有一个较小的惩罚。即合页损失不仅惩罚预测错的，并且对于预测对了但是置信度不高的也会给一个惩罚，只有置信度高的才会有零损失。使用合页损失直觉上理解是要找到一个决策边界，使得所有数据点被这个边界正确地、高置信地被分类。
 

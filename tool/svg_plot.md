@@ -1,7 +1,7 @@
 
 ## function plot
 
-![graph](imgs/svg-loaders/graph.svg)
+![svg-loaders/graph.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/tool/imgs/svg-loaders/graph.svg)
 
 - [svggrapher](http://dlippman.imathas.com/svg2/svggrapher.htm)
 

@@ -24,7 +24,7 @@
 
 **传统推荐系统演化关系**
 
-![recsys_revolution1](imgs/recsys_revolution1.png)
+![recsys_revolution1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/recsys_revolution1.png)
 
 1. 协同过滤
     - UserCF具有较强的社交属性，故适于新闻推荐等及时性，热点性的领域。ItemCF更适用于兴趣变化较为稳定的领域，比如电商。
@@ -43,7 +43,7 @@
 
 **深度推荐系统演化关系**
 
-![recsys_revolution2](imgs/recsys_revolution2.jpg)
+![recsys_revolution2.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/recsys_revolution2.jpg)
 
 
 ## 推荐系统架构

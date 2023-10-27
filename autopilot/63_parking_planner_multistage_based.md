@@ -143,7 +143,7 @@ construction of corridors
 
 沿着四个方向按固定步长逐渐增长,若失败或者达到最大长度则停止扩大
 
-![corridor_construction.png](imgs/corridor_construction.png)
+![corridor_construction.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/corridor_construction.png)
 
 Within-Corridor Constraint Formulation
 

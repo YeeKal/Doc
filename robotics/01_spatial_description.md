@@ -14,7 +14,7 @@ $$^{\mathcal{A}}P=_{\mathcal{B}}^{\mathcal{A}}R^{\mathcal{B}}P +^{\mathcal{A}}P_
 
 **rotation matrix**
 
-![roma](imgs/rotation_matrix.PNG)
+![rotation_matrix.PNG](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/robotics/imgs/rotation_matrix.PNG)
 
 旋转矩阵充要条件：
 

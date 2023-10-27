@@ -35,9 +35,9 @@ graph embedding VS sequence embedding
 
 根据连接关系生成当前节点的表示信息。
 
-![graphsage_method](imgs/graphsage_method.png)
+![graphsage_method.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/graphsage_method.png)
 
-![graphsage_alg](imgs/graphsage_alg.png)
+![graphsage_alg.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/graphsage_alg.png)
 
 - Weisfeiler-Lehman Isomorphism Test: The GraphSAGE algorithm is conceptually
 inspired by a classic algorithm for testing graph isomorphism
@@ -83,7 +83,7 @@ $$\max _{f} \sum_{u \in V}\left[-\log Z_{u}+\sum_{n_{i} \in N_{S}(u)} f\left(n_{
 - DFS: 深度优先搜索
     - structural equivalence(结构等价): 
 
-![node2vec_bfs_dfs](imgs/node2vec_bfs_dfs.png)
+![node2vec_bfs_dfs.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/node2vec_bfs_dfs.png)
 
 **有偏随机游走(biased random walk)**
 
@@ -114,7 +114,7 @@ $$\begin{aligned} Z:& \text{是正则化常数}   \\
 - return parameter, p: 表示下一个节点与上一个节点相同的概率
 - in-out parameter, q: 控制游走向外还是向内。 若$q>1$, 则倾向于访问与上一个节点更近的节点，偏向BFS;反之则偏向DFS。
 
-![node2vec_pq](imgs/node2vec_pq.png)
+![node2vec_pq.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/node2vec_pq.png)
 
 ## 2015 LINE
 
@@ -125,7 +125,7 @@ $$\begin{aligned} Z:& \text{是正则化常数}   \\
 
 random walks：
 
-![deep_walk01](imgs/deep_walk01.png)
+![deep_walk01.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/deep_walk01.png)
 
 two stages:
 

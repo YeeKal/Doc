@@ -79,7 +79,7 @@ $$\operatorname{argmin}_{x} G x+\frac{1}{2} H x^{2}=-\frac{G}{H}, H>0 \quad \min
 
 $$w_{j}^{*}=-\frac{G_{j}}{H_{j}+\lambda} \quad O b j=-\frac{1}{2} \sum_{j=1}^{T} \frac{G_{j}^{2}}{H_{j}+\lambda}+\gamma T$$
 
-![xgboost_obj](imgs/xgboost_obj.png)
+![xgboost_obj.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/xgboost_obj.png)
 
 **树模型的构建中最小化损失函数的理论公式并不是最终结果，因为还有叶子节点的分裂策略。比如在以MSE为损失函数的决策树中，负梯度的平均值是理论公式，而具体的损失还需要逐个特征扫描来确定最后的分裂点。因此上述公式也是第一步的理论公式，还需要下一步的分裂策略才能完成整个树的构建。损失函数和分裂策略也正是xgboost重点优化的地方。**
 

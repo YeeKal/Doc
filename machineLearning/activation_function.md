@@ -13,7 +13,7 @@
 ## ReLU
 
 $$ReLU=\max(0,x)$$
-![relu](imgs/relu.png)
+![relu.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/relu.png)
 
 
 优先使用ReLU (Rectified Linear Unit) 函数作为神经元的激活函数:
@@ -31,7 +31,7 @@ $$ReLU=\max(0,x)$$
 
 $$\sigma(x)=\frac{1}{1+e^{-x}}$$
 
-![sigmoid function](imgs/sigmoid.jpg)
+![sigmoid.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/sigmoid.jpg)
 
 它是便于求导的平滑函数，其导数为$d\sigma(x)=\sigma(x)(1-\sigma(x))$，这是优点。然而，Sigmoid有三大缺点：
 - 容易出现gradient vanishing: x较大或较小时，导数趋近于0；导数最大值为0.25，则每一层会被压缩为原来的1/4.
@@ -41,7 +41,7 @@ $$\sigma(x)=\frac{1}{1+e^{-x}}$$
 ## tanh
 
 $$tanh(x)=\frac{e^x-e^{-x}}{e^x+e^{-x}}$$
-![tanh](imgs/tanh.jpg)
+![tanh.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/tanh.jpg)
 
 tanh(Hyperbolic Tangent):它解决了zero-centered的输出问题，然而，gradient vanishing的问题和幂运算的问题仍然存在。
 
@@ -49,7 +49,7 @@ tanh(Hyperbolic Tangent):它解决了zero-centered的输出问题，然而，gra
 
 $$f(x)=\max (0.01x,x)$$
 
-![leaky-relu](imgs/leaky_relu.jpg)
+![leaky_relu.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/leaky_relu.jpg)
 
 ## ELU
 
@@ -62,7 +62,7 @@ $$f(x=)\left\{
              \end{array}  
 \right. 
 $$
-![elu](imgs/elu.png)
+![elu.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/machineLearning/imgs/elu.png)
 
 ELU也是为解决ReLU存在的问题而提出，显然，ELU有ReLU的基本所有优点，以及：
 - 不会有Dead ReLU问题

@@ -31,7 +31,7 @@ Ensemble learning: 混合模型学习, [ref1](http://www.scholarpedia.org/articl
 
 ## 2016 wide &deep
 
-![2016_deep_wide](imgs/2016_deep_wide.png)
+![2016_deep_wide.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/2016_deep_wide.png)
 
 two parts:
 - wide component: a linear model, $y=\mathbf{w}^{T} \mathbf{x}+b$ 
@@ -41,7 +41,7 @@ Area Under Receiver Operator Characteristic Curve (AUC)
 
 ## 2016 deepFM
 
-![2016_deepfm](imgs/2016_deepfm.png)
+![2016_deepfm.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/recsys/imgs/2016_deepfm.png)
 
 replace linear model with fm model
 

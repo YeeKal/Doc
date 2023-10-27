@@ -20,7 +20,7 @@ lqr 只看下一时刻， 而mpc关注接下来多个时刻
 
 全状态反馈控制系统图:
 
-![lqr1](imgs/lqr1.png)
+![lqr1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/lqr1.png)
 
 对于系统$\dot{x}=A x+B u$, 要设计一个状态反馈控制器$u=-Kx$, 则$\dot{x}=(A-BK)x$. 因此需要设计K使得能满足要求。
 

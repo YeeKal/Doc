@@ -11,7 +11,7 @@
 
 ## Text classification in general
 
-![text_c1](imgs/text_c1.png)
+![text_c1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/nlp/imgs/text_c1.png)
 
 label kinds:
 - Discrete labels:

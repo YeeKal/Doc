@@ -16,7 +16,7 @@ date: 2021-10-29
 
 分两种情况: 有一个点在另一个内部/重叠但是没有点在内部
 
-![box collision](imgs/box_collision.jpg)
+![box_collision.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/motionPlanning/imgs/box_collision.jpg)
 
 第一种情况 三角形面积大于原始正方形;第二种情况在连续动态的环境里不会发生，如果发生必定已经发生了第一种情况。
 
@@ -100,7 +100,7 @@ usion basic collision primitives to represent obstacle:
 
 $$\mathbf{P}(\mathbf{x}, \mathbf{t})=\mathbf{p}(\mathbf{x})+\sum_{l=1}^L t_l \mathbf{v}_l(\mathbf{x}), \quad 0 \leq t_l \leq 1, \forall l$$
 
-![collision_primitive](imgs/collision_primitive.png)
+![collision_primitive.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/motionPlanning/imgs/collision_primitive.png)
 
 
 
@@ -126,7 +126,7 @@ computing collision-free C-space regions:
 - maximal-volume ellipse
 - maximal expansion of the polytope
 
-![ciris_maximal_expansion](imgs/ciris_maximal_expansion.jpg)
+![ciris_maximal_expansion.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/motionPlanning/imgs/ciris_maximal_expansion.jpg)
 
 ## 2022 
 ## Ref

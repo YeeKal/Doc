@@ -123,7 +123,7 @@ $\nabla f(x)$: 在可行集内的梯度方向, 与等高线垂直. 梯度是切�
 1. if you move from $x$ towards any feasible $y$, you will increase $f$ locally
 2. the vector $-\nabla f(x)$(assuming  nonzero) serves as a hyperplane that "supports" the feasible set $\Omega$ at x.
 
-![first_optimality_for_convex_optimization](imgs/first_optimality_for_convex_optimization.svg)
+![first_optimality_for_convex_optimization.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/first_optimality_for_convex_optimization.svg)
 
 Note:
 - 在$f$ 非凸情况下,该条件是必要条件(necessity). $f$是凸函数$\Rightarrow$ 该条件是充要条件(充分: sufficiency).
@@ -205,7 +205,7 @@ $$\begin{equation}
 
 从定义上看,若点在内部,则结果为0.若点在边界上, normal cone实际上定义了在该点处远离整个凸集的方向应该往哪个方向走.若边界在该点处是光滑的,则远离的方向只有一个；若不是光滑的,比如是多边形的一个角,则就会形成一个锥.
 
-![normal_cone_for_convex_set](imgs/normal_cone_for_convex_set.svg)
+![normal_cone_for_convex_set.svg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/optimization/imgs/normal_cone_for_convex_set.svg)
 
 ## Equivalent transformations
 

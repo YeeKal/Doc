@@ -41,6 +41,6 @@ date: 2023-03-17
 
 | PROJECT                     | EXAMPLE                                              |
 | --------------------------- | ---------------------------------------------------- |
-| CHORDS                      | ![biped_animation](imgs/project/biped_animation.gif) |
-| Learning To Walk in Minutes | ![legged_robots](imgs/project/legged_robots.jpg)     |
+| CHORDS                      | ![project/biped_animation.gif](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/motionPlanning/imgs/project/biped_animation.gif) |
+| Learning To Walk in Minutes | ![project/legged_robots.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/motionPlanning/imgs/project/legged_robots.jpg)     |
 

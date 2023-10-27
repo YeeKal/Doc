@@ -17,7 +17,7 @@ dx * dt -> dx
 
 ## 自行车模型
 
-![bicycle_model](imgs/bicycle_model.jpg)
+![bicycle_model.jpg](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/autopilot/imgs/bicycle_model.jpg)
 
 自行车模型中心点位于后车轮中心。$L$为前后轮距。
 

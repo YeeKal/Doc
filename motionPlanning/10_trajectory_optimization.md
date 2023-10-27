@@ -28,7 +28,7 @@ $$\mathcal{J}=\{(x,v,a,...)\}, x\in \mathcal{R}^n\\
 
 ## 根据已有点生成轨迹——轨迹拟合
 
-![trajectory_optimization0](imgs/trajectory_optimization0.png)
+![trajectory_optimization0.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/motionPlanning/imgs/trajectory_optimization0.png)
 
 先考虑二维平面两个轨迹点的轨迹拟合：
 
@@ -66,7 +66,7 @@ J&=min \sum snap^2 \quad &snap=s'''' \quad s\in polynominal^7
 
 轨迹规划是个人约定，业界不一定是这个含义
 
-![point_traj](imgs/point_traj.png)
+![point_traj.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/motionPlanning/imgs/point_traj.png)
 
 
 > 为什么需要轨迹
@@ -95,7 +95,7 @@ $$\begin{align}
 
 $$q_1: \text{小车移动距离}\\
 q_2: \text{摆球偏角}$$
-![imgs/cart_pole](imgs/cart_pole.png)
+![cart_pole.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/motionPlanning/imgs/cart_pole.png)
 
 \* 图片引用自[trajectory optimization by Matthew Kelly](http://www.matthewpeterkelly.com/tutorials/trajectoryOptimization/cartPoleCollocation.svg#frame1100)
 
@@ -103,7 +103,7 @@ q_2: \text{摆球偏角}$$
 
 既然运动规划的结果并不能让机器人实际行走，而最优控制/轨迹优化能直接计算出符合动力学的轨迹，那么运动规划存在的意义是什么。
 
-![point_traj2.png](imgs/point_traj2.png)
+![point_traj2.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/motionPlanning/imgs/point_traj2.png)
 
 考虑在规划中加入障碍物。上图（a）中通过常用的比如搜索或采样的方法可以很快找到一条路径。而图（b）中如果直接采用最优控制的方法，则不得不在约束条件中加入障碍物约束。而最优控制是一个数值计算和优化的过程，如果这样的障碍物比较多(如图c),那么这个最优化过程通常很耗时间或者很难解得出来，但这种障碍物数量和分布情况在运动规划问题中是很常见，也是也比较容易处理的。因此通常见到的最优控制在计算的时候很少会有复杂障碍物的约束，而运动规划则很少见到没有障碍物的问题。总结一下可以看出，运动规划过程考虑更多的同时也比较善于处理的是外界对自身运动的限制，这也是运动规划中通常把机器人看成质点，把规划空间抽象成状态空间的原因。而最优控制更加关注自身动力学的限制，通常是一段较短距离，假设不会发生障碍物碰撞的优化过程，有时也把这个过程叫做局部规划。当然运动规划中也有动力学约束的规划的概念，比如hybrid a*, drnamic rrt等，这些一般是针对低维的平面小车或者是空间飞行器。而对更高阶维度的机械臂，通常采用先规划出路径，在通过轨迹拟合的方法添加时间戳的方式，这也是上一小节讨论的范围。
 
@@ -111,7 +111,7 @@ q_2: \text{摆球偏角}$$
 
 对于一个机器人，约定了初始状态和终点状态以及定义了动力学方程之后，符合约束的轨迹通常会有很多条，即轨迹有冗余。有冗余就可以加入优化目标求得最优轨迹。这是最优控制比较简单的理解。
 
-![trajectory_optimization1](imgs/trajectory_optimization1.png)
+![trajectory_optimization1.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/motionPlanning/imgs/trajectory_optimization1.png)
 \* 图片引用自[trajectory optimization by Matthew Kelly](http://www.matthewpeterkelly.com/tutorials/trajectoryOptimization/cartPoleCollocation.svg#frame1100)
 
 上图中优化目标的积分项是轨迹优化中常用的指标，这在离散空间里被定义成了累加：
