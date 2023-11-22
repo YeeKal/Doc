@@ -47,6 +47,9 @@ GJK，全称Gilbert–Johnson–Keerthi distance algorithm
 - [box2d: b2_distance.h](https://github.com/erincatto/Box2D)
 - [Separating Axis Theorem](http://www.metanetsoftware.com/technique/tutorialA.html)
 
+## A Linear and Exact Algorithm for Whole-Body Collision Evaluation via Scale Optimization
+
+
 ## Mixed Integer Conic Optimization using Julia and JuMP
 
 - [lecture: Mixed Integer Conic Optimization using Julia and JuMP](https://github.com/juan-pablo-vielma/grid-science-2019)

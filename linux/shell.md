@@ -5,6 +5,13 @@ tags: linux
 date: 2019-01-22
 ---
 
+## 替换多个子文件夹中的多个文件中的内容
+
+```bash
+find . -type f -exec bash -c 'dir=$(dirname "{}"); subdir=$(basename "${dir}"
+); sed -i "s/slut_img_slut_img/${subdir}/g" "{}"' \;
+```
+
 ## 常用命令
 
 ```bash

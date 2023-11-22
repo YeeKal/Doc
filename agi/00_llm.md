@@ -66,10 +66,24 @@ LLM: Large Language Models
 - [alpaca_eval](https://tatsu-lab.github.io/alpaca_eval/)
 - [C-Eval： 中文评测](https://cevalbenchmark.com/index.html#home)
 
-## Trends
-
-![中国人工智能技术厂商生态图谱](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/082ccc22e8a501f6e8885ca7c4a3bb2ff3.webp)
 
 ## comment
 
 - [The Dawn of LMMs: Preliminary Explorations with GPT-4V(ision)](https://arxiv.org/abs/2309.17421)
+
+## 开发者&生态
+
+2023-10
+
+![中国人工智能技术厂商生态图谱](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/082ccc22e8a501f6e8885ca7c4a3bb2ff3.webp)
+
+
+企业 AIGC 投资策略:
+
+![企业 AIGC 投资策略](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/11/640)
+
+开发者的三个阶段：
+
+- L1：学会与 LLM 相处，提升个人或团队效率。
+- L2：开发 LLM 优先应用架构，探索组织规模化落地。
+- L3：微调与训练大语言模型，深度绑定特定场景。
