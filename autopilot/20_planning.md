@@ -26,3 +26,5 @@ date: 2021-07-06
     - [2017-The Convex Feasible Set Algorithm for Real Time Optimization in Motion Planning](https://arxiv.org/pdf/1709.00627.pdf)
     - [2018-FOAD: Fast optimization-based autonomous driving motion planner]()
     - [2017 thesis: Improved Trajectory Planning for On-Road Self-Driving Vehicles Via Combined Graph Search, Optimization & Topology Analysis](https://kilthub.cmu.edu/articles/thesis/Improved_Trajectory_Planning_for_On-Road_Self-Driving_Vehicles_Via_Combined_Graph_Search_Optimization_Topology_Analysis/6719960)
+    - [A Real-Time Motion Planner with Trajectory Optimization for Autonomous Vehicles](https://www.ri.cmu.edu/pub_files/2012/5/ICRA12_xuwd_Final.pdf)
+    - [Deep Learning-Based Trajectory Planning and Control for Autonomous Ground Vehicle Parking Maneuver](https://dspace.lib.cranfield.ac.uk/bitstream/handle/1826/18235/Autonomous_ground_vehicle_parking_maneuver-2022.pdf?sequence=4)

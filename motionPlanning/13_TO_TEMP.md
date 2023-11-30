@@ -171,8 +171,6 @@ General formulation of the TOPP problem:
                 - [project](https://motion.cs.illinois.edu/mintos/)
             
     - motion planning
-        - [2013_rss_Finding locally optimal, collision-free trajectories with sequential convex optimization]()
-            - [blog](https://rll.berkeley.edu/trajopt/rss/)
         - [2009-CHOMP:Gradient optimization techniques for efficient motion planning]()
         - [2011_icra_STOMP: Stochastic trajectory optimization for motion planning]()
             - [matlab implementation](https://github.com/ChenhaoLiu-SeasPenn/Intro-to-Robo-Proj)

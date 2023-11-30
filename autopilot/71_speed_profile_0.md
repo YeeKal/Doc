@@ -17,6 +17,7 @@ ref:
 - [Tunable and Stable Real-Time Trajectory Planning for Urban Autonomous Driving-96](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjNxtv19LWCAxVTMN4KHdjaDSEQFnoECBgQAQ&url=https%3A%2F%2Fscholar.archive.org%2Fwork%2F2yocreagkzatpiextpu7winily%2Faccess%2Fwayback%2Fhttps%3A%2F%2Fs3-eu-west-1.amazonaws.com%2Fpstorage-cmu-348901238291901%2F12043784%2Ffile.pdf&usg=AOvVaw1fIx8YiIqLhMQDT2L4CYah&opi=89978449)
 - [Efficient Mixed-Integer Programming for Longitudinal and Lateral Motion Planning of Autonomous Vehicles-42](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjNxtv19LWCAxVTMN4KHdjaDSEQFnoECBkQAQ&url=https%3A%2F%2Fmediatum.ub.tum.de%2Fdoc%2F1451842%2F930497592365.pdf&usg=AOvVaw32bgs0Z1yzwX000xRpyXvE&opi=89978449)
 
+
 ## 2019 Spatio-temporal Semantic Corridor
 
 - [code](https://github.com/HKUST-Aerial-Robotics/spatiotemporal_semantic_corridor)

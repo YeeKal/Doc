@@ -5,6 +5,10 @@ tags: tool
 date: 2023-05-24
 ---
 
+## ocr
+
+- [LaTeX-OCR](https://github.com/lukas-blecher/LaTeX-OCR)
+
 ## free database
 
 - [免费在线 合集](https://wivwiv.com/post/free-online-resource)

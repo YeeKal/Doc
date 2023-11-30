@@ -41,10 +41,7 @@ force demonstration
 
 #### deform strategy
 
-$$\begin{align}
-\mathbf{f}_{c} & =k_{c}\left(\frac{\mathbf{b}_{i-1}-\mathbf{b}_{i}}{\left\|\mathbf{b}_{i-1}-\mathbf{b}_{i}\right\|}+\frac{\mathbf{b}_{i+1}-\mathbf{b}_{i}}{\left\|\mathbf{b}_{i+1}-\mathbf{b}_{i}\right\|}\right)  \\
-\mathbf{f}_{r} & = \begin{cases}k_{r}\left(\rho_{0}-\rho\right) \frac{\partial \rho}{\partial \mathbf{b}} & \rho<\rho_{0} \\ 0 & \rho \geq \rho_{0}\end{cases}
-\end{align}$$
+$$\begin{align}\mathbf{f}_{c} & =k_{c}\left(\frac{\mathbf{b}_{i-1}-\mathbf{b}_{i}}{\left\|\mathbf{b}_{i-1}-\mathbf{b}_{i}\right\|}+\frac{\mathbf{b}_{i+1}-\mathbf{b}_{i}}{\left\|\mathbf{b}_{i+1}-\mathbf{b}_{i}\right\|}\right)  \\ \mathbf{f}_{r} & = \begin{cases}k_{r}\left(\rho_{0}-\rho\right) \frac{\partial \rho}{\partial \mathbf{b}} & \rho<\rho_{0} \\ 0 & \rho \geq \rho_{0}\end{cases}\end{align}$$
 
 
 
