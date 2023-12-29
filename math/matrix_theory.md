@@ -1,6 +1,6 @@
 ---
 title: 矩阵理论
-categories: optimization
+categories: math
 tags: optimization
 date: 2023-06-28
 ---
@@ -55,6 +55,13 @@ x = (A^TA)^{-1} A^T b$$
 - 水平
 - 广义最小二乘： Generalized Least Squares, GLS 
 - 非线性扩展
+
+## 投影矩阵
+
+$$P^{\parallel} = \frac{aa^T}{a^Ta} \quad \text{平行投影} \\  
+P^{\perp} = E - \frac{aa^T}{a^Ta} \quad \text{垂直投影}$$
+
+其中$a^Ta$为标量，为了归一化
 
 ## ref
 

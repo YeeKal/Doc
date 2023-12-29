@@ -107,6 +107,8 @@ $$\mathbf{P}(\mathbf{x}, \mathbf{t})=\mathbf{p}(\mathbf{x})+\sum_{l=1}^L t_l \ma
 1. barrier function
 2. make collision constraints soft
 
+Barycentric coordinates(重心坐标)
+
 
 ## 2022 Motion Planning around Obstacles with Convex Optimization
 
@@ -132,6 +134,7 @@ computing collision-free C-space regions:
 ## Ref
 
 - paper 
+    - [Closed-Form Minkowski Sum Approximations for Efficient Optimization-Based Collision Avoidance]()
     - [Efficient Formulation of Collision Avoidance Constraints in Optimization Based Trajectory Planning and Control](https://arxiv.org/abs/2104.12641)
     - [PYROBOCOP: Python-based Robotic Control & Optimization Package for Manipulation and Collision Avoidance](https://arxiv.org/pdf/2106.03220.pdf)
         - [Research Software — PyRoboCOP](https://www.merl.com/research/license/PyRoboCOP)

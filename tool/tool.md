@@ -5,6 +5,11 @@ tags: tool
 date: 2023-05-24
 ---
 
+## robotics simulation
+
+- [roboticstoolbox](https://github.com/petercorke/robotics-toolbox-python)
+- [swift:a light-weight browser-based simulator](https://github.com/jhavl/swift)
+
 ## ocr
 
 - [LaTeX-OCR](https://github.com/lukas-blecher/LaTeX-OCR)

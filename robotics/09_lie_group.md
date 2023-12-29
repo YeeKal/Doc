@@ -104,3 +104,6 @@ $$\begin{aligned}
     - [c++: sophus](https://github.com/strasdat/Sophus)
     - [python: liegroups](https://github.com/utiasSTARS/liegroups)
     - [lie based casadi](https://github.com/ami-iit/liecasadi)
+- notes:
+    - [Lie Groups for 2D and 3D Transformations](https://ethaneade.com/lie.pdf)
+    - [Lie Groups and Rigid Body Kinematics](https://johnwlambert.github.io/lie-groups/)

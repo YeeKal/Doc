@@ -105,6 +105,7 @@ k\left(s_{G}\right)=p 3 & d(p)=-\frac{9(p 0-3 p 1+3 p 2-p 3)}{2 s_{G}^{3}}
     - [基于多项式螺旋曲线的轨迹优化](https://blog.csdn.net/github_39582118/article/details/117754864?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-1.control&spm=1001.2101.3001.4242)
     - [Smooth Local Planning 实现](https://zhuanlan.zhihu.com/p/93980119)
 - project 
+    - [polytraj](https://github.com/jsford/PolyTraj)
 - course
 - paper
     - [2011-Parallel Algorithms for Real-time Motion Planning](https://www.ri.cmu.edu/pub_files/2011/7/mcnaughton-thesis.pdf)

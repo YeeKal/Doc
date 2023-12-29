@@ -19,6 +19,10 @@ performance:
 - handle dynamic obstacles
 - may fail when changes are large(resort to global planner)
 
+external potential energy 
+
+- [1994 Real-time modification of collision-free paths](http://i.stanford.edu/pub/cstr/reports/cs/tr/95/1537/CS-TR-95-1537.pdf)
+
 #### Bubbles
 
 在b位置与障碍物的最小距离，这实际上定义了一个无障碍的圆空间：

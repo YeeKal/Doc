@@ -185,7 +185,6 @@ $$\kappa=\kappa(s)  \\
     - [Tutorial 6: Trajectory Optimization for Underactuated Robots -Day 2 - Tuesday, July 24](https://www.youtube.com/watch?v=4BZRP6h12lI)
     - [Optimal Control Tutorial 3 - Trajectory Optimization](https://www.youtube.com/watch?v=x4l-Cjxxufg)
 - project
-    - [polytraj](https://github.com/jsford/PolyTraj)
     - [Trajectory Optimization motion planning](https://github.com/bestvibes/motion-planner)
     - [Convex Optimization for motion plannin](https://github.com/Theochiro/motion-planning)
     - [trajopt](https://rll.berkeley.edu/trajopt/doc/sphinx_build/html/)

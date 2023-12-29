@@ -1,6 +1,6 @@
 ---
 title: 泛函分析
-categories: manifold
+categories: math
 tags: manifold
 date: 2021-08-18
 ---
@@ -11,7 +11,7 @@ $$I(y)=\int Fdx$$
 - 泛函F：函数的函数, 可以使y和y各阶导数的函数
 - 泛函数$I$: 是一个数，一般表示为泛函的积分。
 
-则从优化的角度可以把泛函F看成优化目标， 泛函数$I$是最优值。不过通过泛函求出来的不是某一类函数的参数，而是那种形式的函数能达到最优解。
+则从优化的角度可以把泛函F看成优化目标， 泛函数$I$是最优值。不过通过泛函求出来的不是某一类函数的参数，而是哪种形式的函数能达到最优解。
 
 暂且设$F$是y和y的一阶导的函数: $F(y,y')$. 则路径最短问题可以表示为：
 
@@ -74,3 +74,4 @@ $$
 ## ref
 
 - [变分法简介Part 1](https://zhuanlan.zhihu.com/p/20718489)
+- [Functional Gradient Descent](https://www.cs.cmu.edu/~16831-f12/notes/F12/16831_lecture21_danielsm.pdf)

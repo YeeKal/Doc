@@ -5,6 +5,24 @@ tags: autopilot
 date: 2023-01-12
 ---
 
+## DNFOMP
+
+- [DNFOMP: Dynamic Neural Field Optimal Motion Planner for Navigation of Autonomous Robots in Cluttered Environment](https://arxiv.org/pdf/2308.03539.pdf)
+
+## Hamilton-Jacobi Reachability
+
+- [Fast Path Planning for Autonomous Vehicle Parking with Safety-Guarantee using Hamilton-Jacobi Reachability](https://arxiv.org/abs/2310.15190)
+
+哈密顿-雅可比方程 （Hamilton-Jacobi equation，HJE） 是经典力学的一种表述。哈密顿-雅可比方程、牛顿力学、拉格朗日力学、哈密顿力学，这几个表述是互相全等的
+
+- Multi-heuristic hybrid A*
+
+**<font color='Tomato'>Abstract</font>**
+
+backward reachable tube (BRT).
+
+根据动力学预先计算可达范围。根据SDF过滤可达范围。
+
 ## Jump Point Search
 
 <font color='Tomato'>Ref</font>
@@ -15,25 +33,6 @@ date: 2023-01-12
 
 - [paper](https://arxiv.org/pdf/2307.07857.pdf)
 
-## 2022 Continuous-Curvature Target Tree Algorithm for Path Planning in Complex Parking Environments
-
-1. 根据直线长度,采样多条出库路径,然后计算cost最小的出库长度以及target-tree
-2. 采用rrt* 进行连接(?怎么连接的)
-
-泊车路径
-rrt*
-
-连续曲率轨迹 
-
-
-## 2017 TTS-RTR
-
-<font color='Tomato'>Ref</font>
-
-- [2017 Autonomous Path Planning for Road Vehicles in Narrow Environments: An Efficient Continuous Curvature Approach]()
-
-
-基于运动学的采样方法
 
 
 ## 0130
@@ -51,7 +50,6 @@ rrt*
 ## ref
 
 - paper
-    - [2016 Optimisation based path planning for car parking in narrow environments]()
     - [2013 A fast motion planning algorithm for car parking based on static optimization]()
     - [Practical motion planning for car-parking control in narrow environment]()
     - [A new geometry-based secondary path planning for automatic parking](https://journals.sagepub.com/doi/full/10.1177/1729881420930575)

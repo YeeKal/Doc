@@ -50,42 +50,44 @@ date: 2018-01-01
     - triangulation
     - cell-decomposition
     - visibility graph
-
 - optimization based
+    - chomp
+    - trajopt
+    - stomp
+
+- optimal control
     - direct
     - indirect, shooting
+    - lqr, mpc, ilqr
 
-## 周边
+**<font color='Tomato'>规划器性能</font>**
 
-
-#### 规划器性能
 
 - 概率完备(probabilistically complete): finds a feasible path with probability approaching one as the number of iterations approaches infinity.
 - 渐进最优(asymptotic optimality): the path is shotest with enough time
 
-#### 几何表征
+**<font color='Tomato'>几何表征</font>**
+
 
 - 构形空间(configuration space, C-space): representation of robot manipulation states
 
 
-#### 碰撞检测
-
+**<font color='Tomato'>碰撞检测</font>**
 
 - FCL: Flexible Collision Library
 - PCD: Proximity Collision Detection
+- SDF: signed distance field
+- differentiable collision checking: 
 
 
-
-## ref
+## Ref resource
 - conference
     - [RSS:Robotics: Science and Systems](https://roboticsconference.org/)
-        - [RSS 2022](https://roboticsconference.org/)
+        - [RSS paper](http://www.roboticsproceedings.org/rss17/index.html)
     - [T-RO: IEEE Transactions on Robotics](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8860)
     - [IJRA: International Journal of Robotics and Automation](https://ijra.iaescore.com/index.php/IJRA)
     - [IROS]()
     - [ICRA]()
-- paper source
-    - [Robotics: Science and Systems](http://www.roboticsproceedings.org/rss17/index.html)
 - lab
     - [IML: Intelligent motion laboratory](https://motion.cs.illinois.edu/index.html)
     - [GAMMA: Motion and path planning](http://gamma.cs.unc.edu/research/robotics/)
@@ -100,10 +102,9 @@ date: 2018-01-01
     - [Motion Planning Library with ROS](https://github.com/moribots/motion_planning)
     - [Robot-Motion-Planning-Algorithms](https://github.com/vinaybysani/Robot-Motion-Planning-Algorithms)
     - [drake](https://drake.mit.edu/gallery.html)
+    - [Klampt](https://github.com/krishauser/Klampt)
 - paper
-    - [2015 Homotopy-Based Divide-and-Conquer Strategy for Optimal Trajectory Planning via Mixed-Integer Programming]()
     - project
-        - [Kris' Locomotion and Manipulation Planning Toolkit](https://github.com/krishauser/Klampt)
         - [robotic manipulators - python](https://github.com/Sarrasor/RoboticManipulators/blob/main/rr_robot_dynamics.py)
         - [Kris Hauser's LMPL ](https://github.com/panjia1983/KLMPL)
 
@@ -153,3 +154,10 @@ local, global
 平面车和无人机：路径规划
 机械臂：运动规划
 人形机器人：轨迹优化(位姿优化)
+
+## paper
+
+**<font color='Tomato'>motion primitives / motion manifold primitives</font>**
+
+- [2023 Incremental Learning of Full-Pose Via-Point Movement Primitives on Riemannian Manifolds](https://arxiv.org/abs/2312.08030)
+- [Equivariant Motion Manifold Primitives ](https://openreview.net/forum?id=psyvs5wdAV)

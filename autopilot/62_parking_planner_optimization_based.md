@@ -47,6 +47,7 @@ GJK，全称Gilbert–Johnson–Keerthi distance algorithm
 - [box2d: b2_distance.h](https://github.com/erincatto/Box2D)
 - [Separating Axis Theorem](http://www.metanetsoftware.com/technique/tutorialA.html)
 
+
 ## A Linear and Exact Algorithm for Whole-Body Collision Evaluation via Scale Optimization
 
 
@@ -69,7 +70,7 @@ Narrow-Roads-Timed-Elastic-Band
 
 ## 2016 single step optimization
 
-- [Optimisation based path planning for car parking in narrow environments]()
+- [Optimisation based path planning for car parking in narrow environments](https://www.sciencedirect.com/science/article/abs/pii/S0921889016000294)
 - tags: `运动规划(motion planning)` `基于优化的方法(optimization based)` `自动驾驶(autopilot)`
 - algorithm guidance:
     1. phase A and phase B 的规划
@@ -96,7 +97,6 @@ Narrow-Roads-Timed-Elastic-Band
 - project
     - [Collision Avoidance in Tightly-Constrained Environments without Coordination: a Hierarchical Control Approach](https://sites.google.com/berkeley.edu/sg-control)
 - paper
-    - [2016 Optimisation based path planning for car parking in narrow environments]()
     - [2013 A fast motion planning algorithm for car parking based on static optimization]()
     - [Practical motion planning for car-parking control in narrow environment]()
     - [A new geometry-based secondary path planning for automatic parking](https://journals.sagepub.com/doi/full/10.1177/1729881420930575)

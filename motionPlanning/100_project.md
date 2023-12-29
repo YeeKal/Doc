@@ -7,6 +7,7 @@ date: 2023-03-17
 
 ## library
 
+- [pythonrobotics](https://pythonrobotics.io/)
 - [drake](https://drake.mit.edu/)
 - [openrave]()
 - [pyomo]()
@@ -19,6 +20,8 @@ date: 2023-03-17
 - CHOMP
 - STOMP
 - ITOMP
+- GPMP
+- GOMP
 
 
 - biped /ˈbaɪped/  双足的
@@ -29,6 +32,7 @@ date: 2023-03-17
     - [py_obca](https://github.com/maozaizhou/py_obca)
     - [Hybrid A* by karlkurzer](https://github.com/karlkurzer/path_planner)
     - [trajopt](https://rll.berkeley.edu/trajopt/doc/sphinx_build/html/)
+    - [BN-MCO](https://arxiv.org/pdf/2312.09024.pdf)
 - trajectory optimization
     - [CHORDS:Collocation methods for second or higher order systems](https://github.com/AunSiro/optibot)
         - [Collocation Methods for Second Order Systems]()
