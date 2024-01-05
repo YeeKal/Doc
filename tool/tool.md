@@ -5,6 +5,22 @@ tags: tool
 date: 2023-05-24
 ---
 
+## 个人网站在线支付接口
+
+需具备回调能力
+
+**<font color='Tomato'>支付宝</font>**
+场景： 电脑网站支付，手机网站支付，App支付，当面付
+- 支付宝当面付
+    - https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.J12Ae0&treeId=193&articleId=104506&docType=1
+- [AlipayOrdersSupervisor](https://github.com/thundernet8/AlipayOrdersSupervisor)
+- 关联企业支付宝帐号
+
+
+## 图片链接托管
+
+- [imgbb](https://imgbb.com/)
+
 ## robotics simulation
 
 - [roboticstoolbox](https://github.com/petercorke/robotics-toolbox-python)

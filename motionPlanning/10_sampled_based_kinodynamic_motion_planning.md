@@ -1,11 +1,19 @@
 ---
-title: kinodynamic_motion_planning
+title: sampled_based_kinodynamic_motion_planning
 categories: motion planning
 tags: kinodynamic
 date: 2019_06_17
 ---
 
+## RRT based
 
+- [Optimal Kinodynamic Motion Planning using Incremental Sampling-based Methods](https://dspace.mit.edu/bitstream/handle/1721.1/65847/Frazzoli-2010-Optimal%20kinodynamic%20motion%20planning.pdf?sequence=1&isAllowed=y)
+
+RRT* + differential constraints(local steering method)
+
+
+- [Asymptotically Optimal Sampling-based Kinodynamic Planning](https://arxiv.org/pdf/1407.2896.pdf)
+- [Robot Motion Planning Algorithms](https://github.com/iamprem/rmp)
 
 ## kinodynamic motion planning
 

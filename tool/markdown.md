@@ -36,6 +36,7 @@ date: 2023-01-10
 #####⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂
 
 > ■■■□□□□□□□ 30%
+> ▓▓▓▓▓▓░░░░  60%
 
 - [unicode-progress-bars](https://github.com/Changaco/unicode-progress-bars)
 

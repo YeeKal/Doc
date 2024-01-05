@@ -8,6 +8,7 @@ date: 2023-07-25
 ## theme
 
 - [github-markdown.css](https://github.com/sindresorhus/github-markdown-css/blob/main/github-markdown.css)
+- [vscodethemes](https://vscodethemes.com/)
 
 ## font
 
@@ -45,7 +46,3 @@ date: 2023-07-25
 **<font color='Tomato'>github</font>**
 
 jsDelivr 加速
-
-| ![raw github](https://raw.githubusercontent.com/YeeKal/Doc/master/blog/imgs/070923_Nature_Cover-scaled.jpg) | ![jsdelivr](https://cdn.jsdelivr.net/gh/YeeKal/Doc@master/blog/imgs/070923_Nature_Cover-scaled.jpg) |
-|:-----------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------:|
-|                                                *raw github*                                                 |                                             *jsdelivr*                                              |

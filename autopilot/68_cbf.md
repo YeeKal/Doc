@@ -25,3 +25,4 @@ control barrier functions for obstacle avoidance between polytopes,
 - [mpc-cbf code](https://github.com/elena-ecn/mpc-cbf)
 - [video- Introduction to Control Lyapunov Functions and Control Barrier Functions](https://www.youtube.com/watch?v=_Tkn_Hzo4AA)
     - [materials](https://github.com/HybridRobotics/CBF-CLF-Helper)
+- [CBF_Obstacle_Avoidance](https://github.com/JohannesAutenrieb/CBF_Obstacle_Avoidance)

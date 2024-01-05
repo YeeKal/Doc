@@ -117,10 +117,9 @@ item list
 ΑαΒβΓγΔδΕεϜϝͶͷϚϛΖζͰͱΗηΘθΙι℩ͿϳΚκΛλΜμΝνΞξΟοΠπϺϻϞϟϘϙΡρΣσςΤτΥυΦφΧχΨψΩωϠϡͲͳϷϸ
 
 
-❄️🐼
-
-
 ## Complete list of github markdown emoji markup
+
+❄️🐼  
 
 from [github-gist](https://gist.github.com/rxaviers/7360908#file-gistfile1-md)
 
