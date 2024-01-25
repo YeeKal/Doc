@@ -7,6 +7,10 @@ date: 2023-07-26
 
 - stable diffusion
 - midjourny
+- [DALL-E mini](https://github.com/borisdayma/dalle-mini)
+    - [基于 DALL·E 的配图生成指南](https://sspai.com/post/74087)
+- [rembg: remove background](https://github.com/danielgatis/rembg)
+
 ## CM3leon from Meta
 
 - [CM3leon](https://ai.meta.com/blog/generative-ai-text-images-cm3leon/)

@@ -5,6 +5,94 @@ tags: tool, unicode plot
 date: 2023-08-17
 ---
 
+1. ascii art for image
+2. ascii art for text： Figlet
+3. ascii art for data plot (unicode plot)
+4. ascii collection
+
+```txt
+<`--'\>______
+/. .  `'     \
+(`')  ,        @
+`-._,        /
+   )-)_/--( >
+  ````  ````
+
+   .--.  .-"     "-.  .--.
+  / .. \/  .-. .-.  \/ .. \
+ | |  '|  /   Y   \  |'  | |
+ | \   \  \ 0 | 0 /  /   / |
+  \ '- ,\.-"`` ``"-./, -' /
+   `'-' /_   ^ ^   _\ '-'`
+       |  \._   _./  |
+       \   \ `~` /   /
+        '._ '-=-' _.'
+          '~---~'
+
+     /\__/\
+    /`    '\
+  === 0  0 ===
+    \  --  /
+   /        \
+  /          \
+ |            |
+  \  ||  ||  /
+   \_oo__oo_/#######o
+
+<`--'\>______
+/. .  `'     \
+(`')  ,        @
+`-._,        /
+   )-)_/--( >
+  ````  ````
+```
+
+## collections
+
+- [asciiartcopy](https://www.asciiartcopy.com/)
+- [asciiart](https://www.asciiart.eu/)
+- [asciiart](https://asciiart.website/index.php?art=nature/astronomy)
+
+**<font color='Tomato'>Ascii generator online</font>**
+- [ascii generator](https://ascii-generator.site/t/)
+    - [source code](https://github.com/hermanTenuki/ASCII-Generator.site)
+- [ASCII-generator python code](https://github.com/uvipen/ASCII-generator)
+
+**<font color='Tomato'>ascii art for text</font>**
+
+- [ASCII art library for Python](https://github.com/sepandhaghighi/art)
+
+## mouse editor
+
+- [jave.de](http://www.jave.de/)
+## text to ascii
+
+- [text to ascii](https://patorjk.com/software/taag/#p=display&f=3D%20Diagonal&t=hello%20world)
+- [ascii tools](https://manytools.org/hacker-tools/ascii-banner/)
+
+```
+                                                                                                            
+  ,---,                ,--,    ,--,                                                       ,--,               
+,--.' |              ,--.'|  ,--.'|                                                     ,--.'|         ,---, 
+|  |  :              |  | :  |  | :     ,---.                   .---.   ,---.    __  ,-.|  | :       ,---.'| 
+:  :  :              :  : '  :  : '    '   ,'\                 /. ./|  '   ,'\ ,' ,'/ /|:  : '       |   | : 
+:  |  |,--.   ,---.  |  ' |  |  ' |   /   /   |             .-'-. ' | /   /   |'  | |' ||  ' |       |   | | 
+|  :  '   |  /     \ '  | |  '  | |  .   ; ,. :            /___/ \: |.   ; ,. :|  |   ,''  | |     ,--.__| | 
+|  |   /' : /    /  ||  | :  |  | :  '   | |: :         .-'.. '   ' .'   | |: :'  :  /  |  | :    /   ,'   | 
+'  :  | | |.    ' / |'  : |__'  : |__'   | .; :        /___/ \:     ''   | .; :|  | '   '  : |__ .   '  /  | 
+|  |  ' | :'   ;   /||  | '.'|  | '.'|   :    |        .   \  ' .\   |   :    |;  : |   |  | '.'|'   ; |:  | 
+|  :  :_:,''   |  / |;  :    ;  :    ;\   \  /          \   \   ' \ | \   \  / |  , ;   ;  :    ;|   | '/  ' 
+|  | ,'    |   :    ||  ,   /|  ,   /  `----'            \   \  |--"   `----'   ---'    |  ,   / |   :    :| 
+`--''       \   \  /  ---`-'  ---`-'                      \   \ |                        ---`-'   \   \  /   
+             `----'                                        '---"                                   `----'   
+```
+
+##      Boxes tool
+- [Boxes](https://boxes.thomasjensen.com/examples.html)
+```sh
+apt-get install -y boxes
+```
+
 ## Collections
 
 - [Pixel graphics in terminal with unicode](https://github.com/asciimoo/drawille)

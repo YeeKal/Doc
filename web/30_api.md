@@ -5,15 +5,38 @@ tags:
 date: 2023-09-06
 ---
 
+## 搜索建议 suggestion
+
+- [](https://www.cnblogs.com/woider/p/5805248.html)
+
+
+## replicate
+
+[replicate: run ai with an api](https://replicate.com/)
+
+根据GPU使用事件收费，模型一般公开
+
+## netlify
+
+- [palm-netlify-proxy](https://github.com/antergone/palm-netlify-proxy)
+
 ## Slack
 
 ## vercel  as proxy
 
 - [vercel-api-prox](https://github.com/souying/vercel-api-proxy)
 
+vercel edge function
+
+[vercel AI sdk](https://sdk.vercel.ai/docs)
+
 ## Zapier
 
 ## cloudfare worker
+
+反向代理
+
+- [cloudflare-proxy](https://github.com/barretlee/cloudflare-proxy)
 
 ## telegram bot
 

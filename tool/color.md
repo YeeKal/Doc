@@ -5,6 +5,13 @@ tags: tool
 date: 2022-10-08
 ---
 
+## lineargradient for background
+
+- https://dev.to/devash98/15-beautiful-colour-gradients-using-css-4em1 
+- https://www.makeuseof.com/css-box-shadow-tricks-examples/ 
+- [dark-gradient](https://gradients.shecodes.io/gradients/31)
+
+
 ## ref
 
 - [Colorpicker for data](https://tristen.ca/hcl-picker/#/hlc/6/1/1F5059/E2E062)

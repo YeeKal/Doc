@@ -17,6 +17,14 @@ date: 2023-08-25
 - [Stable Diffusion 基础到高阶教程](https://vocus.cc/neversaysd/home)
 
 - [风格提示词](https://supagruen.github.io/StableDiffusion-CheatSheet/)
+
+- [stable-diffusion.cpp](https://github.com/leejet/stable-diffusion.cpp)
+
+
+## API调用
+
+https://qishiya.com/?p=1795
+
 ## SDXL model(Stable Diffusion XL)
 
 SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis

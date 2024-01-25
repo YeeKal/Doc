@@ -11,6 +11,10 @@ date: 2023-08-08
 
 -[美叶](https://www.meiye.art/app/1/1958)
 
+## 产品页面
+
+- [imgrender: 通过api调用按格式生成图片](https://www.imgrender.net/)
+
 ## blog 页面参考
 
 - [huggingfaceblog](https://github.com/huggingface/blog/blob/main/llama2.md)
