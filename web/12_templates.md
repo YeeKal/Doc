@@ -1,5 +1,5 @@
 ---
-title: 优秀网站模板
+title: 网站模板
 categories: 
 tags: 
 date: 2023-08-08
@@ -36,8 +36,9 @@ date: 2023-08-08
 - [rosewang2008 personal website](https://github.com/rosewang2008/rosewang2008.github.io)
     - [first-thought](https://rosewang2008.github.io/blog/2020/12/24/first-thought.html)
 - [paper research website](https://github.com/rosewang2008/sight)
+- [vueuse](https://vueuse.org/)
 
-## 好看网站收集
+## good网站收集
 
 - [Snapsrch](https://snapsrch.sparklide.com/)
 - [视频播放](https://openfolder.sh/django-tutorial-as-you-type-search-with-ajax)
