@@ -187,3 +187,4 @@ test_sync.updateByNumber(key='id', number=1, text="hi,boy")
 ## Ref
 
 - [source code](https://gist.github.com/YeeKal/59c85ec768857fe707d3fe4b587a49bd)
+- [源博客链接](https://yeekal.store/blog/blog/20240304_notion_database_synchronization_with_python)
