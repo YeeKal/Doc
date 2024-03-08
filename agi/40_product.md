@@ -24,3 +24,8 @@ date: 2024-01-19
 tech: replicate
 
 - [ai-emoji-generator](https://vercel.com/templates/next.js/ai-emoji-generator)
+
+- [ai红包封面](https://github.com/all-in-aigc/aicover)
+- [ai qrcode](https://midreal.ai/qrcode)
+- [aiwallpaper](https://aiwallpaper.shop/)
+- [gpts-works](https://github.com/all-in-aigc/gpts-works)

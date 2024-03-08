@@ -15,6 +15,10 @@ date: 2023-08-08
 
 - [imgrender: 通过api调用按格式生成图片](https://www.imgrender.net/)
 
+## 导航网页
+
+- [aitoolist](https://aitoolist.com/news)
+
 ## blog 页面参考
 
 - [huggingfaceblog](https://github.com/huggingface/blog/blob/main/llama2.md)
@@ -44,7 +48,8 @@ date: 2023-08-08
 - [视频播放](https://openfolder.sh/django-tutorial-as-you-type-search-with-ajax)
 - [idx 首页字母规整](https://idx.dev/)
 - [search ](https://fly.io/docs/getting-started/multi-region-databases/#create-a-postgresql-cluster)
-
+- [aigc 介绍页面](https://aigc.latentcat.com/sd-inference/webui-install)
+- [bmms 斜杠程序员](https://www.bmms.me/projects)
 ## 产品介绍
 
 - [Snapsrch](https://snapsrch.sparklide.com/)

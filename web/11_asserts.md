@@ -14,6 +14,7 @@ date: 2023-07-25
 
 - [nano font](https://fonts.google.com/noto/specimen/Noto+Sans+TC/glyphs)
 - [Noto+Sans+SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC)
+- [Iosevka Customizer](https://typeof.net/Iosevka/customizer)
 
 ![nano imgs](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/07/noto_sans.png)
 

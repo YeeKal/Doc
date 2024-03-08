@@ -5,6 +5,11 @@ tags: llm
 date: 2023-07-21
 ---
 
+## model
+
+- [mistral.ai](https://chat.mistral.ai/chat): free local
+- [kimi chat](https://kimi.moonshot.cn/)  月之暗面
+
 1. 尝试使用hugging face调用api
 
 LMM: Large multimodal models
@@ -65,6 +70,7 @@ LLM: Large Language Models
 
 - [alpaca_eval](https://tatsu-lab.github.io/alpaca_eval/)
 - [C-Eval： 中文评测](https://cevalbenchmark.com/index.html#home)
+- [Chatbot Arena Leaderboard](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard)
 
 
 ## comment

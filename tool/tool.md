@@ -5,6 +5,28 @@ tags: tool
 date: 2023-05-24
 ---
 
+## 流量查询
+
+- [similarweb](https://pro.similarweb.com/#/digitalsuite/websiteanalysis/overview/website-performance/*/999/3m?webSource=Total&key=yeekal.store)
+
+## 二维码美化
+
+https://github.com/ciaochaos/qrbtf
+
+## 博客平台格式转换
+
+- medium:
+    - [markdowntomedium](http://markdowntomedium.com/)
+    - [markdown-to-medium.surge](https://markdown-to-medium.surge.sh/)
+- 微信公众号
+    - [微信 Markdown 编辑器](https://doocs.github.io/md/)
+
+## video downloader
+
+- reddit
+    - [rapidsave](https://rapidsave.com/)
+    - [redditsave](https://redditsave.io/)
+
 ## 个人网站在线支付接口
 
 需具备回调能力

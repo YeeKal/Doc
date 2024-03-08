@@ -17,3 +17,19 @@ date: 2024-01-15
 当前方案：
 
 - [vercel proxy](https://github.com/Jazee6/gemini-proxy/tree/master)
+
+
+'''bash
+curl https://gemni.yeekal.store/v1beta/models/gemini-pro:generateContent?key=$API_KEY     -H 'Content-Type: application/json'     -X POST     -d '{
+      "contents": [{
+        "parts":[{
+          "text": "Write a story about a magic backpack."}]}]}' 2> /dev/null
+{
+  "error": {
+    "code": 400,
+    "message": "User location is not supported for the API use.",
+    "status": "FAILED_PRECONDITION"
+  }
+}
+
+'''

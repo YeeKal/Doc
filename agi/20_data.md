@@ -36,6 +36,14 @@ date: 2023-07-23
     - [說文解字 svg字形](https://zh.wikisource.org/wiki/%E8%AA%AC%E6%96%87%E8%A7%A3%E5%AD%97_(%E5%9B%9B%E9%83%A8%E5%8F%A2%E5%88%8A%E6%9C%AC)/%E5%8D%B7%E7%AC%AC%E4%B8%80%E4%B8%8A)
     - [Ancient_Chinese_characters_project](https://commons.wikimedia.org/wiki/Commons:Ancient_Chinese_characters_project)
         - [Shuowen_script_characters](https://commons.wikimedia.org/wiki/Category:Shuowen_script_characters)
+- unicode 中日韩 扩充库（中日韩统一表意文字）
+    - [hanazono-font](https://osdn.dl.osdn.net/hanazono-font/68254/diff.pdf)
+    - [如何在计算机中显示所有汉字](https://keqingrong.cn/blog/2019-10-01-how-to-display-all-chinese-characters-on-the-computer/)
+
+
+1. 繁简字  对照表
+
+
 
 
 ## 消费
