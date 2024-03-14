@@ -25,6 +25,7 @@ date: 2023-07-25
 - [nasa image daily](https://apod.nasa.gov/apod/ap230725.html)
 - [A simple, fast and free image placeholder service.](https://placehold.co/)
 - [imgse 图床外链](https://imgse.com/)
+- [七牛云 对象存储](https://www.qiniu.com/prices/kodo)
 
 **<font color='Tomato'>unsplash</font>**
 

@@ -138,8 +138,9 @@ $$P = \left\{
     - [G1fitting](https://github.com/ebertolazzi/G1fitting)
     - [Clothoids](https://github.com/ebertolazzi/Clothoids)
         - [clothid library](https://ebertolazzi.github.io/Clothoids/api-cpp/class_a00147.html#exhale-class-a00147)
-    - [fresnel_sin_cos_integrals](http://www.mymathlib.com/functions/fresnel_sin_cos_integrals.html)
     - [fresnl light](https://github.com/scottransom/presto/blob/master/src/fresnl.c)
     - [Clothoids](https://github.com/ebertolazzi/Clothoids/blob/master/src/Fresnel.cc)
     - [alglib](https://www.alglib.net/specialfunctions/fresnelintegral.php)
+    - [Cephes, free/open-source C++/C code to compute Fresnel integrals among other special functions. Used in SciPy and ALGLIB.](https://www.netlib.org/cephes/)
+    - [scipy source code](https://github.com/scipy/scipy/blob/main/scipy/special/cephes/fresnl.c)
 

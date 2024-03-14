@@ -7,6 +7,11 @@ date: 2023-08-18
 
 - [Awesome-Chinese-LLM](https://github.com/HqWu-HITCS/Awesome-Chinese-LLM)
 
+## 搜索式对话
+
+- [天工ai](https://search.tiangong.cn/)
+- kimichat
+
 ## 
 
 - [字节•豆包](https://www.doubao.com/)

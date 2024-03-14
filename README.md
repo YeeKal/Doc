@@ -8,5 +8,5 @@
 
 ## Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/YeeKal/Doc.svg)](https://starchart.cc/YeeKal/Doc)
+[![Stargazers over time](https://starchart.cc/YeeKal/Doc.svg?variant=adaptive)](https://starchart.cc/YeeKal/Doc)
 

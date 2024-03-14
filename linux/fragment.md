@@ -5,6 +5,9 @@ tags: linux
 date: 2021-11-24
 ---
 
+- [Collision-free Path Planning on Arbitrary Optimization Criteria in the Latent Space through cGANs](https://arxiv.org/abs/2202.13062)
+- [OCEAN: An Openspace Collision-free Trajectory Planner for Autonomous Parking Based on ADMM](https://arxiv.org/abs/2403.05090)
+
 - [tensorrt](https://developer.nvidia.com/tensorrt)
 
 ## on plan

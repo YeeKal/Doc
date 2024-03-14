@@ -5,6 +5,10 @@ tags: tool
 date: 2023-05-24
 ---
 
+## apis
+
+- [rapid api](https://rapidapi.com/collection/translation-apis)
+
 ## 流量查询
 
 - [similarweb](https://pro.similarweb.com/#/digitalsuite/websiteanalysis/overview/website-performance/*/999/3m?webSource=Total&key=yeekal.store)

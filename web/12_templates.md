@@ -50,6 +50,7 @@ date: 2023-08-08
 - [search ](https://fly.io/docs/getting-started/multi-region-databases/#create-a-postgresql-cluster)
 - [aigc 介绍页面](https://aigc.latentcat.com/sd-inference/webui-install)
 - [bmms 斜杠程序员](https://www.bmms.me/projects)
+- [postman api 暗黑](https://www.postman.com/explore)
 ## 产品介绍
 
 - [Snapsrch](https://snapsrch.sparklide.com/)
