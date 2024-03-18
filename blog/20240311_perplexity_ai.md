@@ -54,5 +54,5 @@ Perplexity的底层能力结合了GPT， Claude以及Mistral模型。其中免�
 
 ## Ref
 
-- [跳转原文](https://yeekal.store/blog/blog/20240311_perplexity_ai)
+- [跳转原文](https://yeekal.store/notes/blog/20240311_perplexity_ai)
 

@@ -53,6 +53,6 @@ Vercel 部署之后会自动生成一个以`vercel.app`为后缀的域名，也�
 
 此时可以在Vercel里面添加自己的域名，添加之后会进行校验，校验完成就可以通过[`vercel.yeekal.store`](http://vercel.yeekal.store/)进行访问了。
 
-把之前的几篇内容也添加进去了，github同步提交就会更新，非常方便，大家可以访问试一下 https://vercel.yeekal.store/blog (仅作样例，博客还未完善).
+把之前的几篇内容也添加进去了，github同步提交就会更新，非常方便，大家可以访问试一下 https://vercel.yeekal.store/notes (仅作样例，博客还未完善).
 
 ![vercel_blog](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/07/20230730093727.png)
