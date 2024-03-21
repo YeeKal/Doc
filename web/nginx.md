@@ -76,3 +76,7 @@ sudo service nginx restart
 
 ssl -> origin server -> create 
 
+
+## 配置不同的ssl encryption mode
+
+Rules -> 

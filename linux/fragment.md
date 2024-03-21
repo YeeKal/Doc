@@ -10,6 +10,14 @@ date: 2021-11-24
 
 - [tensorrt](https://developer.nvidia.com/tensorrt)
 
+## reduce visit time
+
+20240315
+
+![](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/24/03/20240318210809.png)
+
+20240318: reduce unused js; use cdn to link img
+
 ## on plan
 - [vLLM: Easy, Fast, and Cheap LLM Serving with PagedAttention](https://vllm.ai/)
 

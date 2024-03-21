@@ -5,6 +5,12 @@ tags: tool
 date: 2023-05-24
 ---
 
+## robots news
+
+- [Robotics News in ScienceDaily](https://www.sciencedaily.com/news/computers_math/robotics/)
+- [Robotics in IEEE Spectrum](https://spectrum.ieee.org/topic/robotics/)
+- [robotics in MIT](https://news.mit.edu/topic/robotics)
+
 ## apis
 
 - [rapid api](https://rapidapi.com/collection/translation-apis)
@@ -12,6 +18,7 @@ date: 2023-05-24
 ## 流量查询
 
 - [similarweb](https://pro.similarweb.com/#/digitalsuite/websiteanalysis/overview/website-performance/*/999/3m?webSource=Total&key=yeekal.store)
+- [pagespeed 统计及建议](https://pagespeed.web.dev/)
 
 ## 二维码美化
 
