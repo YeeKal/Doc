@@ -14,7 +14,6 @@ Bayesian Personalized Ranking(BPR) loss
 2. 把负样本的label作为输入
 3. 把batch中其他样本作为负样本
 
-- [tensorflow implementation](tensorflow_recommenders/tasks/retrieval.py)
  
 ## triplet less
 

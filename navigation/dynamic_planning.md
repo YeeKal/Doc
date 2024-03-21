@@ -13,4 +13,4 @@ date: 2019_08_17
 
 D-star
 
-sst: stable sparse rrt, [code]([sst code](http://pracsyslab.org/sst_software))
+sst: stable sparse rrt, [sst code](http://pracsyslab.org/sst_software)

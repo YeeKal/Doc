@@ -68,7 +68,7 @@ planning algorithm:
         \ddot Q_a(t_r)=0=\ddot Q_b(t_r)$$
 - then define the object function to optimize
 
-reference to **[2008_A technique for time-jerk optimal planning of robot trajectories](../trajectory_optimization/)**.
+reference to **2008_A technique for time-jerk optimal planning of robot trajectories**.
 
 ## Flight Trajectory Simulation of Robotic Throwing Shuttlecock 
 

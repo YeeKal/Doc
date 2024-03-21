@@ -5,6 +5,105 @@ tags:
 date: 2024-03-19
 ---
 
+ref : [google seo](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap?hl=zh-cn)
+- robots.txt
+- sitemap
+- 关键测
+- TDK
+- 外链
+- 死链
+## 添加 robots.txt 文件
+
+
+## sitemap
+
+1. django 自动生成
+2. 使用sitemap生成器
+    - [sitemaps](https://xml-sitemaps.com/)
+
+**<font color='Tomato'>django 生成</font>**
+
+[django sitemaps](https://docs.djangoproject.com/en/5.0/ref/contrib/sitemaps/)
+
+
+```python
+# static
+class StaticViewSitemap(sitemaps.Sitemap):
+    priority = 0.5
+    changefreq = "daily"
+
+    def items(self):
+        return ["main", "about", "license"]
+
+    def location(self, item):
+        return reverse(item)
+# dynamic
+from django.contrib.sitemaps import Sitemap
+from blog.models import Entry
+
+
+class BlogSitemap(Sitemap):
+    changefreq = "never"
+    priority = 0.5
+
+    def items(self):
+        return Entry.objects.filter(is_draft=False)
+
+    def lastmod(self, obj):
+        return obj.pub_date
+
+#  handle dynamic
+# set priority
+from django.contrib.sitemaps import Sitemap
+from notes.content import getAllPosts
+from django.urls import reverse
+
+# static sitemap
+class ArticleSitemap(Sitemap):
+    changefreq = 'daily'
+    priorities = {
+        'home': 1.0,
+        'notes_home': 1.0,  # 首页的权重设置为最高
+        'notes_cate': 0.8,  # 默认分类页面的权重稍低
+        'notes_cate_file': 0.64,  # 默认分类页面的权重稍低
+        "default": 0.5
+    }
+
+    def items(self):
+
+        _, categories = getAllPosts()
+        paths = ['home','notes_home']
+        for cat in categories:
+            paths.append("notes:" + cat['name'])
+            paths.extend(["notes:" + cat['name'] + ':' + f[:-3] for f in cat['files']])
+        print(paths)
+        return paths
+    def location(self, item):
+        nodes = item.split(":")
+        if len(nodes) == 1:
+            return reverse(item)
+        
+        if len(nodes) == 2:
+            return reverse('notes_cate', args=[nodes[1]])
+        
+        if len(nodes) == 3:
+            return reverse('notes_cate_file', args=[nodes[1], nodes[2]])
+
+    def priority(self, item):
+        nodes = item.split(":")
+        if len(nodes) == 1:
+            return self.priorities.get(item, self.priorities['default'])
+        
+        if len(nodes) == 2:
+            return self.priorities.get('notes_cate', self.priorities['default'])
+
+        
+        if len(nodes) == 3:
+            return self.priorities.get('notes_cate_file', self.priorities['default'])
+
+        return self.priorities['default']
+
+```
 
 
 ## 关键词
@@ -49,21 +148,6 @@ T：Title，页面标题，指代该网站的名称
 D：Description，页面描述，用来介绍该网站/页面是什么
 K：Keywords，页面关键词
 
-## SiteMap
-
-用于搜索引擎及时更新网页，让搜索引擎知道该网站的结构，从而更新索引
-
-```xml
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  Created By http://www.zhetao.com/sitemapcreator,  URLs: 1 Generated at: 2024-03-19 11:51:04  -->
-<url>
-<loc>http://yeekal.store/</loc>
-<priority>1.00</priority>
-</url>
-</urlset>
-```
-
-## robots
 
 ## 外链
 

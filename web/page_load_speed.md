@@ -6,9 +6,15 @@ date: 2024-03-19
 ---
 ## 速度优化
 
+**<font color='Tomato'></font>**
+
+vercel 首次访问会重启
+
+**<font color='Tomato'>performance</font>**
 connection:
 
 1. cloudflare 缓存设置, 若有更新，则手动清楚缓存
+    - cache rules 和 page rules 配合
 2. First Contentful Paint (FCP) 
     优化白屏时间
 3. performance 分析
