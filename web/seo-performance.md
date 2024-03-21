@@ -4,6 +4,14 @@ categories:
 tags: 
 date: 2024-03-19
 ---
+## DNS
+
+域名服务器
+
+## CDN
+
+缓存
+
 ## 速度优化
 
 **<font color='Tomato'></font>**
@@ -15,6 +23,7 @@ connection:
 
 1. cloudflare 缓存设置, 若有更新，则手动清楚缓存
     - cache rules 和 page rules 配合
+    - Cache Rules的优先级高于Page Rules
 2. First Contentful Paint (FCP) 
     优化白屏时间
 3. performance 分析

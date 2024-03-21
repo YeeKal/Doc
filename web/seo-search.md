@@ -12,14 +12,26 @@ ref : [google seo](https://developers.google.com/search/docs/crawling-indexing/s
 - TDK
 - 外链
 - 死链
+- og
+
+## og
+
+rich link preview
+
 ## 添加 robots.txt 文件
 
+```txt
+User-agent: * Allow: / Disallow: /admin/
+sitemap: https://yeekal.store/sitemap.xml
+```
 
 ## sitemap
 
 1. django 自动生成
 2. 使用sitemap生成器
     - [sitemaps](https://xml-sitemaps.com/)
+3. 提交给google： https://support.google.com/webmasters/answer/7451001?hl=zh-cn
+
 
 **<font color='Tomato'>django 生成</font>**
 
