@@ -51,6 +51,7 @@ date: 2023-08-08
 - [aigc 介绍页面](https://aigc.latentcat.com/sd-inference/webui-install)
 - [bmms 斜杠程序员](https://www.bmms.me/projects)
 - [postman api 暗黑](https://www.postman.com/explore)
+- [cloudflare 暗黑](https://developers.cloudflare.com/workers-ai/platform/pricing/)
 ## 产品介绍
 
 - [Snapsrch](https://snapsrch.sparklide.com/)

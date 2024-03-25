@@ -47,12 +47,12 @@ Vercel 部署之后会自动生成一个以`vercel.app`为后缀的域名，也�
 
 ![vercel_astro](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/07/20230730091425.png)
 
-在 Cloudflare 添加一条`CNAME`类型的解析，比如这个博客模板就是把[`vercel.yeekal.store`](http://vercel.yeekal.store/)重定向到[`yee-blog.vercel.app`](https://yee-blog.vercel.app/)，并打开 proxy 服务。
+在 Cloudflare 添加一条`CNAME`类型的解析，比如这个博客模板就是把[`yee-blog.vercel.app`](https://yee-blog.vercel.app/)重定向到[`vercel.yeekal.store(已更改为 yeekal.store)`](https://yeekal.store/)，并打开 proxy 服务。
 
 ![cloudflare_cname](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/07/20230730092137.png)
 
-此时可以在Vercel里面添加自己的域名，添加之后会进行校验，校验完成就可以通过[`vercel.yeekal.store`](http://vercel.yeekal.store/)进行访问了。
+此时可以在Vercel里面添加自己的域名，添加之后会进行校验，校验完成就可以通过[`vercel.yeekal.store`](https://yeekal.store/)进行访问了。
 
-把之前的几篇内容也添加进去了，github同步提交就会更新，非常方便，大家可以访问试一下 https://vercel.yeekal.store/notes (仅作样例，博客还未完善).
+把之前的几篇内容也添加进去了，github同步提交就会更新，非常方便，大家可以访问试一下 https://yeekal.store/notes/ (仅作样例，博客还未完善).
 
 ![vercel_blog](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/07/20230730093727.png)

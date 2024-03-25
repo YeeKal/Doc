@@ -1,8 +1,16 @@
+---
+title: python 教程 2
+categories: python
+tags: 
+is_draft: false
+date: 2019-01-02
+keywords: python,教程
+cover: 
+description: python 教程 2, 关于io，进程和线程
+---
+
+
 [TOC]
-
-# Level2
-
-# I/O
 
 ## read&write
 

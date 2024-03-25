@@ -13,6 +13,19 @@ ref : [google seo](https://developers.google.com/search/docs/crawling-indexing/s
 - 外链
 - 死链
 - og
+- 重建索引
+- www 重定向
+
+## 重建索引
+
+ref: [要求 Google 重新檢索網址](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl?hl=zh-tw)
+
+1. 少量网页： 使用网址检查工具
+2. 大量网页： 使用sitemap 站点地图
+
+
+![not indexed](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/24/03/20240322102252.png)
+
 
 ## og
 
@@ -32,6 +45,7 @@ sitemap: https://yeekal.store/sitemap.xml
     - [sitemaps](https://xml-sitemaps.com/)
 3. 提交给google： https://support.google.com/webmasters/answer/7451001?hl=zh-cn
 
+4. 提交至百度
 
 **<font color='Tomato'>django 生成</font>**
 

@@ -1,4 +1,13 @@
-****
+---
+title: python 教程 1
+categories: python
+tags: 
+is_draft: false
+date: 2019-01-01
+keywords: 
+cover: 
+description: 
+---
 
 
 # 概述
