@@ -19,6 +19,7 @@ date: 2023-05-24
 
 - [similarweb](https://pro.similarweb.com/#/digitalsuite/websiteanalysis/overview/website-performance/*/999/3m?webSource=Total&key=yeekal.store)
 - [pagespeed 统计及建议](https://pagespeed.web.dev/)
+- [nodecook ping tool](https://www.nodecook.com/zh?ref=producthunt)
 
 ## 二维码美化
 
@@ -37,6 +38,8 @@ https://github.com/ciaochaos/qrbtf
 - reddit
     - [rapidsave](https://rapidsave.com/)
     - [redditsave](https://redditsave.io/)
+- tiktok
+    - [tiktokarchive](https://tiktokarchive.com/)
 
 ## 个人网站在线支付接口
 

@@ -4,7 +4,7 @@ categories: blog
 tags: 
 is_draft: false
 date: 2024-03-30
-keywords: Voice Engine,Synthetic Voices,语音合成
+keywords: Voice Engine,Synthetic Voices,语音合成, 语音合成ai
 cover: https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/24/03/steve-johnson-bNEga8u4kUs-unsplash.jpg
 description: OpenAI分享了一个名为Voice Engine的模型，该模型使用文本输入和15秒音频样本就能生成听起来自然且与原始说话者非常相似的语音
 ---
@@ -31,3 +31,9 @@ OpenAI分享了一个名为Voice Engine的模型，该模型使用文本输入�
 为了确保 Voice Engine 的安全使用，OpenAI 在合成的音频中加入了特殊的水印技术，以便对这些音频进行识别和监控。同时，OpenAI 也倡导采取一系列措施，以构建更加安全的生成模型，包括逐步淘汰基于语音的认证机制、探索保护个人声音使用权的政策、普及 AI 技术的理解和限制，以及加速开发追踪音视频内容来源的技术，确保用户明确知晓他们是在与真人还是 AI 互动。
 
 通过这些努力，OpenAI 期望能够激发公众、政策制定者、研究人员和创意工作者对合成语音技术挑战和机遇的深入讨论，共同推动这一领域朝着负责任的方向发展。
+
+![](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/24/03/20240330111313.png)
+
+当然语音合成的技术此前就已经广泛发展了，比如gihub上爆火的[OpenVoice](https://github.com/myshell-ai/OpenVoice)开源语音克隆项目， 也是参考说话者的短音频片段就能复制他们的声音，并在多种语言中生成语音。OpenVoice能够在声音风格上进行细粒度的控制，包括情感、口音、节奏、停顿和语调，此外还能复制参考说话者的音色。OpenVoice还实现了对未包含在大规模多说话者训练集中的语言进行零样本跨语言语音克隆。而在其[官网](https://research.myshell.ai/open-voice)的语音样本长度不足5s。
+
+Voice Engine 由 OpenAI 支持，注重安全性和社会责任，通过合作伙伴的私密测试来探索其潜在用途，并采取了特殊的水印技术来监控合成音频，同时倡导制定相关政策和技术开发，以确保技术的负责任使用。而 OpenVoice 作为一个开源项目，为广大开发者和研究者提供了一个平台，使他们能够自由探索和创新，推动语音合成技术的普及和发展。Voice Engine注定不会是一个开源产品，期待后续OpenAI能分享更多的技术细节。

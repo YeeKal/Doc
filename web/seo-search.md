@@ -26,10 +26,22 @@ ref: [要求 Google 重新檢索網址](https://developers.google.com/search/doc
 
 ![not indexed](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/24/03/20240322102252.png)
 
+**<font color='Tomato'>google index</font>**
+
+- Alternate page with proper canonical tag(带有正确规范标签的替代页面)
+
 
 ## og
 
 rich link preview
+
+示例公众号文章：
+
+![](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/24/03/20240328111339.png)
+
+```html
+
+```
 
 ## 添加 robots.txt 文件
 

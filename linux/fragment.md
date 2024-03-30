@@ -10,6 +10,12 @@ date: 2021-11-24
 
 - [tensorrt](https://developer.nvidia.com/tensorrt)
 
+- google index
+
+## NVIDIA Project GR00T
+
+Generalist Robot 00 Technology
+
 ## reduce visit time
 
 20240315

@@ -26,6 +26,15 @@ date: 2023-08-08
 **<font color='Tomato'>github pages 简易系列</font>**
 
 - [fast_template](https://github.com/fastai/fast_template/generate)
+- [notion 风格头像](https://notion-avatar.vercel.app/zh)
+
+## 导航站
+
+- [什么值得读](https://shenmezhidedu.com/)
+
+## landing page
+
+- [happus app 介绍](https://happus.co/)
 
 ## 学术静态主页
 
@@ -41,6 +50,7 @@ date: 2023-08-08
     - [first-thought](https://rosewang2008.github.io/blog/2020/12/24/first-thought.html)
 - [paper research website](https://github.com/rosewang2008/sight)
 - [vueuse](https://vueuse.org/)
+- [Academic-project-page-template](https://github.com/eliahuhorwitz/Academic-project-page-template)
 
 ## good网站收集
 
