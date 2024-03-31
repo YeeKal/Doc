@@ -1,13 +1,13 @@
 ---
-title: paper阅读: Optimisation based path planning for car parking in narrow environments
-categories: blog
-tags: 运动规划|自动驾驶
+title: Optimization based path planning for car parking in narrow environments
+categories: 
+tags: moiion planning
+is_draft: false
 date: 2023-02-12
+keywords: 泊车规划,狭窄环境，基于优化的方法，单步优化, parkin planning, optimization,narrow path 
+cover: https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/24/03/20240330190759.png
+description: 本文对文章Optimization based path planning for car parking in narrow environments进行了深度解读，主要探索基于优化的泊车路径规划中，怎么通过单步优化的方法找到最优路径。
 ---
-
-`运动规划(motion planning)` `基于优化的方法(optimization based)` `自动驾驶(autopilot)`
-
-- https://zhuanlan.zhihu.com/p/605693570
 
 ## Abstract
 

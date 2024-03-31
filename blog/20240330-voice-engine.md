@@ -1,7 +1,7 @@
 ---
 title: Voice Engine: 15秒复制你的声音
 categories: blog
-tags: 
+tags: AI
 is_draft: false
 date: 2024-03-30
 keywords: Voice Engine,Synthetic Voices,语音合成, 语音合成ai
