@@ -9,6 +9,10 @@ cover: https://cdn.jsdelivr.net/gh/YeeKal/YeeKal/profile-3d-contrib/profile-nigh
 description: 通过修改readme，打造个性化github主页。
 ---
 
+- [我的主页](https://github.com/YeeKal)
+- [我的博客](https://yeekal.store/)
+
+![](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/24/04/github-profile-snake.gif)
 
 一开始看到大佬们的github主页，觉得炫酷极了。下面的三维立体贡献度方格还是能发光的！
 
