@@ -4,7 +4,7 @@ categories: blog
 tags: blog
 is_draft: false
 date: 2024-03-29
-keywords: 个人博客,个人博客搭建,markdown 文本, 博客指南,
+keywords: 个人博客,个人博客搭建,markdown 文本, 博客指南, 手把手搭建博客
 cover: https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/24/03/josep-martins-nAsdr5DC2Ss-unsplash.jpg
 description: 分享个人网站搭建和个人博客的过程.这一部分主要介绍了基于markdown的笔记系统。主要原则是：子文件夹区分类目，每篇笔记文档头部增加元信息，图片使用github图床，利用jsdelivr加速。
 ---
@@ -14,7 +14,7 @@ description: 分享个人网站搭建和个人博客的过程.这一部分主要
 这一系列整体会分三个大部分：
 
 - 笔记系统
-- Django开发部署经验
+- Django部署及踩坑记录
 - SEO优化
 
 技术在进步，新的工具，语言，平台也在不断涌现，我的个人博客当前也只是一个雏形，也一直在慢慢迭代，更新和完善。

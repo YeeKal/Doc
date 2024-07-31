@@ -134,6 +134,7 @@ computing collision-free C-space regions:
 ## Ref
 
 - paper 
+    - [Certifying Bimanual RRT Motion Plans in a Second](https://arxiv.org/abs/2310.16603)
     - [Closed-Form Minkowski Sum Approximations for Efficient Optimization-Based Collision Avoidance]()
     - [Efficient Formulation of Collision Avoidance Constraints in Optimization Based Trajectory Planning and Control](https://arxiv.org/abs/2104.12641)
     - [PYROBOCOP: Python-based Robotic Control & Optimization Package for Manipulation and Collision Avoidance](https://arxiv.org/pdf/2106.03220.pdf)

@@ -11,6 +11,8 @@ date: 2021-11-24
 - [tensorrt](https://developer.nvidia.com/tensorrt)
 
 - google index
+- github mainpage: https://github.com/tonyljx
+    - [github stats](https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md)
 
 ## NVIDIA Project GR00T
 

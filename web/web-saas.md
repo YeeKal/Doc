@@ -16,7 +16,12 @@ date: 2024-01-04
 ## 社群
 
 - [独立开发前线](https://www.91wink.com/)
+- [技术栈](https://oversaas.club/techstack)
 
 ## opensource project
 
 - [chatgpt-web-share](https://github.com/chatpire/chatgpt-web-share/tree/dev)
+
+## templates
+
+- [templatemonster](https://www.templatemonster.com/)

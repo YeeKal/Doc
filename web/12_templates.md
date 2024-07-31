@@ -5,21 +5,53 @@ tags:
 date: 2023-08-08
 ---
 
+remix + vite + tailwindcss + shadcn ui 
+
 - [html5up](https://html5up.net/)
 
 ![template_html5up.png](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/notes_img_backup/web/imgs/template_html5up.png)
 
 -[美叶](https://www.meiye.art/app/1/1958)
 
+## blog
+
+- [nextjs + daisyui](https://www.v2ex.com/t/1044137#reply1)
+- [blog 配色](https://techartlife.com/learn/pyopengl/2-draw-triangle)
+
+## saas 网页资源
+
+- [saasfly](https://github.com/saasfly/saasfly):  easy-to-use and enterprise-grade Next.js boilerplate
+- [fast2build:Launch Your SaaS Product In Hours](https://www.fast2build.com/?ref=producthunt)
+
+## AI 产品页面
+
+- [animweb](https://animweb.cc/)
+- [sunoai](https://sunoai-music.com/)
+- [seonaai](https://seonaai.com/)
+- [melodis](https://melodis.co/zh)
+    - nextjs + shadcn/ui + daisyui
+- [gpts.works](https://gpts.works/)
+    - 技术栈： nextjs
+    - [opensource code(可以用来做通用导航站)](https://github.com/all-in-aigc/gpts-works/tree/main)
+
+
 ## 产品页面
 
 - [imgrender: 通过api调用按格式生成图片](https://www.imgrender.net/)
+- [图片瀑布流](https://github.com/linyuxuanlin/Gallery-Portfolio/blob/main/server.js)
 
 ## 导航网页
 
 - [aitoolist](https://aitoolist.com/news)
+- [aibase](https://top.aibase.com/)
+
+## 科技咨询汇总
+
+- [XiaoHu.AI](https://xiaohu.ai/)
 
 ## blog 页面参考
+
+- [techbiji](https://techbiji.com/)
 
 - [huggingfaceblog](https://github.com/huggingface/blog/blob/main/llama2.md)
 
@@ -62,10 +94,26 @@ date: 2023-08-08
 - [bmms 斜杠程序员](https://www.bmms.me/projects)
 - [postman api 暗黑](https://www.postman.com/explore)
 - [cloudflare 暗黑](https://developers.cloudflare.com/workers-ai/platform/pricing/)
+- [aspoem  现代化诗词学习网站](https://aspoem.com/)
+    - supabase / ct3a
 ## 产品介绍
 
 - [Snapsrch](https://snapsrch.sparklide.com/)
+- [revenuecat-app订阅数据统计-参考亮色主页和博客页面](https://www.revenuecat.com/)
+- [memo.ac](https://memo.ac/)
 
 ## 主页设计网站
 
 - [kee: 在线个人主页](https://kee.so/home)
+- [Linkinweb.com](https://www.linkinweb.com/admin)
+
+## 开源学习站
+
+- [c-shopping-weapp 微信小程序](https://github.com/huanghanzhilian/c-shopping-weapp)
+- [c-shopping-rn app](https://github.com/huanghanzhilian/c-shopping-rn)
+- [C-Shopping web app](https://github.com/huanghanzhilian/c-shopping)
+
+## 技术/tool
+
+- [Visualization Collection
+](https://hepengwei.cn/#/threejs/earthDisplay)

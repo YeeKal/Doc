@@ -163,7 +163,100 @@ ps->setActiveCollisionDetector(collision_detection::CollisionDetectorAllocatorHy
 
 ```
 
-## trychomp
+## Trychomp
+
+```python
+qs = np.array([-5.0, -5.0])  # 起始点
+qe = np.array([7.0, 7.0])    # 结束点
+
+# 初始化轨迹 xi
+xi = np.tile(qs, (nq, 1)).flatten()
+
+# 初始化 A, b 和 A_inv
+AA = np.zeros((xidim, xidim))
+for ii in range(nq):
+    AA[ii*cdim:(ii+1)*cdim, ii*cdim:(ii+1)*cdim] = 2.0 * np.eye(cdim)
+    if ii > 0:
+        AA[ii*cdim:(ii+1)*cdim, (ii-1)*cdim:ii*cdim] = -1.0 * np.eye(cdim)
+        AA[(ii-1)*cdim:ii*cdim, ii*cdim:(ii+1)*cdim] = -1.0 * np.eye(cdim)
+AA /= dt * dt * (nq + 1)
+
+bb = np.zeros(xidim)
+bb[:cdim] = qs
+bb[-cdim:] = qe
+bb /= - dt * dt * (nq + 1)
+
+Ainv = np.linalg.inv(AA)
+```
+
+在这段代码中，`AA`和`bb`都是与轨迹优化相关的矩阵和向量，用于定义一个二次规划问题以生成平滑的轨迹。下面是这两个变量的大小和含义：
+
+### AA (矩阵的大小)
+
+`AA`是一个大小为`xidim` x `xidim`的矩阵，其中`xidim`表示轨迹的总维度，计算方式是轨迹中的点数（`nq`）乘以配置空间的维度（`cdim`）。如果按照给定的参数：
+
+- 轨迹中的点数 (`nq`) = 20
+- 配置空间的维度 (`cdim`) = 2
+
+那么，轨迹的总维度 (`xidim`) = 20 * 2 = 40。所以，`AA`是一个40 x 40的矩阵。
+
+### AA (矩阵的含义)
+
+`AA`矩阵代表了轨迹优化问题的二次项系数矩阵，它被用来确保轨迹的平滑性。此矩阵构建了一个离散化的时间加速度代价函数，该函数通过最小化每个时间步长内的加速度变化来生成平滑轨迹。这是通过惩罚相邻轨迹点之间的差异来实现的。
+
+在这段代码中，`AA`矩阵通过以下操作构建：
+
+- 每个轨迹点对应的二维子矩阵设置为2倍单位矩阵（2.0 * np.eye(cdim)）
+- 相邻轨迹点的二维子矩阵之间设置为-1倍单位矩阵（-1.0 * np.eye(cdim)）
+
+这样可以模拟出一种离散的二阶导数（加速度），即每个点处的加速度值由当前点、前一个点和后一个点共同决定。
+
+### bb (向量的大小)
+
+`bb`是一个长度为`xidim`的向量。同样地，在给定的参数下：
+
+- 轨迹的总维度 (`xidim`) = 40
+
+因此，`bb`是一个长度为40的向量。
+
+### bb (向量的含义)
+
+`bb`向量代表了线性项的系数，定义了轨迹优化问题的目标函数中与变量线性相关的部分。在这段代码中，`bb`向量的前两个元素和最后两个元素分别设置为起始点`qs`和结束点`qe`的坐标，其余元素均为0。
+
+这意味着优化问题会考虑到轨迹的起始和结束位置，使得生成的轨迹能够从起始点开始并在结束点结束。
+
+### 结合AA和bb
+
+结合`AA`和`bb`，你可以定义一个二次优化问题，目标是找到一个使得以下代价函数取最小值的轨迹`xi`：
+
+```
+xi^T * AA * xi + bb^T * xi
+```
+
+其中，`xi`是代表整条轨迹的向量（包含所有轨迹点的坐标），`AA`是二次项的系数矩阵，`bb`是线性项的系数向量。该代价函数旨在使得轨迹尽可能平滑并且能够从指定的起点移动到终点。
+
+
+### bicycle model
+
+方向盘转角
+
+$$\dot{\theta} = v\cdot tan \phi / L \\
+\frac{d \theta}{d \phi} = \frac{v}{L}\frac{1}{cos^2 \phi}$$
+$$dx/d \phi = \frac{ v\cdot cos\theta}{d \phi}  = -v\cdot sin \theta \cdot v\cdot tan \phi / L$$
+
+曲率
+
+$$\dot{\theta} = v\cdot c \\
+\frac{d \theta}{d c} = v$$
+$$dx = v\cdot cos \theta$$
+$$dx/d c = \frac{ v\cdot cos\theta}{d c}  = -v\cdot sin \theta \cdot v \\
+dy/dc = \frac{ v\cdot sin\theta}{d c} = v\cdot cos \theta \cdot v $$
+$$\begin{bmatrix}-s^2\cdot sin\theta & cos \theta \\
+s^2sin \theta & sin \theta \\
+s & c \end{bmatrix}$$
+
+
+
 
 
 

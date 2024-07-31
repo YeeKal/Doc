@@ -16,6 +16,78 @@ ref : [google seo](https://developers.google.com/search/docs/crawling-indexing/s
 - 重建索引
 - www 重定向
 
+## seo tools
+
+- [ahrefs关键字生成器](https://ahrefs.com/zh/keyword-generator/?country=cn&input=%E6%90%9C%E7%B4%A2)
+- [外链检查](https://ahrefs.com/zh/backlink-checker/?input=www.shuowen.space&mode=subdomains)
+- [aitdk seo 扩展插件](https://aitdk.com/zh-CN/extension/)
+- [SimilarWeb]()
+- [Internet archive](https://archive.org/): 互联网信息存档
+
+## 外链
+
+## word list
+
+渲染
+
+| 缩写    | 全称                          | 中文名         |
+| ------- | ----------------------------- | -------------- |
+| **SSG** | **Static Site Generation**    | 静态渲染       |
+| **SSR** | **Server Side Rendering**     | 服务端渲染     |
+| **CSR** | **Client Side Rendering**     | 客户端渲染     |
+| **MRR** | **Monthly Recurring Revenue** | 月度经常性收入 |
+|   **ARR**  |    **Annual Recurring Revenue**  |    年度经常性收入            |
+
+## special tags
+
+- [directives in google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag#directives)
+
+- noindex: To not show this page in search results.
+- nofollow: To not follow the links on this page.
+
+```html
+<meta name="robots" content="noindex,nofollow" />
+```
+
+Canonical tags: 重复页面的标记标签，标记哪个页面是主要页面
+
+
+
+## 内容
+
+- 内链
+- 文章结构
+    - 标题
+    - 关键词加重
+
+
+## opengraph
+
+```html
+<!-- HTML Meta Tags -->
+<title>notes thoughts ideas-Yeekal</title>
+<meta name="description" content="Yeekal's(yeekal.store)  blog and notes about AI,robotics, and IT technology. 关于人工智能,机器人以及IT技术的博客和笔记。">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://yeekal.store">
+<meta property="og:type" content="website">
+<meta property="og:title" content="notes thoughts ideas-Yeekal">
+<meta property="og:description" content="Yeekal's(yeekal.store)  blog and notes about AI,robotics, and IT technology. 关于人工智能,机器人以及IT技术的博客和笔记。">
+<meta property="og:image" content="https://opengraph.b-cdn.net/production/documents/016e0c73-7ca3-42ae-8b80-4ca6fbe0b3fa.png?token=lYVxKhb8mr4GSdT5NxCZlq4hqKxqWbeaczTR4qKeSJQ&height=675&width=1200&expires=33249275493">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="yeekal.store">
+<meta property="twitter:url" content="https://yeekal.store">
+<meta name="twitter:title" content="notes thoughts ideas-Yeekal">
+<meta name="twitter:description" content="Yeekal's(yeekal.store)  blog and notes about AI,robotics, and IT technology. 关于人工智能,机器人以及IT技术的博客和笔记。">
+<meta name="twitter:image" content="https://opengraph.b-cdn.net/production/documents/016e0c73-7ca3-42ae-8b80-4ca6fbe0b3fa.png?token=lYVxKhb8mr4GSdT5NxCZlq4hqKxqWbeaczTR4qKeSJQ&height=675&width=1200&expires=33249275493">
+
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+```
+
+- [Twitter Card Tags](https://developer.x.com/en/docs/twitter-for-websites/cards/overview/markup)
+
 ## 重建索引
 
 ref: [要求 Google 重新檢索網址](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl?hl=zh-tw)

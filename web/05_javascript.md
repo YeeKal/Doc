@@ -1,20 +1,20 @@
-*javascript*
+---
+title: JacaScript tutorial
+categories: 
+tags: 
+is_draft: false
+date: 2023-04-08
+keywords: 
+cover: 
+description: 
+---
 
-[TOC]
 
-# intro
+## script tag
 
-## overview
-
-client side language
-
-## internal
-
-**first code**
-
-in html, js code must be instered between \<script> tags
-
+internal: inside the html file
 ```html
+<!-- INTERNAL -->
 <html>
 <head>yeekal</head>
 <body>
@@ -26,28 +26,7 @@ in html, js code must be instered between \<script> tags
 </html>
 ```
 
-**code location**
-
-Typically, script tag is placed in the head of the html document.
-
-Alternatively, include js inside body, and it's better to place at bottom to improve page load.
-
-**script**
-
-Script tag can take two attributes, **language** and **type** , which specify the script type. The language attribute is deprecated, and should not be used. the type is not needed as js is the default script for html.
-
-```html
-<script language="javascript" type="text/javascript">
-  
-  </script>
-```
-
-## external
-
-**connection**
-
-html:
-
+external: outside the html file
 ```html
 <script src="demo.js"></script>
 ```
@@ -59,9 +38,19 @@ alert("this is an alert box");
 //not contain <script> tags
 ```
 
-**comment**
 
-```javascript
+Script tag can take two attributes, **language** and **type** , which specify the script type. The language attribute is deprecated, and should not be used. the type is not needed as js is the default script for html.
+
+```html
+<script language="javascript" type="text/javascript">
+  
+  </script>
+```
+
+comment:
+
+```js
+
 //this is a comment
 /*
 this is multiple lines
@@ -69,7 +58,6 @@ comment
 */
 ```
 
-# basic
 
 ## data type
 

@@ -5,10 +5,16 @@ tags: web
 date: 2023-07-25
 ---
 
+## logo
+
+- [svg logo](https://svg.saasfly.io/directory/ai)
+- [LOGO ](https://ilogo.fun/?ref=producthunt)
+
 ## theme
 
 - [github-markdown.css](https://github.com/sindresorhus/github-markdown-css/blob/main/github-markdown.css)
 - [vscodethemes](https://vscodethemes.com/)
+- [shadcn colors](https://ui.shadcn.com/themes)
 
 ## font
 
@@ -22,6 +28,7 @@ date: 2023-07-25
 
 - https://foter.com/
 - https://www.pexels.com/
+- [placehold](https://placehold.co/400x300)
 - [nasa image daily](https://apod.nasa.gov/apod/ap230725.html)
 - [A simple, fast and free image placeholder service.](https://placehold.co/)
 - [imgse 图床外链](https://imgse.com/)

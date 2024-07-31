@@ -172,8 +172,7 @@ General formulation of the TOPP problem:
             
     - motion planning
         - [2009-CHOMP:Gradient optimization techniques for efficient motion planning]()
-        - [2011_icra_STOMP: Stochastic trajectory optimization for motion planning]()
-            - [matlab implementation](https://github.com/ChenhaoLiu-SeasPenn/Intro-to-Robo-Proj)
+        
         - [2012_ICAPS_ITOMP: Incremental trajectory optimization for real-time replanning in dynamic environments]()
         - [2017_ISRR_Fast any time motion planning in point clouds by interleaving sampling and interior point optimization]()
         - [trajopt](https://rll.berkeley.edu/trajopt/doc/sphinx_build/html/) 

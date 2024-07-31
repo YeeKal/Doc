@@ -12,6 +12,8 @@ date: 2024-03-07
 
 落地页概念
 
+Hero image: 大尺寸横幅图片
+
 落地页网站收集
 
 - [landingfolio](https://www.landingfolio.com/?ref=bmms.me)

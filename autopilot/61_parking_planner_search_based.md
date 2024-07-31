@@ -13,6 +13,8 @@ date: 2023-01-12
 
 - [Fast Path Planning for Autonomous Vehicle Parking with Safety-Guarantee using Hamilton-Jacobi Reachability](https://arxiv.org/abs/2310.15190)
 
+- [](https://arxiv.org/html/2310.15190v2)
+
 哈密顿-雅可比方程 （Hamilton-Jacobi equation，HJE） 是经典力学的一种表述。哈密顿-雅可比方程、牛顿力学、拉格朗日力学、哈密顿力学，这几个表述是互相全等的
 
 - Multi-heuristic hybrid A*

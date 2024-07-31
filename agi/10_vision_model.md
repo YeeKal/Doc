@@ -35,6 +35,8 @@ Stable Diffusion是2022年發布的深度學習文字到圖像生成模型. 由S
 
 - [lexica](https://lexica.art/)
 
+##  Imagen 2
+
 
 ## web
 

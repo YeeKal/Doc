@@ -9,6 +9,23 @@ JPS jump point search
 
 运动规划 motion planning 方法motion planning
 
+## Obstacle-Free Space
+
+#### IRIS
+
+Iterative Regional Inflation by SDP
+
+quickly computing large polytopic and ellipsoidal regions of obstacle-free space through a series of convex optimizations
+
+- [code-iris](https://github.com/rdeits/iris-distro)
+- [paper](https://groups.csail.mit.edu/robotics-center/public_papers/Deits14.pdf)
+
+#### Fast Iterative Region Inflation (FIRI)
+
+ Maximum Volume Inscribed Ellipsoid (MVIE)
+
+- [paper-Computing Large 2D/3D Convex Regions of Obstacle-Free Space for Robotic Planning](https://arxiv.org/html/2403.02977v1)
+
 
 ### SFC: Safe Flight Corridor
 

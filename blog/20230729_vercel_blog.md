@@ -1,8 +1,12 @@
 ---
 title: Vercel 国内无法访问? CloudFare 域名解析解除封印！
-categories: blog
-tags: blog
+categories: tech
+tags: blog, vercel, cloudflare
+is_draft: false
 date: 2023-07-29
+keywords: blog, vercel, cloudflare
+cover: 
+description: 
 ---
 
 ## Vercel: 搭建个人独立博客
@@ -39,7 +43,7 @@ CloudFlare 的主流服务是域名解析，简单来说就是当你输入`baidu
 
 Vercel 部署之后会自动生成一个以`vercel.app`为后缀的域名，也支持自定义域名。自定义域名可以通过CloudFare进行域名解析并利用代理服务达到访问Vercel的目的。
 
-之前在阿里云买了一个域名，在阿里云买的域名默认在阿里云设置域名解析。如果要在Cloudflare进行解析，需要在阿里云设置使用Cloudflare的域名解析服务器，之后才可以在Cloudflare设置域名解析。类似于把改名字的权限先移交，再进行改名操作。
+之前在[阿里云](https://t.aliyun.com/U/AD3J0X)买了一个域名，在阿里云买的域名默认在阿里云设置域名解析。如果要在Cloudflare进行解析，需要在阿里云设置使用Cloudflare的域名解析服务器，之后才可以在Cloudflare设置域名解析。类似于把改名字的权限先移交，再进行改名操作。
 
 ![cloudflare_ns](https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/07/20230730085647.png)
 

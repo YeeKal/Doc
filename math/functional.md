@@ -75,3 +75,4 @@ $$
 
 - [变分法简介Part 1](https://zhuanlan.zhihu.com/p/20718489)
 - [Functional Gradient Descent](https://www.cs.cmu.edu/~16831-f12/notes/F12/16831_lecture21_danielsm.pdf)
+- [Functional Gradient Descent and Kernels](https://github.com/JamilHaidar/Functional_Gradient_Descent_and_Kernels/blob/main/README.md)

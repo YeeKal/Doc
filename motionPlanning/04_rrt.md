@@ -125,6 +125,7 @@ if ObstacleFree(q_near,q_new) then
 return V,E
 ```
 
+
 ## ref
 
 1. [The RRT page](http://msl.cs.uiuc.edu/rrt/index.html)

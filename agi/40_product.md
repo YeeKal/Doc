@@ -5,6 +5,13 @@ tags:
 date: 2024-01-19
 ---
 
+
+
+
+## UI
+
+- [openui](https://openui.fly.dev/ai/0i_8A0dtOSw9IrqNMFDKx)
+
 1. smart excel
 
 - [project](https://www.smartexcel.cc/)
@@ -29,3 +36,15 @@ tech: replicate
 - [ai qrcode](https://midreal.ai/qrcode)
 - [aiwallpaper](https://aiwallpaper.shop/)
 - [gpts-works](https://github.com/all-in-aigc/gpts-works)
+
+## 个人产品
+
+- [gpt 会员服务](https://github.com/tonyljx)
+- [web-makeup](https://github.com/mamumu123/web-makeup)
+    - [Xenova/face-parsing with transformer.js](https://huggingface.co/Xenova/face-parsing)
+    - [face-parsing online](https://huggingface.co/jonathandinu/face-parsing)
+
+
+## voice
+
+- [voicenotes](https://voicenotes.com/)

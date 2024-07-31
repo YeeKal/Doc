@@ -5,11 +5,21 @@ tags: tool
 date: 2023-05-24
 ---
 
-## robots news
+## latex公式识别
 
-- [Robotics News in ScienceDaily](https://www.sciencedaily.com/news/computers_math/robotics/)
-- [Robotics in IEEE Spectrum](https://spectrum.ieee.org/topic/robotics/)
-- [robotics in MIT](https://news.mit.edu/topic/robotics)
+- [UniMERNet](https://github.com/opendatalab/UniMERNet)
+- [LaTeX-OCR](https://github.com/lukas-blecher/LaTeX-OCR)
+
+## 手写模拟
+
+- [手写模拟器](https://www.iamzlt.com/?p=602)
+- [萝卜工坊](https://www.beautifulcarrot.com/)
+
+
+## trends
+
+- [stackoverflow trends](https://insights.stackoverflow.com/trends?tags=reactjs%2Cvue.js%2Cvuejs3%2Cnext.js%2Cvite)
+
 
 ## apis
 
@@ -17,6 +27,7 @@ date: 2023-05-24
 
 ## 流量查询
 
+- [ahrefs](https://ahrefs.com/)
 - [similarweb](https://pro.similarweb.com/#/digitalsuite/websiteanalysis/overview/website-performance/*/999/3m?webSource=Total&key=yeekal.store)
 - [pagespeed 统计及建议](https://pagespeed.web.dev/)
 - [nodecook ping tool](https://www.nodecook.com/zh?ref=producthunt)
@@ -28,7 +39,7 @@ https://github.com/ciaochaos/qrbtf
 ## 博客平台格式转换
 
 - medium:
-    - [markdowntomedium](http://markdowntomedium.com/)
+- [markdowntomedium](http://markdowntomedium.com/)
     - [markdown-to-medium.surge](https://markdown-to-medium.surge.sh/)
 - 微信公众号
     - [微信 Markdown 编辑器](https://doocs.github.io/md/)
@@ -62,9 +73,7 @@ https://github.com/ciaochaos/qrbtf
 - [roboticstoolbox](https://github.com/petercorke/robotics-toolbox-python)
 - [swift:a light-weight browser-based simulator](https://github.com/jhavl/swift)
 
-## ocr
 
-- [LaTeX-OCR](https://github.com/lukas-blecher/LaTeX-OCR)
 
 ## free database
 

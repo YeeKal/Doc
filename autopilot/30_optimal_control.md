@@ -205,6 +205,9 @@ $$\min_{u_),u_1,\cdots,u_H}c(x_0, u_0)+c(f(x_0, u_0), u_1)+c(f(f(x_0, u_0), u_1)
 
 
 
+## Cilqr
+
+- [Constrained_ILQR](https://github.com/pparmesh/Constrained_ILQR/tree/master)
 
 
 

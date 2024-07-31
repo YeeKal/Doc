@@ -1,5 +1,5 @@
 ---
-title: fuzzy search
+title: open library collection
 categories: 
 tags: 
 date: 2023-08-21

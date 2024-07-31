@@ -5,6 +5,19 @@ tags:
 date: 2023-09-06
 ---
 
+# tweet
+
+- [](https://developer.x.com/en/docs/twitter-for-websites/embedded-tweets/overview)
+Embedded Tweets
+
+
+## 临时邮箱
+
+- firefox relay
+= 
+
+## trello
+
 ## 搜索建议 suggestion
 
 - [](https://www.cnblogs.com/woider/p/5805248.html)

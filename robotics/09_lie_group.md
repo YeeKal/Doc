@@ -1,3 +1,14 @@
+---
+title: lie-group
+categories: 
+tags: 
+is_draft: false
+date: 2024-04-08
+keywords: 
+cover: 
+description: 
+---
+
 ## 刚体运动的指数表示
 
 **旋转运动**
@@ -92,6 +103,11 @@ $$\begin{aligned}
 &=I+\frac{\sin x}{x} C+\frac{1-\cos x}{x^{2}} C^{2}
 \end{aligned}$$
 
+## SE2
+
+基于李群的路径插值
+
+- [Optimal Transport on the Lie Group of Roto-translations](https://arxiv.org/html/2402.15322v2)
 
 
 ## ref
@@ -107,3 +123,4 @@ $$\begin{aligned}
 - notes:
     - [Lie Groups for 2D and 3D Transformations](https://ethaneade.com/lie.pdf)
     - [Lie Groups and Rigid Body Kinematics](https://johnwlambert.github.io/lie-groups/)
+    - [Learning with 3D rotations, a hitchhiker’s guide to SO(3)](https://arxiv.org/html/2404.11735v1)

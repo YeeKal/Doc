@@ -5,7 +5,7 @@ tags:
 is_draft: false
 date: 2024-05-24
 keywords: 
-cover: 
+cover: https://cdn.jsdelivr.net/gh/YeeKal/img_land/blog/24/04/20240524115221.png
 description: Takoviz是一种用于可视化和共享世界知识的新型 AI 搜索引擎, Perplexity与TakoViz合作对ai搜索引擎的结果进行卡片式可交互的可视化
 ---
 

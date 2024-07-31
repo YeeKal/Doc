@@ -43,6 +43,9 @@ Find medial axis points
 **<font color='Tomato'>Trilinear interpolation</font>**
 
 
+## SQP 
+
+SQP-GS： Sequential Quadratic Programming (SQP) with Gradient Sampling (GS)
 
 ## Ref
 - implementations
