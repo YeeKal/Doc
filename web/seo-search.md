@@ -23,6 +23,7 @@ ref : [google seo](https://developers.google.com/search/docs/crawling-indexing/s
 - [aitdk seo 扩展插件](https://aitdk.com/zh-CN/extension/)
 - [SimilarWeb]()
 - [Internet archive](https://archive.org/): 互联网信息存档
+- [keyword tool](https://keywordtool.io/)
 
 ## 外链
 
