@@ -9,6 +9,7 @@ date: 2023-07-25
 
 - [svg logo](https://svg.saasfly.io/directory/ai)
 - [LOGO ](https://ilogo.fun/?ref=producthunt)
+- [MingCute icon](https://github.com/Richard9394/MingCute)
 
 ## theme
 

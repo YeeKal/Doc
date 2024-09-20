@@ -35,6 +35,10 @@ Embedded Tweets
 
 ## Slack
 
+## zeabur
+
+## google cloud run
+
 ## vercel  as proxy
 
 - [vercel-api-prox](https://github.com/souying/vercel-api-proxy)

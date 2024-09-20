@@ -19,6 +19,8 @@ Fourier Intelligence
 - [Robotics in IEEE Spectrum](https://spectrum.ieee.org/topic/robotics/)
 - [robotics in MIT](https://news.mit.edu/topic/robotics)
 
+- [Portal of Robotics and Artificial Intelligence](https://pr.ai/)
+
 ## https://www.naverlabs.com/en/ambidex
 
 ## KIMLAB

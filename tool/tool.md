@@ -5,6 +5,11 @@ tags: tool
 date: 2023-05-24
 ---
 
+## medium 破解
+
+- [Medium Parser-Google web store extension](https://chromewebstore.google.com/detail/medium-parser/bdkfodcnmgegolifeafnpbgjnjfohado?hl=en)
+- [readmedium](https://readmedium.com/)
+
 ## latex公式识别
 
 - [UniMERNet](https://github.com/opendatalab/UniMERNet)

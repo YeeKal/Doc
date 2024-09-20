@@ -18,18 +18,35 @@ Hero image: 大尺寸横幅图片
 
 - [landingfolio](https://www.landingfolio.com/?ref=bmms.me)
 - [saaspo: The best SaaS Web Design Inspiration](https://www.saaspo.com/?ref=bmms.me)
+- [dan.com](https://dan.com/zh-cn) 域名交易 参考中文排版和字体
 
 ## framer
 
 通过拷贝 拖拽的方式，快速构建网页
 
+## common svg design
+
+- https://haikei.app/generators/
+
 ## text to svg
+
+domain
+aisvg
+svgdesign
+svggenerator
 
 keywords:
 
 - sketch synthetic
-- style
+- style 
+    - flat simple vector illustrations style, vibrant colors, white background
+    - simple, vector, white background
 - text guided vector sketch synthesis
+
+ai vector generator
+vector ai
+vector art generator
+svg artAd
 
 seo keywords: vectorization image
 
@@ -42,6 +59,9 @@ image tracer
 image vectorizer
 
 Image to vector API
+
+- posts:
+    - create svg with ...
 
 **<font color='Tomato'>两大概念：</font>**
 
@@ -60,6 +80,8 @@ Image to vector API
 - ai text to svg
     - [haikei svg](https://haikei.app/generators/)
     - [neosvg](https://neosvg.com/)
+    - [svg.io](https://svg.io/)  6w, 只有灰度
+    - [vectorart](https://vectorart.ai/create) 风格多样 3w  速度慢 官网比较好看
 - vectorization
     - [vectorizer ai](https://vectorizer.ai/): 优秀 ★★★★★  cannot download
     - [vectorizer io](https://www.vectorizer.io/): 显示较为优秀、★★★★★ SEO: 说了很多话
@@ -111,6 +133,7 @@ image tracing(raster-to-vector conversion or raster vectorization): convert rast
     - [NIPS 2023 DiffSketcher](https://github.com/ximinng/DiffSketcher)
     - [PyTorch-SVGRender-project](https://ximinng.github.io/PyTorch-SVGRender-project/)
     - [SVGDreamer-project](https://ximinng.github.io/SVGDreamer-project/)
+    - [Word-As-Image](https://wordasimage.github.io/Word-As-Image-Page/)
 
 - [SVGCustomization](https://intchous.github.io/SVGCustomization/)
 - [PyTorch-SVGRender](https://github.com/ximinng/PyTorch-SVGRender)

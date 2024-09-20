@@ -16,16 +16,27 @@ ref : [google seo](https://developers.google.com/search/docs/crawling-indexing/s
 - 重建索引
 - www 重定向
 
+## faq schema markup
+
 ## seo tools
 
 - [ahrefs关键字生成器](https://ahrefs.com/zh/keyword-generator/?country=cn&input=%E6%90%9C%E7%B4%A2)
+- [ahrefs keyword-difficulty](https://ahrefs.com/keyword-difficulty/?country=us&input=ai%20tools%20list)
 - [外链检查](https://ahrefs.com/zh/backlink-checker/?input=www.shuowen.space&mode=subdomains)
 - [aitdk seo 扩展插件](https://aitdk.com/zh-CN/extension/)
 - [SimilarWeb]()
+    - [similarweb scrape api](https://scrapfly.io/blog/how-to-scrape-similarweb/)
+    - [Similarweb free api](https://github.com/DaWe35/Similarweb-free-API)
 - [Internet archive](https://archive.org/): 互联网信息存档
 - [keyword tool](https://keywordtool.io/)
 
 ## 外链
+
+- guest post
+- 竞争对手外链
+- PR
+- 综合链接(reddit web2.0)
+- 红人 社媒， 测评 论坛 wiki
 
 ## word list
 
@@ -63,6 +74,9 @@ Canonical tags: 重复页面的标记标签，标记哪个页面是主要页面
 
 
 ## opengraph
+
+- [imgsrc](https://imgsrc.io/)
+- [og-image-generator](https://tailwind-generator.com/og-image-generator/generator)
 
 ```html
 <!-- HTML Meta Tags -->

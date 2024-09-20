@@ -5,6 +5,10 @@ tags:
 date: 2023-07-23
 ---
 
+## SEO
+
+- [gumroad](https://app.gumroad.com/d/464d8f0e1b1ab4208367f719a5434b77)
+
 
 ## 微信
 

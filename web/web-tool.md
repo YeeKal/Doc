@@ -12,7 +12,20 @@ description:
 - Google Keyword Planner
 - Search console
 - analytics
+    - vercel
+        - [vercel-analytics-bei-adblock](https://dev.to/ccbikai/jie-jue-vercel-analytics-bei-adblock-ping-bi-wen-ti-4mkn)
+    - plausible 
+    - 
 - google adsense
+
+## server
+
+- [render](https://dashboard.render.com/)
+- [APP Engine](https://cloud.google.com/appengine/docs)
+
+## automation
+
+- [buildship](https://buildship.app/p/buildship-yjtk7u/templates)
 
 ## 收款
 

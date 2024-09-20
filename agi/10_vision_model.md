@@ -11,6 +11,12 @@ date: 2023-07-26
     - [基于 DALL·E 的配图生成指南](https://sspai.com/post/74087)
 - [rembg: remove background](https://github.com/danielgatis/rembg)
 
+- dalle3
+- flux: https://blackforestlabs.ai/#get-flux
+- [ideogram](https://ideogram.ai/welcome)
+
+comfyui
+
 
 ## API
 
